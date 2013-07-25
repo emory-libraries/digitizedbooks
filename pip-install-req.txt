@@ -1,0 +1,16 @@
+Django==1.4
+#http://wilson.library.emory.edu:8080/jenkins/job/eullocal-0.18.x/lastSuccessfulBuild/artifact/eullocal/dist/eullocal-0.18.0-pre.tar.gz
+mysql-python # HACK: we don't strictly depend on mysql. find a better way to install it in deploy.
+eulxml
+eulcommon
+# sunburnt 0.6 required for django pagination, per-item highlighting
+sunburnt>=0.6
+httplib2  # currently used with sunburnt
+pyPdf
+django-taggit
+south
+python-dateutil
+python-magic
+django-tracking
+pyasn1
+boto
