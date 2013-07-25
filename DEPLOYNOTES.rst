@@ -37,10 +37,6 @@ correspondingly be installed into this environment.
   Installation instructions and upgrade notes below assume that
   you are already in an activated shell.
 
-Install System Dependencies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 Install python dependencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +48,7 @@ To install python dependencies, cd into the repository checkout and::
 
   $ pip install -r pip-install-req.txt
 
-If you are a developer or are installing to a continuous ingration server
+If you are a developer or are installing to a continuous integration server
 where you plan to run unit tests, code coverage reports, or build sphinx
 documentation, you probably will also want to::
 
