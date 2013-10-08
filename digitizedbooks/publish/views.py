@@ -25,7 +25,7 @@ from django.core.mail import mail_managers
 from django.db.models import Sum
 from django.http import Http404, HttpResponse, HttpResponseForbidden, \
     HttpResponseBadRequest, HttpResponsePermanentRedirect
-from django.shortcuts import render, render_to_response, get_object_or_404, redirect
+from django.shortcuts import render, render_to_response, get_object_or_404, redirect, render
 from django.template.context import RequestContext
 from django.template.loader import get_template, render_to_string
 from django.utils.safestring import mark_safe
@@ -36,4 +36,4 @@ logger = logging.getLogger(__name__)
 
 def site_index(request):
     context = {}
-    return render_to_response('publish/site_index.html', context, context_instance=RequestContext(request))
+    return render(request, 'publish/site_index.html', context)

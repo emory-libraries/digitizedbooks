@@ -115,9 +115,6 @@ INSTALLED_APPS = (
     'django.contrib.humanize',
     'django.contrib.flatpages',
     'django.contrib.localflavor',
-
-    'eulcommon.searchutil',
-    'eullocal.django.emory_ldap',
     'south',
     'taggit',
     'tracking',
