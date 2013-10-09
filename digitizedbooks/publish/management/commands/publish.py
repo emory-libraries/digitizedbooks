@@ -36,18 +36,21 @@ class Command(BaseCommand):
     help = __doc__
 
     option_list = BaseCommand.option_list + (
-        make_option('--oclc',
-                    dest = 'oclcnum',
-                    help = 'The digitized objects OCLC number (e.g. ocm131687026)'),
-        make_option('--digwf',
-                    dest = 'digwfid',
-                    help = 'The digitized objects digwf id (e.g. 5756)'),
-        make_option('--dest',
-                    dest = 'destination',
-                    help = 'Choose one of Internet Archive (ia), HathiTrust (ht), or OpenEmory (oe)'),
-        make_option('--marcxml',
-                    dest = 'marcxml',
-                    help = 'marcxml record associated with archive'),
+#        make_option('--oclc',
+#                    dest = 'oclcnum',
+#                    help = 'The digitized objects OCLC number (e.g. ocm131687026)'),
+#        make_option('--digwf',
+#                    dest = 'digwfid',
+#                    help = 'The digitized objects digwf id (e.g. 5756)'),
+#        make_option('--dest',
+#                    dest = 'destination',
+#                    help = 'Choose one of Internet Archive (ia), HathiTrust (ht), or OpenEmory (oe)'),
+#        make_option('--marcxml',
+#                    dest = 'marcxml',
+#                    help = 'marcxml record associated with archive'),
+        make_option('--dir',
+                    dest = 'dir',
+                    help = 'full path to the directory containing the scanned output'),
     )
 
     def handle(self, *args, **options):
@@ -55,31 +58,61 @@ class Command(BaseCommand):
         self.verbosity = int(options['verbosity'])    # 1 = normal, 0 = minimal, 2 = all
         self.v_normal = 1
         self.v_max = 2
+        self.options = options
 
         # check required options
-        if not options['destination']:
-            raise CommandError('Destination required')
-        if not options['oclcnum']:
-            raise CommandError('oclc_required')
-        if not options['digwfid']:
-            raise CommandError('digwf required')
+#        if not options['destination']:
+#            raise CommandError('Destination required')
+#        if not options['oclcnum']:
+#            raise CommandError('oclc_required')
+#        if not options['digwfid']:
+#            raise CommandError('digwf required')
+        if not self.options['dir']:
+            raise CommandError('dir required')
+        if not os.path.exists(self.options['dir']):
+            raise CommandError('%s dos not exist' % self.options['dir'])
 
-        if len(args) == 1:
-            archive = args[0]
-        else:
-            raise CommandError('expecting exactly one file')
+        # specify archive file
+#        if len(args) == 1:
+#            archive = args[0]
+#        else:
+#            raise CommandError('expecting exactly one file')
 
-        if not self.validate_archive(archive):
-            raise CommandError('Invalid archive file')
+#        if not self.validate_archive(archive):
+#            raise CommandError('Invalid archive file')
 
-        if options.get('destination') == 'ia':
-            self.push_to_ia(archive, options.get('marcxml'), options.get('oclcnum'), options.get('digwfid'))
-        else:
-            self.stdout.write('Unknown destination - exiting.\n')
-            sys.exit()
+#        if options.get('destination') == 'ia':
+#            self.push_to_ia(archive, options.get('marcxml'), options.get('oclcnum'), options.get('digwfid'))
+#        else:
+#            self.stdout.write('Unknown destination - exiting.\n')
+#            sys.exit()
+
+        # get list of items that need to be processed from oldest to most recent
+        print os.getcwd()
+        items = self.get_items()
+        for i in items:
+            print "%s ==> %s" % (i['mets'], i['data_dir']) # test priint out in place of actual processsng. REMOVE later
+        print os.getcwd()
 
         # summarize what was done
         self.stdout.write('\n')
+
+
+
+    #returns list of dictionaries with {'mets': metsfilename.mets, 'data_dir': dattafilename}
+    def get_items(self):
+        # go to data directory
+        os.chdir(self.options['dir'])
+
+        # find all mets files and sort oldes to newest
+        mets_reg = re.compile(r"^[0-9]+\.mets$")
+        mets = filter(lambda f: mets_reg.search(f), os.listdir('.'))
+        mets_list = [{'mets': m, 'data_dir': m.split('.')[0]} for m in mets]
+        mets_list.sort(key= lambda m: os.path.getmtime(m['mets']))
+
+        return mets_list
+
+        
 
 
     #TODO: support multipart upload for large files

@@ -13,3 +13,17 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
+
+from django.test import TestCase
+from digitizedbooks.publish.management.commands.publish import Command
+from mock import Mock, patch
+
+
+class TestPublish(TestCase):
+
+
+    def test_get_items(self,):
+        c = Command()
+        c.options = {'dir': 'digitizedbooks/publish/fixtures/METS'}
+        print c.get_items()
+        

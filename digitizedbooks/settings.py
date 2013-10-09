@@ -88,9 +88,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'tracking.middleware.VisitorTrackingMiddleware',
-    # flatpages middleware should always be last (fallback for 404)
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    # Uncomment the next line for simple clickjacking protection:
+    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'digitizedbooks.urls'
@@ -111,21 +110,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
-    'django.contrib.markup',
-    'django.contrib.humanize',
-    'django.contrib.flatpages',
-    'django.contrib.localflavor',
     'south',
     'taggit',
-    'tracking',
-
     'digitizedbooks.publish',
 )
 
-AUTH_PROFILE_MODULE = 'accounts.UserProfile'
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-]
 
 FILE_UPLOAD_HANDLERS = (
     # removing default MemoryFileUploadHandler so all uploaded files can be treated the same
@@ -147,7 +136,14 @@ except ImportError:
         setup details.'''
     del sys
 
-TEST_RUNNER = 'digitizedbooks.testutil.ManagedModelTestRunner'
+TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.XMLTestRunner'
+
+
+USE_TZ = True
+
+SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
+
+WSGI_APPLICATION = 'digitizedbooks.wsgi.application'
 
 
 # disable south tests and migrations when running tests
