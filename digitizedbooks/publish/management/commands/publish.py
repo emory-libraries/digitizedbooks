@@ -88,11 +88,9 @@ class Command(BaseCommand):
 #            sys.exit()
 
         # get list of items that need to be processed from oldest to most recent
-        print os.getcwd()
         items = self.get_items()
         for i in items:
             print "%s ==> %s" % (i['mets'], i['data_dir']) # test priint out in place of actual processsng. REMOVE later
-        print os.getcwd()
 
         # summarize what was done
         self.stdout.write('\n')
@@ -101,12 +99,12 @@ class Command(BaseCommand):
 
     #returns list of dictionaries with {'mets': metsfilename.mets, 'data_dir': dattafilename}
     def get_items(self):
-        # go to data directory
-        os.chdir(self.options['dir'])
 
         # find all mets files and sort oldes to newest
         mets_reg = re.compile(r"^[0-9]+\.mets$")
-        mets = filter(lambda f: mets_reg.search(f), os.listdir('.'))
+        input_dir = os.path.abspath(self.options['dir'])
+        mets = filter(lambda f: mets_reg.search(f), os.listdir(input_dir))
+        mets = map(lambda f: os.path.abspath(input_dir+'/'+f), mets)
         mets_list = [{'mets': m, 'data_dir': m.split('.')[0]} for m in mets]
         mets_list.sort(key= lambda m: os.path.getmtime(m['mets']))
 

@@ -16,7 +16,7 @@
 
 from django.test import TestCase
 from digitizedbooks.publish.management.commands.publish import Command
-from mock import Mock, patch
+import os
 
 
 class TestPublish(TestCase):
@@ -25,5 +25,8 @@ class TestPublish(TestCase):
     def test_get_items(self,):
         c = Command()
         c.options = {'dir': 'digitizedbooks/publish/fixtures/METS'}
-        print c.get_items()
+        result = c.get_items()
+        expected = [{'mets': os.path.abspath(c.options['dir']+'/'+'123.mets'),'data_dir': os.path.abspath(c.options['dir']+'/'+'123')},
+                    {'mets': os.path.abspath(c.options['dir']+'/'+'0001.mets'),'data_dir': os.path.abspath(c.options['dir']+'/'+'0001')}]
+        self.assertEqual(result, expected)
         
