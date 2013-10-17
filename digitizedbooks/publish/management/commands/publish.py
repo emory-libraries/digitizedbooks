@@ -97,6 +97,7 @@ class Command(BaseCommand):
 
 
 
+    #TODO this will not be needed once list of itmes to process is maintained in DB
     #returns list of dictionaries with {'mets': metsfilename.mets, 'data_dir': dattafilename}
     def get_items(self):
 

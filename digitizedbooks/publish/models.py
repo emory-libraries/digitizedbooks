@@ -16,6 +16,7 @@
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField
+from django.db import models
 
 class METSFile(XmlObject):
     ROOT_NAME = 'file'
@@ -48,4 +49,18 @@ class Mets(XmlObject):
     techmd = NodeListField('amdSec/techMD', METStechMD)
 
 
+
+PACKAGE_STATUSES = (
+    ('new', "New"),
+    ('do not process', 'Do Not Process'),
+    ('ready to process', 'Ready To Process')
+)
+class Package(models.Model):
+    package_id = models.CharField(max_length=100)
+    create_date = models.DateTimeField()
+    status = models.CharField(max_length=20, choices=PACKAGE_STATUSES, default='new')
+    order = models.IntegerField()
+
+    class Meta:
+        ordering = ['order', 'create_date']
 
