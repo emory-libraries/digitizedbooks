@@ -15,4 +15,40 @@
 #   limitations under the License.
 
 from django.contrib import admin
+from digitizedbooks.publish.models import  Job, KDip
+from django.contrib.sites.models import Site
+from taggit.models import Tag
+
+
+class KDipAdmin(admin.ModelAdmin):
+    list_display = ['kdip_id', 'create_date', 'status', 'note', 'job']
+    list_link = ['kdip_id']
+    list_editable = ['status', 'job']
+    readonly_fields = ['create_date', 'kdip_id']
+
+    def has_add_permission(self, request):
+        return False
+
+class KDipInline(admin.TabularInline):
+    model = KDip
+    readonly_fields = ['create_date', 'kdip_id']
+    can_delete = False
+    extra = 0
+
+    def has_add_permission(self, request):
+        return False
+
+
+class JobAdmin(admin.ModelAdmin):
+    inlines = [KDipInline]
+    list_display = ['name', 'status']
+    list_link = ['name']
+    list_editable = ['status']
+
+
+admin.site.register(KDip, KDipAdmin)
+admin.site.register(Job, JobAdmin)
+
+admin.site.unregister(Site)
+admin.site.unregister(Tag)
 

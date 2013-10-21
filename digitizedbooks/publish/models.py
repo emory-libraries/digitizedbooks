@@ -28,6 +28,7 @@ class METSFile(XmlObject):
     loctype = StringField('FLocat/@LOCTYPE')
     href = StringField('FLocat/@xlink:href')
 
+#TODO make schemas and namespaces local
 class METStechMD(XmlObject):
     ROOT_NAME = 'techMD'
     ROOT_NAMESPACES = {'mix': 'http://www.loc.gov/mix/v20'}
@@ -50,17 +51,45 @@ class Mets(XmlObject):
 
 
 
-PACKAGE_STATUSES = (
-    ('new', "New"),
-    ('do not process', 'Do Not Process'),
-    ('ready to process', 'Ready To Process')
+KDIP_STATUSES = (
+    ('new', 'New'),
+    ('processed', 'Processed'),
+    ('archived', 'Archived'),
+    ('invalid', 'Invalid'),
+    ('do not process', 'Do Not Process')
 )
-class Package(models.Model):
-    package_id = models.CharField(max_length=100)
+class KDip(models.Model):
+    kdip_id = models.CharField(max_length=100)
+    'This is the same as the directory name'
     create_date = models.DateTimeField()
-    status = models.CharField(max_length=20, choices=PACKAGE_STATUSES, default='new')
-    order = models.IntegerField()
+    'Create time of the directory'
+    status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='new')
+    note = models.CharField(max_length=200)
+    'Notes about this packagee, initially looked up from bib record'
+    job = models.ForeignKey('Job', null=True, blank=True)
+    'Job of which it is a part'
+
+
+    def __unicode__(self):
+        return self.kdip_id
 
     class Meta:
-        ordering = ['order', 'create_date']
+        ordering = ['create_date']
 
+JOB_STATUSES = (
+    ('new', "New"),
+    ('ready to process', 'Ready To Process'),
+    ('processed', 'Processed')
+)
+
+class Job(models.Model):
+
+    name = models.CharField(max_length=100)
+    'Human readable name of job'
+    status = models.CharField(max_length=20, choices=JOB_STATUSES, default='new')
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        ordering = ['id']
