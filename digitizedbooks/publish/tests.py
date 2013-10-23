@@ -16,12 +16,14 @@
 
 from django.test import TestCase
 from digitizedbooks.publish.management.commands.publish import Command
+from unittest import skip
 import os
 
 
 class TestPublish(TestCase):
 
 
+    @skip("This logic is currently being revised")
     def test_get_items(self,):
         c = Command()
         c.options = {'dir': 'digitizedbooks/publish/fixtures/METS'}

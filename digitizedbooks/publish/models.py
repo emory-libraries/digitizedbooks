@@ -14,10 +14,40 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-from eulxml.xmlmap import XmlObject
-from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField
-from django.db import models
+from datetime import datetime
+import requests
+import os, re
 
+from django.conf import settings
+from django.contrib.auth import user_logged_in
+from django.db import models
+from django.dispatch import receiver
+
+
+from eulxml.xmlmap import XmlObject
+from eulxml.xmlmap import load_xmlobject_from_string
+from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
+
+
+
+import logging
+
+logger = logging.getLogger(__name__)
+
+
+@receiver(user_logged_in)
+def _login_actions(sender, **kwargs):
+    "This functions is called when a user logsin"
+    KDip.load()
+
+
+# Configure  KDIP_DIR
+kdip_dir = getattr(settings, 'KDIP_DIR', None)
+if not kdip_dir:
+    #TODO add logging here
+    raise Exception ('Failed to configure KDIP_DIR. Pleas do so now otherwise most things will not work.')
+
+# METS XML
 class METSFile(XmlObject):
     ROOT_NAME = 'file'
     ROOT_NAMESPACES = {'xlink' : 'http://purl.org/dc/elements/1.1/xlink/'}
@@ -50,24 +80,101 @@ class Mets(XmlObject):
     techmd = NodeListField('amdSec/techMD', METStechMD)
 
 
+# MARC XML
+class MarcBase(XmlObject):
+    "Base for Marc"
+#    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
+    ROOT_NAMESPACES = {'marc':'http://www.loc.gov/MARC21/slim'}
 
-KDIP_STATUSES = (
-    ('new', 'New'),
-    ('processed', 'Processed'),
-    ('archived', 'Archived'),
-    ('invalid', 'Invalid'),
-    ('do not process', 'Do Not Process')
-)
+
+class MarcSubfield(MarcBase):
+    "Single instance of a datafield"
+    ROOT_NAME = 'marc:subfield'
+
+    code = StringField('@code')
+    "code of subfield"
+    text = StringField('text()')
+
+class MarcDatafield(MarcBase):
+    "Single instance of a datafield"
+    ROOT_NAME = 'marc:datafield'
+
+    tag = StringField('@tag')
+    "tag or type of datafield"
+    subfields = NodeListField('marc:subfield', MarcSubfield)
+    "list of marc subfields"
+
+
+class Marc(MarcBase):
+    "Used to parse the marc xml object"
+    ROOT_NAME = 'marc:collection'
+
+    datafields = NodeListField('marc:record/marc:datafield', MarcDatafield)
+    "list of marc datafields"
+
+
+    def note(self, barcode):
+        """
+        :param: barcode aka itme_id that is used to lookup the note field
+        Finds parent of subfiled where text() = barcode and @code=i. Then finds subfield@code=a
+        return the note field or '' if it can not be looked up
+        """
+
+        try:
+            parent = self.node.xpath('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="i" and text()="%s"]/..' % barcode, namespaces=self.ROOT_NAMESPACES)[0]
+            note = parent.xpath('marc:subfield[@code="a"]', namespaces=self.ROOT_NAMESPACES)[0].text
+        except Exception as e:
+            note = ''
+        return note
+
+
+# DB Models
 class KDip(models.Model):
-    kdip_id = models.CharField(max_length=100)
+    "Class to describe Kirtas output directory"
+    KDIP_STATUSES = (
+        ('new', 'New'),
+        ('processed', 'Processed'),
+        ('archived', 'Archived'),
+        ('invalid', 'Invalid'),
+       ('do not process', 'Do Not Process')
+    )
+
+    kdip_id = models.CharField(max_length=100, unique=True)
     'This is the same as the directory name'
     create_date = models.DateTimeField()
     'Create time of the directory'
     status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='new')
-    note = models.CharField(max_length=200)
+    note = models.CharField(max_length=200, blank=True)
     'Notes about this packagee, initially looked up from bib record'
-    job = models.ForeignKey('Job', null=True, blank=True)
+    job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     'Job of which it is a part'
+
+
+    @classmethod
+    def load(self):
+        "Class method to scan data directory specified in the setting `KDIP_DIR` and create new KDIP objects in the database."
+
+        # find all KDIP directories
+        kdip_reg = re.compile(r"^[0-9]+$")
+        kdips = filter(lambda f: kdip_reg.search(f), os.listdir(kdip_dir))
+        kdip_list = [k for k in kdips if os.path.isdir('%s/%s' % (kdip_dir, k))]
+
+        # create the KDIP is it does not exits
+        for k in kdip_list:
+            try:
+                # lookkup bib record for note field
+                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
+                bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+                defaults={
+                   'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_dir, k))),
+                    'note': bib_rec.note(k)
+                }
+                kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
+                #TODO Add logging here
+            except Exception as e:
+                #TODO add logging here
+                pass
+
 
 
     def __unicode__(self):
@@ -76,15 +183,16 @@ class KDip(models.Model):
     class Meta:
         ordering = ['create_date']
 
-JOB_STATUSES = (
-    ('new', "New"),
-    ('ready to process', 'Ready To Process'),
-    ('processed', 'Processed')
-)
-
 class Job(models.Model):
+    "This class collects :class:`KDIP` objects into logical groups for later processing"
 
-    name = models.CharField(max_length=100)
+    JOB_STATUSES = (
+        ('new', "New"),
+        ('ready to process', 'Ready To Process'),
+        ('processed', 'Processed')
+    )
+
+    name = models.CharField(max_length=100, unique=True)
     'Human readable name of job'
     status = models.CharField(max_length=20, choices=JOB_STATUSES, default='new')
 

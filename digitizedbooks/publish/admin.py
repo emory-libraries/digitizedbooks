@@ -19,12 +19,17 @@ from digitizedbooks.publish.models import  Job, KDip
 from django.contrib.sites.models import Site
 from taggit.models import Tag
 
+def remove_from_job(modeladmin, request, queryset):
+    queryset.update(job=None)
+remove_from_job.short_description = "Remove selected k dips from any associated job"
+
 
 class KDipAdmin(admin.ModelAdmin):
     list_display = ['kdip_id', 'create_date', 'status', 'note', 'job']
     list_link = ['kdip_id']
-    list_editable = ['status', 'job']
+    list_editable = ['status', 'job', 'note']
     readonly_fields = ['create_date', 'kdip_id']
+#    actions = [remove_from_job]
 
     def has_add_permission(self, request):
         return False
