@@ -82,13 +82,13 @@ class Mets(XmlObject):
 
 # MARC XML
 class MarcBase(XmlObject):
-    "Base for Marc"
+    "Base for MARC objects"
 #    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
     ROOT_NAMESPACES = {'marc':'http://www.loc.gov/MARC21/slim'}
 
 
 class MarcSubfield(MarcBase):
-    "Single instance of a datafield"
+    "Single instance of a MARC subfield"
     ROOT_NAME = 'marc:subfield'
 
     code = StringField('@code')
@@ -96,7 +96,7 @@ class MarcSubfield(MarcBase):
     text = StringField('text()')
 
 class MarcDatafield(MarcBase):
-    "Single instance of a datafield"
+    "Single instance of a MARC datafield"
     ROOT_NAME = 'marc:datafield'
 
     tag = StringField('@tag')
@@ -106,7 +106,7 @@ class MarcDatafield(MarcBase):
 
 
 class Marc(MarcBase):
-    "Used to parse the marc xml object"
+    "Top level MARC xml object"
     ROOT_NAME = 'marc:collection'
 
     datafields = NodeListField('marc:record/marc:datafield', MarcDatafield)
