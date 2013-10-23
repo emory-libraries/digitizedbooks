@@ -128,6 +128,12 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'basic'
         },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename' : '/tmp/digbooks.log',
+            'formatter': 'basic'
+        },
     },
     'loggers': {
         'django.request': {
@@ -136,7 +142,7 @@ LOGGING = {
             'propagate': True,
         },
         'digitizedbooks': {
-            'handlers': ['console'],
+            'handlers': ['console', 'file'],
             'level': 'DEBUG',
             'propagate': True,
         },

@@ -44,8 +44,9 @@ def _login_actions(sender, **kwargs):
 # Configure  KDIP_DIR
 kdip_dir = getattr(settings, 'KDIP_DIR', None)
 if not kdip_dir:
-    #TODO add logging here
-    raise Exception ('Failed to configure KDIP_DIR. Pleas do so now otherwise most things will not work.')
+    msg = "Failed to configure KDIP_DIR in localsettings. Please do so now otherwise most things will not work."
+    logger.error(msg)
+    raise Exception (msg)
 
 # METS XML
 class METSFile(XmlObject):
@@ -170,9 +171,10 @@ class KDip(models.Model):
                     'note': bib_rec.note(k)
                 }
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
-                #TODO Add logging here
+                if created:
+                    logger.info("Created KDip %s" % kdip.kdip_id)
             except Exception as e:
-                #TODO add logging here
+                logger.error("Error creating KDip %s : %s" % kdip.kdip_id, e.message)
                 pass
 
 
