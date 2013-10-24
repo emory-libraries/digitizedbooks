@@ -1,15 +1,21 @@
 .. DigitizedBooks documentation master file, created by
-   sphinx-quickstart on Thu Oct 24 14:19:05 2013.
+   sphinx-quickstart on Thr Oct 24 13:05:06 2013.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to DigitizedBooks's documentation!
+Welcome to Digitized Book's documentation!
 ==========================================
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
+
+   readme
+   changelog
+   deploynotes
+   apidocs
+   devnotes
 
 
 

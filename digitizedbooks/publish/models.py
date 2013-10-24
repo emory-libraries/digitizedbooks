@@ -37,7 +37,7 @@ logger = logging.getLogger(__name__)
 
 @receiver(user_logged_in)
 def _login_actions(sender, **kwargs):
-    "This functions is called when a user logsin"
+    "This functions is called at login"
     KDip.load()
 
 
@@ -84,7 +84,6 @@ class Mets(XmlObject):
 # MARC XML
 class MarcBase(XmlObject):
     "Base for MARC objects"
-#    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
     ROOT_NAMESPACES = {'marc':'http://www.loc.gov/MARC21/slim'}
 
 
@@ -95,6 +94,7 @@ class MarcSubfield(MarcBase):
     code = StringField('@code')
     "code of subfield"
     text = StringField('text()')
+    'text of subfield element'
 
 class MarcDatafield(MarcBase):
     "Single instance of a MARC datafield"
@@ -116,9 +116,11 @@ class Marc(MarcBase):
 
     def note(self, barcode):
         """
-        :param: barcode aka itme_id that is used to lookup the note field
-        Finds parent of subfiled where text() = barcode and @code=i. Then finds subfield@code=a
-        return the note field or '' if it can not be looked up
+        :param: barcode aka item_id that is used to lookup the note field
+        Finds parent of subfiled where text() = barcode and @code=i.
+        Then finds subfield@code=a
+
+        Returns the note field or '' if it can not be looked up
         """
 
         try:
@@ -131,7 +133,7 @@ class Marc(MarcBase):
 
 # DB Models
 class KDip(models.Model):
-    "Class to describe Kirtas output directory"
+    "Class to describe Kirtas output directories"
     KDIP_STATUSES = (
         ('new', 'New'),
         ('processed', 'Processed'),
@@ -145,15 +147,16 @@ class KDip(models.Model):
     create_date = models.DateTimeField()
     'Create time of the directory'
     status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='new')
+    'status of the KDip'
     note = models.CharField(max_length=200, blank=True)
     'Notes about this packagee, initially looked up from bib record'
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
-    'Job of which it is a part'
+    ':class:`Job` of which it is a part'
 
 
     @classmethod
     def load(self):
-        "Class method to scan data directory specified in the setting `KDIP_DIR` and create new KDIP objects in the database."
+        "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
         # find all KDIP directories
         kdip_reg = re.compile(r"^[0-9]+$")
@@ -186,7 +189,7 @@ class KDip(models.Model):
         ordering = ['create_date']
 
 class Job(models.Model):
-    "This class collects :class:`KDIP` objects into logical groups for later processing"
+    "This class collects :class:`KDip` objects into logical groups for later processing"
 
     JOB_STATUSES = (
         ('new', "New"),
