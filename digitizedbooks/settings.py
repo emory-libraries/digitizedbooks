@@ -113,6 +113,7 @@ INSTALLED_APPS = (
     'south',
     'taggit',
     'digitizedbooks.publish',
+    'eullocal.django.emory_ldap',
 )
 
 
@@ -151,3 +152,12 @@ WSGI_APPLICATION = 'digitizedbooks.wsgi.application'
 # - without these settings, test fail on loading initial fixtured data
 SKIP_SOUTH_TESTS = True
 SOUTH_TESTS_MIGRATE = False
+
+
+AUTH_USER_MODEL = 'emory_ldap.EmoryLDAPUser'
+
+
+AUTHENTICATION_BACKENDS = {
+    'django.contrib.auth.backends.ModelBackend',
+    'eullocal.django.emory_ldap.backends.EmoryLDAPBackend',
+}
