@@ -157,7 +157,7 @@ SOUTH_TESTS_MIGRATE = False
 AUTH_USER_MODEL = 'emory_ldap.EmoryLDAPUser'
 
 
-AUTHENTICATION_BACKENDS = {
+AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'eullocal.django.emory_ldap.backends.EmoryLDAPBackend',
-}
+)

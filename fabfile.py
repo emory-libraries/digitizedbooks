@@ -14,6 +14,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
+import digitizedbooks
 import os
 import re
 import shutil
@@ -73,13 +74,13 @@ env.project = 'digitizedbooks'
 env.git_rev_tag = ''
 env.git_rev = ''
 env.remote_path = '/home/httpd/sites/digitizedbooks'
-env.remote_solr_path = '/home/solr33/multicore'
 env.remote_acct = 'digitizedbooks'
 env.url_prefix = None
 env.remote_proxy = None
+os.environ["DJANGO_SETTINGS_MODULE"] = 'digitizedbooks.settings'
 
-def configure(path=None, solr_path=None, user=None, solr_user=None, url_prefix=None,
-              remote_proxy=None, solr_admin_url=None):
+def configure(path=None, user=None, url_prefix=None,
+              remote_proxy=None):
     'Configuration settings used internally for the build.'
 
 
@@ -88,20 +89,13 @@ def configure(path=None, solr_path=None, user=None, solr_user=None, url_prefix=N
     # construct a unique build directory name based on software version and git revision
     env.build_dir = '%(project)s-%(version)s-%(git_rev)s' % env
     env.tarball = '%(project)s-%(version)s-%(git_rev)s.tar.bz2' % env
-    env.solr_tarball = '%(project)s-solr-%(version)s%(git_rev_tag)s.tar.bz2' % env
 
     if path:
         env.remote_path = path.rstrip('/')
-    if solr_path:
-        env.remote_solr_path = solr_path.rstrip('/')
     if user:
         env.remote_acct = user
-    if solr_user:
-        env.solr_acct = solr_user
     if url_prefix:
         env.url_prefix = url_prefix.rstrip('/')
-    if solr_admin_url:
-        env.solr_admin_url = solr_admin_url
 
     if remote_proxy:
         env.remote_proxy = remote_proxy
@@ -141,25 +135,15 @@ def prep_source():
         with open(env.apache_conf, 'w') as conf:
             conf.write(text)
 
-    local('mkdir -p build/solr/%(build_dir)s' % env)
-    local('rm -rf build/solr/%(build_dir)s/conf' % env)
-    local('cp -a build/%(build_dir)s/solr build/solr/%(build_dir)s/conf' % env)
-
 def package_source():
     'Create a tarball of the source tree.'
     local('mkdir -p dist')
     local('tar cjf dist/%(tarball)s -C build %(build_dir)s' % env)
-    local('tar cjf dist/%(solr_tarball)s -C build/solr %(build_dir)s' % env)
 
 def upload_source():
     'Copy the source tarball to the target server.'
     put('dist/%(tarball)s' % env,
         '/tmp/%(tarball)s' % env)
-
-def upload_solr_core():
-    'Copy the solr core tarball to the target server.'
-    put('dist/%(solr_tarball)s' % env,
-        '/tmp/%(solr_tarball)s' % env)
 
 def extract_source():
     'Extract the remote source tarball under the configured remote directory.'
@@ -169,12 +153,6 @@ def extract_source():
         run('rm /tmp/%(tarball)s' % env)
         # update apache.conf if necessary
 
-def extract_solr_core():
-    'Extract the remote solr core tarball under the configured remote directory.'
-    with cd(env.remote_solr_path):
-        sudo('tar xjf /tmp/%(solr_tarball)s' % env, user=env.solr_acct)
-        # if the untar succeeded, remove the tarball
-        run('rm /tmp/%(solr_tarball)s' % env)
 
 def bootstrap_unix_env():
     '''Set up host-specific remote unix environment by sourcing
@@ -220,7 +198,7 @@ def configure_site():
     with cd('%(remote_path)s/%(build_dir)s' % env):
         with prefix('source env/bin/activate'):
             with bootstrap_unix_env():
-                sudo('python %(project)s/manage.py collectstatic --noinput' % env,
+                sudo('python manage.py collectstatic --noinput' % env,
                      user=env.remote_acct)
                 # make static files world-readable
                 sudo('chmod -R a+r `env DJANGO_SETTINGS_MODULE="%(project)s.settings" python -c "from django.conf import settings; print settings.STATIC_ROOT"`' % env,
@@ -247,9 +225,7 @@ def syncdb():
 @task
 def build_source_package(path=None, user=None, url_prefix='',
                         remote_proxy=None):
-    '''Produce a tarball of the source tree and a solr core.'''
-    # exposed as a task since this is as far as we can go for now with solr.
-    # as solr deployment matures we should expose the most mature piece
+    '''Produce a tarball of the source tree.'''
     configure(path=path, user=user, url_prefix=url_prefix,
             remote_proxy=remote_proxy)
     prep_source()

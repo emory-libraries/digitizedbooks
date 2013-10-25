@@ -11,7 +11,7 @@ django-taggit
 south
 python-dateutil
 python-magic
-django-tracking
+#django-tracking
 pyasn1
 boto
 requests
