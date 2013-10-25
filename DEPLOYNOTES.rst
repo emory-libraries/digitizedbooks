@@ -99,6 +99,16 @@ doing this about every week, though exact timing depends on usage patterns
 and administrative discretion.
 
 
+Database Install
+================
+.. Note::
+  If installing on a brand new database which you must do the following before running ``syncdb`` or  migrations emory_ldap migrations:
+     #. in ``settings`` comment out the ``AUTH_USER_MODEL``
+     #. run syncdb
+     #. run migrations
+     #. uncomment ``AUTH_USER_MODEL``
+
+
 
 Upgrade Notes
 =============

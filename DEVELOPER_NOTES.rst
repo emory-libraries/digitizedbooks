@@ -16,7 +16,7 @@ Test setup
 
 Database support
 ----------------
-
+See DEPLOYNOTES for first time install
 
 Sending Email
 -------------
@@ -34,3 +34,6 @@ settings for **EMAIL_HOST** and **SERVER_EMAIL**.
 
 Notes on included items
 ~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
