@@ -50,8 +50,8 @@ def test():
     if os.path.exists('test-results'):
         shutil.rmtree('test-results')
 
-    local('coverage run --branch %(project)s/manage.py test --noinput' % env)
-    local('coverage xml --include=%(project)s**/*.py --omit=%(omit_coverage)s' % env)
+    local('coverage run --branch ./manage.py test --noinput' % env)
+    local('coverage xml --include=./**/*.py --omit=%(omit_coverage)s' % env)
 
 def doc():
     '''Locally build documentation.'''
