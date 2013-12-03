@@ -51,34 +51,42 @@ if not kdip_dir:
 # METS XML
 class METSFile(XmlObject):
     ROOT_NAME = 'file'
-    ROOT_NAMESPACES = {'xlink' : 'http://purl.org/dc/elements/1.1/xlink/'}
+    ROOT_NAMESPACES = {
+         'xlink' : "http://www.w3.org/1999/xlink",
+        'mets': 'http://www.loc.gov/METS/'
+    }
 
     id = StringField('@ID')
     admid = StringField('@ADMID')
     mimetype = StringField('@MIMETYPE')
-    loctype = StringField('FLocat/@LOCTYPE')
-    href = StringField('FLocat/@xlink:href')
+    loctype = StringField('mets:FLocat/@LOCTYPE')
+    href = StringField('mets:FLocat/@xlink:href')
 
 #TODO make schemas and namespaces local
 class METStechMD(XmlObject):
     ROOT_NAME = 'techMD'
-    ROOT_NAMESPACES = {'mix': 'http://www.loc.gov/mix/v20'}
+    ROOT_NAMESPACES = {
+        'mix': 'http://www.loc.gov/mix/v20',
+        'mets': 'http://www.loc.gov/METS/'
+    }
 
 
     id = StringField('@ID')
-    href = StringField('mdWrap/xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:ObjectIdentifier/mix:objectIdentifierValue')
-    size = IntegerField('mdWrap/xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:fileSize')
-    mimetype = StringField('mdWrap/xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:FormatDesignation/mix:formatName')
-    checksum = StringField('mdWrap/xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:Fixity/mix:messageDigest')
+    href = StringField('mets:mdWrap/mets:xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:ObjectIdentifier/mix:objectIdentifierValue')
+    size = IntegerField('mets:mdWrap/mets:xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:fileSize')
+    mimetype = StringField('mets:mdWrap/mets:xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:FormatDesignation/mix:formatName')
+    checksum = StringField('mets:mdWrap/mets:xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:Fixity/mix:messageDigest')
 
 class Mets(XmlObject):
     XSD_SCHEMA = 'http://www.loc.gov/standards/mets/version191/mets.xsd'
     ROOT_NAME = 'mets'
+    ROOT_NAMESPACES = {'mets': 'http://www.loc.gov/METS/'}
 
-    tiffs = NodeListField('fileSec/fileGrp[@ID="TIFF"]/file', METSFile)
-    jpegs = NodeListField('fileSec/fileGrp[@ID="JPEG"]/file', METSFile)
-    jp2s = NodeListField('fileSec/fileGrp[@ID="JP2000"]/file', METSFile)
-    techmd = NodeListField('amdSec/techMD', METStechMD)
+    #x = NodeListField('mets:fileSec/mets:fileGrp', METSFile)
+    tiffs = NodeListField('mets:fileSec/mets:fileGrp[@ID="TIFF"]/mets:file', METSFile)
+    jpegs = NodeListField('mets:fileSec/mets:fileGrp[@ID="JPEG"]/mets:file', METSFile)
+    jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
+    techmd = NodeListField('mets:amdSec/mets:techMD', METStechMD)
 
 
 # MARC XML
