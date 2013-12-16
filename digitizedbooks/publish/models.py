@@ -85,7 +85,8 @@ class Mets(XmlObject):
     #x = NodeListField('mets:fileSec/mets:fileGrp', METSFile)
     tiffs = NodeListField('mets:fileSec/mets:fileGrp[@ID="TIFF"]/mets:file', METSFile)
     jpegs = NodeListField('mets:fileSec/mets:fileGrp[@ID="JPEG"]/mets:file', METSFile)
-    jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
+#    jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
+    altos = NodeListField('mets:fileSec/mets:fileGrp[@ID="ALTO"]/mets:file', METSFile)
     techmd = NodeListField('mets:amdSec/mets:techMD', METStechMD)
 
 
@@ -162,6 +163,10 @@ class KDip(models.Model):
     ':class:`Job` of which it is a part'
 
 
+    def _validate(self):
+        logger.info("VALIDATING %s" % self.kdip_id)
+
+
     @classmethod
     def load(self):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
@@ -184,8 +189,9 @@ class KDip(models.Model):
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
+                    kdip._validate()
             except Exception as e:
-                logger.error("Error creating KDip %s : %s" % kdip.kdip_id, e.message)
+                logger.error("Error creating KDip %s : %s" % (k, e.message))
                 pass
 
 
