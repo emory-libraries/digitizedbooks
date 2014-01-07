@@ -58,20 +58,28 @@ class TestKDip(TestCase):
 
         # load the KDIPs from the directory defined in settings
         KDip.load()
-        self.assertEquals(len(KDip.objects.all()), 2)
+        self.assertEquals(len(KDip.objects.all()), 4)
 
         k1 = KDip.objects.all()[0]
         self.assertEquals(k1.kdip_id, '123')
-        #self.assertEquals(str(k1.create_date), '2013-10-21 15:51:52')
-        self.assertEquals(k1.status, 'new')
+        self.assertEquals(k1.status, 'invalid')
         self.assertEquals(k1.job, None)
 
         k2 = KDip.objects.all()[1]
         self.assertEquals(k2.kdip_id, '010000603807')
-        #self.assertEquals(str(k2.create_date), '2013-10-23 10:51:57')
-        self.assertEquals(k2.status, 'new')
+        self.assertEquals(k2.status, 'invalid')
         self.assertEquals(k2.job, None)
-        #TODO figure out a way to test dates
+
+        k3 = KDip.objects.all()[2]
+        self.assertEquals(k3.kdip_id, '070000118169')
+        self.assertEquals(k3.status, 'new')
+        self.assertEquals(k3.job, None)
+
+        k4 = KDip.objects.all()[3]
+        self.assertEquals(k4.kdip_id, '010000354312')
+        self.assertEquals(k4.status, 'new')
+        self.assertEquals(k4.job, None)
+
 
 
 
