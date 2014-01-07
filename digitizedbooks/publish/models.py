@@ -17,6 +17,7 @@
 from datetime import datetime
 import requests
 import os, re
+from hashlib import md5
 
 from django.conf import settings
 from django.contrib.auth import user_logged_in
@@ -25,7 +26,7 @@ from django.dispatch import receiver
 
 
 from eulxml.xmlmap import XmlObject
-from eulxml.xmlmap import load_xmlobject_from_string
+from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
 
 
@@ -159,12 +160,79 @@ class KDip(models.Model):
     'status of the KDip'
     note = models.CharField(max_length=200, blank=True)
     'Notes about this packagee, initially looked up from bib record'
+    reason = models.CharField(max_length=1000, blank=True)
+    'If the KDIP is invalid this will be populated with the first failed condition'
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
 
 
-    def _validate(self):
-        logger.info("VALIDATING %s" % self.kdip_id)
+    def validate(self):
+        '''
+        Validates the mets file and files referenced in the mets.
+        '''
+
+        # all paths (except for TOC) are relitive to METS dir
+        mets_dir = "%s/%s/METS/" % (kdip_dir, self.kdip_id)
+
+        mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
+
+        toc_file = "%s/%s/TOC/%s.toc" % (kdip_dir, self.kdip_id, self.kdip_id)
+
+
+        #Mets file exists
+        if not os.path.exists(mets_file):
+            reason = "Error: %s does not exist" % mets_file
+            self.reason = reason
+            self.status = 'invalid'
+            self.save()
+            logger.error(reason)
+            return False
+
+        mets = load_xmlobject_from_file(mets_file, Mets)
+
+        #mets file validates against schema
+        if not mets.is_valid():
+            reason = "Error: %s is not valid" % mets_file
+            self.reason = reason
+            self.status = 'invalid'
+            self.save()
+            logger.error(reason)
+            return False
+
+        # toc file exists
+        if not os.path.exists(toc_file):
+            reason = "Error: %s does not exist" % toc_file
+            self.reason = reason
+            self.status = 'invalid'
+            self.save()
+            logger.error(reason)
+            return False
+
+        # validate each file of type TIFF, JP2, ALTO, OCR
+        for f in mets.techmd:
+            file_path = "%s%s" % (mets_dir, f.href)
+
+            # file exists
+            if not os.path.exists(file_path):
+                reason = "Error: %s does not exist" % file_path
+                self.reason = reason
+                self.status = 'invalid'
+                self.save()
+                logger.error(reason)
+                return False
+
+            # checksum good
+            with open(file_path, 'rb') as file:
+                if not f.checksum == md5(file.read()).hexdigest():
+                    reason = "Error: checksum does not match for %s" % file_path
+                    self.reason = reason
+                    self.status = 'invalid'
+                    self.save()
+                    logger.error(reason)
+                    return False
+
+        # if it gets here were are good
+        return True
 
 
     @classmethod
@@ -189,7 +257,7 @@ class KDip(models.Model):
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
-                    kdip._validate()
+                    kdip.validate()
             except Exception as e:
                 logger.error("Error creating KDip %s : %s" % (k, e.message))
                 pass
