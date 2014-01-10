@@ -141,6 +141,15 @@ class Marc(MarcBase):
         return note
 
 
+class Alto(XmlObject):
+    '''
+    Instance of ALTO xml object. Currently this is only used for schema validation
+    '''
+    XSD_SCHEMA = 'http://www.loc.gov/standards/alto/alto-v2.0.xsd'
+    ROOT_NAME = 'alto'
+
+
+
 # DB Models
 class KDip(models.Model):
     "Class to describe Kirtas output directories"
