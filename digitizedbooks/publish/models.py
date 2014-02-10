@@ -29,7 +29,7 @@ from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
 
-
+from PIL import Image
 
 import logging
 
@@ -186,6 +186,8 @@ class KDip(models.Model):
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
         toc_file = "%s/%s/TOC/%s.toc" % (kdip_dir, self.kdip_id, self.kdip_id)
+        
+        tiff_dir = "%s/%s/TIFF/" % (kdip_dir, self.kdip_id)
 
 
         #Mets file exists
@@ -216,6 +218,43 @@ class KDip(models.Model):
             self.save()
             logger.error(reason)
             return False
+        
+        # validate TIFFs
+        
+        tif_tags = {
+            'Make': 271,
+            'Model': 272,
+            'ColorSpace': 40961,
+            'BitsPerSample': 258,
+            'BitsPerPixel': 37122,	
+            'Compression': 259,
+            'PhotometricInterpretation': 262,
+            'Orientation': 274,
+            'XResolution': 282,
+            'YResolution': 283,
+            'ResolutionUnit': 296,
+            'Artist': 315,
+            'ImageProducer': 315,
+            'SamplingFrequencyUnit': 296,
+            'XSamplingFrequency': 82,
+            'YSamplingFrequency': 283
+        }
+        
+        tif_status = ''
+        for file in os.listdir(tiff_dir):
+            if file.endswith(".tif"):
+                image = Image.open('%s%s' % ( tiff_dir, file))
+                tags = image.tag
+                for tif_tag in tif_tags:
+                    valid = tags.has_key(tif_tags[tif_tag])
+                    if valid is False:
+                        logger.error('%s missing form %s' % (tif_tag, file))
+                        tif_status = valid
+                        
+        if tif_status is False:
+            self.reason = 'TIFF invalid.'
+            self.status = 'invalid'
+            self.save()
 
         # validate each file of type TIFF, JP2, ALTO, OCR
         for f in mets.techmd:
