@@ -24,7 +24,6 @@ from django.contrib.auth import user_logged_in
 from django.db import models
 from django.dispatch import receiver
 
-
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
@@ -48,6 +47,90 @@ if not kdip_dir:
     msg = "Failed to configure KDIP_DIR in localsettings. Please do so now otherwise most things will not work."
     logger.error(msg)
     raise Exception (msg)
+
+def get_rights(self):
+    """
+    Get the Marc 21 bib record
+    Rights validation is based on HT's Automated Bibliographic Rights Determination
+    http://www.hathitrust.org/bib_rights_determination
+    """
+    rights = ''
+    reason = ''
+    try:
+        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.kdip_id})
+        bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+        
+        tag_008 = bib_rec.tag_008
+        data_type = tag_008[6]
+        date1 = tag_008[7:11]
+        date1 = int(date1)
+        date2 = tag_008[11:15]
+        pub_place = tag_008[15:18]
+        pub_place17 = tag_008[17]
+        govpub = tag_008[28]
+        
+        # This is not really needed now but will be needed for Gov Docs
+        imprint = ''
+        if bib_rec.tag_260:
+            imprint = bib_rec.tag_260
+        elif bib_rec.tag_261a:
+            imprint = bib_rec.tag_261a
+        else:
+            imprint = 'mult_260a_non_us'
+            logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
+        
+        # Check to see if Emory thinks it is public domain
+        if bib_rec.tag_583x == 'public domain':
+            # Now we go through HT's algorithm to determin rights
+            # US Docs
+            if pub_place17 == 'u':
+                # Gov Docs
+                if govpub == 'f':
+                    print('It is gov')
+                #    if 'ntis' in inprint:
+                #        rights = 'ic'
+                #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
+                #        rights = 'ic'
+                #    #elif NIST-NSRDS (series field 400|410|411|440|490|800|810|811|830 contains 'nsrds' or 'national standard reference data series')
+                #    #    or Federal Reserve (author field 100|110|111|700|710|711 contains "federal reserve")
+                #    #    and pub_date >= 1923
+                #    else:
+                #        rights = 'pd'
+                ## Non gov docs
+                else:
+                    if date1 >= 1873 and date1 <= 1922:
+                        rights = 'pdus'
+                    elif date1 < 1923:
+                        rights = 'pd'
+                    else:
+                        reason = ('%s was published in %s' % (self.kdip_id, date1))
+                        logger.error(reason)
+                        rights = 'ic'
+                
+            # Non-US docs
+            else:
+                logger.info('%s is not a US publication' % (self.kdip_id))
+                if date1 < 1873:
+                    rights = 'pd'
+                if date1 >= 1873 and date1 < 1923:
+                    rights is 'pdus'
+                else:
+                    reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
+                    logger.error(reason)
+                    rights = 'ic'
+        else:
+            rights = 'ic'
+            reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
+        
+    except Exception as e:
+        reason = 'Could not determine rights for %s' % (self.kdip_id)
+        logger.error(reason)
+        return reason
+    if rights is not 'ic':
+        logger.info('%s rights set to %s' % (self.kdip_id, rights))
+        return 'public'
+    else:
+        return reason
 
 # METS XML
 class METSFile(XmlObject):
@@ -99,7 +182,8 @@ class MarcBase(XmlObject):
 
 class MarcSubfield(MarcBase):
     "Single instance of a MARC subfield"
-    ROOT_NAME = 'marc:subfield'
+    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
+    ROOT_NAME = 'subfield'
 
     code = StringField('@code')
     "code of subfield"
@@ -108,7 +192,8 @@ class MarcSubfield(MarcBase):
 
 class MarcDatafield(MarcBase):
     "Single instance of a MARC datafield"
-    ROOT_NAME = 'marc:datafield'
+    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
+    ROOT_NAME = 'datafield'
 
     tag = StringField('@tag')
     "tag or type of datafield"
@@ -118,11 +203,20 @@ class MarcDatafield(MarcBase):
 
 class Marc(MarcBase):
     "Top level MARC xml object"
-    ROOT_NAME = 'marc:collection'
+    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
+    ROOT_NAME = 'collection'
 
     datafields = NodeListField('marc:record/marc:datafield', MarcDatafield)
     "list of marc datafields"
-
+    
+    tag_583x = StringField('marc:record/marc:datafield[@tag="583"]/marc:subfield[@code="x"]')
+    # 583 code5 where a is 'digitized' or 'selected for digitization'
+    # this will be for 'capture_agent' in yaml file
+    
+    tag_008 = StringField('marc:record/marc:controlfield[@tag="008"]')
+    
+    tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
+    tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
 
     def note(self, barcode):
         """
@@ -139,6 +233,7 @@ class Marc(MarcBase):
         except Exception as e:
             note = ''
         return note
+
 
 
 class Alto(XmlObject):
@@ -158,7 +253,7 @@ class KDip(models.Model):
         ('processed', 'Processed'),
         ('archived', 'Archived'),
         ('invalid', 'Invalid'),
-       ('do not process', 'Do Not Process')
+        ('do not process', 'Do Not Process')
     )
 
     kdip_id = models.CharField(max_length=100, unique=True)
@@ -180,6 +275,7 @@ class KDip(models.Model):
         Validates the mets file and files referenced in the mets.
         '''
 
+        logger.info('Starting validation of %s' % (self.kdip_id))
         # all paths (except for TOC) are relitive to METS dir
         mets_dir = "%s/%s/METS/" % (kdip_dir, self.kdip_id)
 
@@ -188,7 +284,18 @@ class KDip(models.Model):
         toc_file = "%s/%s/TOC/%s.toc" % (kdip_dir, self.kdip_id, self.kdip_id)
         
         tif_dir = "%s/%s/TIFF/" % (kdip_dir, self.kdip_id)
-
+        
+        rights = get_rights(self)
+        
+        if rights is not 'public':
+            self.reason = rights
+            if 'Could not' in rights:
+                self.status = 'invalid'
+            else:
+                self.status = 'do not process'
+            self.save()
+            logger.error(rights)
+            return False
 
         #Mets file exists
         if not os.path.exists(mets_file):
@@ -211,33 +318,33 @@ class KDip(models.Model):
             return False
 
         # toc file exists
-        if not os.path.exists(toc_file):
-            reason = "Error: %s does not exist" % toc_file
-            self.reason = reason
-            self.status = 'invalid'
-            self.save()
-            logger.error(reason)
-            return False
+        #if not os.path.exists(toc_file):
+        #    reason = "Error: %s does not exist" % toc_file
+        #    self.reason = reason
+        #    self.status = 'invalid'
+        #    self.save()
+        #    logger.error(reason)
+        #    return False
         
         # validate TIFFs
         
         tif_tags = {
             'ImageWidth': 256,
             'ImageLength': 257,
-            'BitsPerSample': 258,
+            'BitsPerSample': 258, # 8, 8, 8
             'Compression': 259,
             'PhotometricInterpretation': 262,
-            'DocumentName': 269,
+            #'DocumentName': 269,
             'Make': 271,
             'Model': 272,
-            'Orientation': 274,
-            'XResolution': 282,
-            'YResolution': 283,
+            'Orientation': 274, # == 1
+            'XResolution': 282, # <= 300
+            'YResolution': 283, # <= 300
             'ResolutionUnit': 296,
             'DateTime': 306,
-            'ImageProducer': 315,
-            'BitsPerPixel': 37122,
-            'ColorSpace': 40961
+            #'ImageProducer': 315,
+            #'BitsPerPixel': 37122,
+            #'ColorSpace': 40961
         }
         
         tif_status = ''
@@ -248,15 +355,16 @@ class KDip(models.Model):
                 for tif_tag in tif_tags:
                     valid = tags.has_key(tif_tags[tif_tag])
                     if valid is False:
-                        logger.error('%s missing form %s' % (tif_tag, file))
+                        logger.error('%s missing form %s %s' % (tif_tag, self.kdip_id, file))
                         tif_status = valid
                         
         if tif_status is False:
             self.reason = 'TIFF invalid.'
             self.status = 'invalid'
             self.save()
+            return False
 
-        # validate each file of type TIFF, JP2, ALTO, OCR
+        # validate each file of type ALTO and OCR
         for f in mets.techmd:
             file_path = "%s%s" % (mets_dir, f.href)
 
