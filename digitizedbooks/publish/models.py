@@ -16,7 +16,7 @@
 
 from datetime import datetime
 import requests
-import os, re
+import os, re, shutil
 from hashlib import md5
 
 from django.conf import settings
@@ -31,6 +31,11 @@ from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerF
 from PIL import Image
 
 import logging
+import zipfile
+import yaml
+import time
+from datetime import datetime
+import glob
 
 logger = logging.getLogger(__name__)
 
@@ -80,47 +85,47 @@ def get_rights(self):
             logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
         
         # Check to see if Emory thinks it is public domain
-        if bib_rec.tag_583x == 'public domain':
-            # Now we go through HT's algorithm to determin rights
-            # US Docs
-            if pub_place17 == 'u':
-                # Gov Docs
-                if govpub == 'f':
-                    print('It is gov')
-                #    if 'ntis' in inprint:
-                #        rights = 'ic'
-                #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
-                #        rights = 'ic'
-                #    #elif NIST-NSRDS (series field 400|410|411|440|490|800|810|811|830 contains 'nsrds' or 'national standard reference data series')
-                #    #    or Federal Reserve (author field 100|110|111|700|710|711 contains "federal reserve")
-                #    #    and pub_date >= 1923
-                #    else:
-                #        rights = 'pd'
-                ## Non gov docs
-                else:
-                    if date1 >= 1873 and date1 <= 1922:
-                        rights = 'pdus'
-                    elif date1 < 1923:
-                        rights = 'pd'
-                    else:
-                        reason = ('%s was published in %s' % (self.kdip_id, date1))
-                        logger.error(reason)
-                        rights = 'ic'
-                
-            # Non-US docs
+        #if bib_rec.tag_583x == 'public domain':
+        # Now we go through HT's algorithm to determin rights
+        # US Docs
+        if pub_place17 == 'u':
+            # Gov Docs
+            if govpub == 'f':
+                print('It is gov')
+            #    if 'ntis' in inprint:
+            #        rights = 'ic'
+            #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
+            #        rights = 'ic'
+            #    #elif NIST-NSRDS (series field 400|410|411|440|490|800|810|811|830 contains 'nsrds' or 'national standard reference data series')
+            #    #    or Federal Reserve (author field 100|110|111|700|710|711 contains "federal reserve")
+            #    #    and pub_date >= 1923
+            #    else:
+            #        rights = 'pd'
+            ## Non gov docs
             else:
-                logger.info('%s is not a US publication' % (self.kdip_id))
-                if date1 < 1873:
+                if date1 >= 1873 and date1 <= 1922:
+                    rights = 'pdus'
+                elif date1 < 1923:
                     rights = 'pd'
-                if date1 >= 1873 and date1 < 1923:
-                    rights is 'pdus'
                 else:
-                    reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
+                    reason = ('%s was published in %s' % (self.kdip_id, date1))
                     logger.error(reason)
                     rights = 'ic'
+            
+        # Non-US docs
         else:
-            rights = 'ic'
-            reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
+            logger.info('%s is not a US publication' % (self.kdip_id))
+            if date1 < 1873:
+                rights = 'pd'
+            if date1 >= 1873 and date1 < 1923:
+                rights is 'pdus'
+            else:
+                reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
+                logger.error(reason)
+                rights = 'ic'
+        #else:
+        #    rights = 'ic'
+        #    reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
         
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
@@ -131,6 +136,131 @@ def get_rights(self):
         return 'public'
     else:
         return reason
+
+def validate_tiffs(file, dir, kdip):
+    tif_tags = {
+        'ImageWidth': 256,
+        'ImageLength': 257,
+        'BitsPerSample': 258,
+        'Compression': 259,
+        'PhotometricInterpretation': 262,
+        'DocumentName': 269,
+        'Make': 271,
+        'Model': 272,
+        'Orientation': 274,
+        'XResolution': 282,
+        'YResolution': 283,
+        'ResolutionUnit': 296,
+        'DateTime': 306,
+        'ImageProducer': 315,
+        #'BitsPerPixel': 37122,
+        'ColorSpace': 40961,
+        'SamplesPerPixel': 277
+    }
+    missing = []
+    found = {}
+    skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
+    yaml_data = {}
+    
+    image = Image.open(file)
+    tags = image.tag
+
+    for tif_tag in tif_tags:
+        valid = tags.has_key(tif_tags[tif_tag])
+        if valid is False:
+            found[tif_tag] = False
+            
+        if valid is True:
+            found[tif_tag] = tags.get(tif_tags[tif_tag])
+        
+
+    dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
+    yaml_data['capture-date'] = dt.isoformat('T')
+    with open('%s/%s/meta.yml' % (dir, kdip), 'a') as outfile:
+        outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
+    
+    ## START REAL VALIDATION
+    if found['ImageWidth'] <= 0:
+        status = 'Invalid value for ImageWidth in %s' % (file)
+        return status
+    
+    if found['ImageLength']  <= 0:
+        status = 'Invalid value for ImageLength in %s' % (file)
+        return status
+    
+    if not found['Make']:
+        status = 'Invalid value for Make in %s' % (file)
+        return status
+    
+    if not found['Model']:
+        status = 'Invalid value for Make in %s' % (file)
+        return status
+    
+    if found['Orientation'] != (1,):
+        status = 'Invalid value for Orientation in %s' % (file)
+        return status
+    
+    #if found['ColorSpace'] != 1:
+    #    status = 'Invalid value for ColorSpace in %s' % (file)
+    #    return status
+    
+    if found['ResolutionUnit'] != (2,):
+        status = 'Invalid value for ResolutionUnit in %s' % (file)
+        return status
+    
+    if not found['DateTime']:
+        status = 'Invalid value for DateTime in %s' % (file)
+        return status
+    
+    imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
+    if imgtype == '1':
+        
+        if found['Compression'] != (4,):
+            status = 'Invalid value for Compression in %s' % (file)
+            return status
+        
+        if found['PhotometricInterpretation'] != (0,):
+            status = 'Invalid value for PhotometricInterpretation in %s' % (file)
+            return status
+        
+        if found['SamplesPerPixel'] != (1,):
+            status = 'Invalid value for SamplesPerPixel in %s' % (file)
+            return status
+        
+        if found['XResolution'] < 600:
+            status = 'Invalid value for XResolution in %s' % (file)
+            return status
+        
+        if found['YResolution'] < 600:
+            status = 'Invalid value for YResolution in %s' % (file)
+            return status
+        
+    elif imgtype is '888' or '3':
+    
+        if found['Compression'] != (1,):
+            if found['Compression'] != (5,):
+                status = 'Invalid value for Compression in %s' % (file)
+                return status
+        
+        if found['PhotometricInterpretation'] != (2,):
+            status = 'Invalid value for PhotometricInterpretation in %s' % (file)
+            return status
+        
+        if found['SamplesPerPixel'] != (3,):
+            status = 'Invalid value for SamplesPerPixel in %s' % (file)
+            return status
+        
+        if found['XResolution'] < 300:
+            status = 'Invalid value for XResolution in %s' % (file)
+            return status
+        
+        if found['YResolution'] < 300:
+            status = 'Invalid value for YResolution in %s' % (file)
+            return status
+        
+    else:
+        status = 'cannot determine type for %s' % (file)
+
 
 # METS XML
 class METSFile(XmlObject):
@@ -212,6 +342,8 @@ class Marc(MarcBase):
     tag_583x = StringField('marc:record/marc:datafield[@tag="583"]/marc:subfield[@code="x"]')
     # 583 code5 where a is 'digitized' or 'selected for digitization'
     # this will be for 'capture_agent' in yaml file
+    
+    tag_583_5 = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="5"]/text()')
     
     tag_008 = StringField('marc:record/marc:controlfield[@tag="008"]')
     
@@ -316,52 +448,17 @@ class KDip(models.Model):
             self.save()
             logger.error(reason)
             return False
-
-        # toc file exists
-        #if not os.path.exists(toc_file):
-        #    reason = "Error: %s does not exist" % toc_file
-        #    self.reason = reason
-        #    self.status = 'invalid'
-        #    self.save()
-        #    logger.error(reason)
-        #    return False
         
-        # validate TIFFs
+        tif_status = None
+        tiffs = glob.glob('%s/*.tif' % tif_dir)
         
-        tif_tags = {
-            'ImageWidth': 256,
-            'ImageLength': 257,
-            'BitsPerSample': 258, # 8, 8, 8
-            'Compression': 259,
-            'PhotometricInterpretation': 262,
-            #'DocumentName': 269,
-            'Make': 271,
-            'Model': 272,
-            'Orientation': 274, # == 1
-            'XResolution': 282, # <= 300
-            'YResolution': 283, # <= 300
-            'ResolutionUnit': 296,
-            'DateTime': 306,
-            #'ImageProducer': 315,
-            #'BitsPerPixel': 37122,
-            #'ColorSpace': 40961
-        }
+        tif_status = validate_tiffs(tiffs[0], kdip_dir, self.kdip_id)
         
-        tif_status = ''
-        for file in os.listdir(tif_dir):
-            if file.endswith(".tif"):
-                image = Image.open('%s%s' % ( tif_dir, file))
-                tags = image.tag
-                for tif_tag in tif_tags:
-                    valid = tags.has_key(tif_tags[tif_tag])
-                    if valid is False:
-                        logger.error('%s missing form %s %s' % (tif_tag, self.kdip_id, file))
-                        tif_status = valid
-                        
-        if tif_status is False:
-            self.reason = 'TIFF invalid.'
+        if tif_status is not None:
+            self.reason = tif_status
             self.status = 'invalid'
             self.save()
+            logger.error(tif_status)
             return False
 
         # validate each file of type ALTO and OCR
@@ -406,6 +503,7 @@ class KDip(models.Model):
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+                    
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_dir, k))),
                     'note': bib_rec.note(k)
@@ -413,7 +511,22 @@ class KDip(models.Model):
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
+                    
+                    with open('%s/%s/marc.xml' % (kdip_dir, kdip.kdip_id), 'w') as marcxml:
+                        marcxml.write(bib_rec.serialize(pretty=True))
+
+                    try:
+                        os.remove('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id))
+                    except OSError:
+                        pass
+
+                    yaml_data = {}
+                    yaml_data['capture_agent'] = str(bib_rec.tag_583_5)
+                    with open('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id), 'a') as outfile:
+                        outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
+                    
                     kdip.validate()
+                    
             except Exception as e:
                 logger.error("Error creating KDip %s : %s" % (k, e.message))
                 pass
@@ -444,3 +557,42 @@ class Job(models.Model):
 
     class Meta:
         ordering = ['id']
+    
+    def save(self, *args, **kwargs):
+        
+        def zipdir(path, zip):
+            for root, dirs, files in os.walk(path):
+                for file in files:
+                    zip.write(os.path.join(root, file))
+                
+        if self.status == 'processed':
+            kdips = KDip.objects.filter(job=self.id)
+            for kdip in kdips:
+                process_dir = '%s/%s-process' % (kdip_dir, kdip.kdip_id)
+
+                if not os.path.exists(process_dir):
+                    os.makedirs(process_dir)
+                
+                tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip_dir, kdip.kdip_id))
+                for tiff in tiffs:
+                    shutil.copy(tiff, process_dir)
+                
+                altos = glob.glob('%s/%s/ALTO/*.alto.xml' % (kdip_dir, kdip.kdip_id))
+                for alto in altos:
+                    shutil.copy(alto, process_dir)
+                    
+                ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip_dir, kdip.kdip_id))
+                for ocr in ocrs:
+                    shutil.copy(ocr, process_dir)
+                    
+                shutil.copy('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id), process_dir)
+                
+                shutil.copy('%s/%s/METS/%s.mets.xml' % (kdip_dir, kdip.kdip_id, kdip.kdip_id), process_dir)
+                
+                zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
+                os.chdir('%s' % (process_dir))
+                zipdir('.', zipf)
+                zipf.close()
+                
+
+        super(Job, self).save(*args, **kwargs)
