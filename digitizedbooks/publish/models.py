@@ -27,6 +27,8 @@ from django.dispatch import receiver
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
+from pidservices.clients import parse_ark
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 from PIL import Image
 
@@ -36,6 +38,11 @@ import yaml
 import time
 from datetime import datetime
 import glob
+import box
+import json
+import urllib2
+import subprocess
+import hashlib
 
 logger = logging.getLogger(__name__)
 
@@ -64,6 +71,9 @@ def get_rights(self):
     try:
         r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.kdip_id})
         bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+        
+        if not bib_rec.tag_583_5:
+            return 'No 583 tag in marc record.'
         
         tag_008 = bib_rec.tag_008
         data_type = tag_008[6]
@@ -123,9 +133,10 @@ def get_rights(self):
                 reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
                 logger.error(reason)
                 rights = 'ic'
-        #else:
-        #    rights = 'ic'
-        #    reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
+                
+        if bib_rec.tag_583x != 'public domain':
+            rights = 'ic'
+            reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
         
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
@@ -174,8 +185,9 @@ def validate_tiffs(file, dir, kdip):
             found[tif_tag] = tags.get(tif_tags[tif_tag])
         
 
+    print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
-    yaml_data['capture-date'] = dt.isoformat('T')
+    yaml_data['capture_date'] = dt.isoformat('T')
     with open('%s/%s/meta.yml' % (dir, kdip), 'a') as outfile:
         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
     
@@ -283,7 +295,6 @@ class METStechMD(XmlObject):
         'mix': 'http://www.loc.gov/mix/v20',
         'mets': 'http://www.loc.gov/METS/'
     }
-
 
     id = StringField('@ID')
     href = StringField('mets:mdWrap/mets:xmlData/mix:mix/mix:BasicDigitalObjectInformation/mix:ObjectIdentifier/mix:objectIdentifierValue')
@@ -522,6 +533,9 @@ class KDip(models.Model):
 
                     yaml_data = {}
                     yaml_data['capture_agent'] = str(bib_rec.tag_583_5)
+                    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
+                    yaml_data['scanning_order']= 'left-to-right'
+                    yaml_data['reading_order'] = 'left-to-right'
                     with open('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id), 'a') as outfile:
                         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
                     
@@ -545,6 +559,8 @@ class Job(models.Model):
     JOB_STATUSES = (
         ('new', "New"),
         ('ready to process', 'Ready To Process'),
+        ('failed', 'Upload Failed'),
+        ('being processed', 'Being Processed'),
         ('processed', 'Processed')
     )
 
@@ -564,35 +580,129 @@ class Job(models.Model):
             for root, dirs, files in os.walk(path):
                 for file in files:
                     zip.write(os.path.join(root, file))
+                    
+        def checksumfile(checkfile, process_dir):
+            with open(checkfile, 'rb') as file:
+                with open('%s/checksum.md5' % (process_dir), 'a') as outfile:
+                    if 'alto' in checkfile:
+                        checkfile = checkfile.replace('.alto', '')
+                    filename = checkfile.split('/')
+                    outfile.write('%s %s\n' % ((md5(file.read()).hexdigest()), filename[-1]))
+                    
+        def checksumverify(checksum, process_dir, file):
+            with open('%s/%s' % (process_dir, file), 'rb') as file:
+                if md5(file.read()).hexdigest() == checksum:
+                    return True
+                else:
+                    return False
                 
-        if self.status == 'processed':
+                
+        if self.status == 'ready to process':
             kdips = KDip.objects.filter(job=self.id)
             for kdip in kdips:
-                process_dir = '%s/%s-process' % (kdip_dir, kdip.kdip_id)
+                
+                client = DjangoPidmanRestClient()
+                policy = "Deep Zoom"
+                ark = client.create_ark(domain='https://testpid.library.emory.edu/domains/37/', target_uri='http://myuri.org', policy='%s' % policy, name='%s' % kdip.kdip_id)
+                naan = parse_ark(ark)['naan']
+                noid = parse_ark(ark)['noid']
+                
+                logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
+                
+                process_dir = '%s/ark=+%s=%s' % (kdip_dir, naan, noid)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
                 
                 tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip_dir, kdip.kdip_id))
                 for tiff in tiffs:
+                    checksumfile(tiff, process_dir)
                     shutil.copy(tiff, process_dir)
                 
-                altos = glob.glob('%s/%s/ALTO/*.alto.xml' % (kdip_dir, kdip.kdip_id))
+                altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip_dir, kdip.kdip_id))
                 for alto in altos:
+                    checksumfile(alto, process_dir)
                     shutil.copy(alto, process_dir)
+                    if 'alto' in alto:
+                        filename = alto.split('/')
+                        page,crap,ext = filename[-1].split('.')
+                        shutil.move(alto, '%s/%s.%s' % (process_dir, page, ext))
+                #
+                #new_altos = glob.glob('%s/*.alto.xml' % (process_dir))
+                #for new_alto in new_altos:
+                #    page,crap,ext = new_alto.split('.')
+                #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
                     
                 ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip_dir, kdip.kdip_id))
                 for ocr in ocrs:
+                    checksumfile(ocr, process_dir)
                     shutil.copy(ocr, process_dir)
                     
-                shutil.copy('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id), process_dir)
                 
-                shutil.copy('%s/%s/METS/%s.mets.xml' % (kdip_dir, kdip.kdip_id, kdip.kdip_id), process_dir)
+                meta_yml = '%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id)
+                marc_xml = '%s/%s/marc.xml' % (kdip_dir, kdip.kdip_id)
+                mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip_dir, kdip.kdip_id, kdip.kdip_id)
+                
+                checksumfile(meta_yml, process_dir)
+                checksumfile(marc_xml, process_dir)
+                checksumfile(mets_xml, process_dir)
+                
+                shutil.copy(meta_yml, process_dir)
+                
+                shutil.copy(marc_xml, process_dir)
+                
+                shutil.copy(mets_xml, process_dir)
+                
+                with open('%s/checksum.md5' % process_dir) as f:
+                    content = f.readlines()
+                    for line in content:
+                        parts = line.split()
+                        verify = checksumverify(parts[0], process_dir, parts[1])
+                        if verify is not True:
+                            print('Well shit')
                 
                 zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
                 os.chdir('%s' % (process_dir))
                 zipdir('.', zipf)
                 zipf.close()
                 
+                token = BoxToken.objects.get(id=1)
+                
+                response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
+                
+                token.refresh_token = response['refresh_token']
+                token.save()
+                
+                logger.info('New refresh token: %s' % (response['refresh_token']))
+                
+                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F folder_id=1709834232' % (response['access_token'], process_dir)
+    
+                upload = subprocess.check_output('curl %s' % (url), shell=True)
+                
+                upload_response = json.loads(upload)
+    
+                try:
+                    sha1 = hashlib.sha1()
+                    local_file = open('%s.zip' % (process_dir), 'rb')
+                    sha1.update(local_file.read())
+                    local_file.close()
+        
+                    if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
+                        self.status = 'being processed'
+                    else:
+                        print('crap')
+                
+                except Exception as e:
+                    print(upload_response['message'])
+                    logger.error('Uploading %s.zip failed' % (process_dir))
+                    self.status = 'failed'
+                    pass
+                
+                
 
         super(Job, self).save(*args, **kwargs)
+
+class BoxToken(models.Model):
+    refresh_token = models.CharField(max_length=200, blank=True)
+    client_id = models.CharField(max_length=200, blank=True)
+    client_secret = models.CharField(max_length=200, blank=True)
