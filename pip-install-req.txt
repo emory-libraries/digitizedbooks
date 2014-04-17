@@ -16,3 +16,5 @@ pyasn1
 boto
 requests
 pillow
+pyyaml
+box.py
