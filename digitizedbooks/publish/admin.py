@@ -27,7 +27,7 @@ remove_from_job.short_description = "Remove selected k dips from any associated 
 class KDipAdmin(admin.ModelAdmin):
     list_display = ['kdip_id', 'create_date', 'status', 'note', 'job']
     list_link = ['kdip_id']
-    list_editable = ['status', 'job', 'note']
+    list_editable = ['job', 'note', 'status']
     readonly_fields = ['create_date', 'kdip_id', 'reason']
 #    actions = [remove_from_job]
 
@@ -36,8 +36,9 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['create_date', 'kdip_id']
-    can_delete = False
+    readonly_fields = ['kdip_id', 'create_date', 'status']
+    exclude = ['note', 'reason']
+    #can_delete = False
     extra = 0
 
     def has_add_permission(self, request):
@@ -48,7 +49,8 @@ class JobAdmin(admin.ModelAdmin):
     inlines = [KDipInline]
     list_display = ['name', 'status']
     list_link = ['name']
-    list_editable = ['status']
+    #readonly_fields = ['status']
+    
 
 
 admin.site.register(KDip, KDipAdmin)
