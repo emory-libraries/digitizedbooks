@@ -1,1 +1,8 @@
 digitizedbooks/localsettings.py
+digibooks.komodoproject
+.komodotools
+*.DS_Store
+*.pyc
+env
+build
+dist
