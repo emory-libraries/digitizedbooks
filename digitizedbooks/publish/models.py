@@ -185,7 +185,7 @@ def validate_tiffs(file, dir, kdip):
             found[tif_tag] = tags.get(tif_tags[tif_tag])
         
 
-    print(found['DateTime'])
+    #print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
     yaml_data['capture_date'] = dt.isoformat('T')
     with open('%s/%s/meta.yml' % (dir, kdip), 'a') as outfile:
@@ -411,6 +411,7 @@ class KDip(models.Model):
     'If the KDIP is invalid this will be populated with the first failed condition'
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
+    path = models.CharField(max_length=400, blank=True)
 
 
     def validate(self):
@@ -420,13 +421,13 @@ class KDip(models.Model):
 
         logger.info('Starting validation of %s' % (self.kdip_id))
         # all paths (except for TOC) are relitive to METS dir
-        mets_dir = "%s/%s/METS/" % (kdip_dir, self.kdip_id)
+        mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
-        toc_file = "%s/%s/TOC/%s.toc" % (kdip_dir, self.kdip_id, self.kdip_id)
+        toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
         
-        tif_dir = "%s/%s/TIFF/" % (kdip_dir, self.kdip_id)
+        tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
         
         rights = get_rights(self)
         
@@ -463,7 +464,7 @@ class KDip(models.Model):
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
         
-        tif_status = validate_tiffs(tiffs[0], kdip_dir, self.kdip_id)
+        tif_status = validate_tiffs(tiffs[0], self.path, self.kdip_id)
         
         if tif_status is not None:
             self.reason = tif_status
@@ -504,9 +505,17 @@ class KDip(models.Model):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
         # find all KDIP directories
-        kdip_reg = re.compile(r"^[0-9]+$")
-        kdips = filter(lambda f: kdip_reg.search(f), os.listdir(kdip_dir))
-        kdip_list = [k for k in kdips if os.path.isdir('%s/%s' % (kdip_dir, k))]
+        #kdip_reg = re.compile(r"^[0-9]+$")
+        #kdips = filter(lambda f: kdip_reg.search(f), os.listdir(kdip_dir))
+        #kdip_list = [k for k in kdips if os.path.isdir('%s/%s' % (kdip_dir, k))]
+        
+        kdip_list = {}
+        for path, subdirs, files in os.walk(kdip_dir):
+            for dir in subdirs:
+                kdip = re.search(r"^[0-9]+$", dir)
+                full_path = os.path.join(path, dir)
+                if kdip and 'out_of_scope' not in full_path:
+                    kdip_list[dir] = path
 
         # create the KDIP is it does not exits
         for k in kdip_list:
@@ -516,18 +525,19 @@ class KDip(models.Model):
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
                     
                 defaults={
-                   'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_dir, k))),
-                    'note': bib_rec.note(k)
+                   'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
+                    'note': bib_rec.note(k),
+                    'path': kdip_list[k]
                 }
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
                     
-                    with open('%s/%s/marc.xml' % (kdip_dir, kdip.kdip_id), 'w') as marcxml:
+                    with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
 
                     try:
-                        os.remove('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id))
+                        os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
                     except OSError:
                         pass
 
@@ -536,7 +546,7 @@ class KDip(models.Model):
                     yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
                     yaml_data['scanning_order']= 'left-to-right'
                     yaml_data['reading_order'] = 'left-to-right'
-                    with open('%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id), 'a') as outfile:
+                    with open('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id), 'a') as outfile:
                         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
                     
                     kdip.validate()
@@ -609,17 +619,17 @@ class Job(models.Model):
                 
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
                 
-                process_dir = '%s/ark=+%s=%s' % (kdip_dir, naan, noid)
+                process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
                 
-                tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip_dir, kdip.kdip_id))
+                tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
                 for tiff in tiffs:
                     checksumfile(tiff, process_dir)
                     shutil.copy(tiff, process_dir)
                 
-                altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip_dir, kdip.kdip_id))
+                altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
                 for alto in altos:
                     checksumfile(alto, process_dir)
                     shutil.copy(alto, process_dir)
@@ -633,15 +643,15 @@ class Job(models.Model):
                 #    page,crap,ext = new_alto.split('.')
                 #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
                     
-                ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip_dir, kdip.kdip_id))
+                ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
                 for ocr in ocrs:
                     checksumfile(ocr, process_dir)
                     shutil.copy(ocr, process_dir)
                     
                 
-                meta_yml = '%s/%s/meta.yml' % (kdip_dir, kdip.kdip_id)
-                marc_xml = '%s/%s/marc.xml' % (kdip_dir, kdip.kdip_id)
-                mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip_dir, kdip.kdip_id, kdip.kdip_id)
+                meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
+                marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
+                mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
                 
                 checksumfile(meta_yml, process_dir)
                 checksumfile(marc_xml, process_dir)
@@ -659,7 +669,7 @@ class Job(models.Model):
                         parts = line.split()
                         verify = checksumverify(parts[0], process_dir, parts[1])
                         if verify is not True:
-                            print('Well shit')
+                            logger.error('Checksum check failes for %s.' % process_dir  )
                 
                 zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
                 os.chdir('%s' % (process_dir))
@@ -675,7 +685,7 @@ class Job(models.Model):
                 
                 logger.info('New refresh token: %s' % (response['refresh_token']))
                 
-                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F folder_id=1709834232' % (response['access_token'], process_dir)
+                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=1709834232' % (response['access_token'], process_dir)
     
                 upload = subprocess.check_output('curl %s' % (url), shell=True)
                 
@@ -689,12 +699,10 @@ class Job(models.Model):
         
                     if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
                         self.status = 'being processed'
-                    else:
-                        print('crap')
                 
                 except Exception as e:
                     print(upload_response['message'])
-                    logger.error('Uploading %s.zip failed' % (process_dir))
+                    logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
                     self.status = 'failed'
                     pass
                 

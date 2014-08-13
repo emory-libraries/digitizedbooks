@@ -28,7 +28,7 @@ class KDipAdmin(admin.ModelAdmin):
     list_display = ['kdip_id', 'create_date', 'status', 'note', 'job']
     list_link = ['kdip_id']
     list_editable = ['job', 'note', 'status']
-    readonly_fields = ['create_date', 'kdip_id', 'reason']
+    readonly_fields = ['create_date', 'kdip_id', 'reason', 'path']
 #    actions = [remove_from_job]
 
     def has_add_permission(self, request):
