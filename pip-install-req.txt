@@ -1,5 +1,5 @@
 Django
-http://wilson.library.emory.edu:8080/jenkins/job/eullocal/lastSuccessfulBuild/artifact/eullocal/dist/eullocal-0.21.0-dev.tar.gz
+https://wilson.library.emory.edu/jenkins/job/eullocal-0.21.x/lastSuccessfulBuild/artifact/eullocal/dist/eullocal-0.21.0.linux-x86_64.tar.gz
 mysql-python # HACK: we don't strictly depend on mysql. find a better way to install it in deploy.
 eulxml
 eulcommon
