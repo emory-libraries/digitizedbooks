@@ -1,5 +1,5 @@
 # file digitizedbooks/publication/admin.py
-# 
+#
 #   Copyright 2010 Emory University General Library
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
@@ -36,7 +36,7 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['kdip_id', 'create_date', 'status']
+    readonly_fields = ['kdip_id', 'create_date', 'status', 'path']
     exclude = ['note', 'reason']
     #can_delete = False
     extra = 0
@@ -50,7 +50,7 @@ class JobAdmin(admin.ModelAdmin):
     list_display = ['name', 'status']
     list_link = ['name']
     #readonly_fields = ['status']
-    
+
 
 
 admin.site.register(KDip, KDipAdmin)
@@ -58,4 +58,3 @@ admin.site.register(Job, JobAdmin)
 
 admin.site.unregister(Site)
 admin.site.unregister(Tag)
-
