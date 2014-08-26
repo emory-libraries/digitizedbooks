@@ -74,6 +74,11 @@ Configuration
 Configure application settings by copying ``localsettings.py.dist`` to
 ``localsettings.py`` and editing for local settings.
 
+Add the following to ``localsettings.py`` for email notifications:
+
+``HATHITRUST_CONTACT = 'someone@somewhere.com'
+EMORY_CONTACT = 'someone@emory.edu'``
+
 After configuring all settings, initialize the db with all needed
 tables and initial data using::
 

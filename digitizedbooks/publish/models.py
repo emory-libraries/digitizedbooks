@@ -1,5 +1,5 @@
 # file digitizedbooks/publication/models.py
-# 
+#
 #   Copyright 2010 Emory University General Library
 #
 #   Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,6 +23,7 @@ from django.conf import settings
 from django.contrib.auth import user_logged_in
 from django.db import models
 from django.dispatch import receiver
+from django.core.mail import send_mail
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
@@ -71,10 +72,10 @@ def get_rights(self):
     try:
         r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.kdip_id})
         bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
-        
+
         if not bib_rec.tag_583_5:
             return 'No 583 tag in marc record.'
-        
+
         tag_008 = bib_rec.tag_008
         data_type = tag_008[6]
         date1 = tag_008[7:11]
@@ -83,7 +84,7 @@ def get_rights(self):
         pub_place = tag_008[15:18]
         pub_place17 = tag_008[17]
         govpub = tag_008[28]
-        
+
         # This is not really needed now but will be needed for Gov Docs
         imprint = ''
         if bib_rec.tag_260:
@@ -93,7 +94,7 @@ def get_rights(self):
         else:
             imprint = 'mult_260a_non_us'
             logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
-        
+
         # Check to see if Emory thinks it is public domain
         #if bib_rec.tag_583x == 'public domain':
         # Now we go through HT's algorithm to determin rights
@@ -121,7 +122,7 @@ def get_rights(self):
                     reason = ('%s was published in %s' % (self.kdip_id, date1))
                     logger.error(reason)
                     rights = 'ic'
-            
+
         # Non-US docs
         else:
             logger.info('%s is not a US publication' % (self.kdip_id))
@@ -133,11 +134,11 @@ def get_rights(self):
                 reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
                 logger.error(reason)
                 rights = 'ic'
-                
+
         if bib_rec.tag_583x != 'public domain':
             rights = 'ic'
             reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
-        
+
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
         logger.error(reason)
@@ -172,7 +173,7 @@ def validate_tiffs(file, dir, kdip):
     found = {}
     skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
     yaml_data = {}
-    
+
     image = Image.open(file)
     tags = image.tag
 
@@ -180,96 +181,96 @@ def validate_tiffs(file, dir, kdip):
         valid = tags.has_key(tif_tags[tif_tag])
         if valid is False:
             found[tif_tag] = False
-            
+
         if valid is True:
             found[tif_tag] = tags.get(tif_tags[tif_tag])
-        
+
 
     #print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
     yaml_data['capture_date'] = dt.isoformat('T')
     with open('%s/%s/meta.yml' % (dir, kdip), 'a') as outfile:
         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
-    
+
     ## START REAL VALIDATION
     if found['ImageWidth'] <= 0:
         status = 'Invalid value for ImageWidth in %s' % (file)
         return status
-    
+
     if found['ImageLength']  <= 0:
         status = 'Invalid value for ImageLength in %s' % (file)
         return status
-    
+
     if not found['Make']:
         status = 'Invalid value for Make in %s' % (file)
         return status
-    
+
     if not found['Model']:
         status = 'Invalid value for Make in %s' % (file)
         return status
-    
+
     if found['Orientation'] != (1,):
         status = 'Invalid value for Orientation in %s' % (file)
         return status
-    
+
     #if found['ColorSpace'] != 1:
     #    status = 'Invalid value for ColorSpace in %s' % (file)
     #    return status
-    
+
     if found['ResolutionUnit'] != (2,):
         status = 'Invalid value for ResolutionUnit in %s' % (file)
         return status
-    
+
     if not found['DateTime']:
         status = 'Invalid value for DateTime in %s' % (file)
         return status
-    
+
     imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
     if imgtype == '1':
-        
+
         if found['Compression'] != (4,):
             status = 'Invalid value for Compression in %s' % (file)
             return status
-        
+
         if found['PhotometricInterpretation'] != (0,):
             status = 'Invalid value for PhotometricInterpretation in %s' % (file)
             return status
-        
+
         if found['SamplesPerPixel'] != (1,):
             status = 'Invalid value for SamplesPerPixel in %s' % (file)
             return status
-        
+
         if found['XResolution'] < 600:
             status = 'Invalid value for XResolution in %s' % (file)
             return status
-        
+
         if found['YResolution'] < 600:
             status = 'Invalid value for YResolution in %s' % (file)
             return status
-        
+
     elif imgtype is '888' or '3':
-    
+
         if found['Compression'] != (1,):
             if found['Compression'] != (5,):
                 status = 'Invalid value for Compression in %s' % (file)
                 return status
-        
+
         if found['PhotometricInterpretation'] != (2,):
             status = 'Invalid value for PhotometricInterpretation in %s' % (file)
             return status
-        
+
         if found['SamplesPerPixel'] != (3,):
             status = 'Invalid value for SamplesPerPixel in %s' % (file)
             return status
-        
+
         if found['XResolution'] < 300:
             status = 'Invalid value for XResolution in %s' % (file)
             return status
-        
+
         if found['YResolution'] < 300:
             status = 'Invalid value for YResolution in %s' % (file)
             return status
-        
+
     else:
         status = 'cannot determine type for %s' % (file)
 
@@ -349,15 +350,15 @@ class Marc(MarcBase):
 
     datafields = NodeListField('marc:record/marc:datafield', MarcDatafield)
     "list of marc datafields"
-    
+
     tag_583x = StringField('marc:record/marc:datafield[@tag="583"]/marc:subfield[@code="x"]')
     # 583 code5 where a is 'digitized' or 'selected for digitization'
     # this will be for 'capture_agent' in yaml file
-    
+
     tag_583_5 = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="5"]/text()')
-    
+
     tag_008 = StringField('marc:record/marc:controlfield[@tag="008"]')
-    
+
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
 
@@ -426,11 +427,11 @@ class KDip(models.Model):
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
         toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
-        
+
         tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
-        
+
         rights = get_rights(self)
-        
+
         if rights is not 'public':
             self.reason = rights
             if 'Could not' in rights:
@@ -460,12 +461,12 @@ class KDip(models.Model):
             self.save()
             logger.error(reason)
             return False
-        
+
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
-        
+
         tif_status = validate_tiffs(tiffs[0], self.path, self.kdip_id)
-        
+
         if tif_status is not None:
             self.reason = tif_status
             self.status = 'invalid'
@@ -504,11 +505,6 @@ class KDip(models.Model):
     def load(self):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
-        # find all KDIP directories
-        #kdip_reg = re.compile(r"^[0-9]+$")
-        #kdips = filter(lambda f: kdip_reg.search(f), os.listdir(kdip_dir))
-        #kdip_list = [k for k in kdips if os.path.isdir('%s/%s' % (kdip_dir, k))]
-        
         kdip_list = {}
         for path, subdirs, files in os.walk(kdip_dir):
             for dir in subdirs:
@@ -523,7 +519,7 @@ class KDip(models.Model):
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
-                    
+
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
                     'note': bib_rec.note(k),
@@ -532,7 +528,7 @@ class KDip(models.Model):
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
-                    
+
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
 
@@ -548,9 +544,9 @@ class KDip(models.Model):
                     yaml_data['reading_order'] = 'left-to-right'
                     with open('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id), 'a') as outfile:
                         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
-                    
+
                     kdip.validate()
-                    
+
             except Exception as e:
                 logger.error("Error creating KDip %s : %s" % (k, e.message))
                 pass
@@ -583,14 +579,14 @@ class Job(models.Model):
 
     class Meta:
         ordering = ['id']
-    
+
     def save(self, *args, **kwargs):
-        
+
         def zipdir(path, zip):
             for root, dirs, files in os.walk(path):
                 for file in files:
                     zip.write(os.path.join(root, file))
-                    
+
         def checksumfile(checkfile, process_dir):
             with open(checkfile, 'rb') as file:
                 with open('%s/checksum.md5' % (process_dir), 'a') as outfile:
@@ -598,37 +594,38 @@ class Job(models.Model):
                         checkfile = checkfile.replace('.alto', '')
                     filename = checkfile.split('/')
                     outfile.write('%s %s\n' % ((md5(file.read()).hexdigest()), filename[-1]))
-                    
+
         def checksumverify(checksum, process_dir, file):
             with open('%s/%s' % (process_dir, file), 'rb') as file:
                 if md5(file.read()).hexdigest() == checksum:
                     return True
                 else:
                     return False
-                
-                
+
+
         if self.status == 'ready to process':
             kdips = KDip.objects.filter(job=self.id)
+            uploaded_files = []
             for kdip in kdips:
-                
+
                 client = DjangoPidmanRestClient()
                 policy = "Deep Zoom"
                 ark = client.create_ark(domain='https://testpid.library.emory.edu/domains/37/', target_uri='http://myuri.org', policy='%s' % policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
-                
+
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
-                
+
                 process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
-                
+
                 tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
                 for tiff in tiffs:
                     checksumfile(tiff, process_dir)
                     shutil.copy(tiff, process_dir)
-                
+
                 altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
                 for alto in altos:
                     checksumfile(alto, process_dir)
@@ -642,27 +639,27 @@ class Job(models.Model):
                 #for new_alto in new_altos:
                 #    page,crap,ext = new_alto.split('.')
                 #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
-                    
+
                 ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
                 for ocr in ocrs:
                     checksumfile(ocr, process_dir)
                     shutil.copy(ocr, process_dir)
-                    
-                
+
+
                 meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
                 marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
                 mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
-                
+
                 checksumfile(meta_yml, process_dir)
                 checksumfile(marc_xml, process_dir)
                 checksumfile(mets_xml, process_dir)
-                
+
                 shutil.copy(meta_yml, process_dir)
-                
+
                 shutil.copy(marc_xml, process_dir)
-                
+
                 shutil.copy(mets_xml, process_dir)
-                
+
                 with open('%s/checksum.md5' % process_dir) as f:
                     content = f.readlines()
                     for line in content:
@@ -670,43 +667,46 @@ class Job(models.Model):
                         verify = checksumverify(parts[0], process_dir, parts[1])
                         if verify is not True:
                             logger.error('Checksum check failes for %s.' % process_dir  )
-                
+
                 zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
                 os.chdir('%s' % (process_dir))
                 zipdir('.', zipf)
                 zipf.close()
-                
+
                 token = BoxToken.objects.get(id=1)
-                
+
                 response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
-                
+
                 token.refresh_token = response['refresh_token']
                 token.save()
-                
+
                 logger.info('New refresh token: %s' % (response['refresh_token']))
-                
+
                 url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=1709834232' % (response['access_token'], process_dir)
-    
+
                 upload = subprocess.check_output('curl %s' % (url), shell=True)
-                
+
                 upload_response = json.loads(upload)
-    
+
                 try:
                     sha1 = hashlib.sha1()
                     local_file = open('%s.zip' % (process_dir), 'rb')
                     sha1.update(local_file.read())
                     local_file.close()
-        
+
                     if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
                         self.status = 'being processed'
-                
+                        uploaded_files.append('ark+=%s=%s' % (naan, noid))
+
                 except Exception as e:
-                    print(upload_response['message'])
                     logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
                     self.status = 'failed'
                     pass
-                
-                
+
+        kdip_list = '\n'.join(map(str, uploaded_files))
+        send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
+        send_from = getattr(settings, 'EMORY_CONTACT', None)
+        send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
 
         super(Job, self).save(*args, **kwargs)
 
