@@ -602,8 +602,8 @@ class Job(models.Model):
                 else:
                     return False
 
-        uploaded_files = []
         if self.status == 'ready to process':
+            uploaded_files = []
             kdips = KDip.objects.filter(job=self.id)
             for kdip in kdips:
 
@@ -702,10 +702,12 @@ class Job(models.Model):
                     self.status = 'failed'
                     pass
 
-        kdip_list = '\n'.join(map(str, uploaded_files))
-        send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
-        send_from = getattr(settings, 'EMORY_CONTACT', None)
-        send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
+            print('Satatus is now %s' % self.status)
+            if self.status == 'being processed':
+                kdip_list = '\n'.join(map(str, uploaded_files))
+                send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
+                send_from = getattr(settings, 'EMORY_CONTACT', None)
+                send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
 
         super(Job, self).save(*args, **kwargs)
 
