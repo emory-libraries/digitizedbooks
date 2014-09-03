@@ -602,10 +602,9 @@ class Job(models.Model):
                 else:
                     return False
 
-
+        uploaded_files = []
         if self.status == 'ready to process':
             kdips = KDip.objects.filter(job=self.id)
-            uploaded_files = []
             for kdip in kdips:
 
                 client = DjangoPidmanRestClient()
