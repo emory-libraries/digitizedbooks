@@ -1,6 +1,9 @@
 {% extends "admin/base.html" %}
 {% load i18n %}
 
+{% comment %}
+The block below was added to bump the breadcrumbs down a bit.
+{% endcomment %}
 {% block extrastyle %}
      <style type="text/css">
        .breadcrumb { margin-top: 20px; }
@@ -10,6 +13,7 @@
 {% block title %}{{ title }} | {% trans 'Digitized Books Admin' %}{% endblock %}
 
 {% block branding %}
+{% comment %}The inline stye was added to change the color of the title{% endcomment %}
 <h1 id="site-name" style="color:white;">{% trans 'Digitized Books Admin - Emory University' %}</h1>
 {% endblock %}
 
