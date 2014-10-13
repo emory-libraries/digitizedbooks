@@ -126,7 +126,7 @@ def get_rights(self):
             logger.info('%s is not a US publication' % (self.kdip_id))
             if date1 < 1873:
                 rights = 'pd'
-            if date1 >= 1873 and date1 < 1923:
+            elif date1 >= 1873 and date1 < 1923:
                 rights = 'pdus'
             else:
                 reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
@@ -569,7 +569,7 @@ class KDip(models.Model):
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            KDip.objects.filter(id = self.id)
+            KDip.objects.filter(id = self.id).delete()
             KDip.load(self.kdip_id, self.path)
 
         else:
