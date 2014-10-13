@@ -46,10 +46,10 @@ import hashlib
 logger = logging.getLogger(__name__)
 
 
-@receiver(user_logged_in)
-def _login_actions(sender, **kwargs):
-    "This functions is called at login"
-    KDip.load()
+# @receiver(user_logged_in)
+# def _login_actions(sender, **kwargs):
+#     "This functions is called at login"
+#     KDip.load()
 
 
 # Configure  KDIP_DIR
@@ -395,7 +395,8 @@ class KDip(models.Model):
         ('processed', 'Processed'),
         ('archived', 'Archived'),
         ('invalid', 'Invalid'),
-        ('do not process', 'Do Not Process')
+        ('do not process', 'Do Not Process'),
+        ('reprocess', 'Reprocess')
     )
 
     kdip_id = models.CharField(max_length=100, unique=True)
@@ -500,19 +501,25 @@ class KDip(models.Model):
 
 
     @classmethod
-    def load(self):
+    def load(self, *args, **kwargs):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
         kdip_list = {}
-        for path, subdirs, files in os.walk(kdip_dir):
-            for dir in subdirs:
-                kdip = re.search(r"^[0-9]+$", dir)
-                full_path = os.path.join(path, dir)
-                if kdip and 'out_of_scope' not in full_path:
-                    kdip_list[dir] = path
 
+        if len(args) == 2:
+            kdip_list = {args[0]: args[1]}
+
+        else:
+            for path, subdirs, files in os.walk(kdip_dir):
+                for dir in subdirs:
+                    kdip = re.search(r"^[0-9]+$", dir)
+                    full_path = os.path.join(path, dir)
+                    if kdip and 'out_of_scope' not in full_path:
+                        kdip_list[dir] = path
+        print(kdip_list)
         # create the KDIP is it does not exits
         for k in kdip_list:
+            print(kdip_list[k])
             try:
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
@@ -544,6 +551,8 @@ class KDip(models.Model):
                         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
 
                     kdip.validate()
+                else:
+                    kdip.validate()
 
             except Exception as e:
                 logger.error("Error creating KDip %s : %s" % (k, e.message))
@@ -556,6 +565,16 @@ class KDip(models.Model):
 
     class Meta:
         ordering = ['create_date']
+
+    def save(self, *args, **kwargs):
+
+        if self.status == 'reprocess':
+            KDip.objects.filter(id = self.id)
+            KDip.load(self.kdip_id, self.path)
+
+        else:
+            super(KDip, self).save(*args, **kwargs)
+
 
 class Job(models.Model):
     "This class collects :class:`KDip` objects into logical groups for later processing"
