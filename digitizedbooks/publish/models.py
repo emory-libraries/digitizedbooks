@@ -27,7 +27,7 @@ from django.core.mail import send_mail
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
-from eulxml.xmlmap.fields import StringField, NodeField, NodeListField, IntegerField
+from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField
 from pidservices.clients import parse_ark
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
@@ -37,11 +37,9 @@ import logging
 import zipfile
 import yaml
 import time
-from datetime import datetime
 import glob
 import box
 import json
-import urllib2
 import subprocess
 import hashlib
 
@@ -129,7 +127,7 @@ def get_rights(self):
             if date1 < 1873:
                 rights = 'pd'
             if date1 >= 1873 and date1 < 1923:
-                rights is 'pdus'
+                rights = 'pdus'
             else:
                 reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
                 logger.error(reason)
