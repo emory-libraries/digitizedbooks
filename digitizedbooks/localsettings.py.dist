@@ -82,23 +82,14 @@ XSLFO_TEMP_DIR = '/tmp/oe_cache/fop'
 # for Developers only: to use sessions in runserver, uncomment this line (override configuration in settings.py)
 #SESSION_COOKIE_SECURE = False
 
-#Iternet Archive API keys
-IA_S3_ACCESS_KEY = ''
-IA_S3_SECRET_KEY = ''
-IA_S3_NAMESPACE_SUFFIX = '' # e.g. library.emory.edu
+# PID Manager credentials
+PIDMAN_HOST = '' # the web root where we'll ask for pids
+PIDMAN_USER = ''
+PIDMAN_PASSWORD = 'b00ks!'
 
-# SHERPA/RoMEO API key. http://www.sherpa.ac.uk/romeo/apiregistry.php
-#ROMEO_API_KEY = 'CHANGEME'
-
-# enable Google Analytics  (should generally only be enabled in production)
-GOOGLE_ANALYTICS_ENABLED = True
-# site verification code to link site with Google Webmaster Tools
-#GOOGLE_SITE_VERIFICATION = ''
-
-# reCAPTCHA keys for your server or domain from https://www.google.com/recaptcha/
-RECAPTCHA_PUBLIC_KEY = ''
-RECAPTCHA_PRIVATE_KEY = ''
-RECAPTCHA_OPTIONS = {}
+# PID Manager settings
+PIDMAN_DOMAIN = '' # the full url of the domain we'll create pids in
+PIDMAN_POLICY = '' # policy name for pids
 
 
 KDIP_DIR = '/path/to/kdips'

@@ -625,8 +625,9 @@ class Job(models.Model):
             for kdip in kdips:
 
                 client = DjangoPidmanRestClient()
-                policy = "Deep Zoom"
-                ark = client.create_ark(domain='https://testpid.library.emory.edu/domains/37/', target_uri='http://myuri.org', policy='%s' % policy, name='%s' % kdip.kdip_id)
+                pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
+                pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
+                ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
 
@@ -698,7 +699,9 @@ class Job(models.Model):
 
                 logger.info('New refresh token: %s' % (response['refresh_token']))
 
-                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=1709834232' % (response['access_token'], process_dir)
+                box_folder = getattr(settings, 'BOXFOLDER', None)
+
+                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=%s' % (response['access_token'], process_dir, box_folder)
 
                 upload = subprocess.check_output('curl %s' % (url), shell=True)
 
@@ -719,7 +722,6 @@ class Job(models.Model):
                     self.status = 'failed'
                     pass
 
-            print('Satatus is now %s' % self.status)
             if self.status == 'being processed':
                 kdip_list = '\n'.join(map(str, uploaded_files))
                 send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
