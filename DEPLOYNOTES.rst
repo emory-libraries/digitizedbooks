@@ -103,18 +103,27 @@ This script removes any expired sessions from the database. We recommend
 doing this about every week, though exact timing depends on usage patterns
 and administrative discretion.
 
+This command should be ran once a week to renew the Box API key so it does not expire.
+
+  $ manage.py boxrefresh
+
+This command should be ran nightly (or very early in the morning) to load any new KDips.
+
+  $ manage.py loadKDips
+
 
 Database Install
 ================
 .. Note::
   If installing on a brand new database which you must do the following before running ``syncdb`` or  migrations emory_ldap migrations:
-     #. in ``settings`` comment out the ``AUTH_USER_MODEL``
-     #. run syncdb
-     #. run migrations
-     #. uncomment ``AUTH_USER_MODEL``
+     $ manage.py syncdb
+     $ manage.py migrations
+     $ manage.py createsuperuser
+
+  Log into the admin interface with the superuser and add LDAP users.
+
 
 
 
 Upgrade Notes
 =============
-
