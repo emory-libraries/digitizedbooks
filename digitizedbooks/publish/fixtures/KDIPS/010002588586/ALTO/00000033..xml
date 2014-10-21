@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000032.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="10" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P32" PHYSICAL_IMG_NR="32" HEIGHT="2522" WIDTH="1537" ACCURACY="0.7268192" QUALITY_DETAIL="206 words, 983 chars, 709 with recognition greater than 50% (72.13%)">
+      <TopMargin ID="P32_TM00001" HPOS="0" VPOS="0" WIDTH="1537" HEIGHT="246" />
+      <LeftMargin ID="P32_LM00001" HPOS="0" VPOS="246" WIDTH="227" HEIGHT="2010" />
+      <RightMargin ID="P32_RM00001" HPOS="1269" VPOS="246" WIDTH="268" HEIGHT="2010" />
+      <BottomMargin ID="P32_BM00001" HPOS="0" VPOS="2256" WIDTH="1537" HEIGHT="266" />
+      <PrintSpace ID="P32_PS00001" HPOS="227" VPOS="246" WIDTH="1042" HEIGHT="2010">
+        <TextBlock ID="P32_TB00001" HPOS="393" VPOS="249" WIDTH="778" HEIGHT="61">
+          <TextLine ID="P32_TL00001" HPOS="401" VPOS="257" WIDTH="762" HEIGHT="45">
+            <String ID="P32_S00001" HPOS="401" VPOS="264" WIDTH="99" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="LIFE" WC="0.5475" CC="3067" />
+            <SP ID="P32_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00002" HPOS="527" VPOS="265" WIDTH="88" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="AND" WC="0.55" CC="606" />
+            <SP ID="P32_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00003" HPOS="641" VPOS="266" WIDTH="265" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="PROPHECIES" WC="0.583" CC="6706553070" />
+            <SP ID="P32_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00004" HPOS="933" VPOS="268" WIDTH="54" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="OF" WC="0.5" CC="010" />
+            <SP ID="P32_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00005" HPOS="1013" VPOS="267" WIDTH="150" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="HOSEA." WC="0.6566667" CC="250660" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P32_TB00002" HPOS="226" VPOS="369" WIDTH="1043" HEIGHT="1887">
+          <TextLine ID="P32_TL00002" HPOS="235" VPOS="377" WIDTH="1052" HEIGHT="73">
+            <String ID="P32_S00006" HPOS="235" VPOS="387" WIDTH="71" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P32_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00007" HPOS="334" VPOS="389" WIDTH="133" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="revolt" WC="0.755" CC="500710" />
+            <SP ID="P32_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00008" HPOS="494" VPOS="398" WIDTH="42" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P32_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00009" HPOS="563" VPOS="390" WIDTH="208" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Shechem" WC="0.878571451" CC="0300400" />
+            <SP ID="P32_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00010" HPOS="798" VPOS="392" WIDTH="132" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Israel" WC="0.853333354" CC="004003" />
+            <SP ID="P32_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00011" HPOS="959" VPOS="407" WIDTH="86" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="was" WC="0.69" CC="090" />
+            <SP ID="P32_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00012" HPOS="1074" VPOS="394" WIDTH="139" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="guilty" WC="0.65" CC="651303" />
+            <SP ID="P32_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00013" HPOS="1238" VPOS="393" WIDTH="50" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="of" WC="0.43" CC="65" />
+          </TextLine>
+          <TextLine ID="P32_TL00003" HPOS="236" VPOS="443" WIDTH="1049" HEIGHT="71">
+            <String ID="P32_S00014" HPOS="236" VPOS="461" WIDTH="79" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="one" WC="0.813333333" CC="500" />
+            <SP ID="P32_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00015" HPOS="347" VPOS="450" WIDTH="184" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="political" WC="0.725555539" CC="601405023" />
+            <SP ID="P32_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00016" HPOS="565" VPOS="452" WIDTH="178" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="blunder" WC="0.6471428" CC="1454405" />
+            <SP ID="P32_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00017" HPOS="775" VPOS="454" WIDTH="112" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="after" WC="1" CC="00000" />
+            <SP ID="P32_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00018" HPOS="919" VPOS="455" WIDTH="190" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="another." WC="0.79875" CC="14501003" />
+            <SP ID="P32_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00019" HPOS="1171" VPOS="457" WIDTH="115" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Dur¬" WC="0.4525" CC="71040" />
+          </TextLine>
+          <TextLine ID="P32_TL00004" HPOS="236" VPOS="504" WIDTH="1048" HEIGHT="72">
+            <String ID="P32_S00020" HPOS="235" VPOS="510" WIDTH="75" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="ing" WC="0.49" CC="347" />
+            <SP ID="P32_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00021" HPOS="340" VPOS="511" WIDTH="70" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="the" WC="0.776666641" CC="060" />
+            <SP ID="P32_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00022" HPOS="439" VPOS="521" WIDTH="82" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="250" WC="0.673333347" CC="701" />
+            <SP ID="P32_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00023" HPOS="550" VPOS="526" WIDTH="121" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="years" WC="0.86" CC="51000" />
+            <SP ID="P32_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00024" HPOS="703" VPOS="515" WIDTH="48" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="of" WC="0.405" CC="56" />
+            <SP ID="P32_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00025" HPOS="779" VPOS="516" WIDTH="71" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8933333" CC="030" />
+            <SP ID="P32_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00026" HPOS="880" VPOS="517" WIDTH="243" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="kingdom's" WC="0.7" CC="060009630" />
+            <SP ID="P32_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00027" HPOS="1155" VPOS="519" WIDTH="129" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="exist¬" WC="0.98" CC="000000" />
+          </TextLine>
+          <TextLine ID="P32_TL00005" HPOS="237" VPOS="567" WIDTH="1047" HEIGHT="71">
+            <String ID="P32_S00028" HPOS="236" VPOS="584" WIDTH="110" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="ence," WC="0.572" CC="010803" />
+            <SP ID="P32_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00029" HPOS="381" VPOS="580" WIDTH="74" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="not" WC="0.586666644" CC="803" />
+            <SP ID="P32_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00030" HPOS="489" VPOS="588" WIDTH="25" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="a" WC="0.96" CC="0" />
+            <SP ID="P32_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00031" HPOS="547" VPOS="575" WIDTH="135" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="single" WC="0.686666667" CC="0401040" />
+            <SP ID="P32_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00032" HPOS="715" VPOS="579" WIDTH="115" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="good" WC="0.2525" CC="10757" />
+            <SP ID="P32_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00033" HPOS="862" VPOS="579" WIDTH="104" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="king" WC="0.9675" CC="0100" />
+            <SP ID="P32_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00034" HPOS="1001" VPOS="581" WIDTH="178" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="wielded" WC="0.888571441" CC="0304000" />
+            <SP ID="P32_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00035" HPOS="1213" VPOS="582" WIDTH="71" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+          </TextLine>
+          <TextLine ID="P32_TL00006" HPOS="236" VPOS="628" WIDTH="1046" HEIGHT="71">
+            <String ID="P32_S00036" HPOS="235" VPOS="635" WIDTH="115" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="royal" WC="0.698" CC="43032" />
+            <SP ID="P32_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00037" HPOS="383" VPOS="641" WIDTH="173" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="scepter." WC="0.775" CC="00246004" />
+            <SP ID="P32_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00038" HPOS="620" VPOS="638" WIDTH="39" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="It" WC="1" CC="00" />
+            <SP ID="P32_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00039" HPOS="691" VPOS="652" WIDTH="87" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="was" WC="0.45" CC="880" />
+            <SP ID="P32_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00040" HPOS="811" VPOS="642" WIDTH="282" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="conspicuous" WC="0.6136364" CC="07009770740" />
+            <SP ID="P32_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00041" HPOS="1129" VPOS="642" WIDTH="69" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="for" WC="0.6333333" CC="370" />
+            <SP ID="P32_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00042" HPOS="1230" VPOS="644" WIDTH="52" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="its" WC="0.96" CC="100" />
+          </TextLine>
+          <TextLine ID="P32_TL00007" HPOS="234" VPOS="691" WIDTH="1048" HEIGHT="71">
+            <String ID="P32_S00043" HPOS="234" VPOS="695" WIDTH="180" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="idolatry" WC="0.74625" CC="55350000" />
+            <SP ID="P32_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00044" HPOS="449" VPOS="698" WIDTH="84" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="and" WC="0.566666663" CC="0310" />
+            <SP ID="P32_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00045" HPOS="569" VPOS="701" WIDTH="248" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="entangling" WC="0.718" CC="0606004450" />
+            <SP ID="P32_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00046" HPOS="850" VPOS="703" WIDTH="209" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="alliances." WC="0.889" CC="0320000004" />
+            <SP ID="P32_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00047" HPOS="1125" VPOS="706" WIDTH="51" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="In" WC="0.535" CC="09" />
+            <SP ID="P32_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00048" HPOS="1212" VPOS="706" WIDTH="70" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.696666658" CC="900" />
+          </TextLine>
+          <TextLine ID="P32_TL00008" HPOS="230" VPOS="754" WIDTH="1048" HEIGHT="68">
+            <String ID="P32_S00049" HPOS="230" VPOS="758" WIDTH="185" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="national" WC="0.5275" CC="108000935" />
+            <SP ID="P32_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00050" HPOS="438" VPOS="759" WIDTH="73" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="life" WC="0.67" CC="2037" />
+            <SP ID="P32_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00051" HPOS="534" VPOS="761" WIDTH="45" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="of" WC="0.525" CC="62" />
+            <SP ID="P32_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00052" HPOS="601" VPOS="762" WIDTH="130" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="Israel" WC="0.813333333" CC="005005" />
+            <SP ID="P32_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00053" HPOS="754" VPOS="764" WIDTH="119" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="there" WC="0.832" CC="07010" />
+            <SP ID="P32_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00054" HPOS="894" VPOS="778" WIDTH="70" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="are" WC="0.5833333" CC="840" />
+            <SP ID="P32_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00055" HPOS="989" VPOS="766" WIDTH="97" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="four" WC="0.5275" CC="21060" />
+            <SP ID="P32_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00056" HPOS="1109" VPOS="768" WIDTH="169" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="periods" WC="0.617142856" CC="90061000" />
+          </TextLine>
+          <TextLine ID="P32_TL00009" HPOS="229" VPOS="816" WIDTH="1050" HEIGHT="69">
+            <String ID="P32_S00057" HPOS="229" VPOS="818" WIDTH="91" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="that" WC="0.4725" CC="5663" />
+            <SP ID="P32_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00058" HPOS="340" VPOS="821" WIDTH="121" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="stand" WC="0.732" CC="01083" />
+            <SP ID="P32_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00059" HPOS="480" VPOS="829" WIDTH="74" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="out" WC="0.59" CC="570" />
+            <SP ID="P32_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00060" HPOS="574" VPOS="823" WIDTH="107" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="clear" WC="0.614" CC="05643" />
+            <SP ID="P32_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00061" HPOS="702" VPOS="826" WIDTH="82" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="and" WC="0.376666665" CC="0108" />
+            <SP ID="P32_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00062" HPOS="804" VPOS="827" WIDTH="126" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="plain," WC="0.701666653" CC="042271" />
+            <SP ID="P32_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00063" HPOS="952" VPOS="828" WIDTH="100" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="each" WC="0.7675" CC="0207" />
+            <SP ID="P32_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00064" HPOS="1073" VPOS="830" WIDTH="46" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="of" WC="0.355" CC="75" />
+            <SP ID="P32_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00065" HPOS="1139" VPOS="831" WIDTH="140" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="which" WC="0.668" CC="57300" />
+          </TextLine>
+          <TextLine ID="P32_TL00010" HPOS="230" VPOS="877" WIDTH="1048" HEIGHT="70">
+            <String ID="P32_S00066" HPOS="230" VPOS="880" WIDTH="33" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="is" WC="0.905" CC="10" />
+            <SP ID="P32_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00067" HPOS="292" VPOS="882" WIDTH="173" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="marked" WC="0.7033333" CC="475000" />
+            <SP ID="P32_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00068" HPOS="491" VPOS="884" WIDTH="53" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="by" WC="0.375" CC="56" />
+            <SP ID="P32_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00069" HPOS="573" VPOS="884" WIDTH="70" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="the" WC="0.74" CC="160" />
+            <SP ID="P32_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00070" HPOS="671" VPOS="892" WIDTH="149" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="strong" WC="0.433333337" CC="0565610" />
+            <SP ID="P32_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00071" HPOS="847" VPOS="890" WIDTH="256" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="personality" WC="0.7063636" CC="00300351367" />
+            <SP ID="P32_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00072" HPOS="1133" VPOS="893" WIDTH="47" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="of" WC="0.455" CC="55" />
+            <SP ID="P32_SP00063" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00073" HPOS="1206" VPOS="892" WIDTH="72" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.7733333" CC="060" />
+          </TextLine>
+          <TextLine ID="P32_TL00011" HPOS="228" VPOS="951" WIDTH="1048" HEIGHT="70">
+            <String ID="P32_S00074" HPOS="228" VPOS="959" WIDTH="108" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="most" WC="0.695" CC="0803" />
+            <SP ID="P32_SP00064" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00075" HPOS="359" VPOS="956" WIDTH="237" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="prominent" WC="0.724444449" CC="062535000" />
+            <SP ID="P32_SP00065" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00076" HPOS="618" VPOS="957" WIDTH="104" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="king" WC="0.695" CC="0740" />
+            <SP ID="P32_SP00066" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00077" HPOS="744" VPOS="959" WIDTH="44" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="of" WC="0.305" CC="76" />
+            <SP ID="P32_SP00067" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00078" HPOS="810" VPOS="960" WIDTH="91" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="that" WC="0.4875" CC="9640" />
+            <SP ID="P32_SP00068" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00079" HPOS="922" VPOS="963" WIDTH="159" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="period." WC="0.7614286" CC="0053304" />
+            <SP ID="P32_SP00069" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00080" HPOS="1133" VPOS="966" WIDTH="50" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="In" WC="0.4" CC="210" />
+            <SP ID="P32_SP00070" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00081" HPOS="1205" VPOS="967" WIDTH="71" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+          </TextLine>
+          <TextLine ID="P32_TL00012" HPOS="226" VPOS="1024" WIDTH="1047" HEIGHT="69">
+            <String ID="P32_S00082" HPOS="226" VPOS="1024" WIDTH="90" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="first" WC="0.684" CC="00906" />
+            <SP ID="P32_SP00071" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00083" HPOS="343" VPOS="1028" WIDTH="146" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="period" WC="0.7216667" CC="002562" />
+            <SP ID="P32_SP00072" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00084" HPOS="515" VPOS="1029" WIDTH="71" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.78" CC="060" />
+            <SP ID="P32_SP00073" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00085" HPOS="613" VPOS="1038" WIDTH="109" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="most" WC="0.7825" CC="0008" />
+            <SP ID="P32_SP00074" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00086" HPOS="749" VPOS="1035" WIDTH="279" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="conspicuous" WC="0.8272727" CC="00700402400" />
+            <SP ID="P32_SP00075" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00087" HPOS="1054" VPOS="1037" WIDTH="107" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="king" WC="0.26" CC="10549" />
+            <SP ID="P32_SP00076" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00088" HPOS="1185" VPOS="1052" WIDTH="88" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="was" WC="0.82" CC="050" />
+          </TextLine>
+          <TextLine ID="P32_TL00013" HPOS="225" VPOS="1096" WIDTH="1047" HEIGHT="68">
+            <String ID="P32_S00089" HPOS="225" VPOS="1096" WIDTH="237" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Jeroboam," WC="0.644444466" CC="500075094" />
+            <SP ID="P32_SP00077" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00090" HPOS="521" VPOS="1101" WIDTH="68" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.79" CC="600" />
+            <SP ID="P32_SP00078" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00091" HPOS="646" VPOS="1105" WIDTH="203" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="revolter;" WC="0.8333333" CC="000040045" />
+            <SP ID="P32_SP00079" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00092" HPOS="907" VPOS="1108" WIDTH="42" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="in" WC="0.79" CC="40" />
+            <SP ID="P32_SP00080" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00093" HPOS="990" VPOS="1108" WIDTH="72" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8" CC="060" />
+            <SP ID="P32_SP00081" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00094" HPOS="1103" VPOS="1111" WIDTH="169" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="second," WC="0.687142849" CC="0007860" />
+          </TextLine>
+          <TextLine ID="P32_TL00014" HPOS="225" VPOS="1167" WIDTH="1046" HEIGHT="72">
+            <String ID="P32_S00095" HPOS="225" VPOS="1167" WIDTH="137" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="Ahab," WC="0.674" CC="010050" />
+            <SP ID="P32_SP00082" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00096" HPOS="389" VPOS="1171" WIDTH="71" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.7966667" CC="060" />
+            <SP ID="P32_SP00083" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00097" HPOS="486" VPOS="1174" WIDTH="161" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="wicked" WC="0.945" CC="030000" />
+            <SP ID="P32_SP00084" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00098" HPOS="673" VPOS="1176" WIDTH="126" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="king;" WC="0.812" CC="02006" />
+            <SP ID="P32_SP00085" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00099" HPOS="828" VPOS="1179" WIDTH="42" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="in" WC="0.865" CC="02" />
+            <SP ID="P32_SP00086" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00100" HPOS="895" VPOS="1179" WIDTH="72" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="the" WC="0.816666663" CC="050" />
+            <SP ID="P32_SP00087" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00101" HPOS="991" VPOS="1181" WIDTH="129" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="third," WC="0.7" CC="674000" />
+            <SP ID="P32_SP00088" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00102" HPOS="1148" VPOS="1184" WIDTH="123" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Jehu," WC="0.738" CC="20460" />
+          </TextLine>
+          <TextLine ID="P32_TL00015" HPOS="225" VPOS="1240" WIDTH="1045" HEIGHT="67">
+            <String ID="P32_S00103" HPOS="224" VPOS="1243" WIDTH="230" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="somewhat" WC="0.83" CC="07002210" />
+            <SP ID="P32_SP00089" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00104" HPOS="477" VPOS="1245" WIDTH="48" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="of" WC="0.94" CC="10" />
+            <SP ID="P32_SP00090" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00105" HPOS="546" VPOS="1261" WIDTH="25" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P32_SP00091" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00106" HPOS="595" VPOS="1247" WIDTH="219" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="reformer," WC="0.918888867" CC="003000003" />
+            <SP ID="P32_SP00092" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00107" HPOS="838" VPOS="1253" WIDTH="85" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="and" WC="0.35" CC="378" />
+            <SP ID="P32_SP00093" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00108" HPOS="946" VPOS="1253" WIDTH="43" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="in" WC="0.72" CC="50" />
+            <SP ID="P32_SP00094" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00109" HPOS="1013" VPOS="1255" WIDTH="72" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P32_SP00095" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00110" HPOS="1109" VPOS="1255" WIDTH="161" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="fourth," WC="0.8971428" CC="0302000" />
+          </TextLine>
+          <TextLine ID="P32_TL00016" HPOS="225" VPOS="1312" WIDTH="1045" HEIGHT="72">
+            <String ID="P32_S00111" HPOS="225" VPOS="1312" WIDTH="155" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Pekah," WC="0.738333344" CC="600053" />
+            <SP ID="P32_SP00096" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00112" HPOS="405" VPOS="1317" WIDTH="70" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P32_SP00097" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00113" HPOS="499" VPOS="1321" WIDTH="116" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="royal" WC="0.782" CC="50005" />
+            <SP ID="P32_SP00098" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00114" HPOS="640" VPOS="1322" WIDTH="195" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="assassin." WC="0.7966667" CC="400900300" />
+            <SP ID="P32_SP00099" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00115" HPOS="889" VPOS="1326" WIDTH="172" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="During" WC="0.9266667" CC="000400" />
+            <SP ID="P32_SP00100" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00116" HPOS="1084" VPOS="1329" WIDTH="71" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.423333347" CC="0107" />
+            <SP ID="P32_SP00101" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00117" HPOS="1178" VPOS="1330" WIDTH="92" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="first" WC="0.938" CC="00300" />
+          </TextLine>
+          <TextLine ID="P32_TL00017" HPOS="222" VPOS="1385" WIDTH="1046" HEIGHT="71">
+            <String ID="P32_S00118" HPOS="222" VPOS="1386" WIDTH="157" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="period," WC="0.691428542" CC="5004703" />
+            <SP ID="P32_SP00102" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00119" HPOS="409" VPOS="1388" WIDTH="181" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="idolatry" WC="0.82" CC="26050000" />
+            <SP ID="P32_SP00103" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00120" HPOS="616" VPOS="1394" WIDTH="102" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="took" WC="0.665" CC="0660" />
+            <SP ID="P32_SP00104" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00121" HPOS="747" VPOS="1403" WIDTH="106" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="root," WC="0.702" CC="33700" />
+            <SP ID="P32_SP00105" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00122" HPOS="883" VPOS="1398" WIDTH="148" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="Bethel" WC="0.85" CC="500003" />
+            <SP ID="P32_SP00106" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00123" HPOS="1059" VPOS="1402" WIDTH="85" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="and" WC="0.44" CC="0106" />
+            <SP ID="P32_SP00107" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00124" HPOS="1172" VPOS="1402" WIDTH="97" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Dan" WC="0.673333347" CC="720" />
+          </TextLine>
+          <TextLine ID="P32_TL00018" HPOS="220" VPOS="1458" WIDTH="1046" HEIGHT="71">
+            <String ID="P32_S00125" HPOS="220" VPOS="1471" WIDTH="116" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="came" WC="1" CC="0000" />
+            <SP ID="P32_SP00108" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00126" HPOS="366" VPOS="1460" WIDTH="90" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="into" WC="0.8375" CC="6000" />
+            <SP ID="P32_SP00109" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00127" HPOS="484" VPOS="1465" WIDTH="292" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="prominence;" WC="0.728181839" CC="04007501406" />
+            <SP ID="P32_SP00110" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00128" HPOS="808" VPOS="1469" WIDTH="157" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="during" WC="0.5966667" CC="643710" />
+            <SP ID="P32_SP00111" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00129" HPOS="994" VPOS="1472" WIDTH="74" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.82" CC="050" />
+            <SP ID="P32_SP00112" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00130" HPOS="1097" VPOS="1477" WIDTH="169" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="second," WC="0.808571458" CC="0006501" />
+          </TextLine>
+          <TextLine ID="P32_TL00019" HPOS="220" VPOS="1529" WIDTH="1045" HEIGHT="62">
+            <String ID="P32_S00131" HPOS="220" VPOS="1529" WIDTH="31" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="it" WC="0.675" CC="60" />
+            <SP ID="P32_SP00113" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00132" HPOS="277" VPOS="1544" WIDTH="86" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="was" WC="1" CC="000" />
+            <SP ID="P32_SP00114" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00133" HPOS="390" VPOS="1533" WIDTH="42" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="in" WC="0.585" CC="52" />
+            <SP ID="P32_SP00115" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00134" HPOS="461" VPOS="1534" WIDTH="76" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="full" WC="0.6225" CC="0752" />
+            <SP ID="P32_SP00116" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00135" HPOS="564" VPOS="1536" WIDTH="140" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="bloom" WC="0.81" CC="26000" />
+            <SP ID="P32_SP00117" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00136" HPOS="729" VPOS="1541" WIDTH="135" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="under" WC="0.776" CC="62001" />
+            <SP ID="P32_SP00118" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00137" HPOS="888" VPOS="1542" WIDTH="73" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="the" WC="0.86" CC="040" />
+            <SP ID="P32_SP00119" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00138" HPOS="987" VPOS="1544" WIDTH="167" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="furious" WC="0.692857146" CC="40025100" />
+            <SP ID="P32_SP00120" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00139" HPOS="1181" VPOS="1548" WIDTH="84" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="and" WC="0.92" CC="020" />
+          </TextLine>
+          <TextLine ID="P32_TL00020" HPOS="222" VPOS="1600" WIDTH="1043" HEIGHT="72">
+            <String ID="P32_S00140" HPOS="222" VPOS="1600" WIDTH="197" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="fanatical" WC="0.798888862" CC="091000006" />
+            <SP ID="P32_SP00121" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00141" HPOS="457" VPOS="1606" WIDTH="170" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="leading" WC="0.8642857" CC="2000700" />
+            <SP ID="P32_SP00122" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00142" HPOS="665" VPOS="1611" WIDTH="47" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="of" WC="0.675" CC="60" />
+            <SP ID="P32_SP00123" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00143" HPOS="750" VPOS="1611" WIDTH="178" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Jezebel," WC="0.77875" CC="00006423" />
+            <SP ID="P32_SP00124" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00144" HPOS="970" VPOS="1616" WIDTH="100" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="wife" WC="0.7275" CC="0730" />
+            <SP ID="P32_SP00125" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00145" HPOS="1108" VPOS="1619" WIDTH="48" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="of" WC="0.755" CC="31" />
+            <SP ID="P32_SP00126" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00146" HPOS="1194" VPOS="1620" WIDTH="71" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="0.89" CC="030" />
+          </TextLine>
+          <TextLine ID="P32_TL00021" HPOS="219" VPOS="1672" WIDTH="1044" HEIGHT="71">
+            <String ID="P32_S00147" HPOS="219" VPOS="1672" WIDTH="124" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="king;" WC="0.606" CC="072100" />
+            <SP ID="P32_SP00127" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00148" HPOS="377" VPOS="1677" WIDTH="156" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="during" WC="0.75333333" CC="040640" />
+            <SP ID="P32_SP00128" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00149" HPOS="563" VPOS="1679" WIDTH="69" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8466667" CC="040" />
+            <SP ID="P32_SP00129" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00150" HPOS="662" VPOS="1682" WIDTH="126" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="third," WC="0.8383333" CC="003204" />
+            <SP ID="P32_SP00130" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00151" HPOS="820" VPOS="1685" WIDTH="33" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="it" WC="0.425" CC="74" />
+            <SP ID="P32_SP00131" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00152" HPOS="882" VPOS="1701" WIDTH="86" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="was" WC="0.936666667" CC="010" />
+            <SP ID="P32_SP00132" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00153" HPOS="1000" VPOS="1688" WIDTH="96" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="held" WC="0.69" CC="5070" />
+            <SP ID="P32_SP00133" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00154" HPOS="1127" VPOS="1704" WIDTH="137" HEIGHT="30" STYLEREFS="StyleId-1" CONTENT="some¬" WC="0.728" CC="06303" />
+          </TextLine>
+          <TextLine ID="P32_TL00022" HPOS="216" VPOS="1744" WIDTH="1048" HEIGHT="72">
+            <String ID="P32_S00155" HPOS="216" VPOS="1745" WIDTH="113" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="what" WC="0.6575" CC="6700" />
+            <SP ID="P32_SP00134" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00156" HPOS="359" VPOS="1747" WIDTH="41" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="in" WC="0.695" CC="60" />
+            <SP ID="P32_SP00135" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00157" HPOS="430" VPOS="1749" WIDTH="207" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="abeyance" WC="0.95" CC="03000001" />
+            <SP ID="P32_SP00136" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00158" HPOS="666" VPOS="1754" WIDTH="187" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="through" WC="0.752857149" CC="0547000" />
+            <SP ID="P32_SP00137" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00159" HPOS="881" VPOS="1757" WIDTH="71" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.82" CC="500" />
+            <SP ID="P32_SP00138" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00160" HPOS="980" VPOS="1758" WIDTH="207" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="influence" WC="0.6811111" CC="351190007" />
+            <SP ID="P32_SP00139" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00161" HPOS="1216" VPOS="1764" WIDTH="48" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="of" WC="0.415" CC="65" />
+          </TextLine>
+          <TextLine ID="P32_TL00023" HPOS="214" VPOS="1816" WIDTH="1048" HEIGHT="72">
+            <String ID="P32_S00162" HPOS="214" VPOS="1816" WIDTH="70" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="the" WC="0.776666641" CC="060" />
+            <SP ID="P32_SP00140" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00163" HPOS="311" VPOS="1821" WIDTH="212" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="prophets." WC="0.646666646" CC="1052900004" />
+            <SP ID="P32_SP00141" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00164" HPOS="581" VPOS="1824" WIDTH="91" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="The" WC="0.886666656" CC="030" />
+            <SP ID="P32_SP00142" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00165" HPOS="700" VPOS="1828" WIDTH="165" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="rugged" WC="0.785" CC="600060" />
+            <SP ID="P32_SP00143" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00166" HPOS="894" VPOS="1830" WIDTH="143" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Elijah" WC="0.486666679" CC="263755" />
+            <SP ID="P32_SP00144" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00167" HPOS="1064" VPOS="1834" WIDTH="198" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="flourish¬" WC="0.5833333" CC="00101006073" />
+          </TextLine>
+          <TextLine ID="P32_TL00024" HPOS="216" VPOS="1889" WIDTH="1045" HEIGHT="71">
+            <String ID="P32_S00168" HPOS="216" VPOS="1890" WIDTH="50" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="ed" WC="1" CC="00" />
+            <SP ID="P32_SP00145" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00169" HPOS="297" VPOS="1890" WIDTH="109" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="here." WC="0.814" CC="00404" />
+            <SP ID="P32_SP00146" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00170" HPOS="465" VPOS="1894" WIDTH="170" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="During" WC="0.7216667" CC="0302100" />
+            <SP ID="P32_SP00147" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00171" HPOS="662" VPOS="1897" WIDTH="71" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="the" WC="0.933333337" CC="020" />
+            <SP ID="P32_SP00148" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00172" HPOS="763" VPOS="1899" WIDTH="146" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="fourth" WC="0.855" CC="300500" />
+            <SP ID="P32_SP00149" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00173" HPOS="938" VPOS="1904" WIDTH="159" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="period," WC="0.75" CC="8044000" />
+            <SP ID="P32_SP00150" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00174" HPOS="1126" VPOS="1908" WIDTH="135" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="idola¬" WC="0.808333337" CC="300404" />
+          </TextLine>
+          <TextLine ID="P32_TL00025" HPOS="214" VPOS="1960" WIDTH="1046" HEIGHT="71">
+            <String ID="P32_S00175" HPOS="214" VPOS="1965" WIDTH="66" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="try" WC="0.803333342" CC="050" />
+            <SP ID="P32_SP00151" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00176" HPOS="304" VPOS="1963" WIDTH="212" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="produced" WC="0.6825" CC="03087006" />
+            <SP ID="P32_SP00152" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00177" HPOS="540" VPOS="1967" WIDTH="52" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="its" WC="0.53" CC="580" />
+            <SP ID="P32_SP00153" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00178" HPOS="616" VPOS="1972" WIDTH="165" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="natural" WC="0.5042857" CC="10057091" />
+            <SP ID="P32_SP00154" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00179" HPOS="805" VPOS="1971" WIDTH="116" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="fruit," WC="0.5566667" CC="666304" />
+            <SP ID="P32_SP00155" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00180" HPOS="946" VPOS="1975" WIDTH="71" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="the" WC="0.7633333" CC="070" />
+            <SP ID="P32_SP00156" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00181" HPOS="1040" VPOS="1983" WIDTH="112" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="utter" WC="0.686" CC="90600" />
+            <SP ID="P32_SP00157" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00182" HPOS="1176" VPOS="1980" WIDTH="84" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="dis¬" WC="0.7625" CC="0503" />
+          </TextLine>
+          <TextLine ID="P32_TL00026" HPOS="215" VPOS="2032" WIDTH="1043" HEIGHT="74">
+            <String ID="P32_S00183" HPOS="215" VPOS="2033" WIDTH="179" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="solution" WC="0.7975" CC="00620520" />
+            <SP ID="P32_SP00158" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00184" HPOS="419" VPOS="2038" WIDTH="82" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="and" WC="0.683333337" CC="900" />
+            <SP ID="P32_SP00159" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00185" HPOS="526" VPOS="2039" WIDTH="257" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="destruction" WC="0.834545434" CC="00000600424" />
+            <SP ID="P32_SP00160" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00186" HPOS="806" VPOS="2044" WIDTH="48" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="of" WC="0.465" CC="73" />
+            <SP ID="P32_SP00161" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00187" HPOS="878" VPOS="2045" WIDTH="70" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="0.75666666" CC="070" />
+            <SP ID="P32_SP00162" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00188" HPOS="971" VPOS="2047" WIDTH="220" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="kingdom." WC="0.67375" CC="55000643" />
+            <SP ID="P32_SP00163" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00189" HPOS="1219" VPOS="2054" WIDTH="39" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="It" WC="1" CC="00" />
+          </TextLine>
+          <TextLine ID="P32_TL00027" HPOS="213" VPOS="2104" WIDTH="1045" HEIGHT="73">
+            <String ID="P32_S00190" HPOS="213" VPOS="2104" WIDTH="33" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="is" WC="0.92" CC="10" />
+            <SP ID="P32_SP00164" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00191" HPOS="272" VPOS="2105" WIDTH="72" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P32_SP00165" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00192" HPOS="370" VPOS="2108" WIDTH="182" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="political" WC="0.74222225" CC="006304090" />
+            <SP ID="P32_SP00166" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00193" HPOS="580" VPOS="2111" WIDTH="90" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="side" WC="0.9275" CC="0200" />
+            <SP ID="P32_SP00167" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00194" HPOS="697" VPOS="2114" WIDTH="47" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.635" CC="70" />
+            <SP ID="P32_SP00168" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00195" HPOS="771" VPOS="2116" WIDTH="83" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="this" WC="0.8175" CC="0330" />
+            <SP ID="P32_SP00169" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00196" HPOS="883" VPOS="2118" WIDTH="81" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="last" WC="0.7175" CC="2700" />
+            <SP ID="P32_SP00170" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00197" HPOS="989" VPOS="2122" WIDTH="149" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="period" WC="0.6616667" CC="1001170" />
+            <SP ID="P32_SP00171" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00198" HPOS="1165" VPOS="2125" WIDTH="93" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="that" WC="0.8" CC="0070" />
+          </TextLine>
+          <TextLine ID="P32_TL00028" HPOS="212" VPOS="2177" WIDTH="966" HEIGHT="69">
+            <String ID="P32_S00199" HPOS="211" VPOS="2189" WIDTH="98" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="now" WC="0.66" CC="009" />
+            <SP ID="P32_SP00172" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00200" HPOS="330" VPOS="2192" WIDTH="143" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="passes" WC="0.845" CC="710000" />
+            <SP ID="P32_SP00173" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00201" HPOS="496" VPOS="2182" WIDTH="146" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="before" WC="0.6533333" CC="700930" />
+            <SP ID="P32_SP00174" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00202" HPOS="663" VPOS="2199" WIDTH="50" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="us" WC="0.71" CC="50" />
+            <SP ID="P32_SP00175" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00203" HPOS="739" VPOS="2187" WIDTH="68" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="for" WC="0.67" CC="072" />
+            <SP ID="P32_SP00176" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00204" HPOS="828" VPOS="2202" WIDTH="26" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P32_SP00177" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00205" HPOS="875" VPOS="2190" WIDTH="111" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="brief" WC="0.694" CC="75200" />
+            <SP ID="P32_SP00178" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P32_S00206" HPOS="1008" VPOS="2196" WIDTH="170" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="review." WC="0.7985714" CC="7600000" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

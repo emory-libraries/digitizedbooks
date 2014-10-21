@@ -1,0 +1,1965 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cas a2200769 a 4500</leader>
+    <controlfield tag="001">002756700</controlfield>
+    <controlfield tag="005">20140925121542.0</controlfield>
+    <controlfield tag="008">910829d19191939enkmr p       0   a0eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">20023882</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">ocm01756136</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(DOBI)31833230</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">0427206</subfield>
+      <subfield code="b">MULS</subfield>
+      <subfield code="a">Ulp No. 4813800009</subfield>
+      <subfield code="a">PITT NO. 4833300001</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">MUL</subfield>
+      <subfield code="c">MUL</subfield>
+      <subfield code="d">IUL</subfield>
+      <subfield code="d">NYG</subfield>
+      <subfield code="d">DLC</subfield>
+      <subfield code="d">OCL</subfield>
+      <subfield code="d">NST</subfield>
+      <subfield code="d">EMU</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="042">
+      <subfield code="a">lc</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">EMUU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="050">
+      <subfield code="a">AP4</subfield>
+      <subfield code="b">.L515</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="092">
+      <subfield code="a">052</subfield>
+      <subfield code="b">L84725</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="4" tag="245">
+      <subfield code="a">The London mercury.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="246">
+      <subfield code="a">London mercury with which is incorporated the bookman</subfield>
+      <subfield code="f">Jan. 1935-Sept. 1936</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="246">
+      <subfield code="a">London mercury and bookman</subfield>
+      <subfield code="f">Oct. 1936-Sept. 1938</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">London :</subfield>
+      <subfield code="b">Field Press Ltd,</subfield>
+      <subfield code="c">[1919?-1939]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">39 volumes :</subfield>
+      <subfield code="b">illustrations (some color), facsimiles, portraits ;</subfield>
+      <subfield code="c">26 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="310">
+      <subfield code="a">Monthly</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="362">
+      <subfield code="a">No. 1 (Nov. 1919)-no. 234 (Apr. 1939).</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Title from caption.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Publisher varies.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Includes many works by W. B. Yeats.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2=" " tag="510">
+      <subfield code="a">Miller &amp; Price. British poetry magazines, 1914-2000,</subfield>
+      <subfield code="c">A117</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="515">
+      <subfield code="a">No. 1- called also v. 1-</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="555">
+      <subfield code="a">Vols. 1 (1919)-20 (1929). 1 v. 26 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="580">
+      <subfield code="a">Absorbed in May 1939 by: Life and letters today.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="580">
+      <subfield code="a">Continues: Bookman (London, England).</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="3">V.6 1922 MAY/OCT. INDEX</subfield>
+      <subfield code="a">will digitize</subfield>
+      <subfield code="c">20140925</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-S</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library copies form part of the Raymond Danowski Poetry Library.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Literature, Modern</subfield>
+      <subfield code="y">20th century</subfield>
+      <subfield code="v">Periodicals.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Yeats, W. B.</subfield>
+      <subfield code="q">(William Butler),</subfield>
+      <subfield code="d">1865-1939.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Danowski, Raymond,</subfield>
+      <subfield code="e">collector.</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Raymond Danowski Poetry Library (Emory University. General Libraries)</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="5" tag="780">
+      <subfield code="t">Bookman (London, England)</subfield>
+      <subfield code="g">Jan. 1935</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="785">
+      <subfield code="t">Life and letters today</subfield>
+      <subfield code="w">(OCoLC)5159477</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">recon tas</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU emumarbl met</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">9DT</subfield>
+      <subfield code="2">19940531</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480822</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.1 1919/20</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480823</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.2 1920</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480824</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.3 1920/21</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480825</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.4 1921</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480826</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.5 1921/22</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480827</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.6 1922</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480828</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.7 1922/23</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480829</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.8 1923</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480830</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.9 1923/24</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480831</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.10 1924</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480832</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.11 1924/25</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480833</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.12 1925</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480834</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.13 1925/26</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480835</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.14 1926</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="966">
+      <subfield code="a">GENERAL HAS: Index v.1-20</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="966">
+      <subfield code="a">MARBL HAS: Vol. 1, no. 1 (Nov. 1919)-v. 25, no. 146 (Nov. 1931); v. 25, no. 148 (Feb. 1932)-v. 39, no. 234 (Apr. 1939)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.1 1919/20</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1802*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480822</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.2 1920</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480823</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.3 1920/21</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480824</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.4 1921</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480825</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.5 1921/22</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480826</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.6 1922</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480827</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.7 1922/23</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480828</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.8 1923</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480829</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.9 1923/24</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480830</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.10 1924</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480831</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.11 1924/25</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480832</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.12 1925</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480833</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.13 1925/26</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480834</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.14 1926</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480835</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940527</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.15 1926/27</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480836</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.16 1927</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1803*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480837</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.17 1927/28</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480838</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.18 1928</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">20070309</subfield>
+      <subfield code="i">000011480839</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.19 1928/29</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480840</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.20 1929</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480841</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.21 1929/30</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480842</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.22 1930</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480843</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.23 1930/31</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480844</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.24 1931</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480845</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.25 1931/32</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480846</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.26 1932</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011480847</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 PROSPECTUS</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735825</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.1 NOV. 1919/APR. 1920 INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735826</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.2 1920 MAY/OCT. INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735827</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.2 NOV. 1920/APR. 1921 INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735828</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.4 1921 MAY/OCT. INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735809</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.5 NOV. 1921/APR. 1922 INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735810</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.6 1922 MAY/OCT. INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735811</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.7 NOV. 1922/APR. 1923 INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735812</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.8 1923 MAY/OCT. INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735813</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.27 1932/33</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">20071210</subfield>
+      <subfield code="i">000011480848</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.28 1933</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">20071210</subfield>
+      <subfield code="i">000011480849</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.29 1933/34</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">20071210</subfield>
+      <subfield code="i">000011480850</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.30 1934</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">20071210</subfield>
+      <subfield code="i">000011468584</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.31 1934/35</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011468585</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.32 1935</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011468586</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.33 1935/36</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1831*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469434</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.34 1936</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469435</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.35 1936/37</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469436</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.36 1937</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469437</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.37 1937/38</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469438</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.38 1938</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469439</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 V.39 1938/39</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d">*B12SH1832*</subfield>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469440</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Storage Library</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 INDEXES V.1-20</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">000011469441</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Robert W. Woodruff Library</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.1 NO.1-3</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342904</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.1 NO.4-6</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342905</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.2 NO.7-9</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342906</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.2 NO.10-12</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342907</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.3 NO.13-15</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342908</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.3 NO.16-18</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342909</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.4 NO.19-21</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342910</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.4 NO.22-24</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342911</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.5 NO.25-27</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342912</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.5 NO.28-30</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342913</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.6 NO.31-33</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342914</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.6 NO.34-36</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342915</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.7 NO.37-39</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342916</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.7 NO.40-42</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342917</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.8 NO.43-45</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342918</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.8 NO.46-48</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342919</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.9 NO.49-51</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342920</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.9 NO.52-54</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342921</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.10 NO.55-57</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342922</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.10 NO.58-60</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342923</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.11 NO.61-63</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342924</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.11 NO.64-66</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342925</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.12 NO.67-69</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342926</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.12 NO.70-72</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342927</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.13 NO.73-75</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342928</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090718</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.13 NO.76-78</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342929</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.14 NO.79-81</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342930</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.14 NO.82-84</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342931</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.15 NO.85-87</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342932</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.15 NO.88-90</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342933</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.16 NO.91-93</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342934</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.16 NO.94-96</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342935</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.17 NO.97-99</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342823</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.17 NO.100-102</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342824</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.18 NO.103-105</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342825</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.18 NO.106-108</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342826</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.19 NO.109-111</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342827</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.19 NO.112-114</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342828</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.20 NO.115-117</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342829</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.20 NO.118-120</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342830</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.21 NO.121-123</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342831</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.21 NO.124-126</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342832</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.22 NO.127-129</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342833</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.22 NO.130-132</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342834</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.23 NO.133-135</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342835</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.23 NO.136-138</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342836</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.24 NO.139-141</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342837</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.24 NO.142-144</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342838</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.25 NO.145-146</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342839</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.25 NO.148-150</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342840</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.26 NO.151-153</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342841</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.26 NO.154-156</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342842</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.27 NO.157-159</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342843</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.27 NO.160-162</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342844</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.28 NO.163-165</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342845</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.28 NO.166-168</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342846</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.29 NO.169-171</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342847</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.29 NO.172-174</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342848</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.30 NO.175-177</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342849</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.30 NO.178-180</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342850</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.31 NO.181-183</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342851</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.31 NO.184-186</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342852</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.32 NO.187-189</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342853</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.32 NO.190-192</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342854</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.33 NO.193-195</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342855</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.33 NO.196-198</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342856</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.34 NO.199-201</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342857</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.34 NO.202-204</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342858</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.35 NO.205-207</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342859</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.35 NO.208-210</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342860</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.36 NO.211-213</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342861</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.36 NO.214-216</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342862</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.37 NO.217-219</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342863</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.37 NO.220-222</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342864</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.38 NO.223-226</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342865</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.39 NO.227-229</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342866</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.39 NO.230-232</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342867</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.39 NO.233-234</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010001342868</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Periodical</subfield>
+      <subfield code="u">20090720</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI 1932-1933 INDEX DANOWSKI</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">10002333054</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">20090804</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+  </record>
+</collection>

@@ -1,0 +1,2913 @@
+﻿<mets xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:premis="http://purl.org/dc/elements/1.1/premis" xmlns:mix="http://purl.org/dc/elements/1.1/mix" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.loc.gov/METS/">
+  <metsHdr CREATEDATE="2014-04-11T14:49:26" RECORDSTATUS="Complete">
+    <agent ROLE="CREATOR" TYPE="ORGANIZATION">
+      <name>Emory University</name>
+    </agent>
+    <agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <name>Emory University</name>
+    </agent>
+    <agent ROLE="ARCHIVIST" TYPE="INDIVIDUAL">
+      <name>Emory University</name>
+    </agent>
+  </metsHdr>
+  <dmdSec ID="DMD1">
+    <mdWrap MIMETYPE="text/xml" MDTYPE="MODS" LABEL="MODS Metadata">
+  <xmlData>
+    <mods:mods version="3.3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-3.xsd" xmlns:mods="http://www.loc.gov/mods/v3">
+      <mods:titleInfo>
+        <mods:title>Unknown</mods:title>
+      </mods:titleInfo>
+      <mods:name type="personal">
+        <mods:role>
+          <mods:roleTerm authority="marcrelator" type="text">creator</mods:roleTerm>
+        </mods:role>
+      </mods:name>
+      <mods:typeOfResource>text</mods:typeOfResource>
+      <mods:originInfo>
+        <mods:place>
+          <mods:placeTerm type="code" authority="marccountry">enk</mods:placeTerm>
+        </mods:place>
+      </mods:originInfo>
+      <mods:recordInfo>
+        <mods:recordContentSource authority="marcorg">CtY</mods:recordContentSource>
+      </mods:recordInfo>
+    </mods:mods>
+  </xmlData>
+</mdWrap>
+  </dmdSec>
+  <dmdSec ID="DMD2">
+    <mdWrap MIMETYPE="text/xml" MDTYPE="DC" LABEL="DC Metadata">
+  <xmlData>
+    <dc:dc xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/">
+      <dc:title>Unknown</dc:title>
+    </dc:dc>
+  </xmlData>
+</mdWrap>
+  </dmdSec>
+  <amdSec ID="AMD">
+    <techMD ID="AMD_TECHMD_TIF001">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000001.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>09008e580507517e2e23c8d17166c288</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF002">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000002.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>3396</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>c87cf586a44e8cb756497e02bf5e0b8a</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF003">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000003.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>34941</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>c42afa8d5bd3de8eb3e0cfd4c45b91c2</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF004">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000004.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>31799</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>4d480b5ef88c677b52bcae27f1a4f6e8</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF005">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000005.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f42d0c009c9e2d0231f209f4db808bc4</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF006">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000006.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>9641</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>fc6e6d5e322e0a6decd37670d12b8de5</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF007">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000007.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>0224c4f5d4ceace4dd30ef29247eaaf4</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF008">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000008.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>50433</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>7f6eef0ee55bad8c04e5359ca748594f</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF009">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000009.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>18725</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>232b9bebc465e67a9b585aaf5f3908be</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF010">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000010.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>32992</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>61248107bac799abe84bdcdb439b2d81</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF011">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000011.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>39650</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>541f78a7fd4923acef48469d1b2106f7</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF012">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000012.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>50359</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>541fe39bcd1daa6300d548ebf4523055</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF013">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000013.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>48331</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>68d4b5713eca27658d0442bb1f1bdb03</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF014">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000014.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49133</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>b0e95c1a7741a42cc227bb627135b706</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF015">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000015.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>52596</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f5987a941fb493e4ade8bb12beec9fbb</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF016">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000016.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46592</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f61a5bfec04f965a5e7ee972cf3b8337</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF017">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000017.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>40224</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>e02df3287e276a5fc5b4946cafd72c36</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF018">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000018.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>45316</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>774838732991e0b3222176e4436ca013</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF019">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000019.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46214</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>2bb674ed95d91251b939f2d5b19b2279</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF020">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000020.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>14790</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f108e51c2c331dbc44d72ea09c425227</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF021">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000021.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>41145</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>d2a66aa86d2b9e79556396c258f54529</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF022">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000022.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49872</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>0890fbc92506e0e69976f9ff85f16e39</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF023">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000023.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>43344</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>982b225ca524cbfbe1604d814f4ac1a5</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF024">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000024.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49344</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>d916692901ab0051e5b5e4e0761125b2</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF025">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000025.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>51057</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>df1c3db209f62da74a77767fb4d400db</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF026">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000026.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>48403</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>7b4213970650f92743f2ef524df8b49c</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF027">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000027.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>37756</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>8c0055f895fa61df2603133740564c89</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF028">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000028.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>36498</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>249bc844ef6af2e2e1f8829dec1ea360</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF029">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000029.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>45241</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>fad75be4f220bdabae66564842f82340</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF030">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000030.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>47019</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f62b1f5d971efdeb7c0b9b99a63f056e</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF031">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000031.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>50204</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>843e022a1d324429c5243059ce3ec0ba</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF032">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000032.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>50847</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>041b6a95d27992d446c510f9f3405b1e</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF033">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000033.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46315</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>88f58f6c0f8b4377420d22ff57b500f4</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF034">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000034.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>48925</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>a2f1475dca056ed360f06aa68ad42b02</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF035">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000035.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>48778</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>cd77c02f609589dbd4687dfca9a48c5b</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF036">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000036.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>45884</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>368341d1df03adadcdcf072f32a1bde0</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF037">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000037.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>24082</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>44b7b25d6b245e1f0ede4deb41a96a15</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF038">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000038.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>42460</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>526003ab56484248e5ec0a3333a49724</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF039">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000039.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46179</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>3991513e22699f1705bebc4f313479c3</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF040">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000040.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46508</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>f8cfff82e1d5d6c14718f54f53599f68</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF041">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000041.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>47161</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>2a699a46b9775487962c978fa034d43c</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF042">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000042.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49058</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>72651e8ecfd6df96133debff43dd0b7f</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF043">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000043.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>46207</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>3c54f3055b7c5187c93d807ba6b4dfbd</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF044">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000044.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>52688</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>afb3dddb86e4b888b13c1f99e089c3bf</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF045">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000045.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49196</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>cc2c142b9c6e38a34be00797241e2841</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF046">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000046.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49800</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>c71849bf13be577f68e838a2c02a7c9f</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF047">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000047.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>45607</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>2c927c49576101bbe6b5e5e40f2b02f7</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF048">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000048.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>45009</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>9dca1977e849403d707d378fd5c9885c</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF049">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000049.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>49160</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>d480d0d2d4b9ab0c0933f81fc18c77f1</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF050">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000050.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>51077</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>c89f87511a185c94c97f2a4e4a3a3845</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF051">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000051.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>35462</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>c17e8397218773493d5c7238d95af95c</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF052">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000052.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>21898</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>ae6b9d9a7d41f94c6b0726dafd1cf3e7</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF053">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000053.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>94c58bf6ceffbb790d830f5e495cc32c</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF054">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000054.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>fb16aeba519021eee87b755781409495</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF055">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000055.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>d4868624b986f4149f38576049a3a3b6</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF056">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000056.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>19304</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>480bfaaab1b9a3ae700c4ce20397e16e</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF057">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000057.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>3342</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>fcb8d45c4bdff6805f630dc894194529</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+    <techMD ID="AMD_TECHMD_TIF058">
+      <mdWrap MDTYPE="NISOIMG" MIMETYPE="text/xml" LABEL="NISO MIX Metadata">
+  <xmlData>
+    <mix:mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd" xmlns:mix="http://www.loc.gov/mix/v20">
+      <mix:BasicDigitalObjectInformation>
+        <mix:ObjectIdentifier>
+          <mix:objectIdentifierType>pathname</mix:objectIdentifierType>
+          <mix:objectIdentifierValue>../TIFF/00000058.tif</mix:objectIdentifierValue>
+        </mix:ObjectIdentifier>
+        <mix:fileSize>2431</mix:fileSize>
+        <mix:FormatDesignation>
+          <mix:formatName>image/tiff</mix:formatName>
+        </mix:FormatDesignation>
+        <mix:Fixity>
+          <mix:messageDigestAlgorithm>MD5</mix:messageDigestAlgorithm>
+          <mix:messageDigest>8482b1343e2514b55ba3eba1ccb02e2a</mix:messageDigest>
+        </mix:Fixity>
+      </mix:BasicDigitalObjectInformation>
+      <mix:BasicImageInformation>
+        <mix:BasicImageCharacteristics>
+          <mix:imageWidth>1500</mix:imageWidth>
+          <mix:imageHeight>2500</mix:imageHeight>
+        </mix:BasicImageCharacteristics>
+      </mix:BasicImageInformation>
+      <mix:ImageAssessmentMetadata>
+        <mix:ImageColorEncoding>
+          <mix:BitsPerSample>
+            <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+          </mix:BitsPerSample>
+        </mix:ImageColorEncoding>
+      </mix:ImageAssessmentMetadata>
+    </mix:mix>
+  </xmlData>
+</mdWrap>
+    </techMD>
+  </amdSec>
+  <fileSec>
+    <fileGrp ID="TIFF">
+      <file ID="TIF001" ADMID="AMD_TECHMD_TIF001" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000001.tif" />
+      </file>
+      <file ID="TIF002" ADMID="AMD_TECHMD_TIF002" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000002.tif" />
+      </file>
+      <file ID="TIF003" ADMID="AMD_TECHMD_TIF003" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000003.tif" />
+      </file>
+      <file ID="TIF004" ADMID="AMD_TECHMD_TIF004" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000004.tif" />
+      </file>
+      <file ID="TIF005" ADMID="AMD_TECHMD_TIF005" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000005.tif" />
+      </file>
+      <file ID="TIF006" ADMID="AMD_TECHMD_TIF006" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000006.tif" />
+      </file>
+      <file ID="TIF007" ADMID="AMD_TECHMD_TIF007" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000007.tif" />
+      </file>
+      <file ID="TIF008" ADMID="AMD_TECHMD_TIF008" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000008.tif" />
+      </file>
+      <file ID="TIF009" ADMID="AMD_TECHMD_TIF009" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000009.tif" />
+      </file>
+      <file ID="TIF010" ADMID="AMD_TECHMD_TIF010" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000010.tif" />
+      </file>
+      <file ID="TIF011" ADMID="AMD_TECHMD_TIF011" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000011.tif" />
+      </file>
+      <file ID="TIF012" ADMID="AMD_TECHMD_TIF012" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000012.tif" />
+      </file>
+      <file ID="TIF013" ADMID="AMD_TECHMD_TIF013" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000013.tif" />
+      </file>
+      <file ID="TIF014" ADMID="AMD_TECHMD_TIF014" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000014.tif" />
+      </file>
+      <file ID="TIF015" ADMID="AMD_TECHMD_TIF015" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000015.tif" />
+      </file>
+      <file ID="TIF016" ADMID="AMD_TECHMD_TIF016" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000016.tif" />
+      </file>
+      <file ID="TIF017" ADMID="AMD_TECHMD_TIF017" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000017.tif" />
+      </file>
+      <file ID="TIF018" ADMID="AMD_TECHMD_TIF018" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000018.tif" />
+      </file>
+      <file ID="TIF019" ADMID="AMD_TECHMD_TIF019" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000019.tif" />
+      </file>
+      <file ID="TIF020" ADMID="AMD_TECHMD_TIF020" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000020.tif" />
+      </file>
+      <file ID="TIF021" ADMID="AMD_TECHMD_TIF021" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000021.tif" />
+      </file>
+      <file ID="TIF022" ADMID="AMD_TECHMD_TIF022" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000022.tif" />
+      </file>
+      <file ID="TIF023" ADMID="AMD_TECHMD_TIF023" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000023.tif" />
+      </file>
+      <file ID="TIF024" ADMID="AMD_TECHMD_TIF024" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000024.tif" />
+      </file>
+      <file ID="TIF025" ADMID="AMD_TECHMD_TIF025" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000025.tif" />
+      </file>
+      <file ID="TIF026" ADMID="AMD_TECHMD_TIF026" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000026.tif" />
+      </file>
+      <file ID="TIF027" ADMID="AMD_TECHMD_TIF027" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000027.tif" />
+      </file>
+      <file ID="TIF028" ADMID="AMD_TECHMD_TIF028" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000028.tif" />
+      </file>
+      <file ID="TIF029" ADMID="AMD_TECHMD_TIF029" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000029.tif" />
+      </file>
+      <file ID="TIF030" ADMID="AMD_TECHMD_TIF030" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000030.tif" />
+      </file>
+      <file ID="TIF031" ADMID="AMD_TECHMD_TIF031" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000031.tif" />
+      </file>
+      <file ID="TIF032" ADMID="AMD_TECHMD_TIF032" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000032.tif" />
+      </file>
+      <file ID="TIF033" ADMID="AMD_TECHMD_TIF033" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000033.tif" />
+      </file>
+      <file ID="TIF034" ADMID="AMD_TECHMD_TIF034" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000034.tif" />
+      </file>
+      <file ID="TIF035" ADMID="AMD_TECHMD_TIF035" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000035.tif" />
+      </file>
+      <file ID="TIF036" ADMID="AMD_TECHMD_TIF036" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000036.tif" />
+      </file>
+      <file ID="TIF037" ADMID="AMD_TECHMD_TIF037" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000037.tif" />
+      </file>
+      <file ID="TIF038" ADMID="AMD_TECHMD_TIF038" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000038.tif" />
+      </file>
+      <file ID="TIF039" ADMID="AMD_TECHMD_TIF039" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000039.tif" />
+      </file>
+      <file ID="TIF040" ADMID="AMD_TECHMD_TIF040" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000040.tif" />
+      </file>
+      <file ID="TIF041" ADMID="AMD_TECHMD_TIF041" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000041.tif" />
+      </file>
+      <file ID="TIF042" ADMID="AMD_TECHMD_TIF042" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000042.tif" />
+      </file>
+      <file ID="TIF043" ADMID="AMD_TECHMD_TIF043" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000043.tif" />
+      </file>
+      <file ID="TIF044" ADMID="AMD_TECHMD_TIF044" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000044.tif" />
+      </file>
+      <file ID="TIF045" ADMID="AMD_TECHMD_TIF045" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000045.tif" />
+      </file>
+      <file ID="TIF046" ADMID="AMD_TECHMD_TIF046" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000046.tif" />
+      </file>
+      <file ID="TIF047" ADMID="AMD_TECHMD_TIF047" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000047.tif" />
+      </file>
+      <file ID="TIF048" ADMID="AMD_TECHMD_TIF048" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000048.tif" />
+      </file>
+      <file ID="TIF049" ADMID="AMD_TECHMD_TIF049" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000049.tif" />
+      </file>
+      <file ID="TIF050" ADMID="AMD_TECHMD_TIF050" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000050.tif" />
+      </file>
+      <file ID="TIF051" ADMID="AMD_TECHMD_TIF051" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000051.tif" />
+      </file>
+      <file ID="TIF052" ADMID="AMD_TECHMD_TIF052" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000052.tif" />
+      </file>
+      <file ID="TIF053" ADMID="AMD_TECHMD_TIF053" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000053.tif" />
+      </file>
+      <file ID="TIF054" ADMID="AMD_TECHMD_TIF054" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000054.tif" />
+      </file>
+      <file ID="TIF055" ADMID="AMD_TECHMD_TIF055" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000055.tif" />
+      </file>
+      <file ID="TIF056" ADMID="AMD_TECHMD_TIF056" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000056.tif" />
+      </file>
+      <file ID="TIF057" ADMID="AMD_TECHMD_TIF057" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000057.tif" />
+      </file>
+      <file ID="TIF058" ADMID="AMD_TECHMD_TIF058" MIMETYPE="image/tiff">
+        <FLocat LOCTYPE="URL" xlink:href="../TIFF/00000058.tif" />
+      </file>
+    </fileGrp>
+    <fileGrp ID="ALTO">
+      <file ID="ALT001" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000001..xml" />
+      </file>
+      <file ID="ALT002" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000002..xml" />
+      </file>
+      <file ID="ALT003" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000003..xml" />
+      </file>
+      <file ID="ALT004" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000004..xml" />
+      </file>
+      <file ID="ALT005" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000005..xml" />
+      </file>
+      <file ID="ALT006" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000006..xml" />
+      </file>
+      <file ID="ALT007" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000007..xml" />
+      </file>
+      <file ID="ALT008" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000008..xml" />
+      </file>
+      <file ID="ALT009" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000009..xml" />
+      </file>
+      <file ID="ALT010" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000010..xml" />
+      </file>
+      <file ID="ALT011" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000011..xml" />
+      </file>
+      <file ID="ALT012" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000012..xml" />
+      </file>
+      <file ID="ALT013" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000013..xml" />
+      </file>
+      <file ID="ALT014" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000014..xml" />
+      </file>
+      <file ID="ALT015" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000015..xml" />
+      </file>
+      <file ID="ALT016" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000016..xml" />
+      </file>
+      <file ID="ALT017" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000017..xml" />
+      </file>
+      <file ID="ALT018" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000018..xml" />
+      </file>
+      <file ID="ALT019" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000019..xml" />
+      </file>
+      <file ID="ALT020" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000020..xml" />
+      </file>
+      <file ID="ALT021" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000021..xml" />
+      </file>
+      <file ID="ALT022" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000022..xml" />
+      </file>
+      <file ID="ALT023" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000023..xml" />
+      </file>
+      <file ID="ALT024" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000024..xml" />
+      </file>
+      <file ID="ALT025" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000025..xml" />
+      </file>
+      <file ID="ALT026" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000026..xml" />
+      </file>
+      <file ID="ALT027" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000027..xml" />
+      </file>
+      <file ID="ALT028" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000028..xml" />
+      </file>
+      <file ID="ALT029" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000029..xml" />
+      </file>
+      <file ID="ALT030" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000030..xml" />
+      </file>
+      <file ID="ALT031" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000031..xml" />
+      </file>
+      <file ID="ALT032" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000032..xml" />
+      </file>
+      <file ID="ALT033" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000033..xml" />
+      </file>
+      <file ID="ALT034" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000034..xml" />
+      </file>
+      <file ID="ALT035" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000035..xml" />
+      </file>
+      <file ID="ALT036" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000036..xml" />
+      </file>
+      <file ID="ALT037" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000037..xml" />
+      </file>
+      <file ID="ALT038" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000038..xml" />
+      </file>
+      <file ID="ALT039" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000039..xml" />
+      </file>
+      <file ID="ALT040" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000040..xml" />
+      </file>
+      <file ID="ALT041" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000041..xml" />
+      </file>
+      <file ID="ALT042" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000042..xml" />
+      </file>
+      <file ID="ALT043" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000043..xml" />
+      </file>
+      <file ID="ALT044" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000044..xml" />
+      </file>
+      <file ID="ALT045" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000045..xml" />
+      </file>
+      <file ID="ALT046" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000046..xml" />
+      </file>
+      <file ID="ALT047" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000047..xml" />
+      </file>
+      <file ID="ALT048" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000048..xml" />
+      </file>
+      <file ID="ALT049" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000049..xml" />
+      </file>
+      <file ID="ALT050" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000050..xml" />
+      </file>
+      <file ID="ALT051" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000051..xml" />
+      </file>
+      <file ID="ALT052" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000052..xml" />
+      </file>
+      <file ID="ALT053" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000053..xml" />
+      </file>
+      <file ID="ALT054" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000054..xml" />
+      </file>
+      <file ID="ALT055" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000055..xml" />
+      </file>
+      <file ID="ALT056" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000056..xml" />
+      </file>
+      <file ID="ALT057" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000057..xml" />
+      </file>
+      <file ID="ALT058" MIMETYPE="application/alto">
+        <FLocat LOCTYPE="URL" xlink:href="../ALTO/00000058..xml" />
+      </file>
+    </fileGrp>
+  </fileSec>
+  <structMap TYPE="physical">
+    <div DMDID="DMD1" LABEL="Unknown" TYPE="volume">
+      <div ORDER="1" TYPE="page">
+        <fptr FILEID="TIF001" />
+        <fptr FILEID="ALT001" />
+      </div>
+      <div ORDER="2" TYPE="page">
+        <fptr FILEID="TIF002" />
+        <fptr FILEID="ALT002" />
+      </div>
+      <div ORDER="3" TYPE="page">
+        <fptr FILEID="TIF003" />
+        <fptr FILEID="ALT003" />
+      </div>
+      <div ORDER="4" TYPE="page">
+        <fptr FILEID="TIF004" />
+        <fptr FILEID="ALT004" />
+      </div>
+      <div ORDER="5" TYPE="page">
+        <fptr FILEID="TIF005" />
+        <fptr FILEID="ALT005" />
+      </div>
+      <div ORDER="6" TYPE="page">
+        <fptr FILEID="TIF006" />
+        <fptr FILEID="ALT006" />
+      </div>
+      <div ORDER="7" TYPE="page">
+        <fptr FILEID="TIF007" />
+        <fptr FILEID="ALT007" />
+      </div>
+      <div ORDER="8" TYPE="page">
+        <fptr FILEID="TIF008" />
+        <fptr FILEID="ALT008" />
+      </div>
+      <div ORDER="9" TYPE="page">
+        <fptr FILEID="TIF009" />
+        <fptr FILEID="ALT009" />
+      </div>
+      <div ORDER="10" TYPE="page">
+        <fptr FILEID="TIF010" />
+        <fptr FILEID="ALT010" />
+      </div>
+      <div ORDER="11" TYPE="page">
+        <fptr FILEID="TIF011" />
+        <fptr FILEID="ALT011" />
+      </div>
+      <div ORDER="12" TYPE="page">
+        <fptr FILEID="TIF012" />
+        <fptr FILEID="ALT012" />
+      </div>
+      <div ORDER="13" TYPE="page">
+        <fptr FILEID="TIF013" />
+        <fptr FILEID="ALT013" />
+      </div>
+      <div ORDER="14" TYPE="page">
+        <fptr FILEID="TIF014" />
+        <fptr FILEID="ALT014" />
+      </div>
+      <div ORDER="15" TYPE="page">
+        <fptr FILEID="TIF015" />
+        <fptr FILEID="ALT015" />
+      </div>
+      <div ORDER="16" TYPE="page">
+        <fptr FILEID="TIF016" />
+        <fptr FILEID="ALT016" />
+      </div>
+      <div ORDER="17" TYPE="page">
+        <fptr FILEID="TIF017" />
+        <fptr FILEID="ALT017" />
+      </div>
+      <div ORDER="18" TYPE="page">
+        <fptr FILEID="TIF018" />
+        <fptr FILEID="ALT018" />
+      </div>
+      <div ORDER="19" TYPE="page">
+        <fptr FILEID="TIF019" />
+        <fptr FILEID="ALT019" />
+      </div>
+      <div ORDER="20" TYPE="page">
+        <fptr FILEID="TIF020" />
+        <fptr FILEID="ALT020" />
+      </div>
+      <div ORDER="21" TYPE="page">
+        <fptr FILEID="TIF021" />
+        <fptr FILEID="ALT021" />
+      </div>
+      <div ORDER="22" TYPE="page">
+        <fptr FILEID="TIF022" />
+        <fptr FILEID="ALT022" />
+      </div>
+      <div ORDER="23" TYPE="page">
+        <fptr FILEID="TIF023" />
+        <fptr FILEID="ALT023" />
+      </div>
+      <div ORDER="24" TYPE="page">
+        <fptr FILEID="TIF024" />
+        <fptr FILEID="ALT024" />
+      </div>
+      <div ORDER="25" TYPE="page">
+        <fptr FILEID="TIF025" />
+        <fptr FILEID="ALT025" />
+      </div>
+      <div ORDER="26" TYPE="page">
+        <fptr FILEID="TIF026" />
+        <fptr FILEID="ALT026" />
+      </div>
+      <div ORDER="27" TYPE="page">
+        <fptr FILEID="TIF027" />
+        <fptr FILEID="ALT027" />
+      </div>
+      <div ORDER="28" TYPE="page">
+        <fptr FILEID="TIF028" />
+        <fptr FILEID="ALT028" />
+      </div>
+      <div ORDER="29" TYPE="page">
+        <fptr FILEID="TIF029" />
+        <fptr FILEID="ALT029" />
+      </div>
+      <div ORDER="30" TYPE="page">
+        <fptr FILEID="TIF030" />
+        <fptr FILEID="ALT030" />
+      </div>
+      <div ORDER="31" TYPE="page">
+        <fptr FILEID="TIF031" />
+        <fptr FILEID="ALT031" />
+      </div>
+      <div ORDER="32" TYPE="page">
+        <fptr FILEID="TIF032" />
+        <fptr FILEID="ALT032" />
+      </div>
+      <div ORDER="33" TYPE="page">
+        <fptr FILEID="TIF033" />
+        <fptr FILEID="ALT033" />
+      </div>
+      <div ORDER="34" TYPE="page">
+        <fptr FILEID="TIF034" />
+        <fptr FILEID="ALT034" />
+      </div>
+      <div ORDER="35" TYPE="page">
+        <fptr FILEID="TIF035" />
+        <fptr FILEID="ALT035" />
+      </div>
+      <div ORDER="36" TYPE="page">
+        <fptr FILEID="TIF036" />
+        <fptr FILEID="ALT036" />
+      </div>
+      <div ORDER="37" TYPE="page">
+        <fptr FILEID="TIF037" />
+        <fptr FILEID="ALT037" />
+      </div>
+      <div ORDER="38" TYPE="page">
+        <fptr FILEID="TIF038" />
+        <fptr FILEID="ALT038" />
+      </div>
+      <div ORDER="39" TYPE="page">
+        <fptr FILEID="TIF039" />
+        <fptr FILEID="ALT039" />
+      </div>
+      <div ORDER="40" TYPE="page">
+        <fptr FILEID="TIF040" />
+        <fptr FILEID="ALT040" />
+      </div>
+      <div ORDER="41" TYPE="page">
+        <fptr FILEID="TIF041" />
+        <fptr FILEID="ALT041" />
+      </div>
+      <div ORDER="42" TYPE="page">
+        <fptr FILEID="TIF042" />
+        <fptr FILEID="ALT042" />
+      </div>
+      <div ORDER="43" TYPE="page">
+        <fptr FILEID="TIF043" />
+        <fptr FILEID="ALT043" />
+      </div>
+      <div ORDER="44" TYPE="page">
+        <fptr FILEID="TIF044" />
+        <fptr FILEID="ALT044" />
+      </div>
+      <div ORDER="45" TYPE="page">
+        <fptr FILEID="TIF045" />
+        <fptr FILEID="ALT045" />
+      </div>
+      <div ORDER="46" TYPE="page">
+        <fptr FILEID="TIF046" />
+        <fptr FILEID="ALT046" />
+      </div>
+      <div ORDER="47" TYPE="page">
+        <fptr FILEID="TIF047" />
+        <fptr FILEID="ALT047" />
+      </div>
+      <div ORDER="48" TYPE="page">
+        <fptr FILEID="TIF048" />
+        <fptr FILEID="ALT048" />
+      </div>
+      <div ORDER="49" TYPE="page">
+        <fptr FILEID="TIF049" />
+        <fptr FILEID="ALT049" />
+      </div>
+      <div ORDER="50" TYPE="page">
+        <fptr FILEID="TIF050" />
+        <fptr FILEID="ALT050" />
+      </div>
+      <div ORDER="51" TYPE="page">
+        <fptr FILEID="TIF051" />
+        <fptr FILEID="ALT051" />
+      </div>
+      <div ORDER="52" TYPE="page">
+        <fptr FILEID="TIF052" />
+        <fptr FILEID="ALT052" />
+      </div>
+      <div ORDER="53" TYPE="page">
+        <fptr FILEID="TIF053" />
+        <fptr FILEID="ALT053" />
+      </div>
+      <div ORDER="54" TYPE="page">
+        <fptr FILEID="TIF054" />
+        <fptr FILEID="ALT054" />
+      </div>
+      <div ORDER="55" TYPE="page">
+        <fptr FILEID="TIF055" />
+        <fptr FILEID="ALT055" />
+      </div>
+      <div ORDER="56" TYPE="page">
+        <fptr FILEID="TIF056" />
+        <fptr FILEID="ALT056" />
+      </div>
+      <div ORDER="57" TYPE="page">
+        <fptr FILEID="TIF057" />
+        <fptr FILEID="ALT057" />
+      </div>
+      <div ORDER="58" TYPE="page">
+        <fptr FILEID="TIF058" />
+        <fptr FILEID="ALT058" />
+      </div>
+    </div>
+  </structMap>
+  <structMap TYPE="logical">
+    <div ORDER="1" LABEL="Unknown" TYPE="volume">
+      <div ORDER="1" ORDERLABEL="" TYPE="page">
+        <fptr FILEID="TIF001" />
+        <fptr FILEID="ALT001" />
+      </div>
+      <div ORDER="2" LABEL="Cover" TYPE="cover">
+        <div ORDER="1" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF002" />
+          <fptr FILEID="ALT002" />
+        </div>
+      </div>
+      <div ORDER="3" LABEL="Front Matter" TYPE="frontmatter">
+        <div ORDER="1" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF003" />
+          <fptr FILEID="ALT003" />
+        </div>
+        <div ORDER="2" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF004" />
+          <fptr FILEID="ALT004" />
+        </div>
+        <div ORDER="3" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF005" />
+          <fptr FILEID="ALT005" />
+        </div>
+        <div ORDER="4" LABEL="Title" TYPE="title">
+          <div ORDER="1" ORDERLABEL="" TYPE="page">
+            <fptr FILEID="TIF006" />
+            <fptr FILEID="ALT006" />
+          </div>
+        </div>
+        <div ORDER="5" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF007" />
+          <fptr FILEID="ALT007" />
+        </div>
+        <div ORDER="6" LABEL="Preface" TYPE="preface">
+          <div ORDER="1" ORDERLABEL="" TYPE="page">
+            <fptr FILEID="TIF008" />
+            <fptr FILEID="ALT008" />
+          </div>
+          <div ORDER="2" ORDERLABEL="" TYPE="page">
+            <fptr FILEID="TIF009" />
+            <fptr FILEID="ALT009" />
+          </div>
+        </div>
+      </div>
+      <div ORDER="4" LABEL="Body" TYPE="body">
+        <div ORDER="1" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF010" />
+          <fptr FILEID="ALT010" />
+        </div>
+        <div ORDER="2" ORDERLABEL="6" TYPE="page">
+          <fptr FILEID="TIF011" />
+          <fptr FILEID="ALT011" />
+        </div>
+        <div ORDER="3" ORDERLABEL="7" TYPE="page">
+          <fptr FILEID="TIF012" />
+          <fptr FILEID="ALT012" />
+        </div>
+        <div ORDER="4" ORDERLABEL="8" TYPE="page">
+          <fptr FILEID="TIF013" />
+          <fptr FILEID="ALT013" />
+        </div>
+        <div ORDER="5" ORDERLABEL="9" TYPE="page">
+          <fptr FILEID="TIF014" />
+          <fptr FILEID="ALT014" />
+        </div>
+        <div ORDER="6" ORDERLABEL="10" TYPE="page">
+          <fptr FILEID="TIF015" />
+          <fptr FILEID="ALT015" />
+        </div>
+        <div ORDER="7" ORDERLABEL="11" TYPE="page">
+          <fptr FILEID="TIF016" />
+          <fptr FILEID="ALT016" />
+        </div>
+        <div ORDER="8" ORDERLABEL="12" TYPE="page">
+          <fptr FILEID="TIF017" />
+          <fptr FILEID="ALT017" />
+        </div>
+        <div ORDER="9" ORDERLABEL="13" TYPE="page">
+          <fptr FILEID="TIF018" />
+          <fptr FILEID="ALT018" />
+        </div>
+        <div ORDER="10" ORDERLABEL="14" TYPE="page">
+          <fptr FILEID="TIF019" />
+          <fptr FILEID="ALT019" />
+        </div>
+        <div ORDER="11" ORDERLABEL="15" TYPE="page">
+          <fptr FILEID="TIF020" />
+          <fptr FILEID="ALT020" />
+        </div>
+        <div ORDER="12" ORDERLABEL="16" TYPE="page">
+          <fptr FILEID="TIF021" />
+          <fptr FILEID="ALT021" />
+        </div>
+        <div ORDER="13" ORDERLABEL="17" TYPE="page">
+          <fptr FILEID="TIF022" />
+          <fptr FILEID="ALT022" />
+        </div>
+        <div ORDER="14" ORDERLABEL="18" TYPE="page">
+          <fptr FILEID="TIF023" />
+          <fptr FILEID="ALT023" />
+        </div>
+        <div ORDER="15" ORDERLABEL="19" TYPE="page">
+          <fptr FILEID="TIF024" />
+          <fptr FILEID="ALT024" />
+        </div>
+        <div ORDER="16" ORDERLABEL="20" TYPE="page">
+          <fptr FILEID="TIF025" />
+          <fptr FILEID="ALT025" />
+        </div>
+        <div ORDER="17" ORDERLABEL="21" TYPE="page">
+          <fptr FILEID="TIF026" />
+          <fptr FILEID="ALT026" />
+        </div>
+        <div ORDER="18" ORDERLABEL="22" TYPE="page">
+          <fptr FILEID="TIF027" />
+          <fptr FILEID="ALT027" />
+        </div>
+        <div ORDER="19" ORDERLABEL="23" TYPE="page">
+          <fptr FILEID="TIF028" />
+          <fptr FILEID="ALT028" />
+        </div>
+        <div ORDER="20" ORDERLABEL="24" TYPE="page">
+          <fptr FILEID="TIF029" />
+          <fptr FILEID="ALT029" />
+        </div>
+        <div ORDER="21" ORDERLABEL="25" TYPE="page">
+          <fptr FILEID="TIF030" />
+          <fptr FILEID="ALT030" />
+        </div>
+        <div ORDER="22" ORDERLABEL="26" TYPE="page">
+          <fptr FILEID="TIF031" />
+          <fptr FILEID="ALT031" />
+        </div>
+        <div ORDER="23" ORDERLABEL="27" TYPE="page">
+          <fptr FILEID="TIF032" />
+          <fptr FILEID="ALT032" />
+        </div>
+        <div ORDER="24" ORDERLABEL="28" TYPE="page">
+          <fptr FILEID="TIF033" />
+          <fptr FILEID="ALT033" />
+        </div>
+        <div ORDER="25" ORDERLABEL="29" TYPE="page">
+          <fptr FILEID="TIF034" />
+          <fptr FILEID="ALT034" />
+        </div>
+        <div ORDER="26" ORDERLABEL="30" TYPE="page">
+          <fptr FILEID="TIF035" />
+          <fptr FILEID="ALT035" />
+        </div>
+        <div ORDER="27" ORDERLABEL="31" TYPE="page">
+          <fptr FILEID="TIF036" />
+          <fptr FILEID="ALT036" />
+        </div>
+        <div ORDER="28" ORDERLABEL="32" TYPE="page">
+          <fptr FILEID="TIF037" />
+          <fptr FILEID="ALT037" />
+        </div>
+        <div ORDER="29" ORDERLABEL="33" TYPE="page">
+          <fptr FILEID="TIF038" />
+          <fptr FILEID="ALT038" />
+        </div>
+        <div ORDER="30" ORDERLABEL="34" TYPE="page">
+          <fptr FILEID="TIF039" />
+          <fptr FILEID="ALT039" />
+        </div>
+        <div ORDER="31" ORDERLABEL="35" TYPE="page">
+          <fptr FILEID="TIF040" />
+          <fptr FILEID="ALT040" />
+        </div>
+        <div ORDER="32" ORDERLABEL="36" TYPE="page">
+          <fptr FILEID="TIF041" />
+          <fptr FILEID="ALT041" />
+        </div>
+        <div ORDER="33" ORDERLABEL="37" TYPE="page">
+          <fptr FILEID="TIF042" />
+          <fptr FILEID="ALT042" />
+        </div>
+        <div ORDER="34" ORDERLABEL="38" TYPE="page">
+          <fptr FILEID="TIF043" />
+          <fptr FILEID="ALT043" />
+        </div>
+        <div ORDER="35" ORDERLABEL="39" TYPE="page">
+          <fptr FILEID="TIF044" />
+          <fptr FILEID="ALT044" />
+        </div>
+        <div ORDER="36" ORDERLABEL="40" TYPE="page">
+          <fptr FILEID="TIF045" />
+          <fptr FILEID="ALT045" />
+        </div>
+        <div ORDER="37" ORDERLABEL="41" TYPE="page">
+          <fptr FILEID="TIF046" />
+          <fptr FILEID="ALT046" />
+        </div>
+        <div ORDER="38" ORDERLABEL="42" TYPE="page">
+          <fptr FILEID="TIF047" />
+          <fptr FILEID="ALT047" />
+        </div>
+        <div ORDER="39" ORDERLABEL="43" TYPE="page">
+          <fptr FILEID="TIF048" />
+          <fptr FILEID="ALT048" />
+        </div>
+        <div ORDER="40" ORDERLABEL="44" TYPE="page">
+          <fptr FILEID="TIF049" />
+          <fptr FILEID="ALT049" />
+        </div>
+        <div ORDER="41" ORDERLABEL="45" TYPE="page">
+          <fptr FILEID="TIF050" />
+          <fptr FILEID="ALT050" />
+        </div>
+        <div ORDER="42" ORDERLABEL="46" TYPE="page">
+          <fptr FILEID="TIF051" />
+          <fptr FILEID="ALT051" />
+        </div>
+        <div ORDER="43" ORDERLABEL="47" TYPE="page">
+          <fptr FILEID="TIF052" />
+          <fptr FILEID="ALT052" />
+        </div>
+        <div ORDER="44" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF053" />
+          <fptr FILEID="ALT053" />
+        </div>
+        <div ORDER="45" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF054" />
+          <fptr FILEID="ALT054" />
+        </div>
+        <div ORDER="46" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF055" />
+          <fptr FILEID="ALT055" />
+        </div>
+        <div ORDER="47" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF056" />
+          <fptr FILEID="ALT056" />
+        </div>
+      </div>
+      <div ORDER="5" LABEL="Cover" TYPE="cover">
+        <div ORDER="1" ORDERLABEL="" TYPE="page">
+          <fptr FILEID="TIF057" />
+          <fptr FILEID="ALT057" />
+        </div>
+      </div>
+    </div>
+  </structMap>
+</mets>

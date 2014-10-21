@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000008.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P8" PHYSICAL_IMG_NR="8" HEIGHT="2500" WIDTH="1500" ACCURACY="0.8129725" QUALITY_DETAIL="44 words, 211 chars, 177 with recognition greater than 50% (83.89%)">
+      <TopMargin ID="P8_TM00001" HPOS="0" VPOS="0" WIDTH="1500" HEIGHT="433" />
+      <LeftMargin ID="P8_LM00001" HPOS="0" VPOS="433" WIDTH="215" HEIGHT="275" />
+      <RightMargin ID="P8_RM00001" HPOS="1286" VPOS="433" WIDTH="214" HEIGHT="275" />
+      <BottomMargin ID="P8_BM00001" HPOS="0" VPOS="708" WIDTH="1500" HEIGHT="1792" />
+      <PrintSpace ID="P8_PS00001" HPOS="215" VPOS="433" WIDTH="1071" HEIGHT="275">
+        <TextBlock ID="P8_TB00001" HPOS="215" VPOS="433" WIDTH="1071" HEIGHT="275">
+          <TextLine ID="P8_TL00001" HPOS="268" VPOS="441" WIDTH="1007" HEIGHT="34">
+            <String ID="P8_S00001" HPOS="268" VPOS="442" WIDTH="44" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="In" WC="0.81" CC="21" />
+            <SP ID="P8_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00002" HPOS="341" VPOS="441" WIDTH="62" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="the" WC="0.77" CC="240" />
+            <SP ID="P8_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00003" HPOS="432" VPOS="440" WIDTH="98" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="hope" WC="0.735" CC="5031" />
+            <SP ID="P8_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00004" HPOS="556" VPOS="439" WIDTH="83" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="that" WC="0.945" CC="0002" />
+            <SP ID="P8_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00005" HPOS="666" VPOS="439" WIDTH="29" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="it" WC="0.855" CC="20" />
+            <SP ID="P8_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00006" HPOS="722" VPOS="436" WIDTH="74" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="will" WC="0.655" CC="3350" />
+            <SP ID="P8_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00007" HPOS="825" VPOS="436" WIDTH="192" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="stimulate" WC="0.8833333" CC="003041000" />
+            <SP ID="P8_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00008" HPOS="1047" VPOS="435" WIDTH="161" HEIGHT="47" STYLEREFS="StyleId-0" CONTENT="interest" WC="0.7575" CC="40030902" />
+            <SP ID="P8_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00009" HPOS="1236" VPOS="433" WIDTH="39" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="in" WC="0.385" CC="65" />
+          </TextLine>
+          <TextLine ID="P8_TL00002" HPOS="225" VPOS="487" WIDTH="1052" HEIGHT="34">
+            <String ID="P8_S00010" HPOS="225" VPOS="500" WIDTH="72" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="one" WC="0.7966667" CC="060" />
+            <SP ID="P8_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00011" HPOS="331" VPOS="488" WIDTH="40" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="of" WC="0.95" CC="10" />
+            <SP ID="P8_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00012" HPOS="404" VPOS="487" WIDTH="65" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P8_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00013" HPOS="501" VPOS="491" WIDTH="103" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="most" WC="0.8" CC="8000" />
+            <SP ID="P8_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00014" HPOS="636" VPOS="484" WIDTH="139" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="unique" WC="0.441666663" CC="466457" />
+            <SP ID="P8_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00015" HPOS="808" VPOS="482" WIDTH="218" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="characters" WC="0.816" CC="01032000200" />
+            <SP ID="P8_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00016" HPOS="1059" VPOS="481" WIDTH="42" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="of" WC="0.7" CC="06" />
+            <SP ID="P8_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00017" HPOS="1132" VPOS="478" WIDTH="145" HEIGHT="48" STYLEREFS="StyleId-0" CONTENT="Sacred" WC="0.766666651" CC="010307" />
+          </TextLine>
+          <TextLine ID="P8_TL00003" HPOS="224" VPOS="534" WIDTH="1051" HEIGHT="34">
+            <String ID="P8_S00018" HPOS="224" VPOS="534" WIDTH="111" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="Writ," WC="0.716" CC="03414" />
+            <SP ID="P8_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00019" HPOS="360" VPOS="534" WIDTH="74" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="and" WC="0.85" CC="040" />
+            <SP ID="P8_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00020" HPOS="458" VPOS="532" WIDTH="83" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="that" WC="0.96" CC="0001" />
+            <SP ID="P8_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00021" HPOS="567" VPOS="531" WIDTH="27" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="it" WC="0.955" CC="00" />
+            <SP ID="P8_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00022" HPOS="618" VPOS="530" WIDTH="74" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="will" WC="0.6725" CC="4502" />
+            <SP ID="P8_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00023" HPOS="716" VPOS="529" WIDTH="85" HEIGHT="47" STYLEREFS="StyleId-0" CONTENT="lead" WC="0.91" CC="3000" />
+            <SP ID="P8_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00024" HPOS="824" VPOS="535" WIDTH="41" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P8_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00025" HPOS="890" VPOS="527" WIDTH="186" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="powerful" WC="0.695" CC="15500660" />
+            <SP ID="P8_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00026" HPOS="1102" VPOS="535" WIDTH="173" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="sermons" WC="0.681428552" CC="0047063" />
+          </TextLine>
+          <TextLine ID="P8_TL00004" HPOS="224" VPOS="579" WIDTH="1052" HEIGHT="35">
+            <String ID="P8_S00027" HPOS="224" VPOS="581" WIDTH="101" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="from" WC="0.8025" CC="5002" />
+            <SP ID="P8_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00028" HPOS="352" VPOS="580" WIDTH="75" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="this" WC="0.9725" CC="0010" />
+            <SP ID="P8_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00029" HPOS="457" VPOS="577" WIDTH="202" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Prophet's" WC="0.9255555" CC="600000000" />
+            <SP ID="P8_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00030" HPOS="686" VPOS="575" WIDTH="219" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="suggestive" WC="0.78" CC="7501000402" />
+            <SP ID="P8_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00031" HPOS="931" VPOS="578" WIDTH="116" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="texts," WC="0.98" CC="000001" />
+            <SP ID="P8_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00032" HPOS="1076" VPOS="572" WIDTH="75" HEIGHT="48" STYLEREFS="StyleId-0" CONTENT="this" WC="0.87" CC="0050" />
+            <SP ID="P8_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00033" HPOS="1179" VPOS="570" WIDTH="97" HEIGHT="50" STYLEREFS="StyleId-0" CONTENT="little" WC="0.8883333" CC="020040" />
+          </TextLine>
+          <TextLine ID="P8_TL00005" HPOS="224" VPOS="625" WIDTH="1052" HEIGHT="35">
+            <String ID="P8_S00034" HPOS="225" VPOS="628" WIDTH="152" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="volume" WC="0.79" CC="004800" />
+            <SP ID="P8_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00035" HPOS="406" VPOS="627" WIDTH="31" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="is" WC="0.59" CC="70" />
+            <SP ID="P8_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00036" HPOS="467" VPOS="623" WIDTH="202" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="presented" WC="0.895555556" CC="800000000" />
+            <SP ID="P8_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00037" HPOS="699" VPOS="628" WIDTH="42" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P8_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00038" HPOS="771" VPOS="622" WIDTH="151" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="laymen" WC="0.716666639" CC="300804" />
+            <SP ID="P8_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00039" HPOS="953" VPOS="620" WIDTH="73" HEIGHT="47" STYLEREFS="StyleId-0" CONTENT="and" WC="0.73" CC="008" />
+            <SP ID="P8_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00040" HPOS="1058" VPOS="618" WIDTH="218" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="clergymen" WC="0.6933333" CC="070090703" />
+          </TextLine>
+          <TextLine ID="P8_TL00006" HPOS="225" VPOS="672" WIDTH="1005" HEIGHT="28">
+            <String ID="P8_S00041" HPOS="225" VPOS="673" WIDTH="108" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="alike." WC="0.86833334" CC="403000" />
+            <SP ID="P8_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00042" HPOS="829" VPOS="668" WIDTH="50" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="H." WC="0.88" CC="02" />
+            <SP ID="P8_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00043" HPOS="902" VPOS="667" WIDTH="42" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="T." WC="0.965" CC="00" />
+            <SP ID="P8_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P8_S00044" HPOS="971" VPOS="664" WIDTH="259" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="KEALING." WC="0.91625" CC="20000004" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000017.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P17" PHYSICAL_IMG_NR="17" HEIGHT="2799" WIDTH="1899" ACCURACY="0.66863215" QUALITY_DETAIL="19 words, 88 chars, 57 with recognition greater than 50% (64.77%)">
+      <TopMargin ID="P17_TM00001" HPOS="0" VPOS="0" WIDTH="1899" HEIGHT="621" />
+      <LeftMargin ID="P17_LM00001" HPOS="0" VPOS="621" WIDTH="428" HEIGHT="1549" />
+      <RightMargin ID="P17_RM00001" HPOS="1480" VPOS="621" WIDTH="419" HEIGHT="1549" />
+      <BottomMargin ID="P17_BM00001" HPOS="0" VPOS="2170" WIDTH="1899" HEIGHT="629" />
+      <PrintSpace ID="P17_PS00001" HPOS="428" VPOS="621" WIDTH="1052" HEIGHT="1549">
+        <Illustration ID="P17_ILL00001" HPOS="428" VPOS="621" WIDTH="1046" HEIGHT="1274" />
+        <TextBlock ID="P17_TB00001" HPOS="568" VPOS="1995" WIDTH="755" HEIGHT="43">
+          <TextLine ID="P17_TL00001" HPOS="576" VPOS="2004" WIDTH="739" HEIGHT="26">
+            <String ID="P17_S00001" HPOS="576" VPOS="2004" WIDTH="261" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="Clkmenck" WC="0.475" CC="07707577" />
+            <SP ID="P17_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00002" HPOS="859" VPOS="1998" WIDTH="44" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="8." WC="0.625" CC="70" />
+            <SP ID="P17_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00003" HPOS="932" VPOS="1997" WIDTH="186" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="L.ozikk," WC="0.46375" CC="74715762" />
+            <SP ID="P17_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00004" HPOS="1179" VPOS="1992" WIDTH="58" HEIGHT="51" STYLEREFS="StyleId-0" CONTENT="M." WC="0.73" CC="50" />
+            <SP ID="P17_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00005" HPOS="1267" VPOS="1990" WIDTH="48" HEIGHT="53" STYLEREFS="StyleId-0" CONTENT="I)." WC="0.8333333" CC="400" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P17_TB00002" HPOS="495" VPOS="2077" WIDTH="906" HEIGHT="95">
+          <TextLine ID="P17_TL00002" HPOS="503" VPOS="2085" WIDTH="889" HEIGHT="17">
+            <String ID="P17_S00006" HPOS="503" VPOS="2084" WIDTH="178" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="Founder" WC="0.79285717" CC="0034302" />
+            <SP ID="P17_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00007" HPOS="700" VPOS="2080" WIDTH="75" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="and" WC="0.706666648" CC="071" />
+            <SP ID="P17_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00008" HPOS="796" VPOS="2079" WIDTH="88" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="first" WC="0.628" CC="22471" />
+            <SP ID="P17_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00009" HPOS="904" VPOS="2077" WIDTH="106" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Dean" WC="0.9675" CC="1000" />
+            <SP ID="P17_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00010" HPOS="1031" VPOS="2073" WIDTH="44" HEIGHT="47" STYLEREFS="StyleId-0" CONTENT="of" WC="0.64" CC="07" />
+            <SP ID="P17_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00011" HPOS="1092" VPOS="2072" WIDTH="66" HEIGHT="48" STYLEREFS="StyleId-0" CONTENT="the" WC="0.873333335" CC="110" />
+            <SP ID="P17_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00012" HPOS="1173" VPOS="2071" WIDTH="94" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="New" WC="0.77" CC="060" />
+            <SP ID="P17_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00013" HPOS="1289" VPOS="2067" WIDTH="103" HEIGHT="53" STYLEREFS="StyleId-0" CONTENT="York" WC="0.65" CC="0670" />
+          </TextLine>
+          <TextLine ID="P17_TL00003" HPOS="506" VPOS="2139" WIDTH="886" HEIGHT="25">
+            <String ID="P17_S00014" HPOS="506" VPOS="2138" WIDTH="167" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="Medical" WC="0.8157143" CC="2042002" />
+            <SP ID="P17_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00015" HPOS="688" VPOS="2136" WIDTH="156" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="College" WC="0.642857134" CC="5440063" />
+            <SP ID="P17_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00016" HPOS="859" VPOS="2131" WIDTH="73" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="and" WC="0.613333344" CC="0110" />
+            <SP ID="P17_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00017" HPOS="948" VPOS="2128" WIDTH="177" HEIGHT="48" STYLEREFS="StyleId-0" CONTENT="Hospital" WC="0.695" CC="20766010" />
+            <SP ID="P17_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00018" HPOS="1150" VPOS="2125" WIDTH="59" HEIGHT="51" STYLEREFS="StyleId-0" CONTENT="for" WC="0.306666672" CC="875" />
+            <SP ID="P17_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P17_S00019" HPOS="1224" VPOS="2124" WIDTH="168" HEIGHT="52" STYLEREFS="StyleId-0" CONTENT="Women." WC="0.475" CC="047990" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
