@@ -63,11 +63,11 @@ class TestKDip(TestCase):
         for k in KDip.objects.all():
             print('%s, %s, %s' % (k.kdip_id, k.status, k.reason))
 
-        k1 = KDip.objects.get(kdip_id = '010002426573')
+        k1 = KDip.objects.get(kdip_id = '000011735828')
         self.assertEquals(k1.status, 'new')
         self.assertEquals(k1.job, None)
 
-        k2 = KDip.objects.get(kdip_id = '010001059624')
+        k2 = KDip.objects.get(kdip_id = '010002643922')
         self.assertEquals(k2.status, 'new')
         self.assertEquals(k2.job, None)
 

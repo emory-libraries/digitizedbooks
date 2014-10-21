@@ -147,7 +147,8 @@ def get_rights(self):
     else:
         return reason
 
-def validate_tiffs(file, dir, kdip):
+def validate_tiffs(tiff_file, kdip, kdip_dir):
+    print('TIFF FILE = %s' % tiff_file)
     tif_tags = {
         'ImageWidth': 256,
         'ImageLength': 257,
@@ -172,7 +173,7 @@ def validate_tiffs(file, dir, kdip):
     skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
     yaml_data = {}
 
-    image = Image.open(file)
+    image = Image.open(tiff_file)
     tags = image.tag
 
     for tif_tag in tif_tags:
@@ -187,28 +188,28 @@ def validate_tiffs(file, dir, kdip):
     #print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
     yaml_data['capture_date'] = dt.isoformat('T')
-    with open('%s/%s/meta.yml' % (dir, kdip), 'a') as outfile:
+    with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
 
     ## START REAL VALIDATION
     if found['ImageWidth'] <= 0:
-        status = 'Invalid value for ImageWidth in %s' % (file)
+        status = 'Invalid value for ImageWidth in %s' % (tiff_file)
         return status
 
     if found['ImageLength']  <= 0:
-        status = 'Invalid value for ImageLength in %s' % (file)
+        status = 'Invalid value for ImageLength in %s' % (tiff_file)
         return status
 
     if not found['Make']:
-        status = 'Invalid value for Make in %s' % (file)
+        status = 'Invalid value for Make in %s' % (tiff_file)
         return status
 
     if not found['Model']:
-        status = 'Invalid value for Make in %s' % (file)
+        status = 'Invalid value for Make in %s' % (tiff_file)
         return status
 
     if found['Orientation'] != (1,):
-        status = 'Invalid value for Orientation in %s' % (file)
+        status = 'Invalid value for Orientation in %s' % (tiff_file)
         return status
 
     #if found['ColorSpace'] != 1:
@@ -216,61 +217,61 @@ def validate_tiffs(file, dir, kdip):
     #    return status
 
     if found['ResolutionUnit'] != (2,):
-        status = 'Invalid value for ResolutionUnit in %s' % (file)
+        status = 'Invalid value for ResolutionUnit in %s' % (tiff_file)
         return status
 
     if not found['DateTime']:
-        status = 'Invalid value for DateTime in %s' % (file)
+        status = 'Invalid value for DateTime in %s' % (tiff_file)
         return status
 
     imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
     if imgtype == '1':
 
         if found['Compression'] != (4,):
-            status = 'Invalid value for Compression in %s' % (file)
+            status = 'Invalid value for Compression in %s' % (tiff_file)
             return status
 
         if found['PhotometricInterpretation'] != (0,):
-            status = 'Invalid value for PhotometricInterpretation in %s' % (file)
+            status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
         if found['SamplesPerPixel'] != (1,):
-            status = 'Invalid value for SamplesPerPixel in %s' % (file)
+            status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
         if found['XResolution'] < 600:
-            status = 'Invalid value for XResolution in %s' % (file)
+            status = 'Invalid value for XResolution in %s' % (tiff_file)
             return status
 
         if found['YResolution'] < 600:
-            status = 'Invalid value for YResolution in %s' % (file)
+            status = 'Invalid value for YResolution in %s' % (tiff_file)
             return status
 
     elif imgtype is '888' or '3':
 
         if found['Compression'] != (1,):
             if found['Compression'] != (5,):
-                status = 'Invalid value for Compression in %s' % (file)
+                status = 'Invalid value for Compression in %s' % (tiff_file)
                 return status
 
         if found['PhotometricInterpretation'] != (2,):
-            status = 'Invalid value for PhotometricInterpretation in %s' % (file)
+            status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
         if found['SamplesPerPixel'] != (3,):
-            status = 'Invalid value for SamplesPerPixel in %s' % (file)
+            status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
         if found['XResolution'] < 300:
-            status = 'Invalid value for XResolution in %s' % (file)
+            status = 'Invalid value for XResolution in %s' % (tiff_file)
             return status
 
         if found['YResolution'] < 300:
-            status = 'Invalid value for YResolution in %s' % (file)
+            status = 'Invalid value for YResolution in %s' % (tiff_file)
             return status
 
     else:
-        status = 'cannot determine type for %s' % (file)
+        status = 'cannot determine type for %s' % (tiff_file)
 
 
 # METS XML
@@ -424,6 +425,7 @@ class KDip(models.Model):
         mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
+        logger.info('Mets file is %s' % mets_file)
 
         toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
 
@@ -464,7 +466,7 @@ class KDip(models.Model):
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
-        tif_status = validate_tiffs(tiffs[0], self.path, self.kdip_id)
+        tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
 
         if tif_status is not None:
             self.reason = tif_status
@@ -520,7 +522,7 @@ class KDip(models.Model):
         print(kdip_list)
         # create the KDIP is it does not exits
         for k in kdip_list:
-            print(kdip_list[k])
+            logger.info(kdip_list[k])
             try:
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})

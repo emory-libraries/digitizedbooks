@@ -6,5 +6,4 @@ digibooks.komodoproject
 env
 build
 dist
-digitizedbooks/publish/fixtures/KDIPS/*
 static
