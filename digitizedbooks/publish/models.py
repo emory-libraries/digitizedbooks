@@ -489,7 +489,8 @@ class KDip(models.Model):
             # checksum good
             with open(file_path, 'rb') as file:
                 if not f.checksum == md5(file.read()).hexdigest():
-                    reason = "Error: checksum does not match for %s" % file_path
+                    #reason = "Error: checksum does not match for %s" % file_path
+                    reason = '%s Mets is is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest())
                     self.reason = reason
                     self.status = 'invalid'
                     self.save()
