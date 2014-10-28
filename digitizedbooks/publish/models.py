@@ -20,9 +20,7 @@ import os, re, shutil
 from hashlib import md5
 
 from django.conf import settings
-from django.contrib.auth import user_logged_in
 from django.db import models
-from django.dispatch import receiver
 from django.core.mail import send_mail
 
 from eulxml.xmlmap import XmlObject
@@ -36,7 +34,6 @@ from PIL import Image
 import logging
 import zipfile
 import yaml
-import time
 import glob
 import box
 import json
