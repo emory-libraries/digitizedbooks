@@ -145,7 +145,6 @@ def get_rights(self):
         return reason
 
 def validate_tiffs(tiff_file, kdip, kdip_dir):
-    print('TIFF FILE = %s' % tiff_file)
     tif_tags = {
         'ImageWidth': 256,
         'ImageLength': 257,
@@ -357,6 +356,8 @@ class Marc(MarcBase):
 
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
+    
+    tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
     def note(self, barcode):
         """
@@ -525,6 +526,11 @@ class KDip(models.Model):
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+                
+                for datafield in bib_rec.tag_999:
+                    i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
+                    if i999 != k:
+                        bib_rec.tag_999.remove(datafield)
 
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
