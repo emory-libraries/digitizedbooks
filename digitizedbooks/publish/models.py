@@ -527,6 +527,7 @@ class KDip(models.Model):
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
                 
+                # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
                 for datafield in bib_rec.tag_999:
                     i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
                     if i999 != k:
@@ -541,6 +542,7 @@ class KDip(models.Model):
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
 
+                    
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
 
