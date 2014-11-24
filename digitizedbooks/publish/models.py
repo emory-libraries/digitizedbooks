@@ -401,9 +401,9 @@ class KDip(models.Model):
     'This is the same as the directory name'
     create_date = models.DateTimeField()
     'Create time of the directory'
-    status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='new')
+    status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='invalid')
     'status of the KDip'
-    note = models.CharField(max_length=200, blank=True)
+    note = models.CharField(max_length=200, blank=True, verbose_name='EnumCron')
     'Notes about this packagee, initially looked up from bib record'
     reason = models.CharField(max_length=1000, blank=True)
     'If the KDIP is invalid this will be populated with the first failed condition'
@@ -497,6 +497,8 @@ class KDip(models.Model):
                     return False
 
         # if it gets here were are good
+        self.status = 'new'
+        self.save()
         return True
 
 
@@ -507,7 +509,7 @@ class KDip(models.Model):
         kdip_list = {}
 
         if len(args) == 2:
-            kdip_list = {args[0]: args[1]}
+            kdip_list[args[0]] = args[1]
 
         else:
             for path, subdirs, files in os.walk(kdip_dir):
@@ -516,10 +518,9 @@ class KDip(models.Model):
                     full_path = os.path.join(path, dir)
                     if kdip and 'out_of_scope' not in full_path:
                         kdip_list[dir] = path
-        print(kdip_list)
+
         # create the KDIP is it does not exits
         for k in kdip_list:
-            logger.info(kdip_list[k])
             try:
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})

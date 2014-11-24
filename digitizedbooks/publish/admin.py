@@ -25,7 +25,7 @@ remove_from_job.short_description = "Remove selected k dips from any associated 
 
 
 class KDipAdmin(admin.ModelAdmin):
-    list_display = ['kdip_id', 'create_date', 'status', 'note', 'job']
+    list_display = ['kdip_id', 'create_date', 'status', 'note', 'reason', 'job']
     list_link = ['kdip_id']
     list_filter = ['status', 'job']
     list_editable = ['job', 'note', 'status']
