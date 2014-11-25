@@ -357,6 +357,8 @@ class Marc(MarcBase):
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
     
     tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
+    
+    tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
     def note(self, barcode):
         """
@@ -534,12 +536,12 @@ class KDip(models.Model):
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
                 for datafield in bib_rec.tag_999:
                     i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
-                    if i999 != k:
+                    if i999 != k[:12]:
                         bib_rec.tag_999.remove(datafield)
 
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
-                    'note': bib_rec.note(k),
+                    'note': bib_rec.note(k[:12]),
                     'path': kdip_list[k]
                 }
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
@@ -579,6 +581,7 @@ class KDip(models.Model):
     class Meta:
         ordering = ['create_date']
 
+
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
@@ -589,7 +592,11 @@ class KDip(models.Model):
             if self.pk is not None:
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
-                    print('we need to do some work here')
+                    marc_file = '%s/%s/marc.xml' %(self.path, self.kdip_id)
+                    marc = load_xmlobject_from_file(marc_file, Marc)
+                    marc.tag_999a = self.note
+                    with open(marc_file, 'w') as marcxml:
+                        marcxml.write(marc.serialize(pretty=True))
             super(KDip, self).save(*args, **kwargs)
 
 
