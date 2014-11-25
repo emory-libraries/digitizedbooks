@@ -1,0 +1,317 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cas a2200769 a 4500</leader>
+    <controlfield tag="001">002756700</controlfield>
+    <controlfield tag="005">20141103104808.0</controlfield>
+    <controlfield tag="008">910829d19191939enkmr p       0   a0eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">20023882</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">ocm01756136</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(DOBI)31833230</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">0427206</subfield>
+      <subfield code="b">MULS</subfield>
+      <subfield code="a">Ulp No. 4813800009</subfield>
+      <subfield code="a">PITT NO. 4833300001</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">MUL</subfield>
+      <subfield code="c">MUL</subfield>
+      <subfield code="d">IUL</subfield>
+      <subfield code="d">NYG</subfield>
+      <subfield code="d">DLC</subfield>
+      <subfield code="d">OCL</subfield>
+      <subfield code="d">NST</subfield>
+      <subfield code="d">EMU</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="042">
+      <subfield code="a">lc</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">EMUU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="050">
+      <subfield code="a">AP4</subfield>
+      <subfield code="b">.L515</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="092">
+      <subfield code="a">052</subfield>
+      <subfield code="b">L84725</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="4" tag="245">
+      <subfield code="a">The London mercury.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="246">
+      <subfield code="a">London mercury with which is incorporated the bookman</subfield>
+      <subfield code="f">Jan. 1935-Sept. 1936</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="246">
+      <subfield code="a">London mercury and bookman</subfield>
+      <subfield code="f">Oct. 1936-Sept. 1938</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">London :</subfield>
+      <subfield code="b">Field Press Ltd,</subfield>
+      <subfield code="c">[1919?-1939]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">39 volumes :</subfield>
+      <subfield code="b">illustrations (some color), facsimiles, portraits ;</subfield>
+      <subfield code="c">26 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="310">
+      <subfield code="a">Monthly</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="362">
+      <subfield code="a">No. 1 (Nov. 1919)-no. 234 (Apr. 1939).</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Title from caption.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Publisher varies.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Includes many works by W. B. Yeats.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2=" " tag="510">
+      <subfield code="a">Miller &amp; Price. British poetry magazines, 1914-2000,</subfield>
+      <subfield code="c">A117</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="515">
+      <subfield code="a">No. 1- called also v. 1-</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="555">
+      <subfield code="a">Vols. 1 (1919)-20 (1929). 1 v. 26 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="580">
+      <subfield code="a">Absorbed in May 1939 by: Life and letters today.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="580">
+      <subfield code="a">Continues: Bookman (London, England).</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="3">V.6 1922 MAY/OCT. INDEX</subfield>
+      <subfield code="a">will not digitize</subfield>
+      <subfield code="c">20140925</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-S</subfield>
+      <subfield code="x">public domain</subfield>
+      <subfield code="l">still in copyright</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library copies form part of the Raymond Danowski Poetry Library.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Literature, Modern</subfield>
+      <subfield code="y">20th century</subfield>
+      <subfield code="v">Periodicals.</subfield>
+      <subfield code="0">EMU10001620776</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Yeats, W. B.</subfield>
+      <subfield code="q">(William Butler),</subfield>
+      <subfield code="d">1865-1939.</subfield>
+      <subfield code="0">EMU10000094741</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Danowski, Raymond,</subfield>
+      <subfield code="e">collector.</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">Raymond Danowski Poetry Library (Emory University. General Libraries)</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="5" tag="780">
+      <subfield code="t">Bookman (London, England)</subfield>
+      <subfield code="g">Jan. 1935</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="785">
+      <subfield code="t">Life and letters today</subfield>
+      <subfield code="w">(OCoLC)5159477</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">recon tas</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU emumarbl met</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">9DT</subfield>
+      <subfield code="2">19940531</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480822</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.1 1919/20</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480823</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.2 1920</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480824</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.3 1920/21</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480825</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.4 1921</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480826</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.5 1921/22</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480827</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.6 1922</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480828</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.7 1922/23</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480829</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.8 1923</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480830</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.9 1923/24</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480831</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.10 1924</subfield>
+      <subfield code="z">rcp15 280891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480832</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.11 1924/25</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480833</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.12 1925</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480834</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.13 1925/26</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="a">000011480835</subfield>
+      <subfield code="b">EMU</subfield>
+      <subfield code="c">wg</subfield>
+      <subfield code="d">AP4 .L515</subfield>
+      <subfield code="t">p</subfield>
+      <subfield code="n">v.14 1926</subfield>
+      <subfield code="z">rcp15 290891</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="966">
+      <subfield code="a">GENERAL HAS: Index v.1-20</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="966">
+      <subfield code="a">MARBL HAS: Vol. 1, no. 1 (Nov. 1919)-v. 25, no. 146 (Nov. 1931); v. 25, no. 148 (Feb. 1932)-v. 39, no. 234 (Apr. 1939)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">AP4 .L515 DANOWSKI V.2 NOV. 1920/APR. 1921 INDEX</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090716</subfield>
+      <subfield code="i">000011735828</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Bound Periodical</subfield>
+      <subfield code="u">19940727</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+  </record>
+</collection>
