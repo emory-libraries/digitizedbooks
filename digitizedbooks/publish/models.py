@@ -65,7 +65,7 @@ def get_rights(self):
     rights = ''
     reason = ''
     try:
-        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.kdip_id})
+        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
         bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
 
         if not bib_rec.tag_583_5:
@@ -97,7 +97,7 @@ def get_rights(self):
         if pub_place17 == 'u':
             # Gov Docs
             if govpub == 'f':
-                print('It is gov')
+                logger.info('This is a government doc.')
             #    if 'ntis' in inprint:
             #        rights = 'ic'
             #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
@@ -181,7 +181,6 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             found[tif_tag] = tags.get(tif_tags[tif_tag])
 
 
-    #print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
     yaml_data['capture_date'] = dt.isoformat('T')
     with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
@@ -267,7 +266,7 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             return status
 
     else:
-        status = 'cannot determine type for %s' % (tiff_file)
+        status = 'Cannot determine type for %s' % (tiff_file)
 
 
 # METS XML
@@ -411,6 +410,10 @@ class KDip(models.Model):
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
+    
+    @property
+    def barcode(self):
+        return self.kdip_id[:12]
 
 
     def validate(self):
@@ -515,16 +518,17 @@ class KDip(models.Model):
         else:
             for path, subdirs, files in os.walk(kdip_dir):
                 for dir in subdirs:
-                    kdip = re.search(r"^[0-9]+$", dir)
+                    kdip = re.search(r"^[0-9]", dir)
                     full_path = os.path.join(path, dir)
                     if kdip and 'out_of_scope' not in full_path:
                         kdip_list[dir] = path
 
         # create the KDIP is it does not exits
         for k in kdip_list:
+            
             try:
                 # lookkup bib record for note field
-                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
+                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
                 
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
@@ -582,6 +586,10 @@ class KDip(models.Model):
             KDip.load(self.kdip_id, self.path)
 
         else:
+            if self.pk is not None:
+                orig = KDip.objects.get(pk=self.pk)
+                if orig.note != self.note:
+                    print('we need to do some work here')
             super(KDip, self).save(*args, **kwargs)
 
 
