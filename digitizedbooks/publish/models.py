@@ -514,6 +514,8 @@ class KDip(models.Model):
 
         kdip_list = {}
 
+        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir]
+
         for path, subdirs, files in os.walk(kdip_dir):
             for dir in subdirs:
                 kdip = re.search(r"^[0-9]", dir)
@@ -521,7 +523,12 @@ class KDip(models.Model):
                 
                 # Only process new KDips or ones that have been deleted fro reporcessing.
                 try:
-                    processed_KDip = KDip.objects.get(kdip_id = dir)
+                    if path not in exclude:
+                        processed_KDip = KDip.objects.get(kdip_id = dir)
+                        print(path)
+                        if processed_KDip != path:
+                            processed_KDip.path = path
+                            processed_KDip.save()
                 except KDip.DoesNotExist:
                     if kdip and 'out_of_scope' not in full_path:
                         kdip_list[dir] = path
@@ -652,7 +659,7 @@ class Job(models.Model):
                 client = DjangoPidmanRestClient()
                 pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
                 pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
-                print('%s %s' % (pidman_domain, pidman_policy))
+
                 ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
@@ -663,7 +670,9 @@ class Job(models.Model):
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
 
                 #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
-                process_dir = '%s/%s/%s' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
+                if not os.path.exists('%s/HT' % kdip_dir):
+                    os.mkdir('%s/HT' % kdip_dir)
+                process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
