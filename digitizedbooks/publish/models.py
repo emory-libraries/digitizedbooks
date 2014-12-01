@@ -411,7 +411,7 @@ class KDip(models.Model):
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
-    #pid = Models.CharField(max_length=5, blank=True)
+    pid = models.CharField(max_length=5, blank=True)
     
     @property
     def barcode(self):
@@ -656,6 +656,9 @@ class Job(models.Model):
                 ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
+                
+                kdip.pid = noid
+                kdip.save()
 
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
 
