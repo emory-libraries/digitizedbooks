@@ -136,7 +136,6 @@ def get_rights(self):
 
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
-        logger.error(reason)
         return reason
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
@@ -412,6 +411,7 @@ class KDip(models.Model):
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
+    #pid = Models.CharField(max_length=5, blank=True)
     
     @property
     def barcode(self):
@@ -514,20 +514,21 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        if len(args) == 2:
-            kdip_list[args[0]] = args[1]
-
-        else:
-            for path, subdirs, files in os.walk(kdip_dir):
-                for dir in subdirs:
-                    kdip = re.search(r"^[0-9]", dir)
-                    full_path = os.path.join(path, dir)
+        for path, subdirs, files in os.walk(kdip_dir):
+            for dir in subdirs:
+                kdip = re.search(r"^[0-9]", dir)
+                full_path = os.path.join(path, dir)
+                
+                # Only process new KDips or ones that have been deleted fro reporcessing.
+                try:
+                    processed_KDip = KDip.objects.get(kdip_id = dir)
+                except KDip.DoesNotExist:
                     if kdip and 'out_of_scope' not in full_path:
                         kdip_list[dir] = path
 
         # create the KDIP is it does not exits
         for k in kdip_list:
-            
+                
             try:
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
@@ -586,7 +587,7 @@ class KDip(models.Model):
 
         if self.status == 'reprocess':
             KDip.objects.filter(id = self.id).delete()
-            KDip.load(self.kdip_id, self.path)
+            KDip.load()
 
         else:
             if self.pk is not None:
@@ -651,13 +652,15 @@ class Job(models.Model):
                 client = DjangoPidmanRestClient()
                 pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
                 pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
+                print('%s %s' % (pidman_domain, pidman_policy))
                 ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
 
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
 
-                process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
+                #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
+                process_dir = '%s/%s/%s' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
@@ -739,7 +742,8 @@ class Job(models.Model):
 
                     if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
                         self.status = 'being processed'
-                        uploaded_files.append('ark+=%s=%s' % (naan, noid))
+                        #uploaded_files.append('ark+=%s=%s' % (naan, noid))
+                        uploaded_files.append(kdip.kdip_id)
 
                 except Exception as e:
                     logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
