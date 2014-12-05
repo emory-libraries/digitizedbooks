@@ -521,11 +521,11 @@ class KDip(models.Model):
                 kdip = re.search(r"^[0-9]", dir)
                 full_path = os.path.join(path, dir)
                 
-                # Only process new KDips or ones that have been deleted fro reporcessing.
+                # Only process new KDips or ones.
                 try:
                     if path not in exclude:
                         processed_KDip = KDip.objects.get(kdip_id = dir)
-                        print(path)
+                        # Check to see if the a KDip has moved and update the path.
                         if processed_KDip != path:
                             processed_KDip.path = path
                             processed_KDip.save()
@@ -593,8 +593,9 @@ class KDip(models.Model):
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            KDip.objects.filter(id = self.id).delete()
-            KDip.load()
+            #KDip.objects.filter(id = self.id).delete()
+            #KDip.load()
+            self.validate()
 
         else:
             if self.pk is not None:
@@ -728,6 +729,8 @@ class Job(models.Model):
                 os.chdir('%s' % (process_dir))
                 zipdir('.', zipf)
                 zipf.close()
+                # Delete the process directory to save space
+                shutil.rmtree(process_dir)
 
                 token = BoxToken.objects.get(id=1)
 

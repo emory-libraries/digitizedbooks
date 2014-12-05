@@ -29,7 +29,7 @@ class KDipAdmin(admin.ModelAdmin):
     list_link = ['kdip_id']
     list_filter = ['status', 'job']
     list_editable = ['job', 'note', 'status']
-    readonly_fields = ['create_date', 'kdip_id', 'reason', 'path', 'pid']
+    readonly_fields = ['kdip_id', 'reason', 'path', 'pid']
     search_fields = ['path', 'kdip_id', 'note', 'pid']
 #    actions = [remove_from_job]
 
@@ -38,8 +38,8 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['kdip_id', 'create_date', 'status', 'path']
-    exclude = ['note', 'reason']
+    readonly_fields = ['kdip_id', 'pid', 'status', 'path']
+    exclude = ['note', 'reason', 'create_date']
     #can_delete = False
     extra = 0
 
