@@ -65,7 +65,7 @@ def get_rights(self):
     rights = ''
     reason = ''
     try:
-        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.kdip_id})
+        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
         bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
 
         if not bib_rec.tag_583_5:
@@ -97,7 +97,7 @@ def get_rights(self):
         if pub_place17 == 'u':
             # Gov Docs
             if govpub == 'f':
-                print('It is gov')
+                logger.info('This is a government doc.')
             #    if 'ntis' in inprint:
             #        rights = 'ic'
             #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
@@ -136,7 +136,6 @@ def get_rights(self):
 
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
-        logger.error(reason)
         return reason
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
@@ -145,7 +144,6 @@ def get_rights(self):
         return reason
 
 def validate_tiffs(tiff_file, kdip, kdip_dir):
-    print('TIFF FILE = %s' % tiff_file)
     tif_tags = {
         'ImageWidth': 256,
         'ImageLength': 257,
@@ -182,7 +180,6 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             found[tif_tag] = tags.get(tif_tags[tif_tag])
 
 
-    #print(found['DateTime'])
     dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
     yaml_data['capture_date'] = dt.isoformat('T')
     with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
@@ -268,7 +265,7 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             return status
 
     else:
-        status = 'cannot determine type for %s' % (tiff_file)
+        status = 'Cannot determine type for %s' % (tiff_file)
 
 
 # METS XML
@@ -357,6 +354,10 @@ class Marc(MarcBase):
 
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
+    
+    tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
+    
+    tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
     def note(self, barcode):
         """
@@ -401,15 +402,20 @@ class KDip(models.Model):
     'This is the same as the directory name'
     create_date = models.DateTimeField()
     'Create time of the directory'
-    status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='new')
+    status = models.CharField(max_length=20, choices=KDIP_STATUSES, default='invalid')
     'status of the KDip'
-    note = models.CharField(max_length=200, blank=True)
+    note = models.CharField(max_length=200, blank=True, verbose_name='EnumCron')
     'Notes about this packagee, initially looked up from bib record'
     reason = models.CharField(max_length=1000, blank=True)
     'If the KDIP is invalid this will be populated with the first failed condition'
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
+    pid = models.CharField(max_length=5, blank=True)
+    
+    @property
+    def barcode(self):
+        return self.kdip_id[:12]
 
 
     def validate(self):
@@ -488,8 +494,8 @@ class KDip(models.Model):
             # checksum good
             with open(file_path, 'rb') as file:
                 if not f.checksum == md5(file.read()).hexdigest():
-                    #reason = "Error: checksum does not match for %s" % file_path
-                    reason = '%s Mets is is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest())
+                    reason = "Error: checksum does not match for %s" % file_path
+                    logger.error('%s Mets is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest()))
                     self.reason = reason
                     self.status = 'invalid'
                     self.save()
@@ -497,6 +503,8 @@ class KDip(models.Model):
                     return False
 
         # if it gets here were are good
+        self.status = 'new'
+        self.save()
         return True
 
 
@@ -506,34 +514,49 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        if len(args) == 2:
-            kdip_list = {args[0]: args[1]}
+        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir]
 
-        else:
-            for path, subdirs, files in os.walk(kdip_dir):
-                for dir in subdirs:
-                    kdip = re.search(r"^[0-9]+$", dir)
-                    full_path = os.path.join(path, dir)
+        for path, subdirs, files in os.walk(kdip_dir):
+            for dir in subdirs:
+                kdip = re.search(r"^[0-9]", dir)
+                full_path = os.path.join(path, dir)
+                
+                # Only process new KDips or ones.
+                try:
+                    if path not in exclude:
+                        processed_KDip = KDip.objects.get(kdip_id = dir)
+                        # Check to see if the a KDip has moved and update the path.
+                        if processed_KDip != path:
+                            processed_KDip.path = path
+                            processed_KDip.save()
+                except KDip.DoesNotExist:
                     if kdip and 'out_of_scope' not in full_path:
                         kdip_list[dir] = path
-        print(kdip_list)
+
         # create the KDIP is it does not exits
         for k in kdip_list:
-            logger.info(kdip_list[k])
+                
             try:
                 # lookkup bib record for note field
-                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k})
+                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+                
+                # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
+                for datafield in bib_rec.tag_999:
+                    i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
+                    if i999 != k[:12]:
+                        bib_rec.tag_999.remove(datafield)
 
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
-                    'note': bib_rec.note(k),
+                    'note': bib_rec.note(k[:12]),
                     'path': kdip_list[k]
                 }
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
 
+                    
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
 
@@ -566,13 +589,23 @@ class KDip(models.Model):
     class Meta:
         ordering = ['create_date']
 
+
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            KDip.objects.filter(id = self.id).delete()
-            KDip.load(self.kdip_id, self.path)
+            #KDip.objects.filter(id = self.id).delete()
+            #KDip.load()
+            self.validate()
 
         else:
+            if self.pk is not None:
+                orig = KDip.objects.get(pk=self.pk)
+                if orig.note != self.note:
+                    marc_file = '%s/%s/marc.xml' %(self.path, self.kdip_id)
+                    marc = load_xmlobject_from_file(marc_file, Marc)
+                    marc.tag_999a = self.note
+                    with open(marc_file, 'w') as marcxml:
+                        marcxml.write(marc.serialize(pretty=True))
             super(KDip, self).save(*args, **kwargs)
 
 
@@ -627,13 +660,20 @@ class Job(models.Model):
                 client = DjangoPidmanRestClient()
                 pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
                 pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
+
                 ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
+                
+                kdip.pid = noid
+                kdip.save()
 
                 logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
 
-                process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
+                #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
+                if not os.path.exists('%s/HT' % kdip_dir):
+                    os.mkdir('%s/HT' % kdip_dir)
+                process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
 
                 if not os.path.exists(process_dir):
                     os.makedirs(process_dir)
@@ -689,6 +729,8 @@ class Job(models.Model):
                 os.chdir('%s' % (process_dir))
                 zipdir('.', zipf)
                 zipf.close()
+                # Delete the process directory to save space
+                shutil.rmtree(process_dir)
 
                 token = BoxToken.objects.get(id=1)
 
@@ -715,7 +757,8 @@ class Job(models.Model):
 
                     if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
                         self.status = 'being processed'
-                        uploaded_files.append('ark+=%s=%s' % (naan, noid))
+                        #uploaded_files.append('ark+=%s=%s' % (naan, noid))
+                        uploaded_files.append(kdip.kdip_id)
 
                 except Exception as e:
                     logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
