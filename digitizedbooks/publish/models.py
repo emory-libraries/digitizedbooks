@@ -555,7 +555,7 @@ class KDip(models.Model):
 
         # if it gets here were are good
         self.status = 'new'
-        self.reason = ''
+        self.reason = ' '
         self.save()
         return True
 
