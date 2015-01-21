@@ -171,7 +171,8 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         'Bitonal': '1',
         'Color-3': '3',
         'Grayscale': '8',
-        'Color-888': '888'
+        'Color-888': '888',
+        'Two channel grayscale': '88'
     }
     
     compressions = {
@@ -196,7 +197,13 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
     skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
     yaml_data = {}
 
-    image = Image.open(tiff_file)
+    image = ''
+    try:
+        image = Image.open(tiff_file)
+    except IOError:
+        status = 'IO Error. Maybe this is 2 channel grayscale?'
+        return status
+
     tags = image.tag
 
     for tif_tag in tif_tags:
@@ -247,6 +254,11 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         return status
 
     imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
+    
+    ## Check if Two channel grayscale
+    #if imgtype == bittsPerSample['Two channel grayscale']:
+    #    status = 'Two channel grayscale, needs conversion'
+    #    return status
     
     # GRAYSCALE OR BITONAL
     if imgtype == bittsPerSample['Grayscale'] or bittsPerSample['Bitonal']:
@@ -543,6 +555,7 @@ class KDip(models.Model):
 
         # if it gets here were are good
         self.status = 'new'
+        self.reason = ''
         self.save()
         return True
 
