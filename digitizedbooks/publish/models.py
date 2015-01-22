@@ -144,6 +144,9 @@ def get_rights(self):
         return reason
 
 def validate_tiffs(tiff_file, kdip, kdip_dir):
+    '''
+    Site for looking up Tiff tags: http://www.awaresystems.be/imaging/tiff/tifftags/search.html
+    '''
     tif_tags = {
         'ImageWidth': 256,
         'ImageLength': 257,
@@ -163,12 +166,44 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         'ColorSpace': 40961,
         'SamplesPerPixel': 277
     }
+    
+    bittsPerSample = {
+        'Bitonal': '1',
+        'Color-3': '3',
+        'Grayscale': '8',
+        'Color-888': '888',
+        'Two channel grayscale': '88'
+    }
+    
+    compressions = {
+        'Uncompressed': (1,),
+        'T6/Group 4 Fax': (4,),
+        'LZW': (5,)
+    }
+    
+    photometricInterpretation = {
+        'WhiteIsZero': (0,),
+        'BlackIsZero': (1,),
+        'RGB': (2,)
+    }
+    
+    samplesPerPixel = {
+        'Grayscale': (1,),
+        'RGB': (3,)
+    }
+
     missing = []
     found = {}
     skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
     yaml_data = {}
 
-    image = Image.open(tiff_file)
+    image = ''
+    try:
+        image = Image.open(tiff_file)
+    except IOError:
+        status = 'IO Error. Maybe this is 2 channel grayscale?'
+        return status
+
     tags = image.tag
 
     for tif_tag in tif_tags:
@@ -219,17 +254,28 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         return status
 
     imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
-    if imgtype == '1':
+    
+    ## Check if Two channel grayscale
+    #if imgtype == bittsPerSample['Two channel grayscale']:
+    #    status = 'Two channel grayscale, needs conversion'
+    #    return status
+    
+    # GRAYSCALE OR BITONAL
+    if imgtype == bittsPerSample['Grayscale'] or bittsPerSample['Bitonal']:
 
-        if found['Compression'] != (4,):
+        if found['Compression'] == compressions['Uncompressed'] or compressions['T6/Group 4 Fax']:
+            logger.info('Compression is good for %s' % (tiff_file))
+        else:
             status = 'Invalid value for Compression in %s' % (tiff_file)
             return status
 
-        if found['PhotometricInterpretation'] != (0,):
+        if found['PhotometricInterpretation'] == photometricInterpretation['WhiteIsZero'] or photometricInterpretation['BlackIsZero']:
+            logger.info('PhotometricInterpretation is good')
+        else :
             status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
-        if found['SamplesPerPixel'] != (1,):
+        if found['SamplesPerPixel'] != samplesPerPixel['Grayscale']:
             status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
@@ -241,18 +287,20 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             status = 'Invalid value for YResolution in %s' % (tiff_file)
             return status
 
-    elif imgtype is '888' or '3':
+    # COLOR
+    elif imgtype is bittsPerSample['Color-3'] or bittsPerSample['Color-888']:
 
-        if found['Compression'] != (1,):
-            if found['Compression'] != (5,):
-                status = 'Invalid value for Compression in %s' % (tiff_file)
-                return status
+        if found['Compression'] == compressions['Uncompressed'] or compressions['LZW']:
+            logger.info('Compression is good for %s' % (tiff_file))
+        else:
+            status = 'Invalid value for Compression in %s' % (tiff_file)
+            return statu
 
-        if found['PhotometricInterpretation'] != (2,):
+        if found['PhotometricInterpretation'] != photometricInterpretation['RGB']:
             status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
-        if found['SamplesPerPixel'] != (3,):
+        if found['SamplesPerPixel'] != samplesPerPixel['RGB']:
             status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
@@ -469,7 +517,10 @@ class KDip(models.Model):
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
-        tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
+        #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
+        
+        for tiff in tiffs:
+            tif_status = validate_tiffs(tiff, self.kdip_id, self.path)
 
         if tif_status is not None:
             self.reason = tif_status
@@ -504,6 +555,7 @@ class KDip(models.Model):
 
         # if it gets here were are good
         self.status = 'new'
+        self.reason = ' '
         self.save()
         return True
 
