@@ -166,30 +166,30 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         'ColorSpace': 40961,
         'SamplesPerPixel': 277
     }
-    
+
     bittsPerSample = {
-        'Bitonal': '1',
-        'Color-3': '3',
-        'Grayscale': '8',
-        'Color-888': '888',
-        'Two channel grayscale': '88'
+        '1': 'Bitonal',
+        '3': 'Color-3',
+        '8': 'Grayscale',
+        '888': 'Color-888',
+        '88': 'Two channel grayscale'
     }
-    
+
     compressions = {
         'Uncompressed': (1,),
         'T6/Group 4 Fax': (4,),
         'LZW': (5,)
     }
-    
+
     photometricInterpretation = {
         'WhiteIsZero': (0,),
         'BlackIsZero': (1,),
         'RGB': (2,)
     }
-    
+
     samplesPerPixel = {
-        'Grayscale': (1,),
-        'RGB': (3,)
+        'Grayscale': '(1,)',
+        'RGB': '(3,)'
     }
 
     missing = []
@@ -253,29 +253,24 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
         status = 'Invalid value for DateTime in %s' % (tiff_file)
         return status
 
-    imgtype = re.sub("[^0-9]", "", str(found['BitsPerSample']))
+    image_code = re.sub("[^0-9]", "", str(found['BitsPerSample']))
+    image_type = bittsPerSample[image_code]
     
     ## Check if Two channel grayscale
     #if imgtype == bittsPerSample['Two channel grayscale']:
     #    status = 'Two channel grayscale, needs conversion'
     #    return status
-    
+
     # GRAYSCALE OR BITONAL
-    if imgtype == bittsPerSample['Grayscale'] or bittsPerSample['Bitonal']:
+    if image_type is 'Bitonal' or image_type is 'Grayscale':
 
-        if found['Compression'] == compressions['Uncompressed'] or compressions['T6/Group 4 Fax']:
-            logger.info('Compression is good for %s' % (tiff_file))
-        else:
-            status = 'Invalid value for Compression in %s' % (tiff_file)
-            return status
-
-        if found['PhotometricInterpretation'] == photometricInterpretation['WhiteIsZero'] or photometricInterpretation['BlackIsZero']:
+        if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['T6/Group 4 Fax']:
             logger.info('PhotometricInterpretation is good')
         else :
             status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
-        if found['SamplesPerPixel'] != samplesPerPixel['Grayscale']:
+        if str(found['SamplesPerPixel']) != samplesPerPixel['Grayscale']:
             status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
@@ -288,9 +283,9 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             return status
 
     # COLOR
-    elif imgtype is bittsPerSample['Color-3'] or bittsPerSample['Color-888']:
+    elif image_type is 'Color-3' or image_type is 'Color-888':
 
-        if found['Compression'] == compressions['Uncompressed'] or compressions['LZW']:
+        if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['LZW']:
             logger.info('Compression is good for %s' % (tiff_file))
         else:
             status = 'Invalid value for Compression in %s' % (tiff_file)
@@ -300,7 +295,8 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
             status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
             return status
 
-        if found['SamplesPerPixel'] != samplesPerPixel['RGB']:
+        if str(found['SamplesPerPixel']) != samplesPerPixel['RGB']:
+            logger.error('SamplesPerPixel is %s for %s' (found['SamplesPerPixel'], tiff_file))
             status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
             return status
 
@@ -402,9 +398,9 @@ class Marc(MarcBase):
 
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
-    
+
     tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
-    
+
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
     def note(self, barcode):
@@ -460,7 +456,7 @@ class KDip(models.Model):
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
     pid = models.CharField(max_length=5, blank=True)
-    
+
     @property
     def barcode(self):
         return self.kdip_id[:12]
@@ -518,7 +514,7 @@ class KDip(models.Model):
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
         #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
-        
+
         for tiff in tiffs:
             tif_status = validate_tiffs(tiff, self.kdip_id, self.path)
 
@@ -572,7 +568,7 @@ class KDip(models.Model):
             for dir in subdirs:
                 kdip = re.search(r"^[0-9]", dir)
                 full_path = os.path.join(path, dir)
-                
+
                 # Only process new KDips or ones.
                 try:
                     if path not in exclude:
@@ -587,12 +583,12 @@ class KDip(models.Model):
 
         # create the KDIP is it does not exits
         for k in kdip_list:
-                
+
             try:
                 # lookkup bib record for note field
                 r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
                 bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
-                
+
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
                 for datafield in bib_rec.tag_999:
                     i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
@@ -608,7 +604,7 @@ class KDip(models.Model):
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
 
-                    
+
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
 
@@ -716,7 +712,7 @@ class Job(models.Model):
                 ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
                 naan = parse_ark(ark)['naan']
                 noid = parse_ark(ark)['noid']
-                
+
                 kdip.pid = noid
                 kdip.save()
 
