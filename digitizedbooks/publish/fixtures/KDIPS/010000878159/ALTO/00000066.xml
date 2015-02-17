@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0066.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P65" PHYSICAL_IMG_NR="65" HEIGHT="2800" WIDTH="1900" ACCURACY="0.495625019" QUALITY_DETAIL="2 words, 10 chars, 6 with recognition greater than 50% (60.00%)">
+      <TopMargin ID="P65_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="916" />
+      <LeftMargin ID="P65_LM00001" HPOS="0" VPOS="916" WIDTH="600" HEIGHT="974" />
+      <RightMargin ID="P65_RM00001" HPOS="1307" VPOS="916" WIDTH="593" HEIGHT="974" />
+      <BottomMargin ID="P65_BM00001" HPOS="0" VPOS="1890" WIDTH="1900" HEIGHT="910" />
+      <PrintSpace ID="P65_PS00001" HPOS="600" VPOS="916" WIDTH="707" HEIGHT="974">
+        <Illustration ID="P65_ILL00001" HPOS="600" VPOS="916" WIDTH="707" HEIGHT="912" />
+        <TextBlock ID="P65_TB00001" HPOS="808" VPOS="1840" WIDTH="304" HEIGHT="50">
+          <TextLine ID="P65_TL00001" HPOS="816" VPOS="1849" WIDTH="288" HEIGHT="33">
+            <String ID="P65_S00001" HPOS="816" VPOS="1850" WIDTH="63" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Dr" WC="0.35" CC="66" />
+            <SP ID="P65_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P65_S00002" HPOS="896" VPOS="1849" WIDTH="208" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT=".Watson." WC="0.64125" CC="16463302" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

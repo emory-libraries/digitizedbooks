@@ -69,7 +69,10 @@ def get_rights(self):
         bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
 
         if not bib_rec.tag_583_5:
-            return 'No 583 tag in marc record.'
+            reason = 'No 583 tag in marc record.'
+            error = ValidationError(kdip=self, error=reason, error_type="Rights")
+            error.save()
+            #return 'No 583 tag in marc record.'
 
         tag_008 = bib_rec.tag_008
         data_type = tag_008[6]
@@ -136,15 +139,20 @@ def get_rights(self):
 
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
-        return reason
+        error = ValidationError(kdip=self, error=reason, error_type="Rights")
+        error.save()
+        #return reason
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
-        return 'public'
+        #return 'public'
     else:
-        return reason
+        error = ValidationError(kdip=self, error=reason, error_type="Rights")
+        error.save()
+        #return reason
 
-def validate_tiffs(tiff_file, kdip, kdip_dir):
+def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
+    Method to validate the Tiff files.
     Site for looking up Tiff tags: http://www.awaresystems.be/imaging/tiff/tifftags/search.html
     '''
     tif_tags = {
@@ -200,123 +208,160 @@ def validate_tiffs(tiff_file, kdip, kdip_dir):
     image = ''
     try:
         image = Image.open(tiff_file)
-    except IOError:
-        status = 'IO Error. Maybe this is 2 channel grayscale?'
-        return status
 
-    tags = image.tag
-
-    for tif_tag in tif_tags:
-        valid = tags.has_key(tif_tags[tif_tag])
-        if valid is False:
-            found[tif_tag] = False
-
-        if valid is True:
-            found[tif_tag] = tags.get(tif_tags[tif_tag])
-
-
-    dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
-    yaml_data['capture_date'] = dt.isoformat('T')
-    with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
-        outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
-
-    ## START REAL VALIDATION
-    if found['ImageWidth'] <= 0:
-        status = 'Invalid value for ImageWidth in %s' % (tiff_file)
-        return status
-
-    if found['ImageLength']  <= 0:
-        status = 'Invalid value for ImageLength in %s' % (tiff_file)
-        return status
-
-    if not found['Make']:
-        status = 'Invalid value for Make in %s' % (tiff_file)
-        return status
-
-    if not found['Model']:
-        status = 'Invalid value for Make in %s' % (tiff_file)
-        return status
-
-    if found['Orientation'] != (1,):
-        status = 'Invalid value for Orientation in %s' % (tiff_file)
-        return status
-
-    #if found['ColorSpace'] != 1:
-    #    status = 'Invalid value for ColorSpace in %s' % (file)
-    #    return status
-
-    if found['ResolutionUnit'] != (2,):
-        status = 'Invalid value for ResolutionUnit in %s' % (tiff_file)
-        return status
-
-    if not found['DateTime']:
-        status = 'Invalid value for DateTime in %s' % (tiff_file)
-        return status
-
-    image_code = re.sub("[^0-9]", "", str(found['BitsPerSample']))
-    image_type = bittsPerSample[image_code]
+        tags = image.tag 
+        for tif_tag in tif_tags:
+            valid = tags.has_key(tif_tags[tif_tag])
+            if valid is False:
+                found[tif_tag] = False
     
-    ## Check if Two channel grayscale
-    #if imgtype == bittsPerSample['Two channel grayscale']:
-    #    status = 'Two channel grayscale, needs conversion'
-    #    return status
+            if valid is True:
+                found[tif_tag] = tags.get(tif_tags[tif_tag])
 
-    # GRAYSCALE OR BITONAL
-    if image_type is 'Bitonal' or image_type is 'Grayscale':
 
-        if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['T6/Group 4 Fax']:
-            logger.info('PhotometricInterpretation is good')
-        else :
-            status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-            return status
-
-        if str(found['SamplesPerPixel']) != samplesPerPixel['Grayscale']:
-            status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-            return status
-
-        if found['XResolution'] < 600:
-            status = 'Invalid value for XResolution in %s' % (tiff_file)
-            return status
-
-        if found['YResolution'] < 600:
-            status = 'Invalid value for YResolution in %s' % (tiff_file)
-            return status
-
-    # COLOR
-    elif image_type is 'Color-3' or image_type is 'Color-888':
-
-        if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['LZW']:
-            logger.info('Compression is good for %s' % (tiff_file))
+        dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
+        yaml_data['capture_date'] = dt.isoformat('T')
+        with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
+            outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
+    
+        ## START REAL VALIDATION
+        if found['ImageWidth'] <= 0:
+            status = 'Invalid value for ImageWidth in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        if found['ImageLength']  <= 0:
+            status = 'Invalid value for ImageLength in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        if not found['Make']:
+            status = 'Invalid value for Make in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        if not found['Model']:
+            status = 'Invalid value for Make in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        if found['Orientation'] != (1,):
+            status = 'Invalid value for Orientation in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        #if found['ColorSpace'] != 1:
+        #    status = 'Invalid value for ColorSpace in %s' % (file)
+        #    return status
+    
+        if found['ResolutionUnit'] != (2,):
+            status = 'Invalid value for ResolutionUnit in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        if not found['DateTime']:
+            status = 'Invalid value for DateTime in %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            #return status
+    
+        image_code = re.sub("[^0-9]", "", str(found['BitsPerSample']))
+        image_type = bittsPerSample[image_code]
+    
+        ## Check if Two channel grayscale
+        #if imgtype == bittsPerSample['Two channel grayscale']:
+        #    status = 'Two channel grayscale, needs conversion'
+        #    return status
+    
+        # GRAYSCALE OR BITONAL
+        if image_type is 'Bitonal' or image_type is 'Grayscale':
+    
+            if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['T6/Group 4 Fax']:
+                pass
+            else :
+                status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if str(found['SamplesPerPixel']) != samplesPerPixel['Grayscale']:
+                status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if found['XResolution'] < 600:
+                status = 'Invalid value for XResolution in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if found['YResolution'] < 600:
+                status = 'Invalid value for YResolution in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+        # COLOR
+        elif image_type is 'Color-3' or image_type is 'Color-888':
+    
+            if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['LZW']:
+                pass
+            else:
+                status = 'Invalid value for Compression in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return statu
+    
+            if found['PhotometricInterpretation'] != photometricInterpretation['RGB']:
+                status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if str(found['SamplesPerPixel']) != samplesPerPixel['RGB']:
+                logger.error('SamplesPerPixel is %s for %s' (found['SamplesPerPixel'], tiff_file))
+                status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if found['XResolution'] < 300:
+                status = 'Invalid value for XResolution in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
+            if found['YResolution'] < 300:
+                status = 'Invalid value for YResolution in %s' % (tiff_file)
+                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error.save()
+                #return status
+    
         else:
-            status = 'Invalid value for Compression in %s' % (tiff_file)
-            return statu
+            status = 'Cannot determine type for %s' % (tiff_file)
+            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error.save()
+            
+    except IOError:
+        status = 'IO Error. Maybe this is 2 channel grayscale? %s' % tiff_file
+        error = ValidationError(kdip=kdipID, error=status, error_type='IO')
+        error.save()
+        #return status
 
-        if found['PhotometricInterpretation'] != photometricInterpretation['RGB']:
-            status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-            return status
-
-        if str(found['SamplesPerPixel']) != samplesPerPixel['RGB']:
-            logger.error('SamplesPerPixel is %s for %s' (found['SamplesPerPixel'], tiff_file))
-            status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-            return status
-
-        if found['XResolution'] < 300:
-            status = 'Invalid value for XResolution in %s' % (tiff_file)
-            return status
-
-        if found['YResolution'] < 300:
-            status = 'Invalid value for YResolution in %s' % (tiff_file)
-            return status
-
-    else:
-        status = 'Cannot determine type for %s' % (tiff_file)
 
 
 # METS XML
 class METSFile(XmlObject):
     ROOT_NAME = 'file'
     ROOT_NAMESPACES = {
-         'xlink' : "http://www.w3.org/1999/xlink",
+        'xlink' : "http://www.w3.org/1999/xlink",
         'mets': 'http://www.loc.gov/METS/'
     }
 
@@ -460,6 +505,15 @@ class KDip(models.Model):
     @property
     def barcode(self):
         return self.kdip_id[:12]
+    
+    @property
+    def errors(self):
+        error_types = self.validationerror_set.values('error_type').distinct()
+        errors = []
+        for error in error_types:
+            errors.append(error['error_type'])
+        errors_list = ", ".join(errors)
+        return errors_list
 
 
     def validate(self):
@@ -472,7 +526,6 @@ class KDip(models.Model):
         mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
-        logger.info('Mets file is %s' % mets_file)
 
         toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
 
@@ -480,35 +533,39 @@ class KDip(models.Model):
 
         rights = get_rights(self)
 
-        if rights is not 'public':
-            self.reason = rights
-            if 'Could not' in rights:
-                self.status = 'invalid'
-            else:
-                self.status = 'do not process'
-            self.save()
-            logger.error(rights)
-            return False
+        #if rights is not 'public':
+        #    self.reason = rights
+        #    if 'Could not' in rights:
+        #        self.status = 'invalid'
+        #    else:
+        #        self.status = 'do not process'
+        #    self.save()
+        #    logger.error(rights)
+        #    return False
 
         #Mets file exists
         if not os.path.exists(mets_file):
             reason = "Error: %s does not exist" % mets_file
-            self.reason = reason
-            self.status = 'invalid'
-            self.save()
+            #self.reason = reason
+            #self.status = 'invalid'
+            #self.save()
             logger.error(reason)
-            return False
+            error = ValidationError(kdip=self, error=reason, error_type="Missing")
+            error.save()
+            #return False
 
         mets = load_xmlobject_from_file(mets_file, Mets)
 
         #mets file validates against schema
         if not mets.is_valid():
             reason = "Error: %s is not valid" % mets_file
-            self.reason = reason
-            self.status = 'invalid'
-            self.save()
+            #self.reason = reason
+            #self.status = 'invalid'
+            #self.save()
             logger.error(reason)
-            return False
+            error = ValidationError(kdip=self, error=reason, error_type="Mets")
+            error.save()
+            #return False
 
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
@@ -516,42 +573,47 @@ class KDip(models.Model):
         #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
 
         for tiff in tiffs:
-            tif_status = validate_tiffs(tiff, self.kdip_id, self.path)
+            tif_status = validate_tiffs(tiff, self.kdip_id, self.path, self)
 
-        if tif_status is not None:
-            self.reason = tif_status
-            self.status = 'invalid'
-            self.save()
-            logger.error(tif_status)
-            return False
+        #if tif_status is not None:
+        #    self.reason = tif_status
+        #    self.status = 'invalid'
+        #    self.save()
+        #    logger.error(tif_status)
+        #    return False
 
         # validate each file of type ALTO and OCR
         for f in mets.techmd:
             file_path = "%s%s" % (mets_dir, f.href)
 
-            # file exists
             if not os.path.exists(file_path):
                 reason = "Error: %s does not exist" % file_path
-                self.reason = reason
-                self.status = 'invalid'
-                self.save()
+                #self.reason = reason
+                #self.status = 'invalid'
+                #self.save()
                 logger.error(reason)
-                return False
+                error = ValidationError(kdip=self, error=reason, error_type="Missing")
+                error.save()
+                #return False
 
             # checksum good
             with open(file_path, 'rb') as file:
                 if not f.checksum == md5(file.read()).hexdigest():
                     reason = "Error: checksum does not match for %s" % file_path
-                    logger.error('%s Mets is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest()))
-                    self.reason = reason
-                    self.status = 'invalid'
-                    self.save()
+                    #logger.error('%s Mets is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest()))
+                    #self.reason = reason
+                    #self.status = 'invalid'
+                    #self.save()
                     logger.error(reason)
-                    return False
+                    #return False
+                    error = ValidationError(kdip=self, error=reason, error_type="Checksum")
+                    error.save()
 
         # if it gets here were are good
-        self.status = 'new'
-        self.reason = ' '
+        if self.validationerror_set.all():
+            self.status = 'invalid'
+        else:
+            self.status = 'new'
         self.save()
         return True
 
@@ -671,6 +733,10 @@ class Job(models.Model):
     name = models.CharField(max_length=100, unique=True)
     'Human readable name of job'
     status = models.CharField(max_length=20, choices=JOB_STATUSES, default='new')
+    
+    @property
+    def volume_count(self):
+        return self.kdip_set.all().count()
 
     def __unicode__(self):
         return self.name
@@ -820,6 +886,11 @@ class Job(models.Model):
                 send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
 
         super(Job, self).save(*args, **kwargs)
+        
+class ValidationError(models.Model):
+    kdip = models.ForeignKey(KDip)
+    error = models.CharField(max_length=255)
+    error_type = models.CharField(max_length=25)
 
 class BoxToken(models.Model):
     refresh_token = models.CharField(max_length=200, blank=True)

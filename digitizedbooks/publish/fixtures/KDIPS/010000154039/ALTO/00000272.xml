@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0268.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="9" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-2" FONTSIZE="10" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P271" PHYSICAL_IMG_NR="271" HEIGHT="3300" WIDTH="2200" ACCURACY="0.715266049" QUALITY_DETAIL="425 words, 2039 chars, 1342 with recognition greater than 50% (65.82%)">
+      <TopMargin ID="P271_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="301" />
+      <LeftMargin ID="P271_LM00001" HPOS="0" VPOS="301" WIDTH="328" HEIGHT="2694" />
+      <RightMargin ID="P271_RM00001" HPOS="1879" VPOS="301" WIDTH="321" HEIGHT="2694" />
+      <BottomMargin ID="P271_BM00001" HPOS="0" VPOS="2995" WIDTH="2200" HEIGHT="305" />
+      <PrintSpace ID="P271_PS00001" HPOS="328" VPOS="301" WIDTH="1551" HEIGHT="2694">
+        <TextBlock ID="P271_TB00001" HPOS="328" VPOS="301" WIDTH="1226" HEIGHT="59">
+          <TextLine ID="P271_TL00001" HPOS="336" VPOS="309" WIDTH="1210" HEIGHT="43">
+            <String ID="P271_S00001" HPOS="336" VPOS="309" WIDTH="95" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="270" WC="0.273333341" CC="776" />
+            <SP ID="P271_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00002" HPOS="642" VPOS="310" WIDTH="223" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="History" WC="0.6085714" CC="7070570" />
+            <SP ID="P271_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00003" HPOS="887" VPOS="323" WIDTH="69" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="of" WC="0.07" CC="810" />
+            <SP ID="P271_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00004" HPOS="982" VPOS="322" WIDTH="96" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="the" WC="0.42" CC="1043" />
+            <SP ID="P271_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00005" HPOS="1106" VPOS="309" WIDTH="164" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="Black" WC="0.524" CC="57604" />
+            <SP ID="P271_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00006" HPOS="1295" VPOS="309" WIDTH="251" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="Phalanx." WC="0.3475" CC="777107454" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P271_TB00002" HPOS="328" VPOS="429" WIDTH="1551" HEIGHT="2566">
+          <TextLine ID="P271_TL00002" HPOS="338" VPOS="437" WIDTH="1520" HEIGHT="47">
+            <String ID="P271_S00007" HPOS="338" VPOS="444" WIDTH="151" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="entered" WC="0.577142835" CC="0466506" />
+            <SP ID="P271_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00008" HPOS="516" VPOS="444" WIDTH="66" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="the" WC="0.75666666" CC="070" />
+            <SP ID="P271_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00009" HPOS="603" VPOS="444" WIDTH="85" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="field" WC="0.888" CC="00005" />
+            <SP ID="P271_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00010" HPOS="708" VPOS="444" WIDTH="39" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="in" WC="0.26" CC="77" />
+            <SP ID="P271_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00011" HPOS="767" VPOS="444" WIDTH="116" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="front," WC="0.6983333" CC="030642" />
+            <SP ID="P271_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00012" HPOS="906" VPOS="443" WIDTH="165" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="charged" WC="0.764285743" CC="0705400" />
+            <SP ID="P271_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00013" HPOS="1099" VPOS="442" WIDTH="66" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="0.69" CC="900" />
+            <SP ID="P271_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00014" HPOS="1190" VPOS="441" WIDTH="118" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="rebels" WC="0.5516667" CC="607067" />
+            <SP ID="P271_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00015" HPOS="1329" VPOS="441" WIDTH="39" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="in" WC="0.585" CC="07" />
+            <SP ID="P271_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00016" HPOS="1388" VPOS="440" WIDTH="66" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="0.75" CC="070" />
+            <SP ID="P271_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00017" HPOS="1473" VPOS="439" WIDTH="128" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="centre" WC="0.7583333" CC="008050" />
+            <SP ID="P271_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00018" HPOS="1622" VPOS="435" WIDTH="44" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P271_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00019" HPOS="1680" VPOS="434" WIDTH="67" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.74333334" CC="070" />
+            <SP ID="P271_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00020" HPOS="1773" VPOS="434" WIDTH="85" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="line," WC="0.634" CC="00853" />
+          </TextLine>
+          <TextLine ID="P271_TL00003" HPOS="340" VPOS="493" WIDTH="1522" HEIGHT="45">
+            <String ID="P271_S00021" HPOS="340" VPOS="497" WIDTH="151" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="driving" WC="0.4542857" CC="3535667" />
+            <SP ID="P271_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00022" HPOS="504" VPOS="499" WIDTH="104" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="them" WC="0.56" CC="0763" />
+            <SP ID="P271_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00023" HPOS="622" VPOS="499" WIDTH="84" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="into" WC="0.8225" CC="0700" />
+            <SP ID="P271_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00024" HPOS="722" VPOS="498" WIDTH="99" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="their" WC="0.502" CC="07584" />
+            <SP ID="P271_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00025" HPOS="834" VPOS="498" WIDTH="182" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="rifle-pits," WC="0.656363666" CC="52550060174" />
+            <SP ID="P271_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00026" HPOS="1040" VPOS="498" WIDTH="78" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="and" WC="0.92" CC="200" />
+            <SP ID="P271_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00027" HPOS="1137" VPOS="497" WIDTH="92" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="then" WC="0.75" CC="01000" />
+            <SP ID="P271_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00028" HPOS="1250" VPOS="496" WIDTH="59" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="for" WC="0.7966667" CC="006" />
+            <SP ID="P271_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00029" HPOS="1329" VPOS="493" WIDTH="82" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="half" WC="0.7525" CC="7002" />
+            <SP ID="P271_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00030" HPOS="1429" VPOS="504" WIDTH="51" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="an" WC="0.67" CC="60" />
+            <SP ID="P271_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00031" HPOS="1501" VPOS="492" WIDTH="100" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="hour" WC="0.7175" CC="0056" />
+            <SP ID="P271_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00032" HPOS="1615" VPOS="490" WIDTH="66" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="the" WC="0.913333356" CC="200" />
+            <SP ID="P271_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00033" HPOS="1694" VPOS="498" WIDTH="168" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="carnage" WC="0.5985714" CC="0056860" />
+          </TextLine>
+          <TextLine ID="P271_TL00004" HPOS="340" VPOS="544" WIDTH="1526" HEIGHT="48">
+            <String ID="P271_S00034" HPOS="340" VPOS="552" WIDTH="151" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="beeatae" WC="0.6514286" CC="1081660" />
+            <SP ID="P271_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00035" HPOS="518" VPOS="554" WIDTH="182" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="frightful." WC="0.607" CC="07710002804" />
+            <SP ID="P271_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00036" HPOS="743" VPOS="553" WIDTH="104" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="They" WC="0.6475" CC="0706" />
+            <SP ID="P271_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00037" HPOS="867" VPOS="553" WIDTH="79" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="had" WC="0.683333337" CC="009" />
+            <SP ID="P271_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00038" HPOS="967" VPOS="551" WIDTH="170" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="followed" WC="0.71625" CC="10620750" />
+            <SP ID="P271_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00039" HPOS="1158" VPOS="551" WIDTH="65" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00040" HPOS="1245" VPOS="550" WIDTH="117" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="rebels" WC="0.675" CC="570006" />
+            <SP ID="P271_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00041" HPOS="1383" VPOS="549" WIDTH="83" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="into" WC="0.5375" CC="6083" />
+            <SP ID="P271_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00042" HPOS="1494" VPOS="547" WIDTH="67" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00043" HPOS="1582" VPOS="555" WIDTH="92" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="very" WC="0.4525" CC="60510" />
+            <SP ID="P271_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00044" HPOS="1697" VPOS="543" WIDTH="97" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="jaws" WC="0.595" CC="4038" />
+            <SP ID="P271_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00045" HPOS="1822" VPOS="541" WIDTH="44" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="of" WC="1" CC="00" />
+          </TextLine>
+          <TextLine ID="P271_TL00005" HPOS="340" VPOS="600" WIDTH="1522" HEIGHT="47">
+            <String ID="P271_S00046" HPOS="340" VPOS="607" WIDTH="127" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="death," WC="0.59" CC="870071" />
+            <SP ID="P271_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00047" HPOS="492" VPOS="608" WIDTH="76" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="and" WC="0.55" CC="670" />
+            <SP ID="P271_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00048" HPOS="590" VPOS="619" WIDTH="85" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="now" WC="0.44" CC="1006" />
+            <SP ID="P271_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00049" HPOS="696" VPOS="608" WIDTH="76" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="C61." WC="0.45" CC="7850" />
+            <SP ID="P271_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00050" HPOS="795" VPOS="607" WIDTH="91" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Reid" WC="0.82" CC="6000" />
+            <SP ID="P271_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00051" HPOS="907" VPOS="606" WIDTH="119" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="found" WC="0.5" CC="00798" />
+            <SP ID="P271_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00052" HPOS="1046" VPOS="606" WIDTH="59" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="his" WC="0.74666667" CC="007" />
+            <SP ID="P271_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00053" HPOS="1125" VPOS="605" WIDTH="184" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="regiment" WC="0.51125" CC="401025079" />
+            <SP ID="P271_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00054" HPOS="1330" VPOS="604" WIDTH="38" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="in" WC="0.635" CC="07" />
+            <SP ID="P271_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00055" HPOS="1389" VPOS="603" WIDTH="66" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="the" WC="0.43" CC="870" />
+            <SP ID="P271_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00056" HPOS="1475" VPOS="599" WIDTH="166" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="enemy's" WC="0.584285736" CC="0676027" />
+            <SP ID="P271_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00057" HPOS="1655" VPOS="597" WIDTH="207" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="enfilading" WC="0.583" CC="0771370077" />
+          </TextLine>
+          <TextLine ID="P271_TL00006" HPOS="338" VPOS="655" WIDTH="1525" HEIGHT="48">
+            <String ID="P271_S00058" HPOS="338" VPOS="663" WIDTH="77" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="fire," WC="0.506" CC="87504" />
+            <SP ID="P271_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00059" HPOS="439" VPOS="663" WIDTH="79" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="and" WC="0.49" CC="266" />
+            <SP ID="P271_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00060" HPOS="538" VPOS="663" WIDTH="94" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="they" WC="0.35" CC="7737" />
+            <SP ID="P271_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00061" HPOS="649" VPOS="665" WIDTH="120" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="swept" WC="0.412" CC="710740" />
+            <SP ID="P271_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00062" HPOS="788" VPOS="663" WIDTH="59" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="his" WC="0.296666652" CC="766" />
+            <SP ID="P271_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00063" HPOS="867" VPOS="662" WIDTH="83" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="line." WC="0.556" CC="56703" />
+            <SP ID="P271_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00064" HPOS="992" VPOS="660" WIDTH="87" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Men" WC="0.44" CC="646" />
+            <SP ID="P271_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00065" HPOS="1098" VPOS="660" WIDTH="60" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="fell" WC="0.5675" CC="0727" />
+            <SP ID="P271_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00066" HPOS="1177" VPOS="660" WIDTH="74" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="like" WC="0.6325" CC="6322" />
+            <SP ID="P271_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00067" HPOS="1270" VPOS="657" WIDTH="236" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="snowflakes." WC="0.450909078" CC="77395590084" />
+            <SP ID="P271_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00068" HPOS="1547" VPOS="654" WIDTH="142" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Driven" WC="0.516666651" CC="7406010" />
+            <SP ID="P271_SP00063" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00069" HPOS="1710" VPOS="654" WIDTH="51" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="by" WC="0.5" CC="010" />
+            <SP ID="P271_SP00064" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00070" HPOS="1782" VPOS="652" WIDTH="81" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="this" WC="0.79" CC="0008" />
+          </TextLine>
+          <TextLine ID="P271_TL00007" HPOS="339" VPOS="710" WIDTH="1520" HEIGHT="47">
+            <String ID="P271_S00071" HPOS="339" VPOS="718" WIDTH="138" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="terrific" WC="0.7525" CC="20650005" />
+            <SP ID="P271_SP00065" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00072" HPOS="498" VPOS="718" WIDTH="76" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="fire," WC="0.81" CC="00504" />
+            <SP ID="P271_SP00066" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00073" HPOS="596" VPOS="718" WIDTH="93" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="they" WC="1" CC="0000" />
+            <SP ID="P271_SP00067" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00074" HPOS="709" VPOS="717" WIDTH="59" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="fell" WC="0.7475" CC="0225" />
+            <SP ID="P271_SP00068" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00075" HPOS="788" VPOS="717" WIDTH="110" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="back." WC="0.83" CC="00404" />
+            <SP ID="P271_SP00069" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00076" HPOS="942" VPOS="715" WIDTH="78" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="The" WC="1" CC="000" />
+            <SP ID="P271_SP00070" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00077" HPOS="1042" VPOS="714" WIDTH="96" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="54th" WC="0.4575" CC="6870" />
+            <SP ID="P271_SP00071" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00078" HPOS="1159" VPOS="713" WIDTH="78" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="had" WC="0.7966667" CC="060" />
+            <SP ID="P271_SP00072" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00079" HPOS="1257" VPOS="713" WIDTH="119" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="taken" WC="0.692" CC="00807" />
+            <SP ID="P271_SP00073" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00080" HPOS="1402" VPOS="710" WIDTH="152" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="ground" WC="0.5783333" CC="470670" />
+            <SP ID="P271_SP00074" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00081" HPOS="1577" VPOS="712" WIDTH="43" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P271_SP00075" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00082" HPOS="1647" VPOS="708" WIDTH="68" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="the" WC="0.62" CC="901" />
+            <SP ID="P271_SP00076" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00083" HPOS="1742" VPOS="707" WIDTH="117" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="right," WC="0.635" CC="460074" />
+          </TextLine>
+          <TextLine ID="P271_TL00008" HPOS="339" VPOS="765" WIDTH="1519" HEIGHT="46">
+            <String ID="P271_S00084" HPOS="339" VPOS="772" WIDTH="153" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="lending" WC="0.7157143" CC="2050470" />
+            <SP ID="P271_SP00077" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00085" HPOS="512" VPOS="773" WIDTH="192" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="whatever" WC="0.66625" CC="60060706" />
+            <SP ID="P271_SP00078" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00086" HPOS="725" VPOS="771" WIDTH="43" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="of" WC="0.925" CC="00" />
+            <SP ID="P271_SP00079" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00087" HPOS="784" VPOS="771" WIDTH="210" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="assistance" WC="0.769" CC="0660300700" />
+            <SP ID="P271_SP00080" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00088" HPOS="1019" VPOS="769" WIDTH="93" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="they" WC="1" CC="0000" />
+            <SP ID="P271_SP00081" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00089" HPOS="1139" VPOS="768" WIDTH="111" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="could" WC="0.694" CC="00608" />
+            <SP ID="P271_SP00082" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00090" HPOS="1277" VPOS="770" WIDTH="45" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="to" WC="0.96" CC="00" />
+            <SP ID="P271_SP00083" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00091" HPOS="1350" VPOS="766" WIDTH="100" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="their" WC="0.784" CC="00226" />
+            <SP ID="P271_SP00084" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00092" HPOS="1469" VPOS="764" WIDTH="160" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="retiring" WC="0.7725" CC="20004370" />
+            <SP ID="P271_SP00085" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00093" HPOS="1648" VPOS="762" WIDTH="210" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="comrades," WC="0.75777775" CC="000500457" />
+          </TextLine>
+          <TextLine ID="P271_TL00009" HPOS="340" VPOS="820" WIDTH="1520" HEIGHT="44">
+            <String ID="P271_S00094" HPOS="340" VPOS="827" WIDTH="84" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="who" WC="0.77" CC="600" />
+            <SP ID="P271_SP00086" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00095" HPOS="440" VPOS="837" WIDTH="92" HEIGHT="23" STYLEREFS="StyleId-1" CONTENT="were" WC="0.8275" CC="0060" />
+            <SP ID="P271_SP00087" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00096" HPOS="546" VPOS="827" WIDTH="125" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="about" WC="0.328" CC="810069" />
+            <SP ID="P271_SP00088" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00097" HPOS="692" VPOS="836" WIDTH="51" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="on" WC="0.485" CC="27" />
+            <SP ID="P271_SP00089" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00098" HPOS="765" VPOS="836" WIDTH="25" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P271_SP00090" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00099" HPOS="809" VPOS="826" WIDTH="74" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="line" WC="0.56" CC="5451" />
+            <SP ID="P271_SP00091" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00100" HPOS="902" VPOS="824" WIDTH="91" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="with" WC="0.8325" CC="0600" />
+            <SP ID="P271_SP00092" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00101" HPOS="1014" VPOS="824" WIDTH="116" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="them," WC="0.85" CC="00034" />
+            <SP ID="P271_SP00093" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00102" HPOS="1153" VPOS="823" WIDTH="59" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="for" WC="0.723333359" CC="008" />
+            <SP ID="P271_SP00094" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00103" HPOS="1233" VPOS="821" WIDTH="189" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="although" WC="0.815" CC="00070700" />
+            <SP ID="P271_SP00095" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00104" HPOS="1443" VPOS="819" WIDTH="223" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="retreating," WC="0.45" CC="717470946102" />
+            <SP ID="P271_SP00096" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00105" HPOS="1682" VPOS="818" WIDTH="33" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="it" WC="0.305" CC="310" />
+            <SP ID="P271_SP00097" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00106" HPOS="1730" VPOS="828" WIDTH="77" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="was" WC="0.48" CC="906" />
+            <SP ID="P271_SP00098" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00107" HPOS="1820" VPOS="817" WIDTH="40" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="in" WC="0.61" CC="07" />
+          </TextLine>
+          <TextLine ID="P271_TL00010" HPOS="339" VPOS="876" WIDTH="1522" HEIGHT="43">
+            <String ID="P271_S00108" HPOS="339" VPOS="881" WIDTH="67" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="the" WC="0.74666667" CC="700" />
+            <SP ID="P271_SP00099" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00109" HPOS="427" VPOS="884" WIDTH="104" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="most" WC="0.815" CC="0070" />
+            <SP ID="P271_SP00100" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00110" HPOS="552" VPOS="881" WIDTH="86" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="cool" WC="0.8275" CC="0141" />
+            <SP ID="P271_SP00101" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00111" HPOS="659" VPOS="881" WIDTH="77" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="and" WC="0.56" CC="760" />
+            <SP ID="P271_SP00102" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00112" HPOS="758" VPOS="880" WIDTH="204" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="deliberate" WC="0.898" CC="0030001040" />
+            <SP ID="P271_SP00103" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00113" HPOS="982" VPOS="888" WIDTH="168" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="manner," WC="0.6471428" CC="0077064" />
+            <SP ID="P271_SP00104" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00114" HPOS="1174" VPOS="877" WIDTH="78" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="and" WC="0.44" CC="1060" />
+            <SP ID="P271_SP00105" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00115" HPOS="1272" VPOS="877" WIDTH="65" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="the" WC="0.75" CC="070" />
+            <SP ID="P271_SP00106" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00116" HPOS="1364" VPOS="878" WIDTH="78" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="two" WC="0.7633333" CC="070" />
+            <SP ID="P271_SP00107" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00117" HPOS="1464" VPOS="874" WIDTH="204" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="regiments" WC="0.704444468" CC="902000607" />
+            <SP ID="P271_SP00108" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00118" HPOS="1689" VPOS="873" WIDTH="124" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="began" WC="0.562" CC="101037" />
+            <SP ID="P271_SP00109" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00119" HPOS="1835" VPOS="883" WIDTH="26" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="a" WC="0.69" CC="3" />
+          </TextLine>
+          <TextLine ID="P271_TL00011" HPOS="340" VPOS="931" WIDTH="1519" HEIGHT="44">
+            <String ID="P271_S00120" HPOS="340" VPOS="936" WIDTH="113" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="firing" WC="0.488333344" CC="4433610" />
+            <SP ID="P271_SP00110" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00121" HPOS="467" VPOS="938" WIDTH="45" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P271_SP00111" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00122" HPOS="525" VPOS="936" WIDTH="73" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="will" WC="0.6375" CC="0643" />
+            <SP ID="P271_SP00112" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00123" HPOS="613" VPOS="936" WIDTH="157" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="against" WC="0.64" CC="01003750" />
+            <SP ID="P271_SP00113" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00124" HPOS="783" VPOS="934" WIDTH="117" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="which" WC="0.684" CC="90410" />
+            <SP ID="P271_SP00114" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00125" HPOS="914" VPOS="934" WIDTH="66" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00115" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00126" HPOS="994" VPOS="933" WIDTH="128" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="rebels," WC="0.628571451" CC="4600670" />
+            <SP ID="P271_SP00116" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00127" HPOS="1139" VPOS="931" WIDTH="150" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="though" WC="0.9" CC="000600" />
+            <SP ID="P271_SP00117" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00128" HPOS="1305" VPOS="929" WIDTH="297" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="outnumbering" WC="0.4775" CC="0447690066710" />
+            <SP ID="P271_SP00118" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00129" HPOS="1616" VPOS="929" WIDTH="114" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="them," WC="0.844" CC="00043" />
+            <SP ID="P271_SP00119" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00130" HPOS="1747" VPOS="928" WIDTH="112" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="could" WC="0.606" CC="01448" />
+          </TextLine>
+          <TextLine ID="P271_TL00012" HPOS="340" VPOS="986" WIDTH="1471" HEIGHT="43">
+            <String ID="P271_S00131" HPOS="340" VPOS="992" WIDTH="74" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="not" WC="0.443333328" CC="709" />
+            <SP ID="P271_SP00120" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00132" HPOS="427" VPOS="991" WIDTH="89" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="face." WC="0.718" CC="08104" />
+            <SP ID="P271_SP00121" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00133" HPOS="560" VPOS="990" WIDTH="104" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="Thus" WC="0.74" CC="0036" />
+            <SP ID="P271_SP00122" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00134" HPOS="677" VPOS="990" WIDTH="93" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="they" WC="0.82" CC="0700" />
+            <SP ID="P271_SP00123" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00135" HPOS="784" VPOS="989" WIDTH="84" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="held" WC="0.6325" CC="7007" />
+            <SP ID="P271_SP00124" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00136" HPOS="883" VPOS="989" WIDTH="104" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="them" WC="0.645" CC="4710" />
+            <SP ID="P271_SP00125" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00137" HPOS="1001" VPOS="987" WIDTH="59" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="till" WC="0.8825" CC="0040" />
+            <SP ID="P271_SP00126" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00138" HPOS="1074" VPOS="987" WIDTH="92" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="long" WC="0.46" CC="40710" />
+            <SP ID="P271_SP00127" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00139" HPOS="1180" VPOS="986" WIDTH="98" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="after" WC="0.744" CC="92000" />
+            <SP ID="P271_SP00128" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00140" HPOS="1292" VPOS="987" WIDTH="142" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="sunset," WC="0.4242857" CC="7657093" />
+            <SP ID="P271_SP00129" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00141" HPOS="1452" VPOS="984" WIDTH="77" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="and" WC="0.79" CC="060" />
+            <SP ID="P271_SP00130" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00142" HPOS="1543" VPOS="984" WIDTH="113" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="firing" WC="0.705" CC="440170" />
+            <SP ID="P271_SP00131" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00143" HPOS="1669" VPOS="983" WIDTH="142" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="ceased." WC="0.7171429" CC="0086004" />
+          </TextLine>
+          <TextLine ID="P271_TL00013" HPOS="422" VPOS="1041" WIDTH="1438" HEIGHT="43">
+            <String ID="P271_S00144" HPOS="422" VPOS="1045" WIDTH="110" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="&quot;The" WC="1" CC="0000" />
+            <SP ID="P271_SP00132" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00145" HPOS="546" VPOS="1045" WIDTH="199" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="slaughter" WC="0.617777765" CC="640707035" />
+            <SP ID="P271_SP00133" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00146" HPOS="758" VPOS="1053" WIDTH="78" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="was" WC="0.14" CC="1087" />
+            <SP ID="P271_SP00134" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00147" HPOS="855" VPOS="1042" WIDTH="169" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="terrible;" WC="0.6844444" CC="007560406" />
+            <SP ID="P271_SP00135" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00148" HPOS="1047" VPOS="1042" WIDTH="66" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="0.96" CC="001" />
+            <SP ID="P271_SP00136" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00149" HPOS="1135" VPOS="1041" WIDTH="175" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Phalanx" WC="0.725714266" CC="7002044" />
+            <SP ID="P271_SP00137" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00150" HPOS="1331" VPOS="1040" WIDTH="80" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="lost" WC="0.6075" CC="0069" />
+            <SP ID="P271_SP00138" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00151" HPOS="1432" VPOS="1039" WIDTH="124" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="about" WC="0.864" CC="00060" />
+            <SP ID="P271_SP00139" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00152" HPOS="1577" VPOS="1039" WIDTH="77" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="800" WC="0.91" CC="200" />
+            <SP ID="P271_SP00140" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00153" HPOS="1675" VPOS="1049" WIDTH="95" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="men," WC="0.28" CC="8973" />
+            <SP ID="P271_SP00141" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00154" HPOS="1793" VPOS="1038" WIDTH="67" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.9766667" CC="000" />
+          </TextLine>
+          <TextLine ID="P271_TL00014" HPOS="340" VPOS="1095" WIDTH="1519" HEIGHT="43">
+            <String ID="P271_S00155" HPOS="340" VPOS="1100" WIDTH="113" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="white" WC="0.8" CC="100000" />
+            <SP ID="P271_SP00142" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00156" HPOS="467" VPOS="1102" WIDTH="137" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="troops" WC="0.67" CC="0200107" />
+            <SP ID="P271_SP00143" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00157" HPOS="620" VPOS="1099" WIDTH="124" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="about" WC="0.95" CC="00020" />
+            <SP ID="P271_SP00144" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00158" HPOS="759" VPOS="1097" WIDTH="88" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="600." WC="0.8075" CC="4003" />
+            <SP ID="P271_SP00145" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00159" HPOS="889" VPOS="1097" WIDTH="40" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="It" WC="0.925" CC="10" />
+            <SP ID="P271_SP00146" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00160" HPOS="943" VPOS="1104" WIDTH="77" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="was" WC="0.783333361" CC="006" />
+            <SP ID="P271_SP00147" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00161" HPOS="1042" VPOS="1094" WIDTH="236" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="Braddock's" WC="0.778" CC="6306000005" />
+            <SP ID="P271_SP00148" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00162" HPOS="1299" VPOS="1094" WIDTH="125" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="defeat" WC="0.798333347" CC="000803" />
+            <SP ID="P271_SP00149" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00163" HPOS="1445" VPOS="1094" WIDTH="98" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="after" WC="0.886" CC="00005" />
+            <SP ID="P271_SP00150" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00164" HPOS="1561" VPOS="1094" WIDTH="68" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00151" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00165" HPOS="1648" VPOS="1093" WIDTH="106" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="lapge" WC="0.804" CC="10080" />
+            <SP ID="P271_SP00152" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00166" HPOS="1768" VPOS="1092" WIDTH="50" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="of" WC="0.56" CC="80" />
+            <SP ID="P271_SP00153" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00167" HPOS="1833" VPOS="1103" WIDTH="26" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+          </TextLine>
+          <TextLine ID="P271_TL00015" HPOS="339" VPOS="1153" WIDTH="199" HEIGHT="42">
+            <String ID="P271_S00168" HPOS="339" VPOS="1153" WIDTH="198" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="century.&quot;" WC="0.75333333" CC="0070501000" />
+          </TextLine>
+          <TextLine ID="P271_TL00016" HPOS="441" VPOS="1227" WIDTH="1418" HEIGHT="53">
+            <String ID="P271_S00169" HPOS="441" VPOS="1230" WIDTH="98" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="The" WC="0.75" CC="070" />
+            <SP ID="P271_SP00154" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00170" HPOS="573" VPOS="1232" WIDTH="114" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="rout" WC="0.47" CC="6076" />
+            <SP ID="P271_SP00155" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00171" HPOS="721" VPOS="1242" WIDTH="98" HEIGHT="30" STYLEREFS="StyleId-2" CONTENT="was" WC="0.476666659" CC="753" />
+            <SP ID="P271_SP00156" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00172" HPOS="846" VPOS="1227" WIDTH="250" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="complete;" WC="0.894444466" CC="004020002" />
+            <SP ID="P271_SP00157" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00173" HPOS="1127" VPOS="1227" WIDTH="80" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="the" WC="0.6" CC="470" />
+            <SP ID="P271_SP00158" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00174" HPOS="1234" VPOS="1239" WIDTH="137" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="army" WC="0.6275" CC="4504" />
+            <SP ID="P271_SP00159" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00175" HPOS="1397" VPOS="1238" WIDTH="98" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="was" WC="0.326666653" CC="676" />
+            <SP ID="P271_SP00160" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00176" HPOS="1521" VPOS="1227" WIDTH="90" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="not" WC="0.613333344" CC="308" />
+            <SP ID="P271_SP00161" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00177" HPOS="1638" VPOS="1224" WIDTH="114" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="only" WC="0.4675" CC="36110" />
+            <SP ID="P271_SP00162" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00178" HPOS="1785" VPOS="1225" WIDTH="74" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="de¬" WC="0.69" CC="504" />
+          </TextLine>
+          <TextLine ID="P271_TL00017" HPOS="340" VPOS="1293" WIDTH="1519" HEIGHT="53">
+            <String ID="P271_S00179" HPOS="340" VPOS="1296" WIDTH="157" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="feated" WC="0.67" CC="509005" />
+            <SP ID="P271_SP00163" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00180" HPOS="515" VPOS="1296" WIDTH="90" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="but" WC="0.446666658" CC="880" />
+            <SP ID="P271_SP00164" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00181" HPOS="623" VPOS="1296" WIDTH="172" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="beaten" WC="0.706666648" CC="809000" />
+            <SP ID="P271_SP00165" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00182" HPOS="822" VPOS="1294" WIDTH="95" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="and" WC="1" CC="000" />
+            <SP ID="P271_SP00166" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00183" HPOS="944" VPOS="1292" WIDTH="325" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="demoralized." WC="0.928333342" CC="000060000002" />
+            <SP ID="P271_SP00167" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00184" HPOS="1323" VPOS="1291" WIDTH="99" HEIGHT="47" STYLEREFS="StyleId-2" CONTENT="The" WC="0.9766667" CC="000" />
+            <SP ID="P271_SP00168" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00185" HPOS="1447" VPOS="1304" WIDTH="164" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="enemy" WC="0.694" CC="005010" />
+            <SP ID="P271_SP00169" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00186" HPOS="1637" VPOS="1291" WIDTH="97" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="had" WC="0.8066667" CC="005" />
+            <SP ID="P271_SP00170" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00187" HPOS="1761" VPOS="1303" WIDTH="98" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="suc¬" WC="0.6225" CC="6503" />
+          </TextLine>
+          <TextLine ID="P271_TL00018" HPOS="341" VPOS="1359" WIDTH="1518" HEIGHT="54">
+            <String ID="P271_S00188" HPOS="341" VPOS="1362" WIDTH="164" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="ceeded" WC="1" CC="000000" />
+            <SP ID="P271_SP00171" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00189" HPOS="523" VPOS="1361" WIDTH="49" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="^n" WC="0.205" CC="96" />
+            <SP ID="P271_SP00172" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00190" HPOS="590" VPOS="1361" WIDTH="214" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="drawing" WC="0.71" CC="0400167" />
+            <SP ID="P271_SP00173" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00191" HPOS="820" VPOS="1360" WIDTH="40" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="it" WC="1" CC="00" />
+            <SP ID="P271_SP00174" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00192" HPOS="878" VPOS="1359" WIDTH="105" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="into" WC="0.795" CC="0701" />
+            <SP ID="P271_SP00175" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00193" HPOS="1003" VPOS="1371" WIDTH="32" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P271_SP00176" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00194" HPOS="1050" VPOS="1360" WIDTH="115" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="trap" WC="0.595" CC="0565" />
+            <SP ID="P271_SP00177" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00195" HPOS="1183" VPOS="1358" WIDTH="74" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="for" WC="0.7733333" CC="006" />
+            <SP ID="P271_SP00178" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00196" HPOS="1274" VPOS="1357" WIDTH="82" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="the" WC="0.75333333" CC="070" />
+            <SP ID="P271_SP00179" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00197" HPOS="1382" VPOS="1370" WIDTH="205" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="purpose" WC="0.5285714" CC="9770072" />
+            <SP ID="P271_SP00180" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00198" HPOS="1605" VPOS="1356" WIDTH="53" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="of" WC="0.49" CC="45" />
+            <SP ID="P271_SP00181" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00199" HPOS="1679" VPOS="1356" WIDTH="180" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="annihi¬" WC="0.7014286" CC="0670033" />
+          </TextLine>
+          <TextLine ID="P271_TL00019" HPOS="339" VPOS="1425" WIDTH="1518" HEIGHT="54">
+            <String ID="P271_S00200" HPOS="339" VPOS="1427" WIDTH="160" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="late" WC="0.7525" CC="0009" />
+            <SP ID="P271_SP00182" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00201" HPOS="515" VPOS="1427" WIDTH="54" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="it." WC="0.886666656" CC="003" />
+            <SP ID="P271_SP00183" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00202" HPOS="624" VPOS="1426" WIDTH="229" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="Seymour" WC="0.6757143" CC="7000078" />
+            <SP ID="P271_SP00184" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00203" HPOS="870" VPOS="1425" WIDTH="97" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="had" WC="1" CC="000" />
+            <SP ID="P271_SP00185" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00204" HPOS="987" VPOS="1424" WIDTH="259" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="advanced," WC="0.6111111" CC="007985004" />
+            <SP ID="P271_SP00186" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00205" HPOS="1267" VPOS="1425" WIDTH="229" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="contrary" WC="0.73375" CC="00707060" />
+            <SP ID="P271_SP00187" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00206" HPOS="1520" VPOS="1425" WIDTH="57" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="to" WC="0.845" CC="03" />
+            <SP ID="P271_SP00188" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00207" HPOS="1594" VPOS="1422" WIDTH="84" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00189" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00208" HPOS="1696" VPOS="1422" WIDTH="161" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="orders" WC="0.7083333" CC="030076" />
+          </TextLine>
+          <TextLine ID="P271_TL00020" HPOS="340" VPOS="1490" WIDTH="1515" HEIGHT="55">
+            <String ID="P271_S00209" HPOS="340" VPOS="1494" WIDTH="141" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="given" WC="0.466" CC="65707" />
+            <SP ID="P271_SP00190" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00210" HPOS="506" VPOS="1493" WIDTH="99" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="him" WC="1" CC="000" />
+            <SP ID="P271_SP00191" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00211" HPOS="632" VPOS="1493" WIDTH="63" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="by" WC="0.15" CC="710" />
+            <SP ID="P271_SP00192" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00212" HPOS="724" VPOS="1491" WIDTH="195" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="General" WC="0.795714259" CC="7020201" />
+            <SP ID="P271_SP00193" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00213" HPOS="946" VPOS="1489" WIDTH="233" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="Gillmore," WC="0.75666666" CC="034500303" />
+            <SP ID="P271_SP00194" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00214" HPOS="1208" VPOS="1489" WIDTH="122" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="from" WC="0.8125" CC="1600" />
+            <SP ID="P271_SP00195" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00215" HPOS="1356" VPOS="1488" WIDTH="254" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="Baldwin's" WC="0.776666641" CC="700020604" />
+            <SP ID="P271_SP00196" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00216" HPOS="1646" VPOS="1487" WIDTH="209" HEIGHT="61" STYLEREFS="StyleId-2" CONTENT="Station," WC="0.8625" CC="60004000" />
+          </TextLine>
+          <TextLine ID="P271_TL00021" HPOS="340" VPOS="1556" WIDTH="1514" HEIGHT="43">
+            <String ID="P271_S00217" HPOS="340" VPOS="1560" WIDTH="150" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="where" WC="0.662" CC="100060" />
+            <SP ID="P271_SP00197" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00218" HPOS="523" VPOS="1559" WIDTH="57" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="he" WC="1" CC="00" />
+            <SP ID="P271_SP00198" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00219" HPOS="613" VPOS="1571" WIDTH="99" HEIGHT="31" STYLEREFS="StyleId-2" CONTENT="was" WC="0.826666653" CC="004" />
+            <SP ID="P271_SP00199" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00220" HPOS="746" VPOS="1556" WIDTH="263" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="instructed" WC="0.752" CC="2760620000" />
+            <SP ID="P271_SP00200" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00221" HPOS="1041" VPOS="1558" WIDTH="58" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P271_SP00201" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00222" HPOS="1134" VPOS="1554" WIDTH="213" HEIGHT="48" STYLEREFS="StyleId-2" CONTENT="intrench" WC="0.81" CC="06060020" />
+            <SP ID="P271_SP00202" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00223" HPOS="1382" VPOS="1554" WIDTH="92" HEIGHT="48" STYLEREFS="StyleId-2" CONTENT="and" WC="0.33" CC="568" />
+            <SP ID="P271_SP00203" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00224" HPOS="1506" VPOS="1553" WIDTH="146" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="await" WC="1" CC="00000" />
+            <SP ID="P271_SP00204" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00225" HPOS="1679" VPOS="1553" WIDTH="175" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="orders." WC="0.667142868" CC="0500664" />
+          </TextLine>
+          <TextLine ID="P271_TL00022" HPOS="340" VPOS="1621" WIDTH="1519" HEIGHT="55">
+            <String ID="P271_S00226" HPOS="340" VPOS="1624" WIDTH="226" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="&quot;Whether" WC="0.545" CC="68707007" />
+            <SP ID="P271_SP00205" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00227" HPOS="582" VPOS="1638" WIDTH="58" HEIGHT="30" STYLEREFS="StyleId-2" CONTENT="or" WC="0.4" CC="56" />
+            <SP ID="P271_SP00206" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00228" HPOS="655" VPOS="1626" WIDTH="92" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="not" WC="0.166666672" CC="1069" />
+            <SP ID="P271_SP00207" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00229" HPOS="763" VPOS="1623" WIDTH="59" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="he" WC="0.93" CC="01" />
+            <SP ID="P271_SP00208" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00230" HPOS="837" VPOS="1622" WIDTH="181" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="sought" WC="0.35" CC="7771007" />
+            <SP ID="P271_SP00209" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00231" HPOS="1035" VPOS="1624" WIDTH="56" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="to" WC="0.32" CC="94" />
+            <SP ID="P271_SP00210" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00232" HPOS="1109" VPOS="1620" WIDTH="199" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="retrieve" WC="0.755" CC="60050700" />
+            <SP ID="P271_SP00211" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00233" HPOS="1323" VPOS="1620" WIDTH="83" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="the" WC="0.7033333" CC="071" />
+            <SP ID="P271_SP00212" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00234" HPOS="1422" VPOS="1619" WIDTH="305" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="misfortunes" WC="0.5954546" CC="00700697607" />
+            <SP ID="P271_SP00213" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00235" HPOS="1743" VPOS="1619" WIDTH="116" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="that" WC="0.395" CC="70610" />
+          </TextLine>
+          <TextLine ID="P271_TL00023" HPOS="340" VPOS="1687" WIDTH="1519" HEIGHT="54">
+            <String ID="P271_S00236" HPOS="340" VPOS="1691" WIDTH="99" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="had" WC="0.6666667" CC="1000" />
+            <SP ID="P271_SP00214" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00237" HPOS="475" VPOS="1690" WIDTH="229" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="attended" WC="0.82125" CC="70006000" />
+            <SP ID="P271_SP00215" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00238" HPOS="739" VPOS="1689" WIDTH="97" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="him" WC="1" CC="000" />
+            <SP ID="P271_SP00216" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00239" HPOS="870" VPOS="1688" WIDTH="49" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="in" WC="0.77" CC="04" />
+            <SP ID="P271_SP00217" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00240" HPOS="954" VPOS="1687" WIDTH="154" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="South" WC="0.61" CC="102700" />
+            <SP ID="P271_SP00218" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00241" HPOS="1143" VPOS="1686" WIDTH="233" HEIGHT="47" STYLEREFS="StyleId-2" CONTENT="Carolina," WC="0.436666667" CC="694023897" />
+            <SP ID="P271_SP00219" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00242" HPOS="1405" VPOS="1685" WIDTH="48" HEIGHT="48" STYLEREFS="StyleId-2" CONTENT="in" WC="1" CC="00" />
+            <SP ID="P271_SP00220" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00243" HPOS="1481" VPOS="1685" WIDTH="272" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="assaulting" WC="0.634" CC="0750700069" />
+            <SP ID="P271_SP00221" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00244" HPOS="1776" VPOS="1685" WIDTH="83" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="the" WC="0.99333334" CC="000" />
+          </TextLine>
+          <TextLine ID="P271_TL00024" HPOS="341" VPOS="1754" WIDTH="1516" HEIGHT="54">
+            <String ID="P271_S00245" HPOS="341" VPOS="1757" WIDTH="206" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="enemy's" WC="0.7285714" CC="1701017" />
+            <SP ID="P271_SP00222" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00246" HPOS="564" VPOS="1756" WIDTH="170" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="works," WC="0.501666665" CC="1007066" />
+            <SP ID="P271_SP00223" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00247" HPOS="754" VPOS="1755" WIDTH="40" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="is" WC="0.565" CC="35" />
+            <SP ID="P271_SP00224" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00248" HPOS="814" VPOS="1767" WIDTH="31" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P271_SP00225" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00249" HPOS="864" VPOS="1754" WIDTH="219" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="question" WC="0.61875" CC="07560407" />
+            <SP ID="P271_SP00226" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00250" HPOS="1108" VPOS="1752" WIDTH="148" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="which" WC="1" CC="00000" />
+            <SP ID="P271_SP00227" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00251" HPOS="1282" VPOS="1753" WIDTH="113" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="need" WC="0.7325" CC="3007" />
+            <SP ID="P271_SP00228" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00252" HPOS="1421" VPOS="1754" WIDTH="91" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="not" WC="0.68" CC="810" />
+            <SP ID="P271_SP00229" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00253" HPOS="1537" VPOS="1752" WIDTH="58" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="be" WC="0.96" CC="00" />
+            <SP ID="P271_SP00230" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00254" HPOS="1620" VPOS="1751" WIDTH="237" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="discussed" WC="0.595555544" CC="0010471409" />
+          </TextLine>
+          <TextLine ID="P271_TL00025" HPOS="342" VPOS="1819" WIDTH="1516" HEIGHT="54">
+            <String ID="P271_S00255" HPOS="342" VPOS="1823" WIDTH="119" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="here." WC="0.8" CC="001000" />
+            <SP ID="P271_SP00231" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00256" HPOS="516" VPOS="1822" WIDTH="48" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="It" WC="1" CC="00" />
+            <SP ID="P271_SP00232" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00257" HPOS="582" VPOS="1822" WIDTH="41" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="is" WC="0.53" CC="35" />
+            <SP ID="P271_SP00233" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00258" HPOS="642" VPOS="1821" WIDTH="112" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="only" WC="0.7675" CC="0720" />
+            <SP ID="P271_SP00234" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00259" HPOS="772" VPOS="1832" WIDTH="246" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="necessary" WC="0.6811111" CC="700076060" />
+            <SP ID="P271_SP00235" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00260" HPOS="1034" VPOS="1820" WIDTH="56" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P271_SP00236" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00261" HPOS="1117" VPOS="1818" WIDTH="130" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="show" WC="0.8225" CC="7000" />
+            <SP ID="P271_SP00237" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00262" HPOS="1272" VPOS="1818" WIDTH="83" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00238" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00263" HPOS="1372" VPOS="1817" WIDTH="247" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="miserable" WC="0.8466667" CC="004360000" />
+            <SP ID="P271_SP00239" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00264" HPOS="1636" VPOS="1817" WIDTH="222" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="misman¬" WC="0.762857139" CC="0060064" />
+          </TextLine>
+          <TextLine ID="P271_TL00026" HPOS="343" VPOS="1885" WIDTH="1516" HEIGHT="55">
+            <String ID="P271_S00265" HPOS="343" VPOS="1890" WIDTH="221" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="agement" WC="0.9042857" CC="0000060" />
+            <SP ID="P271_SP00240" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00266" HPOS="592" VPOS="1887" WIDTH="53" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="of" WC="0.9" CC="02" />
+            <SP ID="P271_SP00241" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00267" HPOS="663" VPOS="1886" WIDTH="84" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00242" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00268" HPOS="773" VPOS="1886" WIDTH="212" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="advance" WC="0.894285738" CC="0000700" />
+            <SP ID="P271_SP00243" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00269" HPOS="1009" VPOS="1885" WIDTH="105" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="into" WC="0.815" CC="7000" />
+            <SP ID="P271_SP00244" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00270" HPOS="1141" VPOS="1884" WIDTH="82" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00245" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00271" HPOS="1257" VPOS="1883" WIDTH="205" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="enemy's" WC="0.7757143" CC="0600026" />
+            <SP ID="P271_SP00246" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00272" HPOS="1488" VPOS="1886" WIDTH="219" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="country." WC="0.66875" CC="40560603" />
+            <SP ID="P271_SP00247" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00273" HPOS="1761" VPOS="1883" WIDTH="98" HEIGHT="60" STYLEREFS="StyleId-2" CONTENT="The" WC="0.66" CC="072" />
+          </TextLine>
+          <TextLine ID="P271_TL00027" HPOS="341" VPOS="1941" WIDTH="1518" HEIGHT="65">
+            <String ID="P271_S00274" HPOS="341" VPOS="1956" WIDTH="174" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="troops" WC="0.816666663" CC="140005" />
+            <SP ID="P271_SP00248" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00275" HPOS="533" VPOS="1966" WIDTH="115" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="were" WC="0.8075" CC="0070" />
+            <SP ID="P271_SP00249" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00276" HPOS="666" VPOS="1952" WIDTH="219" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="marched" WC="0.867142856" CC="0062000" />
+            <SP ID="P271_SP00250" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00277" HPOS="902" VPOS="1951" WIDTH="106" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="into" WC="0.78" CC="5300" />
+            <SP ID="P271_SP00251" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00278" HPOS="1035" VPOS="1963" WIDTH="64" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="an" WC="0.63" CC="07" />
+            <SP ID="P271_SP00252" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00279" HPOS="1126" VPOS="1939" WIDTH="299" HEIGHT="69" STYLEREFS="StyleId-2" CONTENT="amtmscade," WC="0.509" CC="7687760014" />
+            <SP ID="P271_SP00253" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00280" HPOS="1445" VPOS="1950" WIDTH="151" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="where" WC="0.566" CC="90065" />
+            <SP ID="P271_SP00254" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00281" HPOS="1612" VPOS="1951" WIDTH="116" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="they" WC="1" CC="0000" />
+            <SP ID="P271_SP00255" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00282" HPOS="1743" VPOS="1963" WIDTH="116" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="were" WC="0.85" CC="0060" />
+          </TextLine>
+          <TextLine ID="P271_TL00028" HPOS="343" VPOS="2016" WIDTH="1515" HEIGHT="56">
+            <String ID="P271_S00283" HPOS="343" VPOS="2019" WIDTH="299" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="slaughtered" WC="0.7" CC="740210000710" />
+            <SP ID="P271_SP00256" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00284" HPOS="673" VPOS="2018" WIDTH="63" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P271_SP00257" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00285" HPOS="762" VPOS="2017" WIDTH="82" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="the" WC="0.81" CC="050" />
+            <SP ID="P271_SP00258" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00286" HPOS="869" VPOS="2028" WIDTH="163" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="enemy" WC="0.82" CC="04400" />
+            <SP ID="P271_SP00259" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00287" HPOS="1059" VPOS="2017" WIDTH="55" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P271_SP00260" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00288" HPOS="1138" VPOS="2015" WIDTH="104" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="will." WC="0.802" CC="00432" />
+            <SP ID="P271_SP00261" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00289" HPOS="1297" VPOS="2014" WIDTH="130" HEIGHT="59" STYLEREFS="StyleId-2" CONTENT="Even" WC="0.74" CC="2026" />
+            <SP ID="P271_SP00262" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00290" HPOS="1446" VPOS="2016" WIDTH="124" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="after" WC="0.604" CC="73107" />
+            <SP ID="P271_SP00263" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00291" HPOS="1587" VPOS="2017" WIDTH="182" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="finding" WC="0.82" CC="0060060" />
+            <SP ID="P271_SP00264" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00292" HPOS="1785" VPOS="2016" WIDTH="73" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="his" WC="0.5366667" CC="732" />
+          </TextLine>
+          <TextLine ID="P271_TL00029" HPOS="342" VPOS="2082" WIDTH="1518" HEIGHT="54">
+            <String ID="P271_S00293" HPOS="342" VPOS="2087" WIDTH="171" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="troops" WC="0.463333338" CC="573097" />
+            <SP ID="P271_SP00265" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00294" HPOS="533" VPOS="2082" WIDTH="332" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="ambuscaded," WC="0.7763636" CC="00776000003" />
+            <SP ID="P271_SP00266" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00295" HPOS="886" VPOS="2082" WIDTH="96" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="and" WC="0.78" CC="060" />
+            <SP ID="P271_SP00267" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00296" HPOS="998" VPOS="2081" WIDTH="165" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="within" WC="0.8066667" CC="050006" />
+            <SP ID="P271_SP00268" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00297" HPOS="1180" VPOS="2083" WIDTH="97" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="two" WC="0.8333333" CC="005" />
+            <SP ID="P271_SP00269" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00298" HPOS="1296" VPOS="2081" WIDTH="213" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="hundred" WC="0.7614286" CC="0700900" />
+            <SP ID="P271_SP00270" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00299" HPOS="1537" VPOS="2083" WIDTH="149" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="yards" WC="0.52" CC="076010" />
+            <SP ID="P271_SP00271" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00300" HPOS="1705" VPOS="2083" WIDTH="53" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P271_SP00272" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00301" HPOS="1776" VPOS="2083" WIDTH="83" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+          </TextLine>
+          <TextLine ID="P271_TL00030" HPOS="342" VPOS="2148" WIDTH="1517" HEIGHT="53">
+            <String ID="P271_S00302" HPOS="342" VPOS="2150" WIDTH="296" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="confederate" WC="0.7409091" CC="30703006700" />
+            <SP ID="P271_SP00273" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00303" HPOS="670" VPOS="2147" WIDTH="349" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="fortifications," WC="0.669333339" CC="506002238700364" />
+            <SP ID="P271_SP00274" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00304" HPOS="1058" VPOS="2147" WIDTH="195" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="General" WC="0.7942857" CC="1050700" />
+            <SP ID="P271_SP00275" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00305" HPOS="1289" VPOS="2146" WIDTH="230" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="Seymour" WC="0.71" CC="6000066" />
+            <SP ID="P271_SP00276" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00306" HPOS="1555" VPOS="2149" WIDTH="80" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="did" WC="0.89" CC="030" />
+            <SP ID="P271_SP00277" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00307" HPOS="1670" VPOS="2151" WIDTH="90" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="not" WC="0.76" CC="700" />
+            <SP ID="P271_SP00278" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00308" HPOS="1786" VPOS="2150" WIDTH="73" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="at¬" WC="0.8666667" CC="004" />
+          </TextLine>
+          <TextLine ID="P271_TL00031" HPOS="341" VPOS="2214" WIDTH="1517" HEIGHT="56">
+            <String ID="P271_S00309" HPOS="341" VPOS="2218" WIDTH="157" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="tempt" WC="0.804" CC="00090" />
+            <SP ID="P271_SP00279" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00310" HPOS="523" VPOS="2217" WIDTH="56" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="to" WC="0.91" CC="01" />
+            <SP ID="P271_SP00280" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00311" HPOS="604" VPOS="2213" WIDTH="84" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="fall" WC="0.6175" CC="5054" />
+            <SP ID="P271_SP00281" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00312" HPOS="713" VPOS="2213" WIDTH="122" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="back" WC="0.9725" CC="0010" />
+            <SP ID="P271_SP00282" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00313" HPOS="861" VPOS="2213" WIDTH="96" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="and" WC="0.42" CC="1070" />
+            <SP ID="P271_SP00283" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00314" HPOS="982" VPOS="2213" WIDTH="121" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="form" WC="0.775" CC="2060" />
+            <SP ID="P271_SP00284" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00315" HPOS="1131" VPOS="2226" WIDTH="32" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P271_SP00285" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00316" HPOS="1187" VPOS="2212" WIDTH="90" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="line" WC="0.84" CC="0060" />
+            <SP ID="P271_SP00286" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00317" HPOS="1304" VPOS="2213" WIDTH="53" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="of" WC="0.715" CC="50" />
+            <SP ID="P271_SP00287" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00318" HPOS="1388" VPOS="2214" WIDTH="169" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="battle," WC="0.857142866" CC="0070003" />
+            <SP ID="P271_SP00288" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00319" HPOS="1586" VPOS="2215" WIDTH="189" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="though" WC="0.75333333" CC="070700" />
+            <SP ID="P271_SP00289" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00320" HPOS="1801" VPOS="2215" WIDTH="57" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="he" WC="0.665" CC="60" />
+          </TextLine>
+          <TextLine ID="P271_TL00032" HPOS="341" VPOS="2278" WIDTH="1517" HEIGHT="58">
+            <String ID="P271_S00321" HPOS="341" VPOS="2281" WIDTH="99" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="had" WC="1" CC="000" />
+            <SP ID="P271_SP00290" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00322" HPOS="466" VPOS="2279" WIDTH="230" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="sufficient" WC="0.51" CC="6777700066" />
+            <SP ID="P271_SP00291" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00323" HPOS="722" VPOS="2279" WIDTH="224" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="artillery," WC="0.824" CC="0500110602" />
+            <SP ID="P271_SP00292" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00324" HPOS="976" VPOS="2280" WIDTH="88" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="but" WC="0.87" CC="030" />
+            <SP ID="P271_SP00293" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00325" HPOS="1088" VPOS="2276" WIDTH="172" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="rushed" WC="0.641666651" CC="766001" />
+            <SP ID="P271_SP00294" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00326" HPOS="1288" VPOS="2279" WIDTH="197" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="brigade" WC="0.8214286" CC="0750000" />
+            <SP ID="P271_SP00295" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00327" HPOS="1514" VPOS="2281" WIDTH="122" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="after" WC="0.634" CC="07703" />
+            <SP ID="P271_SP00296" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00328" HPOS="1661" VPOS="2281" WIDTH="197" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="brigade" WC="0.857142866" CC="0540000" />
+          </TextLine>
+          <TextLine ID="P271_TL00033" HPOS="342" VPOS="2345" WIDTH="1515" HEIGHT="56">
+            <String ID="P271_S00329" HPOS="342" VPOS="2359" WIDTH="65" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="up" WC="0.645" CC="70" />
+            <SP ID="P271_SP00297" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00330" HPOS="432" VPOS="2348" WIDTH="56" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P271_SP00298" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00331" HPOS="514" VPOS="2345" WIDTH="84" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P271_SP00299" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00332" HPOS="622" VPOS="2345" WIDTH="204" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="enemy's" WC="0.7557143" CC="0600045" />
+            <SP ID="P271_SP00300" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00333" HPOS="851" VPOS="2358" WIDTH="135" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="guns," WC="0.514" CC="07664" />
+            <SP ID="P271_SP00301" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00334" HPOS="1016" VPOS="2344" WIDTH="113" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="only" WC="0.59" CC="6630" />
+            <SP ID="P271_SP00302" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00335" HPOS="1155" VPOS="2347" WIDTH="55" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="to" WC="0.82" CC="03" />
+            <SP ID="P271_SP00303" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00336" HPOS="1237" VPOS="2345" WIDTH="57" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="be" WC="0.96" CC="00" />
+            <SP ID="P271_SP00304" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00337" HPOS="1323" VPOS="2347" WIDTH="177" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="mowed" WC="0.846" CC="01600" />
+            <SP ID="P271_SP00305" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00338" HPOS="1529" VPOS="2347" WIDTH="139" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="down" WC="1" CC="0000" />
+            <SP ID="P271_SP00306" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00339" HPOS="1693" VPOS="2347" WIDTH="66" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P271_SP00307" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00340" HPOS="1776" VPOS="2347" WIDTH="81" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="the" WC="0.75666666" CC="070" />
+          </TextLine>
+          <TextLine ID="P271_TL00034" HPOS="341" VPOS="2410" WIDTH="1515" HEIGHT="55">
+            <String ID="P271_S00341" HPOS="341" VPOS="2410" WIDTH="249" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="withering" WC="0.7677778" CC="1000003070" />
+            <SP ID="P271_SP00308" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00342" HPOS="606" VPOS="2412" WIDTH="153" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="storm" WC="0.714" CC="70070" />
+            <SP ID="P271_SP00309" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00343" HPOS="779" VPOS="2410" WIDTH="54" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="of" WC="0.845" CC="30" />
+            <SP ID="P271_SP00310" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00344" HPOS="852" VPOS="2411" WIDTH="126" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="shot." WC="0.736" CC="60204" />
+            <SP ID="P271_SP00311" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00345" HPOS="1033" VPOS="2410" WIDTH="128" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="Each" WC="0.9125" CC="3000" />
+            <SP ID="P271_SP00312" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00346" HPOS="1181" VPOS="2410" WIDTH="197" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="brigade" WC="0.8842857" CC="0800000" />
+            <SP ID="P271_SP00313" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00347" HPOS="1395" VPOS="2412" WIDTH="49" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="in" WC="0.77" CC="04" />
+            <SP ID="P271_SP00314" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00348" HPOS="1461" VPOS="2415" WIDTH="115" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="turn" WC="0.6925" CC="0560" />
+            <SP ID="P271_SP00315" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00349" HPOS="1593" VPOS="2416" WIDTH="124" HEIGHT="50" STYLEREFS="StyleId-2" CONTENT="went" WC="0.75" CC="10000" />
+            <SP ID="P271_SP00316" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00350" HPOS="1735" VPOS="2414" WIDTH="47" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="in" WC="0.695" CC="06" />
+            <SP ID="P271_SP00317" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00351" HPOS="1802" VPOS="2427" WIDTH="54" HEIGHT="39" STYLEREFS="StyleId-2" CONTENT="as" WC="0.305" CC="85" />
+          </TextLine>
+          <TextLine ID="P271_TL00035" HPOS="343" VPOS="2476" WIDTH="1513" HEIGHT="58">
+            <String ID="P271_S00352" HPOS="343" VPOS="2476" WIDTH="195" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="spirited" WC="0.78875" CC="70063000" />
+            <SP ID="P271_SP00318" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00353" HPOS="557" VPOS="2489" WIDTH="55" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="as" WC="0.685" CC="06" />
+            <SP ID="P271_SP00319" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00354" HPOS="632" VPOS="2489" WIDTH="96" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="any" WC="0.75333333" CC="070" />
+            <SP ID="P271_SP00320" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00355" HPOS="745" VPOS="2478" WIDTH="171" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="troops" WC="0.783333361" CC="060006" />
+            <SP ID="P271_SP00321" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00356" HPOS="933" VPOS="2488" WIDTH="107" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="ever" WC="0.8775" CC="0004" />
+            <SP ID="P271_SP00322" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00357" HPOS="1056" VPOS="2476" WIDTH="187" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="entered" WC="0.9071429" CC="0100500" />
+            <SP ID="P271_SP00323" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00358" HPOS="1264" VPOS="2489" WIDTH="32" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="a" WC="0.67" CC="3" />
+            <SP ID="P271_SP00324" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00359" HPOS="1313" VPOS="2477" WIDTH="135" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="fight," WC="0.925" CC="000004" />
+            <SP ID="P271_SP00325" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00360" HPOS="1470" VPOS="2478" WIDTH="89" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="but" WC="0.76" CC="070" />
+            <SP ID="P271_SP00326" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00361" HPOS="1578" VPOS="2479" WIDTH="278" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="stampeded" WC="0.812222242" CC="800100006" />
+          </TextLine>
+          <TextLine ID="P271_TL00036" HPOS="344" VPOS="2541" WIDTH="1515" HEIGHT="53">
+            <String ID="P271_S00362" HPOS="344" VPOS="2544" WIDTH="88" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="out" WC="0.543333352" CC="670" />
+            <SP ID="P271_SP00327" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00363" HPOS="460" VPOS="2541" WIDTH="53" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="of" WC="0.835" CC="03" />
+            <SP ID="P271_SP00328" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00364" HPOS="541" VPOS="2541" WIDTH="40" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="it" WC="1" CC="00" />
+            <SP ID="P271_SP00329" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00365" HPOS="606" VPOS="2542" WIDTH="217" HEIGHT="50" STYLEREFS="StyleId-2" CONTENT="maimed," WC="0.751428545" CC="8500003" />
+            <SP ID="P271_SP00330" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00366" HPOS="844" VPOS="2542" WIDTH="219" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="mangled" WC="0.697142839" CC="00710400" />
+            <SP ID="P271_SP00331" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00367" HPOS="1091" VPOS="2542" WIDTH="95" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="and" WC="0.476666659" CC="950" />
+            <SP ID="P271_SP00332" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00368" HPOS="1222" VPOS="2543" WIDTH="184" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="routed." WC="0.8057143" CC="6070000" />
+            <SP ID="P271_SP00333" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00369" HPOS="1477" VPOS="2543" WIDTH="65" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="At" WC="0.69" CC="60" />
+            <SP ID="P271_SP00334" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00370" HPOS="1577" VPOS="2547" WIDTH="167" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="sunset" WC="0.37166667" CC="667709" />
+            <SP ID="P271_SP00335" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00371" HPOS="1775" VPOS="2546" WIDTH="84" HEIGHT="50" STYLEREFS="StyleId-2" CONTENT="the" WC="0.97" CC="000" />
+          </TextLine>
+          <TextLine ID="P271_TL00037" HPOS="342" VPOS="2607" WIDTH="1515" HEIGHT="54">
+            <String ID="P271_S00372" HPOS="343" VPOS="2607" WIDTH="136" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="road," WC="0.648" CC="80800" />
+            <SP ID="P271_SP00336" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00373" HPOS="514" VPOS="2607" WIDTH="270" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="foot-paths" WC="0.822" CC="0000004076" />
+            <SP ID="P271_SP00337" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00374" HPOS="820" VPOS="2607" WIDTH="95" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="and" WC="0.75333333" CC="070" />
+            <SP ID="P271_SP00338" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00375" HPOS="949" VPOS="2607" WIDTH="165" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="woods" WC="0.854" CC="00007" />
+            <SP ID="P271_SP00339" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00376" HPOS="1148" VPOS="2607" WIDTH="190" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="leading" WC="0.5214286" CC="63006710" />
+            <SP ID="P271_SP00340" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00377" HPOS="1371" VPOS="2608" WIDTH="122" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="back" WC="0.805" CC="0016" />
+            <SP ID="P271_SP00341" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00378" HPOS="1518" VPOS="2611" WIDTH="56" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="to" WC="0.89" CC="02" />
+            <SP ID="P271_SP00342" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00379" HPOS="1602" VPOS="2610" WIDTH="255" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="Saunders*" WC="0.521111131" CC="1007600567" />
+          </TextLine>
+          <TextLine ID="P271_TL00038" HPOS="343" VPOS="2673" WIDTH="1516" HEIGHT="55">
+            <String ID="P271_S00380" HPOS="343" VPOS="2673" WIDTH="209" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="Station," WC="0.82375" CC="70000024" />
+            <SP ID="P271_SP00343" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00381" HPOS="589" VPOS="2684" WIDTH="97" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="was" WC="0.8233333" CC="005" />
+            <SP ID="P271_SP00344" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00382" HPOS="720" VPOS="2672" WIDTH="81" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="full" WC="0.8525" CC="0400" />
+            <SP ID="P271_SP00345" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00383" HPOS="837" VPOS="2672" WIDTH="53" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P271_SP00346" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00384" HPOS="917" VPOS="2672" WIDTH="148" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="brave" WC="0.71" CC="06700" />
+            <SP ID="P271_SP00347" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00385" HPOS="1100" VPOS="2672" WIDTH="195" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="soldiers" WC="0.7125" CC="66000063" />
+            <SP ID="P271_SP00348" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00386" HPOS="1329" VPOS="2673" WIDTH="257" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="hastening" WC="0.586666644" CC="7060060710" />
+            <SP ID="P271_SP00349" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00387" HPOS="1618" VPOS="2675" WIDTH="123" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="from" WC="0.7975" CC="0610" />
+            <SP ID="P271_SP00350" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00388" HPOS="1774" VPOS="2676" WIDTH="85" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="the" WC="1" CC="000" />
+          </TextLine>
+          <TextLine ID="P271_TL00039" HPOS="342" VPOS="2738" WIDTH="1517" HEIGHT="59">
+            <String ID="P271_S00389" HPOS="342" VPOS="2750" WIDTH="239" HEIGHT="30" STYLEREFS="StyleId-2" CONTENT="massacre" WC="0.59125" CC="90660460" />
+            <SP ID="P271_SP00351" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00390" HPOS="616" VPOS="2737" WIDTH="53" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P271_SP00352" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00391" HPOS="687" VPOS="2737" WIDTH="123" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="their" WC="0.586" CC="07066" />
+            <SP ID="P271_SP00353" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00392" HPOS="836" VPOS="2738" WIDTH="258" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="comrades," WC="0.7222222" CC="0056000103" />
+            <SP ID="P271_SP00354" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00393" HPOS="1123" VPOS="2737" WIDTH="48" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="in" WC="0.45" CC="64" />
+            <SP ID="P271_SP00355" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00394" HPOS="1197" VPOS="2737" WIDTH="123" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="their" WC="0.71" CC="70007" />
+            <SP ID="P271_SP00356" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00395" HPOS="1345" VPOS="2738" WIDTH="240" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="endeavor" WC="0.81625" CC="07000007" />
+            <SP ID="P271_SP00357" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00396" HPOS="1608" VPOS="2743" WIDTH="57" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="to" WC="0.745" CC="05" />
+            <SP ID="P271_SP00358" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00397" HPOS="1693" VPOS="2755" WIDTH="166" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="escape" WC="0.733333349" CC="060900" />
+          </TextLine>
+          <TextLine ID="P271_TL00040" HPOS="342" VPOS="2801" WIDTH="1516" HEIGHT="55">
+            <String ID="P271_S00398" HPOS="342" VPOS="2807" WIDTH="211" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="capture." WC="0.5475" CC="910007630" />
+            <SP ID="P271_SP00359" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00399" HPOS="589" VPOS="2801" WIDTH="65" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="At" WC="0.665" CC="60" />
+            <SP ID="P271_SP00360" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00400" HPOS="673" VPOS="2802" WIDTH="153" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="about" WC="0.554" CC="77160" />
+            <SP ID="P271_SP00361" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00401" HPOS="844" VPOS="2802" WIDTH="106" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="nine" WC="0.93" CC="1000" />
+            <SP ID="P271_SP00362" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00402" HPOS="968" VPOS="2802" WIDTH="177" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="o'clock" WC="0.9085714" CC="0004000" />
+            <SP ID="P271_SP00363" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00403" HPOS="1163" VPOS="2802" WIDTH="115" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="that" WC="1" CC="0000" />
+            <SP ID="P271_SP00364" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00404" HPOS="1296" VPOS="2802" WIDTH="152" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="night," WC="0.625" CC="560603" />
+            <SP ID="P271_SP00365" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00405" HPOS="1468" VPOS="2805" WIDTH="132" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="what" WC="0.75" CC="10000" />
+            <SP ID="P271_SP00366" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00406" HPOS="1619" VPOS="2807" WIDTH="239" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="remained" WC="0.67125" CC="60000648" />
+          </TextLine>
+          <TextLine ID="P271_TL00041" HPOS="343" VPOS="2865" WIDTH="1518" HEIGHT="58">
+            <String ID="P271_S00407" HPOS="343" VPOS="2870" WIDTH="55" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="of" WC="0.675" CC="51" />
+            <SP ID="P271_SP00367" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00408" HPOS="408" VPOS="2870" WIDTH="82" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="the" WC="0.95" CC="001" />
+            <SP ID="P271_SP00368" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00409" HPOS="506" VPOS="2868" WIDTH="83" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="left" WC="0.9075" CC="0120" />
+            <SP ID="P271_SP00369" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00410" HPOS="607" VPOS="2867" WIDTH="199" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="column," WC="0.5114286" CC="4457074" />
+            <SP ID="P271_SP00370" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00411" HPOS="828" VPOS="2864" WIDTH="186" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="Colonel" WC="0.6628571" CC="6055104" />
+            <SP ID="P271_SP00371" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00412" HPOS="1033" VPOS="2866" WIDTH="376" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="Montgomery's" WC="0.540833354" CC="668602176008" />
+            <SP ID="P271_SP00372" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00413" HPOS="1429" VPOS="2869" WIDTH="209" HEIGHT="54" STYLEREFS="StyleId-2" CONTENT="brigade," WC="0.74375" CC="060100003" />
+            <SP ID="P271_SP00373" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00414" HPOS="1660" VPOS="2873" WIDTH="201" HEIGHT="50" STYLEREFS="StyleId-2" CONTENT="consist¬" WC="0.49125" CC="0471041004" />
+          </TextLine>
+          <TextLine ID="P271_TL00042" HPOS="341" VPOS="2933" WIDTH="1519" HEIGHT="54">
+            <String ID="P271_S00415" HPOS="341" VPOS="2935" WIDTH="85" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="ing" WC="0.26" CC="6510" />
+            <SP ID="P271_SP00374" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00416" HPOS="443" VPOS="2934" WIDTH="54" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="of" WC="0.765" CC="40" />
+            <SP ID="P271_SP00375" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00417" HPOS="515" VPOS="2934" WIDTH="83" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="the" WC="0.75666666" CC="700" />
+            <SP ID="P271_SP00376" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00418" HPOS="617" VPOS="2932" WIDTH="120" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="54th" WC="0.6375" CC="7700" />
+            <SP ID="P271_SP00377" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00419" HPOS="764" VPOS="2932" WIDTH="95" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="and" WC="0.49666667" CC="950" />
+            <SP ID="P271_SP00378" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00420" HPOS="886" VPOS="2932" WIDTH="121" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="35th" WC="0.655" CC="7500" />
+            <SP ID="P271_SP00379" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00421" HPOS="1033" VPOS="2932" WIDTH="221" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="Phalanx" WC="0.5642857" CC="7505057" />
+            <SP ID="P271_SP00380" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00422" HPOS="1282" VPOS="2932" WIDTH="281" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="Regiments," WC="0.65" CC="7740005064" />
+            <SP ID="P271_SP00381" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00423" HPOS="1586" VPOS="2937" WIDTH="95" HEIGHT="53" STYLEREFS="StyleId-2" CONTENT="and" WC="0.47" CC="870" />
+            <SP ID="P271_SP00382" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00424" HPOS="1702" VPOS="2950" WIDTH="32" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="a" WC="0" CC="10" />
+            <SP ID="P271_SP00383" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P271_S00425" HPOS="1750" VPOS="2938" WIDTH="110" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="bat-" WC="0.7975" CC="0034" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

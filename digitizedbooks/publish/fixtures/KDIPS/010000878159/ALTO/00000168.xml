@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0168.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P167" PHYSICAL_IMG_NR="167" HEIGHT="1925" WIDTH="2817" ACCURACY="0.6647143" QUALITY_DETAIL="6 words, 26 chars, 18 with recognition greater than 50% (69.23%)">
+      <TopMargin ID="P167_TM00001" HPOS="0" VPOS="0" WIDTH="2817" HEIGHT="2518" />
+      <LeftMargin ID="P167_LM00001" HPOS="0" VPOS="2518" WIDTH="194" HEIGHT="-2229" />
+      <RightMargin ID="P167_RM00001" HPOS="1710" VPOS="2518" WIDTH="1107" HEIGHT="-2229" />
+      <BottomMargin ID="P167_BM00001" HPOS="0" VPOS="289" WIDTH="2817" HEIGHT="1636" />
+      <PrintSpace ID="P167_PS00001" HPOS="194" VPOS="2518" WIDTH="1516" HEIGHT="-2229">
+        <Illustration ID="P167_ILL00001" HPOS="194" VPOS="2518" WIDTH="1443" HEIGHT="-2229" />
+        <TextBlock ID="P167_TB00001" HPOS="1643" VPOS="1788" WIDTH="61" HEIGHT="-804">
+          <TextLine ID="P167_TL00001" HPOS="1650" VPOS="1779" WIDTH="46" HEIGHT="-787">
+            <String ID="P167_S00001" HPOS="1653" VPOS="1745" WIDTH="31" HEIGHT="6" STYLEREFS="StyleId-0" CONTENT="A." WC="0.765" CC="40" />
+            <SP ID="P167_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P167_S00002" HPOS="1653" VPOS="1675" WIDTH="30" HEIGHT="76" STYLEREFS="StyleId-0" CONTENT="M." WC="0.775" CC="04" />
+            <SP ID="P167_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P167_S00003" HPOS="1652" VPOS="1608" WIDTH="31" HEIGHT="143" STYLEREFS="StyleId-0" CONTENT="E." WC="0.63" CC="70" />
+            <SP ID="P167_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P167_S00004" HPOS="1653" VPOS="1325" WIDTH="39" HEIGHT="426" STYLEREFS="StyleId-0" CONTENT="Parsonage," WC="0.754" CC="0046002470" />
+            <SP ID="P167_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P167_S00005" HPOS="1654" VPOS="1121" WIDTH="41" HEIGHT="630" STYLEREFS="StyleId-0" CONTENT="Dothan," WC="0.5542857" CC="6085260" />
+            <SP ID="P167_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P167_S00006" HPOS="1657" VPOS="998" WIDTH="31" HEIGHT="753" STYLEREFS="StyleId-0" CONTENT="Au." WC="0.51" CC="4100" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

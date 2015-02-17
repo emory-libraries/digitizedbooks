@@ -1,0 +1,142 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cam a2200421Ia 4500</leader>
+    <controlfield tag="001">000969547</controlfield>
+    <controlfield tag="003">OCoLC</controlfield>
+    <controlfield tag="005">20141022111203.0</controlfield>
+    <controlfield tag="008">750923s1888    ctuac    b    000 0 eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">02017127</subfield>
+    </datafield>
+    <datafield ind1="9" ind2=" " tag="035">
+      <subfield code="a">u1669135</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">ocm01651183</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(Sirsi) o01651183</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">DLC</subfield>
+      <subfield code="c">FBA</subfield>
+      <subfield code="d">SER</subfield>
+      <subfield code="d">EMU</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="043">
+      <subfield code="a">n-us---</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">EMUU</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="050">
+      <subfield code="a">E185.63</subfield>
+      <subfield code="b">.W8</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="092">
+      <subfield code="a">F973.74</subfield>
+      <subfield code="b">W749</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Wilson, Joseph T.</subfield>
+      <subfield code="q">(Joseph Thomas),</subfield>
+      <subfield code="d">1836-1891.</subfield>
+      <subfield code="0">EMU10000634344</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="245">
+      <subfield code="a">The black phalanx :</subfield>
+      <subfield code="b">a history of the Negro soldiers of the United States in the war of 1775-1812, 1861-'65 /</subfield>
+      <subfield code="c">by Joseph T. Wilson.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Hartford, Conn. :</subfield>
+      <subfield code="b">American Publishing Company,</subfield>
+      <subfield code="c">1888.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">528 pages :</subfield>
+      <subfield code="b">illustrations, portraits ;</subfield>
+      <subfield code="c">23 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">digitized</subfield>
+      <subfield code="c">20141022</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-T</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="504">
+      <subfield code="a">Bibliography: page 517.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">pt. I. The wars for independence -- pt. II. The war between the states -- pt. III. Miscellany.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Woodruff Special Collections copy has presentation inscription: Marysville Sep. 11th 1897, presented by Mrs. J.J. Porter.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">United States</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="y">Civil War, 1861-1865</subfield>
+      <subfield code="x">Participation, African American.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">United States</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="y">Revolution, 1775-1783</subfield>
+      <subfield code="x">Participation, African American.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">United States</subfield>
+      <subfield code="x">History</subfield>
+      <subfield code="y">War of 1812</subfield>
+      <subfield code="x">Participation, African American.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">African American soldiers.</subfield>
+      <subfield code="0">EMU10001481175</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU emuwsc dmf</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">9DT</subfield>
+      <subfield code="2">20020328</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">E185.63 .W815 1888</subfield>
+      <subfield code="b">unavailable</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090928</subfield>
+      <subfield code="i">010000154039</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">19970530</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+  </record>
+</collection>

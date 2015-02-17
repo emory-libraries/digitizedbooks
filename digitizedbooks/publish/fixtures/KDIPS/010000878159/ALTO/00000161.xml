@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0161.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P160" PHYSICAL_IMG_NR="160" HEIGHT="1900" WIDTH="2800" ACCURACY="0.500833333" QUALITY_DETAIL="6 words, 26 chars, 8 with recognition greater than 50% (30.77%)">
+      <TopMargin ID="P160_TM00001" HPOS="0" VPOS="0" WIDTH="2800" HEIGHT="2501" />
+      <LeftMargin ID="P160_LM00001" HPOS="0" VPOS="2501" WIDTH="185" HEIGHT="-2203" />
+      <RightMargin ID="P160_RM00001" HPOS="1718" VPOS="2501" WIDTH="1082" HEIGHT="-2203" />
+      <BottomMargin ID="P160_BM00001" HPOS="0" VPOS="298" WIDTH="2800" HEIGHT="1602" />
+      <PrintSpace ID="P160_PS00001" HPOS="185" VPOS="2501" WIDTH="1533" HEIGHT="-2203">
+        <Illustration ID="P160_ILL00001" HPOS="185" VPOS="2501" WIDTH="1437" HEIGHT="-2203" />
+        <TextBlock ID="P160_TB00001" HPOS="1657" VPOS="1836" WIDTH="61" HEIGHT="-805">
+          <TextLine ID="P160_TL00001" HPOS="1665" VPOS="1827" WIDTH="45" HEIGHT="-788">
+            <String ID="P160_S00001" HPOS="1668" VPOS="1731" WIDTH="31" HEIGHT="63" STYLEREFS="StyleId-0" CONTENT="Rev." WC="0.4625" CC="7770" />
+            <SP ID="P160_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P160_S00002" HPOS="1668" VPOS="1661" WIDTH="31" HEIGHT="133" STYLEREFS="StyleId-0" CONTENT="A." WC="0.66" CC="60" />
+            <SP ID="P160_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P160_S00003" HPOS="1668" VPOS="1582" WIDTH="30" HEIGHT="212" STYLEREFS="StyleId-0" CONTENT="W." WC="0.79" CC="40" />
+            <SP ID="P160_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P160_S00004" HPOS="1668" VPOS="1364" WIDTH="29" HEIGHT="430" STYLEREFS="StyleId-0" CONTENT="Atwatkr" WC="0.362857133" CC="6838288" />
+            <SP ID="P160_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P160_S00005" HPOS="1675" VPOS="1229" WIDTH="35" HEIGHT="565" STYLEREFS="StyleId-0" CONTENT="and." WC="0.3525" CC="8574" />
+            <SP ID="P160_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P160_S00006" HPOS="1665" VPOS="1046" WIDTH="33" HEIGHT="748" STYLEREFS="StyleId-0" CONTENT="Family." WC="0.377142847" CC="5767980" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

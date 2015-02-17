@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000015.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="9" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P15" PHYSICAL_IMG_NR="15" HEIGHT="2800" WIDTH="1900" ACCURACY="0.814850032" QUALITY_DETAIL="344 words, 1629 chars, 1352 with recognition greater than 50% (83.00%)">
+      <TopMargin ID="P15_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="263" />
+      <LeftMargin ID="P15_LM00001" HPOS="0" VPOS="263" WIDTH="174" HEIGHT="2278" />
+      <RightMargin ID="P15_RM00001" HPOS="1727" VPOS="263" WIDTH="173" HEIGHT="2278" />
+      <BottomMargin ID="P15_BM00001" HPOS="0" VPOS="2541" WIDTH="1900" HEIGHT="259" />
+      <PrintSpace ID="P15_PS00001" HPOS="174" VPOS="263" WIDTH="1553" HEIGHT="2278">
+        <TextBlock ID="P15_TB00001" HPOS="667" VPOS="263" WIDTH="572" HEIGHT="62">
+          <TextLine ID="P15_TL00001" HPOS="675" VPOS="271" WIDTH="556" HEIGHT="40">
+            <String ID="P15_S00001" HPOS="675" VPOS="271" WIDTH="203" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="WOMAN" WC="1" CC="00000" />
+            <SP ID="P15_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00002" HPOS="897" VPOS="273" WIDTH="56" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="IN" WC="0.97" CC="00" />
+            <SP ID="P15_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00003" HPOS="972" VPOS="274" WIDTH="259" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="MEDICINE" WC="0.98375" CC="00001000" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P15_TB00002" HPOS="1660" VPOS="271" WIDTH="61" HEIGHT="58">
+          <TextLine ID="P15_TL00002" HPOS="1668" VPOS="279" WIDTH="45" HEIGHT="37">
+            <String ID="P15_S00004" HPOS="1668" VPOS="279" WIDTH="45" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="13" WC="0.265" CC="77" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P15_TB00003" HPOS="174" VPOS="375" WIDTH="1553" HEIGHT="2166">
+          <TextLine ID="P15_TL00003" HPOS="183" VPOS="383" WIDTH="1526" HEIGHT="58">
+            <String ID="P15_S00005" HPOS="183" VPOS="383" WIDTH="90" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="this" WC="0.7475" CC="5400" />
+            <SP ID="P15_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00006" HPOS="294" VPOS="385" WIDTH="138" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="work," WC="0.844" CC="01500" />
+            <SP ID="P15_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00007" HPOS="459" VPOS="385" WIDTH="46" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="in" WC="0.365" CC="48" />
+            <SP ID="P15_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00008" HPOS="527" VPOS="387" WIDTH="146" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="which" WC="0.79" CC="05004" />
+            <SP ID="P15_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00009" HPOS="694" VPOS="389" WIDTH="90" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="this" WC="0.97" CC="1000" />
+            <SP ID="P15_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00010" HPOS="805" VPOS="390" WIDTH="208" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="religious" WC="0.668888867" CC="060477040" />
+            <SP ID="P15_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00011" HPOS="1034" VPOS="405" WIDTH="184" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="woman," WC="0.88166666" CC="000060" />
+            <SP ID="P15_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00012" HPOS="1240" VPOS="393" WIDTH="221" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="evidently" WC="0.8333333" CC="004007030" />
+            <SP ID="P15_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00013" HPOS="1482" VPOS="395" WIDTH="227" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="grounded" WC="0.55375" CC="72077704" />
+          </TextLine>
+          <TextLine ID="P15_TL00004" HPOS="183" VPOS="449" WIDTH="1523" HEIGHT="57">
+            <String ID="P15_S00014" HPOS="183" VPOS="449" WIDTH="46" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="in" WC="0.53" CC="26" />
+            <SP ID="P15_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00015" HPOS="253" VPOS="450" WIDTH="57" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="all" WC="0.86" CC="040" />
+            <SP ID="P15_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00016" HPOS="332" VPOS="451" WIDTH="97" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="that" WC="1" CC="0000" />
+            <SP ID="P15_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00017" HPOS="450" VPOS="464" WIDTH="90" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="was" WC="1" CC="000" />
+            <SP ID="P15_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00018" HPOS="573" VPOS="453" WIDTH="165" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="known" WC="0.892" CC="05000" />
+            <SP ID="P15_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00019" HPOS="761" VPOS="461" WIDTH="44" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P15_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00020" HPOS="825" VPOS="456" WIDTH="95" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="that" WC="0.9125" CC="0300" />
+            <SP ID="P15_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00021" HPOS="941" VPOS="456" WIDTH="106" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="time" WC="0.7125" CC="8020" />
+            <SP ID="P15_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00022" HPOS="1068" VPOS="458" WIDTH="46" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="of" WC="0.73" CC="32" />
+            <SP ID="P15_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00023" HPOS="1133" VPOS="459" WIDTH="75" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00024" HPOS="1248" VPOS="465" WIDTH="163" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="secrets" WC="0.938571453" CC="0400000" />
+            <SP ID="P15_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00025" HPOS="1450" VPOS="460" WIDTH="45" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="of" WC="0.59" CC="25" />
+            <SP ID="P15_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00026" HPOS="1534" VPOS="466" WIDTH="172" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="nature," WC="0.8142857" CC="6000104" />
+          </TextLine>
+          <TextLine ID="P15_TL00005" HPOS="183" VPOS="515" WIDTH="1529" HEIGHT="57">
+            <String ID="P15_S00027" HPOS="183" VPOS="515" WIDTH="221" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="discusses" WC="0.802222252" CC="740050000" />
+            <SP ID="P15_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00028" HPOS="426" VPOS="518" WIDTH="85" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="and" WC="0.67" CC="207" />
+            <SP ID="P15_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00029" HPOS="534" VPOS="519" WIDTH="227" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="examines" WC="0.93875" CC="00004000" />
+            <SP ID="P15_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00030" HPOS="794" VPOS="522" WIDTH="214" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="carefully" WC="0.79" CC="004033050" />
+            <SP ID="P15_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00031" HPOS="1050" VPOS="524" WIDTH="55" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="all" WC="1" CC="000" />
+            <SP ID="P15_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00032" HPOS="1146" VPOS="525" WIDTH="75" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00033" HPOS="1260" VPOS="525" WIDTH="257" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="knowledge" WC="0.825555563" CC="560030000" />
+            <SP ID="P15_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00034" HPOS="1557" VPOS="525" WIDTH="45" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.815" CC="03" />
+            <SP ID="P15_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00035" HPOS="1636" VPOS="526" WIDTH="76" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="0.776666641" CC="060" />
+          </TextLine>
+          <TextLine ID="P15_TL00006" HPOS="184" VPOS="582" WIDTH="1528" HEIGHT="56">
+            <String ID="P15_S00036" HPOS="184" VPOS="582" WIDTH="121" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="time." WC="0.984" CC="00000" />
+            <SP ID="P15_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00037" HPOS="372" VPOS="585" WIDTH="39" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="It" WC="0.845" CC="30" />
+            <SP ID="P15_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00038" HPOS="433" VPOS="583" WIDTH="36" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="is" WC="1" CC="00" />
+            <SP ID="P15_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00039" HPOS="489" VPOS="585" WIDTH="167" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="certain" WC="0.857142866" CC="0050004" />
+            <SP ID="P15_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00040" HPOS="677" VPOS="585" WIDTH="66" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="St." WC="1" CC="000" />
+            <SP ID="P15_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00041" HPOS="798" VPOS="587" WIDTH="271" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Hildegarde" WC="0.818" CC="6170000300" />
+            <SP ID="P15_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00042" HPOS="1110" VPOS="590" WIDTH="128" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="knew" WC="0.9725" CC="0010" />
+            <SP ID="P15_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00043" HPOS="1258" VPOS="603" WIDTH="130" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="many" WC="0.855" CC="5000" />
+            <SP ID="P15_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00044" HPOS="1430" VPOS="591" WIDTH="150" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="things" WC="0.815" CC="003700" />
+            <SP ID="P15_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00045" HPOS="1614" VPOS="592" WIDTH="98" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="that" WC="0.615" CC="0509" />
+          </TextLine>
+          <TextLine ID="P15_TL00007" HPOS="182" VPOS="650" WIDTH="1065" HEIGHT="49">
+            <String ID="P15_S00046" HPOS="182" VPOS="661" WIDTH="115" HEIGHT="27" STYLEREFS="StyleId-1" CONTENT="were" WC="0.6525" CC="9031" />
+            <SP ID="P15_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00047" HPOS="319" VPOS="650" WIDTH="227" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="unknown" WC="0.697142839" CC="3506006" />
+            <SP ID="P15_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00048" HPOS="568" VPOS="656" WIDTH="45" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00049" HPOS="635" VPOS="652" WIDTH="253" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="physicians" WC="0.966" CC="0100000100" />
+            <SP ID="P15_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00050" HPOS="918" VPOS="654" WIDTH="45" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="of" WC="0.805" CC="03" />
+            <SP ID="P15_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00051" HPOS="985" VPOS="655" WIDTH="76" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="her" WC="0.6766667" CC="603" />
+            <SP ID="P15_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00052" HPOS="1090" VPOS="655" WIDTH="157" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="time.&quot;" WC="0.821666658" CC="003006" />
+          </TextLine>
+          <TextLine ID="P15_TL00008" HPOS="270" VPOS="715" WIDTH="1438" HEIGHT="53">
+            <String ID="P15_S00053" HPOS="270" VPOS="716" WIDTH="52" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="In" WC="1" CC="00" />
+            <SP ID="P15_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00054" HPOS="344" VPOS="716" WIDTH="75" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00055" HPOS="440" VPOS="715" WIDTH="225" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="sixteenth" WC="0.923333347" CC="000000600" />
+            <SP ID="P15_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00056" HPOS="687" VPOS="723" WIDTH="199" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="century," WC="0.83625" CC="00504101" />
+            <SP ID="P15_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00057" HPOS="911" VPOS="720" WIDTH="75" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00058" HPOS="1007" VPOS="721" WIDTH="131" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="study" WC="0.792" CC="20800" />
+            <SP ID="P15_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00059" HPOS="1159" VPOS="721" WIDTH="84" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="and" WC="0.913333356" CC="020" />
+            <SP ID="P15_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00060" HPOS="1265" VPOS="721" WIDTH="187" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="practice" WC="0.95" CC="40000000" />
+            <SP ID="P15_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00061" HPOS="1490" VPOS="722" WIDTH="45" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="of" WC="0.78" CC="04" />
+            <SP ID="P15_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00062" HPOS="1574" VPOS="721" WIDTH="134" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="medi¬" WC="0.85" CC="00043" />
+          </TextLine>
+          <TextLine ID="P15_TL00009" HPOS="185" VPOS="780" WIDTH="1526" HEIGHT="53">
+            <String ID="P15_S00063" HPOS="185" VPOS="780" WIDTH="99" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="cine" WC="0.8925" CC="0040" />
+            <SP ID="P15_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00064" HPOS="313" VPOS="781" WIDTH="59" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P15_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00065" HPOS="389" VPOS="794" WIDTH="186" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="women," WC="0.928333342" CC="000040" />
+            <SP ID="P15_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00066" HPOS="601" VPOS="783" WIDTH="141" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="began" WC="1" CC="00000" />
+            <SP ID="P15_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00067" HPOS="774" VPOS="785" WIDTH="231" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="gradually" WC="0.701111138" CC="1003050430" />
+            <SP ID="P15_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00068" HPOS="1027" VPOS="791" WIDTH="44" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00069" HPOS="1106" VPOS="786" WIDTH="182" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="decline," WC="0.91" CC="00000600" />
+            <SP ID="P15_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00070" HPOS="1315" VPOS="787" WIDTH="84" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="and" WC="0.69" CC="620" />
+            <SP ID="P15_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00071" HPOS="1434" VPOS="787" WIDTH="163" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="during" WC="0.7633333" CC="080050" />
+            <SP ID="P15_SP00063" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00072" HPOS="1634" VPOS="788" WIDTH="77" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="the" WC="0.776666641" CC="006" />
+          </TextLine>
+          <TextLine ID="P15_TL00010" HPOS="184" VPOS="845" WIDTH="1532" HEIGHT="54">
+            <String ID="P15_S00073" HPOS="184" VPOS="845" WIDTH="231" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="following" WC="0.6755555" CC="100308259" />
+            <SP ID="P15_SP00064" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00074" HPOS="436" VPOS="848" WIDTH="221" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="centuries" WC="0.74" CC="007960000" />
+            <SP ID="P15_SP00065" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00075" HPOS="679" VPOS="849" WIDTH="191" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="actually" WC="0.96625" CC="10000100" />
+            <SP ID="P15_SP00066" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00076" HPOS="892" VPOS="850" WIDTH="99" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="died" WC="0.92" CC="0300" />
+            <SP ID="P15_SP00067" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00077" HPOS="1013" VPOS="856" WIDTH="78" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="out" WC="0.75666666" CC="070" />
+            <SP ID="P15_SP00068" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00078" HPOS="1111" VPOS="852" WIDTH="84" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="and" WC="0.423333347" CC="880" />
+            <SP ID="P15_SP00069" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00079" HPOS="1217" VPOS="851" WIDTH="174" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="became" WC="0.99" CC="000000" />
+            <SP ID="P15_SP00070" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00080" HPOS="1410" VPOS="853" WIDTH="184" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="entirely" WC="0.985" CC="00001000" />
+            <SP ID="P15_SP00071" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00081" HPOS="1623" VPOS="853" WIDTH="93" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="for-:" WC="0.836" CC="10024" />
+          </TextLine>
+          <TextLine ID="P15_TL00011" HPOS="184" VPOS="914" WIDTH="1531" HEIGHT="50">
+            <String ID="P15_S00082" HPOS="184" VPOS="917" WIDTH="169" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="gotten." WC="0.807142854" CC="7000014" />
+            <SP ID="P15_SP00072" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00083" HPOS="426" VPOS="914" WIDTH="99" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Just" WC="0.745" CC="3303" />
+            <SP ID="P15_SP00073" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00084" HPOS="547" VPOS="914" WIDTH="100" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="how" WC="0.98" CC="000" />
+            <SP ID="P15_SP00074" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00085" HPOS="679" VPOS="914" WIDTH="89" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="this" WC="0.7875" CC="0017" />
+            <SP ID="P15_SP00075" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00086" HPOS="798" VPOS="916" WIDTH="230" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="happened" WC="0.905" CC="00070000" />
+            <SP ID="P15_SP00076" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00087" HPOS="1053" VPOS="916" WIDTH="36" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="is" WC="0.695" CC="23" />
+            <SP ID="P15_SP00077" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00088" HPOS="1111" VPOS="917" WIDTH="108" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="hard" WC="0.7825" CC="0620" />
+            <SP ID="P15_SP00078" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00089" HPOS="1261" VPOS="922" WIDTH="44" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00079" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00090" HPOS="1327" VPOS="929" WIDTH="91" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="say." WC="1" CC="0000" />
+            <SP ID="P15_SP00080" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00091" HPOS="1497" VPOS="919" WIDTH="41" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="It" WC="1" CC="00" />
+            <SP ID="P15_SP00081" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00092" HPOS="1560" VPOS="918" WIDTH="36" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="is" WC="1" CC="00" />
+            <SP ID="P15_SP00082" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00093" HPOS="1617" VPOS="918" WIDTH="98" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="like1" WC="0.756" CC="30026" />
+          </TextLine>
+          <TextLine ID="P15_TL00012" HPOS="185" VPOS="978" WIDTH="1390" HEIGHT="49">
+            <String ID="P15_S00094" HPOS="185" VPOS="978" WIDTH="126" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="other" WC="0.962" CC="00001" />
+            <SP ID="P15_SP00083" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00095" HPOS="333" VPOS="978" WIDTH="167" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="human" WC="0.568" CC="050105" />
+            <SP ID="P15_SP00084" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00096" HPOS="522" VPOS="979" WIDTH="204" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="interests" WC="0.853333354" CC="450000002" />
+            <SP ID="P15_SP00085" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00097" HPOS="746" VPOS="981" WIDTH="97" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="that" WC="1" CC="0000" />
+            <SP ID="P15_SP00086" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00098" HPOS="863" VPOS="981" WIDTH="111" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="have" WC="0.6075" CC="6720" />
+            <SP ID="P15_SP00087" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00099" HPOS="1004" VPOS="981" WIDTH="123" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="been," WC="0.958" CC="00020" />
+            <SP ID="P15_SP00088" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00100" HPOS="1150" VPOS="982" WIDTH="84" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="and" WC="0.78" CC="060" />
+            <SP ID="P15_SP00089" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00101" HPOS="1272" VPOS="983" WIDTH="150" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="ceased" WC="0.923333347" CC="000400" />
+            <SP ID="P15_SP00090" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00102" HPOS="1444" VPOS="988" WIDTH="44" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00091" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00103" HPOS="1509" VPOS="983" WIDTH="66" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="be." WC="0.873333335" CC="003" />
+          </TextLine>
+          <TextLine ID="P15_TL00013" HPOS="270" VPOS="1042" WIDTH="1438" HEIGHT="51">
+            <String ID="P15_S00104" HPOS="270" VPOS="1042" WIDTH="97" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="The" WC="0.75" CC="700" />
+            <SP ID="P15_SP00092" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00105" HPOS="387" VPOS="1044" WIDTH="166" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="revival" WC="0.8" CC="4042020" />
+            <SP ID="P15_SP00093" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00106" HPOS="575" VPOS="1046" WIDTH="46" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="of" WC="0.7" CC="06" />
+            <SP ID="P15_SP00094" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00107" HPOS="641" VPOS="1046" WIDTH="75" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="the" WC="0.89" CC="300" />
+            <SP ID="P15_SP00095" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00108" HPOS="737" VPOS="1046" WIDTH="133" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="study" WC="0.908" CC="00400" />
+            <SP ID="P15_SP00096" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00109" HPOS="892" VPOS="1046" WIDTH="46" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.79" CC="04" />
+            <SP ID="P15_SP00097" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00110" HPOS="958" VPOS="1046" WIDTH="214" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="medicine" WC="0.895" CC="00010060" />
+            <SP ID="P15_SP00098" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00111" HPOS="1194" VPOS="1047" WIDTH="74" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="did" WC="0.72" CC="620" />
+            <SP ID="P15_SP00099" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00112" HPOS="1310" VPOS="1052" WIDTH="77" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="not" WC="1" CC="000" />
+            <SP ID="P15_SP00100" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00113" HPOS="1426" VPOS="1059" WIDTH="128" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="occur" WC="0.844" CC="00052" />
+            <SP ID="P15_SP00101" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00114" HPOS="1594" VPOS="1048" WIDTH="114" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="until" WC="0.848" CC="50020" />
+          </TextLine>
+          <TextLine ID="P15_TL00014" HPOS="185" VPOS="1109" WIDTH="1527" HEIGHT="51">
+            <String ID="P15_S00115" HPOS="185" VPOS="1109" WIDTH="76" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00102" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00116" HPOS="282" VPOS="1110" WIDTH="165" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="middle" WC="0.925" CC="000030" />
+            <SP ID="P15_SP00103" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00117" HPOS="467" VPOS="1110" WIDTH="46" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="of" WC="0.71" CC="05" />
+            <SP ID="P15_SP00104" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00118" HPOS="534" VPOS="1111" WIDTH="74" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00105" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00119" HPOS="624" VPOS="1110" WIDTH="256" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="nineteenth" WC="0.827" CC="2370400000" />
+            <SP ID="P15_SP00106" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00120" HPOS="902" VPOS="1117" WIDTH="198" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="century," WC="0.8675" CC="00604000" />
+            <SP ID="P15_SP00107" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00121" HPOS="1126" VPOS="1113" WIDTH="86" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="and" WC="0.896666646" CC="030" />
+            <SP ID="P15_SP00108" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00122" HPOS="1233" VPOS="1112" WIDTH="201" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="America" WC="0.8157143" CC="0800400" />
+            <SP ID="P15_SP00109" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00123" HPOS="1455" VPOS="1113" WIDTH="151" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="enjoys" WC="0.84" CC="071000" />
+            <SP ID="P15_SP00110" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00124" HPOS="1635" VPOS="1114" WIDTH="77" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+          </TextLine>
+          <TextLine ID="P15_TL00015" HPOS="187" VPOS="1175" WIDTH="1523" HEIGHT="48">
+            <String ID="P15_S00125" HPOS="187" VPOS="1176" WIDTH="140" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="honor" WC="0.88" CC="00600" />
+            <SP ID="P15_SP00111" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00126" HPOS="348" VPOS="1176" WIDTH="46" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="of" WC="0.78" CC="04" />
+            <SP ID="P15_SP00112" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00127" HPOS="414" VPOS="1175" WIDTH="133" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="being" WC="0.862" CC="00060" />
+            <SP ID="P15_SP00113" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00128" HPOS="568" VPOS="1176" WIDTH="75" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00114" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00129" HPOS="665" VPOS="1176" WIDTH="177" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="pioneer" WC="0.79" CC="0306040" />
+            <SP ID="P15_SP00115" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00130" HPOS="879" VPOS="1177" WIDTH="44" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="in" WC="0.86" CC="02" />
+            <SP ID="P15_SP00116" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00131" HPOS="964" VPOS="1177" WIDTH="87" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="this" WC="0.9775" CC="0000" />
+            <SP ID="P15_SP00117" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00132" HPOS="1092" VPOS="1182" WIDTH="169" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="matter." WC="0.7771429" CC="8020031" />
+            <SP ID="P15_SP00118" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00133" HPOS="1324" VPOS="1176" WIDTH="93" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="The" WC="0.75666666" CC="700" />
+            <SP ID="P15_SP00119" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00134" HPOS="1455" VPOS="1191" WIDTH="168" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="woman" WC="0.716" CC="00805" />
+            <SP ID="P15_SP00120" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00135" HPOS="1663" VPOS="1184" WIDTH="47" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="to" WC="0.54" CC="09" />
+          </TextLine>
+          <TextLine ID="P15_TL00016" HPOS="187" VPOS="1241" WIDTH="1517" HEIGHT="49">
+            <String ID="P15_S00136" HPOS="187" VPOS="1241" WIDTH="102" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="take" WC="1" CC="0000" />
+            <SP ID="P15_SP00121" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00137" HPOS="310" VPOS="1241" WIDTH="246" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="advantage" WC="0.7311111" CC="3401060000" />
+            <SP ID="P15_SP00122" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00138" HPOS="577" VPOS="1241" WIDTH="47" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.81" CC="03" />
+            <SP ID="P15_SP00123" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00139" HPOS="644" VPOS="1242" WIDTH="75" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8833333" CC="300" />
+            <SP ID="P15_SP00124" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00140" HPOS="740" VPOS="1241" WIDTH="95" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="first" WC="1" CC="00000" />
+            <SP ID="P15_SP00125" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00141" HPOS="856" VPOS="1242" WIDTH="287" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="opportunity" WC="0.773636341" CC="04730026000" />
+            <SP ID="P15_SP00126" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00142" HPOS="1163" VPOS="1255" WIDTH="87" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="was" WC="0.8066667" CC="005" />
+            <SP ID="P15_SP00127" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00143" HPOS="1272" VPOS="1255" WIDTH="54" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="an" WC="1" CC="00" />
+            <SP ID="P15_SP00128" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00144" HPOS="1368" VPOS="1242" WIDTH="185" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="English" WC="0.57" CC="73103230" />
+            <SP ID="P15_SP00129" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00145" HPOS="1588" VPOS="1243" WIDTH="116" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="lady," WC="0.738" CC="110001" />
+          </TextLine>
+          <TextLine ID="P15_TL00017" HPOS="189" VPOS="1305" WIDTH="1529" HEIGHT="48">
+            <String ID="P15_S00146" HPOS="189" VPOS="1305" WIDTH="229" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Elizabeth" WC="0.9077778" CC="700010000" />
+            <SP ID="P15_SP00130" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00147" HPOS="440" VPOS="1307" WIDTH="250" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Blackwell," WC="0.832" CC="5200000360" />
+            <SP ID="P15_SP00131" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00148" HPOS="718" VPOS="1308" WIDTH="85" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="and" WC="0.76" CC="070" />
+            <SP ID="P15_SP00132" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00149" HPOS="825" VPOS="1307" WIDTH="88" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="this" WC="0.7525" CC="0450" />
+            <SP ID="P15_SP00133" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00150" HPOS="934" VPOS="1308" WIDTH="123" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="dates" WC="0.792" CC="00900" />
+            <SP ID="P15_SP00134" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00151" HPOS="1077" VPOS="1308" WIDTH="110" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="back" WC="1" CC="0000" />
+            <SP ID="P15_SP00135" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00152" HPOS="1217" VPOS="1313" WIDTH="44" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00136" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00153" HPOS="1303" VPOS="1310" WIDTH="119" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="1848," WC="0.852" CC="00502" />
+            <SP ID="P15_SP00137" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00154" HPOS="1467" VPOS="1309" WIDTH="123" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="when" WC="0.9325" CC="0002" />
+            <SP ID="P15_SP00138" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00155" HPOS="1632" VPOS="1309" WIDTH="86" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="she-" WC="0.72" CC="0370" />
+          </TextLine>
+          <TextLine ID="P15_TL00018" HPOS="187" VPOS="1372" WIDTH="1525" HEIGHT="47">
+            <String ID="P15_S00156" HPOS="187" VPOS="1384" WIDTH="89" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="was" WC="1" CC="000" />
+            <SP ID="P15_SP00139" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00157" HPOS="297" VPOS="1372" WIDTH="229" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="admitted," WC="1" CC="000000000" />
+            <SP ID="P15_SP00140" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00158" HPOS="555" VPOS="1372" WIDTH="111" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="after" WC="0.876" CC="03002" />
+            <SP ID="P15_SP00141" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00159" HPOS="688" VPOS="1373" WIDTH="165" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="having" WC="0.755" CC="0000410" />
+            <SP ID="P15_SP00142" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00160" HPOS="875" VPOS="1373" WIDTH="173" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="applied" WC="1" CC="0000000" />
+            <SP ID="P15_SP00143" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00161" HPOS="1071" VPOS="1378" WIDTH="43" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P15_SP00144" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00162" HPOS="1135" VPOS="1373" WIDTH="164" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="several" WC="0.9" CC="3000300" />
+            <SP ID="P15_SP00145" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00163" HPOS="1320" VPOS="1373" WIDTH="182" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="medical" WC="0.975714266" CC="0000010" />
+            <SP ID="P15_SP00146" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00164" HPOS="1524" VPOS="1374" WIDTH="188" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="colleges" WC="0.59875" CC="012501057" />
+          </TextLine>
+          <TextLine ID="P15_TL00019" HPOS="188" VPOS="1437" WIDTH="1518" HEIGHT="48">
+            <String ID="P15_S00165" HPOS="188" VPOS="1437" WIDTH="45" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="in" WC="0.375" CC="56" />
+            <SP ID="P15_SP00147" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00166" HPOS="255" VPOS="1439" WIDTH="74" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="the" WC="0.79" CC="060" />
+            <SP ID="P15_SP00148" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00167" HPOS="346" VPOS="1443" WIDTH="206" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="country," WC="0.9075" CC="00020500" />
+            <SP ID="P15_SP00149" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00168" HPOS="577" VPOS="1438" WIDTH="95" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="into" WC="0.8775" CC="4000" />
+            <SP ID="P15_SP00150" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00169" HPOS="693" VPOS="1439" WIDTH="75" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00151" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00170" HPOS="789" VPOS="1438" WIDTH="179" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="Geneva" WC="0.8433333" CC="400004" />
+            <SP ID="P15_SP00152" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00171" HPOS="989" VPOS="1438" WIDTH="185" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="Medical" WC="0.735714257" CC="6002090" />
+            <SP ID="P15_SP00153" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00172" HPOS="1191" VPOS="1438" WIDTH="174" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="College" WC="0.855714262" CC="0054000" />
+            <SP ID="P15_SP00154" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00173" HPOS="1381" VPOS="1437" WIDTH="45" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="of" WC="0.785" CC="04" />
+            <SP ID="P15_SP00155" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00174" HPOS="1442" VPOS="1439" WIDTH="106" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="New" WC="1" CC="000" />
+            <SP ID="P15_SP00156" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00175" HPOS="1569" VPOS="1438" WIDTH="137" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="York." WC="0.906" CC="00004" />
+          </TextLine>
+          <TextLine ID="P15_TL00020" HPOS="188" VPOS="1501" WIDTH="1524" HEIGHT="49">
+            <String ID="P15_S00176" HPOS="188" VPOS="1501" WIDTH="97" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="The" WC="1" CC="000" />
+            <SP ID="P15_SP00157" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00177" HPOS="308" VPOS="1503" WIDTH="170" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="history" WC="0.8657143" CC="2013200" />
+            <SP ID="P15_SP00158" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00178" HPOS="499" VPOS="1503" WIDTH="46" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.73" CC="13" />
+            <SP ID="P15_SP00159" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00179" HPOS="565" VPOS="1504" WIDTH="75" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00160" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00180" HPOS="658" VPOS="1503" WIDTH="237" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="admission" WC="0.864444435" CC="007200030" />
+            <SP ID="P15_SP00161" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00181" HPOS="918" VPOS="1503" WIDTH="45" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.655" CC="06" />
+            <SP ID="P15_SP00162" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00182" HPOS="979" VPOS="1502" WIDTH="87" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="this" WC="0.8375" CC="0033" />
+            <SP ID="P15_SP00163" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00183" HPOS="1087" VPOS="1502" WIDTH="145" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="heroic" WC="0.87833333" CC="020140" />
+            <SP ID="P15_SP00164" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00184" HPOS="1248" VPOS="1514" WIDTH="168" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="woman" WC="0.442" CC="901044" />
+            <SP ID="P15_SP00165" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00185" HPOS="1443" VPOS="1516" WIDTH="6" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT=";" WC="1" CC="0" />
+            <SP ID="P15_SP00166" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00186" HPOS="1471" VPOS="1503" WIDTH="76" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="her" WC="1" CC="000" />
+            <SP ID="P15_SP00167" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00187" HPOS="1568" VPOS="1503" WIDTH="74" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="life" WC="0.9075" CC="0030" />
+            <SP ID="P15_SP00168" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00188" HPOS="1664" VPOS="1515" WIDTH="48" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="as" WC="0.365" CC="56" />
+          </TextLine>
+          <TextLine ID="P15_TL00021" HPOS="189" VPOS="1567" WIDTH="1520" HEIGHT="47">
+            <String ID="P15_S00189" HPOS="189" VPOS="1582" WIDTH="25" HEIGHT="25" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P15_SP00169" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00190" HPOS="234" VPOS="1569" WIDTH="179" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="student" WC="0.9028571" CC="0020040" />
+            <SP ID="P15_SP00170" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00191" HPOS="436" VPOS="1569" WIDTH="51" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="in" WC="0.18" CC="78" />
+            <SP ID="P15_SP00171" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00192" HPOS="503" VPOS="1569" WIDTH="89" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="this" WC="0.7825" CC="0610" />
+            <SP ID="P15_SP00172" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00193" HPOS="613" VPOS="1569" WIDTH="166" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="college" WC="1" CC="0000000" />
+            <SP ID="P15_SP00173" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00194" HPOS="799" VPOS="1567" WIDTH="46" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.83" CC="03" />
+            <SP ID="P15_SP00174" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00195" HPOS="866" VPOS="1580" WIDTH="114" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="men," WC="0.6425" CC="5080" />
+            <SP ID="P15_SP00175" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00196" HPOS="1015" VPOS="1580" WIDTH="132" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="many" WC="0.72" CC="5060" />
+            <SP ID="P15_SP00176" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00197" HPOS="1168" VPOS="1567" WIDTH="46" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="of" WC="0.7" CC="06" />
+            <SP ID="P15_SP00177" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00198" HPOS="1235" VPOS="1568" WIDTH="140" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="whom" WC="0.69" CC="0705" />
+            <SP ID="P15_SP00178" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00199" HPOS="1418" VPOS="1580" WIDTH="111" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="were" WC="0.905" CC="3000" />
+            <SP ID="P15_SP00179" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00200" HPOS="1568" VPOS="1568" WIDTH="141" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="rough" WC="0.83" CC="05300" />
+          </TextLine>
+          <TextLine ID="P15_TL00022" HPOS="188" VPOS="1633" WIDTH="1522" HEIGHT="48">
+            <String ID="P15_S00201" HPOS="188" VPOS="1635" WIDTH="87" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="and" WC="0.5133333" CC="1040" />
+            <SP ID="P15_SP00180" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00202" HPOS="299" VPOS="1635" WIDTH="265" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="uncultured" WC="0.819" CC="1602007000" />
+            <SP ID="P15_SP00181" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00203" HPOS="586" VPOS="1648" WIDTH="7" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT=";" WC="1" CC="0" />
+            <SP ID="P15_SP00182" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00204" HPOS="619" VPOS="1635" WIDTH="75" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00183" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00205" HPOS="715" VPOS="1633" WIDTH="361" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="transformation" WC="0.851428568" CC="00360400060000" />
+            <SP ID="P15_SP00184" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00206" HPOS="1099" VPOS="1633" WIDTH="45" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="of" WC="0.72" CC="14" />
+            <SP ID="P15_SP00185" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00207" HPOS="1164" VPOS="1634" WIDTH="122" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="such," WC="0.87" CC="24000" />
+            <SP ID="P15_SP00186" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00208" HPOS="1312" VPOS="1633" WIDTH="57" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="by" WC="0.845" CC="03" />
+            <SP ID="P15_SP00187" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00209" HPOS="1391" VPOS="1634" WIDTH="76" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="her" WC="0.816666663" CC="500" />
+            <SP ID="P15_SP00188" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00210" HPOS="1507" VPOS="1645" WIDTH="203" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="presence" WC="0.91" CC="01000500" />
+          </TextLine>
+          <TextLine ID="P15_TL00023" HPOS="187" VPOS="1698" WIDTH="1523" HEIGHT="49">
+            <String ID="P15_S00211" HPOS="187" VPOS="1700" WIDTH="140" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="alone," WC="0.876666665" CC="000402" />
+            <SP ID="P15_SP00189" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00212" HPOS="365" VPOS="1700" WIDTH="93" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="into" WC="0.53" CC="11007" />
+            <SP ID="P15_SP00190" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00213" HPOS="479" VPOS="1700" WIDTH="409" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="gentlemen,—or," WC="0.6192857" CC="00870058709023" />
+            <SP ID="P15_SP00191" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00214" HPOS="912" VPOS="1698" WIDTH="139" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="better" WC="0.7083333" CC="483001" />
+            <SP ID="P15_SP00192" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00215" HPOS="1084" VPOS="1706" WIDTH="93" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="put," WC="0.81" CC="0070" />
+            <SP ID="P15_SP00193" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00216" HPOS="1201" VPOS="1698" WIDTH="149" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="manly" WC="0.844" CC="00070" />
+            <SP ID="P15_SP00194" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00217" HPOS="1389" VPOS="1710" WIDTH="97" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="men" WC="0.64" CC="208" />
+            <SP ID="P15_SP00195" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00218" HPOS="1508" VPOS="1712" WIDTH="8" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT=";" WC="0.39" CC="6" />
+            <SP ID="P15_SP00196" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00219" HPOS="1542" VPOS="1699" WIDTH="72" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.813333333" CC="050" />
+            <SP ID="P15_SP00197" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00220" HPOS="1637" VPOS="1711" WIDTH="73" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="an¬" WC="0.363333344" CC="962" />
+          </TextLine>
+          <TextLine ID="P15_TL00024" HPOS="189" VPOS="1762" WIDTH="1530" HEIGHT="51">
+            <String ID="P15_S00221" HPOS="189" VPOS="1779" WIDTH="199" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="noyance" WC="0.8414286" CC="0600400" />
+            <SP ID="P15_SP00198" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00222" HPOS="404" VPOS="1766" WIDTH="79" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="she" WC="0.826666653" CC="050" />
+            <SP ID="P15_SP00199" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00223" HPOS="505" VPOS="1764" WIDTH="483" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="experienced:outside" WC="0.848947346" CC="0000000000070774020" />
+            <SP ID="P15_SP00200" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00224" HPOS="1009" VPOS="1765" WIDTH="73" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="the" WC="0.75333333" CC="070" />
+            <SP ID="P15_SP00201" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00225" HPOS="1104" VPOS="1763" WIDTH="178" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="college," WC="0.77625" CC="003401000" />
+            <SP ID="P15_SP00202" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00226" HPOS="1308" VPOS="1763" WIDTH="57" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P15_SP00203" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00227" HPOS="1386" VPOS="1764" WIDTH="74" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8933333" CC="030" />
+            <SP ID="P15_SP00204" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00228" HPOS="1476" VPOS="1775" WIDTH="166" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="women" WC="0.636" CC="001008" />
+            <SP ID="P15_SP00205" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00229" HPOS="1665" VPOS="1762" WIDTH="54" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="of:" WC="0.603333354" CC="047" />
+          </TextLine>
+          <TextLine ID="P15_TL00025" HPOS="188" VPOS="1828" WIDTH="1521" HEIGHT="50">
+            <String ID="P15_S00230" HPOS="188" VPOS="1832" WIDTH="76" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="the" WC="0.68" CC="036" />
+            <SP ID="P15_SP00206" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00231" HPOS="285" VPOS="1831" WIDTH="376" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="boarding-house" WC="0.8192857" CC="10040220000760" />
+            <SP ID="P15_SP00207" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00232" HPOS="684" VPOS="1830" WIDTH="85" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="and" WC="0.8233333" CC="050" />
+            <SP ID="P15_SP00208" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00233" HPOS="793" VPOS="1831" WIDTH="73" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8666667" CC="040" />
+            <SP ID="P15_SP00209" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00234" HPOS="889" VPOS="1841" WIDTH="165" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT="women" WC="0.606" CC="03907" />
+            <SP ID="P15_SP00210" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00235" HPOS="1078" VPOS="1829" WIDTH="46" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="of" WC="0.84" CC="03" />
+            <SP ID="P15_SP00211" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00236" HPOS="1144" VPOS="1829" WIDTH="73" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="the" WC="0.983333349" CC="000" />
+            <SP ID="P15_SP00212" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00237" HPOS="1252" VPOS="1828" WIDTH="174" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="village," WC="0.84" CC="03045000" />
+            <SP ID="P15_SP00213" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00238" HPOS="1467" VPOS="1829" WIDTH="97" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="who" WC="0.71" CC="080" />
+            <SP ID="P15_SP00214" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00239" HPOS="1605" VPOS="1828" WIDTH="104" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="took" WC="0.9675" CC="1000" />
+          </TextLine>
+          <TextLine ID="P15_TL00026" HPOS="189" VPOS="1893" WIDTH="1519" HEIGHT="51">
+            <String ID="P15_S00240" HPOS="189" VPOS="1897" WIDTH="34" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="it" WC="0.93" CC="10" />
+            <SP ID="P15_SP00215" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00241" HPOS="244" VPOS="1909" WIDTH="118" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="upon" WC="0.79" CC="0008" />
+            <SP ID="P15_SP00216" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00242" HPOS="385" VPOS="1897" WIDTH="262" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="themselves" WC="0.914" CC="0500200000" />
+            <SP ID="P15_SP00217" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00243" HPOS="669" VPOS="1900" WIDTH="45" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00218" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00244" HPOS="736" VPOS="1900" WIDTH="112" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="treat" WC="1" CC="00000" />
+            <SP ID="P15_SP00219" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00245" HPOS="871" VPOS="1895" WIDTH="75" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="her" WC="0.76" CC="700" />
+            <SP ID="P15_SP00220" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00246" HPOS="968" VPOS="1894" WIDTH="105" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="with" WC="0.855" CC="0005" />
+            <SP ID="P15_SP00221" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00247" HPOS="1090" VPOS="1906" WIDTH="126" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="scorn" WC="0.706" CC="60008" />
+            <SP ID="P15_SP00222" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00248" HPOS="1253" VPOS="1893" WIDTH="84" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="and" WC="0.813333333" CC="050" />
+            <SP ID="P15_SP00223" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00249" HPOS="1378" VPOS="1898" WIDTH="221" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="contempt" WC="0.89875" CC="00800000" />
+            <SP ID="P15_SP00224" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00250" HPOS="1637" VPOS="1893" WIDTH="71" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="be¬" WC="0.84" CC="400" />
+          </TextLine>
+          <TextLine ID="P15_TL00027" HPOS="188" VPOS="1957" WIDTH="1521" HEIGHT="50">
+            <String ID="P15_S00251" HPOS="188" VPOS="1975" WIDTH="129" HEIGHT="27" STYLEREFS="StyleId-1" CONTENT="cause" WC="0.856" CC="00700" />
+            <SP ID="P15_SP00225" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00252" HPOS="338" VPOS="1964" WIDTH="92" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="she," WC="0.9475" CC="0002" />
+            <SP ID="P15_SP00226" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00253" HPOS="459" VPOS="1975" WIDTH="45" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="as" WC="0.525" CC="09" />
+            <SP ID="P15_SP00227" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00254" HPOS="521" VPOS="1975" WIDTH="24" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P15_SP00228" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00255" HPOS="566" VPOS="1972" WIDTH="187" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="woman," WC="0.8616667" CC="000080" />
+            <SP ID="P15_SP00229" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00256" HPOS="780" VPOS="1960" WIDTH="132" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="dared" WC="1" CC="00000" />
+            <SP ID="P15_SP00230" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00257" HPOS="934" VPOS="1966" WIDTH="42" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00231" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00258" HPOS="998" VPOS="1959" WIDTH="131" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="study" WC="0.642" CC="57400" />
+            <SP ID="P15_SP00232" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00259" HPOS="1160" VPOS="1957" WIDTH="215" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="medicine" WC="0.84375" CC="80000040" />
+            <SP ID="P15_SP00233" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00260" HPOS="1413" VPOS="1958" WIDTH="84" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="and" WC="0.836666644" CC="400" />
+            <SP ID="P15_SP00234" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00261" HPOS="1539" VPOS="1958" WIDTH="170" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="aspired" WC="0.9728571" CC="0000100" />
+          </TextLine>
+          <TextLine ID="P15_TL00028" HPOS="188" VPOS="2022" WIDTH="1523" HEIGHT="54">
+            <String ID="P15_S00262" HPOS="188" VPOS="2035" WIDTH="46" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00235" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00263" HPOS="256" VPOS="2028" WIDTH="190" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="practice" WC="0.7675" CC="00809000" />
+            <SP ID="P15_SP00236" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00264" HPOS="468" VPOS="2027" WIDTH="89" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="this" WC="0.645" CC="0634" />
+            <SP ID="P15_SP00237" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00265" HPOS="573" VPOS="2027" WIDTH="162" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="sacred," WC="0.671428561" CC="6000097" />
+            <SP ID="P15_SP00238" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00266" HPOS="745" VPOS="2025" WIDTH="245" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="profession" WC="0.725" CC="7065007000" />
+            <SP ID="P15_SP00239" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00267" HPOS="1010" VPOS="2039" WIDTH="8" HEIGHT="37" STYLEREFS="StyleId-1" CONTENT=";" WC="1" CC="0" />
+            <SP ID="P15_SP00240" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00268" HPOS="1046" VPOS="2025" WIDTH="76" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="her" WC="0.803333342" CC="500" />
+            <SP ID="P15_SP00241" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00269" HPOS="1136" VPOS="2023" WIDTH="261" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="graduation" WC="0.778" CC="0000480036" />
+            <SP ID="P15_SP00242" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00270" HPOS="1420" VPOS="2022" WIDTH="106" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="with" WC="0.725" CC="0073" />
+            <SP ID="P15_SP00243" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00271" HPOS="1568" VPOS="2024" WIDTH="143" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="honor" WC="0.458" CC="017107" />
+          </TextLine>
+          <TextLine ID="P15_TL00029" HPOS="191" VPOS="2088" WIDTH="1519" HEIGHT="48">
+            <String ID="P15_S00272" HPOS="191" VPOS="2094" WIDTH="112" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="from" WC="0.8675" CC="3100" />
+            <SP ID="P15_SP00244" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00273" HPOS="326" VPOS="2093" WIDTH="89" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="this" WC="0.7825" CC="0035" />
+            <SP ID="P15_SP00245" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00274" HPOS="439" VPOS="2092" WIDTH="253" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="institution" WC="0.8618182" CC="03000050006" />
+            <SP ID="P15_SP00246" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00275" HPOS="712" VPOS="2105" WIDTH="7" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT=";" WC="1" CC="0" />
+            <SP ID="P15_SP00247" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00276" HPOS="754" VPOS="2092" WIDTH="76" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="her" WC="0.32" CC="10010" />
+            <SP ID="P15_SP00248" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00277" HPOS="872" VPOS="2089" WIDTH="236" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="admission" WC="0.803333342" CC="009000304" />
+            <SP ID="P15_SP00249" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00278" HPOS="1150" VPOS="2094" WIDTH="44" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P15_SP00250" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00279" HPOS="1230" VPOS="2089" WIDTH="73" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="the" WC="0.9166667" CC="020" />
+            <SP ID="P15_SP00251" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00280" HPOS="1346" VPOS="2088" WIDTH="234" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Maternite" WC="0.9444444" CC="000000040" />
+            <SP ID="P15_SP00252" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00281" HPOS="1621" VPOS="2088" WIDTH="89" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="and" WC="0.313333333" CC="775" />
+          </TextLine>
+          <TextLine ID="P15_TL00030" HPOS="190" VPOS="2153" WIDTH="1525" HEIGHT="53">
+            <String ID="P15_S00282" HPOS="190" VPOS="2161" WIDTH="126" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="other" WC="1" CC="00000" />
+            <SP ID="P15_SP00253" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00283" HPOS="346" VPOS="2158" WIDTH="215" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="hospitals" WC="0.918888867" CC="200010010" />
+            <SP ID="P15_SP00254" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00284" HPOS="583" VPOS="2157" WIDTH="44" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="in" WC="0.63" CC="24" />
+            <SP ID="P15_SP00255" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00285" HPOS="651" VPOS="2157" WIDTH="120" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="Paris" WC="0.626" CC="701010" />
+            <SP ID="P15_SP00256" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00286" HPOS="809" VPOS="2156" WIDTH="109" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="after" WC="0.84" CC="06001" />
+            <SP ID="P15_SP00257" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00287" HPOS="959" VPOS="2168" WIDTH="24" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P15_SP00258" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00288" HPOS="1018" VPOS="2155" WIDTH="108" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="hard" WC="0.82" CC="7000" />
+            <SP ID="P15_SP00259" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00289" HPOS="1177" VPOS="2153" WIDTH="195" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="struggle" WC="0.5825" CC="383801000" />
+            <SP ID="P15_SP00260" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00290" HPOS="1412" VPOS="2158" WIDTH="44" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="to" WC="0.735" CC="50" />
+            <SP ID="P15_SP00261" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00291" HPOS="1497" VPOS="2153" WIDTH="101" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="gain" WC="0.39" CC="10337" />
+            <SP ID="P15_SP00262" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00292" HPOS="1635" VPOS="2165" WIDTH="80" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="enr." WC="0.7475" CC="0072" />
+          </TextLine>
+          <TextLine ID="P15_TL00031" HPOS="186" VPOS="2218" WIDTH="1530" HEIGHT="54">
+            <String ID="P15_S00293" HPOS="186" VPOS="2231" WIDTH="150" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="trance" WC="0.8466667" CC="400400" />
+            <SP ID="P15_SP00263" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00294" HPOS="357" VPOS="2239" WIDTH="7" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT=";" WC="1" CC="0" />
+            <SP ID="P15_SP00264" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00295" HPOS="391" VPOS="2224" WIDTH="90" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="and" WC="0.8066667" CC="050" />
+            <SP ID="P15_SP00265" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00296" HPOS="504" VPOS="2224" WIDTH="78" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="her" WC="1" CC="000" />
+            <SP ID="P15_SP00266" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00297" HPOS="605" VPOS="2222" WIDTH="266" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="completion" WC="0.614" CC="66108000600" />
+            <SP ID="P15_SP00267" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00298" HPOS="894" VPOS="2221" WIDTH="46" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="of" WC="0.65" CC="24" />
+            <SP ID="P15_SP00268" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00299" HPOS="960" VPOS="2233" WIDTH="25" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P15_SP00269" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00300" HPOS="1005" VPOS="2221" WIDTH="122" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="three" WC="0.794" CC="06300" />
+            <SP ID="P15_SP00270" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00301" HPOS="1148" VPOS="2219" WIDTH="139" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="years'" WC="0.9583333" CC="000002" />
+            <SP ID="P15_SP00271" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00302" HPOS="1324" VPOS="2230" WIDTH="151" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="course" WC="0.865" CC="006100" />
+            <SP ID="P15_SP00272" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00303" HPOS="1525" VPOS="2218" WIDTH="45" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="in" WC="0.635" CC="34" />
+            <SP ID="P15_SP00273" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00304" HPOS="1613" VPOS="2219" WIDTH="103" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="that" WC="0.8525" CC="0005" />
+          </TextLine>
+          <TextLine ID="P15_TL00032" HPOS="188" VPOS="2283" WIDTH="1527" HEIGHT="56">
+            <String ID="P15_S00305" HPOS="188" VPOS="2290" WIDTH="105" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="city," WC="0.828" CC="40030" />
+            <SP ID="P15_SP00274" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00306" HPOS="322" VPOS="2290" WIDTH="36" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="is" WC="0.52" CC="72" />
+            <SP ID="P15_SP00275" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00307" HPOS="374" VPOS="2294" WIDTH="115" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="most" WC="0.9975" CC="0000" />
+            <SP ID="P15_SP00276" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00308" HPOS="512" VPOS="2287" WIDTH="308" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="interestingly" WC="0.6738461" CC="45005010871000" />
+            <SP ID="P15_SP00277" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00309" HPOS="838" VPOS="2286" WIDTH="91" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="told" WC="0.9575" CC="0010" />
+            <SP ID="P15_SP00278" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00310" HPOS="943" VPOS="2286" WIDTH="56" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P15_SP00279" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00311" HPOS="1022" VPOS="2286" WIDTH="76" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="her" WC="1" CC="000" />
+            <SP ID="P15_SP00280" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00312" HPOS="1120" VPOS="2284" WIDTH="140" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="sister," WC="0.9071429" CC="0230000" />
+            <SP ID="P15_SP00281" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00313" HPOS="1283" VPOS="2285" WIDTH="76" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Dr." WC="0.6066667" CC="704" />
+            <SP ID="P15_SP00282" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00314" HPOS="1386" VPOS="2283" WIDTH="146" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="Emily" WC="0.982" CC="00000" />
+            <SP ID="P15_SP00283" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00315" HPOS="1554" VPOS="2284" WIDTH="161" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="Blacky" WC="0.57" CC="620079" />
+          </TextLine>
+          <TextLine ID="P15_TL00033" HPOS="187" VPOS="2349" WIDTH="1523" HEIGHT="52">
+            <String ID="P15_S00316" HPOS="187" VPOS="2357" WIDTH="100" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="well" WC="0.5775" CC="9061" />
+            <SP ID="P15_SP00284" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00317" HPOS="307" VPOS="2356" WIDTH="46" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="in" WC="0.365" CC="57" />
+            <SP ID="P15_SP00285" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00318" HPOS="377" VPOS="2369" WIDTH="24" HEIGHT="30" STYLEREFS="StyleId-1" CONTENT="a" WC="0.05" CC="9" />
+            <SP ID="P15_SP00286" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00319" HPOS="430" VPOS="2353" WIDTH="319" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="lecture'given" WC="0.771538436" CC="0000477305001" />
+            <SP ID="P15_SP00287" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00320" HPOS="763" VPOS="2353" WIDTH="55" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="by" WC="1" CC="00" />
+            <SP ID="P15_SP00288" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00321" HPOS="839" VPOS="2353" WIDTH="76" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="her" WC="1" CC="000" />
+            <SP ID="P15_SP00289" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00322" HPOS="930" VPOS="2357" WIDTH="43" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="at" WC="0.885" CC="20" />
+            <SP ID="P15_SP00290" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00323" HPOS="994" VPOS="2352" WIDTH="74" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00291" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00324" HPOS="1088" VPOS="2349" WIDTH="261" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="celebration" WC="0.984545469" CC="00000000001" />
+            <SP ID="P15_SP00292" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00325" HPOS="1371" VPOS="2349" WIDTH="46" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="of" WC="0.5" CC="63" />
+            <SP ID="P15_SP00293" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00326" HPOS="1437" VPOS="2350" WIDTH="74" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P15_SP00294" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00327" HPOS="1528" VPOS="2349" WIDTH="182" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="fortieth" WC="0.6975" CC="70600037" />
+          </TextLine>
+          <TextLine ID="P15_TL00034" HPOS="185" VPOS="2414" WIDTH="1521" HEIGHT="61">
+            <String ID="P15_S00328" HPOS="185" VPOS="2422" WIDTH="287" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="anniversary" WC="0.8372727" CC="08124020000" />
+            <SP ID="P15_SP00295" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00329" HPOS="487" VPOS="2419" WIDTH="53" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="ofj." WC="0.455" CC="0884" />
+            <SP ID="P15_SP00296" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00330" HPOS="549" VPOS="2421" WIDTH="75" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="the" WC="0.50333333" CC="950" />
+            <SP ID="P15_SP00297" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00331" HPOS="640" VPOS="2418" WIDTH="116" HEIGHT="57" STYLEREFS="StyleId-1" CONTENT="First" WC="0.5" CC="73860" />
+            <SP ID="P15_SP00298" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00332" HPOS="774" VPOS="2417" WIDTH="207" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="National" WC="0.92375" CC="00000500" />
+            <SP ID="P15_SP00299" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00333" HPOS="997" VPOS="2415" WIDTH="229" HEIGHT="60" STYLEREFS="StyleId-1" CONTENT="Woman's" WC="1" CC="0000000" />
+            <SP ID="P15_SP00300" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00334" HPOS="1240" VPOS="2414" WIDTH="159" HEIGHT="61" STYLEREFS="StyleId-1" CONTENT="Rights" WC="0.761666656" CC="420700" />
+            <SP ID="P15_SP00301" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00335" HPOS="1407" VPOS="2414" WIDTH="299" HEIGHT="61" STYLEREFS="StyleId-1" CONTENT=".Convention," WC="0.6191667" CC="784300304274" />
+          </TextLine>
+          <TextLine ID="P15_TL00035" HPOS="188" VPOS="2486" WIDTH="1527" HEIGHT="47">
+            <String ID="P15_S00336" HPOS="188" VPOS="2489" WIDTH="101" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="held" WC="0.4375" CC="6708" />
+            <SP ID="P15_SP00302" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00337" HPOS="312" VPOS="2488" WIDTH="45" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="in" WC="1" CC="00" />
+            <SP ID="P15_SP00303" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00338" HPOS="380" VPOS="2489" WIDTH="180" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Boston," WC="0.741428554" CC="4103071" />
+            <SP ID="P15_SP00304" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00339" HPOS="584" VPOS="2487" WIDTH="195" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="January" WC="0.6042857" CC="24100037" />
+            <SP ID="P15_SP00305" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00340" HPOS="803" VPOS="2487" WIDTH="67" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="28," WC="1" CC="000" />
+            <SP ID="P15_SP00306" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00341" HPOS="898" VPOS="2486" WIDTH="122" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="1891." WC="0.856" CC="01104" />
+            <SP ID="P15_SP00307" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00342" HPOS="1074" VPOS="2492" WIDTH="8" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="'" WC="0.58" CC="4" />
+            <SP ID="P15_SP00308" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00343" HPOS="1238" VPOS="2517" WIDTH="10" HEIGHT="16" STYLEREFS="StyleId-1" CONTENT="," WC="0.55" CC="4" />
+            <SP ID="P15_SP00309" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P15_S00344" HPOS="1711" VPOS="2507" WIDTH="4" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="." WC="0.55" CC="4" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

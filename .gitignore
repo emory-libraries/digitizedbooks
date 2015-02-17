@@ -7,3 +7,7 @@ env
 build
 dist
 static
+foo
+test-results
+.idea
+digitizedbooks/digbooks.log

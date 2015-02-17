@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0235.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P238" PHYSICAL_IMG_NR="238" HEIGHT="3299" WIDTH="2199" ACCURACY="0.426594138" QUALITY_DETAIL="6 words, 45 chars, 12 with recognition greater than 50% (26.67%)">
+      <TopMargin ID="P238_TM00001" HPOS="0" VPOS="0" WIDTH="2199" HEIGHT="464" />
+      <LeftMargin ID="P238_LM00001" HPOS="0" VPOS="464" WIDTH="1949" HEIGHT="2379" />
+      <RightMargin ID="P238_RM00001" HPOS="242" VPOS="464" WIDTH="1957" HEIGHT="2379" />
+      <BottomMargin ID="P238_BM00001" HPOS="0" VPOS="2843" WIDTH="2199" HEIGHT="456" />
+      <PrintSpace ID="P238_PS00001" HPOS="1949" VPOS="464" WIDTH="-1707" HEIGHT="2379">
+        <Illustration ID="P238_ILL00001" HPOS="1949" VPOS="464" WIDTH="-1606" HEIGHT="2381" />
+        <TextBlock ID="P238_TB00001" HPOS="322" VPOS="1015" WIDTH="-70" HEIGHT="1270">
+          <TextLine ID="P238_TL00001" HPOS="314" VPOS="1023" WIDTH="-54" HEIGHT="1255">
+            <String ID="P238_S00001" HPOS="312" VPOS="1023" WIDTH="-26" HEIGHT="201" STYLEREFS="StyleId-0" CONTENT="PHALANX" WC="0.374285728" CC="7757266" />
+            <SP ID="P238_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P238_S00002" HPOS="307" VPOS="1246" WIDTH="-25" HEIGHT="185" STYLEREFS="StyleId-0" CONTENT="CAVALRY" WC="0.46714285" CC="70601076" />
+            <SP ID="P238_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P238_S00003" HPOS="305" VPOS="1453" WIDTH="-29" HEIGHT="195" STYLEREFS="StyleId-0" CONTENT="BRINGING" WC="0.5625" CC="07376306" />
+            <SP ID="P238_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P238_S00004" HPOS="301" VPOS="1669" WIDTH="-27" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="IN" WC="0.265" CC="77" />
+            <SP ID="P238_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P238_S00005" HPOS="299" VPOS="1729" WIDTH="-29" HEIGHT="295" STYLEREFS="StyleId-0" CONTENT="CONFEDERATE" WC="0.403636366" CC="770758510076" />
+            <SP ID="P238_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P238_S00006" HPOS="292" VPOS="2046" WIDTH="-32" HEIGHT="232" STYLEREFS="StyleId-0" CONTENT="PRISONERS," WC="0.487" CC="7747505076" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

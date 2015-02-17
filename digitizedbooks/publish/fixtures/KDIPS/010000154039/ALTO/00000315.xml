@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0311.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles />
+  <Layout>
+    <Page ID="P314" PHYSICAL_IMG_NR="314" HEIGHT="3300" WIDTH="2200" ACCURACY="0">
+      <TopMargin ID="P314_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="749" />
+      <LeftMargin ID="P314_LM00001" HPOS="0" VPOS="749" WIDTH="276" HEIGHT="1802" />
+      <RightMargin ID="P314_RM00001" HPOS="1927" VPOS="749" WIDTH="273" HEIGHT="1802" />
+      <BottomMargin ID="P314_BM00001" HPOS="0" VPOS="2551" WIDTH="2200" HEIGHT="749" />
+      <PrintSpace ID="P314_PS00001" HPOS="276" VPOS="749" WIDTH="1651" HEIGHT="1802">
+        <Illustration ID="P314_ILL00001" HPOS="276" VPOS="749" WIDTH="1651" HEIGHT="1802" />
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

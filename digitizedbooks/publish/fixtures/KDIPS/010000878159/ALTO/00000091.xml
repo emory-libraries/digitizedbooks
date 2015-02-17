@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0091.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P90" PHYSICAL_IMG_NR="90" HEIGHT="1944" WIDTH="2830" ACCURACY="0.582428634" QUALITY_DETAIL="15 words, 99 chars, 54 with recognition greater than 50% (54.55%)">
+      <TopMargin ID="P90_TM00001" HPOS="0" VPOS="0" WIDTH="2830" HEIGHT="2627" />
+      <LeftMargin ID="P90_LM00001" HPOS="0" VPOS="2627" WIDTH="104" HEIGHT="-2474" />
+      <RightMargin ID="P90_RM00001" HPOS="1806" VPOS="2627" WIDTH="1024" HEIGHT="-2474" />
+      <BottomMargin ID="P90_BM00001" HPOS="0" VPOS="153" WIDTH="2830" HEIGHT="1791" />
+      <PrintSpace ID="P90_PS00001" HPOS="104" VPOS="2627" WIDTH="1702" HEIGHT="-2474">
+        <Illustration ID="P90_ILL00001" HPOS="104" VPOS="2627" WIDTH="1537" HEIGHT="-2471" />
+        <TextBlock ID="P90_TB00001" HPOS="1714" VPOS="2337" WIDTH="95" HEIGHT="-1997">
+          <TextLine ID="P90_TL00001" HPOS="1720" VPOS="2196" WIDTH="9" HEIGHT="-1580">
+            <String ID="P90_S00001" HPOS="1724" VPOS="2128" WIDTH="22" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Lee." WC="0.75" CC="10000" />
+            <SP ID="P90_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00002" HPOS="1715" VPOS="1636" WIDTH="23" HEIGHT="535" STYLEREFS="StyleId-0" CONTENT="Salter." WC="0.5942857" CC="5075350" />
+            <SP ID="P90_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00003" HPOS="1709" VPOS="1134" WIDTH="23" HEIGHT="1037" STYLEREFS="StyleId-0" CONTENT="H.indy." WC="0.474285722" CC="7761462" />
+            <SP ID="P90_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00004" HPOS="1701" VPOS="622" WIDTH="19" HEIGHT="1549" STYLEREFS="StyleId-0" CONTENT="Derrick." WC="0.65" CC="77307002" />
+          </TextLine>
+          <TextLine ID="P90_TL00002" HPOS="1755" VPOS="2328" WIDTH="-3" HEIGHT="-1979">
+            <String ID="P90_S00005" HPOS="1758" VPOS="2210" WIDTH="24" HEIGHT="92" STYLEREFS="StyleId-0" CONTENT="Grant." WC="0.723333359" CC="402224" />
+            <SP ID="P90_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00006" HPOS="1752" VPOS="1808" WIDTH="20" HEIGHT="494" STYLEREFS="StyleId-0" CONTENT="Arnett." WC="0.611428559" CC="5270804" />
+            <SP ID="P90_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00007" HPOS="1744" VPOS="1368" WIDTH="23" HEIGHT="934" STYLEREFS="StyleId-0" CONTENT="Turner." WC="0.392857134" CC="3667647" />
+            <SP ID="P90_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00008" HPOS="1737" VPOS="866" WIDTH="22" HEIGHT="1436" STYLEREFS="StyleId-0" CONTENT="Gaines." WC="0.55" CC="5507363" />
+            <SP ID="P90_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00009" HPOS="1727" VPOS="355" WIDTH="23" HEIGHT="1947" STYLEREFS="StyleId-0" CONTENT="Tanner." WC="0.43" CC="6778630" />
+          </TextLine>
+          <TextLine ID="P90_TL00003" HPOS="1793" VPOS="1916" WIDTH="16" HEIGHT="-1102">
+            <String ID="P90_S00010" HPOS="1795" VPOS="1719" WIDTH="10" HEIGHT="172" STYLEREFS="StyleId-0" CONTENT="BISHOPS'" WC="0.5325" CC="65520674" />
+            <SP ID="P90_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00011" HPOS="1792" VPOS="1520" WIDTH="22" HEIGHT="371" STYLEREFS="StyleId-0" CONTENT="COUNCIL" WC="0.578571439" CC="0834084" />
+            <SP ID="P90_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00012" HPOS="1787" VPOS="1448" WIDTH="25" HEIGHT="443" STYLEREFS="StyleId-0" CONTENT="OF" WC="0.51" CC="36" />
+            <SP ID="P90_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00013" HPOS="1786" VPOS="1333" WIDTH="31" HEIGHT="558" STYLEREFS="StyleId-0" CONTENT="3899," WC="0.516" CC="78700" />
+            <SP ID="P90_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00014" HPOS="1786" VPOS="967" WIDTH="25" HEIGHT="924" STYLEREFS="StyleId-0" CONTENT="WILBERFORCE," WC="0.769166648" CC="000560040254" />
+            <SP ID="P90_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P90_S00015" HPOS="1780" VPOS="820" WIDTH="24" HEIGHT="1071" STYLEREFS="StyleId-0" CONTENT="OHIO." WC="0.654" CC="07603" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

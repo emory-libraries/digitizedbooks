@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0148.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P147" PHYSICAL_IMG_NR="147" HEIGHT="2800" WIDTH="1900" ACCURACY="0.5898417" QUALITY_DETAIL="17 words, 79 chars, 38 with recognition greater than 50% (48.10%)">
+      <TopMargin ID="P147_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="435" />
+      <LeftMargin ID="P147_LM00001" HPOS="0" VPOS="435" WIDTH="230" HEIGHT="1948" />
+      <RightMargin ID="P147_RM00001" HPOS="1680" VPOS="435" WIDTH="220" HEIGHT="1948" />
+      <BottomMargin ID="P147_BM00001" HPOS="0" VPOS="2383" WIDTH="1900" HEIGHT="417" />
+      <PrintSpace ID="P147_PS00001" HPOS="230" VPOS="435" WIDTH="1450" HEIGHT="1948">
+        <Illustration ID="P147_ILL00001" HPOS="230" VPOS="435" WIDTH="1448" HEIGHT="1819" />
+        <TextBlock ID="P147_TB00001" HPOS="303" VPOS="2313" WIDTH="616" HEIGHT="82">
+          <TextLine ID="P147_TL00001" HPOS="311" VPOS="2320" WIDTH="510" HEIGHT="20">
+            <String ID="P147_S00001" HPOS="311" VPOS="2323" WIDTH="80" HEIGHT="22" STYLEREFS="StyleId-0" CONTENT="Kev." WC="0.405" CC="8870" />
+            <SP ID="P147_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00002" HPOS="413" VPOS="2321" WIDTH="38" HEIGHT="24" STYLEREFS="StyleId-0" CONTENT="F." WC="0.69" CC="60" />
+            <SP ID="P147_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00003" HPOS="468" VPOS="2320" WIDTH="38" HEIGHT="25" STYLEREFS="StyleId-0" CONTENT="B." WC="0.55" CC="62" />
+            <SP ID="P147_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00004" HPOS="526" VPOS="2315" WIDTH="187" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Muieland," WC="0.45" CC="8867010800" />
+            <SP ID="P147_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00005" HPOS="731" VPOS="2316" WIDTH="35" HEIGHT="29" STYLEREFS="StyleId-0" CONTENT="P." WC="0.535" CC="71" />
+            <SP ID="P147_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00006" HPOS="786" VPOS="2313" WIDTH="35" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="E." WC="0.68" CC="60" />
+          </TextLine>
+          <TextLine ID="P147_TL00002" HPOS="312" VPOS="2363" WIDTH="588" HEIGHT="24">
+            <String ID="P147_S00007" HPOS="312" VPOS="2366" WIDTH="89" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="Mrs." WC="0.7725" CC="5011" />
+            <SP ID="P147_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00008" HPOS="421" VPOS="2362" WIDTH="178" HEIGHT="27" STYLEREFS="StyleId-0" CONTENT="Elizabeth" WC="0.686666667" CC="0172510100" />
+            <SP ID="P147_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00009" HPOS="612" VPOS="2360" WIDTH="150" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="Jackson" WC="0.46714285" CC="0850688" />
+            <SP ID="P147_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00010" HPOS="779" VPOS="2356" WIDTH="121" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="Mixon" WC="0.508" CC="04486" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P147_TB00002" HPOS="1125" VPOS="2300" WIDTH="447" HEIGHT="85">
+          <TextLine ID="P147_TL00003" HPOS="1136" VPOS="2307" WIDTH="427" HEIGHT="26">
+            <String ID="P147_S00011" HPOS="1136" VPOS="2308" WIDTH="84" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="Mrs." WC="0.545" CC="4670" />
+            <SP ID="P147_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00012" HPOS="1238" VPOS="2305" WIDTH="112" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="Sarah" WC="0.408" CC="65377" />
+            <SP ID="P147_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00013" HPOS="1363" VPOS="2307" WIDTH="27" HEIGHT="29" STYLEREFS="StyleId-0" CONTENT="J." WC="0.86" CC="20" />
+            <SP ID="P147_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00014" HPOS="1407" VPOS="2306" WIDTH="156" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Duncan." WC="0.38142857" CC="10780962" />
+          </TextLine>
+          <TextLine ID="P147_TL00004" HPOS="1135" VPOS="2352" WIDTH="340" HEIGHT="26">
+            <String ID="P147_S00015" HPOS="1135" VPOS="2352" WIDTH="85" HEIGHT="24" STYLEREFS="StyleId-0" CONTENT="Mrs." WC="0.8225" CC="6010" />
+            <SP ID="P147_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00016" HPOS="1237" VPOS="2351" WIDTH="82" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="L.J." WC="0.7375" CC="6030" />
+            <SP ID="P147_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P147_S00017" HPOS="1337" VPOS="2351" WIDTH="138" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Reeves." WC="0.5285714" CC="5277620" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0220.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="5" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P223" PHYSICAL_IMG_NR="223" HEIGHT="3300" WIDTH="2200" ACCURACY="0.388251126" QUALITY_DETAIL="7 words, 38 chars, 10 with recognition greater than 50% (26.32%)">
+      <TopMargin ID="P223_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="2816" />
+      <LeftMargin ID="P223_LM00001" HPOS="0" VPOS="2816" WIDTH="599" HEIGHT="57" />
+      <RightMargin ID="P223_RM00001" HPOS="1693" VPOS="2816" WIDTH="507" HEIGHT="57" />
+      <BottomMargin ID="P223_BM00001" HPOS="0" VPOS="2873" WIDTH="2200" HEIGHT="427" />
+      <PrintSpace ID="P223_PS00001" HPOS="599" VPOS="2816" WIDTH="1094" HEIGHT="57">
+        <TextBlock ID="P223_TB00001" HPOS="599" VPOS="2816" WIDTH="1094" HEIGHT="57">
+          <TextLine ID="P223_TL00001" HPOS="607" VPOS="2824" WIDTH="1079" HEIGHT="41">
+            <String ID="P223_S00001" HPOS="607" VPOS="2837" WIDTH="198" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="PHALANX" WC="0.345714271" CC="7654776" />
+            <SP ID="P223_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00002" HPOS="827" VPOS="2833" WIDTH="210" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="REGIMENT" WC="0.40625" CC="70658396" />
+            <SP ID="P223_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00003" HPOS="1059" VPOS="2827" WIDTH="212" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="RECEIVING" WC="0.6422222" CC="700075470" />
+            <SP ID="P223_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00004" HPOS="1294" VPOS="2827" WIDTH="22" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="A" WC="0.29" CC="7" />
+            <SP ID="P223_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00005" HPOS="1337" VPOS="2824" WIDTH="94" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="GIFT" WC="0.23" CC="10776" />
+            <SP ID="P223_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00006" HPOS="1453" VPOS="2824" WIDTH="49" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="OF" WC="0.415" CC="65" />
+            <SP ID="P223_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P223_S00007" HPOS="1523" VPOS="2824" WIDTH="163" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="COLORS." WC="0.388571441" CC="7468753" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

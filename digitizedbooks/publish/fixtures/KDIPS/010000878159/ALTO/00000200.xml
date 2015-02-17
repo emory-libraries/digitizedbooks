@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0200.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P199" PHYSICAL_IMG_NR="199" HEIGHT="2800" WIDTH="1900" ACCURACY="0.710426331" QUALITY_DETAIL="14 words, 53 chars, 35 with recognition greater than 50% (66.04%)">
+      <TopMargin ID="P199_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="547" />
+      <LeftMargin ID="P199_LM00001" HPOS="0" VPOS="547" WIDTH="384" HEIGHT="1715" />
+      <RightMargin ID="P199_RM00001" HPOS="1518" VPOS="547" WIDTH="382" HEIGHT="1715" />
+      <BottomMargin ID="P199_BM00001" HPOS="0" VPOS="2262" WIDTH="1900" HEIGHT="538" />
+      <PrintSpace ID="P199_PS00001" HPOS="384" VPOS="547" WIDTH="1134" HEIGHT="1715">
+        <Illustration ID="P199_ILL00001" HPOS="384" VPOS="547" WIDTH="1134" HEIGHT="1602" />
+        <TextBlock ID="P199_TB00001" HPOS="500" VPOS="2168" WIDTH="889" HEIGHT="95">
+          <TextLine ID="P199_TL00001" HPOS="603" VPOS="2177" WIDTH="707" HEIGHT="34">
+            <String ID="P199_S00001" HPOS="603" VPOS="2177" WIDTH="148" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="PROF." WC="0.602" CC="07542" />
+            <SP ID="P199_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00002" HPOS="774" VPOS="2177" WIDTH="48" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="H." WC="0.645" CC="70" />
+            <SP ID="P199_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00003" HPOS="842" VPOS="2178" WIDTH="41" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="T." WC="0.83" CC="30" />
+            <SP ID="P199_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00004" HPOS="904" VPOS="2175" WIDTH="252" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="KEALIJNG," WC="0.4311111" CC="3577361070" />
+            <SP ID="P199_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00005" HPOS="1177" VPOS="2176" WIDTH="40" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="A." WC="0.735" CC="40" />
+            <SP ID="P199_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00006" HPOS="1242" VPOS="2174" WIDTH="68" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="M.," WC="0.933333337" CC="200" />
+          </TextLine>
+          <TextLine ID="P199_TL00002" HPOS="508" VPOS="2220" WIDTH="872" HEIGHT="35">
+            <String ID="P199_S00007" HPOS="508" VPOS="2224" WIDTH="145" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="Editor" WC="0.75" CC="720400" />
+            <SP ID="P199_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00008" HPOS="685" VPOS="2222" WIDTH="40" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="of" WC="0.76" CC="22" />
+            <SP ID="P199_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00009" HPOS="737" VPOS="2222" WIDTH="66" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="the" WC="0.766666651" CC="070" />
+            <SP ID="P199_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00010" HPOS="828" VPOS="2223" WIDTH="41" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="A." WC="0.89" CC="20" />
+            <SP ID="P199_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00011" HPOS="890" VPOS="2221" WIDTH="54" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="M." WC="0.985" CC="00" />
+            <SP ID="P199_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00012" HPOS="965" VPOS="2220" WIDTH="43" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="E." WC="0.305" CC="85" />
+            <SP ID="P199_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00013" HPOS="1032" VPOS="2220" WIDTH="154" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="Church" WC="0.5" CC="767206" />
+            <SP ID="P199_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P199_S00014" HPOS="1207" VPOS="2216" WIDTH="173" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Review." WC="0.812857151" CC="2005040" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

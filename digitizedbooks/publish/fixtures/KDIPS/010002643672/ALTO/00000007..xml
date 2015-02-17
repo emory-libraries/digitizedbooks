@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000006.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Arial" />
+    <TextStyle ID="StyleId-1" FONTSIZE="5" FONTFAMILY="Arial" />
+  </Styles>
+  <Layout>
+    <Page ID="P6" PHYSICAL_IMG_NR="6" HEIGHT="3200" WIDTH="2000" ACCURACY="0.796039045" QUALITY_DETAIL="7 words, 47 chars, 40 with recognition greater than 50% (85.11%)">
+      <TopMargin ID="P6_TM00001" HPOS="0" VPOS="0" WIDTH="2000" HEIGHT="729" />
+      <LeftMargin ID="P6_LM00001" HPOS="0" VPOS="729" WIDTH="405" HEIGHT="1753" />
+      <RightMargin ID="P6_RM00001" HPOS="1602" VPOS="729" WIDTH="398" HEIGHT="1753" />
+      <BottomMargin ID="P6_BM00001" HPOS="0" VPOS="2482" WIDTH="2000" HEIGHT="718" />
+      <PrintSpace ID="P6_PS00001" HPOS="405" VPOS="729" WIDTH="1197" HEIGHT="1753">
+        <Illustration ID="P6_ILL00001" HPOS="405" VPOS="729" WIDTH="1195" HEIGHT="1580" />
+        <TextBlock ID="P6_TB00001" HPOS="579" VPOS="2386" WIDTH="893" HEIGHT="97">
+          <TextLine ID="P6_TL00001" HPOS="839" VPOS="2393" WIDTH="401" HEIGHT="31">
+            <String ID="P6_S00001" HPOS="839" VPOS="2392" WIDTH="172" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="JOSHUA" WC="0.955" CC="200000" />
+            <SP ID="P6_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00002" HPOS="1035" VPOS="2392" WIDTH="36" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="H." WC="0.87" CC="20" />
+            <SP ID="P6_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00003" HPOS="1095" VPOS="2391" WIDTH="145" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="JONES," WC="0.9266667" CC="120010" />
+          </TextLine>
+          <TextLine ID="P6_TL00002" HPOS="587" VPOS="2456" WIDTH="876" HEIGHT="19">
+            <String ID="P6_S00004" HPOS="587" VPOS="2455" WIDTH="224" HEIGHT="25" STYLEREFS="StyleId-1" CONTENT="PRESIDENT" WC="0.7033333" CC="107042603" />
+            <SP ID="P6_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00005" HPOS="833" VPOS="2455" WIDTH="48" HEIGHT="25" STYLEREFS="StyleId-1" CONTENT="OF" WC="0.53" CC="36" />
+            <SP ID="P6_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00006" HPOS="902" VPOS="2452" WIDTH="285" HEIGHT="28" STYLEREFS="StyleId-1" CONTENT="WILBERFORCE" WC="0.7836364" CC="02401060009" />
+            <SP ID="P6_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00007" HPOS="1210" VPOS="2450" WIDTH="253" HEIGHT="30" STYLEREFS="StyleId-1" CONTENT="UNIVERSITY." WC="0.8036364" CC="02206005022" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

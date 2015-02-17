@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0213.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="5" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P216" PHYSICAL_IMG_NR="216" HEIGHT="3300" WIDTH="2199" ACCURACY="0.333655745" QUALITY_DETAIL="12 words, 71 chars, 19 with recognition greater than 50% (26.76%)">
+      <TopMargin ID="P216_TM00001" HPOS="0" VPOS="0" WIDTH="2199" HEIGHT="441" />
+      <LeftMargin ID="P216_LM00001" HPOS="0" VPOS="441" WIDTH="1980" HEIGHT="2420" />
+      <RightMargin ID="P216_RM00001" HPOS="214" VPOS="441" WIDTH="1985" HEIGHT="2420" />
+      <BottomMargin ID="P216_BM00001" HPOS="0" VPOS="2861" WIDTH="2199" HEIGHT="439" />
+      <PrintSpace ID="P216_PS00001" HPOS="1980" VPOS="441" WIDTH="-1766" HEIGHT="2420">
+        <Illustration ID="P216_ILL00001" HPOS="1980" VPOS="441" WIDTH="-1640" HEIGHT="2420" />
+        <TextBlock ID="P216_TB00001" HPOS="307" VPOS="1116" WIDTH="-93" HEIGHT="1070">
+          <TextLine ID="P216_TL00001" HPOS="299" VPOS="1506" WIDTH="-27" HEIGHT="300">
+            <String ID="P216_S00001" HPOS="299" VPOS="1506" WIDTH="-23" HEIGHT="107" STYLEREFS="StyleId-0" CONTENT="TOUT" WC="0.1975" CC="8877" />
+            <SP ID="P216_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00002" HPOS="299" VPOS="1635" WIDTH="-27" HEIGHT="171" STYLEREFS="StyleId-0" CONTENT="HUDSON," WC="0.35" CC="7786473" />
+          </TextLine>
+          <TextLine ID="P216_TL00002" HPOS="260" VPOS="1125" WIDTH="-39" HEIGHT="1053">
+            <String ID="P216_S00003" HPOS="260" VPOS="1125" WIDTH="-23" HEIGHT="143" STYLEREFS="StyleId-0" CONTENT="rsrilliiuit" WC="0.42" CC="88844038808" />
+            <SP ID="P216_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00004" HPOS="252" VPOS="1283" WIDTH="-19" HEIGHT="115" STYLEREFS="StyleId-0" CONTENT="rli.'iw" WC="0.4542857" CC="7256078" />
+            <SP ID="P216_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00005" HPOS="251" VPOS="1412" WIDTH="-15" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="of" WC="0.3" CC="85" />
+            <SP ID="P216_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00006" HPOS="257" VPOS="1462" WIDTH="-21" HEIGHT="52" STYLEREFS="StyleId-0" CONTENT="Itie" WC="0.36" CC="80710" />
+            <SP ID="P216_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00007" HPOS="257" VPOS="1531" WIDTH="-23" HEIGHT="140" STYLEREFS="StyleId-0" CONTENT="I'hnlnnx" WC="0.30125" CC="42886897" />
+            <SP ID="P216_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00008" HPOS="250" VPOS="1688" WIDTH="-18" HEIGHT="82" STYLEREFS="StyleId-0" CONTENT="upon" WC="0.1975" CC="91048" />
+            <SP ID="P216_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00009" HPOS="252" VPOS="1789" WIDTH="-20" HEIGHT="5" STYLEREFS="StyleId-0" CONTENT="I" WC="0.4" CC="6" />
+            <SP ID="P216_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00010" HPOS="253" VPOS="1805" WIDTH="-21" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="lie" WC="0.37" CC="377" />
+            <SP ID="P216_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00011" HPOS="252" VPOS="1852" WIDTH="-24" HEIGHT="202" STYLEREFS="StyleId-0" CONTENT="Confrdei-.-ite" WC="0.33" CC="7108338101959078" />
+            <SP ID="P216_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P216_S00012" HPOS="246" VPOS="2069" WIDTH="-25" HEIGHT="109" STYLEREFS="StyleId-0" CONTENT="Works," WC="0.323333323" CC="1087670" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

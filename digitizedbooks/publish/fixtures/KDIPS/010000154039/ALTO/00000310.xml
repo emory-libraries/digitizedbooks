@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0306.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P309" PHYSICAL_IMG_NR="309" HEIGHT="2200" WIDTH="3300" ACCURACY="0.418652356" QUALITY_DETAIL="5 words, 33 chars, 9 with recognition greater than 50% (27.27%)">
+      <TopMargin ID="P309_TM00001" HPOS="0" VPOS="0" WIDTH="3300" HEIGHT="2577" />
+      <LeftMargin ID="P309_LM00001" HPOS="0" VPOS="2577" WIDTH="378" HEIGHT="-1855" />
+      <RightMargin ID="P309_RM00001" HPOS="1830" VPOS="2577" WIDTH="1470" HEIGHT="-1855" />
+      <BottomMargin ID="P309_BM00001" HPOS="0" VPOS="722" WIDTH="3300" HEIGHT="1478" />
+      <PrintSpace ID="P309_PS00001" HPOS="378" VPOS="2577" WIDTH="1452" HEIGHT="-1855">
+        <Illustration ID="P309_ILL00001" HPOS="378" VPOS="2577" WIDTH="1399" HEIGHT="-1855" />
+        <TextBlock ID="P309_TB00001" HPOS="1759" VPOS="2093" WIDTH="71" HEIGHT="-938">
+          <TextLine ID="P309_TL00001" HPOS="1767" VPOS="2085" WIDTH="55" HEIGHT="-923">
+            <String ID="P309_S00001" HPOS="1798" VPOS="1935" WIDTH="19" HEIGHT="131" STYLEREFS="StyleId-0" CONTENT="SERVING" WC="0.3642857" CC="5586278" />
+            <SP ID="P309_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P309_S00002" HPOS="1790" VPOS="1582" WIDTH="15" HEIGHT="484" STYLEREFS="StyleId-0" CONTENT="REFRESHMENTS" WC="0.350833327" CC="776647664667" />
+            <SP ID="P309_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P309_S00003" HPOS="1778" VPOS="1515" WIDTH="24" HEIGHT="551" STYLEREFS="StyleId-0" CONTENT="TO" WC="0.555" CC="62" />
+            <SP ID="P309_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P309_S00004" HPOS="1775" VPOS="1372" WIDTH="21" HEIGHT="694" STYLEREFS="StyleId-0" CONTENT="UNION" WC="0.266" CC="49777" />
+            <SP ID="P309_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P309_S00005" HPOS="1770" VPOS="1169" WIDTH="22" HEIGHT="897" STYLEREFS="StyleId-0" CONTENT="TROOPS." WC="0.557142854" CC="10004573" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

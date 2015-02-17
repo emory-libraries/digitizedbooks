@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0193.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P192" PHYSICAL_IMG_NR="192" HEIGHT="2800" WIDTH="1900" ACCURACY="0.5020952" QUALITY_DETAIL="5 words, 23 chars, 11 with recognition greater than 50% (47.83%)">
+      <TopMargin ID="P192_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="351" />
+      <LeftMargin ID="P192_LM00001" HPOS="0" VPOS="351" WIDTH="186" HEIGHT="2093" />
+      <RightMargin ID="P192_RM00001" HPOS="1720" VPOS="351" WIDTH="180" HEIGHT="2093" />
+      <BottomMargin ID="P192_BM00001" HPOS="0" VPOS="2444" WIDTH="1900" HEIGHT="356" />
+      <PrintSpace ID="P192_PS00001" HPOS="186" VPOS="351" WIDTH="1534" HEIGHT="2093">
+        <Illustration ID="P192_ILL00001" HPOS="186" VPOS="351" WIDTH="1534" HEIGHT="2037" />
+        <TextBlock ID="P192_TB00001" HPOS="539" VPOS="2390" WIDTH="849" HEIGHT="54">
+          <TextLine ID="P192_TL00001" HPOS="547" VPOS="2394" WIDTH="833" HEIGHT="42">
+            <String ID="P192_S00001" HPOS="547" VPOS="2400" WIDTH="195" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="PISHOP" WC="0.435" CC="877512" />
+            <SP ID="P192_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P192_S00002" HPOS="761" VPOS="2396" WIDTH="270" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="ABRAHAM" WC="0.557142854" CC="6743313" />
+            <SP ID="P192_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P192_S00003" HPOS="1051" VPOS="2393" WIDTH="196" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="GRANT," WC="0.428333342" CC="577373" />
+            <SP ID="P192_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P192_S00004" HPOS="1271" VPOS="2396" WIDTH="42" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="D." WC="0.775" CC="40" />
+            <SP ID="P192_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P192_S00005" HPOS="1335" VPOS="2395" WIDTH="45" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="D." WC="0.315" CC="76" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

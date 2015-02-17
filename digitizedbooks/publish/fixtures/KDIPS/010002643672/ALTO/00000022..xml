@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000021.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="9" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-2" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-3" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P21" PHYSICAL_IMG_NR="21" HEIGHT="3212" WIDTH="2019" ACCURACY="0.711640239" QUALITY_DETAIL="171 words, 753 chars, 541 with recognition greater than 50% (71.85%)">
+      <TopMargin ID="P21_TM00001" HPOS="0" VPOS="0" WIDTH="2019" HEIGHT="317" />
+      <LeftMargin ID="P21_LM00001" HPOS="0" VPOS="317" WIDTH="201" HEIGHT="2557" />
+      <RightMargin ID="P21_RM00001" HPOS="1797" VPOS="317" WIDTH="222" HEIGHT="2557" />
+      <BottomMargin ID="P21_BM00001" HPOS="0" VPOS="2874" WIDTH="2019" HEIGHT="338" />
+      <PrintSpace ID="P21_PS00001" HPOS="201" VPOS="317" WIDTH="1596" HEIGHT="2557">
+        <TextBlock ID="P21_TB00001" HPOS="923" VPOS="322" WIDTH="167" HEIGHT="55">
+          <TextLine ID="P21_TL00001" HPOS="931" VPOS="337" WIDTH="151" HEIGHT="31">
+            <String ID="P21_S00001" HPOS="931" VPOS="353" WIDTH="38" HEIGHT="5" STYLEREFS="StyleId-0" CONTENT="—" WC="0.1" CC="9" />
+            <SP ID="P21_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00002" HPOS="986" VPOS="337" WIDTH="96" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="19—" WC="0.6566667" CC="109" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P21_TB00002" HPOS="385" VPOS="430" WIDTH="1215" HEIGHT="164">
+          <TextLine ID="P21_TL00002" HPOS="392" VPOS="438" WIDTH="1200" HEIGHT="53">
+            <String ID="P21_S00003" HPOS="392" VPOS="438" WIDTH="358" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="FORTY-FIRST" WC="0.676363647" CC="64010343056" />
+            <SP ID="P21_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00004" HPOS="777" VPOS="446" WIDTH="218" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="ANNUAL" WC="0.788333356" CC="001056" />
+            <SP ID="P21_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00005" HPOS="1020" VPOS="449" WIDTH="216" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="REPORT" WC="0.766666651" CC="067000" />
+            <SP ID="P21_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00006" HPOS="1254" VPOS="473" WIDTH="42" HEIGHT="14" STYLEREFS="StyleId-1" CONTENT="—" WC="0.1" CC="9" />
+            <SP ID="P21_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00007" HPOS="1314" VPOS="452" WIDTH="278" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="RECEIPTS." WC="0.6588889" CC="064606051" />
+          </TextLine>
+          <TextLine ID="P21_TL00003" HPOS="428" VPOS="531" WIDTH="1157" HEIGHT="55">
+            <String ID="P21_S00008" HPOS="428" VPOS="538" WIDTH="122" HEIGHT="26" STYLEREFS="StyleId-2" CONTENT="FROM" WC="0.6175" CC="5504" />
+            <SP ID="P21_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00009" HPOS="570" VPOS="541" WIDTH="195" HEIGHT="35" STYLEREFS="StyleId-2" CONTENT="JANUARY" WC="0.72" CC="0362105" />
+            <SP ID="P21_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00010" HPOS="792" VPOS="533" WIDTH="88" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="1ST," WC="0.655" CC="2560" />
+            <SP ID="P21_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00011" HPOS="910" VPOS="534" WIDTH="125" HEIGHT="47" STYLEREFS="StyleId-3" CONTENT="1903," WC="0.7" CC="60123" />
+            <SP ID="P21_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00012" HPOS="1062" VPOS="547" WIDTH="57" HEIGHT="34" STYLEREFS="StyleId-2" CONTENT="TO" WC="0.645" CC="70" />
+            <SP ID="P21_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00013" HPOS="1144" VPOS="549" WIDTH="130" HEIGHT="32" STYLEREFS="StyleId-2" CONTENT="APRIL" WC="0.712" CC="06700" />
+            <SP ID="P21_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00014" HPOS="1300" VPOS="540" WIDTH="132" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="20TH," WC="0.508" CC="14773" />
+            <SP ID="P21_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00015" HPOS="1461" VPOS="542" WIDTH="124" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="1904." WC="0.79" CC="00370" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P21_TB00003" HPOS="200" VPOS="592" WIDTH="1598" HEIGHT="2006">
+          <TextLine ID="P21_TL00004" HPOS="213" VPOS="600" WIDTH="1580" HEIGHT="65">
+            <String ID="P21_S00016" HPOS="213" VPOS="600" WIDTH="232" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Borrowed" WC="0.61625" CC="71521604" />
+            <SP ID="P21_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00017" HPOS="1550" VPOS="617" WIDTH="156" HEIGHT="47" STYLEREFS="StyleId-3" CONTENT="$1,100" WC="0.723333359" CC="230046" />
+            <SP ID="P21_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00018" HPOS="1739" VPOS="622" WIDTH="54" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="00" WC="0.72" CC="50" />
+          </TextLine>
+          <TextLine ID="P21_TL00005" HPOS="211" VPOS="667" WIDTH="1582" HEIGHT="57">
+            <String ID="P21_S00019" HPOS="211" VPOS="667" WIDTH="183" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Interest" WC="0.81" CC="05004040" />
+            <SP ID="P21_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00020" HPOS="419" VPOS="670" WIDTH="183" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="received" WC="0.7325" CC="60006206" />
+            <SP ID="P21_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00021" HPOS="1624" VPOS="687" WIDTH="82" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="382" WC="0.663333356" CC="251" />
+            <SP ID="P21_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00022" HPOS="1740" VPOS="688" WIDTH="53" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.695" CC="60" />
+          </TextLine>
+          <TextLine ID="P21_TL00006" HPOS="211" VPOS="733" WIDTH="1582" HEIGHT="57">
+            <String ID="P21_S00023" HPOS="211" VPOS="733" WIDTH="130" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="From" WC="0.5525" CC="5623" />
+            <SP ID="P21_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00024" HPOS="368" VPOS="735" WIDTH="85" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="sale" WC="0.67" CC="4071" />
+            <SP ID="P21_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00025" HPOS="480" VPOS="738" WIDTH="40" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="ot" WC="0.63" CC="07" />
+            <SP ID="P21_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00026" HPOS="554" VPOS="738" WIDTH="93" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="coal" WC="0.695" CC="5410" />
+            <SP ID="P21_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00027" HPOS="1652" VPOS="753" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="48" WC="0.625" CC="70" />
+            <SP ID="P21_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00028" HPOS="1739" VPOS="754" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="45" WC="0.635" CC="70" />
+          </TextLine>
+          <TextLine ID="P21_TL00007" HPOS="213" VPOS="799" WIDTH="1580" HEIGHT="57">
+            <String ID="P21_S00029" HPOS="213" VPOS="800" WIDTH="241" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Donations" WC="0.73" CC="100406173" />
+            <SP ID="P21_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00030" HPOS="513" VPOS="834" WIDTH="5" HEIGHT="5" STYLEREFS="StyleId-3" CONTENT="." WC="1" CC="0" />
+            <SP ID="P21_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00031" HPOS="557" VPOS="835" WIDTH="5" HEIGHT="5" STYLEREFS="StyleId-3" CONTENT="." WC="0.4" CC="6" />
+            <SP ID="P21_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00032" HPOS="602" VPOS="835" WIDTH="5" HEIGHT="5" STYLEREFS="StyleId-3" CONTENT="." WC="0.64" CC="3" />
+            <SP ID="P21_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00033" HPOS="646" VPOS="836" WIDTH="5" HEIGHT="5" STYLEREFS="StyleId-3" CONTENT="." WC="0.36" CC="6" />
+            <SP ID="P21_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00034" HPOS="1650" VPOS="819" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="41" WC="0.76" CC="04" />
+            <SP ID="P21_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00035" HPOS="1739" VPOS="819" WIDTH="54" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="50" WC="0.885" CC="20" />
+          </TextLine>
+          <TextLine ID="P21_TL00008" HPOS="206" VPOS="866" WIDTH="1587" HEIGHT="61">
+            <String ID="P21_S00036" HPOS="206" VPOS="867" WIDTH="136" HEIGHT="47" STYLEREFS="StyleId-3" CONTENT="Jason" WC="0.532" CC="57234" />
+            <SP ID="P21_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00037" HPOS="368" VPOS="868" WIDTH="152" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Bundy" WC="0.608" CC="67600" />
+            <SP ID="P21_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00038" HPOS="546" VPOS="876" WIDTH="130" HEIGHT="44" STYLEREFS="StyleId-3" CONTENT="agent" WC="0.81" CC="07020" />
+            <SP ID="P21_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00039" HPOS="1653" VPOS="885" WIDTH="53" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="90" WC="0.735" CC="05" />
+            <SP ID="P21_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00040" HPOS="1739" VPOS="885" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.69" CC="60" />
+          </TextLine>
+          <TextLine ID="P21_TL00009" HPOS="214" VPOS="932" WIDTH="1579" HEIGHT="60">
+            <String ID="P21_S00041" HPOS="214" VPOS="933" WIDTH="52" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="H." WC="0.49" CC="63" />
+            <SP ID="P21_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00042" HPOS="295" VPOS="933" WIDTH="45" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="Y." WC="0.865" CC="02" />
+            <SP ID="P21_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00043" HPOS="369" VPOS="934" WIDTH="163" HEIGHT="46" STYLEREFS="StyleId-3" CONTENT="Arnett," WC="0.785714269" CC="0670001" />
+            <SP ID="P21_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00044" HPOS="562" VPOS="942" WIDTH="129" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="agent" WC="0.87" CC="06000" />
+            <SP ID="P21_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00045" HPOS="1623" VPOS="950" WIDTH="82" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="265" WC="0.863333344" CC="003" />
+            <SP ID="P21_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00046" HPOS="1740" VPOS="951" WIDTH="53" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.76" CC="40" />
+          </TextLine>
+          <TextLine ID="P21_TL00010" HPOS="212" VPOS="998" WIDTH="1582" HEIGHT="55">
+            <String ID="P21_S00047" HPOS="212" VPOS="998" WIDTH="216" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Trustees'" WC="0.7788889" CC="068000014" />
+            <SP ID="P21_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00048" HPOS="458" VPOS="1001" WIDTH="160" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="annual" WC="0.6566667" CC="400870" />
+            <SP ID="P21_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00049" HPOS="643" VPOS="1003" WIDTH="99" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="dues" WC="0.74" CC="0703" />
+            <SP ID="P21_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00050" HPOS="1623" VPOS="1016" WIDTH="82" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="395" WC="0.94" CC="100" />
+            <SP ID="P21_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00051" HPOS="1739" VPOS="1017" WIDTH="55" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.55" CC="44" />
+          </TextLine>
+          <TextLine ID="P21_TL00011" HPOS="211" VPOS="1064" WIDTH="1580" HEIGHT="63">
+            <String ID="P21_S00052" HPOS="211" VPOS="1065" WIDTH="120" HEIGHT="46" STYLEREFS="StyleId-3" CONTENT="Rent," WC="0.75" CC="90002" />
+            <SP ID="P21_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00053" HPOS="360" VPOS="1066" WIDTH="271" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="Norristown" WC="0.693" CC="0045920044" />
+            <SP ID="P21_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00054" HPOS="656" VPOS="1075" WIDTH="204" HEIGHT="46" STYLEREFS="StyleId-3" CONTENT="property" WC="0.50375" CC="66373606" />
+            <SP ID="P21_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00055" HPOS="1127" VPOS="1089" WIDTH="5" HEIGHT="32" STYLEREFS="StyleId-3" CONTENT=":" WC="0" CC="10" />
+            <SP ID="P21_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00056" HPOS="1650" VPOS="1082" WIDTH="53" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="60" WC="0.775" CC="40" />
+            <SP ID="P21_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00057" HPOS="1738" VPOS="1082" WIDTH="53" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="76" WC="0.435" CC="73" />
+          </TextLine>
+          <TextLine ID="P21_TL00012" HPOS="214" VPOS="1129" WIDTH="1580" HEIGHT="63">
+            <String ID="P21_S00058" HPOS="214" VPOS="1129" WIDTH="130" HEIGHT="52" STYLEREFS="StyleId-3" CONTENT="Eight" WC="0.542" CC="78070" />
+            <SP ID="P21_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00059" HPOS="369" VPOS="1146" WIDTH="72" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="per" WC="0.56" CC="804" />
+            <SP ID="P21_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00060" HPOS="465" VPOS="1139" WIDTH="93" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="cent" WC="0.8425" CC="6000" />
+            <SP ID="P21_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00061" HPOS="584" VPOS="1134" WIDTH="138" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="dollar" WC="0.8233333" CC="002304" />
+            <SP ID="P21_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00062" HPOS="746" VPOS="1149" WIDTH="151" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="money" WC="0.862" CC="60000" />
+            <SP ID="P21_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00063" HPOS="922" VPOS="1137" WIDTH="99" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="fund" WC="0.5525" CC="4760" />
+            <SP ID="P21_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00063" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00064" HPOS="1580" VPOS="1145" WIDTH="127" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="1,160" WC="0.782" CC="00405" />
+            <SP ID="P21_SP00064" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00065" HPOS="1740" VPOS="1149" WIDTH="54" HEIGHT="41" STYLEREFS="StyleId-3" CONTENT="00" WC="0.69" CC="60" />
+          </TextLine>
+          <TextLine ID="P21_TL00013" HPOS="213" VPOS="1196" WIDTH="1579" HEIGHT="61">
+            <String ID="P21_S00066" HPOS="213" VPOS="1197" WIDTH="94" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Sale" WC="0.6675" CC="6600" />
+            <SP ID="P21_SP00065" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00067" HPOS="332" VPOS="1198" WIDTH="48" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P21_SP00066" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00068" HPOS="407" VPOS="1197" WIDTH="211" HEIGHT="52" STYLEREFS="StyleId-3" CONTENT="diplomas" WC="0.625" CC="201060324" />
+            <SP ID="P21_SP00067" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00068" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00069" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00069" HPOS="1651" VPOS="1213" WIDTH="53" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="10" WC="0.515" CC="44" />
+            <SP ID="P21_SP00070" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00070" HPOS="1737" VPOS="1214" WIDTH="55" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.485" CC="54" />
+          </TextLine>
+          <TextLine ID="P21_TL00014" HPOS="216" VPOS="1263" WIDTH="1578" HEIGHT="60">
+            <String ID="P21_S00071" HPOS="216" VPOS="1264" WIDTH="107" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="Rent" WC="1" CC="0000" />
+            <SP ID="P21_SP00071" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00072" HPOS="349" VPOS="1264" WIDTH="47" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="of" WC="0.745" CC="50" />
+            <SP ID="P21_SP00072" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00073" HPOS="421" VPOS="1265" WIDTH="191" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="grounds" WC="0.5257143" CC="0237991" />
+            <SP ID="P21_SP00073" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00074" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00074" HPOS="1652" VPOS="1280" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="22" WC="0.76" CC="40" />
+            <SP ID="P21_SP00075" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00075" HPOS="1740" VPOS="1280" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="60" WC="0.65" CC="15" />
+          </TextLine>
+          <TextLine ID="P21_TL00015" HPOS="215" VPOS="1328" WIDTH="1578" HEIGHT="60">
+            <String ID="P21_S00076" HPOS="215" VPOS="1329" WIDTH="211" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Douglass" WC="0.70875" CC="01675002" />
+            <SP ID="P21_SP00076" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00077" HPOS="451" VPOS="1331" WIDTH="331" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="entertainment" WC="0.757692337" CC="0500500749000" />
+            <SP ID="P21_SP00077" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00078" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00078" HPOS="1651" VPOS="1345" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="22" WC="1" CC="00" />
+            <SP ID="P21_SP00079" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00079" HPOS="1739" VPOS="1345" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="90" WC="0.715" CC="05" />
+          </TextLine>
+          <TextLine ID="P21_TL00016" HPOS="214" VPOS="1393" WIDTH="1578" HEIGHT="59">
+            <String ID="P21_S00080" HPOS="214" VPOS="1394" WIDTH="187" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="Tuition," WC="0.755" CC="07006202" />
+            <SP ID="P21_SP00080" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00081" HPOS="429" VPOS="1402" WIDTH="92" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="rent" WC="0.6725" CC="5340" />
+            <SP ID="P21_SP00081" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00082" HPOS="548" VPOS="1398" WIDTH="85" HEIGHT="44" STYLEREFS="StyleId-3" CONTENT="and" WC="0.776666641" CC="060" />
+            <SP ID="P21_SP00082" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00083" HPOS="658" VPOS="1398" WIDTH="249" HEIGHT="44" STYLEREFS="StyleId-3" CONTENT="incidentals" WC="0.75636363" CC="07400070025" />
+            <SP ID="P21_SP00083" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00084" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00084" HPOS="1579" VPOS="1409" WIDTH="125" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="2,898" WC="0.872" CC="30002" />
+            <SP ID="P21_SP00085" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00085" HPOS="1741" VPOS="1411" WIDTH="51" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="77" WC="1" CC="00" />
+          </TextLine>
+          <TextLine ID="P21_TL00017" HPOS="216" VPOS="1460" WIDTH="1578" HEIGHT="61">
+            <String ID="P21_S00086" HPOS="216" VPOS="1461" WIDTH="45" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="C." WC="0.79" CC="40" />
+            <SP ID="P21_SP00086" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00087" HPOS="288" VPOS="1463" WIDTH="47" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="N." WC="0.925" CC="01" />
+            <SP ID="P21_SP00087" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00088" HPOS="365" VPOS="1463" WIDTH="40" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="&amp;" WC="1" CC="0" />
+            <SP ID="P21_SP00088" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00089" HPOS="431" VPOS="1464" WIDTH="31" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="I." WC="1" CC="00" />
+            <SP ID="P21_SP00089" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00090" HPOS="491" VPOS="1463" WIDTH="351" HEIGHT="51" STYLEREFS="StyleId-3" CONTENT="appropriations" WC="0.816428542" CC="00060046007000" />
+            <SP ID="P21_SP00090" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00091" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00091" HPOS="1579" VPOS="1474" WIDTH="126" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="2,400" WC="0.722" CC="04036" />
+            <SP ID="P21_SP00092" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00092" HPOS="1738" VPOS="1476" WIDTH="56" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="00" WC="0.445" CC="55" />
+          </TextLine>
+          <TextLine ID="P21_TL00018" HPOS="822" VPOS="1587" WIDTH="367" HEIGHT="40">
+            <String ID="P21_S00093" HPOS="822" VPOS="1587" WIDTH="367" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="ENDOWMENT." WC="0.694" CC="7710507002" />
+          </TextLine>
+          <TextLine ID="P21_TL00019" HPOS="216" VPOS="1670" WIDTH="1577" HEIGHT="60">
+            <String ID="P21_S00094" HPOS="216" VPOS="1671" WIDTH="227" HEIGHT="51" STYLEREFS="StyleId-3" CONTENT="Pittsburg" WC="0.641111135" CC="660006740" />
+            <SP ID="P21_SP00093" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00095" HPOS="468" VPOS="1673" WIDTH="246" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="Conference" WC="0.769" CC="0040340630" />
+            <SP ID="P21_SP00094" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00095" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00096" HPOS="1624" VPOS="1684" WIDTH="81" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="110" WC="0.673333347" CC="243" />
+            <SP ID="P21_SP00096" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00097" HPOS="1739" VPOS="1686" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="67" WC="0.71" CC="50" />
+          </TextLine>
+          <TextLine ID="P21_TL00020" HPOS="217" VPOS="1737" WIDTH="1576" HEIGHT="50">
+            <String ID="P21_S00098" HPOS="217" VPOS="1738" WIDTH="106" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Ohio" WC="0.46" CC="4790" />
+            <SP ID="P21_SP00097" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00099" HPOS="351" VPOS="1739" WIDTH="245" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Conference" WC="0.58" CC="5370465702" />
+            <SP ID="P21_SP00098" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00099" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00100" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00100" HPOS="1653" VPOS="1751" WIDTH="48" HEIGHT="34" STYLEREFS="StyleId-3" CONTENT="91" WC="0.98" CC="00" />
+            <SP ID="P21_SP00101" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00101" HPOS="1740" VPOS="1751" WIDTH="53" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="50" WC="0.165" CC="610" />
+          </TextLine>
+          <TextLine ID="P21_TL00021" HPOS="216" VPOS="1803" WIDTH="1577" HEIGHT="50">
+            <String ID="P21_S00102" HPOS="216" VPOS="1804" WIDTH="137" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="North" WC="0.798" CC="01107" />
+            <SP ID="P21_SP00102" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00103" HPOS="380" VPOS="1805" WIDTH="106" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="Ohio" WC="0.7675" CC="4040" />
+            <SP ID="P21_SP00103" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00104" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00104" HPOS="1652" VPOS="1817" WIDTH="53" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="62" WC="1" CC="00" />
+            <SP ID="P21_SP00105" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00105" HPOS="1739" VPOS="1817" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="00" WC="0.7" CC="41" />
+          </TextLine>
+          <TextLine ID="P21_TL00022" HPOS="217" VPOS="1880" WIDTH="1575" HEIGHT="50">
+            <String ID="P21_S00106" HPOS="217" VPOS="1882" WIDTH="108" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="Prof" WC="0.7025" CC="7202" />
+            <SP ID="P21_SP00106" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00107" HPOS="345" VPOS="1882" WIDTH="212" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Hawkins" WC="0.601428568" CC="6013753" />
+            <SP ID="P21_SP00107" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00108" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00109" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00108" HPOS="1620" VPOS="1894" WIDTH="83" HEIGHT="34" STYLEREFS="StyleId-3" CONTENT="333" WC="0.793333352" CC="410" />
+            <SP ID="P21_SP00110" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00109" HPOS="1738" VPOS="1894" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="96" WC="0.91" CC="10" />
+          </TextLine>
+          <TextLine ID="P21_TL00023" HPOS="854" VPOS="1995" WIDTH="309" HEIGHT="28">
+            <String ID="P21_S00110" HPOS="854" VPOS="1995" WIDTH="309" HEIGHT="27" STYLEREFS="StyleId-2" CONTENT="COLLECTIONS." WC="0.6625" CC="005612750570" />
+          </TextLine>
+          <TextLine ID="P21_TL00024" HPOS="218" VPOS="2067" WIDTH="1572" HEIGHT="60">
+            <String ID="P21_S00111" HPOS="218" VPOS="2069" WIDTH="226" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Pittsburg" WC="0.6533333" CC="7000271040" />
+            <SP ID="P21_SP00111" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00112" HPOS="471" VPOS="2069" WIDTH="248" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Conference" WC="0.536" CC="5086090554" />
+            <SP ID="P21_SP00112" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00113" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00114" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00115" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00113" HPOS="1621" VPOS="2079" WIDTH="81" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="180" WC="0.543333352" CC="255" />
+            <SP ID="P21_SP00116" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00114" HPOS="1736" VPOS="2080" WIDTH="54" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="00" WC="0.775" CC="31" />
+          </TextLine>
+          <TextLine ID="P21_TL00025" HPOS="219" VPOS="2133" WIDTH="1573" HEIGHT="51">
+            <String ID="P21_S00115" HPOS="219" VPOS="2135" WIDTH="106" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="Ohio" WC="0.6525" CC="5071" />
+            <SP ID="P21_SP00117" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00116" HPOS="353" VPOS="2135" WIDTH="249" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="Conference" WC="0.821" CC="2070050030" />
+            <SP ID="P21_SP00118" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00119" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00117" HPOS="1651" VPOS="2145" WIDTH="51" HEIGHT="34" STYLEREFS="StyleId-3" CONTENT="61" WC="0.625" CC="70" />
+            <SP ID="P21_SP00120" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00118" HPOS="1737" VPOS="2145" WIDTH="55" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.44" CC="55" />
+          </TextLine>
+          <TextLine ID="P21_TL00026" HPOS="218" VPOS="2199" WIDTH="1574" HEIGHT="50">
+            <String ID="P21_S00119" HPOS="218" VPOS="2202" WIDTH="138" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="North" WC="0.888" CC="01400" />
+            <SP ID="P21_SP00121" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00120" HPOS="383" VPOS="2201" WIDTH="106" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Ohio" WC="0.7575" CC="3060" />
+            <SP ID="P21_SP00122" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00121" HPOS="518" VPOS="2202" WIDTH="245" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Conference" WC="0.808" CC="0270020006" />
+            <SP ID="P21_SP00123" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00124" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00125" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00122" HPOS="1648" VPOS="2209" WIDTH="56" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="47" WC="1" CC="00" />
+            <SP ID="P21_SP00126" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00123" HPOS="1738" VPOS="2211" WIDTH="54" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="00" WC="0.755" CC="13" />
+          </TextLine>
+          <TextLine ID="P21_TL00027" HPOS="219" VPOS="2265" WIDTH="1572" HEIGHT="60">
+            <String ID="P21_S00124" HPOS="219" VPOS="2268" WIDTH="231" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Founders'" WC="0.6588889" CC="627400621" />
+            <SP ID="P21_SP00127" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00125" HPOS="479" VPOS="2270" WIDTH="93" HEIGHT="47" STYLEREFS="StyleId-3" CONTENT="Day" WC="0.55" CC="3010" />
+            <SP ID="P21_SP00128" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00126" HPOS="598" VPOS="2268" WIDTH="122" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="Rally" WC="0.954" CC="00200" />
+            <SP ID="P21_SP00129" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00130" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00127" HPOS="1622" VPOS="2275" WIDTH="84" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="224" WC="0.7266667" CC="080" />
+            <SP ID="P21_SP00131" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00128" HPOS="1739" VPOS="2276" WIDTH="52" HEIGHT="41" STYLEREFS="StyleId-3" CONTENT="50" WC="0.96" CC="00" />
+          </TextLine>
+          <TextLine ID="P21_TL00028" HPOS="220" VPOS="2331" WIDTH="1571" HEIGHT="51">
+            <String ID="P21_S00129" HPOS="220" VPOS="2333" WIDTH="226" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="Overdraft" WC="0.7588889" CC="0015040100" />
+            <SP ID="P21_SP00132" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00130" HPOS="473" VPOS="2333" WIDTH="105" HEIGHT="40" STYLEREFS="StyleId-3" CONTENT="Paid" WC="0.715" CC="4060" />
+            <SP ID="P21_SP00133" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00131" HPOS="605" VPOS="2335" WIDTH="48" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="In" WC="0.645" CC="42" />
+            <SP ID="P21_SP00134" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00135" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00132" HPOS="1680" VPOS="2342" WIDTH="24" HEIGHT="35" STYLEREFS="StyleId-3" CONTENT="2" WC="0.24" CC="7" />
+            <SP ID="P21_SP00136" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00133" HPOS="1738" VPOS="2341" WIDTH="53" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="00" WC="0.685" CC="60" />
+          </TextLine>
+          <TextLine ID="P21_TL00029" HPOS="219" VPOS="2395" WIDTH="1571" HEIGHT="64">
+            <String ID="P21_S00134" HPOS="219" VPOS="2401" WIDTH="233" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Mortgage" WC="0.7825" CC="50600050" />
+            <SP ID="P21_SP00137" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00135" HPOS="479" VPOS="2399" WIDTH="104" HEIGHT="52" STYLEREFS="StyleId-3" CONTENT="Paid" WC="0.4075" CC="7079" />
+            <SP ID="P21_SP00138" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00136" HPOS="612" VPOS="2402" WIDTH="59" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="In," WC="0.74666667" CC="250" />
+            <SP ID="P21_SP00139" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00137" HPOS="701" VPOS="2402" WIDTH="50" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="H." WC="0.645" CC="24" />
+            <SP ID="P21_SP00140" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00138" HPOS="781" VPOS="2402" WIDTH="51" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="H." WC="0.66" CC="60" />
+            <SP ID="P21_SP00141" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00139" HPOS="862" VPOS="2400" WIDTH="186" HEIGHT="51" STYLEREFS="StyleId-3" CONTENT="Holland" WC="0.66" CC="2475040" />
+            <SP ID="P21_SP00142" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00143" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00140" HPOS="1622" VPOS="2406" WIDTH="82" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="300" WC="0.636666656" CC="423" />
+            <SP ID="P21_SP00144" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00141" HPOS="1738" VPOS="2408" WIDTH="52" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="00" WC="0.925" CC="10" />
+          </TextLine>
+          <TextLine ID="P21_TL00030" HPOS="219" VPOS="2462" WIDTH="1571" HEIGHT="63">
+            <String ID="P21_S00142" HPOS="219" VPOS="2467" WIDTH="233" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Mortgage" WC="0.5325" CC="63409930" />
+            <SP ID="P21_SP00145" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00143" HPOS="479" VPOS="2465" WIDTH="104" HEIGHT="52" STYLEREFS="StyleId-3" CONTENT="Paid" WC="0.6375" CC="00410" />
+            <SP ID="P21_SP00146" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00144" HPOS="610" VPOS="2467" WIDTH="60" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="In," WC="0.9433333" CC="100" />
+            <SP ID="P21_SP00147" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00145" HPOS="694" VPOS="2468" WIDTH="35" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="J." WC="0.685" CC="60" />
+            <SP ID="P21_SP00148" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00146" HPOS="759" VPOS="2467" WIDTH="43" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="P." WC="0.9" CC="20" />
+            <SP ID="P21_SP00149" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00147" HPOS="831" VPOS="2466" WIDTH="173" HEIGHT="51" STYLEREFS="StyleId-3" CONTENT="Shorter" WC="0.9128571" CC="4001000" />
+            <SP ID="P21_SP00150" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00151" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00148" HPOS="1622" VPOS="2472" WIDTH="82" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="500" WC="0.7033333" CC="044" />
+            <SP ID="P21_SP00152" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00149" HPOS="1737" VPOS="2473" WIDTH="53" HEIGHT="44" STYLEREFS="StyleId-3" CONTENT="00" WC="0.59" CC="43" />
+          </TextLine>
+          <TextLine ID="P21_TL00031" HPOS="219" VPOS="2528" WIDTH="1571" HEIGHT="62">
+            <String ID="P21_S00150" HPOS="219" VPOS="2532" WIDTH="153" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="Dining" WC="0.688333333" CC="067500" />
+            <SP ID="P21_SP00153" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00151" HPOS="400" VPOS="2532" WIDTH="98" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="Hall" WC="0.775" CC="5030" />
+            <SP ID="P21_SP00154" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00152" HPOS="524" VPOS="2531" WIDTH="194" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Deposits" WC="0.7675" CC="00005507" />
+            <SP ID="P21_SP00155" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00156" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00157" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00153" HPOS="1578" VPOS="2536" WIDTH="125" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="3,272" WC="1" CC="00000" />
+            <SP ID="P21_SP00158" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00154" HPOS="1737" VPOS="2538" WIDTH="53" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="02" WC="0.68" CC="60" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P21_TB00004" HPOS="213" VPOS="2626" WIDTH="1584" HEIGHT="147">
+          <TextLine ID="P21_TL00032" HPOS="397" VPOS="2635" WIDTH="1392" HEIGHT="55">
+            <String ID="P21_S00155" HPOS="397" VPOS="2640" WIDTH="130" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="Total" WC="0.936" CC="00002" />
+            <SP ID="P21_SP00159" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00156" HPOS="1511" VPOS="2642" WIDTH="193" HEIGHT="47" STYLEREFS="StyleId-3" CONTENT="$13,704" WC="0.5871429" CC="46330010" />
+            <SP ID="P21_SP00160" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00157" HPOS="1737" VPOS="2648" WIDTH="52" HEIGHT="41" STYLEREFS="StyleId-3" CONTENT="62" WC="0.99" CC="00" />
+          </TextLine>
+          <TextLine ID="P21_TL00033" HPOS="221" VPOS="2702" WIDTH="1568" HEIGHT="63">
+            <String ID="P21_S00158" HPOS="221" VPOS="2707" WIDTH="195" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="Brought" WC="0.731428564" CC="7038000" />
+            <SP ID="P21_SP00161" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00159" HPOS="443" VPOS="2706" WIDTH="208" HEIGHT="50" STYLEREFS="StyleId-3" CONTENT="Forward" WC="0.73" CC="0009350" />
+            <SP ID="P21_SP00162" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00160" HPOS="680" VPOS="2707" WIDTH="126" HEIGHT="49" STYLEREFS="StyleId-3" CONTENT="From" WC="0.905" CC="0030" />
+            <SP ID="P21_SP00163" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00161" HPOS="833" VPOS="2708" WIDTH="105" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="Last" WC="0.5775" CC="4470" />
+            <SP ID="P21_SP00164" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00162" HPOS="966" VPOS="2708" WIDTH="107" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="Year" WC="1" CC="0000" />
+            <SP ID="P21_SP00165" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00166" WIDTH="0" HPOS="0" VPOS="0" />
+            <SP ID="P21_SP00167" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00163" HPOS="1622" VPOS="2711" WIDTH="80" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="101" WC="0.913333356" CC="002" />
+            <SP ID="P21_SP00168" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00164" HPOS="1738" VPOS="2714" WIDTH="52" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="26" WC="0.98" CC="00" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P21_TB00005" HPOS="389" VPOS="2802" WIDTH="1408" HEIGHT="72">
+          <TextLine ID="P21_TL00034" HPOS="397" VPOS="2810" WIDTH="1392" HEIGHT="56">
+            <String ID="P21_S00165" HPOS="397" VPOS="2815" WIDTH="130" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="Total" WC="0.864" CC="03003" />
+            <SP ID="P21_SP00169" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00166" HPOS="551" VPOS="2815" WIDTH="64" HEIGHT="38" STYLEREFS="StyleId-3" CONTENT="To" WC="1" CC="00" />
+            <SP ID="P21_SP00170" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00167" HPOS="642" VPOS="2817" WIDTH="54" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="Be" WC="0.505" CC="54" />
+            <SP ID="P21_SP00171" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00168" HPOS="722" VPOS="2816" WIDTH="238" HEIGHT="37" STYLEREFS="StyleId-3" CONTENT="Accounted" WC="0.7222222" CC="074080040" />
+            <SP ID="P21_SP00172" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00169" HPOS="987" VPOS="2817" WIDTH="85" HEIGHT="36" STYLEREFS="StyleId-3" CONTENT="For" WC="0.68" CC="540" />
+            <SP ID="P21_SP00173" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00170" HPOS="1512" VPOS="2817" WIDTH="191" HEIGHT="48" STYLEREFS="StyleId-3" CONTENT="$13,805" WC="0.9357143" CC="0000004" />
+            <SP ID="P21_SP00174" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P21_S00171" HPOS="1737" VPOS="2823" WIDTH="52" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="88" WC="0.79" CC="40" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

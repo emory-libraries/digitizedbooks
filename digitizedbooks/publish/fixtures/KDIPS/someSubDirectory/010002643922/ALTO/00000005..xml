@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000004.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P4" PHYSICAL_IMG_NR="4" HEIGHT="2800" WIDTH="1900" ACCURACY="0.754557431" QUALITY_DETAIL="69 words, 333 chars, 245 with recognition greater than 50% (73.57%)">
+      <TopMargin ID="P4_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="509" />
+      <LeftMargin ID="P4_LM00001" HPOS="0" VPOS="509" WIDTH="175" HEIGHT="1795" />
+      <RightMargin ID="P4_RM00001" HPOS="1718" VPOS="509" WIDTH="182" HEIGHT="1795" />
+      <BottomMargin ID="P4_BM00001" HPOS="0" VPOS="2304" WIDTH="1900" HEIGHT="496" />
+      <PrintSpace ID="P4_PS00001" HPOS="175" VPOS="509" WIDTH="1543" HEIGHT="1795">
+        <Illustration ID="P4_ILL00001" HPOS="457" VPOS="508" WIDTH="1045" HEIGHT="1300" />
+        <TextBlock ID="P4_TB00001" HPOS="182" VPOS="1888" WIDTH="1536" HEIGHT="416">
+          <TextLine ID="P4_TL00001" HPOS="621" VPOS="1894" WIDTH="656" HEIGHT="40">
+            <String ID="P4_S00001" HPOS="621" VPOS="1894" WIDTH="43" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="vS." WC="0.42" CC="961" />
+            <SP ID="P4_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00002" HPOS="695" VPOS="1894" WIDTH="165" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="Maria" WC="0.456" CC="46636" />
+            <SP ID="P4_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00003" HPOS="883" VPOS="1892" WIDTH="251" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Steward," WC="0.37875" CC="67786471" />
+            <SP ID="P4_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00004" HPOS="1156" VPOS="1893" WIDTH="121" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="M.D." WC="0.6125" CC="10050" />
+          </TextLine>
+          <TextLine ID="P4_TL00002" HPOS="374" VPOS="1973" WIDTH="1145" HEIGHT="39">
+            <String ID="P4_S00005" HPOS="374" VPOS="1973" WIDTH="121" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="(Pres." WC="0.5566667" CC="600945" />
+            <SP ID="P4_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00006" HPOS="519" VPOS="1972" WIDTH="301" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Scarborough's" WC="0.612307668" CC="5524766660000" />
+            <SP ID="P4_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00007" HPOS="840" VPOS="1972" WIDTH="160" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Annual" WC="0.66" CC="034750" />
+            <SP ID="P4_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00008" HPOS="1018" VPOS="1973" WIDTH="156" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Report," WC="0.774285734" CC="0318002" />
+            <SP ID="P4_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00009" HPOS="1203" VPOS="1973" WIDTH="102" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="June" WC="0.395" CC="0896" />
+            <SP ID="P4_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00010" HPOS="1325" VPOS="1976" WIDTH="52" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="16," WC="0.7966667" CC="050" />
+            <SP ID="P4_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00011" HPOS="1403" VPOS="1972" WIDTH="116" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="191U-)" WC="0.5933333" CC="086720" />
+          </TextLine>
+          <TextLine ID="P4_TL00003" HPOS="203" VPOS="2040" WIDTH="1499" HEIGHT="37">
+            <String ID="P4_S00012" HPOS="203" VPOS="2040" WIDTH="92" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="&quot;Dr." WC="0.5275" CC="7370" />
+            <SP ID="P4_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00013" HPOS="325" VPOS="2039" WIDTH="35" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="S." WC="0.585" CC="80" />
+            <SP ID="P4_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00014" HPOS="386" VPOS="2040" WIDTH="48" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="M." WC="1" CC="00" />
+            <SP ID="P4_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00015" HPOS="462" VPOS="2039" WIDTH="186" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="Steward," WC="0.86375" CC="02000700" />
+            <SP ID="P4_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00016" HPOS="674" VPOS="2050" WIDTH="72" HEIGHT="27" STYLEREFS="StyleId-1" CONTENT="our" WC="0.77" CC="060" />
+            <SP ID="P4_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00017" HPOS="771" VPOS="2038" WIDTH="185" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="Resident" WC="0.70125" CC="55040260" />
+            <SP ID="P4_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00018" HPOS="975" VPOS="2039" WIDTH="202" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="Physician" WC="0.585555553" CC="735470504" />
+            <SP ID="P4_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00019" HPOS="1198" VPOS="2038" WIDTH="62" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="for" WC="0.6333333" CC="505" />
+            <SP ID="P4_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00020" HPOS="1280" VPOS="2049" WIDTH="22" HEIGHT="29" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P4_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00021" HPOS="1332" VPOS="2037" WIDTH="161" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="number" WC="0.863333344" CC="005101" />
+            <SP ID="P4_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00022" HPOS="1518" VPOS="2037" WIDTH="42" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="of" WC="0.715" CC="05" />
+            <SP ID="P4_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00023" HPOS="1578" VPOS="2046" WIDTH="124" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="years," WC="0.7366667" CC="250070" />
+          </TextLine>
+          <TextLine ID="P4_TL00004" HPOS="191" VPOS="2093" WIDTH="1515" HEIGHT="39">
+            <String ID="P4_S00024" HPOS="191" VPOS="2093" WIDTH="67" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="has" WC="0.87" CC="003" />
+            <SP ID="P4_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00025" HPOS="279" VPOS="2094" WIDTH="93" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="been" WC="0.415" CC="010310" />
+            <SP ID="P4_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00026" HPOS="400" VPOS="2094" WIDTH="162" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="faithful" WC="0.73" CC="20204092" />
+            <SP ID="P4_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00027" HPOS="583" VPOS="2094" WIDTH="35" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="in" WC="0.85" CC="30" />
+            <SP ID="P4_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00028" HPOS="642" VPOS="2093" WIDTH="154" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="looking" WC="0.7" CC="20502010" />
+            <SP ID="P4_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00029" HPOS="817" VPOS="2094" WIDTH="106" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="after" WC="0.594" CC="76006" />
+            <SP ID="P4_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00030" HPOS="944" VPOS="2093" WIDTH="65" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="the" WC="0.84" CC="040" />
+            <SP ID="P4_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00031" HPOS="1024" VPOS="2103" WIDTH="131" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="young" WC="0.848" CC="00006" />
+            <SP ID="P4_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00032" HPOS="1169" VPOS="2093" WIDTH="136" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="people" WC="0.8333333" CC="400500" />
+            <SP ID="P4_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00033" HPOS="1326" VPOS="2093" WIDTH="36" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="in" WC="0.81" CC="30" />
+            <SP ID="P4_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00034" HPOS="1385" VPOS="2092" WIDTH="95" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="need" WC="0.985" CC="0000" />
+            <SP ID="P4_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00035" HPOS="1494" VPOS="2091" WIDTH="41" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="of" WC="0.605" CC="43" />
+            <SP ID="P4_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00036" HPOS="1549" VPOS="2090" WIDTH="157" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="medical" WC="0.6242857" CC="4043077" />
+          </TextLine>
+          <TextLine ID="P4_TL00005" HPOS="194" VPOS="2150" WIDTH="1514" HEIGHT="35">
+            <String ID="P4_S00037" HPOS="194" VPOS="2149" WIDTH="202" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="attention." WC="0.84" CC="8000600000" />
+            <SP ID="P4_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00038" HPOS="462" VPOS="2149" WIDTH="14" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="I" WC="1" CC="0" />
+            <SP ID="P4_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00039" HPOS="498" VPOS="2159" WIDTH="60" HEIGHT="23" STYLEREFS="StyleId-1" CONTENT="am" WC="0.53" CC="90" />
+            <SP ID="P4_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00040" HPOS="579" VPOS="2159" WIDTH="92" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="very" WC="1" CC="0000" />
+            <SP ID="P4_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00041" HPOS="690" VPOS="2149" WIDTH="89" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="glad" WC="0.9675" CC="0100" />
+            <SP ID="P4_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00042" HPOS="800" VPOS="2151" WIDTH="38" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="to" WC="0.82" CC="03" />
+            <SP ID="P4_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00043" HPOS="863" VPOS="2148" WIDTH="196" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="commend" WC="0.88" CC="0200040" />
+            <SP ID="P4_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00044" HPOS="1079" VPOS="2147" WIDTH="68" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="her" WC="0.6333333" CC="406" />
+            <SP ID="P4_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00045" HPOS="1168" VPOS="2149" WIDTH="72" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="and" WC="0.89" CC="003" />
+            <SP ID="P4_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00046" HPOS="1264" VPOS="2148" WIDTH="68" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="her" WC="0.84" CC="004" />
+            <SP ID="P4_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00047" HPOS="1351" VPOS="2147" WIDTH="186" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="services," WC="0.8888889" CC="006200000" />
+            <SP ID="P4_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00048" HPOS="1562" VPOS="2147" WIDTH="71" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="and" WC="0.85" CC="400" />
+            <SP ID="P4_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00049" HPOS="1671" VPOS="2150" WIDTH="37" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+          </TextLine>
+          <TextLine ID="P4_TL00006" HPOS="195" VPOS="2204" WIDTH="1515" HEIGHT="36">
+            <String ID="P4_S00050" HPOS="195" VPOS="2214" WIDTH="68" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="say" WC="1" CC="000" />
+            <SP ID="P4_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00051" HPOS="285" VPOS="2204" WIDTH="86" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="that" WC="0.89" CC="0400" />
+            <SP ID="P4_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00052" HPOS="391" VPOS="2206" WIDTH="38" HEIGHT="39" STYLEREFS="StyleId-1" CONTENT="to" WC="0.935" CC="01" />
+            <SP ID="P4_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00053" HPOS="448" VPOS="2204" WIDTH="96" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="have" WC="0.8825" CC="4000" />
+            <SP ID="P4_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00054" HPOS="565" VPOS="2203" WIDTH="91" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="such" WC="0.7625" CC="2060" />
+            <SP ID="P4_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00055" HPOS="676" VPOS="2214" WIDTH="22" HEIGHT="31" STYLEREFS="StyleId-1" CONTENT="a" WC="1" CC="0" />
+            <SP ID="P4_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00056" HPOS="725" VPOS="2213" WIDTH="147" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="woman" WC="0.932" CC="01100" />
+            <SP ID="P4_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00057" HPOS="893" VPOS="2203" WIDTH="207" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="connected" WC="0.9122222" CC="000500200" />
+            <SP ID="P4_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00058" HPOS="1121" VPOS="2202" WIDTH="92" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="with" WC="0.8975" CC="0004" />
+            <SP ID="P4_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00059" HPOS="1235" VPOS="2202" WIDTH="65" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="the" WC="0.8066667" CC="500" />
+            <SP ID="P4_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00060" HPOS="1321" VPOS="2202" WIDTH="233" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="institution," WC="0.750833333" CC="460400410070" />
+            <SP ID="P4_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00061" HPOS="1584" VPOS="2201" WIDTH="126" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="where" WC="0.616" CC="040510" />
+          </TextLine>
+          <TextLine ID="P4_TL00007" HPOS="203" VPOS="2258" WIDTH="1137" HEIGHT="39">
+            <String ID="P4_S00062" HPOS="203" VPOS="2258" WIDTH="109" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="there" WC="0.734" CC="05016" />
+            <SP ID="P4_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00063" HPOS="333" VPOS="2258" WIDTH="31" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="is" WC="0.435" CC="64" />
+            <SP ID="P4_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00064" HPOS="391" VPOS="2259" WIDTH="106" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="large" WC="0.67" CC="72600" />
+            <SP ID="P4_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00065" HPOS="512" VPOS="2257" WIDTH="232" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="attendance" WC="0.853" CC="0003600050" />
+            <SP ID="P4_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00066" HPOS="771" VPOS="2257" WIDTH="41" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="of" WC="0.815" CC="03" />
+            <SP ID="P4_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00067" HPOS="831" VPOS="2257" WIDTH="104" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="girls," WC="0.63166666" CC="035444" />
+            <SP ID="P4_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00068" HPOS="960" VPOS="2257" WIDTH="31" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="is" WC="0.71" CC="05" />
+            <SP ID="P4_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P4_S00069" HPOS="1012" VPOS="2257" WIDTH="328" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="indispensable.&quot;" WC="0.7493333" CC="050340060602107" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

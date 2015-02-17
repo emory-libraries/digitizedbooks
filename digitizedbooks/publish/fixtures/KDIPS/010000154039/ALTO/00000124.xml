@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0124.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P123" PHYSICAL_IMG_NR="123" HEIGHT="2200" WIDTH="3300" ACCURACY="0.539958537" QUALITY_DETAIL="12 words, 72 chars, 33 with recognition greater than 50% (45.83%)">
+      <TopMargin ID="P123_TM00001" HPOS="0" VPOS="0" WIDTH="3300" HEIGHT="2115" />
+      <LeftMargin ID="P123_LM00001" HPOS="0" VPOS="2115" WIDTH="1844" HEIGHT="-932" />
+      <RightMargin ID="P123_RM00001" HPOS="1946" VPOS="2115" WIDTH="1354" HEIGHT="-932" />
+      <BottomMargin ID="P123_BM00001" HPOS="0" VPOS="1183" WIDTH="3300" HEIGHT="1017" />
+      <PrintSpace ID="P123_PS00001" HPOS="1844" VPOS="2115" WIDTH="102" HEIGHT="-932">
+        <TextBlock ID="P123_TB00001" HPOS="1844" VPOS="2115" WIDTH="102" HEIGHT="-932">
+          <TextLine ID="P123_TL00001" HPOS="1848" VPOS="2074" WIDTH="38" HEIGHT="-821">
+            <String ID="P123_S00001" HPOS="1861" VPOS="1915" WIDTH="22" HEIGHT="135" STYLEREFS="StyleId-0" CONTENT="PROVOST" WC="0.428571433" CC="6747265" />
+            <SP ID="P123_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00002" HPOS="1858" VPOS="1759" WIDTH="22" HEIGHT="291" STYLEREFS="StyleId-0" CONTENT="GUARD" WC="0.256" CC="86686" />
+            <SP ID="P123_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00003" HPOS="1855" VPOS="1546" WIDTH="22" HEIGHT="504" STYLEREFS="StyleId-0" CONTENT="SECURING" WC="0.44875" CC="336610068" />
+            <SP ID="P123_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00004" HPOS="1851" VPOS="1258" WIDTH="24" HEIGHT="792" STYLEREFS="StyleId-0" CONTENT="CONSCRIPTS," WC="0.6190909" CC="00775077060" />
+          </TextLine>
+          <TextLine ID="P123_TL00002" HPOS="1894" VPOS="2107" WIDTH="44" HEIGHT="-916">
+            <String ID="P123_S00005" HPOS="1906" VPOS="1937" WIDTH="29" HEIGHT="150" STYLEREFS="StyleId-0" CONTENT="Compelling" WC="0.784" CC="0012020077" />
+            <SP ID="P123_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00006" HPOS="1910" VPOS="1859" WIDTH="17" HEIGHT="228" STYLEREFS="StyleId-0" CONTENT="all" WC="0.56" CC="444" />
+            <SP ID="P123_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00007" HPOS="1909" VPOS="1650" WIDTH="17" HEIGHT="437" STYLEREFS="StyleId-0" CONTENT="able-bodied" WC="0.5090909" CC="67004776707" />
+            <SP ID="P123_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00008" HPOS="1905" VPOS="1556" WIDTH="18" HEIGHT="531" STYLEREFS="StyleId-0" CONTENT="men" WC="0.43" CC="089" />
+            <SP ID="P123_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00009" HPOS="1898" VPOS="1495" WIDTH="24" HEIGHT="592" STYLEREFS="StyleId-0" CONTENT="to" WC="0.765" CC="04" />
+            <SP ID="P123_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00010" HPOS="1896" VPOS="1412" WIDTH="24" HEIGHT="675" STYLEREFS="StyleId-0" CONTENT="join" WC="0.535" CC="6407" />
+            <SP ID="P123_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00011" HPOS="1896" VPOS="1330" WIDTH="23" HEIGHT="757" STYLEREFS="StyleId-0" CONTENT="the" WC="0.65" CC="054" />
+            <SP ID="P123_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P123_S00012" HPOS="1900" VPOS="1197" WIDTH="19" HEIGHT="890" STYLEREFS="StyleId-0" CONTENT="army." WC="0.494" CC="95550" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

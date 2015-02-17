@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0209.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="5" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P208" PHYSICAL_IMG_NR="208" HEIGHT="2800" WIDTH="1900" ACCURACY="0.729198933" QUALITY_DETAIL="17 words, 98 chars, 69 with recognition greater than 50% (70.41%)">
+      <TopMargin ID="P208_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="284" />
+      <LeftMargin ID="P208_LM00001" HPOS="0" VPOS="284" WIDTH="194" HEIGHT="2239" />
+      <RightMargin ID="P208_RM00001" HPOS="1708" VPOS="284" WIDTH="192" HEIGHT="2239" />
+      <BottomMargin ID="P208_BM00001" HPOS="0" VPOS="2523" WIDTH="1900" HEIGHT="277" />
+      <PrintSpace ID="P208_PS00001" HPOS="194" VPOS="284" WIDTH="1514" HEIGHT="2239">
+        <TextBlock ID="P208_TB00001" HPOS="867" VPOS="672" WIDTH="106" HEIGHT="74">
+          <TextLine ID="P208_TL00001" HPOS="0" VPOS="0" WIDTH="0" HEIGHT="0" />
+        </TextBlock>
+        <Illustration ID="P208_ILL00001" HPOS="202" VPOS="753" WIDTH="1506" HEIGHT="1592" />
+        <TextBlock ID="P208_TB00002" HPOS="280" VPOS="2369" WIDTH="1349" HEIGHT="154">
+          <TextLine ID="P208_TL00002" HPOS="469" VPOS="2377" WIDTH="1012" HEIGHT="39">
+            <String ID="P208_S00001" HPOS="469" VPOS="2381" WIDTH="188" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="BISHOP" WC="0.761666656" CC="004611" />
+            <SP ID="P208_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00002" HPOS="677" VPOS="2380" WIDTH="196" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="DANIEL" WC="0.783333361" CC="005006" />
+            <SP ID="P208_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00003" HPOS="891" VPOS="2380" WIDTH="47" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="A." WC="0.895" CC="20" />
+            <SP ID="P208_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00004" HPOS="959" VPOS="2377" WIDTH="183" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="PA\NE," WC="0.458333343" CC="06106100" />
+            <SP ID="P208_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00005" HPOS="1165" VPOS="2378" WIDTH="45" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="D." WC="0.52" CC="63" />
+            <SP ID="P208_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00006" HPOS="1243" VPOS="2378" WIDTH="57" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="D.," WC="0.93" CC="002" />
+            <SP ID="P208_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00007" HPOS="1322" VPOS="2377" WIDTH="80" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="EE." WC="0.6533333" CC="171" />
+            <SP ID="P208_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00008" HPOS="1422" VPOS="2378" WIDTH="59" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="D.," WC="0.776666641" CC="401" />
+          </TextLine>
+          <TextLine ID="P208_TL00003" HPOS="289" VPOS="2431" WIDTH="1331" HEIGHT="42">
+            <String ID="P208_S00009" HPOS="289" VPOS="2437" WIDTH="183" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Founder" WC="0.688571453" CC="1357300" />
+            <SP ID="P208_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00010" HPOS="485" VPOS="2436" WIDTH="43" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="of" WC="0.575" CC="35" />
+            <SP ID="P208_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00011" HPOS="541" VPOS="2436" WIDTH="267" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="Wilberforce" WC="0.6627273" CC="00666733300" />
+            <SP ID="P208_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00012" HPOS="824" VPOS="2433" WIDTH="250" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="University;" WC="0.702727258" CC="60570601060" />
+            <SP ID="P208_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00013" HPOS="1095" VPOS="2432" WIDTH="193" HEIGHT="41" STYLEREFS="StyleId-0" CONTENT="Presided" WC="0.91375" CC="00001301" />
+            <SP ID="P208_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00014" HPOS="1308" VPOS="2434" WIDTH="40" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="at" WC="0.925" CC="01" />
+            <SP ID="P208_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00015" HPOS="1367" VPOS="2431" WIDTH="253" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="Ecumenical" WC="0.617" CC="5075072306" />
+          </TextLine>
+          <TextLine ID="P208_TL00004" HPOS="779" VPOS="2478" WIDTH="384" HEIGHT="37">
+            <String ID="P208_S00016" HPOS="779" VPOS="2480" WIDTH="269" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="Conference," WC="0.807272732" CC="00050307400" />
+            <SP ID="P208_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P208_S00017" HPOS="1066" VPOS="2478" WIDTH="97" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="1881." WC="0.726" CC="40540" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0144.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P143" PHYSICAL_IMG_NR="143" HEIGHT="1953" WIDTH="1" ACCURACY="0.7407341" QUALITY_DETAIL="6 words, 27 chars, 18 with recognition greater than 50% (66.67%)">
+      <TopMargin ID="P143_TM00001" HPOS="0" VPOS="0" WIDTH="1" HEIGHT="2162" />
+      <LeftMargin ID="P143_LM00001" HPOS="0" VPOS="2162" WIDTH="330" HEIGHT="-1720" />
+      <RightMargin ID="P143_RM00001" HPOS="1563" VPOS="2162" WIDTH="-1562" HEIGHT="-1720" />
+      <BottomMargin ID="P143_BM00001" HPOS="0" VPOS="442" WIDTH="1" HEIGHT="1511" />
+      <PrintSpace ID="P143_PS00001" HPOS="330" VPOS="2162" WIDTH="1233" HEIGHT="-1720">
+        <TextBlock ID="P143_TB00001" HPOS="1458" VPOS="2184" WIDTH="58" HEIGHT="-404">
+          <TextLine ID="P143_TL00001" HPOS="1466" VPOS="2176" WIDTH="42" HEIGHT="-387">
+            <String ID="P143_S00001" HPOS="1466" VPOS="2033" WIDTH="35" HEIGHT="116" STYLEREFS="StyleId-0" CONTENT="Dothan" WC="0.665" CC="104626" />
+            <SP ID="P143_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P143_S00002" HPOS="1472" VPOS="1796" WIDTH="36" HEIGHT="353" STYLEREFS="StyleId-0" CONTENT="Church." WC="0.6085714" CC="2586050" />
+          </TextLine>
+        </TextBlock>
+        <Illustration ID="P143_ILL00001" HPOS="348" VPOS="1222" WIDTH="1124" HEIGHT="-782" />
+        <TextBlock ID="P143_TB00002" HPOS="1500" VPOS="1062" WIDTH="59" HEIGHT="-423">
+          <TextLine ID="P143_TL00002" HPOS="1508" VPOS="1054" WIDTH="42" HEIGHT="-408">
+            <String ID="P143_S00003" HPOS="1509" VPOS="958" WIDTH="32" HEIGHT="63" STYLEREFS="StyleId-0" CONTENT="Rev." WC="0.8225" CC="1500" />
+            <SP ID="P143_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P143_S00004" HPOS="1511" VPOS="901" WIDTH="32" HEIGHT="120" STYLEREFS="StyleId-0" CONTENT="S." WC="0.635" CC="24" />
+            <SP ID="P143_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P143_S00005" HPOS="1513" VPOS="835" WIDTH="31" HEIGHT="186" STYLEREFS="StyleId-0" CONTENT="P." WC="0.95" CC="10" />
+            <SP ID="P143_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P143_S00006" HPOS="1514" VPOS="652" WIDTH="34" HEIGHT="369" STYLEREFS="StyleId-0" CONTENT="Pkyor." WC="0.7633333" CC="150070" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

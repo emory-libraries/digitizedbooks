@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0173.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="5" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P174" PHYSICAL_IMG_NR="174" HEIGHT="3300" WIDTH="2200" ACCURACY="0.5385834" QUALITY_DETAIL="10 words, 25 chars, 13 with recognition greater than 50% (52.00%)">
+      <TopMargin ID="P174_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="802" />
+      <LeftMargin ID="P174_LM00001" HPOS="0" VPOS="802" WIDTH="371" HEIGHT="1706" />
+      <RightMargin ID="P174_RM00001" HPOS="1857" VPOS="802" WIDTH="343" HEIGHT="1706" />
+      <BottomMargin ID="P174_BM00001" HPOS="0" VPOS="2508" WIDTH="2200" HEIGHT="792" />
+      <PrintSpace ID="P174_PS00001" HPOS="371" VPOS="802" WIDTH="1486" HEIGHT="1706">
+        <Illustration ID="P174_ILL00001" HPOS="371" VPOS="802" WIDTH="1486" HEIGHT="1661" />
+        <TextBlock ID="P174_TB00001" HPOS="785" VPOS="2464" WIDTH="591" HEIGHT="44">
+          <TextLine ID="P174_TL00001" HPOS="792" VPOS="2472" WIDTH="576" HEIGHT="29">
+            <String ID="P174_S00001" HPOS="792" VPOS="2473" WIDTH="6" HEIGHT="19" STYLEREFS="StyleId-0" CONTENT="(" WC="0.28" CC="7" />
+            <SP ID="P174_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00002" HPOS="816" VPOS="2473" WIDTH="18" HEIGHT="21" STYLEREFS="StyleId-0" CONTENT="A" WC="0.24" CC="7" />
+            <SP ID="P174_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00003" HPOS="845" VPOS="2472" WIDTH="57" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="l'T." WC="0.7575" CC="0180" />
+            <SP ID="P174_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00004" HPOS="925" VPOS="2475" WIDTH="30" HEIGHT="21" STYLEREFS="StyleId-0" CONTENT="(I." WC="0.423333347" CC="772" />
+            <SP ID="P174_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00005" HPOS="978" VPOS="2475" WIDTH="26" HEIGHT="21" STYLEREFS="StyleId-0" CONTENT="S." WC="0.785" CC="40" />
+            <SP ID="P174_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00006" HPOS="1031" VPOS="2474" WIDTH="28" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="It." WC="0.5" CC="572" />
+            <SP ID="P174_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00007" HPOS="1085" VPOS="2474" WIDTH="124" HEIGHT="27" STYLEREFS="StyleId-0" CONTENT="WALL," WC="0.29" CC="881080" />
+            <SP ID="P174_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00008" HPOS="1232" VPOS="2476" WIDTH="32" HEIGHT="25" STYLEREFS="StyleId-0" CONTENT="r." WC="0.575" CC="70" />
+            <SP ID="P174_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00009" HPOS="1286" VPOS="2478" WIDTH="27" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="S." WC="0.67" CC="32" />
+            <SP ID="P174_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P174_S00010" HPOS="1337" VPOS="2478" WIDTH="31" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="A." WC="0.865" CC="02" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

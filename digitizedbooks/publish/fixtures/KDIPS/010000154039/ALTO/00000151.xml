@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0151.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P150" PHYSICAL_IMG_NR="150" HEIGHT="3308" WIDTH="2210" ACCURACY="0.653656244" QUALITY_DETAIL="11 words, 68 chars, 40 with recognition greater than 50% (58.82%)">
+      <TopMargin ID="P150_TM00001" HPOS="0" VPOS="0" WIDTH="2210" HEIGHT="1217" />
+      <LeftMargin ID="P150_LM00001" HPOS="0" VPOS="1217" WIDTH="355" HEIGHT="869" />
+      <RightMargin ID="P150_RM00001" HPOS="266" VPOS="1217" WIDTH="1944" HEIGHT="869" />
+      <BottomMargin ID="P150_BM00001" HPOS="0" VPOS="2086" WIDTH="2210" HEIGHT="1222" />
+      <PrintSpace ID="P150_PS00001" HPOS="355" VPOS="1217" WIDTH="-89" HEIGHT="869">
+        <TextBlock ID="P150_TB00001" HPOS="355" VPOS="1217" WIDTH="-89" HEIGHT="869">
+          <TextLine ID="P150_TL00001" HPOS="347" VPOS="1292" WIDTH="-25" HEIGHT="725">
+            <String ID="P150_S00001" HPOS="344" VPOS="1292" WIDTH="-22" HEIGHT="338" STYLEREFS="StyleId-0" CONTENT="FORTIFICATIONS" WC="0.5928571" CC="54623107633057" />
+            <SP ID="P150_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00002" HPOS="346" VPOS="1651" WIDTH="-22" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="AT" WC="0.645" CC="70" />
+            <SP ID="P150_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00003" HPOS="348" VPOS="1723" WIDTH="-24" HEIGHT="153" STYLEREFS="StyleId-0" CONTENT="HILTON" WC="0.456666678" CC="653736" />
+            <SP ID="P150_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00004" HPOS="349" VPOS="1898" WIDTH="-25" HEIGHT="119" STYLEREFS="StyleId-0" CONTENT="HEAD." WC="0.788" CC="03070" />
+          </TextLine>
+          <TextLine ID="P150_TL00002" HPOS="302" VPOS="1226" WIDTH="-28" HEIGHT="852">
+            <String ID="P150_S00005" HPOS="300" VPOS="1226" WIDTH="-25" HEIGHT="94" STYLEREFS="StyleId-0" CONTENT="Gen'l." WC="0.9033333" CC="005000" />
+            <SP ID="P150_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00006" HPOS="299" VPOS="1341" WIDTH="-23" HEIGHT="152" STYLEREFS="StyleId-0" CONTENT="Hunter's" WC="0.67875" CC="53703006" />
+            <SP ID="P150_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00007" HPOS="301" VPOS="1513" WIDTH="-24" HEIGHT="89" STYLEREFS="StyleId-0" CONTENT="black" WC="0.832" CC="01070" />
+            <SP ID="P150_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00008" HPOS="295" VPOS="1621" WIDTH="-16" HEIGHT="150" STYLEREFS="StyleId-0" CONTENT="regiment" WC="0.6125" CC="010706070" />
+            <SP ID="P150_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00009" HPOS="304" VPOS="1796" WIDTH="-25" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="in" WC="0.31" CC="67" />
+            <SP ID="P150_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00010" HPOS="303" VPOS="1852" WIDTH="-24" HEIGHT="52" STYLEREFS="StyleId-0" CONTENT="the" WC="0.74333334" CC="070" />
+            <SP ID="P150_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P150_S00011" HPOS="304" VPOS="1928" WIDTH="-25" HEIGHT="150" STYLEREFS="StyleId-0" CONTENT="distance." WC="0.627777755" CC="767006410" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

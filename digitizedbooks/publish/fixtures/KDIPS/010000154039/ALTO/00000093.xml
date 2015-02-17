@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0093.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P92" PHYSICAL_IMG_NR="92" HEIGHT="3300" WIDTH="2200" ACCURACY="0.25272727" QUALITY_DETAIL="1 words, 11 chars, 2 with recognition greater than 50% (18.18%)">
+      <TopMargin ID="P92_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="2479" />
+      <LeftMargin ID="P92_LM00001" HPOS="0" VPOS="2479" WIDTH="962" HEIGHT="42" />
+      <RightMargin ID="P92_RM00001" HPOS="1260" VPOS="2479" WIDTH="940" HEIGHT="42" />
+      <BottomMargin ID="P92_BM00001" HPOS="0" VPOS="2521" WIDTH="2200" HEIGHT="779" />
+      <PrintSpace ID="P92_PS00001" HPOS="962" VPOS="2479" WIDTH="298" HEIGHT="42">
+        <TextBlock ID="P92_TB00001" HPOS="962" VPOS="2479" WIDTH="298" HEIGHT="42">
+          <TextLine ID="P92_TL00001" HPOS="970" VPOS="2487" WIDTH="282" HEIGHT="26">
+            <String ID="P92_S00001" HPOS="970" VPOS="2487" WIDTH="282" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="UNSHACKLED." WC="0.25272727" CC="786878810844" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

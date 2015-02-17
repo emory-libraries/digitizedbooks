@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0000012.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Arial" />
+    <TextStyle ID="StyleId-1" FONTSIZE="5" FONTFAMILY="Arial" />
+  </Styles>
+  <Layout>
+    <Page ID="P12" PHYSICAL_IMG_NR="12" HEIGHT="3200" WIDTH="2000" ACCURACY="0.8565909" QUALITY_DETAIL="7 words, 51 chars, 42 with recognition greater than 50% (82.35%)">
+      <TopMargin ID="P12_TM00001" HPOS="0" VPOS="0" WIDTH="2000" HEIGHT="1118" />
+      <LeftMargin ID="P12_LM00001" HPOS="0" VPOS="1118" WIDTH="590" HEIGHT="971" />
+      <RightMargin ID="P12_RM00001" HPOS="1412" VPOS="1118" WIDTH="588" HEIGHT="971" />
+      <BottomMargin ID="P12_BM00001" HPOS="0" VPOS="2089" WIDTH="2000" HEIGHT="1111" />
+      <PrintSpace ID="P12_PS00001" HPOS="590" VPOS="1118" WIDTH="822" HEIGHT="971">
+        <Illustration ID="P12_ILL00001" HPOS="590" VPOS="1118" WIDTH="822" HEIGHT="834" />
+        <TextBlock ID="P12_TB00001" HPOS="596" VPOS="1984" WIDTH="790" HEIGHT="105">
+          <TextLine ID="P12_TL00001" HPOS="721" VPOS="1992" WIDTH="536" HEIGHT="39">
+            <String ID="P12_S00001" HPOS="721" VPOS="1992" WIDTH="94" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="REV." WC="1" CC="0000" />
+            <SP ID="P12_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P12_S00002" HPOS="839" VPOS="1992" WIDTH="183" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="HORACE" WC="0.935" CC="300000" />
+            <SP ID="P12_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P12_S00003" HPOS="1041" VPOS="1993" WIDTH="216" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="TALBERT," WC="0.9875" CC="10000000" />
+          </TextLine>
+          <TextLine ID="P12_TL00002" HPOS="604" VPOS="2053" WIDTH="774" HEIGHT="28">
+            <String ID="P12_S00004" HPOS="604" VPOS="2053" WIDTH="209" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="SECRETARY" WC="0.71" CC="060260504" />
+            <SP ID="P12_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P12_S00005" HPOS="831" VPOS="2054" WIDTH="44" HEIGHT="25" STYLEREFS="StyleId-1" CONTENT="OF" WC="0.91" CC="01" />
+            <SP ID="P12_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P12_S00006" HPOS="894" VPOS="2054" WIDTH="247" HEIGHT="25" STYLEREFS="StyleId-1" CONTENT="WILBERFORCE" WC="0.74727273" CC="84006000107" />
+            <SP ID="P12_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P12_S00007" HPOS="1161" VPOS="2055" WIDTH="217" HEIGHT="26" STYLEREFS="StyleId-1" CONTENT="UNIVERSITY." WC="0.7063636" CC="50020627013" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

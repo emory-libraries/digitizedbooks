@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0007.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P6" PHYSICAL_IMG_NR="6" HEIGHT="2800" WIDTH="1900" ACCURACY="0.7195476" QUALITY_DETAIL="10 words, 46 chars, 30 with recognition greater than 50% (65.22%)">
+      <TopMargin ID="P6_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="620" />
+      <LeftMargin ID="P6_LM00001" HPOS="0" VPOS="620" WIDTH="494" HEIGHT="1570" />
+      <RightMargin ID="P6_RM00001" HPOS="1409" VPOS="620" WIDTH="491" HEIGHT="1570" />
+      <BottomMargin ID="P6_BM00001" HPOS="0" VPOS="2190" WIDTH="1900" HEIGHT="610" />
+      <PrintSpace ID="P6_PS00001" HPOS="494" VPOS="620" WIDTH="915" HEIGHT="1570">
+        <Illustration ID="P6_ILL00001" HPOS="494" VPOS="620" WIDTH="913" HEIGHT="1404" />
+        <TextBlock ID="P6_TB00001" HPOS="558" VPOS="2072" WIDTH="808" HEIGHT="118">
+          <TextLine ID="P6_TL00001" HPOS="623" VPOS="2081" WIDTH="661" HEIGHT="28">
+            <String ID="P6_S00001" HPOS="623" VPOS="2080" WIDTH="195" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="BISHOP" WC="0.53" CC="1010645" />
+            <SP ID="P6_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00002" HPOS="838" VPOS="2078" WIDTH="238" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="RICHARD" WC="0.7842857" CC="4004500" />
+            <SP ID="P6_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00003" HPOS="1095" VPOS="2076" WIDTH="189" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="ALLEN." WC="0.565" CC="078540" />
+          </TextLine>
+          <TextLine ID="P6_TL00002" HPOS="566" VPOS="2147" WIDTH="792" HEIGHT="36">
+            <String ID="P6_S00004" HPOS="566" VPOS="2147" WIDTH="231" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="Organizer" WC="0.6666667" CC="027075105" />
+            <SP ID="P6_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00005" HPOS="816" VPOS="2145" WIDTH="42" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="of" WC="0.705" CC="05" />
+            <SP ID="P6_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00006" HPOS="877" VPOS="2145" WIDTH="70" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="the" WC="0.826666653" CC="500" />
+            <SP ID="P6_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00007" HPOS="963" VPOS="2144" WIDTH="49" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="A." WC="1" CC="00" />
+            <SP ID="P6_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00008" HPOS="1036" VPOS="2144" WIDTH="52" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="M." WC="0.68" CC="24" />
+            <SP ID="P6_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00009" HPOS="1111" VPOS="2143" WIDTH="48" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="E." WC="0.775" CC="40" />
+            <SP ID="P6_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P6_S00010" HPOS="1178" VPOS="2143" WIDTH="180" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="Church." WC="0.6628571" CC="5033650" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

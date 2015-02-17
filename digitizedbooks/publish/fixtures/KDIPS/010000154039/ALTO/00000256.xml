@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0252.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P255" PHYSICAL_IMG_NR="255" HEIGHT="2252" WIDTH="3335" ACCURACY="0.489249438" QUALITY_DETAIL="19 words, 85 chars, 28 with recognition greater than 50% (32.94%)">
+      <TopMargin ID="P255_TM00001" HPOS="0" VPOS="0" WIDTH="3335" HEIGHT="2380" />
+      <LeftMargin ID="P255_LM00001" HPOS="0" VPOS="2380" WIDTH="1876" HEIGHT="-1515" />
+      <RightMargin ID="P255_RM00001" HPOS="1948" VPOS="2380" WIDTH="1387" HEIGHT="-1515" />
+      <BottomMargin ID="P255_BM00001" HPOS="0" VPOS="865" WIDTH="3335" HEIGHT="1387" />
+      <PrintSpace ID="P255_PS00001" HPOS="1876" VPOS="2380" WIDTH="72" HEIGHT="-1515">
+        <TextBlock ID="P255_TB00001" HPOS="1876" VPOS="2380" WIDTH="72" HEIGHT="-1515">
+          <TextLine ID="P255_TL00001" HPOS="1875" VPOS="1815" WIDTH="22" HEIGHT="-381">
+            <String ID="P255_S00001" HPOS="1880" VPOS="1787" WIDTH="22" HEIGHT="3" STYLEREFS="StyleId-0" CONTENT="AT" WC="0.47" CC="73" />
+            <SP ID="P255_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00002" HPOS="1876" VPOS="1661" WIDTH="22" HEIGHT="129" STYLEREFS="StyleId-0" CONTENT="FORT" WC="0.645" CC="6070" />
+            <SP ID="P255_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00003" HPOS="1873" VPOS="1439" WIDTH="22" HEIGHT="351" STYLEREFS="StyleId-0" CONTENT="WAGNER." WC="0.412857145" CC="7767570" />
+          </TextLine>
+          <TextLine ID="P255_TL00002" HPOS="1926" VPOS="2370" WIDTH="14" HEIGHT="-1497">
+            <String ID="P255_S00004" HPOS="1936" VPOS="2216" WIDTH="18" HEIGHT="130" STYLEREFS="StyleId-0" CONTENT="Desperate" WC="0.223333329" CC="8810783778" />
+            <SP ID="P255_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00005" HPOS="1938" VPOS="2088" WIDTH="14" HEIGHT="258" STYLEREFS="StyleId-0" CONTENT="eharge" WC="0.285" CC="878782" />
+            <SP ID="P255_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00006" HPOS="1935" VPOS="2037" WIDTH="15" HEIGHT="309" STYLEREFS="StyleId-0" CONTENT="of" WC="0.73" CC="22" />
+            <SP ID="P255_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00007" HPOS="1928" VPOS="1972" WIDTH="21" HEIGHT="374" STYLEREFS="StyleId-0" CONTENT="the" WC="0.41" CC="466" />
+            <SP ID="P255_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00008" HPOS="1925" VPOS="1894" WIDTH="22" HEIGHT="452" STYLEREFS="StyleId-0" CONTENT="54t.h" WC="0.454" CC="57526" />
+            <SP ID="P255_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00009" HPOS="1921" VPOS="1770" WIDTH="24" HEIGHT="576" STYLEREFS="StyleId-0" CONTENT="Mass." WC="0.496" CC="72770" />
+            <SP ID="P255_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00010" HPOS="1919" VPOS="1671" WIDTH="23" HEIGHT="675" STYLEREFS="StyleId-0" CONTENT="Vols," WC="0.484" CC="76470" />
+            <SP ID="P255_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00011" HPOS="1917" VPOS="1637" WIDTH="24" HEIGHT="709" STYLEREFS="StyleId-0" CONTENT="in" WC="0.585" CC="17" />
+            <SP ID="P255_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00012" HPOS="1918" VPOS="1567" WIDTH="22" HEIGHT="779" STYLEREFS="StyleId-0" CONTENT="the" WC="0.54" CC="760" />
+            <SP ID="P255_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00013" HPOS="1921" VPOS="1427" WIDTH="15" HEIGHT="919" STYLEREFS="StyleId-0" CONTENT="assault" WC="0.568571448" CC="7770106" />
+            <SP ID="P255_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00014" HPOS="1919" VPOS="1378" WIDTH="16" HEIGHT="968" STYLEREFS="StyleId-0" CONTENT="on" WC="0.605" CC="16" />
+            <SP ID="P255_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00015" HPOS="1910" VPOS="1279" WIDTH="24" HEIGHT="1067" STYLEREFS="StyleId-0" CONTENT="Fort" WC="0.49" CC="5256" />
+            <SP ID="P255_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00016" HPOS="1908" VPOS="1112" WIDTH="26" HEIGHT="1234" STYLEREFS="StyleId-0" CONTENT="WaKner," WC="0.5271429" CC="6697020" />
+            <SP ID="P255_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00017" HPOS="1905" VPOS="1038" WIDTH="30" HEIGHT="1308" STYLEREFS="StyleId-0" CONTENT="July" WC="0.4625" CC="0767" />
+            <SP ID="P255_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00018" HPOS="1905" VPOS="968" WIDTH="28" HEIGHT="1378" STYLEREFS="StyleId-0" CONTENT="18," WC="0.443333328" CC="582" />
+            <SP ID="P255_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P255_S00019" HPOS="1904" VPOS="879" WIDTH="25" HEIGHT="1467" STYLEREFS="StyleId-0" CONTENT="1SG3." WC="0.464" CC="38780" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

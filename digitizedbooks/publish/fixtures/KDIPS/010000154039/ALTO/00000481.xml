@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0477.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="10" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-2" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-3" FONTSIZE="11" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P480" PHYSICAL_IMG_NR="480" HEIGHT="3300" WIDTH="2200" ACCURACY="0.658671856" QUALITY_DETAIL="279 words, 1739 chars, 1062 with recognition greater than 50% (61.07%)">
+      <TopMargin ID="P480_TM00001" HPOS="0" VPOS="0" WIDTH="2200" HEIGHT="288" />
+      <LeftMargin ID="P480_LM00001" HPOS="0" VPOS="288" WIDTH="325" HEIGHT="2716" />
+      <RightMargin ID="P480_RM00001" HPOS="1880" VPOS="288" WIDTH="320" HEIGHT="2716" />
+      <BottomMargin ID="P480_BM00001" HPOS="0" VPOS="3004" WIDTH="2200" HEIGHT="296" />
+      <PrintSpace ID="P480_PS00001" HPOS="325" VPOS="288" WIDTH="1555" HEIGHT="2716">
+        <TextBlock ID="P480_TB00001" HPOS="650" VPOS="286" WIDTH="1210" HEIGHT="62">
+          <TextLine ID="P480_TL00001" HPOS="658" VPOS="294" WIDTH="1193" HEIGHT="46">
+            <String ID="P480_S00001" HPOS="658" VPOS="294" WIDTH="200" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Roster" WC="0.6383333" CC="705017" />
+            <SP ID="P480_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00002" HPOS="885" VPOS="307" WIDTH="64" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="of" WC="0.64" CC="16" />
+            <SP ID="P480_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00003" HPOS="977" VPOS="307" WIDTH="96" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="the" WC="0.5733333" CC="164" />
+            <SP ID="P480_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00004" HPOS="1100" VPOS="296" WIDTH="166" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="Black" WC="0.414" CC="66735" />
+            <SP ID="P480_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00005" HPOS="1291" VPOS="297" WIDTH="253" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="Phalanx." WC="0.42" CC="76767443" />
+            <SP ID="P480_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00006" HPOS="1753" VPOS="296" WIDTH="98" HEIGHT="45" STYLEREFS="StyleId-0" CONTENT="479" WC="0.44" CC="763" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P480_TB00002" HPOS="326" VPOS="417" WIDTH="1554" HEIGHT="2587">
+          <TextLine ID="P480_TL00002" HPOS="420" VPOS="424" WIDTH="1432" HEIGHT="46">
+            <String ID="P480_S00007" HPOS="420" VPOS="424" WIDTH="147" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Second" WC="0.66" CC="605061" />
+            <SP ID="P480_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00008" HPOS="587" VPOS="425" WIDTH="179" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.7775" CC="01150502" />
+            <SP ID="P480_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00009" HPOS="789" VPOS="425" WIDTH="154" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.7657143" CC="5010602" />
+            <SP ID="P480_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00010" HPOS="962" VPOS="426" WIDTH="133" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Henry" WC="0.478" CC="63653" />
+            <SP ID="P480_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00011" HPOS="1110" VPOS="426" WIDTH="43" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="G." WC="0.65" CC="70" />
+            <SP ID="P480_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00012" HPOS="1176" VPOS="427" WIDTH="324" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="Thomas.—19th" WC="0.5883333" CC="070055490367" />
+            <SP ID="P480_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00013" HPOS="1520" VPOS="427" WIDTH="210" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.563333333" CC="703744650" />
+            <SP ID="P480_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00014" HPOS="1753" VPOS="428" WIDTH="99" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="29th" WC="0.5275" CC="2537" />
+          </TextLine>
+          <TextLine ID="P480_TL00003" HPOS="337" VPOS="479" WIDTH="1209" HEIGHT="44">
+            <String ID="P480_S00015" HPOS="337" VPOS="479" WIDTH="214" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.74222225" CC="700650003" />
+            <SP ID="P480_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00016" HPOS="567" VPOS="480" WIDTH="80" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="23d" WC="0.7733333" CC="060" />
+            <SP ID="P480_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00017" HPOS="660" VPOS="480" WIDTH="212" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.76" CC="004000934" />
+            <SP ID="P480_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00018" HPOS="888" VPOS="481" WIDTH="100" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="28th" WC="0.5625" CC="9007" />
+            <SP ID="P480_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00019" HPOS="1003" VPOS="481" WIDTH="209" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.771111131" CC="078010002" />
+            <SP ID="P480_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00020" HPOS="1230" VPOS="482" WIDTH="93" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="31st" WC="0.655" CC="6070" />
+            <SP ID="P480_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00021" HPOS="1335" VPOS="482" WIDTH="211" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.775555551" CC="1000004004" />
+          </TextLine>
+          <TextLine ID="P480_TL00004" HPOS="822" VPOS="545" WIDTH="558" HEIGHT="36">
+            <String ID="P480_S00022" HPOS="822" VPOS="545" WIDTH="260" HEIGHT="35" STYLEREFS="StyleId-2" CONTENT="Eighteenth" WC="0.493" CC="3465445536" />
+            <SP ID="P480_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00023" HPOS="1103" VPOS="547" WIDTH="120" HEIGHT="33" STYLEREFS="StyleId-2" CONTENT="Army" WC="0.84" CC="0060" />
+            <SP ID="P480_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00024" HPOS="1244" VPOS="546" WIDTH="136" HEIGHT="35" STYLEREFS="StyleId-2" CONTENT="Corps." WC="0.586666644" CC="216770" />
+          </TextLine>
+          <TextLine ID="P480_TL00005" HPOS="419" VPOS="612" WIDTH="1434" HEIGHT="42">
+            <String ID="P480_S00025" HPOS="419" VPOS="612" WIDTH="54" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="3d" WC="0.735" CC="50" />
+            <SP ID="P480_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00026" HPOS="506" VPOS="611" WIDTH="185" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Division," WC="0.6344444" CC="707473002" />
+            <SP ID="P480_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00027" HPOS="725" VPOS="611" WIDTH="117" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="(June" WC="0.66" CC="40570" />
+            <SP ID="P480_SP00023" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00028" HPOS="870" VPOS="611" WIDTH="98" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="15th" WC="0.8725" CC="0500" />
+            <SP ID="P480_SP00024" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00029" HPOS="996" VPOS="614" WIDTH="45" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P480_SP00025" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00030" HPOS="1063" VPOS="612" WIDTH="92" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="July" WC="0.66" CC="0706" />
+            <SP ID="P480_SP00026" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00031" HPOS="1178" VPOS="611" WIDTH="102" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="31st," WC="0.684" CC="50703" />
+            <SP ID="P480_SP00027" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00032" HPOS="1304" VPOS="612" WIDTH="549" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="1864.)—Brigadier-General" WC="0.66375" CC="0106029774001000706370501" />
+          </TextLine>
+          <TextLine ID="P480_TL00006" HPOS="338" VPOS="667" WIDTH="1516" HEIGHT="43">
+            <String ID="P480_S00033" HPOS="338" VPOS="668" WIDTH="45" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="E." WC="0.72" CC="31" />
+            <SP ID="P480_SP00028" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00034" HPOS="399" VPOS="667" WIDTH="58" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="W." WC="0.53" CC="72" />
+            <SP ID="P480_SP00029" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00035" HPOS="474" VPOS="666" WIDTH="137" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Hinks," WC="0.61" CC="700384" />
+            <SP ID="P480_SP00030" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00036" HPOS="627" VPOS="666" WIDTH="101" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="June" WC="0.695" CC="0380" />
+            <SP ID="P480_SP00031" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00037" HPOS="746" VPOS="666" WIDTH="69" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="1st" WC="0.276666671" CC="667" />
+            <SP ID="P480_SP00032" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00038" HPOS="834" VPOS="669" WIDTH="46" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P480_SP00033" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00039" HPOS="896" VPOS="666" WIDTH="91" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="July" WC="0.8175" CC="0700" />
+            <SP ID="P480_SP00034" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00040" HPOS="1003" VPOS="666" WIDTH="83" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="1st;" WC="0.66" CC="0805" />
+            <SP ID="P480_SP00035" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00041" HPOS="1110" VPOS="666" WIDTH="153" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.822857141" CC="5000700" />
+            <SP ID="P480_SP00036" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00042" HPOS="1284" VPOS="666" WIDTH="105" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="John" WC="0.8325" CC="0006" />
+            <SP ID="P480_SP00037" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00043" HPOS="1411" VPOS="667" WIDTH="50" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="H." WC="0.54" CC="54" />
+            <SP ID="P480_SP00038" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00044" HPOS="1484" VPOS="669" WIDTH="182" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Holman," WC="0.61" CC="70010063" />
+            <SP ID="P480_SP00039" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00045" HPOS="1682" VPOS="669" WIDTH="92" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="July" WC="0.725" CC="0730" />
+            <SP ID="P480_SP00040" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00046" HPOS="1788" VPOS="669" WIDTH="66" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="1st" WC="0.44" CC="0610" />
+          </TextLine>
+          <TextLine ID="P480_TL00007" HPOS="339" VPOS="722" WIDTH="1515" HEIGHT="42">
+            <String ID="P480_S00047" HPOS="339" VPOS="726" WIDTH="48" HEIGHT="32" STYLEREFS="StyleId-1" CONTENT="to" WC="0.275" CC="76" />
+            <SP ID="P480_SP00041" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00048" HPOS="407" VPOS="723" WIDTH="118" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="27th;" WC="0.716" CC="20074" />
+            <SP ID="P480_SP00042" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00049" HPOS="547" VPOS="721" WIDTH="154" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.6571429" CC="6004606" />
+            <SP ID="P480_SP00043" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00050" HPOS="721" VPOS="721" WIDTH="37" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="S." WC="0.655" CC="60" />
+            <SP ID="P480_SP00044" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00051" HPOS="780" VPOS="721" WIDTH="46" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="A." WC="0.45" CC="74" />
+            <SP ID="P480_SP00045" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00052" HPOS="849" VPOS="721" WIDTH="172" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Duncan," WC="0.46" CC="7670574" />
+            <SP ID="P480_SP00046" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00053" HPOS="1043" VPOS="721" WIDTH="96" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="July" WC="0.4725" CC="06510" />
+            <SP ID="P480_SP00047" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00054" HPOS="1158" VPOS="722" WIDTH="100" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="27th" WC="0.815" CC="0700" />
+            <SP ID="P480_SP00048" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00055" HPOS="1278" VPOS="724" WIDTH="45" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="to" WC="0.575" CC="62" />
+            <SP ID="P480_SP00049" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00056" HPOS="1344" VPOS="723" WIDTH="118" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="29th;" WC="0.604" CC="94006" />
+            <SP ID="P480_SP00050" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00057" HPOS="1484" VPOS="723" WIDTH="370" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigadier-General" WC="0.5582353" CC="6301091050517050370" />
+          </TextLine>
+          <TextLine ID="P480_TL00008" HPOS="341" VPOS="777" WIDTH="674" HEIGHT="40">
+            <String ID="P480_S00058" HPOS="341" VPOS="778" WIDTH="146" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="Joseph" WC="0.738333344" CC="207050" />
+            <SP ID="P480_SP00051" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00059" HPOS="502" VPOS="777" WIDTH="43" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="B." WC="0.46" CC="64" />
+            <SP ID="P480_SP00052" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00060" HPOS="562" VPOS="776" WIDTH="105" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Carr," WC="0.522" CC="65434" />
+            <SP ID="P480_SP00053" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00061" HPOS="684" VPOS="777" WIDTH="99" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="since" WC="0.842" CC="70000" />
+            <SP ID="P480_SP00054" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00062" HPOS="797" VPOS="775" WIDTH="93" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="July" WC="0.87" CC="0500" />
+            <SP ID="P480_SP00055" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00063" HPOS="905" VPOS="776" WIDTH="110" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="29th." WC="0.724" CC="90004" />
+          </TextLine>
+          <TextLine ID="P480_TL00009" HPOS="422" VPOS="844" WIDTH="1432" HEIGHT="41">
+            <String ID="P480_S00064" HPOS="422" VPOS="845" WIDTH="108" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="First" WC="0.452" CC="60559" />
+            <SP ID="P480_SP00056" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00065" HPOS="549" VPOS="843" WIDTH="178" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.595" CC="045102441" />
+            <SP ID="P480_SP00057" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00066" HPOS="751" VPOS="842" WIDTH="151" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.6528571" CC="5630053" />
+            <SP ID="P480_SP00058" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00067" HPOS="923" VPOS="842" WIDTH="107" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="John" WC="0.815" CC="0007" />
+            <SP ID="P480_SP00059" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00068" HPOS="1051" VPOS="843" WIDTH="50" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="H." WC="0.595" CC="61" />
+            <SP ID="P480_SP00060" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00069" HPOS="1125" VPOS="844" WIDTH="191" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Holman;" WC="0.4557143" CC="60071076" />
+            <SP ID="P480_SP00061" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00070" HPOS="1346" VPOS="844" WIDTH="151" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.5314286" CC="52231044" />
+            <SP ID="P480_SP00062" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00071" HPOS="1517" VPOS="844" WIDTH="147" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Jeptha" WC="0.59" CC="020578" />
+            <SP ID="P480_SP00063" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00072" HPOS="1684" VPOS="843" WIDTH="170" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Garrard" WC="0.21" CC="910749510" />
+          </TextLine>
+          <TextLine ID="P480_TL00010" HPOS="343" VPOS="901" WIDTH="1512" HEIGHT="39">
+            <String ID="P480_S00073" HPOS="343" VPOS="901" WIDTH="99" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="since" WC="0.696" CC="80600" />
+            <SP ID="P480_SP00064" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00074" HPOS="469" VPOS="900" WIDTH="95" HEIGHT="42" STYLEREFS="StyleId-1" CONTENT="July" WC="0.825" CC="0700" />
+            <SP ID="P480_SP00065" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00075" HPOS="590" VPOS="899" WIDTH="174" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="2d.—1st" WC="0.692857146" CC="5009060" />
+            <SP ID="P480_SP00066" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00076" HPOS="790" VPOS="898" WIDTH="212" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.7277778" CC="710400704" />
+            <SP ID="P480_SP00067" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00077" HPOS="1033" VPOS="898" WIDTH="98" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="10th" WC="0.73" CC="0190" />
+            <SP ID="P480_SP00068" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00078" HPOS="1159" VPOS="899" WIDTH="232" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment,*" WC="0.647" CC="0094607043" />
+            <SP ID="P480_SP00069" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00079" HPOS="1419" VPOS="899" WIDTH="97" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="37th" WC="0.66" CC="5080" />
+            <SP ID="P480_SP00070" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00080" HPOS="1536" VPOS="898" WIDTH="233" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment,f" WC="0.798" CC="0005006008" />
+            <SP ID="P480_SP00071" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00081" HPOS="1789" VPOS="898" WIDTH="66" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="1st" WC="0.5833333" CC="057" />
+          </TextLine>
+          <TextLine ID="P480_TL00011" HPOS="343" VPOS="954" WIDTH="802" HEIGHT="41">
+            <String ID="P480_S00082" HPOS="343" VPOS="955" WIDTH="176" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Cavalry," WC="0.62" CC="50680503" />
+            <SP ID="P480_SP00072" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00083" HPOS="537" VPOS="955" WIDTH="71" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="5th" WC="0.39" CC="297" />
+            <SP ID="P480_SP00073" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00084" HPOS="623" VPOS="953" WIDTH="306" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Massachusetts" WC="0.716923058" CC="0077000770007" />
+            <SP ID="P480_SP00074" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00085" HPOS="946" VPOS="950" WIDTH="199" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Cavalry.f" WC="0.6333333" CC="604913008" />
+          </TextLine>
+          <TextLine ID="P480_TL00012" HPOS="423" VPOS="1022" WIDTH="1429" HEIGHT="40">
+            <String ID="P480_S00086" HPOS="423" VPOS="1022" WIDTH="146" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="Second" WC="0.7916667" CC="600050" />
+            <SP ID="P480_SP00075" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00087" HPOS="583" VPOS="1021" WIDTH="177" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.68875" CC="660100001" />
+            <SP ID="P480_SP00076" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00088" HPOS="771" VPOS="1019" WIDTH="153" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.8414286" CC="0020700" />
+            <SP ID="P480_SP00077" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00089" HPOS="932" VPOS="1019" WIDTH="36" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="S." WC="0.645" CC="70" />
+            <SP ID="P480_SP00078" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00090" HPOS="979" VPOS="1021" WIDTH="43" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="A." WC="0.715" CC="50" />
+            <SP ID="P480_SP00079" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00091" HPOS="1033" VPOS="1020" WIDTH="284" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Duncan.—4th" WC="0.583636343" CC="76706209600" />
+            <SP ID="P480_SP00080" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00092" HPOS="1331" VPOS="1020" WIDTH="210" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.816666663" CC="700400004" />
+            <SP ID="P480_SP00081" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00093" HPOS="1560" VPOS="1020" WIDTH="69" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="5th" WC="0.886666656" CC="300" />
+            <SP ID="P480_SP00082" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00094" HPOS="1642" VPOS="1019" WIDTH="210" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.894444466" CC="000050004" />
+          </TextLine>
+          <TextLine ID="P480_TL00013" HPOS="345" VPOS="1079" WIDTH="901" HEIGHT="38">
+            <String ID="P480_S00095" HPOS="345" VPOS="1080" WIDTH="71" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="6th" WC="0.7966667" CC="600" />
+            <SP ID="P480_SP00083" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00096" HPOS="429" VPOS="1078" WIDTH="213" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.885555565" CC="000100800" />
+            <SP ID="P480_SP00084" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00097" HPOS="659" VPOS="1076" WIDTH="80" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="22d" WC="0.82" CC="050" />
+            <SP ID="P480_SP00085" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00098" HPOS="752" VPOS="1076" WIDTH="211" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.7211111" CC="008600503" />
+            <SP ID="P480_SP00086" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00099" HPOS="981" VPOS="1076" WIDTH="53" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="2d" WC="1" CC="00" />
+            <SP ID="P480_SP00087" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00100" HPOS="1049" VPOS="1076" WIDTH="197" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Cavalry.$" WC="0.715555549" CC="407005008" />
+          </TextLine>
+          <TextLine ID="P480_TL00014" HPOS="443" VPOS="1159" WIDTH="1414" HEIGHT="46">
+            <String ID="P480_S00101" HPOS="443" VPOS="1159" WIDTH="100" HEIGHT="42" STYLEREFS="StyleId-3" CONTENT="The" WC="0.7033333" CC="071" />
+            <SP ID="P480_SP00088" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00102" HPOS="576" VPOS="1157" WIDTH="244" HEIGHT="55" STYLEREFS="StyleId-3" CONTENT="following" WC="0.686666667" CC="4000010076" />
+            <SP ID="P480_SP00089" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00103" HPOS="853" VPOS="1156" WIDTH="257" HEIGHT="56" STYLEREFS="StyleId-3" CONTENT="regiments" WC="0.6388889" CC="605000767" />
+            <SP ID="P480_SP00090" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00104" HPOS="1146" VPOS="1153" WIDTH="254" HEIGHT="59" STYLEREFS="StyleId-3" CONTENT="composed" WC="0.645" CC="26030707" />
+            <SP ID="P480_SP00091" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00105" HPOS="1433" VPOS="1152" WIDTH="84" HEIGHT="60" STYLEREFS="StyleId-3" CONTENT="the" WC="0.586666644" CC="470" />
+            <SP ID="P480_SP00092" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00106" HPOS="1550" VPOS="1151" WIDTH="307" HEIGHT="61" STYLEREFS="StyleId-3" CONTENT="Provisional" WC="0.5809091" CC="720706407100" />
+          </TextLine>
+          <TextLine ID="P480_TL00015" HPOS="344" VPOS="1226" WIDTH="1513" HEIGHT="46">
+            <String ID="P480_S00107" HPOS="344" VPOS="1226" WIDTH="317" HEIGHT="43" STYLEREFS="StyleId-3" CONTENT="Detachment" WC="0.734" CC="7006300080" />
+            <SP ID="P480_SP00093" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00108" HPOS="696" VPOS="1224" WIDTH="55" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="of" WC="0.58" CC="61" />
+            <SP ID="P480_SP00094" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00109" HPOS="769" VPOS="1224" WIDTH="85" HEIGHT="45" STYLEREFS="StyleId-3" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P480_SP00095" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00110" HPOS="886" VPOS="1223" WIDTH="151" HEIGHT="54" STYLEREFS="StyleId-3" CONTENT="Army" WC="0.5" CC="6607" />
+            <SP ID="P480_SP00096" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00111" HPOS="1072" VPOS="1221" WIDTH="53" HEIGHT="56" STYLEREFS="StyleId-3" CONTENT="of" WC="0.55" CC="44" />
+            <SP ID="P480_SP00097" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00112" HPOS="1143" VPOS="1221" WIDTH="85" HEIGHT="56" STYLEREFS="StyleId-3" CONTENT="the" WC="1" CC="000" />
+            <SP ID="P480_SP00098" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00113" HPOS="1261" VPOS="1220" WIDTH="269" HEIGHT="57" STYLEREFS="StyleId-3" CONTENT="Tennessee," WC="0.812" CC="1000057013" />
+            <SP ID="P480_SP00099" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00114" HPOS="1551" VPOS="1217" WIDTH="123" HEIGHT="60" STYLEREFS="StyleId-3" CONTENT="23rd" WC="0.3725" CC="6854" />
+            <SP ID="P480_SP00100" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00115" HPOS="1706" VPOS="1217" WIDTH="151" HEIGHT="60" STYLEREFS="StyleId-3" CONTENT="Army" WC="0.51" CC="6506" />
+          </TextLine>
+          <TextLine ID="P480_TL00016" HPOS="346" VPOS="1291" WIDTH="1511" HEIGHT="47">
+            <String ID="P480_S00116" HPOS="346" VPOS="1293" WIDTH="162" HEIGHT="55" STYLEREFS="StyleId-3" CONTENT="Corps," WC="0.485" CC="607564" />
+            <SP ID="P480_SP00101" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00117" HPOS="545" VPOS="1291" WIDTH="316" HEIGHT="57" STYLEREFS="StyleId-3" CONTENT="commanded" WC="0.776666641" CC="000596000" />
+            <SP ID="P480_SP00102" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00118" HPOS="896" VPOS="1290" WIDTH="66" HEIGHT="58" STYLEREFS="StyleId-3" CONTENT="by" WC="0.575" CC="80" />
+            <SP ID="P480_SP00103" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00119" HPOS="995" VPOS="1285" WIDTH="372" HEIGHT="63" STYLEREFS="StyleId-3" CONTENT="Major-General" WC="0.590769231" CC="36407070005910" />
+            <SP ID="P480_SP00104" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00120" HPOS="1402" VPOS="1284" WIDTH="163" HEIGHT="64" STYLEREFS="StyleId-3" CONTENT="James" WC="0.86" CC="00007" />
+            <SP ID="P480_SP00105" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00121" HPOS="1600" VPOS="1283" WIDTH="53" HEIGHT="65" STYLEREFS="StyleId-3" CONTENT="B." WC="0.455" CC="64" />
+            <SP ID="P480_SP00106" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00122" HPOS="1692" VPOS="1282" WIDTH="165" HEIGHT="66" STYLEREFS="StyleId-3" CONTENT="Stead-" WC="0.808333337" CC="700004" />
+          </TextLine>
+          <TextLine ID="P480_TL00017" HPOS="345" VPOS="1359" WIDTH="372" HEIGHT="51">
+            <String ID="P480_S00123" HPOS="345" VPOS="1373" WIDTH="128" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="man," WC="0.2125" CC="9984" />
+            <SP ID="P480_SP00107" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00124" HPOS="493" VPOS="1359" WIDTH="51" HEIGHT="53" STYLEREFS="StyleId-3" CONTENT="in" WC="0.55" CC="90" />
+            <SP ID="P480_SP00108" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00125" HPOS="563" VPOS="1357" WIDTH="154" HEIGHT="55" STYLEREFS="StyleId-3" CONTENT="1864:" WC="0.602" CC="015103" />
+          </TextLine>
+          <TextLine ID="P480_TL00018" HPOS="426" VPOS="1436" WIDTH="1432" HEIGHT="35">
+            <String ID="P480_S00126" HPOS="426" VPOS="1440" WIDTH="107" HEIGHT="33" STYLEREFS="StyleId-1" CONTENT="First" WC="0.338" CC="627610" />
+            <SP ID="P480_SP00109" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00127" HPOS="559" VPOS="1437" WIDTH="177" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.63125" CC="75190033" />
+            <SP ID="P480_SP00110" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00128" HPOS="762" VPOS="1434" WIDTH="153" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.762857139" CC="4021700" />
+            <SP ID="P480_SP00111" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00129" HPOS="936" VPOS="1433" WIDTH="43" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="T." WC="0.85" CC="30" />
+            <SP ID="P480_SP00112" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00130" HPOS="1003" VPOS="1432" WIDTH="36" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="J." WC="1" CC="00" />
+            <SP ID="P480_SP00113" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00131" HPOS="1063" VPOS="1429" WIDTH="316" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Morgan.—14th" WC="0.6666667" CC="306900100990" />
+            <SP ID="P480_SP00114" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00132" HPOS="1399" VPOS="1428" WIDTH="210" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.78" CC="007010703" />
+            <SP ID="P480_SP00115" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00133" HPOS="1632" VPOS="1426" WIDTH="97" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="15th" WC="0.865" CC="0500" />
+            <SP ID="P480_SP00116" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00134" HPOS="1750" VPOS="1426" WIDTH="108" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Regi¬" WC="0.894" CC="00014" />
+          </TextLine>
+          <TextLine ID="P480_TL00019" HPOS="346" VPOS="1491" WIDTH="1403" HEIGHT="39">
+            <String ID="P480_S00135" HPOS="346" VPOS="1498" WIDTH="116" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="ment," WC="0.732" CC="100003" />
+            <SP ID="P480_SP00117" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00136" HPOS="480" VPOS="1494" WIDTH="98" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="17th" WC="1" CC="0000" />
+            <SP ID="P480_SP00118" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00137" HPOS="592" VPOS="1493" WIDTH="212" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.65" CC="00100100703" />
+            <SP ID="P480_SP00119" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00138" HPOS="823" VPOS="1489" WIDTH="98" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="18th" WC="0.72" CC="3007" />
+            <SP ID="P480_SP00120" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00139" HPOS="935" VPOS="1488" WIDTH="210" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.6911111" CC="0010060704" />
+            <SP ID="P480_SP00121" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00140" HPOS="1166" VPOS="1484" WIDTH="245" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="(battalion)," WC="0.685833335" CC="3070108002014" />
+            <SP ID="P480_SP00122" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00141" HPOS="1427" VPOS="1483" WIDTH="97" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="44th" WC="1" CC="0000" />
+            <SP ID="P480_SP00123" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00142" HPOS="1538" VPOS="1483" WIDTH="210" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.783333361" CC="000700704" />
+          </TextLine>
+          <TextLine ID="P480_TL00020" HPOS="427" VPOS="1558" WIDTH="1427" HEIGHT="35">
+            <String ID="P480_S00143" HPOS="427" VPOS="1561" WIDTH="145" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Second" WC="0.765" CC="600070" />
+            <SP ID="P480_SP00124" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00144" HPOS="601" VPOS="1559" WIDTH="176" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.6825" CC="54007611" />
+            <SP ID="P480_SP00125" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00145" HPOS="809" VPOS="1556" WIDTH="152" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.791428566" CC="1050700" />
+            <SP ID="P480_SP00126" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00146" HPOS="990" VPOS="1554" WIDTH="150" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Charles" WC="0.465714276" CC="0796806" />
+            <SP ID="P480_SP00127" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00147" HPOS="1168" VPOS="1552" WIDTH="43" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="R." WC="0.41" CC="74" />
+            <SP ID="P480_SP00128" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00148" HPOS="1242" VPOS="1549" WIDTH="376" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Thompson.—12th" WC="0.856428564" CC="00003500100800" />
+            <SP ID="P480_SP00129" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00149" HPOS="1645" VPOS="1548" WIDTH="209" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.655555546" CC="700180572" />
+          </TextLine>
+          <TextLine ID="P480_TL00021" HPOS="348" VPOS="1613" WIDTH="1511" HEIGHT="37">
+            <String ID="P480_S00150" HPOS="348" VPOS="1618" WIDTH="97" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="13th" WC="0.86" CC="0500" />
+            <SP ID="P480_SP00130" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00151" HPOS="466" VPOS="1617" WIDTH="212" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.8666667" CC="020000701" />
+            <SP ID="P480_SP00131" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00152" HPOS="695" VPOS="1614" WIDTH="124" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="100th" WC="1" CC="00000" />
+            <SP ID="P480_SP00132" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00153" HPOS="841" VPOS="1612" WIDTH="210" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.8422222" CC="000070700" />
+            <SP ID="P480_SP00133" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00154" HPOS="1096" VPOS="1609" WIDTH="99" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Post" WC="0.635" CC="7060" />
+            <SP ID="P480_SP00134" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00155" HPOS="1216" VPOS="1607" WIDTH="42" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="of" WC="0.8" CC="40" />
+            <SP ID="P480_SP00135" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00156" HPOS="1274" VPOS="1606" WIDTH="202" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Nashville," WC="0.659" CC="40601006203" />
+            <SP ID="P480_SP00136" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00157" HPOS="1516" VPOS="1604" WIDTH="165" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="Battery" WC="0.378571421" CC="3469576" />
+            <SP ID="P480_SP00137" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00158" HPOS="1717" VPOS="1603" WIDTH="45" HEIGHT="57" STYLEREFS="StyleId-1" CONTENT="A," WC="0.52" CC="90" />
+            <SP ID="P480_SP00138" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00159" HPOS="1778" VPOS="1602" WIDTH="80" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="2nd" WC="0.776666641" CC="060" />
+          </TextLine>
+          <TextLine ID="P480_TL00022" HPOS="346" VPOS="1674" WIDTH="192" HEIGHT="40">
+            <String ID="P480_S00160" HPOS="346" VPOS="1674" WIDTH="192" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="Artillery." WC="0.745" CC="0283020503" />
+          </TextLine>
+          <TextLine ID="P480_TL00023" HPOS="890" VPOS="1708" WIDTH="433" HEIGHT="35">
+            <String ID="P480_S00161" HPOS="890" VPOS="1711" WIDTH="138" HEIGHT="34" STYLEREFS="StyleId-2" CONTENT="Tenth" WC="0.716" CC="05107" />
+            <SP ID="P480_SP00139" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00162" HPOS="1049" VPOS="1708" WIDTH="119" HEIGHT="37" STYLEREFS="StyleId-2" CONTENT="Army" WC="0.6425" CC="0607" />
+            <SP ID="P480_SP00140" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00163" HPOS="1189" VPOS="1706" WIDTH="134" HEIGHT="39" STYLEREFS="StyleId-2" CONTENT="Corps." WC="0.543333352" CC="3010760" />
+          </TextLine>
+          <TextLine ID="P480_TL00024" HPOS="425" VPOS="1777" WIDTH="1434" HEIGHT="38">
+            <String ID="P480_S00164" HPOS="426" VPOS="1784" WIDTH="120" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="Army" WC="0.645" CC="0590" />
+            <SP ID="P480_SP00141" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00165" HPOS="568" VPOS="1782" WIDTH="44" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="of" WC="1" CC="00" />
+            <SP ID="P480_SP00142" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00166" HPOS="624" VPOS="1781" WIDTH="70" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="the" WC="0.636666656" CC="901" />
+            <SP ID="P480_SP00143" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00167" HPOS="715" VPOS="1779" WIDTH="110" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Ohio," WC="0.83" CC="00503" />
+            <SP ID="P480_SP00144" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00168" HPOS="842" VPOS="1774" WIDTH="297" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Major-General" WC="0.5976923" CC="0050508470397" />
+            <SP ID="P480_SP00145" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00169" HPOS="1154" VPOS="1772" WIDTH="44" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="A." WC="1" CC="00" />
+            <SP ID="P480_SP00146" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00170" HPOS="1215" VPOS="1772" WIDTH="49" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="H." WC="0.705" CC="50" />
+            <SP ID="P480_SP00147" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00171" HPOS="1280" VPOS="1770" WIDTH="225" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="Terry.—3d" WC="0.5644444" CC="905602960" />
+            <SP ID="P480_SP00148" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00172" HPOS="1525" VPOS="1768" WIDTH="184" HEIGHT="57" STYLEREFS="StyleId-1" CONTENT="Division," WC="0.6588889" CC="700580063" />
+            <SP ID="P480_SP00149" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00173" HPOS="1725" VPOS="1767" WIDTH="134" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="Briga¬" WC="0.52" CC="505772" />
+          </TextLine>
+          <TextLine ID="P480_TL00025" HPOS="350" VPOS="1837" WIDTH="503" HEIGHT="33">
+            <String ID="P480_S00174" HPOS="350" VPOS="1838" WIDTH="250" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="dier-General" WC="0.73" CC="1020500071600" />
+            <SP ID="P480_SP00150" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00175" HPOS="615" VPOS="1836" WIDTH="35" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="C." WC="0.77" CC="40" />
+            <SP ID="P480_SP00151" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00176" HPOS="669" VPOS="1836" WIDTH="37" HEIGHT="38" STYLEREFS="StyleId-1" CONTENT="J." WC="0.885" CC="02" />
+            <SP ID="P480_SP00152" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00177" HPOS="723" VPOS="1834" WIDTH="130" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="Paine." WC="0.8666667" CC="800000" />
+          </TextLine>
+          <TextLine ID="P480_TL00026" HPOS="429" VPOS="1888" WIDTH="1427" HEIGHT="37">
+            <String ID="P480_S00178" HPOS="429" VPOS="1894" WIDTH="106" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="First" WC="0.412" CC="356410" />
+            <SP ID="P480_SP00153" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00179" HPOS="563" VPOS="1891" WIDTH="176" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.30625" CC="6559101044" />
+            <SP ID="P480_SP00154" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00180" HPOS="770" VPOS="1889" WIDTH="142" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Brevet" WC="0.58" CC="5631000" />
+            <SP ID="P480_SP00155" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00181" HPOS="931" VPOS="1882" WIDTH="370" HEIGHT="52" STYLEREFS="StyleId-1" CONTENT="Brigadier-General" WC="0.487058818" CC="6678109206002066103" />
+            <SP ID="P480_SP00156" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00182" HPOS="1320" VPOS="1881" WIDTH="45" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="D." WC="0.775" CC="04" />
+            <SP ID="P480_SP00157" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00183" HPOS="1388" VPOS="1879" WIDTH="240" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="Bates.—1st" WC="0.603" CC="7904730070" />
+            <SP ID="P480_SP00158" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00184" HPOS="1645" VPOS="1878" WIDTH="211" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.566666663" CC="70100100073" />
+          </TextLine>
+          <TextLine ID="P480_TL00027" HPOS="350" VPOS="1946" WIDTH="692" HEIGHT="42">
+            <String ID="P480_S00185" HPOS="350" VPOS="1950" WIDTH="97" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="30th" WC="0.7225" CC="5500" />
+            <SP ID="P480_SP00159" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00186" HPOS="461" VPOS="1948" WIDTH="210" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.804444432" CC="000050704" />
+            <SP ID="P480_SP00160" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00187" HPOS="691" VPOS="1945" WIDTH="124" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="107th" WC="1" CC="00000" />
+            <SP ID="P480_SP00161" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00188" HPOS="831" VPOS="1943" WIDTH="211" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.6377778" CC="704191700" />
+          </TextLine>
+          <TextLine ID="P480_TL00028" HPOS="428" VPOS="2009" WIDTH="1429" HEIGHT="38">
+            <String ID="P480_S00189" HPOS="428" VPOS="2015" WIDTH="146" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Second" WC="0.7133333" CC="600370" />
+            <SP ID="P480_SP00162" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00190" HPOS="589" VPOS="2013" WIDTH="177" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.74375" CC="46500003" />
+            <SP ID="P480_SP00163" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00191" HPOS="777" VPOS="2011" WIDTH="141" HEIGHT="45" STYLEREFS="StyleId-1" CONTENT="Brevet" WC="0.808333337" CC="560000" />
+            <SP ID="P480_SP00164" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00192" HPOS="926" VPOS="2003" WIDTH="368" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Brigadier-General" WC="0.7005882" CC="574100030401072500" />
+            <SP ID="P480_SP00165" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00193" HPOS="1311" VPOS="2000" WIDTH="329" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="S.Duncan.—4th" WC="0.63" CC="60050066491000" />
+            <SP ID="P480_SP00166" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00194" HPOS="1647" VPOS="1999" WIDTH="210" HEIGHT="57" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.8244445" CC="700300004" />
+          </TextLine>
+          <TextLine ID="P480_TL00029" HPOS="351" VPOS="2068" WIDTH="638" HEIGHT="42">
+            <String ID="P480_S00195" HPOS="351" VPOS="2072" WIDTH="70" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="6th" WC="0.7266667" CC="800" />
+            <SP ID="P480_SP00167" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00196" HPOS="436" VPOS="2071" WIDTH="209" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.636666656" CC="007202594" />
+            <SP ID="P480_SP00168" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00197" HPOS="664" VPOS="2068" WIDTH="97" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="37th" WC="0.86" CC="5000" />
+            <SP ID="P480_SP00169" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00198" HPOS="777" VPOS="2065" WIDTH="212" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.7633333" CC="704000701" />
+          </TextLine>
+          <TextLine ID="P480_TL00030" HPOS="429" VPOS="2129" WIDTH="1431" HEIGHT="40">
+            <String ID="P480_S00199" HPOS="429" VPOS="2137" WIDTH="119" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Third" WC="0.838" CC="00170" />
+            <SP ID="P480_SP00170" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00200" HPOS="568" VPOS="2135" WIDTH="178" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.7125" CC="56070004" />
+            <SP ID="P480_SP00171" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00201" HPOS="764" VPOS="2131" WIDTH="153" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.898571432" CC="1100004" />
+            <SP ID="P480_SP00172" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00202" HPOS="932" VPOS="2129" WIDTH="37" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="J." WC="0.835" CC="03" />
+            <SP ID="P480_SP00173" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00203" HPOS="986" VPOS="2128" WIDTH="48" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="H." WC="0.715" CC="50" />
+            <SP ID="P480_SP00174" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00204" HPOS="1054" VPOS="2124" WIDTH="282" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Holman—5th" WC="0.732" CC="6040079000" />
+            <SP ID="P480_SP00175" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00205" HPOS="1351" VPOS="2122" WIDTH="209" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.76222223" CC="600002704" />
+            <SP ID="P480_SP00176" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00206" HPOS="1580" VPOS="2120" WIDTH="163" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="(Mass.,)" WC="0.72875" CC="32066030" />
+            <SP ID="P480_SP00177" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00207" HPOS="1761" VPOS="2119" WIDTH="98" HEIGHT="59" STYLEREFS="StyleId-1" CONTENT="27th" WC="0.31" CC="9917" />
+          </TextLine>
+          <TextLine ID="P480_TL00031" HPOS="349" VPOS="2191" WIDTH="553" HEIGHT="42">
+            <String ID="P480_S00208" HPOS="349" VPOS="2191" WIDTH="210" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.74777776" CC="1020000702" />
+            <SP ID="P480_SP00178" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00209" HPOS="577" VPOS="2191" WIDTH="99" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="37th" WC="0.86" CC="5000" />
+            <SP ID="P480_SP00179" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00210" HPOS="690" VPOS="2189" WIDTH="212" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.831111133" CC="700010700" />
+          </TextLine>
+          <TextLine ID="P480_TL00032" HPOS="880" VPOS="2236" WIDTH="456" HEIGHT="37">
+            <String ID="P480_S00211" HPOS="880" VPOS="2241" WIDTH="139" HEIGHT="35" STYLEREFS="StyleId-2" CONTENT="Tenth" WC="0.59" CC="040106" />
+            <SP ID="P480_SP00180" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00212" HPOS="1040" VPOS="2237" WIDTH="119" HEIGHT="39" STYLEREFS="StyleId-2" CONTENT="Army" WC="0.615" CC="0752" />
+            <SP ID="P480_SP00181" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00213" HPOS="1179" VPOS="2233" WIDTH="157" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="Corps.§" WC="0.617142856" CC="5375400" />
+          </TextLine>
+          <TextLine ID="P480_TL00033" HPOS="432" VPOS="2306" WIDTH="984" HEIGHT="42">
+            <String ID="P480_S00214" HPOS="432" VPOS="2314" WIDTH="53" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="3d" WC="0.705" CC="50" />
+            <SP ID="P480_SP00182" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00215" HPOS="497" VPOS="2313" WIDTH="185" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="Division," WC="0.5711111" CC="720386073" />
+            <SP ID="P480_SP00183" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00216" HPOS="700" VPOS="2304" WIDTH="374" HEIGHT="50" STYLEREFS="StyleId-1" CONTENT="Brigadier-General" WC="0.5035294" CC="66698050704060696" />
+            <SP ID="P480_SP00184" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00217" HPOS="1088" VPOS="2301" WIDTH="165" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="William" WC="0.6342857" CC="7206009" />
+            <SP ID="P480_SP00185" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00218" HPOS="1267" VPOS="2299" WIDTH="149" HEIGHT="55" STYLEREFS="StyleId-1" CONTENT="Birney." WC="0.7128571" CC="1476000" />
+          </TextLine>
+          <TextLine ID="P480_TL00034" HPOS="431" VPOS="2369" WIDTH="1430" HEIGHT="44">
+            <String ID="P480_S00219" HPOS="431" VPOS="2381" WIDTH="107" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="First" WC="0.186" CC="87879" />
+            <SP ID="P480_SP00186" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00220" HPOS="559" VPOS="2379" WIDTH="176" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.55" CC="67505064" />
+            <SP ID="P480_SP00187" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00221" HPOS="761" VPOS="2374" WIDTH="153" HEIGHT="48" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.535714269" CC="00597100" />
+            <SP ID="P480_SP00188" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00222" HPOS="942" VPOS="2371" WIDTH="131" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="James" WC="0.6" CC="00946" />
+            <SP ID="P480_SP00189" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00223" HPOS="1096" VPOS="2368" WIDTH="123" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Shaw," WC="0.478" CC="70774" />
+            <SP ID="P480_SP00190" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00224" HPOS="1242" VPOS="2363" WIDTH="171" HEIGHT="59" STYLEREFS="StyleId-1" CONTENT="Jr.—7th" WC="0.697142839" CC="0029900" />
+            <SP ID="P480_SP00191" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00225" HPOS="1433" VPOS="2361" WIDTH="209" HEIGHT="61" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.6066667" CC="7604040103" />
+            <SP ID="P480_SP00192" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00226" HPOS="1666" VPOS="2359" WIDTH="71" HEIGHT="63" STYLEREFS="StyleId-1" CONTENT="9th" WC="0.9066667" CC="200" />
+            <SP ID="P480_SP00193" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00227" HPOS="1756" VPOS="2358" WIDTH="105" HEIGHT="64" STYLEREFS="StyleId-1" CONTENT="Regi¬" WC="0.424" CC="1041004" />
+          </TextLine>
+          <TextLine ID="P480_TL00035" HPOS="352" VPOS="2430" WIDTH="799" HEIGHT="44">
+            <String ID="P480_S00228" HPOS="353" VPOS="2439" WIDTH="115" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="ment," WC="0.75" CC="20603" />
+            <SP ID="P480_SP00194" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00229" HPOS="486" VPOS="2436" WIDTH="98" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="16th" WC="0.91" CC="0300" />
+            <SP ID="P480_SP00195" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00230" HPOS="599" VPOS="2433" WIDTH="210" HEIGHT="46" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.804444432" CC="000082600" />
+            <SP ID="P480_SP00196" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00231" HPOS="827" VPOS="2428" WIDTH="98" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="29th" WC="0.62" CC="6080" />
+            <SP ID="P480_SP00197" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00232" HPOS="941" VPOS="2425" WIDTH="210" HEIGHT="54" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.516666651" CC="0010560694" />
+          </TextLine>
+          <TextLine ID="P480_TL00036" HPOS="433" VPOS="2489" WIDTH="1428" HEIGHT="44">
+            <String ID="P480_S00233" HPOS="433" VPOS="2501" WIDTH="145" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT="Second" WC="0.5966667" CC="790070" />
+            <SP ID="P480_SP00198" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00234" HPOS="606" VPOS="2498" WIDTH="177" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.68875" CC="37705001" />
+            <SP ID="P480_SP00199" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00235" HPOS="808" VPOS="2493" WIDTH="152" HEIGHT="49" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.6785714" CC="1260606" />
+            <SP ID="P480_SP00200" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00236" HPOS="988" VPOS="2491" WIDTH="152" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Ulysses" WC="0.46" CC="70107606" />
+            <SP ID="P480_SP00201" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00237" HPOS="1161" VPOS="2482" WIDTH="352" HEIGHT="60" STYLEREFS="StyleId-1" CONTENT="Doubleday.—8th" WC="0.857142866" CC="00684000000000" />
+            <SP ID="P480_SP00202" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00238" HPOS="1539" VPOS="2481" WIDTH="209" HEIGHT="61" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.7777778" CC="700500034" />
+            <SP ID="P480_SP00203" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00239" HPOS="1771" VPOS="2478" WIDTH="90" HEIGHT="64" STYLEREFS="StyleId-1" CONTENT="41et" WC="0.385" CC="7457" />
+          </TextLine>
+          <TextLine ID="P480_TL00037" HPOS="352" VPOS="2548" WIDTH="919" HEIGHT="47">
+            <String ID="P480_S00240" HPOS="352" VPOS="2558" WIDTH="211" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.5877778" CC="708240094" />
+            <SP ID="P480_SP00204" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00241" HPOS="579" VPOS="2555" WIDTH="100" HEIGHT="47" STYLEREFS="StyleId-1" CONTENT="45th" WC="0.715" CC="0370" />
+            <SP ID="P480_SP00205" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00242" HPOS="694" VPOS="2551" WIDTH="212" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.6588889" CC="008622703" />
+            <SP ID="P480_SP00206" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00243" HPOS="923" VPOS="2545" WIDTH="123" HEIGHT="57" STYLEREFS="StyleId-1" CONTENT="127th" WC="0.456" CC="29069" />
+            <SP ID="P480_SP00207" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00244" HPOS="1061" VPOS="2543" WIDTH="210" HEIGHT="59" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.42" CC="10195707100" />
+          </TextLine>
+          <TextLine ID="P480_TL00038" HPOS="835" VPOS="2609" WIDTH="557" HEIGHT="35">
+            <String ID="P480_S00245" HPOS="835" VPOS="2615" WIDTH="259" HEIGHT="33" STYLEREFS="StyleId-2" CONTENT="Eighteenth" WC="0.401" CC="5575056995" />
+            <SP ID="P480_SP00208" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00246" HPOS="1116" VPOS="2608" WIDTH="119" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="Army" WC="0.835" CC="0060" />
+            <SP ID="P480_SP00209" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00247" HPOS="1256" VPOS="2605" WIDTH="136" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="Corps." WC="0.64" CC="500763" />
+          </TextLine>
+          <TextLine ID="P480_TL00039" HPOS="433" VPOS="2677" WIDTH="1007" HEIGHT="45">
+            <String ID="P480_S00248" HPOS="433" VPOS="2692" WIDTH="52" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="3d" WC="0.755" CC="40" />
+            <SP ID="P480_SP00210" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00249" HPOS="499" VPOS="2688" WIDTH="186" HEIGHT="40" STYLEREFS="StyleId-1" CONTENT="Division," WC="0.6722222" CC="700054074" />
+            <SP ID="P480_SP00211" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00250" HPOS="702" VPOS="2675" WIDTH="375" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Brigadier-General" WC="0.6288235" CC="610800040640060574" />
+            <SP ID="P480_SP00212" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00251" HPOS="1091" VPOS="2672" WIDTH="152" HEIGHT="56" STYLEREFS="StyleId-1" CONTENT="Charles" WC="0.47" CC="4716647" />
+            <SP ID="P480_SP00213" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00252" HPOS="1257" VPOS="2670" WIDTH="37" HEIGHT="58" STYLEREFS="StyleId-1" CONTENT="J." WC="1" CC="00" />
+            <SP ID="P480_SP00214" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00253" HPOS="1311" VPOS="2669" WIDTH="129" HEIGHT="59" STYLEREFS="StyleId-1" CONTENT="Paine." WC="0.436666667" CC="6106703" />
+          </TextLine>
+          <TextLine ID="P480_TL00040" HPOS="434" VPOS="2727" WIDTH="1430" HEIGHT="48">
+            <String ID="P480_S00254" HPOS="434" VPOS="2747" WIDTH="109" HEIGHT="34" STYLEREFS="StyleId-1" CONTENT="First" WC="0.454" CC="74780" />
+            <SP ID="P480_SP00215" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00255" HPOS="564" VPOS="2740" WIDTH="178" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Brigade," WC="0.7425" CC="56040004" />
+            <SP ID="P480_SP00216" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00256" HPOS="760" VPOS="2733" WIDTH="153" HEIGHT="51" STYLEREFS="StyleId-1" CONTENT="Colonel" WC="0.94" CC="4000000" />
+            <SP ID="P480_SP00217" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00257" HPOS="934" VPOS="2731" WIDTH="105" HEIGHT="53" STYLEREFS="StyleId-1" CONTENT="Elias" WC="0.622" CC="33407" />
+            <SP ID="P480_SP00218" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00258" HPOS="1054" VPOS="2724" WIDTH="272" HEIGHT="60" STYLEREFS="StyleId-1" CONTENT="Wright.—1st" WC="0.712727249" CC="74550030050" />
+            <SP ID="P480_SP00219" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00259" HPOS="1339" VPOS="2723" WIDTH="209" HEIGHT="61" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.548888862" CC="707590621" />
+            <SP ID="P480_SP00220" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00260" HPOS="1564" VPOS="2720" WIDTH="79" HEIGHT="64" STYLEREFS="StyleId-1" CONTENT="22d" WC="1" CC="000" />
+            <SP ID="P480_SP00221" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00261" HPOS="1655" VPOS="2717" WIDTH="209" HEIGHT="67" STYLEREFS="StyleId-1" CONTENT="Regiment," WC="0.5655556" CC="706420736" />
+          </TextLine>
+          <TextLine ID="P480_TL00041" HPOS="354" VPOS="2800" WIDTH="328" HEIGHT="41">
+            <String ID="P480_S00262" HPOS="354" VPOS="2803" WIDTH="102" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="37th" WC="0.84" CC="6000" />
+            <SP ID="P480_SP00222" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00263" HPOS="469" VPOS="2798" WIDTH="213" HEIGHT="44" STYLEREFS="StyleId-1" CONTENT="Regiment." WC="0.5966667" CC="0100456701" />
+          </TextLine>
+          <TextLine ID="P480_TL00042" HPOS="419" VPOS="2873" WIDTH="923" HEIGHT="64">
+            <String ID="P480_S00264" HPOS="419" VPOS="2913" WIDTH="17" HEIGHT="31" STYLEREFS="StyleId-2" CONTENT="t" WC="0.16" CC="8" />
+            <SP ID="P480_SP00223" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00265" HPOS="449" VPOS="2908" WIDTH="162" HEIGHT="36" STYLEREFS="StyleId-2" CONTENT="Detached" WC="0.27625" CC="882410688" />
+            <SP ID="P480_SP00224" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00266" HPOS="626" VPOS="2871" WIDTH="166" HEIGHT="73" STYLEREFS="StyleId-2" CONTENT="June'ssth" WC="0.41" CC="3741048708" />
+            <SP ID="P480_SP00225" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00267" HPOS="805" VPOS="2900" WIDTH="37" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="to" WC="1" CC="00" />
+            <SP ID="P480_SP00226" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00268" HPOS="856" VPOS="2892" WIDTH="212" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="Department" WC="0.671" CC="6011503075" />
+            <SP ID="P480_SP00227" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00269" HPOS="1079" VPOS="2887" WIDTH="263" HEIGHT="57" STYLEREFS="StyleId-2" CONTENT="Head-quarters." WC="0.5985714" CC="600604704100564" />
+          </TextLine>
+          <TextLine ID="P480_TL00043" HPOS="420" VPOS="2936" WIDTH="449" HEIGHT="36">
+            <String ID="P480_S00270" HPOS="420" VPOS="2946" WIDTH="17" HEIGHT="30" STYLEREFS="StyleId-1" CONTENT="}" WC="0.28" CC="7" />
+            <SP ID="P480_SP00228" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00271" HPOS="450" VPOS="2941" WIDTH="156" HEIGHT="35" STYLEREFS="StyleId-1" CONTENT="Assigned" WC="0.30375" CC="78869087" />
+            <SP ID="P480_SP00229" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00272" HPOS="621" VPOS="2940" WIDTH="83" HEIGHT="36" STYLEREFS="StyleId-1" CONTENT=".Time" WC="0.414" CC="46682" />
+            <SP ID="P480_SP00230" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00273" HPOS="715" VPOS="2935" WIDTH="64" HEIGHT="41" STYLEREFS="StyleId-1" CONTENT="22(1," WC="0.382" CC="610770" />
+            <SP ID="P480_SP00231" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00274" HPOS="794" VPOS="2933" WIDTH="75" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="1K64." WC="0.324" CC="78854" />
+          </TextLine>
+          <TextLine ID="P480_TL00044" HPOS="421" VPOS="2968" WIDTH="542" HEIGHT="39">
+            <String ID="P480_S00275" HPOS="421" VPOS="2979" WIDTH="15" HEIGHT="32" STYLEREFS="StyleId-2" CONTENT="§" WC="0.18" CC="8" />
+            <SP ID="P480_SP00232" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00276" HPOS="452" VPOS="2973" WIDTH="177" HEIGHT="38" STYLEREFS="StyleId-2" CONTENT="Organized" WC="0.313333333" CC="7410675776" />
+            <SP ID="P480_SP00233" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00277" HPOS="642" VPOS="2972" WIDTH="33" HEIGHT="39" STYLEREFS="StyleId-2" CONTENT="in" WC="0.37" CC="57" />
+            <SP ID="P480_SP00234" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00278" HPOS="688" VPOS="2966" WIDTH="186" HEIGHT="45" STYLEREFS="StyleId-2" CONTENT="November," WC="0.49444443" CC="577647060" />
+            <SP ID="P480_SP00235" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P480_S00279" HPOS="888" VPOS="2964" WIDTH="75" HEIGHT="47" STYLEREFS="StyleId-2" CONTENT="1864." WC="0.658" CC="05613" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

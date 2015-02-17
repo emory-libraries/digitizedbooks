@@ -1,0 +1,132 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cam a2200397Ia 4500</leader>
+    <controlfield tag="001">003142684</controlfield>
+    <controlfield tag="005">20141105130300.0</controlfield>
+    <controlfield tag="008">820510s1914    ohucf         000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(OCoLC)8414161</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(OCoLC)08414161</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">OCO</subfield>
+      <subfield code="c">OCO</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">AJ#A</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="092">
+      <subfield code="a">926.1</subfield>
+      <subfield code="b">S849w</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Steward, S. Maria</subfield>
+      <subfield code="q">(Susan Maria),</subfield>
+      <subfield code="d">1848-1918.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Woman in medicine :</subfield>
+      <subfield code="b">a paper read before the National Association of Colored Women's Clubs at Wilberforce, Ohio, August 6, 1914 /</subfield>
+      <subfield code="c">by S. Maria Steward.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Wilberforce, Ohio :</subfield>
+      <subfield code="b">[publisher not identified],</subfield>
+      <subfield code="c">[1914]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">24 pages, 2 unnumbered leaves of plates :</subfield>
+      <subfield code="b">portraits ;</subfield>
+      <subfield code="c">20 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital library Publications Program</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">will digitize</subfield>
+      <subfield code="c">20140911</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-S</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Introduction (p. 3-6) by Maritcha R. Lyons.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library copy from the collection of Charles Simpson Butcher.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Women physicians</subfield>
+      <subfield code="x">History.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Women in medicine</subfield>
+      <subfield code="x">History.</subfield>
+      <subfield code="0">EMU10001668098</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American author.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Lyons, Maritcha Rémond,</subfield>
+      <subfield code="d">1848-1929.</subfield>
+      <subfield code="0">EMU10000919746</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">National Association of Colored Women's Clubs (U.S.)</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Butcher, Charles Simpson,</subfield>
+      <subfield code="e">collector.</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU</subfield>
+      <subfield code="b">dmf</subfield>
+      <subfield code="2">20120813</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="994">
+      <subfield code="a">C0</subfield>
+      <subfield code="b">AJ#</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">2012 1510</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010002643922</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">20120813</subfield>
+      <subfield code="w">OTHER</subfield>
+    </datafield>
+  </record>
+</collection>

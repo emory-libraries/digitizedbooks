@@ -1,0 +1,161 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cam a2200505Ia 4500</leader>
+    <controlfield tag="001">000282077</controlfield>
+    <controlfield tag="003">OCoLC</controlfield>
+    <controlfield tag="005">20141021155411.0</controlfield>
+    <controlfield tag="008">791128s1902    aluac         000 0deng d</controlfield>
+    <datafield ind1="9" ind2=" " tag="035">
+      <subfield code="a">u2384027</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">ocm05737784</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(Sirsi) o05737784</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">TXT</subfield>
+      <subfield code="c">TXT</subfield>
+      <subfield code="d">OCL</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">EMU</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="043">
+      <subfield code="a">n-us-al</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">EMUU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="090">
+      <subfield code="a">BX8443</subfield>
+      <subfield code="b">.M5</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Mixon, Winfield Henri.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">History of the African Methodist Episcopal Church in Alabama :</subfield>
+      <subfield code="b">with biographical sketches /</subfield>
+      <subfield code="c">by W.H. Mixon ; with introduction by Henry McNeal Turner.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Nashville, Tenn. :</subfield>
+      <subfield code="b">A.M.E. Church Sunday School Union,</subfield>
+      <subfield code="c">1902.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">218 pages :</subfield>
+      <subfield code="b">illustrations, portraits ;</subfield>
+      <subfield code="c">18 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">digitized</subfield>
+      <subfield code="c">20141021</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-T</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library 2012 403 copy is variant in blue cloth binding.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library BX8443 copy is variant in red cloth binding.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">African Methodist Episcopal Church</subfield>
+      <subfield code="z">Alabama</subfield>
+      <subfield code="x">History.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">African Methodist Episcopal Church</subfield>
+      <subfield code="z">Alabama</subfield>
+      <subfield code="x">Clergy.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="651">
+      <subfield code="a">Alabama</subfield>
+      <subfield code="x">Church history.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">African American Methodists</subfield>
+      <subfield code="z">Alabama</subfield>
+      <subfield code="v">Biography.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">African Americans</subfield>
+      <subfield code="v">Biography.</subfield>
+      <subfield code="0">EMU10001610674</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American author.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American publisher.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Turner, Henry McNeal,</subfield>
+      <subfield code="d">1834-1915.</subfield>
+      <subfield code="0">EMU10000037229</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">A.M.E. Sunday School Union,</subfield>
+      <subfield code="e">publisher.</subfield>
+      <subfield code="0">EMU10001239586</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU emumarbl dmf</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU</subfield>
+      <subfield code="b">dmf</subfield>
+      <subfield code="2">20120313</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">9DT</subfield>
+      <subfield code="2">20051228</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="994">
+      <subfield code="a">E0</subfield>
+      <subfield code="b">EMU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">BX8443 .M5 1902</subfield>
+      <subfield code="b">unavailable</subfield>
+      <subfield code="d"/>
+      <subfield code="f">20090803</subfield>
+      <subfield code="i">010000878159</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">20040405</subfield>
+      <subfield code="w">LC</subfield>
+    </datafield>
+  </record>
+</collection>

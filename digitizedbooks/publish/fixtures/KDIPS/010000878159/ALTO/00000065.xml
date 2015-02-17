@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0065.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P64" PHYSICAL_IMG_NR="64" HEIGHT="2827" WIDTH="1939" ACCURACY="0.5756095" QUALITY_DETAIL="5 words, 30 chars, 12 with recognition greater than 50% (40.00%)">
+      <TopMargin ID="P64_TM00001" HPOS="0" VPOS="0" WIDTH="1939" HEIGHT="574" />
+      <LeftMargin ID="P64_LM00001" HPOS="0" VPOS="574" WIDTH="386" HEIGHT="1657" />
+      <RightMargin ID="P64_RM00001" HPOS="1514" VPOS="574" WIDTH="425" HEIGHT="1657" />
+      <BottomMargin ID="P64_BM00001" HPOS="0" VPOS="2231" WIDTH="1939" HEIGHT="596" />
+      <PrintSpace ID="P64_PS00001" HPOS="386" VPOS="574" WIDTH="1128" HEIGHT="1657">
+        <Illustration ID="P64_ILL00001" HPOS="386" VPOS="574" WIDTH="1129" HEIGHT="1580" />
+        <TextBlock ID="P64_TB00001" HPOS="495" VPOS="2163" WIDTH="860" HEIGHT="65">
+          <TextLine ID="P64_TL00001" HPOS="503" VPOS="2171" WIDTH="844" HEIGHT="49">
+            <String ID="P64_S00001" HPOS="503" VPOS="2172" WIDTH="168" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="Sunday" WC="0.5683333" CC="600765" />
+            <SP ID="P64_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P64_S00002" HPOS="689" VPOS="2178" WIDTH="165" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="Schooi," WC="0.4857143" CC="6075187" />
+            <SP ID="P64_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P64_S00003" HPOS="878" VPOS="2179" WIDTH="136" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="Union" WC="0.706" CC="07601" />
+            <SP ID="P64_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P64_S00004" HPOS="1033" VPOS="2180" WIDTH="168" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="Engine;" WC="0.45" CC="7060977" />
+            <SP ID="P64_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P64_S00005" HPOS="1218" VPOS="2181" WIDTH="129" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="Room." WC="0.668" CC="60405" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0119.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="5" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P118" PHYSICAL_IMG_NR="118" HEIGHT="3300" WIDTH="2199" ACCURACY="0.435158819" QUALITY_DETAIL="24 words, 124 chars, 34 with recognition greater than 50% (27.42%)">
+      <TopMargin ID="P118_TM00001" HPOS="0" VPOS="0" WIDTH="2199" HEIGHT="460" />
+      <LeftMargin ID="P118_LM00001" HPOS="0" VPOS="460" WIDTH="1916" HEIGHT="2384" />
+      <RightMargin ID="P118_RM00001" HPOS="287" VPOS="460" WIDTH="1912" HEIGHT="2384" />
+      <BottomMargin ID="P118_BM00001" HPOS="0" VPOS="2844" WIDTH="2199" HEIGHT="456" />
+      <PrintSpace ID="P118_PS00001" HPOS="1916" VPOS="460" WIDTH="-1629" HEIGHT="2384">
+        <Illustration ID="P118_ILL00001" HPOS="1916" VPOS="460" WIDTH="-1527" HEIGHT="2385" />
+        <TextBlock ID="P118_TB00001" HPOS="386" VPOS="804" WIDTH="-98" HEIGHT="1693">
+          <TextLine ID="P118_TL00001" HPOS="379" VPOS="811" WIDTH="-39" HEIGHT="1686">
+            <String ID="P118_S00001" HPOS="379" VPOS="811" WIDTH="-25" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="H" WC="0.2" CC="8" />
+            <SP ID="P118_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00002" HPOS="377" VPOS="844" WIDTH="-24" HEIGHT="47" STYLEREFS="StyleId-0" CONTENT="EA" WC="0.25" CC="77" />
+            <SP ID="P118_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00003" HPOS="373" VPOS="1012" WIDTH="-22" HEIGHT="127" STYLEREFS="StyleId-0" CONTENT="ItTEItS" WC="0.22857143" CC="7787876" />
+            <SP ID="P118_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00004" HPOS="371" VPOS="1161" WIDTH="-21" HEIGHT="50" STYLEREFS="StyleId-0" CONTENT="OF" WC="0.3" CC="76" />
+            <SP ID="P118_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00005" HPOS="373" VPOS="1233" WIDTH="-24" HEIGHT="175" STYLEREFS="StyleId-0" CONTENT="VINCENT" WC="0.271428585" CC="55771076" />
+            <SP ID="P118_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00006" HPOS="370" VPOS="1428" WIDTH="-25" HEIGHT="196" STYLEREFS="StyleId-0" CONTENT="COLLYETt," WC="0.382222235" CC="77101064520" />
+            <SP ID="P118_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00007" HPOS="370" VPOS="1645" WIDTH="-23" HEIGHT="112" STYLEREFS="StyleId-0" CONTENT="SUPT." WC="0.464" CC="810800" />
+            <SP ID="P118_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00008" HPOS="368" VPOS="1780" WIDTH="-21" HEIGHT="50" STYLEREFS="StyleId-0" CONTENT="OF" WC="0.25" CC="86" />
+            <SP ID="P118_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00009" HPOS="368" VPOS="1851" WIDTH="-22" HEIGHT="84" STYLEREFS="StyleId-0" CONTENT="THE" WC="0.353333324" CC="657" />
+            <SP ID="P118_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00010" HPOS="368" VPOS="1958" WIDTH="-23" HEIGHT="104" STYLEREFS="StyleId-0" CONTENT="POOR" WC="0.36" CC="80107" />
+            <SP ID="P118_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00011" HPOS="367" VPOS="2084" WIDTH="-22" HEIGHT="50" STYLEREFS="StyleId-0" CONTENT="AT" WC="1" CC="00" />
+            <SP ID="P118_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00012" HPOS="368" VPOS="2155" WIDTH="-27" HEIGHT="237" STYLEREFS="StyleId-0" CONTENT="NEWliEHNE," WC="0.439" CC="7782609770" />
+            <SP ID="P118_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00013" HPOS="367" VPOS="2416" WIDTH="-23" HEIGHT="31" STYLEREFS="StyleId-0" CONTENT="X." WC="0.625" CC="70" />
+            <SP ID="P118_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00014" HPOS="368" VPOS="2468" WIDTH="-25" HEIGHT="29" STYLEREFS="StyleId-0" CONTENT="C." WC="0.63" CC="70" />
+          </TextLine>
+          <TextLine ID="P118_TL00002" HPOS="333" VPOS="1009" WIDTH="-36" HEIGHT="1293">
+            <String ID="P118_S00015" HPOS="333" VPOS="1009" WIDTH="-30" HEIGHT="214" STYLEREFS="StyleId-0" CONTENT="Distributing" WC="0.365" CC="707680886398" />
+            <SP ID="P118_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00016" HPOS="323" VPOS="1236" WIDTH="-19" HEIGHT="151" STYLEREFS="StyleId-0" CONTENT="clothing," WC="0.5966667" CC="707070940" />
+            <SP ID="P118_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00017" HPOS="322" VPOS="1402" WIDTH="-16" HEIGHT="153" STYLEREFS="StyleId-0" CONTENT="captured" WC="0.42375" CC="771000767" />
+            <SP ID="P118_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00018" HPOS="327" VPOS="1571" WIDTH="-20" HEIGHT="79" STYLEREFS="StyleId-0" CONTENT="from" WC="0.8125" CC="0007" />
+            <SP ID="P118_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00019" HPOS="326" VPOS="1666" WIDTH="-20" HEIGHT="52" STYLEREFS="StyleId-0" CONTENT="the" WC="0.366666675" CC="675" />
+            <SP ID="P118_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00020" HPOS="327" VPOS="1731" WIDTH="-25" HEIGHT="228" STYLEREFS="StyleId-0" CONTENT="Confederates," WC="0.316923082" CC="8108101089580080" />
+            <SP ID="P118_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00021" HPOS="324" VPOS="1978" WIDTH="-20" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="to" WC="0.62" CC="07" />
+            <SP ID="P118_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00022" HPOS="323" VPOS="2027" WIDTH="-19" HEIGHT="51" STYLEREFS="StyleId-0" CONTENT="the" WC="0.36" CC="378" />
+            <SP ID="P118_SP00021" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00023" HPOS="325" VPOS="2092" WIDTH="-21" HEIGHT="58" STYLEREFS="StyleId-0" CONTENT="free" WC="0.4225" CC="50710" />
+            <SP ID="P118_SP00022" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P118_S00024" HPOS="320" VPOS="2164" WIDTH="-17" HEIGHT="138" STYLEREFS="StyleId-0" CONTENT="negroes." WC="0.40625" CC="810767070" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

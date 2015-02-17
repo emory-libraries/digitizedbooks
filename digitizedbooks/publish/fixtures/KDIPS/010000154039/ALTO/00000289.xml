@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0285.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P288" PHYSICAL_IMG_NR="288" HEIGHT="3334" WIDTH="2250" ACCURACY="0.459554851" QUALITY_DETAIL="21 words, 124 chars, 47 with recognition greater than 50% (37.90%)">
+      <TopMargin ID="P288_TM00001" HPOS="0" VPOS="0" WIDTH="2250" HEIGHT="488" />
+      <LeftMargin ID="P288_LM00001" HPOS="0" VPOS="488" WIDTH="314" HEIGHT="2334" />
+      <RightMargin ID="P288_RM00001" HPOS="1884" VPOS="488" WIDTH="366" HEIGHT="2334" />
+      <BottomMargin ID="P288_BM00001" HPOS="0" VPOS="2822" WIDTH="2250" HEIGHT="512" />
+      <PrintSpace ID="P288_PS00001" HPOS="314" VPOS="488" WIDTH="1570" HEIGHT="2334">
+        <Illustration ID="P288_ILL00001" HPOS="314" VPOS="488" WIDTH="1573" HEIGHT="2160" />
+        <TextBlock ID="P288_TB00001" HPOS="360" VPOS="2663" WIDTH="1443" HEIGHT="157">
+          <TextLine ID="P288_TL00001" HPOS="849" VPOS="2679" WIDTH="457" HEIGHT="35">
+            <String ID="P288_S00001" HPOS="849" VPOS="2679" WIDTH="191" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="CHANGED" WC="0.487142861" CC="8466810" />
+            <SP ID="P288_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00002" HPOS="1060" VPOS="2682" WIDTH="246" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="CONDITIONS." WC="0.5954546" CC="06670206770" />
+          </TextLine>
+          <TextLine ID="P288_TL00002" HPOS="368" VPOS="2712" WIDTH="1428" HEIGHT="61">
+            <String ID="P288_S00003" HPOS="368" VPOS="2712" WIDTH="63" HEIGHT="27" STYLEREFS="StyleId-0" CONTENT="The" WC="0.69" CC="207" />
+            <SP ID="P288_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00004" HPOS="445" VPOS="2716" WIDTH="200" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="Confederate" WC="0.406363636" CC="7703107102447" />
+            <SP ID="P288_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00005" HPOS="660" VPOS="2720" WIDTH="142" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="Generals" WC="0.3175" CC="80876888" />
+            <SP ID="P288_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00006" HPOS="818" VPOS="2722" WIDTH="131" HEIGHT="27" STYLEREFS="StyleId-0" CONTENT="Edward" WC="0.416666657" CC="0107835" />
+            <SP ID="P288_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00007" HPOS="965" VPOS="2726" WIDTH="144" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="Johnson" WC="0.312857151" CC="10778770" />
+            <SP ID="P288_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00008" HPOS="1124" VPOS="2730" WIDTH="61" HEIGHT="23" STYLEREFS="StyleId-0" CONTENT="and" WC="0.25" CC="777" />
+            <SP ID="P288_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00009" HPOS="1202" VPOS="2730" WIDTH="32" HEIGHT="24" STYLEREFS="StyleId-0" CONTENT="G." WC="0.56" CC="80" />
+            <SP ID="P288_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00010" HPOS="1251" VPOS="2731" WIDTH="38" HEIGHT="25" STYLEREFS="StyleId-0" CONTENT="H." WC="0.615" CC="70" />
+            <SP ID="P288_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00011" HPOS="1305" VPOS="2734" WIDTH="143" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Stewart," WC="0.33" CC="7810741060" />
+            <SP ID="P288_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00012" HPOS="1464" VPOS="2744" WIDTH="35" HEIGHT="20" STYLEREFS="StyleId-0" CONTENT="as" WC="0.385" CC="47" />
+            <SP ID="P288_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00013" HPOS="1518" VPOS="2741" WIDTH="165" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="prisoners," WC="0.473" CC="70075610770" />
+            <SP ID="P288_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00014" HPOS="1701" VPOS="2744" WIDTH="95" HEIGHT="25" STYLEREFS="StyleId-0" CONTENT="under" WC="0.814" CC="05004" />
+          </TextLine>
+          <TextLine ID="P288_TL00003" HPOS="711" VPOS="2765" WIDTH="737" HEIGHT="42">
+            <String ID="P288_S00015" HPOS="711" VPOS="2766" WIDTH="98" HEIGHT="28" STYLEREFS="StyleId-0" CONTENT="Kuard" WC="0.524" CC="711040" />
+            <SP ID="P288_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00016" HPOS="827" VPOS="2768" WIDTH="33" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="of" WC="0.17" CC="106" />
+            <SP ID="P288_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00017" HPOS="879" VPOS="2768" WIDTH="141" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="I'halanx" WC="0.5725" CC="50704663" />
+            <SP ID="P288_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00018" HPOS="1037" VPOS="2771" WIDTH="143" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Soldiers," WC="0.53" CC="50010010663" />
+            <SP ID="P288_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00019" HPOS="1197" VPOS="2774" WIDTH="70" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Ma.v" WC="0.2975" CC="81045" />
+            <SP ID="P288_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00020" HPOS="1284" VPOS="2776" WIDTH="76" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="lUth," WC="0.582" CC="48070" />
+            <SP ID="P288_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P288_S00021" HPOS="1377" VPOS="2780" WIDTH="71" HEIGHT="26" STYLEREFS="StyleId-0" CONTENT="lsc,4." WC="0.321666658" CC="777466" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

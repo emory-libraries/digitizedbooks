@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0341.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P344" PHYSICAL_IMG_NR="344" HEIGHT="3300" WIDTH="2199" ACCURACY="0.416277349" QUALITY_DETAIL="9 words, 49 chars, 14 with recognition greater than 50% (28.57%)">
+      <TopMargin ID="P344_TM00001" HPOS="0" VPOS="0" WIDTH="2199" HEIGHT="892" />
+      <LeftMargin ID="P344_LM00001" HPOS="0" VPOS="892" WIDTH="397" HEIGHT="1496" />
+      <RightMargin ID="P344_RM00001" HPOS="323" VPOS="892" WIDTH="1876" HEIGHT="1496" />
+      <BottomMargin ID="P344_BM00001" HPOS="0" VPOS="2388" WIDTH="2199" HEIGHT="912" />
+      <PrintSpace ID="P344_PS00001" HPOS="397" VPOS="892" WIDTH="-74" HEIGHT="1496">
+        <TextBlock ID="P344_TB00001" HPOS="397" VPOS="892" WIDTH="-74" HEIGHT="1496">
+          <TextLine ID="P344_TL00001" HPOS="380" VPOS="910" WIDTH="-51" HEIGHT="1475">
+            <String ID="P344_S00001" HPOS="380" VPOS="910" WIDTH="-42" HEIGHT="204" STYLEREFS="StyleId-0" CONTENT="Escaping" WC="0.3" CC="77747777" />
+            <SP ID="P344_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00002" HPOS="373" VPOS="1144" WIDTH="-37" HEIGHT="230" STYLEREFS="StyleId-0" CONTENT="Prisoners" WC="0.3288889" CC="776657766" />
+            <SP ID="P344_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00003" HPOS="358" VPOS="1404" WIDTH="-22" HEIGHT="72" STYLEREFS="StyleId-0" CONTENT="fed" WC="0.25" CC="1075" />
+            <SP ID="P344_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00004" HPOS="358" VPOS="1508" WIDTH="-23" HEIGHT="49" STYLEREFS="StyleId-0" CONTENT="by" WC="0.27" CC="76" />
+            <SP ID="P344_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00005" HPOS="370" VPOS="1588" WIDTH="-38" HEIGHT="194" STYLEREFS="StyleId-0" CONTENT="Negroes" WC="0.422857136" CC="46710047" />
+            <SP ID="P344_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00006" HPOS="356" VPOS="1812" WIDTH="-23" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="in" WC="0.605" CC="07" />
+            <SP ID="P344_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00007" HPOS="354" VPOS="1882" WIDTH="-23" HEIGHT="118" STYLEREFS="StyleId-0" CONTENT="their" WC="0.546" CC="034410" />
+            <SP ID="P344_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00008" HPOS="367" VPOS="2029" WIDTH="-36" HEIGHT="198" STYLEREFS="StyleId-0" CONTENT="Master's" WC="0.49375" CC="6510026010" />
+            <SP ID="P344_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P344_S00009" HPOS="367" VPOS="2257" WIDTH="-38" HEIGHT="128" STYLEREFS="StyleId-0" CONTENT="Barn." WC="0.53" CC="100760" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

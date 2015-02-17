@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0043.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="11" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-2" FONTSIZE="9" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-3" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P42" PHYSICAL_IMG_NR="42" HEIGHT="2811" WIDTH="1916" ACCURACY="0.747586846" QUALITY_DETAIL="17 words, 91 chars, 78 with recognition greater than 50% (85.71%)">
+      <TopMargin ID="P42_TM00001" HPOS="0" VPOS="0" WIDTH="1916" HEIGHT="237" />
+      <LeftMargin ID="P42_LM00001" HPOS="0" VPOS="237" WIDTH="284" HEIGHT="267" />
+      <RightMargin ID="P42_RM00001" HPOS="1620" VPOS="237" WIDTH="296" HEIGHT="267" />
+      <BottomMargin ID="P42_BM00001" HPOS="0" VPOS="504" WIDTH="1916" HEIGHT="2307" />
+      <PrintSpace ID="P42_PS00001" HPOS="284" VPOS="237" WIDTH="1336" HEIGHT="267">
+        <TextBlock ID="P42_TB00001" HPOS="621" VPOS="248" WIDTH="659" HEIGHT="54">
+          <TextLine ID="P42_TL00001" HPOS="629" VPOS="256" WIDTH="643" HEIGHT="38">
+            <String ID="P42_S00001" HPOS="629" VPOS="256" WIDTH="249" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="AFRICAN" WC="0.7871429" CC="3540010" />
+            <SP ID="P42_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00002" HPOS="923" VPOS="258" WIDTH="349" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="METHODISM." WC="0.703" CC="0754330204" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P42_TB00002" HPOS="1545" VPOS="244" WIDTH="70" HEIGHT="59">
+          <TextLine ID="P42_TL00002" HPOS="1553" VPOS="252" WIDTH="54" HEIGHT="43">
+            <String ID="P42_S00003" HPOS="1553" VPOS="252" WIDTH="54" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="41" WC="0.795" CC="40" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P42_TB00003" HPOS="283" VPOS="362" WIDTH="1337" HEIGHT="142">
+          <TextLine ID="P42_TL00003" HPOS="291" VPOS="370" WIDTH="1321" HEIGHT="58">
+            <String ID="P42_S00004" HPOS="291" VPOS="370" WIDTH="148" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="record" WC="0.835" CC="300600" />
+            <SP ID="P42_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00005" HPOS="462" VPOS="371" WIDTH="47" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="of" WC="0.76" CC="40" />
+            <SP ID="P42_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00006" HPOS="531" VPOS="371" WIDTH="233" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="$1,283.55," WC="0.627" CC="6043440363" />
+            <SP ID="P42_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00007" HPOS="789" VPOS="374" WIDTH="101" HEIGHT="48" STYLEREFS="StyleId-2" CONTENT="with" WC="0.5675" CC="3444" />
+            <SP ID="P42_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00008" HPOS="919" VPOS="386" WIDTH="75" HEIGHT="39" STYLEREFS="StyleId-3" CONTENT="134" WC="0.446666658" CC="474" />
+            <SP ID="P42_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00009" HPOS="1016" VPOS="376" WIDTH="217" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="churches," WC="0.7033333" CC="344006304" />
+            <SP ID="P42_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00010" HPOS="1258" VPOS="379" WIDTH="153" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="valued" WC="0.755" CC="002704" />
+            <SP ID="P42_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00011" HPOS="1435" VPOS="387" WIDTH="41" HEIGHT="38" STYLEREFS="StyleId-2" CONTENT="at" WC="1" CC="00" />
+            <SP ID="P42_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00012" HPOS="1499" VPOS="379" WIDTH="114" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="$63,-" WC="0.746" CC="06024" />
+          </TextLine>
+          <TextLine ID="P42_TL00004" HPOS="291" VPOS="436" WIDTH="678" HEIGHT="57">
+            <String ID="P42_S00013" HPOS="291" VPOS="449" WIDTH="94" HEIGHT="38" STYLEREFS="StyleId-2" CONTENT="000," WC="0.805" CC="4002" />
+            <SP ID="P42_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00014" HPOS="406" VPOS="438" WIDTH="83" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="and" WC="0.75666666" CC="070" />
+            <SP ID="P42_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00015" HPOS="509" VPOS="449" WIDTH="78" HEIGHT="39" STYLEREFS="StyleId-2" CONTENT="233" WC="0.7366667" CC="502" />
+            <SP ID="P42_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00016" HPOS="609" VPOS="439" WIDTH="105" HEIGHT="49" STYLEREFS="StyleId-2" CONTENT="local" WC="0.824" CC="04004" />
+            <SP ID="P42_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P42_S00017" HPOS="734" VPOS="439" WIDTH="235" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="preachers." WC="0.861" CC="2208000000" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

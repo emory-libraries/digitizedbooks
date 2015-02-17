@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0227.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P230" PHYSICAL_IMG_NR="230" HEIGHT="3299" WIDTH="2199" ACCURACY="0.6882699" QUALITY_DETAIL="5 words, 33 chars, 17 with recognition greater than 50% (51.52%)">
+      <TopMargin ID="P230_TM00001" HPOS="0" VPOS="0" WIDTH="2199" HEIGHT="1191" />
+      <LeftMargin ID="P230_LM00001" HPOS="0" VPOS="1191" WIDTH="368" HEIGHT="939" />
+      <RightMargin ID="P230_RM00001" HPOS="309" VPOS="1191" WIDTH="1890" HEIGHT="939" />
+      <BottomMargin ID="P230_BM00001" HPOS="0" VPOS="2130" WIDTH="2199" HEIGHT="1169" />
+      <PrintSpace ID="P230_PS00001" HPOS="368" VPOS="1191" WIDTH="-59" HEIGHT="939">
+        <TextBlock ID="P230_TB00001" HPOS="368" VPOS="1191" WIDTH="-59" HEIGHT="939">
+          <TextLine ID="P230_TL00001" HPOS="360" VPOS="1199" WIDTH="-43" HEIGHT="923">
+            <String ID="P230_S00001" HPOS="360" VPOS="1199" WIDTH="-29" HEIGHT="195" STYLEREFS="StyleId-0" CONTENT="PHALANX" WC="0.421428561" CC="6066567" />
+            <SP ID="P230_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P230_S00002" HPOS="354" VPOS="1416" WIDTH="-28" HEIGHT="194" STYLEREFS="StyleId-0" CONTENT="SOLDIERS" WC="0.675" CC="17060037" />
+            <SP ID="P230_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P230_S00003" HPOS="352" VPOS="1630" WIDTH="-28" HEIGHT="228" STYLEREFS="StyleId-0" CONTENT="REPELLING" WC="0.567777753" CC="667000377" />
+            <SP ID="P230_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P230_S00004" HPOS="347" VPOS="1882" WIDTH="-25" HEIGHT="48" STYLEREFS="StyleId-0" CONTENT="AN" WC="1" CC="00" />
+            <SP ID="P230_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P230_S00005" HPOS="345" VPOS="1953" WIDTH="-28" HEIGHT="169" STYLEREFS="StyleId-0" CONTENT="ATTACK." WC="0.7771429" CC="0100760" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

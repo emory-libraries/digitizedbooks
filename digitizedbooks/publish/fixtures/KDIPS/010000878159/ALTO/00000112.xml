@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0112.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P111" PHYSICAL_IMG_NR="111" HEIGHT="1916" WIDTH="2811" ACCURACY="0.543104768" QUALITY_DETAIL="10 words, 52 chars, 19 with recognition greater than 50% (36.54%)">
+      <TopMargin ID="P111_TM00001" HPOS="0" VPOS="0" WIDTH="2811" HEIGHT="2500" />
+      <LeftMargin ID="P111_LM00001" HPOS="0" VPOS="2500" WIDTH="308" HEIGHT="-2198" />
+      <RightMargin ID="P111_RM00001" HPOS="1623" VPOS="2500" WIDTH="1188" HEIGHT="-2198" />
+      <BottomMargin ID="P111_BM00001" HPOS="0" VPOS="302" WIDTH="2811" HEIGHT="1614" />
+      <PrintSpace ID="P111_PS00001" HPOS="308" VPOS="2500" WIDTH="1315" HEIGHT="-2198">
+        <Illustration ID="P111_ILL00001" HPOS="308" VPOS="2500" WIDTH="1230" HEIGHT="-2198" />
+        <TextBlock ID="P111_TB00001" HPOS="1578" VPOS="2158" WIDTH="47" HEIGHT="-1533">
+          <TextLine ID="P111_TL00001" HPOS="1586" VPOS="2150" WIDTH="30" HEIGHT="-1516">
+            <String ID="P111_S00001" HPOS="1591" VPOS="1971" WIDTH="29" HEIGHT="150" STYLEREFS="StyleId-0" CONTENT="Alabama" WC="0.584285736" CC="1936062" />
+            <SP ID="P111_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00002" HPOS="1590" VPOS="1673" WIDTH="29" HEIGHT="448" STYLEREFS="StyleId-0" CONTENT="Conference" WC="0.386" CC="7057667576" />
+            <SP ID="P111_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00003" HPOS="1587" VPOS="1541" WIDTH="29" HEIGHT="580" STYLEREFS="StyleId-0" CONTENT="Held" WC="0.31" CC="7576" />
+            <SP ID="P111_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00004" HPOS="1594" VPOS="1470" WIDTH="22" HEIGHT="651" STYLEREFS="StyleId-0" CONTENT="at" WC="0.33" CC="57" />
+            <SP ID="P111_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00005" HPOS="1584" VPOS="1335" WIDTH="29" HEIGHT="786" STYLEREFS="StyleId-0" CONTENT="West" WC="0.6775" CC="5007" />
+            <SP ID="P111_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00006" HPOS="1584" VPOS="1158" WIDTH="30" HEIGHT="963" STYLEREFS="StyleId-0" CONTENT="Point," WC="0.456666678" CC="2571006" />
+            <SP ID="P111_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00007" HPOS="1581" VPOS="1052" WIDTH="29" HEIGHT="1069" STYLEREFS="StyleId-0" CONTENT="Ga.." WC="0.8825" CC="0040" />
+            <SP ID="P111_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00008" HPOS="1580" VPOS="859" WIDTH="30" HEIGHT="1262" STYLEREFS="StyleId-0" CONTENT="January" WC="0.5114286" CC="5055566" />
+            <SP ID="P111_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00009" HPOS="1581" VPOS="772" WIDTH="35" HEIGHT="1349" STYLEREFS="StyleId-0" CONTENT="11," WC="0.7266667" CC="340" />
+            <SP ID="P111_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P111_S00010" HPOS="1578" VPOS="641" WIDTH="31" HEIGHT="1480" STYLEREFS="StyleId-0" CONTENT="1899." WC="0.566" CC="07770" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

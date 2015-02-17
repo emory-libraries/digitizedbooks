@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0108.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P107" PHYSICAL_IMG_NR="107" HEIGHT="2800" WIDTH="1900" ACCURACY="0.6910797" QUALITY_DETAIL="12 words, 51 chars, 34 with recognition greater than 50% (66.67%)">
+      <TopMargin ID="P107_TM00001" HPOS="0" VPOS="0" WIDTH="1900" HEIGHT="226" />
+      <LeftMargin ID="P107_LM00001" HPOS="0" VPOS="226" WIDTH="233" HEIGHT="2354" />
+      <RightMargin ID="P107_RM00001" HPOS="1666" VPOS="226" WIDTH="234" HEIGHT="2354" />
+      <BottomMargin ID="P107_BM00001" HPOS="0" VPOS="2580" WIDTH="1900" HEIGHT="220" />
+      <PrintSpace ID="P107_PS00001" HPOS="233" VPOS="226" WIDTH="1433" HEIGHT="2354">
+        <Illustration ID="P107_ILL00001" HPOS="233" VPOS="226" WIDTH="1432" HEIGHT="2212" />
+        <TextBlock ID="P107_TB00001" HPOS="494" VPOS="2473" WIDTH="923" HEIGHT="109">
+          <TextLine ID="P107_TL00001" HPOS="608" VPOS="2485" WIDTH="687" HEIGHT="35">
+            <String ID="P107_S00001" HPOS="608" VPOS="2485" WIDTH="109" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="REV." WC="0.53" CC="5453" />
+            <SP ID="P107_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00002" HPOS="735" VPOS="2484" WIDTH="42" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="E." WC="0.46" CC="64" />
+            <SP ID="P107_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00003" HPOS="796" VPOS="2484" WIDTH="58" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="W." WC="0.695" CC="60" />
+            <SP ID="P107_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00004" HPOS="887" VPOS="2483" WIDTH="276" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="LAMPTON," WC="0.62875" CC="73220742" />
+            <SP ID="P107_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00005" HPOS="1190" VPOS="2485" WIDTH="42" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="D." WC="0.705" CC="23" />
+            <SP ID="P107_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00006" HPOS="1251" VPOS="2484" WIDTH="44" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="D." WC="0.585" CC="80" />
+          </TextLine>
+          <TextLine ID="P107_TL00002" HPOS="503" VPOS="2540" WIDTH="906" HEIGHT="34">
+            <String ID="P107_S00007" HPOS="503" VPOS="2540" WIDTH="235" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="Financial" WC="0.8755556" CC="541000000" />
+            <SP ID="P107_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00008" HPOS="753" VPOS="2540" WIDTH="238" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="Secretary" WC="0.5222222" CC="571447066" />
+            <SP ID="P107_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00009" HPOS="1020" VPOS="2537" WIDTH="41" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="A." WC="0.74" CC="50" />
+            <SP ID="P107_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00010" HPOS="1085" VPOS="2540" WIDTH="51" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="M." WC="0.85" CC="30" />
+            <SP ID="P107_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00011" HPOS="1158" VPOS="2539" WIDTH="40" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="E." WC="1" CC="00" />
+            <SP ID="P107_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P107_S00012" HPOS="1219" VPOS="2541" WIDTH="190" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="Church." WC="0.7014286" CC="7000552" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

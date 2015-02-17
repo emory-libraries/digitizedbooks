@@ -1,0 +1,164 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345nam a2200469Ia 4500</leader>
+    <controlfield tag="001">003154316</controlfield>
+    <controlfield tag="005">20141105131846.0</controlfield>
+    <controlfield tag="008">120830s1904    ohuac         100 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(OCoLC)808728352</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">AJ#</subfield>
+      <subfield code="c">AJ#</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="043">
+      <subfield code="a">n-us-oh</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">AJ#A</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="110">
+      <subfield code="a">Wilberforce University.</subfield>
+      <subfield code="0">EMU10000319698</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Tenth quadrennial report of Wilberforce University :</subfield>
+      <subfield code="b">to the General Conference of the A.M.E. Church, assembled in the twenty-second quadrennial session at Chicago, Illinois, May 2, 1904.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="3" tag="264">
+      <subfield code="a">Xenia, O. :</subfield>
+      <subfield code="b">W.B. Chew.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">[Wilberforce, Ohio] :</subfield>
+      <subfield code="b">[Wilberforce University],</subfield>
+      <subfield code="c">[1904]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">32 pages :</subfield>
+      <subfield code="b">illustrations, portraits ;</subfield>
+      <subfield code="c">22 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">will digitize</subfield>
+      <subfield code="c">20141105</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-S</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">will digitize</subfield>
+      <subfield code="c">20141105</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-S</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Cover title.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Report of the president / Joshua H. Jones -- Report of the secretary / Horace Talbert.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library copy from the collection of Charles Simpson Butcher.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">Wilberforce University.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">Wilberforce University</subfield>
+      <subfield code="x">Finance.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">African American universities and colleges</subfield>
+      <subfield code="z">Ohio</subfield>
+      <subfield code="z">Wilberforce.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Universities and colleges</subfield>
+      <subfield code="z">Ohio</subfield>
+      <subfield code="z">Wilberforce.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American author.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American pamphlet.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American publisher.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Jones, Joshua H.</subfield>
+      <subfield code="0">EMU10001679849</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Talbert, Horace,</subfield>
+      <subfield code="d">1853-1917.</subfield>
+      <subfield code="0">EMU10001051283</subfield>
+    </datafield>
+    <datafield ind1="2" ind2=" " tag="710">
+      <subfield code="a">African Methodist Episcopal Church.</subfield>
+      <subfield code="b">General Conference</subfield>
+      <subfield code="n">(22nd :</subfield>
+      <subfield code="d">1904 :</subfield>
+      <subfield code="c">Chicago, Ill.)</subfield>
+      <subfield code="0">EMU10001254921</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Butcher, Charles Simpson,</subfield>
+      <subfield code="e">collector.</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU</subfield>
+      <subfield code="b">dmf</subfield>
+      <subfield code="2">20120830</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="994">
+      <subfield code="a">C0</subfield>
+      <subfield code="b">AJ#</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">2012 1573</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">010002643672</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Book Stacks</subfield>
+      <subfield code="m">Manuscript, Archives, &amp; Rare Book Library (MARBL)</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">20120830</subfield>
+      <subfield code="w">OTHER</subfield>
+    </datafield>
+  </record>
+</collection>

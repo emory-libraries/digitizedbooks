@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0198.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P197" PHYSICAL_IMG_NR="197" HEIGHT="2810" WIDTH="1914" ACCURACY="0.7337031" QUALITY_DETAIL="16 words, 73 chars, 50 with recognition greater than 50% (68.49%)">
+      <TopMargin ID="P197_TM00001" HPOS="0" VPOS="0" WIDTH="1914" HEIGHT="517" />
+      <LeftMargin ID="P197_LM00001" HPOS="0" VPOS="517" WIDTH="382" HEIGHT="1777" />
+      <RightMargin ID="P197_RM00001" HPOS="1526" VPOS="517" WIDTH="388" HEIGHT="1777" />
+      <BottomMargin ID="P197_BM00001" HPOS="0" VPOS="2294" WIDTH="1914" HEIGHT="516" />
+      <PrintSpace ID="P197_PS00001" HPOS="382" VPOS="517" WIDTH="1144" HEIGHT="1777">
+        <Illustration ID="P197_ILL00001" HPOS="382" VPOS="517" WIDTH="1145" HEIGHT="1584" />
+        <TextBlock ID="P197_TB00001" HPOS="443" VPOS="2143" WIDTH="1044" HEIGHT="151">
+          <TextLine ID="P197_TL00001" HPOS="639" VPOS="2152" WIDTH="649" HEIGHT="46">
+            <String ID="P197_S00001" HPOS="639" VPOS="2155" WIDTH="108" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="REV." WC="0.7875" CC="7100" />
+            <SP ID="P197_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00002" HPOS="766" VPOS="2155" WIDTH="37" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="J." WC="0.825" CC="03" />
+            <SP ID="P197_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00003" HPOS="826" VPOS="2153" WIDTH="43" HEIGHT="43" STYLEREFS="StyleId-0" CONTENT="Q." WC="0.675" CC="60" />
+            <SP ID="P197_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00004" HPOS="890" VPOS="2154" WIDTH="251" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="JOHNSON," WC="0.685" CC="35730023" />
+            <SP ID="P197_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00005" HPOS="1161" VPOS="2157" WIDTH="40" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="D." WC="0.905" CC="10" />
+            <SP ID="P197_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00006" HPOS="1223" VPOS="2158" WIDTH="65" HEIGHT="38" STYLEREFS="StyleId-0" CONTENT="D.," WC="0.9033333" CC="002" />
+          </TextLine>
+          <TextLine ID="P197_TL00002" HPOS="451" VPOS="2198" WIDTH="1028" HEIGHT="45">
+            <String ID="P197_S00007" HPOS="451" VPOS="2199" WIDTH="207" HEIGHT="34" STYLEREFS="StyleId-0" CONTENT="Formerly" WC="0.70875" CC="22560006" />
+            <SP ID="P197_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00008" HPOS="674" VPOS="2200" WIDTH="41" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="of" WC="0.49" CC="55" />
+            <SP ID="P197_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00009" HPOS="728" VPOS="2199" WIDTH="211" HEIGHT="36" STYLEREFS="StyleId-0" CONTENT="Alabama," WC="0.53" CC="07777800" />
+            <SP ID="P197_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00010" HPOS="957" VPOS="2210" WIDTH="91" HEIGHT="25" STYLEREFS="StyleId-0" CONTENT="now" WC="0.393333346" CC="746" />
+            <SP ID="P197_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00011" HPOS="1063" VPOS="2202" WIDTH="149" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="Pastor" WC="0.913333356" CC="050000" />
+            <SP ID="P197_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00012" HPOS="1225" VPOS="2203" WIDTH="42" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="of" WC="0.71" CC="05" />
+            <SP ID="P197_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00013" HPOS="1285" VPOS="2202" WIDTH="55" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="St." WC="1" CC="000" />
+            <SP ID="P197_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00014" HPOS="1361" VPOS="2203" WIDTH="118" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="Paul," WC="0.75" CC="00560" />
+          </TextLine>
+          <TextLine ID="P197_TL00003" HPOS="778" VPOS="2242" WIDTH="375" HEIGHT="41">
+            <String ID="P197_S00015" HPOS="778" VPOS="2242" WIDTH="225" HEIGHT="40" STYLEREFS="StyleId-0" CONTENT="Nashville," WC="0.767" CC="0205416200" />
+            <SP ID="P197_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P197_S00016" HPOS="1022" VPOS="2243" WIDTH="131" HEIGHT="39" STYLEREFS="StyleId-0" CONTENT="Tenn." WC="0.696" CC="00743" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

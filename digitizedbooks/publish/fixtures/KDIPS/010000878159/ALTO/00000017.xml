@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0017.tif</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="8" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-1" FONTSIZE="11" FONTFAMILY="Times New Roman" />
+    <TextStyle ID="StyleId-2" FONTSIZE="9" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P16" PHYSICAL_IMG_NR="16" HEIGHT="2826" WIDTH="1939" ACCURACY="0.6830763" QUALITY_DETAIL="27 words, 144 chars, 94 with recognition greater than 50% (65.28%)">
+      <TopMargin ID="P16_TM00001" HPOS="0" VPOS="0" WIDTH="1939" HEIGHT="232" />
+      <LeftMargin ID="P16_LM00001" HPOS="0" VPOS="232" WIDTH="282" HEIGHT="482" />
+      <RightMargin ID="P16_RM00001" HPOS="1623" VPOS="232" WIDTH="316" HEIGHT="482" />
+      <BottomMargin ID="P16_BM00001" HPOS="0" VPOS="714" WIDTH="1939" HEIGHT="2112" />
+      <PrintSpace ID="P16_PS00001" HPOS="282" VPOS="232" WIDTH="1341" HEIGHT="482">
+        <TextBlock ID="P16_TB00001" HPOS="674" VPOS="246" WIDTH="581" HEIGHT="60">
+          <TextLine ID="P16_TL00001" HPOS="682" VPOS="254" WIDTH="565" HEIGHT="44">
+            <String ID="P16_S00001" HPOS="682" VPOS="255" WIDTH="337" HEIGHT="37" STYLEREFS="StyleId-0" CONTENT="PREFATORY" WC="0.567777753" CC="167505570" />
+            <SP ID="P16_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00002" HPOS="1053" VPOS="262" WIDTH="194" HEIGHT="35" STYLEREFS="StyleId-0" CONTENT="NOTES." WC="0.821666658" CC="600400" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P16_TB00002" HPOS="1554" VPOS="249" WIDTH="72" HEIGHT="60">
+          <TextLine ID="P16_TL00002" HPOS="1562" VPOS="257" WIDTH="56" HEIGHT="44">
+            <String ID="P16_S00003" HPOS="1562" VPOS="258" WIDTH="56" HEIGHT="43" STYLEREFS="StyleId-1" CONTENT="15" WC="1" CC="00" />
+          </TextLine>
+        </TextBlock>
+        <TextBlock ID="P16_TB00003" HPOS="280" VPOS="358" WIDTH="1343" HEIGHT="356">
+          <TextLine ID="P16_TL00003" HPOS="289" VPOS="366" WIDTH="1330" HEIGHT="73">
+            <String ID="P16_S00004" HPOS="289" VPOS="367" WIDTH="72" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="the" WC="0.9533333" CC="000" />
+            <SP ID="P16_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00005" HPOS="384" VPOS="368" WIDTH="179" HEIGHT="43" STYLEREFS="StyleId-2" CONTENT="African" WC="0.7842857" CC="0344030" />
+            <SP ID="P16_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00006" HPOS="588" VPOS="371" WIDTH="236" HEIGHT="44" STYLEREFS="StyleId-2" CONTENT="Methodist" WC="0.6433333" CC="0006710601" />
+            <SP ID="P16_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00007" HPOS="846" VPOS="373" WIDTH="227" HEIGHT="58" STYLEREFS="StyleId-2" CONTENT="Episcopal" WC="0.6522222" CC="605075303" />
+            <SP ID="P16_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00008" HPOS="1098" VPOS="380" WIDTH="170" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="Church" WC="0.655" CC="436006" />
+            <SP ID="P16_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00009" HPOS="1291" VPOS="384" WIDTH="42" HEIGHT="47" STYLEREFS="StyleId-2" CONTENT="in" WC="0.66" CC="60" />
+            <SP ID="P16_SP00007" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00010" HPOS="1355" VPOS="385" WIDTH="264" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="Alabama—" WC="0.68" CC="02810409" />
+          </TextLine>
+          <TextLine ID="P16_TL00004" HPOS="289" VPOS="433" WIDTH="631" HEIGHT="60">
+            <String ID="P16_S00011" HPOS="289" VPOS="433" WIDTH="70" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="the" WC="0.673333347" CC="450" />
+            <SP ID="P16_SP00008" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00012" HPOS="387" VPOS="435" WIDTH="99" HEIGHT="41" STYLEREFS="StyleId-2" CONTENT="land" WC="0.6775" CC="7320" />
+            <SP ID="P16_SP00009" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00013" HPOS="511" VPOS="437" WIDTH="142" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="where" WC="0.888" CC="50000" />
+            <SP ID="P16_SP00010" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00014" HPOS="679" VPOS="440" WIDTH="91" HEIGHT="42" STYLEREFS="StyleId-2" CONTENT="&quot;we" WC="0.52" CC="770" />
+            <SP ID="P16_SP00011" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00015" HPOS="797" VPOS="444" WIDTH="124" HEIGHT="48" STYLEREFS="StyleId-2" CONTENT="rest,&quot;" WC="0.891666651" CC="000060" />
+          </TextLine>
+          <TextLine ID="P16_TL00005" HPOS="728" VPOS="508" WIDTH="504" HEIGHT="62">
+            <String ID="P16_S00016" HPOS="728" VPOS="508" WIDTH="18" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="I" WC="0.44" CC="5" />
+            <SP ID="P16_SP00012" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00017" HPOS="767" VPOS="523" WIDTH="68" HEIGHT="28" STYLEREFS="StyleId-2" CONTENT="am" WC="0.61" CC="70" />
+            <SP ID="P16_SP00013" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00018" HPOS="855" VPOS="512" WIDTH="218" HEIGHT="56" STYLEREFS="StyleId-2" CONTENT="faithfully" WC="0.76" CC="1030017604" />
+            <SP ID="P16_SP00014" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00019" HPOS="1092" VPOS="530" WIDTH="140" HEIGHT="38" STYLEREFS="StyleId-2" CONTENT="yours," WC="0.831666648" CC="600102" />
+          </TextLine>
+          <TextLine ID="P16_TL00006" HPOS="924" VPOS="579" WIDTH="633" HEIGHT="52">
+            <String ID="P16_S00020" HPOS="924" VPOS="579" WIDTH="245" HEIGHT="46" STYLEREFS="StyleId-0" CONTENT="Winfisld" WC="0.40375" CC="05684867" />
+            <SP ID="P16_SP00015" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00021" HPOS="1195" VPOS="583" WIDTH="156" HEIGHT="44" STYLEREFS="StyleId-0" CONTENT="Henri" WC="0.532" CC="78402" />
+            <SP ID="P16_SP00016" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00022" HPOS="1377" VPOS="588" WIDTH="180" HEIGHT="42" STYLEREFS="StyleId-0" CONTENT="Mixon." WC="0.76" CC="000634" />
+          </TextLine>
+          <TextLine ID="P16_TL00007" HPOS="284" VPOS="635" WIDTH="1328" HEIGHT="71">
+            <String ID="P16_S00023" HPOS="284" VPOS="635" WIDTH="194" HEIGHT="55" STYLEREFS="StyleId-2" CONTENT="January" WC="0.7228571" CC="3080610" />
+            <SP ID="P16_SP00017" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00024" HPOS="498" VPOS="639" WIDTH="38" HEIGHT="51" STYLEREFS="StyleId-2" CONTENT="8," WC="0.81" CC="03" />
+            <SP ID="P16_SP00018" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00025" HPOS="563" VPOS="652" WIDTH="117" HEIGHT="40" STYLEREFS="StyleId-2" CONTENT="1902." WC="0.468" CC="76506" />
+            <SP ID="P16_SP00019" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00026" HPOS="1344" VPOS="652" WIDTH="150" HEIGHT="52" STYLEREFS="StyleId-2" CONTENT="Selma," WC="0.5416667" CC="643704" />
+            <SP ID="P16_SP00020" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P16_S00027" HPOS="1518" VPOS="658" WIDTH="94" HEIGHT="46" STYLEREFS="StyleId-2" CONTENT="Ala." WC="0.495" CC="0684" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

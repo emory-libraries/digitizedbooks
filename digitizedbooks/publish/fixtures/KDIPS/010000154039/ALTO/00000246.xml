@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0242.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="6" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P245" PHYSICAL_IMG_NR="245" HEIGHT="2229" WIDTH="3319" ACCURACY="0.3561735" QUALITY_DETAIL="7 words, 42 chars, 7 with recognition greater than 50% (16.67%)">
+      <TopMargin ID="P245_TM00001" HPOS="0" VPOS="0" WIDTH="3319" HEIGHT="2260" />
+      <LeftMargin ID="P245_LM00001" HPOS="0" VPOS="2260" WIDTH="1909" HEIGHT="-1196" />
+      <RightMargin ID="P245_RM00001" HPOS="1950" VPOS="2260" WIDTH="1369" HEIGHT="-1196" />
+      <BottomMargin ID="P245_BM00001" HPOS="0" VPOS="1064" WIDTH="3319" HEIGHT="1165" />
+      <PrintSpace ID="P245_PS00001" HPOS="1909" VPOS="2260" WIDTH="41" HEIGHT="-1196">
+        <TextBlock ID="P245_TB00001" HPOS="1909" VPOS="2260" WIDTH="41" HEIGHT="-1196">
+          <TextLine ID="P245_TL00001" HPOS="1917" VPOS="2251" WIDTH="26" HEIGHT="-1179">
+            <String ID="P245_S00001" HPOS="1927" VPOS="2080" WIDTH="21" HEIGHT="147" STYLEREFS="StyleId-0" CONTENT="PHALANX" WC="0.425714284" CC="7677750" />
+            <SP ID="P245_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00002" HPOS="1925" VPOS="1857" WIDTH="21" HEIGHT="370" STYLEREFS="StyleId-0" CONTENT="SOLDIERS" WC="0.325" CC="78777077" />
+            <SP ID="P245_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00003" HPOS="1922" VPOS="1649" WIDTH="19" HEIGHT="578" STYLEREFS="StyleId-0" CONTENT="BRINGING" WC="0.35375" CC="773771107" />
+            <SP ID="P245_SP00003" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00004" HPOS="1917" VPOS="1588" WIDTH="24" HEIGHT="639" STYLEREFS="StyleId-0" CONTENT="IN" WC="0.22" CC="69" />
+            <SP ID="P245_SP00004" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00005" HPOS="1918" VPOS="1545" WIDTH="21" HEIGHT="682" STYLEREFS="StyleId-0" CONTENT="A" WC="0.37" CC="6" />
+            <SP ID="P245_SP00005" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00006" HPOS="1917" VPOS="1314" WIDTH="20" HEIGHT="913" STYLEREFS="StyleId-0" CONTENT="CAPTURED" WC="0.25" CC="7105661067" />
+            <SP ID="P245_SP00006" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P245_S00007" HPOS="1913" VPOS="1079" WIDTH="21" HEIGHT="1148" STYLEREFS="StyleId-0" CONTENT="BATTERY," WC="0.54875" CC="80500767" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

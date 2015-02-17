@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/standards/alto/ns-v2# http://www.loc.gov/standards/alto/alto-v2.0.xsd" xmlns="http://www.loc.gov/standards/alto/ns-v2#">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>0184.jpg</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+          <applicationDescription>Abbyy10 OCR Engine</applicationDescription>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="7" FONTFAMILY="Times New Roman" />
+  </Styles>
+  <Layout>
+    <Page ID="P183" PHYSICAL_IMG_NR="183" HEIGHT="2819" WIDTH="1929" ACCURACY="0.6081111" QUALITY_DETAIL="3 words, 17 chars, 8 with recognition greater than 50% (47.06%)">
+      <TopMargin ID="P183_TM00001" HPOS="0" VPOS="0" WIDTH="1929" HEIGHT="652" />
+      <LeftMargin ID="P183_LM00001" HPOS="0" VPOS="652" WIDTH="439" HEIGHT="1510" />
+      <RightMargin ID="P183_RM00001" HPOS="1454" VPOS="652" WIDTH="475" HEIGHT="1510" />
+      <BottomMargin ID="P183_BM00001" HPOS="0" VPOS="2162" WIDTH="1929" HEIGHT="657" />
+      <PrintSpace ID="P183_PS00001" HPOS="439" VPOS="652" WIDTH="1015" HEIGHT="1510">
+        <Illustration ID="P183_ILL00001" HPOS="439" VPOS="652" WIDTH="1016" HEIGHT="1419" />
+        <TextBlock ID="P183_TB00001" HPOS="674" VPOS="2104" WIDTH="519" HEIGHT="55">
+          <TextLine ID="P183_TL00001" HPOS="683" VPOS="2113" WIDTH="502" HEIGHT="38">
+            <String ID="P183_S00001" HPOS="683" VPOS="2114" WIDTH="153" HEIGHT="30" STYLEREFS="StyleId-0" CONTENT="Bishop" WC="0.585" CC="176306" />
+            <SP ID="P183_SP00001" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P183_S00002" HPOS="857" VPOS="2116" WIDTH="181" HEIGHT="32" STYLEREFS="StyleId-0" CONTENT="Auen's" WC="0.623333335" CC="0107500" />
+            <SP ID="P183_SP00002" WIDTH="0" HPOS="0" VPOS="0" />
+            <String ID="P183_S00003" HPOS="1059" VPOS="2117" WIDTH="126" HEIGHT="33" STYLEREFS="StyleId-0" CONTENT="Wife." WC="0.616" CC="05670" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>
