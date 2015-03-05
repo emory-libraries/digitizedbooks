@@ -16,12 +16,13 @@
 
 from datetime import datetime
 import requests
-import os, re, shutil
+import os, re, shutil, sys
 from hashlib import md5
 
 from django.conf import settings
 from django.db import models
 from django.core.mail import send_mail
+from background_task import background
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
@@ -70,7 +71,7 @@ def get_rights(self):
 
         if not bib_rec.tag_583_5:
             reason = 'No 583 tag in marc record.'
-            error = ValidationError(kdip=self, error=reason, error_type="Rights")
+            error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
             error.save()
             #return 'No 583 tag in marc record.'
 
@@ -139,14 +140,14 @@ def get_rights(self):
 
     except Exception as e:
         reason = 'Could not determine rights for %s' % (self.kdip_id)
-        error = ValidationError(kdip=self, error=reason, error_type="Rights")
+        error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
         #return reason
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
         #return 'public'
     else:
-        error = ValidationError(kdip=self, error=reason, error_type="Rights")
+        error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
         #return reason
 
@@ -206,15 +207,16 @@ def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     yaml_data = {}
 
     image = ''
+    logger.info('Checking %s' % tiff_file)
     try:
         image = Image.open(tiff_file)
 
-        tags = image.tag 
+        tags = image.tag
         for tif_tag in tif_tags:
             valid = tags.has_key(tif_tags[tif_tag])
             if valid is False:
                 found[tif_tag] = False
-    
+
             if valid is True:
                 found[tif_tag] = tags.get(tif_tags[tif_tag])
 
@@ -223,137 +225,171 @@ def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
         yaml_data['capture_date'] = dt.isoformat('T')
         with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
             outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
-    
+        logger.info('Yaml written')
+
         ## START REAL VALIDATION
         if found['ImageWidth'] <= 0:
+            logger.error('Image Width = %s for %s' %(found['ImageWidth'], tiff_file))
             status = 'Invalid value for ImageWidth in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('Image width for %s is %s' % (tiff_file, found['ImageWidth']))
+
         if found['ImageLength']  <= 0:
+            logger.error('ImageLength = %s for %s' %(found['ImageLength'], tiff_file))
             status = 'Invalid value for ImageLength in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('ImageLength = %s for %s' %(found['ImageLength'], tiff_file))
+
         if not found['Make']:
+            logger.error('Make = %s for %s' %(found['Make'], tiff_file))
             status = 'Invalid value for Make in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('Make = %s for %s' %(found['Make'], tiff_file))
+
         if not found['Model']:
+            logger.error('Model = %s for %s' %(found['Model'], tiff_file))
             status = 'Invalid value for Make in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('Model = %s for %s' %(found['Model'], tiff_file))
+
         if found['Orientation'] != (1,):
+            logger.error('Orientation = %s for %s' %(found['Orientation'], tiff_file))
             status = 'Invalid value for Orientation in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('Orientation = %s for %s' %(found['Orientation'], tiff_file))
+
         #if found['ColorSpace'] != 1:
         #    status = 'Invalid value for ColorSpace in %s' % (file)
         #    return status
-    
+
         if found['ResolutionUnit'] != (2,):
+            logger.error('ResolutionUnit = %s for %s' %(found['ResolutionUnit'], tiff_file))
             status = 'Invalid value for ResolutionUnit in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('ResolutionUnit = %s for %s' %(found['ResolutionUnit'], tiff_file))
+
         if not found['DateTime']:
+            logger.error('DateTime = %s for %s' %(found['DateTime'], tiff_file))
             status = 'Invalid value for DateTime in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
             #return status
-    
+        else:
+            logger.debug('DateTime = %s for %s' %(found['DateTime'], tiff_file))
+
         image_code = re.sub("[^0-9]", "", str(found['BitsPerSample']))
         image_type = bittsPerSample[image_code]
-    
+
         ## Check if Two channel grayscale
         #if imgtype == bittsPerSample['Two channel grayscale']:
         #    status = 'Two channel grayscale, needs conversion'
         #    return status
-    
+
         # GRAYSCALE OR BITONAL
+        logger.info('Checking type')
         if image_type is 'Bitonal' or image_type is 'Grayscale':
-    
+
+            logger.info('%s is Bitonal' % tiff_file)
+
             if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['T6/Group 4 Fax']:
-                pass
+                logger.debug('Compression is %s for %s' % (found['Compression'], tiff_file))
             else :
                 status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+
             if str(found['SamplesPerPixel']) != samplesPerPixel['Grayscale']:
                 status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
+
             if found['XResolution'] < 600:
+                logger.error('XResolution is %s for %s' %(found['XResolution'], tiff_file))
                 status = 'Invalid value for XResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('XResoloution is %s for %s' % (found['XResolution'], tiff_file))
+
             if found['YResolution'] < 600:
+                logger.error('YResolution is %s for %s' % (found['YResolution'], tiff_file))
                 status = 'Invalid value for YResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('YResolution is %s for %s' % (found['YResolution'], tiff_file))
+
         # COLOR
         elif image_type is 'Color-3' or image_type is 'Color-888':
-    
+
+            logger.info('%s is Color' % tiff_file)
+
             if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['LZW']:
-                pass
+                logger.debug('Compression is %s for %s' % (found['Compression'], tiff_file))
             else:
                 status = 'Invalid value for Compression in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return statu
-    
+
             if found['PhotometricInterpretation'] != photometricInterpretation['RGB']:
                 status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('PhotometricInterpretation is %s for %s' % (found['PhotometricInterpretation'], tiff_file))
+
             if str(found['SamplesPerPixel']) != samplesPerPixel['RGB']:
-                logger.error('SamplesPerPixel is %s for %s' (found['SamplesPerPixel'], tiff_file))
+                logger.error('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
                 status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
+
             if found['XResolution'] < 300:
                 status = 'Invalid value for XResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('XResolution is %s for %s' % (found['XResolution'], tiff_file))
+
             if found['YResolution'] < 300:
                 status = 'Invalid value for YResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
                 error.save()
-                #return status
-    
+            else:
+                logger.debug('YResolution is %s for %s' % (found['YResolution'], tiff_file))
+
         else:
             status = 'Cannot determine type for %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Tiff")
+            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
-            
-    except IOError:
-        status = 'IO Error. Maybe this is 2 channel grayscale? %s' % tiff_file
-        error = ValidationError(kdip=kdipID, error=status, error_type='IO')
+
+    except:
+        status = 'Error \'%s\' while validating %s' % (sys.exc_info()[1], tiff_file)
+        logger.error(status)
+        error = ValidationError(kdip=kdipID, error=status, error_type='Bad Tiff File')
         error.save()
-        #return status
 
 
 
@@ -393,7 +429,7 @@ class Mets(XmlObject):
     #x = NodeListField('mets:fileSec/mets:fileGrp', METSFile)
     tiffs = NodeListField('mets:fileSec/mets:fileGrp[@ID="TIFF"]/mets:file', METSFile)
     jpegs = NodeListField('mets:fileSec/mets:fileGrp[@ID="JPEG"]/mets:file', METSFile)
-#    jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
+    #jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
     altos = NodeListField('mets:fileSec/mets:fileGrp[@ID="ALTO"]/mets:file', METSFile)
     techmd = NodeListField('mets:amdSec/mets:techMD', METStechMD)
 
@@ -505,7 +541,7 @@ class KDip(models.Model):
     @property
     def barcode(self):
         return self.kdip_id[:12]
-    
+
     @property
     def errors(self):
         error_types = self.validationerror_set.values('error_type').distinct()
@@ -544,35 +580,45 @@ class KDip(models.Model):
         #    return False
 
         #Mets file exists
+        logger.info('Cheking for Mets File.')
         if not os.path.exists(mets_file):
             reason = "Error: %s does not exist" % mets_file
             #self.reason = reason
             #self.status = 'invalid'
             #self.save()
             logger.error(reason)
-            error = ValidationError(kdip=self, error=reason, error_type="Missing")
+            error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
             #return False
 
-        mets = load_xmlobject_from_file(mets_file, Mets)
+        logger.info('Loading Mets file into eulxml.')
+        try:
+            mets = load_xmlobject_from_file(mets_file, Mets)
 
-        #mets file validates against schema
-        if not mets.is_valid():
-            reason = "Error: %s is not valid" % mets_file
-            #self.reason = reason
-            #self.status = 'invalid'
-            #self.save()
-            logger.error(reason)
-            error = ValidationError(kdip=self, error=reason, error_type="Mets")
+            #mets file validates against schema
+            logger.info('Cheking if Mets is valid.')
+            if not mets.is_valid():
+                reason = "Error: %s is not valid" % mets_file
+                #self.reason = reason
+                #self.status = 'invalid'
+                #self.save()
+                logger.error(reason)
+                error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
+                error.save()
+                #return False
+        except:
+            reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
+            error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
             error.save()
-            #return False
 
+        logger.info('Gathering tiffs.')
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
         #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
-
+        logger.info('Checking tiffs.')
         for tiff in tiffs:
+            logger.info('Sending %s for validation' % tiff)
             tif_status = validate_tiffs(tiff, self.kdip_id, self.path, self)
 
         #if tif_status is not None:
@@ -592,7 +638,7 @@ class KDip(models.Model):
                 #self.status = 'invalid'
                 #self.save()
                 logger.error(reason)
-                error = ValidationError(kdip=self, error=reason, error_type="Missing")
+                error = ValidationError(kdip=self, error=reason, error_type="Missing Tiff or Alto")
                 error.save()
                 #return False
 
@@ -616,6 +662,8 @@ class KDip(models.Model):
             self.status = 'new'
         self.save()
         return True
+
+
 
 
     @classmethod
@@ -687,8 +735,8 @@ class KDip(models.Model):
                 else:
                     kdip.validate()
 
-            except Exception as e:
-                logger.error("Error creating KDip %s : %s" % (k, e.message))
+            except:
+                logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
                 pass
 
 
@@ -733,7 +781,7 @@ class Job(models.Model):
     name = models.CharField(max_length=100, unique=True)
     'Human readable name of job'
     status = models.CharField(max_length=20, choices=JOB_STATUSES, default='new')
-    
+
     @property
     def volume_count(self):
         return self.kdip_set.all().count()
@@ -741,10 +789,9 @@ class Job(models.Model):
     def __unicode__(self):
         return self.name
 
-    class Meta:
-        ordering = ['id']
 
-    def save(self, *args, **kwargs):
+    @background(schedule=10)
+    def upload(kdips, job_id):
 
         def zipdir(path, zip):
             for root, dirs, files in os.walk(path):
@@ -766,127 +813,149 @@ class Job(models.Model):
                 else:
                     return False
 
+        job = Job.objects.get(id=job_id)
+
+        uploaded_files = []
+        status = ''
+
+        for process_kdip in kdips:
+            kdip = KDip.objects.get(id=process_kdip)
+
+            client = DjangoPidmanRestClient()
+            pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
+            pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
+
+            ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
+            naan = parse_ark(ark)['naan']
+            noid = parse_ark(ark)['noid']
+
+            kdip.pid = noid
+            kdip.save()
+
+            logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
+
+            #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
+            if not os.path.exists('%s/HT' % kdip_dir):
+                os.mkdir('%s/HT' % kdip_dir)
+            process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
+
+            if not os.path.exists(process_dir):
+                os.makedirs(process_dir)
+
+            
+
+            tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
+            for tiff in tiffs:
+                checksumfile(tiff, process_dir)
+                shutil.copy(tiff, process_dir)
+
+            altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
+            for alto in altos:
+                checksumfile(alto, process_dir)
+                shutil.copy(alto, process_dir)
+                if 'alto' in alto:
+                    filename = alto.split('/')
+                    page,crap,ext = filename[-1].split('.')
+                    shutil.move(alto, '%s/%s.%s' % (process_dir, page, ext))
+            #
+            #new_altos = glob.glob('%s/*.alto.xml' % (process_dir))
+            #for new_alto in new_altos:
+            #    page,crap,ext = new_alto.split('.')
+            #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
+
+            ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
+            for ocr in ocrs:
+                checksumfile(ocr, process_dir)
+                shutil.copy(ocr, process_dir)
+
+
+            meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
+            marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
+            mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
+
+            checksumfile(meta_yml, process_dir)
+            checksumfile(marc_xml, process_dir)
+            checksumfile(mets_xml, process_dir)
+
+            shutil.copy(meta_yml, process_dir)
+
+            shutil.copy(marc_xml, process_dir)
+
+            shutil.copy(mets_xml, process_dir)
+
+            with open('%s/checksum.md5' % process_dir) as f:
+                content = f.readlines()
+                for line in content:
+                    parts = line.split()
+                    verify = checksumverify(parts[0], process_dir, parts[1])
+                    if verify is not True:
+                        logger.error('Checksum check failes for %s.' % process_dir  )
+
+            zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
+            os.chdir('%s' % (process_dir))
+            zipdir('.', zipf)
+            zipf.close()
+            # Delete the process directory to save space
+            shutil.rmtree(process_dir)
+
+            token = BoxToken.objects.get(id=1)
+
+            response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
+
+            token.refresh_token = response['refresh_token']
+            token.save()
+
+            logger.info('New refresh token: %s' % (response['refresh_token']))
+
+            box_folder = getattr(settings, 'BOXFOLDER', None)
+
+            url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=%s' % (response['access_token'], process_dir, box_folder)
+
+            upload = subprocess.check_output('curl %s' % (url), shell=True)
+
+            upload_response = json.loads(upload)
+
+            try:
+                sha1 = hashlib.sha1()
+                local_file = open('%s.zip' % (process_dir), 'rb')
+                sha1.update(local_file.read())
+                local_file.close()
+
+                if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
+                    status = 'being processed'
+                    #uploaded_files.append('ark+=%s=%s' % (naan, noid))
+                    uploaded_files.append(kdip.kdip_id)
+
+            except Exception as e:
+                logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
+                status = 'failed'
+
+        if status == 'being processed':
+            job.status = 'being processed'
+            job.save()
+            kdip_list = '\n'.join(map(str, uploaded_files))
+            send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
+            send_from = getattr(settings, 'EMORY_CONTACT', None)
+            send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
+
+
+    class Meta:
+        ordering = ['id']
+
+    def save(self, *args, **kwargs):
+
+
         if self.status == 'ready to process':
             uploaded_files = []
             kdips = KDip.objects.filter(job=self.id)
+
             for kdip in kdips:
+                uploaded_files.append(kdip.id)
 
-                client = DjangoPidmanRestClient()
-                pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
-                pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
-
-                ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
-                naan = parse_ark(ark)['naan']
-                noid = parse_ark(ark)['noid']
-
-                kdip.pid = noid
-                kdip.save()
-
-                logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
-
-                #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
-                if not os.path.exists('%s/HT' % kdip_dir):
-                    os.mkdir('%s/HT' % kdip_dir)
-                process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
-
-                if not os.path.exists(process_dir):
-                    os.makedirs(process_dir)
-
-                tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
-                for tiff in tiffs:
-                    checksumfile(tiff, process_dir)
-                    shutil.copy(tiff, process_dir)
-
-                altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
-                for alto in altos:
-                    checksumfile(alto, process_dir)
-                    shutil.copy(alto, process_dir)
-                    if 'alto' in alto:
-                        filename = alto.split('/')
-                        page,crap,ext = filename[-1].split('.')
-                        shutil.move(alto, '%s/%s.%s' % (process_dir, page, ext))
-                #
-                #new_altos = glob.glob('%s/*.alto.xml' % (process_dir))
-                #for new_alto in new_altos:
-                #    page,crap,ext = new_alto.split('.')
-                #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
-
-                ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
-                for ocr in ocrs:
-                    checksumfile(ocr, process_dir)
-                    shutil.copy(ocr, process_dir)
-
-
-                meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
-                marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
-                mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
-
-                checksumfile(meta_yml, process_dir)
-                checksumfile(marc_xml, process_dir)
-                checksumfile(mets_xml, process_dir)
-
-                shutil.copy(meta_yml, process_dir)
-
-                shutil.copy(marc_xml, process_dir)
-
-                shutil.copy(mets_xml, process_dir)
-
-                with open('%s/checksum.md5' % process_dir) as f:
-                    content = f.readlines()
-                    for line in content:
-                        parts = line.split()
-                        verify = checksumverify(parts[0], process_dir, parts[1])
-                        if verify is not True:
-                            logger.error('Checksum check failes for %s.' % process_dir  )
-
-                zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
-                os.chdir('%s' % (process_dir))
-                zipdir('.', zipf)
-                zipf.close()
-                # Delete the process directory to save space
-                shutil.rmtree(process_dir)
-
-                token = BoxToken.objects.get(id=1)
-
-                response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
-
-                token.refresh_token = response['refresh_token']
-                token.save()
-
-                logger.info('New refresh token: %s' % (response['refresh_token']))
-
-                box_folder = getattr(settings, 'BOXFOLDER', None)
-
-                url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=%s' % (response['access_token'], process_dir, box_folder)
-
-                upload = subprocess.check_output('curl %s' % (url), shell=True)
-
-                upload_response = json.loads(upload)
-
-                try:
-                    sha1 = hashlib.sha1()
-                    local_file = open('%s.zip' % (process_dir), 'rb')
-                    sha1.update(local_file.read())
-                    local_file.close()
-
-                    if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
-                        self.status = 'being processed'
-                        #uploaded_files.append('ark+=%s=%s' % (naan, noid))
-                        uploaded_files.append(kdip.kdip_id)
-
-                except Exception as e:
-                    logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
-                    self.status = 'failed'
-                    pass
-
-            if self.status == 'being processed':
-                kdip_list = '\n'.join(map(str, uploaded_files))
-                send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
-                send_from = getattr(settings, 'EMORY_CONTACT', None)
-                send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
+            self.upload(uploaded_files, self.id)
 
         super(Job, self).save(*args, **kwargs)
-        
+
 class ValidationError(models.Model):
     kdip = models.ForeignKey(KDip)
     error = models.CharField(max_length=255)

@@ -17,6 +17,7 @@
 # Django settings for digitizedbooks project.
 
 import os
+os.environ['HTTP_PROXY'] = 'http://skoda.library.emory.edu:3128/'
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # If you set this to False, Django will make some optimizations so as not
@@ -116,6 +117,7 @@ INSTALLED_APPS = (
     'taggit',
     'digitizedbooks.publish',
     'eullocal.django.emory_ldap',
+    'background_task'
 )
 
 
