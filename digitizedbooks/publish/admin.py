@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 from django.contrib import admin
-from digitizedbooks.publish.models import  Job, KDip
+from digitizedbooks.publish.models import  Job, KDip, ValidationError
 from django.contrib.sites.models import Site
 from taggit.models import Tag
 
@@ -23,14 +23,25 @@ def remove_from_job(modeladmin, request, queryset):
     queryset.update(job=None)
 remove_from_job.short_description = "Remove selected k dips from any associated job"
 
+class ValidationErrorInline(admin.TabularInline):
+    model = ValidationError
+    list_display = ['error', 'error_type']
+    readonly_fields = ['error', 'error_type']
+    
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 class KDipAdmin(admin.ModelAdmin):
-    list_display = ['kdip_id', 'status', 'note', 'reason', 'job']
+    list_display = ['kdip_id', 'status', 'note', 'errors', 'job',]
     list_link = ['kdip_id']
     list_filter = ['status', 'job']
     list_editable = ['job', 'note', 'status']
-    readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date']
-    search_fields = ['path', 'kdip_id', 'note', 'pid']
+    readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors']
+    search_fields = ['path', 'kdip_id', 'note', 'pid', 'errors']
+    inlines = [ValidationErrorInline]
 #    actions = [remove_from_job]
 
     def has_add_permission(self, request):
@@ -49,10 +60,9 @@ class KDipInline(admin.TabularInline):
 
 class JobAdmin(admin.ModelAdmin):
     inlines = [KDipInline]
-    list_display = ['name', 'status']
+    list_display = ['name', 'status', 'volume_count']
     list_link = ['name']
     #readonly_fields = ['status']
-
 
 
 admin.site.register(KDip, KDipAdmin)
