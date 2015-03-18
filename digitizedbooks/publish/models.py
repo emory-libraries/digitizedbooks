@@ -663,16 +663,13 @@ class KDip(models.Model):
         self.save()
         return True
 
-
-
-
     @classmethod
     def load(self, *args, **kwargs):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
         kdip_list = {}
 
-        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir]
+        exclude = ['%s/HT' %kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
         for path, subdirs, files in os.walk(kdip_dir):
             for dir in subdirs:
@@ -688,8 +685,11 @@ class KDip(models.Model):
                             processed_KDip.path = path
                             processed_KDip.save()
                 except KDip.DoesNotExist:
-                    if kdip and 'out_of_scope' not in full_path:
+                    if kdip and full_path not in exclude:
                         kdip_list[dir] = path
+
+        # Empty list to gather errant KDips
+        bad_kdips = []
 
         # create the KDIP is it does not exits
         for k in kdip_list:
@@ -732,12 +732,23 @@ class KDip(models.Model):
                         outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
 
                     kdip.validate()
-                else:
-                    kdip.validate()
+
+                    # If the KDip had errors, add it to the list so an email alert can be sent.
+                    if kdip.status == 'invalid':
+                        bad_kdips.append(kdip.kdip_id)
+
+                # else:
+                #     kdip.validate()
+
 
             except:
+                bad_kdips.append(k)
                 logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
-                pass
+
+        bad_kdip_list = '\n'.join(map(str, bad_kdips))
+        contact = send_from = getattr(settings, 'EMORY_CONTACT', None)
+        send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
+
 
 
 
@@ -757,6 +768,7 @@ class KDip(models.Model):
 
         else:
             if self.pk is not None:
+                # If the note has been updated we need to write that to the Marc file.
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
                     marc_file = '%s/%s/marc.xml' %(self.path, self.kdip_id)
@@ -772,7 +784,8 @@ class Job(models.Model):
 
     JOB_STATUSES = (
         ('new', "New"),
-        ('ready to process', 'Ready To Process'),
+        ('ready for zephir', 'Ready for Zephir'),
+        ('ready for hathi', 'Ready for Hathi'),
         ('failed', 'Upload Failed'),
         ('being processed', 'Being Processed'),
         ('processed', 'Processed')
@@ -944,8 +957,7 @@ class Job(models.Model):
 
     def save(self, *args, **kwargs):
 
-
-        if self.status == 'ready to process':
+        if self.status == 'ready for hathi':
             uploaded_files = []
             kdips = KDip.objects.filter(job=self.id)
 
