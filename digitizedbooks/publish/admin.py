@@ -40,7 +40,7 @@ class KDipAdmin(admin.ModelAdmin):
     list_filter = ['status', 'job']
     list_editable = ['job', 'note', 'status']
     readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors']
-    search_fields = ['path', 'kdip_id', 'note', 'pid', 'errors']
+    search_fields = ['path', 'kdip_id', 'note', 'pid',]
     inlines = [ValidationErrorInline]
 #    actions = [remove_from_job]
 

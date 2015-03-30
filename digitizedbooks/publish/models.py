@@ -26,7 +26,7 @@ from background_task import background
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
-from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField
+from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField, NodeField
 from pidservices.clients import parse_ark
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
@@ -40,6 +40,7 @@ import box
 import json
 import subprocess
 import hashlib
+from ftplib import FTP_TLS
 
 logger = logging.getLogger(__name__)
 
@@ -460,11 +461,23 @@ class MarcDatafield(MarcBase):
     subfields = NodeListField('marc:subfield', MarcSubfield)
     "list of marc subfields"
 
+class MarcRecord(MarcBase):
+    "Single instance of a MARC record"
+    ROOT_NS = 'http://www.loc.gov/MARC21/slim'
+    ROOT_NAME = 'record'
+
+    tag = StringField('@tag')
+    "tag or type of datafield"
+    subfields = NodeListField('marc:subfield', MarcSubfield)
+    "list of marc subfields"
+
 
 class Marc(MarcBase):
     "Top level MARC xml object"
     ROOT_NS = 'http://www.loc.gov/MARC21/slim'
     ROOT_NAME = 'collection'
+
+    record = NodeField('marc:record', MarcRecord)
 
     datafields = NodeListField('marc:record/marc:datafield', MarcDatafield)
     "list of marc datafields"
@@ -746,7 +759,7 @@ class KDip(models.Model):
                 logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
 
         bad_kdip_list = '\n'.join(map(str, bad_kdips))
-        contact = send_from = getattr(settings, 'EMORY_CONTACT', None)
+        contact = getattr(settings, 'EMORY_CONTACT', None)
         send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
 
 
@@ -785,6 +798,7 @@ class Job(models.Model):
     JOB_STATUSES = (
         ('new', "New"),
         ('ready for zephir', 'Ready for Zephir'),
+        ('waiting on zephir', 'Waiting on Zephir'),
         ('ready for hathi', 'Ready for Hathi'),
         ('failed', 'Upload Failed'),
         ('being processed', 'Being Processed'),
@@ -952,6 +966,7 @@ class Job(models.Model):
             send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
 
 
+
     class Meta:
         ordering = ['id']
 
@@ -965,6 +980,78 @@ class Job(models.Model):
                 uploaded_files.append(kdip.id)
 
             self.upload(uploaded_files, self.id)
+
+        elif self.status == 'ready for zephir':
+            kdips = KDip.objects.filter(job=self.id)
+            # Tmp file for combined MARC XML. The eulxml output includes the namespace in the 
+            # <record>. We will be getting rid of that then deleting this file.
+            zephir_tmp_file = '%s/Zephir/%s.tmp' % (kdip_dir, self.name)
+            # File for the combined MARC XML.
+            zephir_file = '%s/Zephir/%s.xml' % (kdip_dir, self.name)
+
+            # Remove zephir file if it is already there so we can start from scratch.
+            try:
+                os.remove(zephir_file)
+            except OSError:
+                pass
+
+            # Opening line for MARC XML
+            open(zephir_tmp_file, 'a').write('<collection xmlns="http://www.loc.gov/MARC21/slim">\n')
+
+            # Loop through the KDips to the the MARC XML
+            for kdip in kdips:
+                marc_file = '%s/%s/marc.xml' %(kdip.path, kdip.kdip_id)
+                
+                # Load the MARC XML
+                marc = load_xmlobject_from_file(marc_file, Marc)
+
+                # Serialize the XML into the tmp file
+                open(zephir_tmp_file, 'a').write('\t' + marc.record.serialize(pretty=True))
+
+            # Write the final line
+            open(zephir_tmp_file, 'a').write('</collection>')
+
+            # Now copy the contents of the tmp file to the real file and strip out the
+            # namespace from the record tag.
+            with open(zephir_tmp_file, 'r') as input_file, open(zephir_file, 'a') as output_file:
+                for line in input_file:
+                    if len(line) > 1:
+                        new_line = re.sub('<record.*>', '<record>', line)
+                        output_file.write(new_line)
+
+            # Delete tmp file
+            os.remove(zephir_tmp_file)
+
+            send_from = getattr(settings, 'EMORY_CONTACT', None)
+            zephir_contact = getattr(settings, 'ZEPHIR_CONTACT', None)
+            host = getattr(settings, 'ZEPHIR_FTP_HOST', None)
+            user = getattr(settings, 'ZEPHIR_LOGIN', None)
+            passw = getattr(settings, 'ZEPHIR_PW', None)
+
+            # FTP the file
+            # upload = subprocess.check_output('curl %s' % (url), shell=True)
+            upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
+            print(upload_cmd)
+            upload = subprocess.check_output(upload_cmd, shell=True)
+            print(upload)
+            #subprocess.call(['curl', '-k', '-u', '%s:%s' % (user, passw), '-T', '%s' % zephir_file, '--ftp-ssl-control', '--ftp-pasv', '%s' % host])
+
+            # Create the body of the email
+            body = 'file name=%s.xml\n' % self.name
+            body += 'file size=%s\n' % os.path.getsize(zephir_file)
+            body += 'record count=%s\n' % self.volume_count
+            body += 'notification email=%s' % send_from
+
+            print(send_from)
+            print (zephir_contact)
+
+            print(body)
+
+            # Send email to Zephir. Zephir contact is defined in the loacal settings.
+            send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
+
+            # Set status
+            self.status = 'waiting on zephir'
 
         super(Job, self).save(*args, **kwargs)
 
