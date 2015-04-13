@@ -75,24 +75,21 @@ def get_rights(self):
             error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
             error.save()
             #return 'No 583 tag in marc record.'
-        else:
-            logger.info('583 tag for %s is "%s"' % (self.kdip_id, bib_rec.tag_583_5))
 
         tag_008 = bib_rec.tag_008
-        logger.info('008 tag for %s is "%s"' % (self.kdip_id, tag_008))
         data_type = tag_008[6]
-        logger.info('date_type for %s is "%s"' % (self.kdip_id, date_type))
         date1 = tag_008[7:11]
-        logger.info('date1 for %s is "%s"' % (self.kdip_id, date1))
-        date1_int = int(date1)
+        try:
+            date1_int = int(date1)
+        except:
+            date1_int = None
         date2 = tag_008[11:15]
-        logger.info('date2 for %s is "%s"' % (self.kdip_id, date2))
         pub_place = tag_008[15:18]
-        logger.info('pub_place for %s is "%s"' % (self.kdip_id, pub_place))
         pub_place17 = tag_008[17]
-        logger.info('pub_place17 for %s is "%s"' % (self.kdip_id, pub_place17))
         govpub = tag_008[28]
-        logger.info('govpub for %s is "%s"' % (self.kdip_id, govpub))
+
+        # print("date1 = '%s'" % date1)
+        # print("date1_int = '%s'" % date1_int)
 
         # This is not really needed now but will be needed for Gov Docs
         imprint = ''
@@ -102,11 +99,10 @@ def get_rights(self):
             imprint = bib_rec.tag_261a
         else:
             imprint = 'mult_260a_non_us'
-
-        logger.info('%s flagged as %s' % (self.kdip_id, imprint))
+            logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
 
         # Check to see if Emory thinks it is public domain
-        # if bib_rec.tag_583x == 'public domain':
+        #if bib_rec.tag_583x == 'public domain':
         # Now we go through HT's algorithm to determin rights
         # US Docs
         if pub_place17 == 'u':
@@ -124,47 +120,57 @@ def get_rights(self):
             #        rights = 'pd'
             ## Non gov docs
             else:
-                if date1_int >= 1873 and date1_int <= 1922:
-                    rights = 'pdus'
-                elif date1 == '190u':
-                    rights = 'pdus'
-                elif date1 == '191u':
-                    rights = 'pdus'
-                elif date1_int < 1923:
-                    rights = 'pd'
+                if date1_int is not None:
+                    if date1_int >= 1873 and date1_int <= 1922:
+                        rights = 'pdus'
+                    elif date1_int < 1923:
+                        print("<1923")
+                        rights = 'pd'
+                    else:
+                        reason = ('%s was published in %s' % (self.kdip_id, date1))
+                        logger.error(reason)
+                        rights = 'ic'
                 else:
-                    reason = ('%s was published in %s' % (self.kdip_id, date1))
-                    logger.error(reason)
-                    rights = 'ic'
+                    if date1 == '190u' or date1 == '191u':
+                        rights = 'pdus'
+                    else:
+                        reason = ('%s was published in %s' % (self.kdip_id, date1))
+                        logger.error(reason)
+                        rights = 'ic'
 
         # Non-US docs
         else:
             logger.info('%s is not a US publication' % (self.kdip_id))
-            if int(date1) < 1873:
-                rights = 'pd'
-            elif date1_int >= 1873 and date1_int < 1923:
-                rights = 'pdus'
-            else:
-                reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
-                logger.error(reason)
-                rights = 'ic'
+            if date1_int is not None:
+                if date1_int < 1873:
+                    print("<1873")
+                    rights = 'pd'
+                elif date1_int >= 1873 and date1_int < 1923:
+                    rights = 'pdus'
+                else:
+                    reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
+                    logger.error(reason)
+                    rights = 'ic'
 
         if bib_rec.tag_583x != 'public domain':
             rights = 'ic'
             reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
 
-        # # One last check for uncertain dates
-        # uncertain_dates = ['189u', '188u', '187u', '186u', '185u', '184u', '183u', \
-        #                     '182u', '181u', '180u', '18uu', '179u', '178u', '177u', \
-        #                     '176u', '175u', '174u', '173u', '172u', '171u', '170u']
-        # if date1 in uncertain_dates:
-        #     rights = 'pd'
-        # else:
-        #     rights = 'ic'
-
+        # One last check for uncertain dates
+        if rights == 'ic':
+            uncertain_dates = ['189u', '188u', '187u', '186u', '185u', '184u', \
+                                '183u', '182u', '181u', '180u', '18uu', '179u', \
+                                '178u', '177u', '176u', '175u', '174u', '173u', \
+                                '172u', '171u', '170u']
+            print('Checking uncertain dates.')
+            if date1 in uncertain_dates:
+                reason = None
+                rights = 'pd'
+            else:
+                rights = 'ic'
 
     except Exception as e:
-        reason = 'Could not determine rights for %s' % (self.kdip_id)
+        reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
         #return reason
