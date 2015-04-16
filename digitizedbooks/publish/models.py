@@ -59,6 +59,9 @@ if not kdip_dir:
     raise Exception (msg)
 
 def get_rights(self):
+
+    def foo(foo):
+        return foo
     """
     Get the Marc 21 bib record
     Rights validation is based on HT's Automated Bibliographic Rights Determination
@@ -88,8 +91,6 @@ def get_rights(self):
         pub_place17 = tag_008[17]
         govpub = tag_008[28]
 
-        # print("date1 = '%s'" % date1)
-        # print("date1_int = '%s'" % date1_int)
 
         # This is not really needed now but will be needed for Gov Docs
         imprint = ''
@@ -124,7 +125,6 @@ def get_rights(self):
                     if date1_int >= 1873 and date1_int <= 1922:
                         rights = 'pdus'
                     elif date1_int < 1923:
-                        print("<1923")
                         rights = 'pd'
                     else:
                         reason = ('%s was published in %s' % (self.kdip_id, date1))
@@ -143,7 +143,6 @@ def get_rights(self):
             logger.info('%s is not a US publication' % (self.kdip_id))
             if date1_int is not None:
                 if date1_int < 1873:
-                    print("<1873")
                     rights = 'pd'
                 elif date1_int >= 1873 and date1_int < 1923:
                     rights = 'pdus'
@@ -158,12 +157,7 @@ def get_rights(self):
 
         # One last check for uncertain dates
         if rights == 'ic':
-            uncertain_dates = ['189u', '188u', '187u', '186u', '185u', '184u', \
-                                '183u', '182u', '181u', '180u', '18uu', '179u', \
-                                '178u', '177u', '176u', '175u', '174u', '173u', \
-                                '172u', '171u', '170u']
-            print('Checking uncertain dates.')
-            if date1 in uncertain_dates:
+            if date1[0:2] == '18' or date1[0:2] == '17':
                 reason = None
                 rights = 'pd'
             else:
@@ -173,14 +167,16 @@ def get_rights(self):
         reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
-        #return reason
+
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
-        #return 'public'
+
     else:
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
-        #return reason
+
+    foo = foo('bar')
+    print(foo)
 
 def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
@@ -712,7 +708,7 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        exclude = ['%s/HT' %kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
+        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
         for path, subdirs, files in os.walk(kdip_dir):
             for dir in subdirs:
@@ -1059,23 +1055,14 @@ class Job(models.Model):
             passw = getattr(settings, 'ZEPHIR_PW', None)
 
             # FTP the file
-            # upload = subprocess.check_output('curl %s' % (url), shell=True)
             upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
-            print(upload_cmd)
             upload = subprocess.check_output(upload_cmd, shell=True)
-            print(upload)
-            #subprocess.call(['curl', '-k', '-u', '%s:%s' % (user, passw), '-T', '%s' % zephir_file, '--ftp-ssl-control', '--ftp-pasv', '%s' % host])
 
             # Create the body of the email
             body = 'file name=%s.xml\n' % self.name
             body += 'file size=%s\n' % os.path.getsize(zephir_file)
             body += 'record count=%s\n' % self.volume_count
             body += 'notification email=%s' % send_from
-
-            print(send_from)
-            print (zephir_contact)
-
-            print(body)
 
             # Send email to Zephir. Zephir contact is defined in the loacal settings.
             send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
