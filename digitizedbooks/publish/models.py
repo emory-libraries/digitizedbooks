@@ -59,6 +59,9 @@ if not kdip_dir:
     raise Exception (msg)
 
 def get_rights(self):
+
+    def foo(foo):
+        return foo
     """
     Get the Marc 21 bib record
     Rights validation is based on HT's Automated Bibliographic Rights Determination
@@ -77,13 +80,13 @@ def get_rights(self):
             #return 'No 583 tag in marc record.'
 
         tag_008 = bib_rec.tag_008
-        data_type = tag_008[6]
+        date_type = tag_008[6]
         date1 = tag_008[7:11]
-        date1 = int(date1)
         date2 = tag_008[11:15]
         pub_place = tag_008[15:18]
         pub_place17 = tag_008[17]
         govpub = tag_008[28]
+
 
         # This is not really needed now but will be needed for Gov Docs
         imprint = ''
@@ -94,6 +97,36 @@ def get_rights(self):
         else:
             imprint = 'mult_260a_non_us'
             logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
+
+        # Make some lists of date types so we can decide which date
+        # to check.
+        use_date1 = ['r', 's', 'e', 'q', 'p']
+
+        use_date2 = ['t', 'm']
+
+        use_date3 = ['d', 'u', 'c', 'i', 'k']
+
+        date = ''
+        date_int = 0
+
+        if date_type in use_date1:
+            date = date1
+
+        elif date_type in use_date2:
+            date = date2
+
+        elif date_type in use_date3:
+            enumcron_date = ''
+            date = enumcron_date
+
+        else:
+            reason = 'Could not determine date for %s' % self.kdip_id
+            logger.error(reason)
+
+        try:
+            date_int = int(date)
+        except:
+            date_int = None
 
         # Check to see if Emory thinks it is public domain
         #if bib_rec.tag_583x == 'public domain':
@@ -114,43 +147,60 @@ def get_rights(self):
             #        rights = 'pd'
             ## Non gov docs
             else:
-                if date1 >= 1873 and date1 <= 1922:
-                    rights = 'pdus'
-                elif date1 < 1923:
-                    rights = 'pd'
+                if date_int is not None:
+                    if date_int >= 1873 and date_int <= 1922:
+                        rights = 'pdus'
+                    elif date_int < 1923:
+                        rights = 'pd'
+                    else:
+                        reason = ('%s was published in %s' % (self.kdip_id, date))
+                        logger.error(reason)
+                        rights = 'ic'
                 else:
-                    reason = ('%s was published in %s' % (self.kdip_id, date1))
-                    logger.error(reason)
-                    rights = 'ic'
+                    if date == '190u' or date == '191u':
+                        rights = 'pdus'
+                    else:
+                        reason = ('%s was published in %s' % (self.kdip_id, date))
+                        logger.error(reason)
+                        rights = 'ic'
 
         # Non-US docs
         else:
             logger.info('%s is not a US publication' % (self.kdip_id))
-            if date1 < 1873:
-                rights = 'pd'
-            elif date1 >= 1873 and date1 < 1923:
-                rights = 'pdus'
-            else:
-                reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
-                logger.error(reason)
-                rights = 'ic'
+            if date_int is not None:
+                if date_int < 1873:
+                    rights = 'pd'
+                elif date_int >= 1873 and date_int < 1923:
+                    rights = 'pdus'
+                else:
+                    reason = '%s is non US and was published in %s' % (self.kdip_id, date)
+                    logger.error(reason)
+                    rights = 'ic'
 
         if bib_rec.tag_583x != 'public domain':
             rights = 'ic'
             reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
 
+        # One last check for uncertain dates
+        if rights == 'ic':
+            if date[0:2] == '18' or date[0:2] == '17':
+                reason = None
+                rights = 'pd'
+            else:
+                rights = 'ic'
+
     except Exception as e:
-        reason = 'Could not determine rights for %s' % (self.kdip_id)
+        reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
-        #return reason
+
     if rights is not 'ic':
         logger.info('%s rights set to %s' % (self.kdip_id, rights))
-        #return 'public'
+
     else:
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
-        #return reason
+
 
 def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
@@ -682,7 +732,7 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        exclude = ['%s/HT' %kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
+        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
         for path, subdirs, files in os.walk(kdip_dir):
             for dir in subdirs:
@@ -1029,23 +1079,14 @@ class Job(models.Model):
             passw = getattr(settings, 'ZEPHIR_PW', None)
 
             # FTP the file
-            # upload = subprocess.check_output('curl %s' % (url), shell=True)
             upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
-            print(upload_cmd)
             upload = subprocess.check_output(upload_cmd, shell=True)
-            print(upload)
-            #subprocess.call(['curl', '-k', '-u', '%s:%s' % (user, passw), '-T', '%s' % zephir_file, '--ftp-ssl-control', '--ftp-pasv', '%s' % host])
 
             # Create the body of the email
             body = 'file name=%s.xml\n' % self.name
             body += 'file size=%s\n' % os.path.getsize(zephir_file)
             body += 'record count=%s\n' % self.volume_count
             body += 'notification email=%s' % send_from
-
-            print(send_from)
-            print (zephir_contact)
-
-            print(body)
 
             # Send email to Zephir. Zephir contact is defined in the loacal settings.
             send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
