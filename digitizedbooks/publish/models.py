@@ -116,8 +116,9 @@ def get_rights(self):
             date = date2
 
         elif date_type in use_date3:
-            enumcron_date = ''
-            date = enumcron_date
+            year_pattern = re.compile('1\d\d\d')
+            years = year_pattern.findall(self.note)
+            date = max(years)
 
         else:
             reason = 'Could not determine date for %s' % self.kdip_id
@@ -742,7 +743,7 @@ class KDip(models.Model):
 
                 # Only process new KDips or ones.
                 try:
-                    if path not in exclude:
+                    if 'test' not in path:
                         processed_KDip = KDip.objects.get(kdip_id = dir)
                         # Check to see if the a KDip has moved and update the path.
                         if processed_KDip != path:
