@@ -600,6 +600,7 @@ class KDip(models.Model):
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
     pid = models.CharField(max_length=5, blank=True)
+    notes = models.TextField(blank=True, default='')
 
     @property
     def barcode(self):
