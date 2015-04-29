@@ -80,12 +80,8 @@ def get_rights(self):
             #return 'No 583 tag in marc record.'
 
         tag_008 = bib_rec.tag_008
-        data_type = tag_008[6]
+        date_type = tag_008[6]
         date1 = tag_008[7:11]
-        try:
-            date1_int = int(date1)
-        except:
-            date1_int = None
         date2 = tag_008[11:15]
         pub_place = tag_008[15:18]
         pub_place17 = tag_008[17]
@@ -101,6 +97,36 @@ def get_rights(self):
         else:
             imprint = 'mult_260a_non_us'
             logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
+
+        # Make some lists of date types so we can decide which date
+        # to check.
+        use_date1 = ['r', 's', 'e', 'q', 'p']
+
+        use_date2 = ['t', 'm']
+
+        use_date3 = ['d', 'u', 'c', 'i', 'k']
+
+        date = ''
+        date_int = 0
+
+        if date_type in use_date1:
+            date = date1
+
+        elif date_type in use_date2:
+            date = date2
+
+        elif date_type in use_date3:
+            enumcron_date = ''
+            date = enumcron_date
+
+        else:
+            reason = 'Could not determine date for %s' % self.kdip_id
+            logger.error(reason)
+
+        try:
+            date_int = int(date)
+        except:
+            date_int = None
 
         # Check to see if Emory thinks it is public domain
         #if bib_rec.tag_583x == 'public domain':
@@ -121,33 +147,33 @@ def get_rights(self):
             #        rights = 'pd'
             ## Non gov docs
             else:
-                if date1_int is not None:
-                    if date1_int >= 1873 and date1_int <= 1922:
+                if date_int is not None:
+                    if date_int >= 1873 and date_int <= 1922:
                         rights = 'pdus'
-                    elif date1_int < 1923:
+                    elif date_int < 1923:
                         rights = 'pd'
                     else:
-                        reason = ('%s was published in %s' % (self.kdip_id, date1))
+                        reason = ('%s was published in %s' % (self.kdip_id, date))
                         logger.error(reason)
                         rights = 'ic'
                 else:
-                    if date1 == '190u' or date1 == '191u':
+                    if date == '190u' or date == '191u':
                         rights = 'pdus'
                     else:
-                        reason = ('%s was published in %s' % (self.kdip_id, date1))
+                        reason = ('%s was published in %s' % (self.kdip_id, date))
                         logger.error(reason)
                         rights = 'ic'
 
         # Non-US docs
         else:
             logger.info('%s is not a US publication' % (self.kdip_id))
-            if date1_int is not None:
-                if date1_int < 1873:
+            if date_int is not None:
+                if date_int < 1873:
                     rights = 'pd'
-                elif date1_int >= 1873 and date1_int < 1923:
+                elif date_int >= 1873 and date_int < 1923:
                     rights = 'pdus'
                 else:
-                    reason = '%s is non US and was published in %s' % (self.kdip_id, date1)
+                    reason = '%s is non US and was published in %s' % (self.kdip_id, date)
                     logger.error(reason)
                     rights = 'ic'
 
@@ -157,7 +183,7 @@ def get_rights(self):
 
         # One last check for uncertain dates
         if rights == 'ic':
-            if date1[0:2] == '18' or date1[0:2] == '17':
+            if date[0:2] == '18' or date[0:2] == '17':
                 reason = None
                 rights = 'pd'
             else:
@@ -175,8 +201,6 @@ def get_rights(self):
         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
         error.save()
 
-    foo = foo('bar')
-    print(foo)
 
 def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
