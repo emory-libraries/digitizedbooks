@@ -1,3 +1,10 @@
+Release 1.0.5
+-------------
+* An application's copyright validation is able to handle "uncertain" dates and continuing resources
+* An application's copyright validation is able to handle "uncertain" dates in different date types or more accurate validation.
+* An application's copyright validation is able to handle "uncertain" dates found in enumcron for more accurate validation.
+* As a DigitizedBooks user, I want to be able to write miscellaneous notes about a KDip, so that I can keep track of clean up tasks that I need to perform.
+
 Release 1.0.4
 -------------
 * As an admin I want to want to receive an error report via email of validation failures so they can be fixed in a timely manner.
