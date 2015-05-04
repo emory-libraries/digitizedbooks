@@ -3,7 +3,7 @@ digibooks.komodoproject
 .komodotools
 *.DS_Store
 *.pyc
-env
+venv
 build
 dist
 static

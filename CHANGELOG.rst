@@ -1,3 +1,27 @@
+Release 1.0.5
+-------------
+* An application's copyright validation is able to handle "uncertain" dates and continuing resources
+* An application's copyright validation is able to handle "uncertain" dates in different date types or more accurate validation.
+* An application's copyright validation is able to handle "uncertain" dates found in enumcron for more accurate validation.
+* As a DigitizedBooks user, I want to be able to write miscellaneous notes about a KDip, so that I can keep track of clean up tasks that I need to perform.
+
+Release 1.0.4
+-------------
+* As an admin I want to want to receive an error report via email of validation failures so they can be fixed in a timely manner.
+* When an admin process a job for Zephir, an email is sent to Zephir with information about the bundled marcxml file to meet Zephir's submission requirements.
+* When an admin process a job for Zephir, all the marcxml records and bundled into one file to meet Zephir's submission requirements.
+* When an admin processes a job for Zephir, bundled marcxml file will be ftp'd to Zephir so they can process it. 
+
+Release 1.0.3
+-------------
+* As an user, I want a Job that is set to "Ready to Process" to continue processing in the background when I close the web browser, so that I have more freedom to do other things with my computer (such as close my laptop and take it home).
+
+Release 1.0.2
+-------------
+* As an admin I want to see the number of volumes in a job so I can have an idea of how big it is.
+
+* When an application finds that a KDip is invalid, it records all the reasons for failure, not just the first one encountered.
+
 Release 1.0.1 - Hathi Trust Basic Ingest (Tweaked)
 --------------------------------------------------
 
