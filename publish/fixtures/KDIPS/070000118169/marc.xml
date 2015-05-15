@@ -1,0 +1,193 @@
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>12345cam a2200601Ia 4500</leader>
+    <controlfield tag="001">002203131</controlfield>
+    <controlfield tag="003">OCoLC</controlfield>
+    <controlfield tag="005">20140430173259.0</controlfield>
+    <controlfield tag="008">811228s1826    pau           000 0 eng d</controlfield>
+    <datafield ind1="9" ind2=" " tag="035">
+      <subfield code="a">u3084815</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">ocm08023397</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(Sirsi) o08023397</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(OCoLC)08023397</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">PIT</subfield>
+      <subfield code="c">PIT</subfield>
+      <subfield code="d">SBH</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">NUI</subfield>
+      <subfield code="d">OCLCQ</subfield>
+      <subfield code="d">EMM</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">EMMM</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="099">
+      <subfield code="a">Armstrong Facts 1826</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Armstrong, John,</subfield>
+      <subfield code="d">1784-1829.</subfield>
+      <subfield code="0">EMU10000481539</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Facts, observations and practical illustrations, relative to puerperal fever, scarlet fever, pulmonary consumption, and measles :</subfield>
+      <subfield code="b">a general view of the pathology and treatment of chronic diseases, with illustrations of the utility of sulphureous waters, and observations on the efficacy of the balsam of copaiva in inflammations of the mucous membranes /</subfield>
+      <subfield code="c">by John Armstrong.</subfield>
+    </datafield>
+    <datafield ind1="3" ind2="8" tag="246">
+      <subfield code="a">Armstrong on chronic diseases</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="250">
+      <subfield code="a">2nd American from the 2nd London edition.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Philadelphia :</subfield>
+      <subfield code="b">J. Grigg [and 10 others] ;</subfield>
+      <subfield code="a">New-York :</subfield>
+      <subfield code="b">E. Euyckinck [and 3 others],</subfield>
+      <subfield code="c">1826.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">vi, 2 unnumbered pages, 120, iv, 3 unnumbered pages, 216, 80 pages ;</subfield>
+      <subfield code="c">22 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Spine title: Armstrong on chronic diseases.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">"Facts and observations, relative to the fever commonly called puerperal," and "Practical illustrations of the scarlet fever, pulmonary consumption, and measles; with observations of the efficacy of sulphureous waters in chronic complaints" have special title-pages.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Facts and observations, relative to the fever commonly called puerperal -- Practical illustrations of the scarlet fever, pulmonary consumption, and measles.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="530">
+      <subfield code="a">Also available online.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="541">
+      <subfield code="a">Gift to The Abner Wellborn Calhoun Medical Library presented by Mrs. Stewart R. Roberts.</subfield>
+      <subfield code="5">EMM</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="561">
+      <subfield code="a">HEALTH: Added as part of 2008 Rare Book Project.</subfield>
+      <subfield code="5">EMM</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">digitized</subfield>
+      <subfield code="c">2013</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-M</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital Library Publications Program.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Puerperal septicemia.</subfield>
+      <subfield code="0">EMU10001541497</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Scarlatina.</subfield>
+      <subfield code="0">EMU10001546251</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Tuberculosis.</subfield>
+      <subfield code="0">EMU10001557360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Measles.</subfield>
+      <subfield code="0">EMU10001526866</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Copaiba.</subfield>
+      <subfield code="0">EMU10001498261</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Sulfurous water.</subfield>
+      <subfield code="0">EMU10001528581</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Chronic Disease.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Puerperal Infection.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Scarlet Fever.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Tuberculosis, Pulmonary.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Measles.</subfield>
+      <subfield code="0">EMU10001526866</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="2" tag="650">
+      <subfield code="a">Diagnosis.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="1" tag="856">
+      <subfield code="u">http://archive.org/details/08023397.8169.emory.edu</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">9DT</subfield>
+      <subfield code="2">20080527</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="949">
+      <subfield code="h">HEAINPROC</subfield>
+      <subfield code="m">HEALTH</subfield>
+      <subfield code="k">SPECIALCOL</subfield>
+      <subfield code="l">SPECIALCOL</subfield>
+      <subfield code="t">BOOK</subfield>
+      <subfield code="i">070000118169</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="994">
+      <subfield code="a">C0</subfield>
+      <subfield code="b">EMM</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="096">
+      <subfield code="a">WT 500</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">ARMSTRONG FACTS 1826</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="d"/>
+      <subfield code="f">0</subfield>
+      <subfield code="i">070000118169</subfield>
+      <subfield code="j"/>
+      <subfield code="l">Special Collections</subfield>
+      <subfield code="m">Woodruff Health Sciences Center Library</subfield>
+      <subfield code="t">Book</subfield>
+      <subfield code="u">20080527</subfield>
+      <subfield code="w">OTHER</subfield>
+    </datafield>
+  </record>
+</collection>

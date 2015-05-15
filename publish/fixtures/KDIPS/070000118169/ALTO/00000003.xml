@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:schemaLocation="http://www.loc.gov/standards/alto/alto-v2.0.xsd">
+  <Description>
+    <MeasurementUnit>pixel</MeasurementUnit>
+    <sourceImageInformation>
+      <fileName>00000003.jp2</fileName>
+    </sourceImageInformation>
+    <OCRProcessing ID="Processing">
+      <ocrProcessingStep>
+        <processingStepSettings>Image Resolution:400</processingStepSettings>
+        <processingSoftware>
+          <softwareCreator>I2S Kirtas</softwareCreator>
+          <softwareName>Limb</softwareName>
+          <softwareVersion>1.0</softwareVersion>
+        </processingSoftware>
+      </ocrProcessingStep>
+    </OCRProcessing>
+  </Description>
+  <Styles>
+    <TextStyle ID="StyleId-0" FONTSIZE="4" FONTFAMILY="Arial" />
+    <TextStyle ID="StyleId-1" FONTSIZE="1" FONTFAMILY="Arial" />
+  </Styles>
+  <Layout>
+    <Page ID="2" PHYSICAL_IMG_NR="2" HEIGHT="3100" WIDTH="1700" ACCURACY="0.23375" QUALITY_DETAIL="2 words, 13 chars, 3 with recognition greater than 50% (23.08%)">
+      <TopMargin ID="P2_TM00001" HPOS="0" VPOS="0" WIDTH="1700" HEIGHT="954" />
+      <LeftMargin ID="P2_LM00001" HPOS="0" VPOS="954" WIDTH="592" HEIGHT="380" />
+      <RightMargin ID="P2_RM00001" HPOS="1148" VPOS="954" WIDTH="552" HEIGHT="380" />
+      <BottomMargin ID="P2_BM00001" HPOS="0" VPOS="1334" WIDTH="1700" HEIGHT="1766" />
+      <PrintSpace ID="P2_PS00001" HPOS="592" VPOS="954" WIDTH="556" HEIGHT="380">
+        <TextBlock ID="P2_TB00001" HPOS="592" VPOS="954" WIDTH="556" HEIGHT="380">
+          <TextLine ID="P2_TL00001" HPOS="1014" VPOS="1118" WIDTH="128" HEIGHT="24">
+            <String ID="P2_S00001" HPOS="1014" VPOS="1118" WIDTH="128" HEIGHT="24" STYLEREFS="StyleId-0" CONTENT="&lt;r&lt;Mili:i;i." WC="0.3675" CC="51051080777741" />
+          </TextLine>
+          <TextLine ID="P2_TL00002" HPOS="776" VPOS="1310" WIDTH="4" HEIGHT="2">
+            <String ID="P2_S00002" HPOS="776" VPOS="1310" WIDTH="4" HEIGHT="2" STYLEREFS="StyleId-1" CONTENT="■" WC="0.1" CC="9" />
+          </TextLine>
+        </TextBlock>
+      </PrintSpace>
+    </Page>
+  </Layout>
+</alto>

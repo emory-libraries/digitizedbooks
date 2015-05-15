@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+os.environ['HTTP_PROXY'] = 'http://skoda.library.emory.edu:3128/'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -35,8 +35,11 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'publish',
+    'background_task'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -69,17 +72,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'digitizedbooks.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 
 # Internationalization
@@ -118,3 +110,17 @@ STATIC_URL = '/static/'
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+# try:
+#     from localsettings import *
+# except ImportError:
+#     import sys
+#     print >>sys.stderr, '''Settings not defined. Please configure a version
+#         of localsettings.py for this site. See localsettings.py.dist for
+#         setup details.'''
+#     del sys
+
+try:
+    from localsettings import *
+except ImportError:
+    pass
