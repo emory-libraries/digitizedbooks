@@ -1,4 +1,0 @@
-"Level","Title","Page"
-"0","Cover","1"
-"0","Body","2"
-"0","Cover","12"
