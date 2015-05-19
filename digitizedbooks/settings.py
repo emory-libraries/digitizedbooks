@@ -27,6 +27,39 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#These setting should not be needed on staging and production
+EMAIL_HOST = 'smtp.service.emory.edu'
+#EMAIL_PORT = 465
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = ''
+#EMAIL_HOST_PASSWORD = ''
+SERVER_EMAIL = 'digbooks@emory.edu'
+
+# SHERPA/RoMEO API key. http://www.sherpa.ac.uk/romeo/apiregistry.php
+ROMEO_API_KEY = '5VEVFAXECkY'
+
+KDIP_DIR = '/mnt/lsdi2/ftp/test'
+
+HATHITRUST_CONTACT = 'jfenton@emory.edu'
+EMORY_CONTACT = 'jay.varner@emory.edu'
+ZEPHIR_CONTACT = 'jfenton@emory.edu'
+
+# Zephir FTP credentials
+ZEPHIR_FTP_HOST = 'ftp://ftps.cdlib.org/testrecs/'
+ZEPHIR_LOGIN = 'ht-emory'
+ZEPHIR_PW = 'ht-emory:W2012-emory.v1'
+
+BOXFOLDER = '1709834232'
+
+HT_STUB = 'http://hdl.handle.net/2027/emu.'
+
+# PID Manager credentials
+PIDMAN_HOST = 'https://testpid.library.emory.edu/' # the web root where we'll ask for pids
+PIDMAN_USER = 'digitizedbooks'
+PIDMAN_PASSWORD = 'b00ks!'
+PIDMAN_DOMAIN = 'https://testpid.library.emory.edu/domains/37/' # the full url of the domain we'll create pids in
+PIDMAN_POLICY = 'Deep Zoom'
+
 
 # Application definition
 
@@ -85,7 +118,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
