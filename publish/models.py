@@ -58,149 +58,6 @@ if not kdip_dir:
     logger.error(msg)
     raise Exception (msg)
 
-# def get_rights(self):
-
-#     """
-#     Get the Marc 21 bib record
-#     Rights validation is based on HT's Automated Bibliographic Rights Determination
-#     http://www.hathitrust.org/bib_rights_determination
-#     """
-    # rights = ''
-    # reason = ''
-    # try:
-    #     r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
-    #     bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
-
-    #     if not bib_rec.tag_583_5:
-    #         reason = 'No 583 tag in marc record.'
-    #         error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-    #         error.save()
-    #         #return 'No 583 tag in marc record.'
-
-    #     tag_008 = bib_rec.tag_008
-    #     date_type = tag_008[6]
-    #     date1 = tag_008[7:11]
-    #     date2 = tag_008[11:15]
-    #     pub_place = tag_008[15:18]
-    #     pub_place17 = tag_008[17]
-    #     govpub = tag_008[28]
-
-
-    #     # This is not really needed now but will be needed for Gov Docs
-    #     imprint = ''
-    #     if bib_rec.tag_260:
-    #         imprint = bib_rec.tag_260
-    #     elif bib_rec.tag_261a:
-    #         imprint = bib_rec.tag_261a
-    #     else:
-    #         imprint = 'mult_260a_non_us'
-    #         logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
-
-    #     # Make some lists of date types so we can decide which date
-    #     # to check.
-    #     use_date1 = ['r', 's', 'e', 'q', 'p']
-
-    #     use_date2 = ['t', 'm']
-
-    #     use_date3 = ['d', 'u', 'c', 'i', 'k']
-
-    #     date = ''
-    #     date_int = 0
-
-    #     if date_type in use_date1:
-    #         date = date1
-
-    #     elif date_type in use_date2:
-    #         date = date2
-
-    #     elif date_type in use_date3:
-    #         year_pattern = re.compile('1\d\d\d')
-    #         years = year_pattern.findall(self.note)
-    #         date = max(years)
-
-    #     else:
-    #         reason = 'Could not determine date for %s' % self.kdip_id
-    #         logger.error(reason)
-
-    #     try:
-    #         date_int = int(date)
-    #     except:
-    #         date_int = None
-
-    #     # Check to see if Emory thinks it is public domain
-    #     #if bib_rec.tag_583x == 'public domain':
-    #     # Now we go through HT's algorithm to determin rights
-    #     # US Docs
-    #     if pub_place17 == 'u':
-    #         # Gov Docs
-    #         if govpub == 'f':
-    #             logger.info('This is a government doc.')
-    #         #    if 'ntis' in inprint:
-    #         #        rights = 'ic'
-    #         #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
-    #         #        rights = 'ic'
-    #         #    #elif NIST-NSRDS (series field 400|410|411|440|490|800|810|811|830 contains 'nsrds' or 'national standard reference data series')
-    #         #    #    or Federal Reserve (author field 100|110|111|700|710|711 contains "federal reserve")
-    #         #    #    and pub_date >= 1923
-    #         #    else:
-    #         #        rights = 'pd'
-    #         ## Non gov docs
-    #         else:
-    #             if date_int is not None:
-    #                 if date_int >= 1873 and date_int <= 1922:
-    #                     rights = 'pdus'
-    #                 elif date_int < 1923:
-    #                     rights = 'pd'
-    #                 else:
-    #                     reason = ('%s was published in %s' % (self.kdip_id, date))
-    #                     logger.error(reason)
-    #                     rights = 'ic'
-    #             else:
-    #                 if date == '190u' or date == '191u':
-    #                     rights = 'pdus'
-    #                 else:
-    #                     reason = ('%s was published in %s' % (self.kdip_id, date))
-    #                     logger.error(reason)
-    #                     rights = 'ic'
-
-    #     # Non-US docs
-    #     else:
-    #         logger.info('%s is not a US publication' % (self.kdip_id))
-    #         if date_int is not None:
-    #             if date_int < 1873:
-    #                 rights = 'pd'
-    #             elif date_int >= 1873 and date_int < 1923:
-    #                 rights = 'pdus'
-    #             else:
-    #                 reason = '%s is non US and was published in %s' % (self.kdip_id, date)
-    #                 logger.error(reason)
-    #                 rights = 'ic'
-
-    #     if bib_rec.tag_583x != 'public domain':
-    #         rights = 'ic'
-    #         reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
-
-    #     # One last check for uncertain dates
-    #     if rights == 'ic':
-    #         if date[0:2] == '18' or date[0:2] == '17':
-    #             reason = None
-    #             rights = 'pd'
-    #         else:
-    #             rights = 'ic'
-
-    # except Exception as e:
-    #     reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
-    #     error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-    #     error.save()
-
-    # if rights is not 'ic':
-    #     logger.info('%s rights set to %s' % (self.kdip_id, rights))
-
-    # else:
-    #     error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-    #     error.save()
-
-
 def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
     Method to validate the Tiff files.
@@ -595,24 +452,24 @@ def get_date(tag_008, note):
 
     date_type = tag_008[6]
 
-    case0 = ['m', 'p', 'q']
+    group0 = ['m', 'p', 'q']
 
-    case1 = ['r', 's', 'e']
+    group1 = ['r', 's', 'e']
 
-    case2 = ['t']
+    group2 = ['t']
 
-    case3 = ['d', 'u', 'c', 'i', 'k']
+    group3 = ['d', 'u', 'c', 'i', 'k']
 
-    if date_type in case0:
+    if date_type in group0:
         # Return the latest year
         dates = [date1, date2]
         return max(dates)
 
-    elif date_type in case1:
+    elif date_type in group1:
         # Return Date1
         return date1
 
-    elif date_type in case2:
+    elif date_type in group2:
         # if Date2 exists and Date2 > Date1, return Date2
         # otherwise we'll return Date1 whcih might be `None`.
         if date2 is not None:
@@ -620,7 +477,7 @@ def get_date(tag_008, note):
         else:
             return date1
 
-    elif date_type in case3:
+    elif date_type in group3:
         # Look for groups of four digits that start with 1
         # and return the largest one.
         year_pattern = re.compile('1\d\d\d')
@@ -629,6 +486,21 @@ def get_date(tag_008, note):
 
     else:
         # If all fails, return `None`.
+        return None
+def get_rights(date, tag_583x):
+    """
+    Method to see if the 593x tag in the MARC is equal to `public domain`
+    or if the determined publicatin date is before 1923.
+    """
+    # Check to see if Emory thinks it is public domain
+    if tag_583x != 'public domain':
+        return '583X does not equal "public domain"'
+    # Based on the HT docs, as long as the volume is before 1923
+    # it's a go.
+    elif date > 1922:
+        return 'Published in %s' % (date)
+
+    else:
         return None
 
 
@@ -692,94 +564,34 @@ class KDip(models.Model):
         logger.info('Starting validation of %s' % (self.kdip_id))
         
         # Check the dates to see if the volume is in copyright.
-        rights = ''
-        reason = ''
         try:
-            r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
-            bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+            get_bib_rec = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
+            bib_rec = load_xmlobject_from_string(get_bib_rec.text.encode('utf-8'), Marc)
 
             if not bib_rec.tag_583_5:
                 reason = 'No 583 tag in marc record.'
                 error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
                 error.save()
 
-            #self.check_dates(bib_rec.tag_008)
-            date = get_date(bib_rec.tag_008, self.note)
             tag_008 = bib_rec.tag_008
-            # date_type = tag_008[6]
-            # date1 = tag_008[7:11]
-            # date2 = tag_008[11:15]
-            # pub_place = tag_008[15:18]
-            pub_place17 = tag_008[17]
-            #govpub = tag_008[28]
 
-
-            # This is not really needed now but will be needed for Gov Docs
-            imprint = ''
-            if bib_rec.tag_260:
-                imprint = bib_rec.tag_260
-            elif bib_rec.tag_261a:
-                imprint = bib_rec.tag_261a
-            else:
-                imprint = 'mult_260a_non_us'
-                logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
-
+            date = get_date(tag_008, self.note)
 
             if date is None:
                 reason = 'Could not determine date for %s' % self.kdip_id
                 logger.error(reason)
-            elif pub_place17 == 'u':
-                # Check to see if Emory thinks it is public domain
-                #if bib_rec.tag_583x == 'public domain':
-                # Now we go through HT's algorithm to determin rights
-                # US Docs
-                if date >= 1873 and date <= 1922:
-                    rights = 'pdus'
-                elif date < 1923:
-                    rights = 'pd'
-                else:
-                    reason = ('%s was published in %s' % (self.kdip_id, date))
-                    logger.error(reason)
-                    rights = 'ic'
 
-            # Non-US docs
             else:
-                logger.info('%s is not a US publication' % (self.kdip_id))
-                if date < 1873:
-                    rights = 'pd'
-                elif date >= 1873 and date < 1923:
-                    rights = 'pdus'
-                else:
-                    reason = '%s is non US and was published in %s' % (self.kdip_id, date)
-                    logger.error(reason)
-                    rights = 'ic'
-
-            if bib_rec.tag_583x != 'public domain':
-                rights = 'ic'
-                reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
-
-            # One last check for uncertain dates
-            if rights == 'ic':
-                if date[0:2] <= '18':
-                    reason = None
-                    rights = 'pd'
-                else:
-                    rights = 'ic'
+                rights = get_rights(date, bib_rec.tag_583x)
+                if rights is not None:
+                    logger.error(rights)
+                    error = ValidationError(kdip=self, error=rights, error_type="Inadequate Rights")
+                    error.save()
 
         except Exception as e:
-            reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
+            reason = 'Could not determine rights'
             error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
             error.save()
-
-        if rights is not 'ic':
-            logger.info('%s rights set to %s' % (self.kdip_id, rights))
-
-        else:
-            error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-            error.save()
-
-        # End of rights validation
-
 
         # all paths (except for TOC) are relitive to METS dir
         mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
@@ -794,13 +606,9 @@ class KDip(models.Model):
         logger.info('Cheking for Mets File.')
         if not os.path.exists(mets_file):
             reason = "Error: %s does not exist" % mets_file
-            #self.reason = reason
-            #self.status = 'invalid'
-            #self.save()
             logger.error(reason)
             error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
-            #return False
 
         logger.info('Loading Mets file into eulxml.')
         try:
@@ -810,13 +618,10 @@ class KDip(models.Model):
             logger.info('Cheking if Mets is valid.')
             if not mets.is_valid():
                 reason = "Error: %s is not valid" % mets_file
-                #self.reason = reason
-                #self.status = 'invalid'
-                #self.save()
                 logger.error(reason)
                 error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
                 error.save()
-                #return False
+
         except:
             reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
             error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
@@ -826,7 +631,6 @@ class KDip(models.Model):
         tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
-        #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
         logger.info('Checking tiffs.')
         for tiff in tiffs:
             logger.info('Sending %s for validation' % tiff)
