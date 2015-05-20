@@ -1,15 +1,15 @@
-from django.core.management.base import NoArgsCommand
+from django.core.management.base import BaseCommand
 from publish.models import KDip
 from django.conf import settings
 import requests
 from os import remove
 
-class Command(NoArgsCommand):
+class Command(BaseCommand):
     """
     Manage command to check if volume is live in HT
     """
 
-    def handle_noargs(self, **options):
+    def handle(self, **options):
         """
         HT returns a `200` for volumes that are live.
         If not found, `500` is returned
@@ -18,10 +18,10 @@ class Command(NoArgsCommand):
         ht_stub = getattr(settings, 'HT_STUB', None)
 
         for kdip in kdips:
-            print "what"
-
-            req = requests.get('%s%s' % (ht_stub, kdip.kdip_id))
-            if req.status_code is 200:
+            ht_url = '%s%s' % (ht_stub, kdip.kdip_id)
+            req = requests.get(ht_url)
+            print req.status_code
+            if req.status_code == 200:
                 kdip.accepted_by_ht = True
                 kdip.save()
 

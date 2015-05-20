@@ -64,6 +64,7 @@ PIDMAN_POLICY = 'Deep Zoom'
 # Application definition
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,7 +73,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'publish',
-    'background_task'
+    'background_task',
+    'django_auth_ldap'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -152,6 +154,11 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 #         of localsettings.py for this site. See localsettings.py.dist for
 #         setup details.'''
 #     del sys
+
+AUTHENTICATION_BACKENDS = (
+    'django_auth_ldap.backend.LDAPBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
 
 try:
     from localsettings import *
