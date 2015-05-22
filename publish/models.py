@@ -480,7 +480,7 @@ def get_date(tag_008, note):
     elif date_type in group3:
         # Look for groups of four digits that start with 1
         # and return the largest one.
-        year_pattern = re.compile('1\d\d\d')
+        year_pattern = re.compile(r'1\d\d\d')
         dates = year_pattern.findall(note)
         return max(dates)
 
@@ -562,15 +562,20 @@ class KDip(models.Model):
         '''
 
         logger.info('Starting validation of %s' % (self.kdip_id))
-        
+
         # Check the dates to see if the volume is in copyright.
         try:
-            get_bib_rec = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
-            bib_rec = load_xmlobject_from_string(get_bib_rec.text.encode('utf-8'), Marc)
+            get_bib_rec = requests.get( \
+                'http://library.emory.edu/uhtbin/get_bibrecord', \
+                params={'item_id': self.barcode})
+
+            bib_rec = load_xmlobject_from_string( \
+                get_bib_rec.text.encode('utf-8'), Marc)
 
             if not bib_rec.tag_583_5:
                 reason = 'No 583 tag in marc record.'
-                error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
+                error = ValidationError( \
+                    kdip=self, error=reason, error_type="Inadequate Rights")
                 error.save()
 
             tag_008 = bib_rec.tag_008
@@ -585,7 +590,8 @@ class KDip(models.Model):
                 rights = get_rights(date, bib_rec.tag_583x)
                 if rights is not None:
                     logger.error(rights)
-                    error = ValidationError(kdip=self, error=rights, error_type="Inadequate Rights")
+                    error = ValidationError( \
+                        kdip=self, error=rights, error_type="Inadequate Rights")
                     error.save()
 
         except Exception as e:
@@ -598,7 +604,7 @@ class KDip(models.Model):
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
-        toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
+        #toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
 
         tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
 
@@ -628,7 +634,7 @@ class KDip(models.Model):
             error.save()
 
         logger.info('Gathering tiffs.')
-        tif_status = None
+        #tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
         logger.info('Checking tiffs.')
@@ -637,8 +643,8 @@ class KDip(models.Model):
             tif_status = validate_tiffs(tiff, self.kdip_id, self.path, self)
 
         # validate each file of type ALTO and OCR
-        for f in mets.techmd:
-            file_path = "%s%s" % (mets_dir, f.href)
+        for file_ref in mets.techmd:
+            file_path = "%s%s" % (mets_dir, file_ref.href)
 
             if not os.path.exists(file_path):
                 reason = "Error: %s does not exist" % file_path
@@ -647,8 +653,10 @@ class KDip(models.Model):
                 error.save()
 
             # checksum good
-            with open(file_path, 'rb') as file:
-                if not f.checksum == md5(file.read()).hexdigest():
+            with open(file_path, 'rb') as file_to_check:
+                if not file_ref.checksum == \
+                    md5(file_to_check.read()).hexdigest():
+
                     reason = "Error: checksum does not match for %s" % file_path
 
                     logger.error(reason)

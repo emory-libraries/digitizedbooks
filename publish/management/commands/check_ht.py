@@ -1,6 +1,12 @@
+"""
+Manage command to check if the volume is live in HatiTrust. If it is
+we will updete the KDip with to make the attribute ``accepted_by_ht`
+`True` and then update the PID with the ht_url
+"""
 from django.core.management.base import BaseCommand
 from publish.models import KDip
 from django.conf import settings
+from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 import requests
 from os import remove
 
@@ -17,13 +23,17 @@ class Command(BaseCommand):
         kdips = KDip.objects.filter(accepted_by_ht=False)
         ht_stub = getattr(settings, 'HT_STUB', None)
 
+        client = DjangoPidmanRestClient()
+
         for kdip in kdips:
             ht_url = '%s%s' % (ht_stub, kdip.kdip_id)
             req = requests.get(ht_url)
-            print req.status_code
             if req.status_code == 200:
                 kdip.accepted_by_ht = True
                 kdip.save()
+
+                client.update_target( \
+                    type="ark", noid=kdip.pid, target_uri=ht_url)
 
                 kdip_dir = getattr(settings, 'KDIP_DIR', None)
                 try:
