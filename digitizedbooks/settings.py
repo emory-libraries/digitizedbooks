@@ -53,14 +53,6 @@ BOXFOLDER = '1709834232'
 
 HT_STUB = 'http://hdl.handle.net/2027/emu.'
 
-# PID Manager credentials
-PIDMAN_HOST = 'https://testpid.library.emory.edu/' # the web root where we'll ask for pids
-PIDMAN_USER = 'digitizedbooks'
-PIDMAN_PASSWORD = 'b00ks!'
-PIDMAN_DOMAIN = 'https://testpid.library.emory.edu/domains/37/' # the full url of the domain we'll create pids in
-PIDMAN_POLICY = 'Deep Zoom'
-
-
 # Application definition
 
 INSTALLED_APPS = (
