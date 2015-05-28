@@ -33,7 +33,7 @@ class Command(BaseCommand):
                 kdip.accepted_by_ht = True
                 kdip.save()
 
-                if kdip.pid is not None:
+                if kdip.pid:
                     # Update the PID in pidman the the HathiTrust URL.
                     client.update_target( \
                         type="ark", noid=kdip.pid, target_uri=ht_url)

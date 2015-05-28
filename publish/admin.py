@@ -49,7 +49,7 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['kdip_id', 'pid', 'status', 'path']
+    readonly_fields = ['kdip_id', 'pid', 'status', 'accepted_by_ht', 'accepted_by_ia', 'path']
     exclude = ['note', 'reason', 'create_date']
     #can_delete = False
     extra = 0

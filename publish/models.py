@@ -27,20 +27,17 @@ from django.core.mail import send_mail
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField, NodeField
-from pidservices.clients import parse_ark
-from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 from PIL import Image
 
 import logging
-import zipfile
 import yaml
 import glob
-import box
-import json
-import subprocess
-import hashlib
 from ftplib import FTP_TLS
+import celery
+
+#from digitizedbooks.publish.tasks import upload_for_ht
+import subprocess
 
 logger = logging.getLogger(__name__)
 
@@ -796,6 +793,7 @@ class Job(models.Model):
         ('ready for zephir', 'Ready for Zephir'),
         ('waiting on zephir', 'Waiting on Zephir'),
         ('ready for hathi', 'Ready for Hathi'),
+        ('uploading', 'Uploading to HathiTrust'),
         ('failed', 'Upload Failed'),
         ('being processed', 'Being Processed'),
         ('processed', 'Processed')
@@ -813,156 +811,6 @@ class Job(models.Model):
         return self.name
 
 
-    # @background(schedule=10)
-    # def upload(kdips, job_id):
-
-    #     def zipdir(path, zip):
-    #         for root, dirs, files in os.walk(path):
-    #             for file in files:
-    #                 zip.write(os.path.join(root, file))
-
-    #     def checksumfile(checkfile, process_dir):
-    #         with open(checkfile, 'rb') as file:
-    #             with open('%s/checksum.md5' % (process_dir), 'a') as outfile:
-    #                 if 'alto' in checkfile:
-    #                     checkfile = checkfile.replace('.alto', '')
-    #                 filename = checkfile.split('/')
-    #                 outfile.write('%s %s\n' % ((md5(file.read()).hexdigest()), filename[-1]))
-
-    #     def checksumverify(checksum, process_dir, file):
-    #         with open('%s/%s' % (process_dir, file), 'rb') as file:
-    #             if md5(file.read()).hexdigest() == checksum:
-    #                 return True
-    #             else:
-    #                 return False
-
-    #     job = Job.objects.get(id=job_id)
-
-    #     uploaded_files = []
-    #     status = ''
-
-    #     for process_kdip in kdips:
-    #         kdip = KDip.objects.get(id=process_kdip)
-
-    #         client = DjangoPidmanRestClient()
-    #         pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
-    #         pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
-
-    #         ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
-    #         naan = parse_ark(ark)['naan']
-    #         noid = parse_ark(ark)['noid']
-
-    #         kdip.pid = noid
-    #         kdip.save()
-
-    #         logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
-
-    #         #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
-    #         if not os.path.exists('%s/HT' % kdip_dir):
-    #             os.mkdir('%s/HT' % kdip_dir)
-    #         process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
-
-    #         if not os.path.exists(process_dir):
-    #             os.makedirs(process_dir)
-
-            
-
-    #         tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
-    #         for tiff in tiffs:
-    #             checksumfile(tiff, process_dir)
-    #             shutil.copy(tiff, process_dir)
-
-    #         altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
-    #         for alto in altos:
-    #             checksumfile(alto, process_dir)
-    #             shutil.copy(alto, process_dir)
-    #             if 'alto' in alto:
-    #                 filename = alto.split('/')
-    #                 page,crap,ext = filename[-1].split('.')
-    #                 shutil.move(alto, '%s/%s.%s' % (process_dir, page, ext))
-    #         #
-    #         #new_altos = glob.glob('%s/*.alto.xml' % (process_dir))
-    #         #for new_alto in new_altos:
-    #         #    page,crap,ext = new_alto.split('.')
-    #         #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
-
-    #         ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
-    #         for ocr in ocrs:
-    #             checksumfile(ocr, process_dir)
-    #             shutil.copy(ocr, process_dir)
-
-
-    #         meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
-    #         marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
-    #         mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
-
-    #         checksumfile(meta_yml, process_dir)
-    #         checksumfile(marc_xml, process_dir)
-    #         checksumfile(mets_xml, process_dir)
-
-    #         shutil.copy(meta_yml, process_dir)
-
-    #         shutil.copy(marc_xml, process_dir)
-
-    #         shutil.copy(mets_xml, process_dir)
-
-    #         with open('%s/checksum.md5' % process_dir) as f:
-    #             content = f.readlines()
-    #             for line in content:
-    #                 parts = line.split()
-    #                 verify = checksumverify(parts[0], process_dir, parts[1])
-    #                 if verify is not True:
-    #                     logger.error('Checksum check failes for %s.' % process_dir  )
-
-    #         zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
-    #         os.chdir('%s' % (process_dir))
-    #         zipdir('.', zipf)
-    #         zipf.close()
-    #         # Delete the process directory to save space
-    #         shutil.rmtree(process_dir)
-
-    #         token = BoxToken.objects.get(id=1)
-
-    #         response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
-
-    #         token.refresh_token = response['refresh_token']
-    #         token.save()
-
-    #         logger.info('New refresh token: %s' % (response['refresh_token']))
-
-    #         box_folder = getattr(settings, 'BOXFOLDER', None)
-
-    #         url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=%s' % (response['access_token'], process_dir, box_folder)
-
-    #         upload = subprocess.check_output('curl %s' % (url), shell=True)
-
-    #         upload_response = json.loads(upload)
-
-    #         try:
-    #             sha1 = hashlib.sha1()
-    #             local_file = open('%s.zip' % (process_dir), 'rb')
-    #             sha1.update(local_file.read())
-    #             local_file.close()
-
-    #             if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
-    #                 status = 'being processed'
-    #                 #uploaded_files.append('ark+=%s=%s' % (naan, noid))
-    #                 uploaded_files.append(kdip.kdip_id)
-
-    #         except Exception as e:
-    #             logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
-    #             status = 'failed'
-
-    #     if status == 'being processed':
-    #         job.status = 'being processed'
-    #         job.save()
-    #         kdip_list = '\n'.join(map(str, uploaded_files))
-    #         send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
-    #         send_from = getattr(settings, 'EMORY_CONTACT', None)
-    #         send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
-
-
-
     class Meta:
         ordering = ['id']
 
@@ -975,7 +823,11 @@ class Job(models.Model):
             for kdip in kdips:
                 uploaded_files.append(kdip.id)
 
-            self.upload(uploaded_files, self.id)
+            # Semd volumes to the upload task.
+            self.status = 'uploading'
+            #celery.current_app.send_task('digitizedbooks.publish.tasks.upload_for_ht', (uploaded_files, self.id))
+            from publish.tasks import upload_for_ht
+            upload_for_ht.delay(uploaded_files, self.id)
 
         elif self.status == 'ready for zephir':
             kdips = KDip.objects.filter(job=self.id)
@@ -1026,7 +878,7 @@ class Job(models.Model):
 
             # FTP the file
             upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
-            upload = subprocess.check_output(upload_cmd, shell=True)
+            upload_to_z = subprocess.check_output(upload_cmd, shell=True)
 
             # Create the body of the email
             body = 'file name=%s.xml\n' % self.name

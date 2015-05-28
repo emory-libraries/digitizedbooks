@@ -65,7 +65,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'publish',
-    'background_task',
+    'djcelery',
     'django_auth_ldap'
 )
 
@@ -127,7 +127,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, '', 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -156,3 +156,12 @@ try:
     from localsettings import *
 except ImportError:
     pass
+
+from celery import app
+app.conf.update(
+    CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend',
+)
+
+CELERY_ROUTES = {
+    'digitizedbooks.publish.tasks.upload_for_ht': {'queue': 'digitizedbooks'}
+}
