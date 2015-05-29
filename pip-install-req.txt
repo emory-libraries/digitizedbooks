@@ -15,3 +15,4 @@ https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.1.x/lastSucces
 django-admin-bootstrapped
 django-celery
 django-kombu
+pysftp

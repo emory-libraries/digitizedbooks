@@ -35,10 +35,10 @@ class ValidationErrorInline(admin.TabularInline):
 
 
 class KDipAdmin(admin.ModelAdmin):
-    list_display = ['kdip_id', 'status', 'note', 'errors', 'accepted_by_ht', 'job',]
+    list_display = ['kdip_id', 'status', 'note', 'errors', 'accepted_by_ia', 'accepted_by_ht', 'job',]
     list_link = ['kdip_id']
     list_filter = ['status', 'job', 'accepted_by_ht', 'accepted_by_ia']
-    list_editable = ['job', 'note', 'status']
+    list_editable = ['job', 'note', 'status', 'accepted_by_ia']
     readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors', 'accepted_by_ht', 'ht_url']
     search_fields = ['path', 'kdip_id', 'note', 'pid']
     inlines = [ValidationErrorInline]

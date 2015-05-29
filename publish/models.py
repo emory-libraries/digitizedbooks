@@ -395,12 +395,16 @@ class Marc(MarcBase):
 
     tag_583_5 = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="5"]/text()')
 
+    tag_583_a = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="a"]/text()')
+
     tag_008 = StringField('marc:record/marc:controlfield[@tag="008"]')
 
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
 
     tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
+
+    fied_999 = StringField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
@@ -512,6 +516,28 @@ def update_999a(path, kdip_id, enumcron):
     with open(marc_file, 'w') as marcxml:
         marcxml.write(marc.serialize(pretty=True))
 
+def remove_all_999_fields(marc_xml):
+    """
+    Method used by the check_ht manage command to remove all 999
+    fileds from the MARC XML before going to Aleph
+    """
+    try:
+        marc_xml.tag_999 = ''
+    except:
+        pass
+    return marc_xml
+
+def update_583(marc_xml):
+    """
+    Method used by check_ht manage command to upddate the
+    583 filed to `ditigized`.
+    """
+    try:
+        marc_xml.tag_583_a = 'digitized'
+    except:
+        pass
+    return marc_xml
+
 def create_yaml(capture_agent, path, kdip_id):
     """
     Method to create a YAML file with some basic default
@@ -563,8 +589,8 @@ class KDip(models.Model):
     path = models.CharField(max_length=400, blank=True)
     pid = models.CharField(max_length=5, blank=True)
     notes = models.TextField(blank=True, default='')
-    accepted_by_ht = models.BooleanField(default=False, verbose_name='Accepted by HT')
-    accepted_by_ia = models.BooleanField(default=False, verbose_name='Accepted by IA')
+    accepted_by_ht = models.BooleanField(default=False, verbose_name='HT')
+    accepted_by_ia = models.BooleanField(default=False, verbose_name='IA')
 
     @property
     def barcode(self):
@@ -672,25 +698,28 @@ class KDip(models.Model):
 
         # validate each file of type ALTO and OCR
         for file_ref in mets.techmd:
-            file_path = "%s%s" % (mets_dir, file_ref.href)
 
-            if not os.path.exists(file_path):
-                reason = "Error: %s does not exist" % file_path
-                logger.error(reason)
-                error = ValidationError(kdip=self, error=reason, error_type="Missing Tiff or Alto")
-                error.save()
+            # Olny get the Tiffs.
+            if '.tif' in file_ref.href.lower():
+                file_path = "%s%s" % (mets_dir, file_ref.href)
 
-            # checksum good
-            with open(file_path, 'rb') as file_to_check:
-                if not file_ref.checksum == \
-                    md5(file_to_check.read()).hexdigest():
-
-                    reason = "Error: checksum does not match for %s" % file_path
-
+                if not os.path.exists(file_path):
+                    reason = "Error: %s does not exist" % file_path
                     logger.error(reason)
-
-                    error = ValidationError(kdip=self, error=reason, error_type="Checksum")
+                    error = ValidationError(kdip=self, error=reason, error_type="Missing Tiff")
                     error.save()
+
+                # checksum good
+                with open(file_path, 'rb') as file_to_check:
+                    if not file_ref.checksum == \
+                        md5(file_to_check.read()).hexdigest():
+
+                        reason = "Error: checksum does not match for %s" % file_path
+
+                        logger.error(reason)
+
+                        error = ValidationError(kdip=self, error=reason, error_type="Checksum")
+                        error.save()
 
         # if it gets here were are good
         if self.validationerror_set.all():
@@ -738,15 +767,14 @@ class KDip(models.Model):
 
             try:
                 # lookkup bib record for note field
-
                 bib_rec = load_bib_record(k[:12])
 
-
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
-                for datafield in bib_rec.tag_999:
-                    i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
+                for field_999 in bib_rec.tag_999:
+                    i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
+                        namespaces=Marc.ROOT_NAMESPACES)[0].text
                     if i999 != k[:12]:
-                        bib_rec.tag_999.remove(datafield)
+                        bib_rec.tag_999.remove(field_999)
 
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
@@ -763,9 +791,11 @@ class KDip(models.Model):
                         marcxml.write(bib_rec.serialize(pretty=True))
 
                     if kwargs.get('kdip_enumcron'):
-                        print kwargs.get('kdip_enumcron')
                         kdip.note = kwargs.get('kdip_enumcron')
                         update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
+
+                    if kwargs.get('kdip_pid'):
+                        kdip.pid = kwargs.get('kdip_pid')
 
                     try:
                         os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
@@ -806,7 +836,10 @@ class KDip(models.Model):
 
         if self.status == 'reprocess':
             KDip.objects.filter(id = self.id).delete()
-            KDip.load(kdip_id=self.id, kdip_path=self.path, kdip_enumcron=self.note)
+            KDip.load(kdip_id=self.id, \
+                        kdip_path=self.path, \
+                        kdip_enumcron=self.note, \
+                        kdip_pid=self.pid)
             #self.validate()
             return HttpResponseRedirect('/admin/publish/kdip/?q=%s' % self.kdip_id)
 

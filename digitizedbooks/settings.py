@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-os.environ['HTTP_PROXY'] = 'http://skoda.library.emory.edu:3128/'
+#os.environ['HTTP_PROXY'] = 'http://skoda.library.emory.edu:3128/'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -39,15 +39,6 @@ SERVER_EMAIL = 'digbooks@emory.edu'
 ROMEO_API_KEY = '5VEVFAXECkY'
 
 KDIP_DIR = '/mnt/lsdi2/ftp/test'
-
-HATHITRUST_CONTACT = 'jfenton@emory.edu'
-EMORY_CONTACT = 'jay.varner@emory.edu'
-ZEPHIR_CONTACT = 'jfenton@emory.edu'
-
-# Zephir FTP credentials
-ZEPHIR_FTP_HOST = 'ftp://ftps.cdlib.org/testrecs/'
-ZEPHIR_LOGIN = 'ht-emory'
-ZEPHIR_PW = 'ht-emory:W2012-emory.v1'
 
 BOXFOLDER = '1709834232'
 
