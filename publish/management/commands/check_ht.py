@@ -37,6 +37,9 @@ class Command(BaseCommand):
                     # Update the PID in pidman the the HathiTrust URL.
                     client.update_target( \
                         type="ark", noid=kdip.pid, target_uri=ht_url)
+                    # Add a new qualifier for HathiTrust.
+                    client.update_target( \
+                        type="ark", noid=kdip.pid, qualifier="HT", target_uri=ht_url)
 
                 # Try to remove the zip file that had been sent the HT.
                 # We except the `OSError` because the file might have

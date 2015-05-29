@@ -22,7 +22,8 @@ from hashlib import md5
 from django.conf import settings
 from django.db import models
 from django.core.mail import send_mail
-#from background_task import background
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
@@ -494,12 +495,46 @@ def get_rights(date, tag_583x):
         return '583X does not equal "public domain"'
     # Based on the HT docs, as long as the volume is before 1923
     # it's a go.
-    elif date > 1922:
+    elif int(date) > 1922:
         return 'Published in %s' % (date)
 
     else:
         return None
 
+def update_999a(path, kdip_id, enumcron):
+    """
+    Method to updae the 999a MARC field if/when it is changed
+    in the database.
+    """
+    marc_file = '%s/%s/marc.xml' %(path, kdip_id)
+    marc = load_xmlobject_from_file(marc_file, Marc)
+    marc.tag_999a = enumcron
+    with open(marc_file, 'w') as marcxml:
+        marcxml.write(marc.serialize(pretty=True))
+
+def create_yaml(capture_agent, path, kdip_id):
+    """
+    Method to create a YAML file with some basic default
+    metadata for HathiTrust
+    """
+    yaml_data = {}
+    yaml_data['capture_agent'] = capture_agent
+    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
+    yaml_data['scanning_order'] = 'left-to-right'
+    yaml_data['reading_order'] = 'left-to-right'
+    with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
+        outfile.write(yaml.dump(yaml_data, default_flow_style=False))
+
+def load_bib_record(barcode):
+    """
+    Method to load MARC XML from Aleph
+    """
+    get_bib_rec = requests.get( \
+        'http://library.emory.edu/uhtbin/get_bibrecord', \
+        params={'item_id': barcode})
+
+    return load_xmlobject_from_string( \
+        get_bib_rec.text.encode('utf-8'), Marc)
 
 # DB Models
 class KDip(models.Model):
@@ -562,27 +597,25 @@ class KDip(models.Model):
 
         # Check the dates to see if the volume is in copyright.
         try:
-            get_bib_rec = requests.get( \
-                'http://library.emory.edu/uhtbin/get_bibrecord', \
-                params={'item_id': self.barcode})
+            # Load the MARC XML
+            bib_rec = load_bib_record(self.barcode)
 
-            bib_rec = load_xmlobject_from_string( \
-                get_bib_rec.text.encode('utf-8'), Marc)
-
+            # Check if there is a subfied 5 in the 583 tag
             if not bib_rec.tag_583_5:
                 reason = 'No 583 tag in marc record.'
                 error = ValidationError( \
                     kdip=self, error=reason, error_type="Inadequate Rights")
                 error.save()
 
-            tag_008 = bib_rec.tag_008
+            # Get the published date
+            date = get_date(bib_rec.tag_008, self.note)
 
-            date = get_date(tag_008, self.note)
-
+            # If we don't find a date, note the error.
             if date is None:
                 reason = 'Could not determine date for %s' % self.kdip_id
                 logger.error(reason)
 
+            # Otherwise, see if it is in copyright.
             else:
                 rights = get_rights(date, bib_rec.tag_583x)
                 if rights is not None:
@@ -591,21 +624,19 @@ class KDip(models.Model):
                         kdip=self, error=rights, error_type="Inadequate Rights")
                     error.save()
 
-        except Exception as e:
+        except Exception as rights_error:
             reason = 'Could not determine rights'
             error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
             error.save()
 
-        # all paths (except for TOC) are relitive to METS dir
+        # all paths are relitive to METS dir
         mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
-        #toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
-
         tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
 
-        #Mets file exists
+        # Mets file exists
         logger.info('Cheking for Mets File.')
         if not os.path.exists(mets_file):
             reason = "Error: %s does not exist" % mets_file
@@ -675,35 +706,41 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
+        if kwargs.get('kdip'):
+            kdip_list[kwargs.get(('kdip_id'))] = kwargs.get('kdip_path')
+        
+        else:
+            exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
-        for path, subdirs, files in os.walk(kdip_dir):
-            for dir in subdirs:
-                kdip = re.search(r"^[0-9]", dir)
-                full_path = os.path.join(path, dir)
+            for path, subdirs, files in os.walk(kdip_dir):
+                for dir in subdirs:
+                    kdip = re.search(r"^[0-9]", dir)
+                    full_path = os.path.join(path, dir)
 
-                # Only process new KDips or ones.
-                try:
-                    if 'test' not in path:
-                        processed_KDip = KDip.objects.get(kdip_id = dir)
-                        # Check to see if the a KDip has moved and update the path.
-                        if processed_KDip != path:
-                            processed_KDip.path = path
-                            processed_KDip.save()
-                except KDip.DoesNotExist:
-                    if kdip and full_path not in exclude:
-                        kdip_list[dir] = path
+                    # Only process new KDips or ones.
+                    try:
+                        if 'test' not in path:
+                            processed_KDip = KDip.objects.get(kdip_id = dir)
+                            # Check to see if the a KDip has moved and update the path.
+                            if processed_KDip != path:
+                                processed_KDip.path = path
+                                processed_KDip.save()
+                    except KDip.DoesNotExist:
+                        if kdip and full_path not in exclude:
+                            kdip_list[dir] = path
 
         # Empty list to gather errant KDips
         bad_kdips = []
 
         # create the KDIP is it does not exits
+        print kdip_list
         for k in kdip_list:
 
             try:
                 # lookkup bib record for note field
-                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
-                bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+
+                bib_rec = load_bib_record(k[:12])
+
 
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
                 for datafield in bib_rec.tag_999:
@@ -716,26 +753,26 @@ class KDip(models.Model):
                     'note': bib_rec.note(k[:12]),
                     'path': kdip_list[k]
                 }
+
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
 
-
+                    # Write the marc.xml to disk.
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
+
+                    if kwargs.get('kdip_enumcron'):
+                        print kwargs.get('kdip_enumcron')
+                        kdip.note = kwargs.get('kdip_enumcron')
+                        update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
 
                     try:
                         os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
                     except OSError:
                         pass
 
-                    yaml_data = {}
-                    yaml_data['capture_agent'] = str(bib_rec.tag_583_5)
-                    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-                    yaml_data['scanning_order']= 'left-to-right'
-                    yaml_data['reading_order'] = 'left-to-right'
-                    with open('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id), 'a') as outfile:
-                        outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
+                    create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
                     kdip.validate()
 
@@ -768,20 +805,18 @@ class KDip(models.Model):
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            #KDip.objects.filter(id = self.id).delete()
-            #KDip.load()
-            self.validate()
+            KDip.objects.filter(id = self.id).delete()
+            KDip.load(kdip_id=self.id, kdip_path=self.path, kdip_enumcron=self.note)
+            #self.validate()
+            return HttpResponseRedirect('/admin/publish/kdip/?q=%s' % self.kdip_id)
 
         else:
             if self.pk is not None:
                 # If the note has been updated we need to write that to the Marc file.
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
-                    marc_file = '%s/%s/marc.xml' %(self.path, self.kdip_id)
-                    marc = load_xmlobject_from_file(marc_file, Marc)
-                    marc.tag_999a = self.note
-                    with open(marc_file, 'w') as marcxml:
-                        marcxml.write(marc.serialize(pretty=True))
+                    update_999a(self.path, self.kdip_id, self.note)
+                    
             super(KDip, self).save(*args, **kwargs)
 
 

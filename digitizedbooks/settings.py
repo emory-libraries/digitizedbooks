@@ -66,7 +66,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'publish',
     'djcelery',
-    'django_auth_ldap'
+    'django_auth_ldap',
+    'kombu.transport.django'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -156,12 +157,3 @@ try:
     from localsettings import *
 except ImportError:
     pass
-
-from celery import app
-app.conf.update(
-    CELERY_RESULT_BACKEND='djcelery.backends.database:DatabaseBackend',
-)
-
-CELERY_ROUTES = {
-    'digitizedbooks.publish.tasks.upload_for_ht': {'queue': 'digitizedbooks'}
-}
