@@ -484,7 +484,7 @@ def get_date(tag_008, note):
         # and return the largest one.
         year_pattern = re.compile(r'1\d\d\d')
         dates = year_pattern.findall(note)
-        return max(dates)
+        return int(max(dates))
 
     else:
         # If all fails, return `None`.
@@ -499,7 +499,7 @@ def get_rights(date, tag_583x):
         return '583X does not equal "public domain"'
     # Based on the HT docs, as long as the volume is before 1923
     # it's a go.
-    elif int(date) > 1922:
+    elif date > 1922:
         return 'Published in %s' % (date)
 
     else:
@@ -551,12 +551,24 @@ def create_yaml(capture_agent, path, kdip_id):
     with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
         outfile.write(yaml.dump(yaml_data, default_flow_style=False))
 
+
 def load_bib_record(barcode):
     """
     Method to load MARC XML from Aleph
     """
     get_bib_rec = requests.get( \
         'http://library.emory.edu/uhtbin/get_bibrecord', \
+        params={'item_id': barcode})
+
+    return load_xmlobject_from_string( \
+        get_bib_rec.text.encode('utf-8'), Marc)
+
+def load_local_bib_record(barcode):
+    """
+    Method to load local version of MARC XML from Aleph
+    """
+    get_bib_rec = requests.get( \
+        'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \
@@ -864,7 +876,8 @@ class Job(models.Model):
         ('uploading', 'Uploading to HathiTrust'),
         ('failed', 'Upload Failed'),
         ('being processed', 'Being Processed'),
-        ('processed', 'Processed')
+        ('processed', 'Processed'),
+        ('processed by ht', 'Processed by HT')
     )
 
     name = models.CharField(max_length=100, unique=True)
