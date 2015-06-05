@@ -22,25 +22,23 @@ from hashlib import md5
 from django.conf import settings
 from django.db import models
 from django.core.mail import send_mail
-from background_task import background
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField, NodeField
-from pidservices.clients import parse_ark
-from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 
 from PIL import Image
 
 import logging
-import zipfile
 import yaml
 import glob
-import box
-import json
-import subprocess
-import hashlib
 from ftplib import FTP_TLS
+import celery
+
+#from digitizedbooks.publish.tasks import upload_for_ht
+import subprocess
 
 logger = logging.getLogger(__name__)
 
@@ -57,151 +55,6 @@ if not kdip_dir:
     msg = "Failed to configure KDIP_DIR in localsettings. Please do so now otherwise most things will not work."
     logger.error(msg)
     raise Exception (msg)
-
-def get_rights(self):
-
-    def foo(foo):
-        return foo
-    """
-    Get the Marc 21 bib record
-    Rights validation is based on HT's Automated Bibliographic Rights Determination
-    http://www.hathitrust.org/bib_rights_determination
-    """
-    rights = ''
-    reason = ''
-    try:
-        r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': self.barcode})
-        bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
-
-        if not bib_rec.tag_583_5:
-            reason = 'No 583 tag in marc record.'
-            error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-            error.save()
-            #return 'No 583 tag in marc record.'
-
-        tag_008 = bib_rec.tag_008
-        date_type = tag_008[6]
-        date1 = tag_008[7:11]
-        date2 = tag_008[11:15]
-        pub_place = tag_008[15:18]
-        pub_place17 = tag_008[17]
-        govpub = tag_008[28]
-
-
-        # This is not really needed now but will be needed for Gov Docs
-        imprint = ''
-        if bib_rec.tag_260:
-            imprint = bib_rec.tag_260
-        elif bib_rec.tag_261a:
-            imprint = bib_rec.tag_261a
-        else:
-            imprint = 'mult_260a_non_us'
-            logger.warn('%s flaged as %s' % (self.kdip_id, imprint))
-
-        # Make some lists of date types so we can decide which date
-        # to check.
-        use_date1 = ['r', 's', 'e', 'q', 'p']
-
-        use_date2 = ['t', 'm']
-
-        use_date3 = ['d', 'u', 'c', 'i', 'k']
-
-        date = ''
-        date_int = 0
-
-        if date_type in use_date1:
-            date = date1
-
-        elif date_type in use_date2:
-            date = date2
-
-        elif date_type in use_date3:
-            year_pattern = re.compile('1\d\d\d')
-            years = year_pattern.findall(self.note)
-            date = max(years)
-
-        else:
-            reason = 'Could not determine date for %s' % self.kdip_id
-            logger.error(reason)
-
-        try:
-            date_int = int(date)
-        except:
-            date_int = None
-
-        # Check to see if Emory thinks it is public domain
-        #if bib_rec.tag_583x == 'public domain':
-        # Now we go through HT's algorithm to determin rights
-        # US Docs
-        if pub_place17 == 'u':
-            # Gov Docs
-            if govpub == 'f':
-                logger.info('This is a government doc.')
-            #    if 'ntis' in inprint:
-            #        rights = 'ic'
-            #    elif 'smithsonian' in tag_110 and date1 >= 1923: # or 130, 260 or 710
-            #        rights = 'ic'
-            #    #elif NIST-NSRDS (series field 400|410|411|440|490|800|810|811|830 contains 'nsrds' or 'national standard reference data series')
-            #    #    or Federal Reserve (author field 100|110|111|700|710|711 contains "federal reserve")
-            #    #    and pub_date >= 1923
-            #    else:
-            #        rights = 'pd'
-            ## Non gov docs
-            else:
-                if date_int is not None:
-                    if date_int >= 1873 and date_int <= 1922:
-                        rights = 'pdus'
-                    elif date_int < 1923:
-                        rights = 'pd'
-                    else:
-                        reason = ('%s was published in %s' % (self.kdip_id, date))
-                        logger.error(reason)
-                        rights = 'ic'
-                else:
-                    if date == '190u' or date == '191u':
-                        rights = 'pdus'
-                    else:
-                        reason = ('%s was published in %s' % (self.kdip_id, date))
-                        logger.error(reason)
-                        rights = 'ic'
-
-        # Non-US docs
-        else:
-            logger.info('%s is not a US publication' % (self.kdip_id))
-            if date_int is not None:
-                if date_int < 1873:
-                    rights = 'pd'
-                elif date_int >= 1873 and date_int < 1923:
-                    rights = 'pdus'
-                else:
-                    reason = '%s is non US and was published in %s' % (self.kdip_id, date)
-                    logger.error(reason)
-                    rights = 'ic'
-
-        if bib_rec.tag_583x != 'public domain':
-            rights = 'ic'
-            reason = '583X does not equal "public domain" for %s' % (self.kdip_id)
-
-        # One last check for uncertain dates
-        if rights == 'ic':
-            if date[0:2] == '18' or date[0:2] == '17':
-                reason = None
-                rights = 'pd'
-            else:
-                rights = 'ic'
-
-    except Exception as e:
-        reason = 'Could not determine rights for %s: %s' % (self.kdip_id, e)
-        error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-        error.save()
-
-    if rights is not 'ic':
-        logger.info('%s rights set to %s' % (self.kdip_id, rights))
-
-    else:
-        error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
-        error.save()
-
 
 def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
     '''
@@ -437,11 +290,14 @@ def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
             error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
             error.save()
 
+        image.close()
+
     except:
         status = 'Error \'%s\' while validating %s' % (sys.exc_info()[1], tiff_file)
         logger.error(status)
         error = ValidationError(kdip=kdipID, error=status, error_type='Bad Tiff File')
         error.save()
+        image.close()
 
 
 
@@ -539,12 +395,16 @@ class Marc(MarcBase):
 
     tag_583_5 = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="5"]/text()')
 
+    tag_583_a = StringField('marc:record/marc:datafield[@tag="583"][@ind1="1"]/marc:subfield[@code="a"]/text()')
+
     tag_008 = StringField('marc:record/marc:controlfield[@tag="008"]')
 
     tag_260 = StringField('marc:record/marc:datafield[@tag="260"]')
     tag_261a = StringField('marc:record/marc:datafield[@tag="264"][@ind2="1"]/marc:subfield[@code="a"]/text()')
 
     tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
+
+    fied_999 = StringField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
@@ -573,7 +433,146 @@ class Alto(XmlObject):
     XSD_SCHEMA = 'http://www.loc.gov/standards/alto/alto-v2.0.xsd'
     ROOT_NAME = 'alto'
 
+def date_to_int(date):
+    try:
+        return int(date)
+    except:
+        return None
 
+def get_date(tag_008, note):
+    '''
+    Figure out if we should use Date1, Date2 or the largest date looking
+    thing in the EnumCron. This method is based on HathiTrust's docs:
+    http://www.hathitrust.org/bib_rights_determination
+    '''
+
+    # Try to turn the date into an int. If that fails we will get
+    # `None` back. We are also replacing any characters (but not spaces)
+    # to `9` as per the HT documation.
+    date1 = date_to_int(re.sub(r'[^\d\s]', '9', tag_008[7:11]))
+    date2 = date_to_int(re.sub(r'[^\d\s]', '9', tag_008[11:15]))
+
+    date_type = tag_008[6]
+
+    group0 = ['m', 'p', 'q']
+
+    group1 = ['r', 's', 'e']
+
+    group2 = ['t']
+
+    group3 = ['d', 'u', 'c', 'i', 'k']
+
+    if date_type in group0:
+        # Return the latest year
+        dates = [date1, date2]
+        return max(dates)
+
+    elif date_type in group1:
+        # Return Date1
+        return date1
+
+    elif date_type in group2:
+        # if Date2 exists and Date2 > Date1, return Date2
+        # otherwise we'll return Date1 whcih might be `None`.
+        if date2 is not None:
+            return date2
+        else:
+            return date1
+
+    elif date_type in group3:
+        # Look for groups of four digits that start with 1
+        # and return the largest one.
+        year_pattern = re.compile(r'1\d\d\d')
+        dates = year_pattern.findall(note)
+        return int(max(dates))
+
+    else:
+        # If all fails, return `None`.
+        return None
+def get_rights(date, tag_583x):
+    """
+    Method to see if the 593x tag in the MARC is equal to `public domain`
+    or if the determined publicatin date is before 1923.
+    """
+    # Check to see if Emory thinks it is public domain
+    if tag_583x != 'public domain':
+        return '583X does not equal "public domain"'
+    # Based on the HT docs, as long as the volume is before 1923
+    # it's a go.
+    elif date > 1922:
+        return 'Published in %s' % (date)
+
+    else:
+        return None
+
+def update_999a(path, kdip_id, enumcron):
+    """
+    Method to updae the 999a MARC field if/when it is changed
+    in the database.
+    """
+    marc_file = '%s/%s/marc.xml' %(path, kdip_id)
+    marc = load_xmlobject_from_file(marc_file, Marc)
+    marc.tag_999a = enumcron
+    with open(marc_file, 'w') as marcxml:
+        marcxml.write(marc.serialize(pretty=True))
+
+def remove_all_999_fields(marc_xml):
+    """
+    Method used by the check_ht manage command to remove all 999
+    fileds from the MARC XML before going to Aleph
+    """
+    try:
+        marc_xml.tag_999 = ''
+    except:
+        pass
+    return marc_xml
+
+def update_583(marc_xml):
+    """
+    Method used by check_ht manage command to upddate the
+    583 filed to `ditigized`.
+    """
+    try:
+        marc_xml.tag_583_a = 'digitized'
+    except:
+        pass
+    return marc_xml
+
+def create_yaml(capture_agent, path, kdip_id):
+    """
+    Method to create a YAML file with some basic default
+    metadata for HathiTrust
+    """
+    yaml_data = {}
+    yaml_data['capture_agent'] = capture_agent
+    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
+    yaml_data['scanning_order'] = 'left-to-right'
+    yaml_data['reading_order'] = 'left-to-right'
+    with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
+        outfile.write(yaml.dump(yaml_data, default_flow_style=False))
+
+
+def load_bib_record(barcode):
+    """
+    Method to load MARC XML from Aleph
+    """
+    get_bib_rec = requests.get( \
+        'http://library.emory.edu/uhtbin/get_bibrecord', \
+        params={'item_id': barcode})
+
+    return load_xmlobject_from_string( \
+        get_bib_rec.text.encode('utf-8'), Marc)
+
+def load_local_bib_record(barcode):
+    """
+    Method to load local version of MARC XML from Aleph
+    """
+    get_bib_rec = requests.get( \
+        'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
+        params={'item_id': barcode})
+
+    return load_xmlobject_from_string( \
+        get_bib_rec.text.encode('utf-8'), Marc)
 
 # DB Models
 class KDip(models.Model):
@@ -602,6 +601,8 @@ class KDip(models.Model):
     path = models.CharField(max_length=400, blank=True)
     pid = models.CharField(max_length=5, blank=True)
     notes = models.TextField(blank=True, default='')
+    accepted_by_ht = models.BooleanField(default=False, verbose_name='HT')
+    accepted_by_ia = models.BooleanField(default=False, verbose_name='IA')
 
     @property
     def barcode(self):
@@ -616,45 +617,70 @@ class KDip(models.Model):
         errors_list = ", ".join(errors)
         return errors_list
 
-
+    @property
+    def ht_url(self):
+        if self.accepted_by_ht is True:
+            ht_stub = getattr(settings, 'HT_STUB', None)
+            return '%s%s' % (ht_stub, self.kdip_id)
+        else:
+            return None
+    
+    #@classmethod
     def validate(self):
         '''
-        Validates the mets file and files referenced in the mets.
+        Validates mets files, rights, tiff files and marcxml.
         '''
 
         logger.info('Starting validation of %s' % (self.kdip_id))
-        # all paths (except for TOC) are relitive to METS dir
+
+        # Check the dates to see if the volume is in copyright.
+        try:
+            # Load the MARC XML
+            bib_rec = load_bib_record(self.barcode)
+
+            # Check if there is a subfied 5 in the 583 tag
+            if not bib_rec.tag_583_5:
+                reason = 'No 583 tag in marc record.'
+                error = ValidationError( \
+                    kdip=self, error=reason, error_type="Inadequate Rights")
+                error.save()
+
+            # Get the published date
+            date = get_date(bib_rec.tag_008, self.note)
+
+            # If we don't find a date, note the error.
+            if date is None:
+                reason = 'Could not determine date for %s' % self.kdip_id
+                logger.error(reason)
+
+            # Otherwise, see if it is in copyright.
+            else:
+                rights = get_rights(date, bib_rec.tag_583x)
+                if rights is not None:
+                    logger.error(rights)
+                    error = ValidationError( \
+                        kdip=self, error=rights, error_type="Inadequate Rights")
+                    error.save()
+
+        except Exception as rights_error:
+            reason = 'Could not determine rights'
+            error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
+            error.save()
+
+        # all paths are relitive to METS dir
         mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
 
         mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
 
-        toc_file = "%s/%s/TOC/%s.toc" % (self.path, self.kdip_id, self.kdip_id)
-
         tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
 
-        rights = get_rights(self)
-
-        #if rights is not 'public':
-        #    self.reason = rights
-        #    if 'Could not' in rights:
-        #        self.status = 'invalid'
-        #    else:
-        #        self.status = 'do not process'
-        #    self.save()
-        #    logger.error(rights)
-        #    return False
-
-        #Mets file exists
+        # Mets file exists
         logger.info('Cheking for Mets File.')
         if not os.path.exists(mets_file):
             reason = "Error: %s does not exist" % mets_file
-            #self.reason = reason
-            #self.status = 'invalid'
-            #self.save()
             logger.error(reason)
             error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
-            #return False
 
         logger.info('Loading Mets file into eulxml.')
         try:
@@ -664,61 +690,48 @@ class KDip(models.Model):
             logger.info('Cheking if Mets is valid.')
             if not mets.is_valid():
                 reason = "Error: %s is not valid" % mets_file
-                #self.reason = reason
-                #self.status = 'invalid'
-                #self.save()
                 logger.error(reason)
                 error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
                 error.save()
-                #return False
+
         except:
             reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
             error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
             error.save()
 
         logger.info('Gathering tiffs.')
-        tif_status = None
+        #tif_status = None
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
-        #tif_status = validate_tiffs(tiffs[0], self.kdip_id, self.path)
         logger.info('Checking tiffs.')
         for tiff in tiffs:
             logger.info('Sending %s for validation' % tiff)
             tif_status = validate_tiffs(tiff, self.kdip_id, self.path, self)
 
-        #if tif_status is not None:
-        #    self.reason = tif_status
-        #    self.status = 'invalid'
-        #    self.save()
-        #    logger.error(tif_status)
-        #    return False
-
         # validate each file of type ALTO and OCR
-        for f in mets.techmd:
-            file_path = "%s%s" % (mets_dir, f.href)
+        for file_ref in mets.techmd:
 
-            if not os.path.exists(file_path):
-                reason = "Error: %s does not exist" % file_path
-                #self.reason = reason
-                #self.status = 'invalid'
-                #self.save()
-                logger.error(reason)
-                error = ValidationError(kdip=self, error=reason, error_type="Missing Tiff or Alto")
-                error.save()
-                #return False
+            # Olny get the Tiffs.
+            if '.tif' in file_ref.href.lower():
+                file_path = "%s%s" % (mets_dir, file_ref.href)
 
-            # checksum good
-            with open(file_path, 'rb') as file:
-                if not f.checksum == md5(file.read()).hexdigest():
-                    reason = "Error: checksum does not match for %s" % file_path
-                    #logger.error('%s Mets is %s,  file is %s' % (self.kdip_id, f.checksum, md5(file.read()).hexdigest()))
-                    #self.reason = reason
-                    #self.status = 'invalid'
-                    #self.save()
+                if not os.path.exists(file_path):
+                    reason = "Error: %s does not exist" % file_path
                     logger.error(reason)
-                    #return False
-                    error = ValidationError(kdip=self, error=reason, error_type="Checksum")
+                    error = ValidationError(kdip=self, error=reason, error_type="Missing Tiff")
                     error.save()
+
+                # checksum good
+                with open(file_path, 'rb') as file_to_check:
+                    if not file_ref.checksum == \
+                        md5(file_to_check.read()).hexdigest():
+
+                        reason = "Error: checksum does not match for %s" % file_path
+
+                        logger.error(reason)
+
+                        error = ValidationError(kdip=self, error=reason, error_type="Checksum")
+                        error.save()
 
         # if it gets here were are good
         if self.validationerror_set.all():
@@ -734,67 +747,74 @@ class KDip(models.Model):
 
         kdip_list = {}
 
-        exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
+        if kwargs.get('kdip'):
+            kdip_list[kwargs.get(('kdip_id'))] = kwargs.get('kdip_path')
+        
+        else:
+            exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
-        for path, subdirs, files in os.walk(kdip_dir):
-            for dir in subdirs:
-                kdip = re.search(r"^[0-9]", dir)
-                full_path = os.path.join(path, dir)
+            for path, subdirs, files in os.walk(kdip_dir):
+                for dir in subdirs:
+                    kdip = re.search(r"^[0-9]", dir)
+                    full_path = os.path.join(path, dir)
 
-                # Only process new KDips or ones.
-                try:
-                    if 'test' not in path:
-                        processed_KDip = KDip.objects.get(kdip_id = dir)
-                        # Check to see if the a KDip has moved and update the path.
-                        if processed_KDip != path:
-                            processed_KDip.path = path
-                            processed_KDip.save()
-                except KDip.DoesNotExist:
-                    if kdip and full_path not in exclude:
-                        kdip_list[dir] = path
+                    # Only process new KDips or ones.
+                    try:
+                        if 'test' not in path:
+                            processed_KDip = KDip.objects.get(kdip_id = dir)
+                            # Check to see if the a KDip has moved and update the path.
+                            if processed_KDip != path:
+                                processed_KDip.path = path
+                                processed_KDip.save()
+                    except KDip.DoesNotExist:
+                        if kdip and full_path not in exclude:
+                            kdip_list[dir] = path
 
         # Empty list to gather errant KDips
         bad_kdips = []
 
         # create the KDIP is it does not exits
+        print kdip_list
         for k in kdip_list:
 
             try:
                 # lookkup bib record for note field
-                r = requests.get('http://library.emory.edu/uhtbin/get_bibrecord', params={'item_id': k[:12]})
-                bib_rec = load_xmlobject_from_string(r.text.encode('utf-8'), Marc)
+                bib_rec = load_bib_record(k[:12])
 
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
-                for datafield in bib_rec.tag_999:
-                    i999 = datafield.node.xpath('marc:subfield[@code="i"]', namespaces=Marc.ROOT_NAMESPACES)[0].text
+                for field_999 in bib_rec.tag_999:
+                    i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
+                        namespaces=Marc.ROOT_NAMESPACES)[0].text
                     if i999 != k[:12]:
-                        bib_rec.tag_999.remove(datafield)
+                        bib_rec.tag_999.remove(field_999)
 
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
                     'note': bib_rec.note(k[:12]),
                     'path': kdip_list[k]
                 }
+
                 kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
                 if created:
                     logger.info("Created KDip %s" % kdip.kdip_id)
 
-
+                    # Write the marc.xml to disk.
                     with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
                         marcxml.write(bib_rec.serialize(pretty=True))
+
+                    if kwargs.get('kdip_enumcron'):
+                        kdip.note = kwargs.get('kdip_enumcron')
+                        update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
+
+                    if kwargs.get('kdip_pid'):
+                        kdip.pid = kwargs.get('kdip_pid')
 
                     try:
                         os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
                     except OSError:
                         pass
 
-                    yaml_data = {}
-                    yaml_data['capture_agent'] = str(bib_rec.tag_583_5)
-                    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-                    yaml_data['scanning_order']= 'left-to-right'
-                    yaml_data['reading_order'] = 'left-to-right'
-                    with open('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id), 'a') as outfile:
-                        outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
+                    create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
                     kdip.validate()
 
@@ -812,7 +832,7 @@ class KDip(models.Model):
 
         bad_kdip_list = '\n'.join(map(str, bad_kdips))
         contact = getattr(settings, 'EMORY_CONTACT', None)
-        send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
+        #send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
 
 
 
@@ -827,20 +847,21 @@ class KDip(models.Model):
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            #KDip.objects.filter(id = self.id).delete()
-            #KDip.load()
-            self.validate()
+            KDip.objects.filter(id = self.id).delete()
+            KDip.load(kdip_id=self.id, \
+                        kdip_path=self.path, \
+                        kdip_enumcron=self.note, \
+                        kdip_pid=self.pid)
+            #self.validate()
+            return HttpResponseRedirect('/admin/publish/kdip/?q=%s' % self.kdip_id)
 
         else:
             if self.pk is not None:
                 # If the note has been updated we need to write that to the Marc file.
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
-                    marc_file = '%s/%s/marc.xml' %(self.path, self.kdip_id)
-                    marc = load_xmlobject_from_file(marc_file, Marc)
-                    marc.tag_999a = self.note
-                    with open(marc_file, 'w') as marcxml:
-                        marcxml.write(marc.serialize(pretty=True))
+                    update_999a(self.path, self.kdip_id, self.note)
+                    
             super(KDip, self).save(*args, **kwargs)
 
 
@@ -852,9 +873,11 @@ class Job(models.Model):
         ('ready for zephir', 'Ready for Zephir'),
         ('waiting on zephir', 'Waiting on Zephir'),
         ('ready for hathi', 'Ready for Hathi'),
+        ('uploading', 'Uploading to HathiTrust'),
         ('failed', 'Upload Failed'),
         ('being processed', 'Being Processed'),
-        ('processed', 'Processed')
+        ('processed', 'Processed'),
+        ('processed by ht', 'Processed by HT')
     )
 
     name = models.CharField(max_length=100, unique=True)
@@ -869,156 +892,6 @@ class Job(models.Model):
         return self.name
 
 
-    @background(schedule=10)
-    def upload(kdips, job_id):
-
-        def zipdir(path, zip):
-            for root, dirs, files in os.walk(path):
-                for file in files:
-                    zip.write(os.path.join(root, file))
-
-        def checksumfile(checkfile, process_dir):
-            with open(checkfile, 'rb') as file:
-                with open('%s/checksum.md5' % (process_dir), 'a') as outfile:
-                    if 'alto' in checkfile:
-                        checkfile = checkfile.replace('.alto', '')
-                    filename = checkfile.split('/')
-                    outfile.write('%s %s\n' % ((md5(file.read()).hexdigest()), filename[-1]))
-
-        def checksumverify(checksum, process_dir, file):
-            with open('%s/%s' % (process_dir, file), 'rb') as file:
-                if md5(file.read()).hexdigest() == checksum:
-                    return True
-                else:
-                    return False
-
-        job = Job.objects.get(id=job_id)
-
-        uploaded_files = []
-        status = ''
-
-        for process_kdip in kdips:
-            kdip = KDip.objects.get(id=process_kdip)
-
-            client = DjangoPidmanRestClient()
-            pidman_domain = getattr(settings, 'PIDMAN_DOMAIN', None)
-            pidman_policy = getattr(settings, 'PIDMAN_POLICY', None)
-
-            ark = client.create_ark(domain='%s' % pidman_domain, target_uri='http://myuri.org', policy='%s' % pidman_policy, name='%s' % kdip.kdip_id)
-            naan = parse_ark(ark)['naan']
-            noid = parse_ark(ark)['noid']
-
-            kdip.pid = noid
-            kdip.save()
-
-            logger.info("Ark %s was created for %s" % (ark, kdip.kdip_id))
-
-            #process_dir = '%s/ark+=%s=%s' % (kdip.path, naan, noid)
-            if not os.path.exists('%s/HT' % kdip_dir):
-                os.mkdir('%s/HT' % kdip_dir)
-            process_dir = '%s/HT/%s' % (kdip_dir, kdip.kdip_id)
-
-            if not os.path.exists(process_dir):
-                os.makedirs(process_dir)
-
-            
-
-            tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
-            for tiff in tiffs:
-                checksumfile(tiff, process_dir)
-                shutil.copy(tiff, process_dir)
-
-            altos = glob.glob('%s/%s/ALTO/*.xml' % (kdip.path, kdip.kdip_id))
-            for alto in altos:
-                checksumfile(alto, process_dir)
-                shutil.copy(alto, process_dir)
-                if 'alto' in alto:
-                    filename = alto.split('/')
-                    page,crap,ext = filename[-1].split('.')
-                    shutil.move(alto, '%s/%s.%s' % (process_dir, page, ext))
-            #
-            #new_altos = glob.glob('%s/*.alto.xml' % (process_dir))
-            #for new_alto in new_altos:
-            #    page,crap,ext = new_alto.split('.')
-            #    shutil.move('%s' % (new_alto), '%s.%s' % (page, ext))
-
-            ocrs = glob.glob('%s/%s/OCR/*.txt' % (kdip.path, kdip.kdip_id))
-            for ocr in ocrs:
-                checksumfile(ocr, process_dir)
-                shutil.copy(ocr, process_dir)
-
-
-            meta_yml = '%s/%s/meta.yml' % (kdip.path, kdip.kdip_id)
-            marc_xml = '%s/%s/marc.xml' % (kdip.path, kdip.kdip_id)
-            mets_xml = '%s/%s/METS/%s.mets.xml' % (kdip.path, kdip.kdip_id, kdip.kdip_id)
-
-            checksumfile(meta_yml, process_dir)
-            checksumfile(marc_xml, process_dir)
-            checksumfile(mets_xml, process_dir)
-
-            shutil.copy(meta_yml, process_dir)
-
-            shutil.copy(marc_xml, process_dir)
-
-            shutil.copy(mets_xml, process_dir)
-
-            with open('%s/checksum.md5' % process_dir) as f:
-                content = f.readlines()
-                for line in content:
-                    parts = line.split()
-                    verify = checksumverify(parts[0], process_dir, parts[1])
-                    if verify is not True:
-                        logger.error('Checksum check failes for %s.' % process_dir  )
-
-            zipf = zipfile.ZipFile('%s.zip' % (process_dir), 'w', allowZip64=True)
-            os.chdir('%s' % (process_dir))
-            zipdir('.', zipf)
-            zipf.close()
-            # Delete the process directory to save space
-            shutil.rmtree(process_dir)
-
-            token = BoxToken.objects.get(id=1)
-
-            response = box.refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
-
-            token.refresh_token = response['refresh_token']
-            token.save()
-
-            logger.info('New refresh token: %s' % (response['refresh_token']))
-
-            box_folder = getattr(settings, 'BOXFOLDER', None)
-
-            url = 'https://upload.box.com/api/2.0/files/content -H "Authorization: Bearer %s" -F filename=@%s.zip -F parent_id=%s' % (response['access_token'], process_dir, box_folder)
-
-            upload = subprocess.check_output('curl %s' % (url), shell=True)
-
-            upload_response = json.loads(upload)
-
-            try:
-                sha1 = hashlib.sha1()
-                local_file = open('%s.zip' % (process_dir), 'rb')
-                sha1.update(local_file.read())
-                local_file.close()
-
-                if sha1.hexdigest() == upload_response['entries'][0]['sha1']:
-                    status = 'being processed'
-                    #uploaded_files.append('ark+=%s=%s' % (naan, noid))
-                    uploaded_files.append(kdip.kdip_id)
-
-            except Exception as e:
-                logger.error('Uploading %s.zip failed with message %s' % (process_dir, upload_response['message']))
-                status = 'failed'
-
-        if status == 'being processed':
-            job.status = 'being processed'
-            job.save()
-            kdip_list = '\n'.join(map(str, uploaded_files))
-            send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
-            send_from = getattr(settings, 'EMORY_CONTACT', None)
-            send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
-
-
-
     class Meta:
         ordering = ['id']
 
@@ -1031,7 +904,11 @@ class Job(models.Model):
             for kdip in kdips:
                 uploaded_files.append(kdip.id)
 
-            self.upload(uploaded_files, self.id)
+            # Semd volumes to the upload task.
+            self.status = 'uploading'
+            #celery.current_app.send_task('digitizedbooks.publish.tasks.upload_for_ht', (uploaded_files, self.id))
+            from publish.tasks import upload_for_ht
+            upload_for_ht.delay(uploaded_files, self.id)
 
         elif self.status == 'ready for zephir':
             kdips = KDip.objects.filter(job=self.id)
@@ -1082,7 +959,7 @@ class Job(models.Model):
 
             # FTP the file
             upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
-            upload = subprocess.check_output(upload_cmd, shell=True)
+            upload_to_z = subprocess.check_output(upload_cmd, shell=True)
 
             # Create the body of the email
             body = 'file name=%s.xml\n' % self.name

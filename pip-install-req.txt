@@ -1,17 +1,10 @@
-Django==1.6
-https://wilson.library.emory.edu/jenkins/job/eullocal-0.21.x/lastSuccessfulBuild/artifact/eullocal/dist/eullocal-0.21.0.tar.gz
+Django==1.8
+django_auth_ldap
 mysql-python # HACK: we don't strictly depend on mysql. find a better way to install it in deploy.
 eulxml
 eulcommon
-# sunburnt 0.6 required for django pagination, per-item highlighting
-sunburnt>=0.6
-httplib2  # currently used with sunburnt
-#pyPdf
-django-taggit
-south
 python-dateutil
 python-magic
-#django-tracking
 pyasn1
 boto
 requests
@@ -20,4 +13,6 @@ pyyaml
 box.py
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.1.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.1.2.tar.gz
 django-admin-bootstrapped
-django-background-task
+django-celery
+django-kombu
+pysftp

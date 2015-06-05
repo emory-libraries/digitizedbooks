@@ -15,9 +15,9 @@
 #   limitations under the License.
 
 from django.contrib import admin
-from digitizedbooks.publish.models import  Job, KDip, ValidationError
+from publish.models import  Job, KDip, ValidationError
 from django.contrib.sites.models import Site
-from taggit.models import Tag
+#from taggit.models import Tag
 
 def remove_from_job(modeladmin, request, queryset):
     queryset.update(job=None)
@@ -35,11 +35,11 @@ class ValidationErrorInline(admin.TabularInline):
 
 
 class KDipAdmin(admin.ModelAdmin):
-    list_display = ['kdip_id', 'status', 'note', 'errors', 'job',]
+    list_display = ['kdip_id', 'status', 'note', 'errors', 'accepted_by_ia', 'accepted_by_ht', 'job',]
     list_link = ['kdip_id']
-    list_filter = ['status', 'job']
-    list_editable = ['job', 'note', 'status']
-    readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors']
+    list_filter = ['status', 'job', 'accepted_by_ht', 'accepted_by_ia']
+    list_editable = ['job', 'note', 'status', 'accepted_by_ia']
+    readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors', 'accepted_by_ht', 'ht_url']
     search_fields = ['path', 'kdip_id', 'note', 'pid']
     inlines = [ValidationErrorInline]
 #    actions = [remove_from_job]
@@ -49,7 +49,7 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['kdip_id', 'pid', 'status', 'path']
+    readonly_fields = ['kdip_id', 'pid', 'status', 'accepted_by_ht', 'accepted_by_ia', 'path']
     exclude = ['note', 'reason', 'create_date']
     #can_delete = False
     extra = 0
@@ -69,4 +69,4 @@ admin.site.register(KDip, KDipAdmin)
 admin.site.register(Job, JobAdmin)
 
 admin.site.unregister(Site)
-admin.site.unregister(Tag)
+#admin.site.unregister(Tag)

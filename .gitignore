@@ -1,14 +1,10 @@
 digitizedbooks/localsettings.py
-digibooks.komodoproject
-.komodotools
 *.DS_Store
 *.pyc
 venv
 build
 dist
 static
-foo
 test-results
-.idea
 digitizedbooks/digbooks.log
-digitizedbooks/publish/fixtures/KDIPS
+publish/fixtures/KDIPS
