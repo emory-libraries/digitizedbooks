@@ -17,7 +17,6 @@
 from django.contrib import admin
 from publish.models import  Job, KDip, ValidationError
 from django.contrib.sites.models import Site
-#from taggit.models import Tag
 
 def remove_from_job(modeladmin, request, queryset):
     queryset.update(job=None)
@@ -69,4 +68,3 @@ admin.site.register(KDip, KDipAdmin)
 admin.site.register(Job, JobAdmin)
 
 admin.site.unregister(Site)
-#admin.site.unregister(Tag)

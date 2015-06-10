@@ -74,17 +74,19 @@ Configuration
 Configure application settings by copying ``localsettings.py.dist`` to
 ``localsettings.py`` and editing for local settings.
 
-Add the following to ``localsettings.py`` for email notifications:
-
-``HATHITRUST_CONTACT = 'someone@somewhere.com'
-EMORY_CONTACT = 'someone@emory.edu'``
-
 After configuring all settings, initialize the db with all needed
 tables and initial data using::
 
   $ python manage.py syncdb
   $ python manage.py migrate
 
+PID Manager
+^^^^^^^^^^^
+Make sure the user for PIDMAN has the following rights:
+* Can add pid
+* Can add target
+* Can change pid
+* Can change target
 
 Cron jobs
 ~~~~~~~~~
@@ -111,18 +113,17 @@ This command should be ran nightly (or very early in the morning) to load any ne
 
   $ manage.py loadKDips
 
+This command should run daily to check if submitted KDips have been made live on HathiTrust
 
-Database Install
-================
-.. Note::
-  If installing on a brand new database which you must do the following before running ``syncdb`` or  migrations emory_ldap migrations:
-     $ manage.py syncdb
-     $ manage.py migrations
-     $ manage.py createsuperuser
+  $ manage.py check_ht
 
-  Log into the admin interface with the superuser and add LDAP users.
+This command should run daily to check if submitted KDips that are live on HathiTrust have udated MARC records.
 
+  $ manage.py check_al
 
+This command should run daily to check if all the KDips in a submitted job are live on HathiTrust.
+
+  $ manage.py update_job_status
 
 
 Upgrade Notes
