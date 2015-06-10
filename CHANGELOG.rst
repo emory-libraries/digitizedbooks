@@ -1,5 +1,6 @@
 Release 1.2
 -----------
+* Upgrade to Django 1.8
 * As a DigitizedBooks user, I want to know that a volume has successfully been published at HathiTrust, and to free up disk space in the staging area, so that the PID Manager is updated with valid target URLs, and so that we free up expensive disk space.
 * As a DigitizedBooks user, I want to be able to flag a Digitized Books record to show that it has been uploaded to the Internet Archive, and to note the IA record ID, so that I may perform such submissions "out of band" of the scope of the current DigitizedBooks release, keeping track of them now in case we advance to the 2.0 release.
 * An application's copyright validation is able to handle "uncertain" dates in different date types or more accurate validation.
