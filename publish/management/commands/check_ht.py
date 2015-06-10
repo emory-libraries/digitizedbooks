@@ -72,7 +72,7 @@ class Command(BaseCommand):
         HT returns a `200` for volumes that are live.
         If not found, `404` is returned.
         """
-        kdips = KDip.objects.filter(accepted_by_ht=False)
+        kdips = KDip.objects.filter(accepted_by_ht=False).exclude(status='do not process')
         ht_stub = getattr(settings, 'HT_STUB', None)
 
         for kdip in kdips:

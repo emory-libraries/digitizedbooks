@@ -144,6 +144,8 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+BROKER_URL = 'django://'
+
 try:
     from localsettings import *
 except ImportError:

@@ -603,6 +603,7 @@ class KDip(models.Model):
     notes = models.TextField(blank=True, default='')
     accepted_by_ht = models.BooleanField(default=False, verbose_name='HT')
     accepted_by_ia = models.BooleanField(default=False, verbose_name='IA')
+    al_ht = models.BooleanField(default=False, verbose_name="AL-HT")
 
     @property
     def barcode(self):
