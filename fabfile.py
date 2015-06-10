@@ -337,4 +337,3 @@ def compare_localsettings(path=None, user=None):
                     puts(output)
                 else:
                     puts(green('No differences between current and previous localsettings.py'))
-
