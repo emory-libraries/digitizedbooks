@@ -2,6 +2,7 @@ Release 1.2.1
 -------------
 * Upgrading from LIMB 2.x to 3.3 has broke the METS validation routine. The xpath for `techmd` was adjusted.
 * Automated email to notify HT of new deposits was re-enabled.
+
 Release 1.2
 -----------
 * Upgrade to Django 1.8
