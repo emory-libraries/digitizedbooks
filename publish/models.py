@@ -339,7 +339,9 @@ class Mets(XmlObject):
     jpegs = NodeListField('mets:fileSec/mets:fileGrp[@ID="JPEG"]/mets:file', METSFile)
     #jp2s = NodeListField('mets:fileSec/mets:fileGrp[@ID="JP2000"]/mets:file', METSFile)
     altos = NodeListField('mets:fileSec/mets:fileGrp[@ID="ALTO"]/mets:file', METSFile)
-    techmd = NodeListField('mets:amdSec/mets:techMD', METStechMD)
+    # Change due to LIMB 3.3 upgrade.
+    # techmd = NodeListField('mets:amdSec/mets:techMD', METStechMD)
+    techmd = NodeListField('mets:amdSec/mets:techMD[starts-with(@ID, "AMD_TECHMD_TIF") or starts-with(@ID, "AMD_TECHMD_JPG") or starts-with(@ID, "AMD_TECHMD_JP2")]', METStechMD)
 
 
 # MARC XML
@@ -625,7 +627,7 @@ class KDip(models.Model):
             return '%s%s' % (ht_stub, self.kdip_id)
         else:
             return None
-    
+
     #@classmethod
     def validate(self):
         '''
@@ -750,7 +752,7 @@ class KDip(models.Model):
 
         if kwargs.get('kdip'):
             kdip_list[kwargs.get(('kdip_id'))] = kwargs.get('kdip_path')
-        
+
         else:
             exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
@@ -862,7 +864,7 @@ class KDip(models.Model):
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
                     update_999a(self.path, self.kdip_id, self.note)
-                    
+
             super(KDip, self).save(*args, **kwargs)
 
 
@@ -913,7 +915,7 @@ class Job(models.Model):
 
         elif self.status == 'ready for zephir':
             kdips = KDip.objects.filter(job=self.id)
-            # Tmp file for combined MARC XML. The eulxml output includes the namespace in the 
+            # Tmp file for combined MARC XML. The eulxml output includes the namespace in the
             # <record>. We will be getting rid of that then deleting this file.
             zephir_tmp_file = '%s/Zephir/%s.tmp' % (kdip_dir, self.name)
             # File for the combined MARC XML.
@@ -931,7 +933,7 @@ class Job(models.Model):
             # Loop through the KDips to the the MARC XML
             for kdip in kdips:
                 marc_file = '%s/%s/marc.xml' %(kdip.path, kdip.kdip_id)
-                
+
                 # Load the MARC XML
                 marc = load_xmlobject_from_file(marc_file, Marc)
 

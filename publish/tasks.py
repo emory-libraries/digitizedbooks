@@ -77,7 +77,7 @@ def upload_for_ht(kdips, job_id):
         if not os.path.exists(process_dir):
             os.makedirs(process_dir)
 
-        
+
 
         tiffs = glob.glob('%s/%s/TIFF/*.tif' % (kdip.path, kdip.kdip_id))
         for tiff in tiffs:
@@ -177,10 +177,9 @@ def upload_for_ht(kdips, job_id):
         job.status = 'being processed'
         job.save()
         kdip_list = '\n'.join(map(str, uploaded_files))
-        # send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
-        # send_from = getattr(settings, 'EMORY_CONTACT', None)
-        # send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
+        send_to = getattr(settings, 'HATHITRUST_CONTACT', None)
+        send_from = getattr(settings, 'EMORY_CONTACT', None)
+        send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n%s' % kdip_list, send_from, [send_to], fail_silently=False)
     elif status == 'failed':
         job.status = status
         job.save()
-
