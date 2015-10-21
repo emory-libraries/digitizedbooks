@@ -1,3 +1,7 @@
+Release 1.2.1
+-------------
+* Upgrading from LIMB 2.x to 3.3 has broke the METS validation routine. The xpath for `techmd` was adjusted.
+* Automated email to notify HT of new deposits was re-enabled.
 Release 1.2
 -----------
 * Upgrade to Django 1.8
@@ -19,7 +23,7 @@ Release 1.0.4
 * As an admin I want to want to receive an error report via email of validation failures so they can be fixed in a timely manner.
 * When an admin process a job for Zephir, an email is sent to Zephir with information about the bundled marcxml file to meet Zephir's submission requirements.
 * When an admin process a job for Zephir, all the marcxml records and bundled into one file to meet Zephir's submission requirements.
-* When an admin processes a job for Zephir, bundled marcxml file will be ftp'd to Zephir so they can process it. 
+* When an admin processes a job for Zephir, bundled marcxml file will be ftp'd to Zephir so they can process it.
 
 Release 1.0.3
 -------------
@@ -43,7 +47,7 @@ Release 1.0.1 - Hathi Trust Basic Ingest (Tweaked)
  * An application uses 'barcode-whatever' as the SIP identifier.
  * An application checks to see if a volume's path has changed and updates if it has so database can stay in sync with the file system.
  * When an admin processes a job for HT injestion the SIP is crated in a "HT" directory so they can be more easily managed and cleaned up.
- 
+
 Relase 1.0.0 - Hathi Trust Basic Ingest
 ---------------------------------------
 
@@ -57,4 +61,3 @@ First working prototype.
 **Internal prototype: Not for production release**
 
  * An application administrator can run a script that uploads a file to Internet Archive.
-
