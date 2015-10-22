@@ -1,3 +1,7 @@
+Release 1.2.2
+-------------
+* Started getting an error for `datetime.strptime` that it was getting a tuple and not a string from the `DateTime` tiff tag. This release fixes that by converting the found DateTime to a string.
+
 Release 1.2.1
 -------------
 * Upgrading from LIMB 2.x to 3.3 has broke the METS validation routine. The xpath for `techmd` was adjusted.
