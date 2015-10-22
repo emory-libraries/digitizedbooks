@@ -125,8 +125,11 @@ def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
             if valid is True:
                 found[tif_tag] = tags.get(tif_tags[tif_tag])
 
-
-        dt = datetime.strptime(found['DateTime'], '%Y:%m:%d %H:%M:%S')
+        # When we depolyed 1.2.1 there was an error that the `datetim.strptime`
+        # was getting a tuple and not a string. So we're now converting the
+        # found DateTime to a string.
+        capture_date = ''.join(found['DateTime'])
+        dt = datetime.strptime(capture_date, '%Y:%m:%d %H:%M:%S')
         yaml_data['capture_date'] = dt.isoformat('T')
         with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
             outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
@@ -835,7 +838,7 @@ class KDip(models.Model):
 
         bad_kdip_list = '\n'.join(map(str, bad_kdips))
         contact = getattr(settings, 'EMORY_CONTACT', None)
-        #send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
+        send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
 
 
 

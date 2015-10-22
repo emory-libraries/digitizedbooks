@@ -2,6 +2,7 @@ digitizedbooks/localsettings.py
 *.DS_Store
 *.pyc
 venv
+venv-osx
 build
 dist
 static
