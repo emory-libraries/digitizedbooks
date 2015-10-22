@@ -8,7 +8,7 @@ python-magic
 pyasn1
 boto
 requests
-pillow
+pillow==2.9.0
 pyyaml
 box.py
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.1.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.1.2.tar.gz
