@@ -55,7 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'publish',
+    'digitizedbooks.apps.publish',
     'djcelery',
     'django_auth_ldap',
     'kombu.transport.django'

@@ -15,7 +15,7 @@
 #   limitations under the License.
 
 from django.contrib import admin
-from publish.models import  Job, KDip, ValidationError
+from digitizedbooks.apps.publish.models import  Job, KDip, ValidationError
 from django.contrib.sites.models import Site
 
 def remove_from_job(modeladmin, request, queryset):
@@ -26,7 +26,7 @@ class ValidationErrorInline(admin.TabularInline):
     model = ValidationError
     list_display = ['error', 'error_type']
     readonly_fields = ['error', 'error_type']
-    
+
     def has_add_permission(self, request):
         return False
     def has_delete_permission(self, request, obj=None):

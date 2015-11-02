@@ -25,6 +25,9 @@ from django.core.mail import send_mail
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 
+from ValidateTiff import ValidateTiff
+import Utils
+
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from eulxml.xmlmap.fields import StringField, NodeListField, IntegerField, NodeField
@@ -55,254 +58,6 @@ if not kdip_dir:
     msg = "Failed to configure KDIP_DIR in localsettings. Please do so now otherwise most things will not work."
     logger.error(msg)
     raise Exception (msg)
-
-def validate_tiffs(tiff_file, kdip, kdip_dir, kdipID):
-    '''
-    Method to validate the Tiff files.
-    Site for looking up Tiff tags: http://www.awaresystems.be/imaging/tiff/tifftags/search.html
-    '''
-    tif_tags = {
-        'ImageWidth': 256,
-        'ImageLength': 257,
-        'BitsPerSample': 258,
-        'Compression': 259,
-        'PhotometricInterpretation': 262,
-        'DocumentName': 269,
-        'Make': 271,
-        'Model': 272,
-        'Orientation': 274,
-        'XResolution': 282,
-        'YResolution': 283,
-        'ResolutionUnit': 296,
-        'DateTime': 306,
-        'ImageProducer': 315,
-        #'BitsPerPixel': 37122,
-        'ColorSpace': 40961,
-        'SamplesPerPixel': 277
-    }
-
-    bittsPerSample = {
-        '1': 'Bitonal',
-        '3': 'Color-3',
-        '8': 'Grayscale',
-        '888': 'Color-888',
-        '88': 'Two channel grayscale'
-    }
-
-    compressions = {
-        'Uncompressed': (1,),
-        'T6/Group 4 Fax': (4,),
-        'LZW': (5,)
-    }
-
-    photometricInterpretation = {
-        'WhiteIsZero': (0,),
-        'BlackIsZero': (1,),
-        'RGB': (2,)
-    }
-
-    samplesPerPixel = {
-        'Grayscale': '(1,)',
-        'RGB': '(3,)'
-    }
-
-    missing = []
-    found = {}
-    skipalbe = ['ImageProducer', 'DocumentName', 'Make', 'Model', 'ColorSpace']
-    yaml_data = {}
-
-    image = ''
-    logger.info('Checking %s' % tiff_file)
-    try:
-        image = Image.open(tiff_file)
-
-        tags = image.tag
-        for tif_tag in tif_tags:
-            valid = tags.has_key(tif_tags[tif_tag])
-            if valid is False:
-                found[tif_tag] = False
-
-            if valid is True:
-                found[tif_tag] = tags.get(tif_tags[tif_tag])
-
-        # When we depolyed 1.2.1 there was an error that the `datetim.strptime`
-        # was getting a tuple and not a string. So we're now converting the
-        # found DateTime to a string.
-        capture_date = ''.join(found['DateTime'])
-        dt = datetime.strptime(capture_date, '%Y:%m:%d %H:%M:%S')
-        yaml_data['capture_date'] = dt.isoformat('T')
-        with open('%s/%s/meta.yml' % (kdip_dir, kdip), 'a') as outfile:
-            outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
-        logger.info('Yaml written')
-
-        ## START REAL VALIDATION
-        if found['ImageWidth'] <= 0:
-            logger.error('Image Width = %s for %s' %(found['ImageWidth'], tiff_file))
-            status = 'Invalid value for ImageWidth in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('Image width for %s is %s' % (tiff_file, found['ImageWidth']))
-
-        if found['ImageLength']  <= 0:
-            logger.error('ImageLength = %s for %s' %(found['ImageLength'], tiff_file))
-            status = 'Invalid value for ImageLength in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('ImageLength = %s for %s' %(found['ImageLength'], tiff_file))
-
-        if not found['Make']:
-            logger.error('Make = %s for %s' %(found['Make'], tiff_file))
-            status = 'Invalid value for Make in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('Make = %s for %s' %(found['Make'], tiff_file))
-
-        if not found['Model']:
-            logger.error('Model = %s for %s' %(found['Model'], tiff_file))
-            status = 'Invalid value for Make in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('Model = %s for %s' %(found['Model'], tiff_file))
-
-        if found['Orientation'] != (1,):
-            logger.error('Orientation = %s for %s' %(found['Orientation'], tiff_file))
-            status = 'Invalid value for Orientation in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('Orientation = %s for %s' %(found['Orientation'], tiff_file))
-
-        #if found['ColorSpace'] != 1:
-        #    status = 'Invalid value for ColorSpace in %s' % (file)
-        #    return status
-
-        if found['ResolutionUnit'] != (2,):
-            logger.error('ResolutionUnit = %s for %s' %(found['ResolutionUnit'], tiff_file))
-            status = 'Invalid value for ResolutionUnit in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('ResolutionUnit = %s for %s' %(found['ResolutionUnit'], tiff_file))
-
-        if not found['DateTime']:
-            logger.error('DateTime = %s for %s' %(found['DateTime'], tiff_file))
-            status = 'Invalid value for DateTime in %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-            #return status
-        else:
-            logger.debug('DateTime = %s for %s' %(found['DateTime'], tiff_file))
-
-        image_code = re.sub("[^0-9]", "", str(found['BitsPerSample']))
-        image_type = bittsPerSample[image_code]
-
-        ## Check if Two channel grayscale
-        #if imgtype == bittsPerSample['Two channel grayscale']:
-        #    status = 'Two channel grayscale, needs conversion'
-        #    return status
-
-        # GRAYSCALE OR BITONAL
-        logger.info('Checking type')
-        if image_type is 'Bitonal' or image_type is 'Grayscale':
-
-            logger.info('%s is Bitonal' % tiff_file)
-
-            if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['T6/Group 4 Fax']:
-                logger.debug('Compression is %s for %s' % (found['Compression'], tiff_file))
-            else :
-                status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-
-            if str(found['SamplesPerPixel']) != samplesPerPixel['Grayscale']:
-                status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
-
-            if found['XResolution'] < 600:
-                logger.error('XResolution is %s for %s' %(found['XResolution'], tiff_file))
-                status = 'Invalid value for XResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('XResoloution is %s for %s' % (found['XResolution'], tiff_file))
-
-            if found['YResolution'] < 600:
-                logger.error('YResolution is %s for %s' % (found['YResolution'], tiff_file))
-                status = 'Invalid value for YResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('YResolution is %s for %s' % (found['YResolution'], tiff_file))
-
-        # COLOR
-        elif image_type is 'Color-3' or image_type is 'Color-888':
-
-            logger.info('%s is Color' % tiff_file)
-
-            if found['Compression'] == compressions['Uncompressed'] or found['Compression'] == compressions['LZW']:
-                logger.debug('Compression is %s for %s' % (found['Compression'], tiff_file))
-            else:
-                status = 'Invalid value for Compression in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-
-            if found['PhotometricInterpretation'] != photometricInterpretation['RGB']:
-                status = 'Invalid value for PhotometricInterpretation in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('PhotometricInterpretation is %s for %s' % (found['PhotometricInterpretation'], tiff_file))
-
-            if str(found['SamplesPerPixel']) != samplesPerPixel['RGB']:
-                logger.error('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
-                status = 'Invalid value for SamplesPerPixel in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('SamplesPerPixel is %s for %s' % (found['SamplesPerPixel'], tiff_file))
-
-            if found['XResolution'] < 300:
-                status = 'Invalid value for XResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('XResolution is %s for %s' % (found['XResolution'], tiff_file))
-
-            if found['YResolution'] < 300:
-                status = 'Invalid value for YResolution in %s' % (tiff_file)
-                error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-                error.save()
-            else:
-                logger.debug('YResolution is %s for %s' % (found['YResolution'], tiff_file))
-
-        else:
-            status = 'Cannot determine type for %s' % (tiff_file)
-            error = ValidationError(kdip=kdipID, error=status, error_type="Invalid Tiff")
-            error.save()
-
-        image.close()
-
-    except:
-        status = 'Error \'%s\' while validating %s' % (sys.exc_info()[1], tiff_file)
-        logger.error(status)
-        error = ValidationError(kdip=kdipID, error=status, error_type='Bad Tiff File')
-        error.save()
-        image.close()
-
-
 
 # METS XML
 class METSFile(XmlObject):
@@ -438,147 +193,6 @@ class Alto(XmlObject):
     XSD_SCHEMA = 'http://www.loc.gov/standards/alto/alto-v2.0.xsd'
     ROOT_NAME = 'alto'
 
-def date_to_int(date):
-    try:
-        return int(date)
-    except:
-        return None
-
-def get_date(tag_008, note):
-    '''
-    Figure out if we should use Date1, Date2 or the largest date looking
-    thing in the EnumCron. This method is based on HathiTrust's docs:
-    http://www.hathitrust.org/bib_rights_determination
-    '''
-
-    # Try to turn the date into an int. If that fails we will get
-    # `None` back. We are also replacing any characters (but not spaces)
-    # to `9` as per the HT documation.
-    date1 = date_to_int(re.sub(r'[^\d\s]', '9', tag_008[7:11]))
-    date2 = date_to_int(re.sub(r'[^\d\s]', '9', tag_008[11:15]))
-
-    date_type = tag_008[6]
-
-    group0 = ['m', 'p', 'q']
-
-    group1 = ['r', 's', 'e']
-
-    group2 = ['t']
-
-    group3 = ['d', 'u', 'c', 'i', 'k']
-
-    if date_type in group0:
-        # Return the latest year
-        dates = [date1, date2]
-        return max(dates)
-
-    elif date_type in group1:
-        # Return Date1
-        return date1
-
-    elif date_type in group2:
-        # if Date2 exists and Date2 > Date1, return Date2
-        # otherwise we'll return Date1 whcih might be `None`.
-        if date2 is not None:
-            return date2
-        else:
-            return date1
-
-    elif date_type in group3:
-        # Look for groups of four digits that start with 1
-        # and return the largest one.
-        year_pattern = re.compile(r'1\d\d\d')
-        dates = year_pattern.findall(note)
-        return int(max(dates))
-
-    else:
-        # If all fails, return `None`.
-        return None
-def get_rights(date, tag_583x):
-    """
-    Method to see if the 593x tag in the MARC is equal to `public domain`
-    or if the determined publicatin date is before 1923.
-    """
-    # Check to see if Emory thinks it is public domain
-    if tag_583x != 'public domain':
-        return '583X does not equal "public domain"'
-    # Based on the HT docs, as long as the volume is before 1923
-    # it's a go.
-    elif date > 1922:
-        return 'Published in %s' % (date)
-
-    else:
-        return None
-
-def update_999a(path, kdip_id, enumcron):
-    """
-    Method to updae the 999a MARC field if/when it is changed
-    in the database.
-    """
-    marc_file = '%s/%s/marc.xml' %(path, kdip_id)
-    marc = load_xmlobject_from_file(marc_file, Marc)
-    marc.tag_999a = enumcron
-    with open(marc_file, 'w') as marcxml:
-        marcxml.write(marc.serialize(pretty=True))
-
-def remove_all_999_fields(marc_xml):
-    """
-    Method used by the check_ht manage command to remove all 999
-    fileds from the MARC XML before going to Aleph
-    """
-    try:
-        marc_xml.tag_999 = ''
-    except:
-        pass
-    return marc_xml
-
-def update_583(marc_xml):
-    """
-    Method used by check_ht manage command to upddate the
-    583 filed to `ditigized`.
-    """
-    try:
-        marc_xml.tag_583_a = 'digitized'
-    except:
-        pass
-    return marc_xml
-
-def create_yaml(capture_agent, path, kdip_id):
-    """
-    Method to create a YAML file with some basic default
-    metadata for HathiTrust
-    """
-    yaml_data = {}
-    yaml_data['capture_agent'] = capture_agent
-    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-    yaml_data['scanning_order'] = 'left-to-right'
-    yaml_data['reading_order'] = 'left-to-right'
-    with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
-        outfile.write(yaml.dump(yaml_data, default_flow_style=False))
-
-
-def load_bib_record(barcode):
-    """
-    Method to load MARC XML from Aleph
-    """
-    get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_bibrecord', \
-        params={'item_id': barcode})
-
-    return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), Marc)
-
-def load_local_bib_record(barcode):
-    """
-    Method to load local version of MARC XML from Aleph
-    """
-    get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
-        params={'item_id': barcode})
-
-    return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), Marc)
-
 # DB Models
 class KDip(models.Model):
     "Class to describe Kirtas output directories"
@@ -652,7 +266,7 @@ class KDip(models.Model):
                 error.save()
 
             # Get the published date
-            date = get_date(bib_rec.tag_008, self.note)
+            date = Utils.get_date(bib_rec.tag_008, self.note)
 
             # If we don't find a date, note the error.
             if date is None:
@@ -661,7 +275,7 @@ class KDip(models.Model):
 
             # Otherwise, see if it is in copyright.
             else:
-                rights = get_rights(date, bib_rec.tag_583x)
+                rights = Utils.get_rights(date, bib_rec.tag_583x)
                 if rights is not None:
                     logger.error(rights)
                     error = ValidationError( \
@@ -706,13 +320,14 @@ class KDip(models.Model):
             error.save()
 
         logger.info('Gathering tiffs.')
-        #tif_status = None
+
         tiffs = glob.glob('%s/*.tif' % tif_dir)
 
         logger.info('Checking tiffs.')
         for tiff in tiffs:
             logger.info('Sending %s for validation' % tiff)
-            tif_status = validate_tiffs(tiff, self.kdip_id, self.path, self)
+            validate_tif = ValidateTiff(tiff, self)
+            validate_tif.validate_tiffs()
 
         # validate each file of type ALTO and OCR
         for file_ref in mets.techmd:
@@ -810,7 +425,7 @@ class KDip(models.Model):
 
                     if kwargs.get('kdip_enumcron'):
                         kdip.note = kwargs.get('kdip_enumcron')
-                        update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
+                        Utils.update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
 
                     if kwargs.get('kdip_pid'):
                         kdip.pid = kwargs.get('kdip_pid')
@@ -838,7 +453,7 @@ class KDip(models.Model):
 
         bad_kdip_list = '\n'.join(map(str, bad_kdips))
         contact = getattr(settings, 'EMORY_CONTACT', None)
-        send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
+        # send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
 
 
 
@@ -866,7 +481,7 @@ class KDip(models.Model):
                 # If the note has been updated we need to write that to the Marc file.
                 orig = KDip.objects.get(pk=self.pk)
                 if orig.note != self.note:
-                    update_999a(self.path, self.kdip_id, self.note)
+                    Utils.update_999a(self.path, self.kdip_id, self.note)
 
             super(KDip, self).save(*args, **kwargs)
 
