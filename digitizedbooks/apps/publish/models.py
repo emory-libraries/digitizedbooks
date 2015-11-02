@@ -256,7 +256,7 @@ class KDip(models.Model):
         # Check the dates to see if the volume is in copyright.
         try:
             # Load the MARC XML
-            bib_rec = load_bib_record(self.barcode)
+            bib_rec = Utils.load_bib_record(self.barcode)
 
             # Check if there is a subfied 5 in the 583 tag
             if not bib_rec.tag_583_5:
@@ -395,13 +395,11 @@ class KDip(models.Model):
         bad_kdips = []
 
         # create the KDIP is it does not exits
-        print kdip_list
         for k in kdip_list:
 
             try:
                 # lookkup bib record for note field
-                bib_rec = load_bib_record(k[:12])
-
+                bib_rec = Utils.load_bib_record(k[:12])
                 # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
                 for field_999 in bib_rec.tag_999:
                     i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
@@ -435,7 +433,7 @@ class KDip(models.Model):
                     except OSError:
                         pass
 
-                    create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
+                    Utils.create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
                     kdip.validate()
 

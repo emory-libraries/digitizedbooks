@@ -3,6 +3,11 @@ A handful of utility methods for various actions.
 """
 
 import re
+import yaml
+import requests
+from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
+
+import models
 
 def date_to_int(date):
     try:
@@ -132,15 +137,16 @@ def load_bib_record(barcode):
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), Marc)
+        get_bib_rec.text.encode('utf-8'), models.Marc)
 
 def load_local_bib_record(barcode):
     """
     Method to load local version of MARC XML from Aleph
+    Used by the check_ht command.
     """
     get_bib_rec = requests.get( \
         'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), Marc)
+        get_bib_rec.text.encode('utf-8'), models.Marc)
