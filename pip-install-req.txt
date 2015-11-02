@@ -1,6 +1,6 @@
 Django==1.8
 django_auth_ldap
-mysql-python # HACK: we don't strictly depend on mysql. find a better way to install it in deploy.
+mysql-python
 eulxml
 eulcommon
 python-dateutil
