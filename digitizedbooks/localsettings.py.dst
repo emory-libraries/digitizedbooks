@@ -102,6 +102,8 @@ ZEPHIR_CONTACT = ''
 ZEPHIR_FTP_HOST = ''
 ZEPHIR_LOGIN = ''
 ZEPHIR_PW = ''
+ZEPHIR_UPLOAD_DIR = ''
+ZEPHIR_REPORT_DIR = ''
 
 # Credentials to upload new MARC XML to Aleph
 ALEPH_SFTP_HOST = ''

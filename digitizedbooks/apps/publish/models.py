@@ -27,6 +27,7 @@ from django.http import HttpResponseRedirect
 
 from ValidateTiff import ValidateTiff
 import Utils
+from SendToZephir import send_to_zephir
 
 from eulxml.xmlmap import XmlObject
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
@@ -491,6 +492,8 @@ class Job(models.Model):
         ('new', "New"),
         ('ready for zephir', 'Ready for Zephir'),
         ('waiting on zephir', 'Waiting on Zephir'),
+        ('zephir upload error', 'Zephir Upload Error'),
+        ('zephir error', 'Zephir Error'),
         ('ready for hathi', 'Ready for Hathi'),
         ('uploading', 'Uploading to HathiTrust'),
         ('failed', 'Upload Failed'),
@@ -525,72 +528,14 @@ class Job(models.Model):
 
             # Semd volumes to the upload task.
             self.status = 'uploading'
-            #celery.current_app.send_task('digitizedbooks.publish.tasks.upload_for_ht', (uploaded_files, self.id))
-            from publish.tasks import upload_for_ht
+            # Add the celery task.
+            from tasks import upload_for_ht
             upload_for_ht.delay(uploaded_files, self.id)
 
         elif self.status == 'ready for zephir':
-            kdips = KDip.objects.filter(job=self.id)
-            # Tmp file for combined MARC XML. The eulxml output includes the namespace in the
-            # <record>. We will be getting rid of that then deleting this file.
-            zephir_tmp_file = '%s/Zephir/%s.tmp' % (kdip_dir, self.name)
-            # File for the combined MARC XML.
-            zephir_file = '%s/Zephir/%s.xml' % (kdip_dir, self.name)
-
-            # Remove zephir file if it is already there so we can start from scratch.
-            try:
-                os.remove(zephir_file)
-            except OSError:
-                pass
-
-            # Opening line for MARC XML
-            open(zephir_tmp_file, 'a').write('<collection xmlns="http://www.loc.gov/MARC21/slim">\n')
-
-            # Loop through the KDips to the the MARC XML
-            for kdip in kdips:
-                marc_file = '%s/%s/marc.xml' %(kdip.path, kdip.kdip_id)
-
-                # Load the MARC XML
-                marc = load_xmlobject_from_file(marc_file, Marc)
-
-                # Serialize the XML into the tmp file
-                open(zephir_tmp_file, 'a').write('\t' + marc.record.serialize(pretty=True))
-
-            # Write the final line
-            open(zephir_tmp_file, 'a').write('</collection>')
-
-            # Now copy the contents of the tmp file to the real file and strip out the
-            # namespace from the record tag.
-            with open(zephir_tmp_file, 'r') as input_file, open(zephir_file, 'a') as output_file:
-                for line in input_file:
-                    if len(line) > 1:
-                        new_line = re.sub('<record.*>', '<record>', line)
-                        output_file.write(new_line)
-
-            # Delete tmp file
-            os.remove(zephir_tmp_file)
-
-            send_from = getattr(settings, 'EMORY_CONTACT', None)
-            zephir_contact = getattr(settings, 'ZEPHIR_CONTACT', None)
-            host = getattr(settings, 'ZEPHIR_FTP_HOST', None)
-            user = getattr(settings, 'ZEPHIR_LOGIN', None)
-            passw = getattr(settings, 'ZEPHIR_PW', None)
-
-            # FTP the file
-            upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s' % (user, passw, zephir_file, host)
-            upload_to_z = subprocess.check_output(upload_cmd, shell=True)
-
-            # Create the body of the email
-            body = 'file name=%s.xml\n' % self.name
-            body += 'file size=%s\n' % os.path.getsize(zephir_file)
-            body += 'record count=%s\n' % self.volume_count
-            body += 'notification email=%s' % send_from
-
-            # Send email to Zephir. Zephir contact is defined in the loacal settings.
-            send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
-
+            zephir_status = send_to_zephir(self)
             # Set status
-            self.status = 'waiting on zephir'
+            self.status = zephir_status
 
         super(Job, self).save(*args, **kwargs)
 
