@@ -367,12 +367,13 @@ class KDip(models.Model):
     def load(self, *args, **kwargs):
         "Class method to scan data directory specified in the ``localsettings`` **KDIP_DIR** and create new KDIP objects in the database."
 
-        kdip_list = {}
-
-        if kwargs.get('kdip'):
-            kdip_list[kwargs.get(('kdip_id'))] = kwargs.get('kdip_path')
+        # The only thing that should be sending any args is when the kdip is
+        # set to reporcess and the kdip object will be the first (and only) arg.
+        if args:
+            args[0].validate()
 
         else:
+            kdip_list = {}
             exclude = ['%s/HT' % kdip_dir, '%s/out_of_scope' % kdip_dir, '%s/test' % kdip_dir]
 
             for path, subdirs, files in os.walk(kdip_dir):
@@ -393,71 +394,71 @@ class KDip(models.Model):
                         if kdip and full_path not in exclude:
                             kdip_list[dir] = path
 
-        # Empty list to gather errant KDips
-        bad_kdips = []
+            # Empty list to gather errant KDips
+            bad_kdips = []
 
-        # create the KDIP is it does not exits
-        for k in kdip_list:
+            # create the KDIP is it does not exits
+            for k in kdip_list:
 
-            try:
-                # lookkup bib record for note field
-                bib_rec = Utils.load_bib_record(k[:12])
-                # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
-                for field_999 in bib_rec.tag_999:
-                    i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
-                        namespaces=Marc.ROOT_NAMESPACES)[0].text
-                    if i999 != k[:12]:
-                        bib_rec.tag_999.remove(field_999)
+                try:
+                    # lookkup bib record for note field
+                    bib_rec = Utils.load_bib_record(k[:12])
+                    # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
+                    for field_999 in bib_rec.tag_999:
+                        i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
+                            namespaces=Marc.ROOT_NAMESPACES)[0].text
+                        if i999 != k[:12]:
+                            bib_rec.tag_999.remove(field_999)
 
-                # Set the note field to 'EnumCron not found' if the 999a filed
-                # is empty or missing.
-                note = bib_rec.note(k[:12]) or 'EnumCron not found'
+                    # Set the note field to 'EnumCron not found' if the 999a filed
+                    # is empty or missing.
+                    note = bib_rec.note(k[:12]) or 'EnumCron not found'
 
-                defaults={
-                   'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
-                    'note': note,
-                    'path': kdip_list[k]
-                }
+                    defaults={
+                       'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
+                        'note': note,
+                        'path': kdip_list[k]
+                    }
 
-                kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
-                if created:
-                    logger.info("Created KDip %s" % kdip.kdip_id)
+                    kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
+                    if created:
+                        logger.info("Created KDip %s" % kdip.kdip_id)
 
-                    # Write the marc.xml to disk.
-                    with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
-                        marcxml.write(bib_rec.serialize(pretty=True))
+                        # Write the marc.xml to disk.
+                        with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
+                            marcxml.write(bib_rec.serialize(pretty=True))
 
-                    if kwargs.get('kdip_enumcron'):
-                        kdip.note = kwargs.get('kdip_enumcron')
-                        Utils.update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
+                        if kwargs.get('kdip_enumcron'):
+                            kdip.note = kwargs.get('kdip_enumcron')
+                            Utils.update_999a(kdip.path, kdip.kdip_id, kwargs.get('kdip_enumcron'))
 
-                    if kwargs.get('kdip_pid'):
-                        kdip.pid = kwargs.get('kdip_pid')
+                        if kwargs.get('kdip_pid'):
+                            kdip.pid = kwargs.get('kdip_pid')
 
-                    try:
-                        os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
-                    except OSError:
-                        pass
+                        try:
+                            os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
+                        except OSError:
+                            pass
 
-                    Utils.create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
+                        Utils.create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
-                    kdip.validate()
+                        kdip.validate()
 
-                    # If the KDip had errors, add it to the list so an email alert can be sent.
-                    if kdip.status == 'invalid':
-                        bad_kdips.append(kdip.kdip_id)
+                        # If the KDip had errors, add it to the list so an email alert can be sent.
+                        if kdip.status == 'invalid':
+                            bad_kdips.append(kdip.kdip_id)
 
-                # else:
-                #     kdip.validate()
+                    # else:
+                    #     kdip.validate()
 
 
-            except:
-                bad_kdips.append(k)
-                logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
+                except:
+                    bad_kdips.append(k)
+                    logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
 
-        bad_kdip_list = '\n'.join(map(str, bad_kdips))
-        contact = getattr(settings, 'EMORY_CONTACT', None)
-        # send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
+            bad_kdip_list = '\n'.join(map(str, bad_kdips))
+            contact = getattr(settings, 'EMORY_CONTACT', None)
+            # send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
 
 
 
@@ -472,11 +473,8 @@ class KDip(models.Model):
     def save(self, *args, **kwargs):
 
         if self.status == 'reprocess':
-            KDip.objects.filter(id = self.id).delete()
-            KDip.load(kdip_id=self.id, \
-                        kdip_path=self.path, \
-                        kdip_enumcron=self.note, \
-                        kdip_pid=self.pid)
+            # KDip.objects.filter(id = self.id).delete()
+            KDip.load(self)
             #self.validate()
             return HttpResponseRedirect('/admin/publish/kdip/?q=%s' % self.kdip_id)
 
