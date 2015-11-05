@@ -408,9 +408,13 @@ class KDip(models.Model):
                     if i999 != k[:12]:
                         bib_rec.tag_999.remove(field_999)
 
+                # Set the note field to 'EnumCron not found' if the 999a filed
+                # is empty or missing.
+                note = bib_rec.note(k[:12]) or 'EnumCron not found'
+
                 defaults={
                    'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
-                    'note': bib_rec.note(k[:12]),
+                    'note': note,
                     'path': kdip_list[k]
                 }
 
