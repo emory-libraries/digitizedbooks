@@ -73,6 +73,9 @@ PIDMAN_POLICY = ''
 
 KDIP_DIR = '/path/to/kdips'
 
+# Pattern in directory path that should be skipped
+SKIP_DIR = 'test'
+
 # django-auth-ldap settings
 import ldap
 from django_auth_ldap.config import LDAPSearch

@@ -382,7 +382,8 @@ class KDip(models.Model):
 
                     # Only process new KDips or ones.
                     try:
-                        if 'test' not in path:
+                        skip = getattr(settings, 'SKIP_DIR', None)
+                        if skip not in path:
                             processed_KDip = KDip.objects.get(kdip_id = dir)
                             # Check to see if the a KDip has moved and update the path.
                             if processed_KDip != path:

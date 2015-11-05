@@ -38,8 +38,6 @@ SERVER_EMAIL = 'digbooks@emory.edu'
 # SHERPA/RoMEO API key. http://www.sherpa.ac.uk/romeo/apiregistry.php
 ROMEO_API_KEY = '5VEVFAXECkY'
 
-KDIP_DIR = '/mnt/lsdi2/ftp/test'
-
 BOXFOLDER = '1709834232'
 
 HT_STUB = 'http://hdl.handle.net/2027/emu.'
