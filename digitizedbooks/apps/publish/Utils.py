@@ -49,7 +49,7 @@ def get_date(tag_008, note):
     elif date_type in group2:
         # if Date2 exists and Date2 > Date1, return Date2
         # otherwise we'll return Date1 whcih might be `None`.
-        if date2 is not None:
+        if date2 is not None and date2 > date1:
             return date2
         else:
             return date1

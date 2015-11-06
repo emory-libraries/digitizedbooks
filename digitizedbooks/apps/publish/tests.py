@@ -30,6 +30,10 @@ class TestKDip(TestCase):
         k3 = KDip.objects.get(kdip_id = '10002333054')
         self.assertEquals(k3.status, 'invalid')
         self.assertEquals(k3.job, None)
+        error = k3.validationerror_set.first().error
+        self.assertEquals(error, 'Published in 1933')
+        error_count = k3.validationerror_set.all().count()
+        self.assertEquals(error_count, 1)
 
         # Test reprocess
         k1.status = 'invalid'
@@ -61,7 +65,7 @@ class TestKDip(TestCase):
         self.assertEquals(d, 1931)
 
         d = Utils.get_date('111220t19391931gauar         0    0eng d', '1999')
-        self.assertEquals(d, 1931)
+        self.assertEquals(d, 1939)
 
         d = Utils.get_date('111220t    1931gauar         0    0eng d', '1999')
         self.assertEquals(d, 1931)
