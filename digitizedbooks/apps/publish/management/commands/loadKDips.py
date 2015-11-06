@@ -1,5 +1,5 @@
 from django.core.management.base import NoArgsCommand
-from publish.models import KDip
+from digitizedbooks.apps.publish.models import KDip
 
 class Command(NoArgsCommand):
 

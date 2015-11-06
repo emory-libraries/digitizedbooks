@@ -4,7 +4,8 @@ we will updete the KDip making the attribute `accepted_by_ht`
 `True` and then update the PID with the ht_url
 """
 from django.core.management.base import BaseCommand
-from publish.models import KDip, remove_all_999_fields, load_local_bib_record, update_583
+from digitizedbooks.apps.publish.models import KDip
+from digitizedbooks.apps.publish.Utils import remove_all_999_fields, load_local_bib_record, update_583
 from django.conf import settings
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 import requests

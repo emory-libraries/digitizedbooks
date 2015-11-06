@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from digitizedbooks.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
-from publish.models import Job, KDip, BoxToken
+from digitizedbooks.apps.publish.models import Job, KDip, BoxToken
 import os, shutil
 from hashlib import md5, sha1
 import logging
