@@ -9,7 +9,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'digitizedbooks.settings')
 
 from django.conf import settings
 
-app = Celery('digitizedbooks', include=['publish'])
+app = Celery('digitizedbooks', include=['digitizedbooks.apps.publish'])
 
 # Using a string here means the worker will not have to
 # pickle the object when using Windows.
