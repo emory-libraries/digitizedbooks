@@ -370,6 +370,9 @@ class KDip(models.Model):
         # The only thing that should be sending any args is when the kdip is
         # set to reporcess and the kdip object will be the first (and only) arg.
         if args:
+            reproc_kdip = args[0]
+            # Clear out previous validation errors.
+            reproc_kdip.validationerror_set.clear()
             args[0].validate()
 
         else:
