@@ -162,7 +162,7 @@ def upload_for_ht(kdips, job_id):
                 uploaded_files.append(kdip.kdip_id)
 
         except Exception as e:
-            resposne_message = upload_response['message']
+            resposne_message = upload_response['message'] or 'no message in response'
             if resposne_message == 'Item with the same name already exists':
                 logger.info('%s.zip already exists on Box.' % (process_dir))
                 status = 'being processed'
