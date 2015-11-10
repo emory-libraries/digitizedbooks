@@ -371,9 +371,14 @@ class KDip(models.Model):
         # set to reporcess and the kdip object will be the first (and only) arg.
         if args:
             reproc_kdip = args[0]
+            # We need to make sure that we are sending the rights
+            # type of object. Just sending `args[0]` had issues.
+            # Most noteably with the Mets validation.
+            kdip = KDip.objects.get(pk=reproc_kdip.id)
             # Clear out previous validation errors.
-            reproc_kdip.validationerror_set.clear()
-            args[0].validate()
+            errors = kdip.validationerror_set.all()
+            errors.delete()
+            kdip.validate()
 
         else:
             kdip_list = {}

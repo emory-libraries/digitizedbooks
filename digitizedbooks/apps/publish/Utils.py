@@ -87,7 +87,7 @@ def update_999a(path, kdip_id, enumcron):
     in the database.
     """
     marc_file = '%s/%s/marc.xml' %(path, kdip_id)
-    marc = load_xmlobject_from_file(marc_file, Marc)
+    marc = load_xmlobject_from_file(marc_file, models.Marc)
     marc.tag_999a = enumcron
     with open(marc_file, 'w') as marcxml:
         marcxml.write(marc.serialize(pretty=True))
