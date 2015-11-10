@@ -39,7 +39,7 @@ class TestKDip(TestCase):
         k1.status = 'invalid'
         k1.save()
         self.assertEquals(k1.status, 'invalid')
-        KDip.load(k1)
+        KDip.validate(k1)
         self.assertEquals(k1.status, 'new')
 
         # Many tests for all the date cases.
