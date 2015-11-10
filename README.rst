@@ -1,6 +1,6 @@
 Purpose
 -------
-This project aims to automate the process for submitting digitized volumes to `HathiTrust`.
+This project aims to automate the process for submitting digitized volumes to `HathiTrust`_.
 
 .. _HathiTrust: https://www.hathitrust.org/
 
