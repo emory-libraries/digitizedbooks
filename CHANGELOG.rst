@@ -1,3 +1,18 @@
+Release 1.3
+-----------
+Features:
+* As a user, once Zephir produces a report that the marc records for a Job have been processed, I want the application to automatically set the Job to "Ready for Hathi", so that I don't have to do it manually.
+* As a user I want any and all staged digitized volumes to have a corresponding KDip record associated with it, so that no staged volumes end up getting "lost".
+* As a user, once all the kdips in a job have been uploaded to MBox, I want an email automatically sent to Hathi Trust staff, so that the uploaded kdips will be processed into HT.
+
+Bug fixes:
+* Finally got the reprocessing of an individual KDip wroking reliably.
+* Box.com changed the JSON response and the code was not able to find the checksum of the uploaded file and makring the job as `Failed to Upload`. The checksum had been called `zip_sha1` in the JSON but is now just `sha1`.
+
+Improvements:
+* The name of a directory to skip, eg `test` is now configurable instead of hardcoded.
+* More tests.
+
 Release 1.2.2
 -------------
 * Started getting an error for `datetime.strptime` that it was getting a tuple and not a string from the `DateTime` tiff tag. This release fixes that by converting the found DateTime to a string.

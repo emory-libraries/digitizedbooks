@@ -73,6 +73,9 @@ PIDMAN_POLICY = ''
 
 KDIP_DIR = '/path/to/kdips'
 
+# Pattern in directory path that should be skipped
+SKIP_DIR = 'test'
+
 # django-auth-ldap settings
 import ldap
 from django_auth_ldap.config import LDAPSearch
@@ -102,6 +105,8 @@ ZEPHIR_CONTACT = ''
 ZEPHIR_FTP_HOST = ''
 ZEPHIR_LOGIN = ''
 ZEPHIR_PW = ''
+ZEPHIR_UPLOAD_DIR = ''
+ZEPHIR_REPORT_DIR = ''
 
 # Credentials to upload new MARC XML to Aleph
 ALEPH_SFTP_HOST = ''

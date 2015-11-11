@@ -1,5 +1,5 @@
 from django.core.management.base import NoArgsCommand
-from publish.models import KDip, load_local_bib_record
+from digitizedbooks.apps.publish.models import KDip, load_local_bib_record
 
 class Command(NoArgsCommand):
 

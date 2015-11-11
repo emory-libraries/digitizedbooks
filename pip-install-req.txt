@@ -1,6 +1,6 @@
 Django==1.8
 django_auth_ldap
-mysql-python # HACK: we don't strictly depend on mysql. find a better way to install it in deploy.
+mysql-python
 eulxml
 eulcommon
 python-dateutil
@@ -8,7 +8,7 @@ python-magic
 pyasn1
 boto
 requests
-pillow
+pillow==2.9.0
 pyyaml
 box.py
 https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.1.x/lastSuccessfulBuild/artifact/pidmanclient/dist/pidservices-1.1.2.tar.gz
@@ -17,3 +17,4 @@ django-celery
 django-kombu
 pysftp
 pymarc
+celery

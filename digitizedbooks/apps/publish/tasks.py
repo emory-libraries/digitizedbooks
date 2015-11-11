@@ -3,7 +3,7 @@ from __future__ import absolute_import
 from digitizedbooks.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
-from publish.models import Job, KDip, BoxToken
+from digitizedbooks.apps.publish.models import Job, KDip, BoxToken
 import os, shutil
 from hashlib import md5, sha1
 import logging
@@ -21,7 +21,6 @@ def upload_for_ht(kdips, job_id):
     """
     Task to upload files to Box in the backgroud.
     """
-    print "oh hello there"
     logger = logging.getLogger(__name__)
     kdip_dir = getattr(settings, 'KDIP_DIR', None)
 
@@ -156,18 +155,27 @@ def upload_for_ht(kdips, job_id):
             zip_sha1.update(local_file.read())
             local_file.close()
 
-            if zip_sha1.hexdigest() == upload_response['entries'][0]['zip_sha1']:
+            if zip_sha1.hexdigest() == upload_response['entries'][0]['sha1']:
                 status = 'being processed'
                 #uploaded_files.append('ark+=%s=%s' % (naan, noid))
                 uploaded_files.append(kdip.kdip_id)
 
         except Exception as e:
-            resposne_message = upload_response['message']
-            if resposne_message == 'Item with the same name already exists':
+            response_message = ''
+            if 'message' in upload_response:
+                response_message = upload_response['message']
+            else:
+                response_message = 'no message in response'
+            if response_message == 'Item with the same name already exists':
                 logger.info('%s.zip already exists on Box.' % (process_dir))
+                uploaded_files.append(kdip.kdip_id)
                 status = 'being processed'
-            elif resposne_message:
-                logger.error('Uploading %s.zip failed with message: %s' % (process_dir, resposne_message))
+            elif response_message == 'no message in response':
+                logger.info(response_message)
+                uploaded_files.append(kdip.kdip_id)
+                status = 'being processed'
+            elif response_message:
+                logger.error('Uploading %s.zip failed with message: %s' % (process_dir, response_message))
                 status = 'failed'
             else:
                 logger.error('Uploading %s.zip failed with unknown message' % (process_dir))
