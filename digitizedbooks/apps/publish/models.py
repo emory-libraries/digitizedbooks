@@ -307,6 +307,12 @@ class KDip(models.Model):
         try:
             mets = load_xmlobject_from_file(mets_file, Mets)
 
+        except:
+            reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
+            error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
+            error.save()
+
+        try:
             #mets file validates against schema
             logger.info('Cheking if Mets is valid.')
             if not mets.is_valid():
@@ -314,11 +320,8 @@ class KDip(models.Model):
                 logger.error(reason)
                 error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
                 error.save()
-
         except:
-            reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
-            error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
-            error.save()
+            error = ValidationError(kdip=self, error='Unable to validate Mets.', error_type="Invalid Mets")
 
         logger.info('Gathering tiffs.')
 
