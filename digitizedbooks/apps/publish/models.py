@@ -501,7 +501,7 @@ class KDip(models.Model):
         return self.kdip_id
 
     class Meta:
-        ordering = ['create_date']
+        ordering = ['-pk']
 
 
     def save(self, *args, **kwargs):
