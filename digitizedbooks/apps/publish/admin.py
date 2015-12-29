@@ -61,7 +61,7 @@ class JobAdmin(admin.ModelAdmin):
     inlines = [KDipInline]
     list_display = ['name', 'status', 'volume_count']
     list_link = ['name']
-    #readonly_fields = ['status']
+    readonly_fields = ['volume_count']
 
 
 admin.site.register(KDip, KDipAdmin)
