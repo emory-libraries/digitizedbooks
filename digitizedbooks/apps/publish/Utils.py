@@ -130,10 +130,11 @@ def create_yaml(capture_agent, path, kdip_id):
 
 def load_bib_record(barcode):
     """
-    Method to load MARC XML from Aleph
+    Method to load MARC XML from Am
+    http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord?item_id=010002483050
     """
     get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_bibrecord', \
+        'http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord', \
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \

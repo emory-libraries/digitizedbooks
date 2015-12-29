@@ -22,14 +22,17 @@ class TestKDip(TestCase):
         k1 = KDip.objects.get(kdip_id = '010000666241')
         self.assertEquals(k1.status, 'new')
         self.assertEquals(k1.job, None)
+        self.assertEquals(k1.oclc, '50047195')
 
         k2 = KDip.objects.get(kdip_id = '010002643870')
         self.assertEquals(k2.status, 'new')
         self.assertEquals(k2.job, None)
+        self.assertEquals(k2.oclc, '191229673')
 
         k3 = KDip.objects.get(kdip_id = '10002333054')
         self.assertEquals(k3.status, 'invalid')
         self.assertEquals(k3.job, None)
+        self.assertEquals(k3.oclc, '01756136')
         error = k3.validationerror_set.first().error
         self.assertEquals(error, 'Published in 1933')
         error_count = k3.validationerror_set.all().count()

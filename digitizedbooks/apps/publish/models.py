@@ -169,6 +169,8 @@ class Marc(MarcBase):
 
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
+    oclc = NodeListField('marc:record/marc:datafield[@tag="035"]', MarcDatafield)
+
     def note(self, barcode):
         """
         :param: barcode aka item_id that is used to lookup the note field
@@ -219,11 +221,19 @@ class KDip(models.Model):
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
+    'Path of the KDIP on the file system'
+    oclc = models.CharField(max_length=100, blank=True)
+    'OCLC number from MARCXML'
     pid = models.CharField(max_length=5, blank=True)
+    'Pid that was generated in the pid man'
     notes = models.TextField(blank=True, default='')
+    'Notes the user makes on the KDIP'
     accepted_by_ht = models.BooleanField(default=False, verbose_name='HT')
+    'Boolean that is set to true by the `check_ht` command when volume is live on HT'
     accepted_by_ia = models.BooleanField(default=False, verbose_name='IA')
+    'Boolean set by user if volume is live in IA'
     al_ht = models.BooleanField(default=False, verbose_name="AL-HT")
+    'Boolean that is set to true by the `check_al` command when the HT link appears in the MARCXML'
 
     @property
     def barcode(self):
@@ -421,6 +431,18 @@ class KDip(models.Model):
                         if i999 != k[:12]:
                             bib_rec.tag_999.remove(field_999)
 
+                    # Find the OCLC in the MARCXML
+                    # First an empty list to put all the 035 tags in
+                    oclc_tags = []
+                    for oclc_tag in bib_rec.oclc:
+                        # Mainly doing it this way for readablity and/or because I don't know any better way to do this in eulxml
+                        oclc_tags.append(oclc_tag.node.xpath('marc:subfield[@code="a"]', namespaces=Marc.ROOT_NAMESPACES)[0].text)
+                    # We want the first match
+                    oclc = next(oclc_val for oclc_val in oclc_tags if "(OCoLC)" in oclc_val or "ocm" in oclc_val or "ocn" in oclc_val)
+                    # Remove all non-numeric characters
+                    oclc = re.sub("[^0-9]", "", oclc)
+
+
                     # Set the note field to 'EnumCron not found' if the 999a filed
                     # is empty or missing.
                     note = bib_rec.note(k[:12]) or 'EnumCron not found'
@@ -428,7 +450,8 @@ class KDip(models.Model):
                     defaults={
                        'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
                         'note': note,
-                        'path': kdip_list[k]
+                        'path': kdip_list[k],
+                        'oclc': oclc
                     }
 
                     kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)

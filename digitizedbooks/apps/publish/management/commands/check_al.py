@@ -12,6 +12,5 @@ class Command(NoArgsCommand):
             link = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid
 
             if link.decode('utf-8').lower() in marc_rec.serialize().decode('utf-8').lower():
-                print 'true'
                 kdip.al_ht = True
                 kdip.save()
