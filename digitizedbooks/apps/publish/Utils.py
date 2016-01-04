@@ -6,6 +6,9 @@ import re
 import yaml
 import requests
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
+from os import listdir, remove
+from datetime import datetime
+from PIL import Image
 
 import models
 
@@ -114,20 +117,6 @@ def update_583(marc_xml):
         pass
     return marc_xml
 
-def create_yaml(capture_agent, path, kdip_id):
-    """
-    Method to create a YAML file with some basic default
-    metadata for HathiTrust
-    """
-    yaml_data = {}
-    yaml_data['capture_agent'] = capture_agent
-    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-    yaml_data['scanning_order'] = 'left-to-right'
-    yaml_data['reading_order'] = 'left-to-right'
-    with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
-        outfile.write(yaml.dump(yaml_data, default_flow_style=False))
-
-
 def load_bib_record(barcode):
     """
     Method to load MARC XML from Am
@@ -151,3 +140,37 @@ def load_local_bib_record(barcode):
 
     return load_xmlobject_from_string( \
         get_bib_rec.text.encode('utf-8'), models.Marc)
+
+def create_yaml(kdip):
+    """
+    Method to create a YAML file with some basic default
+    metadata for HathiTrust
+    """
+
+    try:
+        remove('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id))
+    except OSError:
+        pass
+
+    bib_rec = load_bib_record(kdip.kdip_id)
+    capture_agent = str(bib_rec.tag_583_5)
+
+    # First we need to figure out the 'capture date'
+    tif_dir = '%s/%s/TIFF' % (kdip.path, kdip.kdip_id)
+    tif = '%s/%s' % (tif_dir, listdir(tif_dir)[-1])
+    image = Image.open(tif)
+    # In Pillow 3.0 the DateTime/306 tag is returned as a tuple, not a string.
+    # So if/when we move to 3.x we will need this conversion.
+    if image.tag.has_key(306):
+        dt = datetime.strptime(image.tag[306], '%Y:%m:%d %H:%M:%S')
+    else:
+        dt = ''
+
+    yaml_data = {}
+    yaml_data['capture_agent'] = capture_agent
+    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
+    yaml_data['scanning_order'] = 'left-to-right!!!!'
+    yaml_data['reading_order'] = 'left-to-right'
+    yaml_data['capture_date']= dt.isoformat('T')
+    with open('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id), 'a') as outfile:
+        outfile.write(yaml.dump(yaml_data, default_flow_style=False))

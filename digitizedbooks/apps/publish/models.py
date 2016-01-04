@@ -264,6 +264,12 @@ class KDip(models.Model):
 
         logger.info('Starting validation of %s' % (self.kdip_id))
 
+        # Create the YAML file for HT. We do it here, instead of on load
+        # because we want it to recreate on reporcessing.
+        # bib_rec = Utils.load_bib_record(self.kdip_id)
+        # capture_agent = bib_rec.tag_583_5
+        Utils.create_yaml(self)
+
         # Check the dates to see if the volume is in copyright.
         try:
             # Load the MARC XML
@@ -313,8 +319,8 @@ class KDip(models.Model):
             error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
 
-        logger.info('Loading Mets file into eulxml.')
         try:
+            logger.info('Loading Mets file into eulxml.')
             mets = load_xmlobject_from_file(mets_file, Mets)
 
         except:
@@ -324,14 +330,14 @@ class KDip(models.Model):
 
         try:
             #mets file validates against schema
-            logger.info('Cheking if Mets is valid.')
-            if not mets.is_valid():
+            if mets.is_valid() is not True:
                 reason = "Error: %s is not valid" % mets_file
                 logger.error(reason)
                 error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
                 error.save()
         except:
             error = ValidationError(kdip=self, error='Unable to validate Mets.', error_type="Invalid Mets")
+            error.save()
 
         logger.info('Gathering tiffs.')
 
@@ -468,13 +474,6 @@ class KDip(models.Model):
 
                         if kwargs.get('kdip_pid'):
                             kdip.pid = kwargs.get('kdip_pid')
-
-                        try:
-                            os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
-                        except OSError:
-                            pass
-
-                        Utils.create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
                         kdip.validate()
 

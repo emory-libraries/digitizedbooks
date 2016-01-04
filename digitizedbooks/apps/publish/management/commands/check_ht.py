@@ -29,15 +29,15 @@ def load_pymarc(tmp_marc):
     return records[0]
 
 
-def add_856(record, pid, note):
-    if note:
+def add_856(record, kdip):
+    if kdip.note:
         record.add_field(
             Field(
                 tag='856',
                 indicators=['4', '1'],
                 subfields=[
-                    '3', note,
-                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % pid,
+                    '3', kdip.note,
+                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
                     'y', 'HathiTrust version'
                 ]))
         return record
@@ -47,7 +47,7 @@ def add_856(record, pid, note):
                 tag='856',
                 indicators=['4', '1'],
                 subfields=[
-                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % pid,
+                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
                     'y', 'HathiTrust version'
                 ]))
         return record
@@ -112,7 +112,7 @@ class Command(BaseCommand):
                 pymarc_record = load_pymarc(tmp_marc_path)
 
                 # Add some tags based on some conditionals.
-                pymarc_record = add_856(pymarc_record, kdip.pid, kdip.note)
+                pymarc_record = add_856(pymarc_record, kdip)
 
                 # Check for the text in the 590 field.
                 text_590 = "The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital library Publications Program"

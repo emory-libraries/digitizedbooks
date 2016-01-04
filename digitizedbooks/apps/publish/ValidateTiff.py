@@ -1,7 +1,5 @@
 from PIL import Image
 import sys, re
-from datetime import datetime
-import yaml
 
 import models
 
@@ -86,14 +84,6 @@ class ValidateTiff:
 
                 if valid is True:
                     found[tif_tag] = tags.get(tif_tags[tif_tag])
-
-            # In Pillow 3.0 the DateTime tag is returned as a tuple, not a string.
-            # So if/when we move to 3.x we will need this conversion.
-            capture_date = ''.join(found['DateTime'])
-            dt = datetime.strptime(capture_date, '%Y:%m:%d %H:%M:%S')
-            yaml_data['capture_date'] = dt.isoformat('T')
-            with open('%s/%s/meta.yml' % (self.kdip.path, self.kdip), 'a') as outfile:
-                outfile.write( yaml.dump(yaml_data, default_flow_style=False) )
 
             ## START REAL VALIDATION
             if found['ImageWidth'] <= 0:
