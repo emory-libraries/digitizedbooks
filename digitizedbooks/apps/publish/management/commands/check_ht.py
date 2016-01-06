@@ -30,8 +30,10 @@ def load_pymarc(tmp_marc):
 
 
 def add_856(record, kdip):
-    print 'hello'
     if kdip.note:
+        # We need to see if there are any KDips in a job with the same OCLC.
+        # If there are, it means they are multi volume and we need to list
+        # each volume in an 856 field.
         volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
         if len(volumes) > 0:
             for vol in volumes:
@@ -90,7 +92,7 @@ class Command(BaseCommand):
         HT returns a `200` for volumes that are live.
         If not found, `404` is returned.
         """
-        kdips = KDip.objects.filter(accepted_by_ht=False).exclude(status='do not process')
+        kdips = KDip.objects.filter(accepted_by_ht=False).exclude(status='do not process').exclude(job=None)
         ht_stub = getattr(settings, 'HT_STUB', None)
 
         for kdip in kdips:
