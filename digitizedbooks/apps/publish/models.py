@@ -551,7 +551,7 @@ class Job(models.Model):
 
 
     class Meta:
-        ordering = ['id']
+        ordering = ['-pk']
 
     def save(self, *args, **kwargs):
 

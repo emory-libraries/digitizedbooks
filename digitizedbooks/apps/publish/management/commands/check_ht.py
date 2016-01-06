@@ -4,7 +4,7 @@ we will updete the KDip making the attribute `accepted_by_ht`
 `True` and then update the PID with the ht_url
 """
 from django.core.management.base import BaseCommand
-from digitizedbooks.apps.publish.models import KDip
+from digitizedbooks.apps.publish.models import KDip, Job
 from digitizedbooks.apps.publish.Utils import remove_all_999_fields, load_local_bib_record, update_583
 from django.conf import settings
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
@@ -30,16 +30,33 @@ def load_pymarc(tmp_marc):
 
 
 def add_856(record, kdip):
+    print 'hello'
     if kdip.note:
-        record.add_field(
-            Field(
-                tag='856',
-                indicators=['4', '1'],
-                subfields=[
-                    '3', kdip.note,
-                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
-                    'y', 'HathiTrust version'
-                ]))
+        volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
+        if len(volumes) > 0:
+            for vol in volumes:
+                record.add_field(
+                    Field(
+                        tag='856',
+                        indicators=['4', '1'],
+                        subfields=[
+                            '3', vol.note,
+                            'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
+                            'y', 'HathiTrust version'
+                        ]
+                    )
+                )
+        else:
+            record.add_field(
+                Field(
+                    tag='856',
+                    indicators=['4', '1'],
+                    subfields=[
+                        '3', kdip.note,
+                        'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
+                        'y', 'HathiTrust version'
+                    ])
+                )
         return record
     else:
         record.add_field(
@@ -134,11 +151,11 @@ class Command(BaseCommand):
                     marcxml.write(open_tag + pymarc_xml + close_tag)
 
                 # SFTP the file for Aleph
-                with Connection( \
-                        settings.ALEPH_SFTP_HOST, \
-                        username=settings.ALEPH_SFTP_USER, \
-                        password=settings.ALEPH_SFTP_PW,\
-                    ) as sftp:
-
-                    with sftp.cd(settings.ALEPH_SFTP_DIR):
-                        sftp.put(aleph_marc)
+                # with Connection( \
+                #         settings.ALEPH_SFTP_HOST, \
+                #         username=settings.ALEPH_SFTP_USER, \
+                #         password=settings.ALEPH_SFTP_PW,\
+                #     ) as sftp:
+                #
+                #     with sftp.cd(settings.ALEPH_SFTP_DIR):
+                #         sftp.put(aleph_marc)
