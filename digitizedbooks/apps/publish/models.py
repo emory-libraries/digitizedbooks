@@ -108,7 +108,6 @@ class MarcBase(XmlObject):
     "Base for MARC objects"
     ROOT_NAMESPACES = {'marc':'http://www.loc.gov/MARC21/slim'}
 
-
 class MarcSubfield(MarcBase):
     "Single instance of a MARC subfield"
     ROOT_NS = 'http://www.loc.gov/MARC21/slim'
@@ -187,7 +186,27 @@ class Marc(MarcBase):
             note = ''
         return note
 
+# Alma item record
+class AlmaBibItem(XmlObject):
+    mms_id = StringField('bib_data/mms_id')
 
+# Alma item record
+class AlmaBibDataField(XmlObject):
+    ROOT_NAME = 'datafield'
+    ind1 = StringField("@ind1")
+    ind2 = StringField("@ind2")
+    tag = StringField("@tag")
+    code_3 = StringField('subfield[@code="3"]')
+    code_u = StringField('subfield[@code="u"]')
+
+    def __init__(self, *args, **kwargs):
+        super(AlmaBibDataField, self).__init__(*args, **kwargs)
+        self.tag = '856'
+        self.ind1 = "4"
+        self.ind2 = "1"
+
+class AlmaBibRecord(XmlObject):
+    field856 = NodeListField('record/datafield', AlmaBibDataField)
 
 class Alto(XmlObject):
     '''

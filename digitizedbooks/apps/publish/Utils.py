@@ -9,6 +9,7 @@ from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 from os import listdir, remove
 from datetime import datetime
 from PIL import Image
+from django.conf import settings
 
 import models
 
@@ -129,17 +130,26 @@ def load_bib_record(barcode):
     return load_xmlobject_from_string( \
         get_bib_rec.text.encode('utf-8'), models.Marc)
 
-def load_local_bib_record(barcode):
+def load_alma_bib_record(barcode):
     """
-    Method to load local version of MARC XML from Aleph
-    Used by the check_ht command.
+    Bib record from Alma.
     """
-    get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
-        params={'item_id': barcode})
+    item = requests.get('%sitems' % settings.ALMA_API_ROOT,
+        params={
+            'item_barcode': barcode,
+            'apikey': settings.ALMA_APIKEY
+        }
+    )
 
-    return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), models.Marc)
+    item_obj = load_xmlobject_from_string(str(item.text), models.AlmaBibItem)
+
+    mms_id = item_obj.mms_id
+
+    bib = requests.get('%sbibs/%s' % (settings.ALMA_API_ROOT, mms_id),
+        params={'apikey': settings.ALMA_APIKEY}
+    )
+
+    return load_xmlobject_from_string(str(bib.text), models.AlmaBibRecord)
 
 def create_yaml(kdip):
     """
