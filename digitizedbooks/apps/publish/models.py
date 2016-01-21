@@ -191,22 +191,37 @@ class AlmaBibItem(XmlObject):
     mms_id = StringField('bib_data/mms_id')
 
 # Alma item record
-class AlmaBibDataField(XmlObject):
+class AlmaBibData856Field(XmlObject):
     ROOT_NAME = 'datafield'
     ind1 = StringField("@ind1")
     ind2 = StringField("@ind2")
     tag = StringField("@tag")
     code_3 = StringField('subfield[@code="3"]')
     code_u = StringField('subfield[@code="u"]')
+    code_y = StringField('subfiled[@code="y"]')
 
     def __init__(self, *args, **kwargs):
-        super(AlmaBibDataField, self).__init__(*args, **kwargs)
+        super(AlmaBibData856Field, self).__init__(*args, **kwargs)
         self.tag = '856'
         self.ind1 = "4"
         self.ind2 = "1"
+        self.code_y = "HathiTrust version"
+
+class AlmaField(XmlObject):
+    ROOT_NAME = 'datafield'
+
+class AlmaBibData590Field(XmlObject):
+    ROOT_NAME = 'datafield'
+    ind1 = StringField("@ind1")
+    ind2 = StringField("@ind2")
+    tag = StringField("@tag")
+    code_a = StringField('subfield[@code="a"]')
 
 class AlmaBibRecord(XmlObject):
-    field856 = NodeListField('record/datafield', AlmaBibDataField)
+    field856 = NodeListField('record/datafield[@tag="856"]', AlmaBibData856Field)
+    field590 = StringField('record/datafield[@tag="590"][@ind1=" "][@ind2=" "]/subfield[@code="a"]/text()')
+    field999 = NodeListField("record/datafield[@tag='999']", AlmaField)
+    tag583a = StringField('record/datafield[@tag="583"][@ind1="1"]/subfield[@code="a"]/text()')
 
 class Alto(XmlObject):
     '''
@@ -224,6 +239,7 @@ class KDip(models.Model):
         ('archived', 'Archived'),
         ('invalid', 'Invalid'),
         ('do not process', 'Do Not Process'),
+        ('alma_fail', 'Alma Update Failed'),
         ('reprocess', 'Reprocess')
     )
 
@@ -243,6 +259,8 @@ class KDip(models.Model):
     'Path of the KDIP on the file system'
     oclc = models.CharField(max_length=100, blank=True)
     'OCLC number from MARCXML'
+    mms_id = models.CharField(max_length=100, blank=True)
+    'mms_id from Alma'
     pid = models.CharField(max_length=5, blank=True)
     'Pid that was generated in the pid man'
     notes = models.TextField(blank=True, default='')

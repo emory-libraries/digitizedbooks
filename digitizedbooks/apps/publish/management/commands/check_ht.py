@@ -4,15 +4,12 @@ we will updete the KDip making the attribute `accepted_by_ht`
 `True` and then update the PID with the ht_url
 """
 from django.core.management.base import BaseCommand
-from digitizedbooks.apps.publish.models import KDip, Job, AlmaBibDataField, AlmaBibRecord
+from digitizedbooks.apps.publish.models import KDip, Job, AlmaBibData856Field, AlmaBibRecord
 from digitizedbooks.apps.publish.Utils import remove_all_999_fields, load_alma_bib_record, update_583
 from django.conf import settings
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
 import requests
 from os import remove
-from time import strftime
-from pysftp import Connection
-from pymarc import parse_xml_to_array, record_to_xml, Field
 
 def update_pid(kdip_pid, ht_url):
     client = DjangoPidmanRestClient()
@@ -37,48 +34,24 @@ def add_856(record, kdip):
         volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
         if len(volumes) > 0:
             for vol in volumes:
-                record.add_field(
-                    Field(
-                        tag='856',
-                        indicators=['4', '1'],
-                        subfields=[
-                            '3', vol.note,
-                            'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
-                            'y', 'HathiTrust version'
-                        ]
-                    )
+                record.field856.append(AlmaBibData856Field(
+                    code_u ='http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
+                    code_3 = vol.note)
                 )
         else:
-            record.add_field(
-                Field(
-                    tag='856',
-                    indicators=['4', '1'],
-                    subfields=[
-                        '3', kdip.note,
-                        'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
-                        'y', 'HathiTrust version'
-                    ])
-                )
-        return record
+            record.field856.append(AlmaBibData856Field(
+                code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
+                code_3 = kdip.note)
+            )
     else:
-        record.add_field(
-            Field(
-                tag='856',
-                indicators=['4', '1'],
-                subfields=[
-                    'u', 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
-                    'y', 'HathiTrust version'
-                ]))
-        return record
+        record.field856.append(AlmaBibData856Field(
+            code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid)
+        )
+    return record
 
-def add_590(record, text):
-    record.add_field(
-        Field(
-            tag='590',
-            indicators=['1', '2'],
-            subfields=[
-                'a', text
-            ]))
+def add_590(record):
+    text = "The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital library Publications Program."
+    record.field590 = text
     return record
 
 
@@ -99,7 +72,8 @@ class Command(BaseCommand):
             ht_url = '%s%s' % (ht_stub, kdip.kdip_id)
             req = requests.get(ht_url)
             # If we get 200, we call it good and updte the KDip.
-            if req.status_code == 404:
+            print req.status_code
+            if req.status_code == 200:
                 kdip.accepted_by_ht = True
                 kdip.save()
 
@@ -115,51 +89,39 @@ class Command(BaseCommand):
                 except OSError:
                     pass
 
-                bib_rec = load_alma_bib_record(kdip.kdip_id)
+                bib_rec = load_alma_bib_record(kdip)
 
-                print bib_rec.serialize(pretty=True)
+                # Make a back up of what we got from Alma
+                bk_marc_rec = '%s/%s/marc-bk.xml' % (kdip.path, kdip.kdip_id)
+                with open(bk_marc_rec, 'w') as bk_marc:
+                    bk_marc.write(bib_rec.serialize(pretty=True))
 
-                # marc_rec = remove_all_999_fields(marc_rec)
-                #
-                # marc_rec = update_583(marc_rec)
-                #
-                # # Make a tmp MARC record.
-                # tmp_marc_path = '/tmp/%s.xml' % kdip.kdip_id
-                # # Write the marc.xml to disk.
-                # with open(tmp_marc_path, 'w') as tmp_marc:
-                #     tmp_marc.write(marc_rec.serialize())
-                #
-                # # Load the tmp_marc into pymarc.
-                # pymarc_record = load_pymarc(tmp_marc_path)
-                #
-                # # Add some tags based on some conditionals.
-                # pymarc_record = add_856(pymarc_record, kdip)
-                #
-                # # Check for the text in the 590 field.
-                # text_590 = "The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital library Publications Program"
-                #
-                # if text_590.lower() not in marc_rec.serialize().lower():
-                #     pymarc_record = add_590(pymarc_record, text_590)
-                #
-                # today = strftime("%Y%m%d")
-                #
-                # # Path for new MACR record
-                # aleph_marc = '%s/%s/digitize_%s_%s.xml' % \
-                #     (kdip.path, kdip.kdip_id, today, kdip.kdip_id)
-                #
-                # pymarc_xml = record_to_xml(pymarc_record)
-                # open_tag = '<collection xmlns="http://www.loc.gov/MARC21/slim">'
-                # close_tag = '</collection>'
-                # # Write the marc.xml to disk.
-                # with open(aleph_marc, 'w') as marcxml:
-                #     marcxml.write(open_tag + pymarc_xml + close_tag)
 
-                # SFTP the file for Aleph
-                # with Connection( \
-                #         settings.ALEPH_SFTP_HOST, \
-                #         username=settings.ALEPH_SFTP_USER, \
-                #         password=settings.ALEPH_SFTP_PW,\
-                #     ) as sftp:
-                #
-                #     with sftp.cd(settings.ALEPH_SFTP_DIR):
-                #         sftp.put(aleph_marc)
+                bib_rec = remove_all_999_fields(bib_rec)
+
+                bib_rec = update_583(bib_rec)
+
+                text_590 = "The online edition of this book in the public domain, i.e., not protected by copyright, has been produced by the Emory University Digital library Publications Program"
+
+                # Check for the text in the 590 field.
+                if text_590.lower() not in bib_rec.serialize().lower():
+                    bib_rec = add_590(bib_rec)
+
+                # Add some tags based on some conditionals.
+                bib_rec = add_856(bib_rec, kdip)
+
+                # Path for new MACR record
+                new_marc = '%s/%s/new-marc.xml' % (kdip.path, kdip.kdip_id)
+
+                # Write the marc.xml to disk.
+                with open(new_marc, 'w') as marcxml:
+                    marcxml.write(bib_rec.serialize(pretty=True))
+
+                put = requests.put('%sbibs/%s' % (settings.ALMA_API_ROOT, kdip.mms_id),
+                        data = bib_rec.serialize(),
+                        params={'apikey': settings.ALMA_APIKEY},
+                        headers={'Content-Type': 'application/xml'}
+                )
+                if put.status_code != 200:
+                    kdip.status = 'alma_fail'
+                    kdip.save()

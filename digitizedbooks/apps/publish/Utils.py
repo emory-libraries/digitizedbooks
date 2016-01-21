@@ -96,27 +96,27 @@ def update_999a(path, kdip_id, enumcron):
     with open(marc_file, 'w') as marcxml:
         marcxml.write(marc.serialize(pretty=True))
 
-def remove_all_999_fields(marc_xml):
+def remove_all_999_fields(record):
     """
     Method used by the check_ht manage command to remove all 999
     fileds from the MARC XML before going to Aleph
     """
     try:
-        marc_xml.tag_999 = ''
+        record.field999 = ''
     except:
         pass
-    return marc_xml
+    return record
 
-def update_583(marc_xml):
+def update_583(record):
     """
     Method used by check_ht manage command to upddate the
     583 filed to `ditigized`.
     """
     try:
-        marc_xml.tag_583_a = 'digitized'
+        record.tag583a = 'digitized'
     except:
         pass
-    return marc_xml
+    return record
 
 def load_bib_record(barcode):
     """
@@ -130,22 +130,23 @@ def load_bib_record(barcode):
     return load_xmlobject_from_string( \
         get_bib_rec.text.encode('utf-8'), models.Marc)
 
-def load_alma_bib_record(barcode):
+def load_alma_bib_record(kdip):
     """
     Bib record from Alma.
     """
     item = requests.get('%sitems' % settings.ALMA_API_ROOT,
         params={
-            'item_barcode': barcode,
+            'item_barcode': kdip.kdip_id,
             'apikey': settings.ALMA_APIKEY
         }
     )
 
     item_obj = load_xmlobject_from_string(str(item.text), models.AlmaBibItem)
 
-    mms_id = item_obj.mms_id
+    kdip.mms_id = item_obj.mms_id
+    kdip.save()
 
-    bib = requests.get('%sbibs/%s' % (settings.ALMA_API_ROOT, mms_id),
+    bib = requests.get('%sbibs/%s' % (settings.ALMA_API_ROOT, kdip.mms_id),
         params={'apikey': settings.ALMA_APIKEY}
     )
 
