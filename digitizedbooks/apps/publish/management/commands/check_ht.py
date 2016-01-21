@@ -21,32 +21,34 @@ def update_pid(kdip_pid, ht_url):
         type="ark", noid=kdip_pid, qualifier="HT", \
         target_uri=ht_url)
 
-def load_pymarc(tmp_marc):
-    records = parse_xml_to_array(tmp_marc)
-    return records[0]
-
 
 def add_856(record, kdip):
-    if kdip.note:
-        # We need to see if there are any KDips in a job with the same OCLC.
-        # If there are, it means they are multi volume and we need to list
-        # each volume in an 856 field.
-        volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
-        if len(volumes) > 0:
-            for vol in volumes:
+    field856s = []
+    for tag856 in record.field856:
+        field856s.append(tag856.serialize())
+
+    if 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid not in field856s:
+        if kdip.note:
+            # We need to see if there are any KDips in a job with the same OCLC.
+            # If there are, it means they are multi volume and we need to list
+            # each volume in an 856 field.
+
+            volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
+            if len(volumes) > 0:
+                for vol in volumes:
+                    record.field856.append(AlmaBibData856Field(
+                        code_u ='http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
+                        code_3 = vol.note)
+                    )
+            else:
                 record.field856.append(AlmaBibData856Field(
-                    code_u ='http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
-                    code_3 = vol.note)
+                    code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
+                    code_3 = kdip.note)
                 )
         else:
             record.field856.append(AlmaBibData856Field(
-                code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
-                code_3 = kdip.note)
+                code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid)
             )
-    else:
-        record.field856.append(AlmaBibData856Field(
-            code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid)
-        )
     return record
 
 def add_590(record):
@@ -65,7 +67,7 @@ class Command(BaseCommand):
         HT returns a `200` for volumes that are live.
         If not found, `404` is returned.
         """
-        kdips = KDip.objects.filter(accepted_by_ht=True).exclude(status='do not process').exclude(job=None)
+        kdips = KDip.objects.filter(accepted_by_ht=False).exclude(status='do not process').exclude(job=None)
         ht_stub = getattr(settings, 'HT_STUB', None)
 
         for kdip in kdips:
