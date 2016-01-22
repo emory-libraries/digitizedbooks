@@ -1,7 +1,7 @@
 Django==1.8
 django_auth_ldap
 mysql-python
-eulxml
+eulxml==0.20.3
 eulcommon
 python-dateutil
 python-magic
@@ -15,6 +15,4 @@ https://wilson.library.emory.edu/jenkins/job/pidman-rest-client_1.1.x/lastSucces
 django-admin-bootstrapped
 django-celery
 django-kombu
-pysftp
-pymarc
 celery

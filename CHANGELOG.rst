@@ -1,3 +1,18 @@
+Release 1.4
+----------
+Features:
+* As a user, when I open a Job, I'd like to see how many Kdips are in that job, so that I know when it's the right size to send to Hathi Trust
+* As a user I want the OCLC number recorded and displayed, so that I can tell which KDip volumes belong to the same work
+* As a user, I want to be able to see Jobs and Kdips (by default) sorted with the most recent record at the top of the screen, so that I don't have to constantly scroll down
+* As a user I want all relevant 856 fields to be added to the MARC record once a KDip has been published to HathiTrust
+* As a library patron searching in EUCLID or DiscoverE, when i find a digitized volume  that has been published to HathiTrust, I want to see a clickable link in so I can view the item in HathiTrust.
+
+Bug fixes:
+* The meta.yml file should only list one "capture-date"
+
+Other:
+* Switched from Aleph to Alma.
+
 Release 1.3
 -----------
 Features:
