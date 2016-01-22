@@ -6,6 +6,10 @@ import re
 import yaml
 import requests
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
+from os import listdir, remove
+from datetime import datetime
+from PIL import Image
+from django.conf import settings
 
 import models
 
@@ -92,61 +96,95 @@ def update_999a(path, kdip_id, enumcron):
     with open(marc_file, 'w') as marcxml:
         marcxml.write(marc.serialize(pretty=True))
 
-def remove_all_999_fields(marc_xml):
+def remove_all_999_fields(record):
     """
     Method used by the check_ht manage command to remove all 999
     fileds from the MARC XML before going to Aleph
     """
     try:
-        marc_xml.tag_999 = ''
+        record.field999 = ''
     except:
         pass
-    return marc_xml
+    return record
 
-def update_583(marc_xml):
+def update_583(record):
     """
     Method used by check_ht manage command to upddate the
     583 filed to `ditigized`.
     """
     try:
-        marc_xml.tag_583_a = 'digitized'
+        record.tag583a = 'digitized'
     except:
         pass
-    return marc_xml
+    return record
 
-def create_yaml(capture_agent, path, kdip_id):
+def load_bib_record(barcode):
+    """
+    Method to load MARC XML from Am
+    http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord?item_id=010002483050
+    """
+    get_bib_rec = requests.get( \
+        'http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord', \
+        params={'item_id': barcode})
+
+    return load_xmlobject_from_string( \
+        get_bib_rec.text.encode('utf-8'), models.Marc)
+
+def load_alma_bib_record(kdip):
+    """
+    Bib record from Alma.
+    """
+    item = requests.get('%sitems' % settings.ALMA_API_ROOT,
+        params={
+            'item_barcode': kdip.kdip_id,
+            'apikey': settings.ALMA_APIKEY
+        }
+    )
+
+    bib_rec = item.text.encode('utf-8').strip()
+    item_obj = load_xmlobject_from_string(bib_rec, models.AlmaBibItem)
+
+    kdip.mms_id = item_obj.mms_id
+    kdip.save()
+
+    bib = requests.get('%sbibs/%s' % (settings.ALMA_API_ROOT, kdip.mms_id),
+        params={'apikey': settings.ALMA_APIKEY}
+    )
+
+    bib_xml = bib.text.encode('utf-8').strip()
+
+    return load_xmlobject_from_string(bib_xml, models.AlmaBibRecord)
+    
+def create_yaml(kdip):
     """
     Method to create a YAML file with some basic default
     metadata for HathiTrust
     """
+
+    try:
+        remove('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id))
+    except OSError:
+        pass
+
+    bib_rec = load_bib_record(kdip.kdip_id)
+    capture_agent = str(bib_rec.tag_583_5)
+
+    # First we need to figure out the 'capture date'
+    tif_dir = '%s/%s/TIFF' % (kdip.path, kdip.kdip_id)
+    tif = '%s/%s' % (tif_dir, listdir(tif_dir)[-1])
+    image = Image.open(tif)
+    # In Pillow 3.0 the DateTime/306 tag is returned as a tuple, not a string.
+    # So if/when we move to 3.x we will need this conversion.
+    if image.tag.has_key(306):
+        dt = datetime.strptime(image.tag[306], '%Y:%m:%d %H:%M:%S')
+    else:
+        dt = ''
+
     yaml_data = {}
     yaml_data['capture_agent'] = capture_agent
     yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-    yaml_data['scanning_order'] = 'left-to-right'
+    yaml_data['scanning_order'] = 'left-to-right!!!!'
     yaml_data['reading_order'] = 'left-to-right'
-    with open('%s/%s/meta.yml' % (path, kdip_id), 'a') as outfile:
+    yaml_data['capture_date']= dt.isoformat('T')
+    with open('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id), 'a') as outfile:
         outfile.write(yaml.dump(yaml_data, default_flow_style=False))
-
-
-def load_bib_record(barcode):
-    """
-    Method to load MARC XML from Aleph
-    """
-    get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_bibrecord', \
-        params={'item_id': barcode})
-
-    return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), models.Marc)
-
-def load_local_bib_record(barcode):
-    """
-    Method to load local version of MARC XML from Aleph
-    Used by the check_ht command.
-    """
-    get_bib_rec = requests.get( \
-        'http://library.emory.edu/uhtbin/get_aleph_bibrecord', \
-        params={'item_id': barcode})
-
-    return load_xmlobject_from_string( \
-        get_bib_rec.text.encode('utf-8'), models.Marc)

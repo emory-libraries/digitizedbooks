@@ -34,11 +34,11 @@ class ValidationErrorInline(admin.TabularInline):
 
 
 class KDipAdmin(admin.ModelAdmin):
-    list_display = ['kdip_id', 'status', 'note', 'errors', 'accepted_by_ia', 'accepted_by_ht', 'al_ht', 'job',]
+    list_display = ['kdip_id', 'status', 'note', 'oclc', 'errors', 'accepted_by_ia', 'accepted_by_ht', 'al_ht', 'job',]
     list_link = ['kdip_id']
     list_filter = ['status', 'job', 'accepted_by_ht', 'accepted_by_ia']
     list_editable = ['job', 'note', 'status', 'accepted_by_ia']
-    readonly_fields = ['kdip_id', 'reason', 'path', 'pid', 'create_date', 'errors', 'accepted_by_ht', 'ht_url', 'al_ht']
+    readonly_fields = ['kdip_id', 'reason', 'path', 'oclc', 'mms_id', 'pid', 'create_date', 'errors', 'accepted_by_ht', 'ht_url', 'al_ht']
     search_fields = ['path', 'kdip_id', 'note', 'pid']
     inlines = [ValidationErrorInline]
 #    actions = [remove_from_job]
@@ -48,7 +48,7 @@ class KDipAdmin(admin.ModelAdmin):
 
 class KDipInline(admin.TabularInline):
     model = KDip
-    readonly_fields = ['kdip_id', 'pid', 'status', 'accepted_by_ht', 'accepted_by_ia', 'path']
+    readonly_fields = ['kdip_id', 'pid', 'status', 'accepted_by_ht', 'accepted_by_ia', 'path', 'oclc', 'mms_id']
     exclude = ['note', 'reason', 'create_date']
     #can_delete = False
     extra = 0
@@ -61,7 +61,7 @@ class JobAdmin(admin.ModelAdmin):
     inlines = [KDipInline]
     list_display = ['name', 'status', 'volume_count']
     list_link = ['name']
-    #readonly_fields = ['status']
+    readonly_fields = ['volume_count']
 
 
 admin.site.register(KDip, KDipAdmin)

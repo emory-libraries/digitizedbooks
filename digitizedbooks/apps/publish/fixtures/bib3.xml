@@ -1,0 +1,122 @@
+<bib>
+  <record>
+    <leader>01571nam a2200385Ia 4500</leader>
+    <controlfield tag="001">990031393110302486</controlfield>
+    <controlfield tag="005">20160112000326.0</controlfield>
+    <controlfield tag="008">120803s1902    mdu           000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(Aleph)003139311EMU01</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="035">
+      <subfield code="a">(OCoLC)803984008</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="040">
+      <subfield code="a">AJ#</subfield>
+      <subfield code="c">AJ#</subfield>
+      <subfield code="d">UtOrBLW</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="049">
+      <subfield code="a">AJ#A</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Gwynn, Joseph,</subfield>
+      <subfield code="d">1872-</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="245">
+      <subfield code="a">The holy sacraments /</subfield>
+      <subfield code="c">by Joseph Gwynn ; introduction by Benjamin F. Lee.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="264">
+      <subfield code="c">©1902</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">[Baltimore?] :</subfield>
+      <subfield code="b">[publisher not identified],</subfield>
+      <subfield code="c">[1902]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">80 pages ;</subfield>
+      <subfield code="c">16 cm.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="336">
+      <subfield code="a">text</subfield>
+      <subfield code="b">txt</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="337">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="b">n</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="338">
+      <subfield code="a">volume</subfield>
+      <subfield code="b">nc</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="583">
+      <subfield code="a">will digitize</subfield>
+      <subfield code="c">20141021</subfield>
+      <subfield code="2">pda</subfield>
+      <subfield code="5">GEU-T</subfield>
+      <subfield code="x">public domain</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="590">
+      <subfield code="a">Manuscript, Archives, and Rare Book Library copy from the collection of Charles Simpson Butcher.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Sacraments.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Sacraments</subfield>
+      <subfield code="x">African Methodist Episcopal Church.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">African Methodist Episcopal Church</subfield>
+      <subfield code="x">Doctrines.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American author.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">African American pamphlet.</subfield>
+      <subfield code="2">local</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Lee, Benjamin F.</subfield>
+      <subfield code="q">(Benjamin Franklin),</subfield>
+      <subfield code="d">1841-1926.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Butcher, Charles Simpson,</subfield>
+      <subfield code="e">collector.</subfield>
+      <subfield code="5">GEU</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">RDA ENRICHED</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="910">
+      <subfield code="a">MARS</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="945">
+      <subfield code="a">EMU</subfield>
+      <subfield code="b">dmf</subfield>
+      <subfield code="2">20120803</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="994">
+      <subfield code="a">C0</subfield>
+      <subfield code="b">AJ#</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="999">
+      <subfield code="a">2012 1386</subfield>
+      <subfield code="b">available</subfield>
+      <subfield code="i">010002643980</subfield>
+      <subfield code="l">STACK</subfield>
+      <subfield code="m">MARBL</subfield>
+      <subfield code="t">BOOK</subfield>
+      <subfield code="w">4</subfield>
+    </datafield>
+  </record>
+</bib>

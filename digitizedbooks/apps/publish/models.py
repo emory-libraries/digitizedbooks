@@ -108,7 +108,6 @@ class MarcBase(XmlObject):
     "Base for MARC objects"
     ROOT_NAMESPACES = {'marc':'http://www.loc.gov/MARC21/slim'}
 
-
 class MarcSubfield(MarcBase):
     "Single instance of a MARC subfield"
     ROOT_NS = 'http://www.loc.gov/MARC21/slim'
@@ -169,6 +168,8 @@ class Marc(MarcBase):
 
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
+    oclc = NodeListField('marc:record/marc:datafield[@tag="035"]', MarcDatafield)
+
     def note(self, barcode):
         """
         :param: barcode aka item_id that is used to lookup the note field
@@ -185,7 +186,42 @@ class Marc(MarcBase):
             note = ''
         return note
 
+# Alma item record
+class AlmaBibItem(XmlObject):
+    mms_id = StringField('bib_data/mms_id')
 
+# Alma item record
+class AlmaBibData856Field(XmlObject):
+    ROOT_NAME = 'datafield'
+    ind1 = StringField("@ind1")
+    ind2 = StringField("@ind2")
+    tag = StringField("@tag")
+    code_3 = StringField('subfield[@code="3"]')
+    code_u = StringField('subfield[@code="u"]')
+    code_y = StringField('subfiled[@code="y"]')
+
+    def __init__(self, *args, **kwargs):
+        super(AlmaBibData856Field, self).__init__(*args, **kwargs)
+        self.tag = '856'
+        self.ind1 = "4"
+        self.ind2 = "1"
+        self.code_y = "HathiTrust version"
+
+class AlmaField(XmlObject):
+    ROOT_NAME = 'datafield'
+
+class AlmaBibData590Field(XmlObject):
+    ROOT_NAME = 'datafield'
+    ind1 = StringField("@ind1")
+    ind2 = StringField("@ind2")
+    tag = StringField("@tag")
+    code_a = StringField('subfield[@code="a"]')
+
+class AlmaBibRecord(XmlObject):
+    field856 = NodeListField('record/datafield[@tag="856"]', AlmaBibData856Field)
+    field590 = StringField('record/datafield[@tag="590"][@ind1=" "][@ind2=" "]/subfield[@code="a"]/text()')
+    field999 = NodeListField("record/datafield[@tag='999']", AlmaField)
+    tag583a = StringField('record/datafield[@tag="583"][@ind1="1"]/subfield[@code="a"]/text()')
 
 class Alto(XmlObject):
     '''
@@ -203,6 +239,7 @@ class KDip(models.Model):
         ('archived', 'Archived'),
         ('invalid', 'Invalid'),
         ('do not process', 'Do Not Process'),
+        ('alma_fail', 'Alma Update Failed'),
         ('reprocess', 'Reprocess')
     )
 
@@ -219,11 +256,21 @@ class KDip(models.Model):
     job = models.ForeignKey('Job', null=True, blank=True, on_delete=models.SET_NULL)
     ':class:`Job` of which it is a part'
     path = models.CharField(max_length=400, blank=True)
+    'Path of the KDIP on the file system'
+    oclc = models.CharField(max_length=100, blank=True)
+    'OCLC number from MARCXML'
+    mms_id = models.CharField(max_length=100, blank=True)
+    'mms_id from Alma'
     pid = models.CharField(max_length=5, blank=True)
+    'Pid that was generated in the pid man'
     notes = models.TextField(blank=True, default='')
+    'Notes the user makes on the KDIP'
     accepted_by_ht = models.BooleanField(default=False, verbose_name='HT')
+    'Boolean that is set to true by the `check_ht` command when volume is live on HT'
     accepted_by_ia = models.BooleanField(default=False, verbose_name='IA')
+    'Boolean set by user if volume is live in IA'
     al_ht = models.BooleanField(default=False, verbose_name="AL-HT")
+    'Boolean that is set to true by the `check_al` command when the HT link appears in the MARCXML'
 
     @property
     def barcode(self):
@@ -253,6 +300,12 @@ class KDip(models.Model):
         '''
 
         logger.info('Starting validation of %s' % (self.kdip_id))
+
+        # Create the YAML file for HT. We do it here, instead of on load
+        # because we want it to recreate on reporcessing.
+        # bib_rec = Utils.load_bib_record(self.kdip_id)
+        # capture_agent = bib_rec.tag_583_5
+        Utils.create_yaml(self)
 
         # Check the dates to see if the volume is in copyright.
         try:
@@ -303,21 +356,24 @@ class KDip(models.Model):
             error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
 
-        logger.info('Loading Mets file into eulxml.')
         try:
+            logger.info('Loading Mets file into eulxml.')
             mets = load_xmlobject_from_file(mets_file, Mets)
-
-            #mets file validates against schema
-            logger.info('Cheking if Mets is valid.')
-            if not mets.is_valid():
-                reason = "Error: %s is not valid" % mets_file
-                logger.error(reason)
-                error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
-                error.save()
 
         except:
             reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
             error = ValidationError(kdip=self, error=reason, error_type="Loading Mets")
+            error.save()
+
+        try:
+            #mets file validates against schema
+            if mets.is_valid() is not True:
+                reason = "Error: %s is not valid" % mets_file
+                logger.error(reason)
+                error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
+                error.save()
+        except:
+            error = ValidationError(kdip=self, error='Unable to validate Mets.', error_type="Invalid Mets")
             error.save()
 
         logger.info('Gathering tiffs.')
@@ -418,6 +474,18 @@ class KDip(models.Model):
                         if i999 != k[:12]:
                             bib_rec.tag_999.remove(field_999)
 
+                    # Find the OCLC in the MARCXML
+                    # First an empty list to put all the 035 tags in
+                    oclc_tags = []
+                    for oclc_tag in bib_rec.oclc:
+                        # Mainly doing it this way for readablity and/or because I don't know any better way to do this in eulxml
+                        oclc_tags.append(oclc_tag.node.xpath('marc:subfield[@code="a"]', namespaces=Marc.ROOT_NAMESPACES)[0].text)
+                    # We want the first match
+                    oclc = next(oclc_val for oclc_val in oclc_tags if "(OCoLC)" in oclc_val or "ocm" in oclc_val or "ocn" in oclc_val)
+                    # Remove all non-numeric characters
+                    oclc = re.sub("[^0-9]", "", oclc)
+
+
                     # Set the note field to 'EnumCron not found' if the 999a filed
                     # is empty or missing.
                     note = bib_rec.note(k[:12]) or 'EnumCron not found'
@@ -425,7 +493,8 @@ class KDip(models.Model):
                     defaults={
                        'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
                         'note': note,
-                        'path': kdip_list[k]
+                        'path': kdip_list[k],
+                        'oclc': oclc
                     }
 
                     kdip, created = self.objects.get_or_create(kdip_id=k, defaults = defaults)
@@ -442,13 +511,6 @@ class KDip(models.Model):
 
                         if kwargs.get('kdip_pid'):
                             kdip.pid = kwargs.get('kdip_pid')
-
-                        try:
-                            os.remove('%s/%s/meta.yml' % (kdip_list[k], kdip.kdip_id))
-                        except OSError:
-                            pass
-
-                        Utils.create_yaml(str(bib_rec.tag_583_5), kdip_list[k], kdip.kdip_id)
 
                         kdip.validate()
 
@@ -475,7 +537,7 @@ class KDip(models.Model):
         return self.kdip_id
 
     class Meta:
-        ordering = ['create_date']
+        ordering = ['-pk']
 
 
     def save(self, *args, **kwargs):
@@ -526,7 +588,7 @@ class Job(models.Model):
 
 
     class Meta:
-        ordering = ['id']
+        ordering = ['-pk']
 
     def save(self, *args, **kwargs):
 

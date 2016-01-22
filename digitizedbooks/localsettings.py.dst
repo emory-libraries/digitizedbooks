@@ -108,11 +108,9 @@ ZEPHIR_PW = ''
 ZEPHIR_UPLOAD_DIR = ''
 ZEPHIR_REPORT_DIR = ''
 
-# Credentials to upload new MARC XML to Aleph
-ALEPH_SFTP_HOST = ''
-ALEPH_SFTP_USER = ''
-ALEPH_SFTP_PW = ''
-ALEPH_SFTP_DIR = ''
+# Alma API
+ALMA_APIKEY = 'XXXXXXXXX'
+ALMA_API_ROOT = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/'
 
 from celery import app
 app.conf.update(
