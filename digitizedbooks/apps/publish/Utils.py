@@ -141,7 +141,8 @@ def load_alma_bib_record(kdip):
         }
     )
 
-    item_obj = load_xmlobject_from_string(str(item.text), models.AlmaBibItem)
+    bib_rec = item.text.encode('utf-8').strip()
+    item_obj = load_xmlobject_from_string(bib_rec, models.AlmaBibItem)
 
     kdip.mms_id = item_obj.mms_id
     kdip.save()
@@ -150,8 +151,10 @@ def load_alma_bib_record(kdip):
         params={'apikey': settings.ALMA_APIKEY}
     )
 
-    return load_xmlobject_from_string(str(bib.text), models.AlmaBibRecord)
+    bib_xml = bib.text.encode('utf-8').strip()
 
+    return load_xmlobject_from_string(bib_xml, models.AlmaBibRecord)
+    
 def create_yaml(kdip):
     """
     Method to create a YAML file with some basic default

@@ -27,10 +27,11 @@ def add_856(record, kdip):
     for tag856 in record.field856:
         field856s.append(tag856.serialize())
 
-    if 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid not in field856s:
+    ht_url = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid
+    if  ht_url not in ''.join(field856s):
         if kdip.note:
             record.field856.append(AlmaBibData856Field(
-                code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
+                code_u = ht_url,
                 code_3 = kdip.note)
             )
         else:
@@ -62,7 +63,6 @@ class Command(BaseCommand):
             ht_url = '%s%s' % (ht_stub, kdip.kdip_id)
             req = requests.get(ht_url)
             # If we get 200, we call it good and updte the KDip.
-            print req.status_code
             if req.status_code == 200:
                 kdip.accepted_by_ht = True
                 kdip.save()
@@ -101,7 +101,7 @@ class Command(BaseCommand):
                 bib_rec = add_856(bib_rec, kdip)
 
                 # Path for new MACR record
-                new_marc = '%s/%s/new-marc.xml' % (kdip.path, kdip.kdip_id)
+                new_marc = '%s/%s/marc-new.xml' % (kdip.path, kdip.kdip_id)
 
                 # Write the marc.xml to disk.
                 with open(new_marc, 'w') as marcxml:
