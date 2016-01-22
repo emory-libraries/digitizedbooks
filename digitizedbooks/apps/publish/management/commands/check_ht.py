@@ -29,22 +29,10 @@ def add_856(record, kdip):
 
     if 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid not in field856s:
         if kdip.note:
-            # We need to see if there are any KDips in a job with the same OCLC.
-            # If there are, it means they are multi volume and we need to list
-            # each volume in an 856 field.
-
-            volumes = KDip.objects.filter(oclc=kdip.oclc).filter(job=kdip.job.id)
-            if len(volumes) > 0:
-                for vol in volumes:
-                    record.field856.append(AlmaBibData856Field(
-                        code_u ='http://pid.emory.edu/ark:/25593/%s/HT' % vol.pid,
-                        code_3 = vol.note)
-                    )
-            else:
-                record.field856.append(AlmaBibData856Field(
-                    code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
-                    code_3 = kdip.note)
-                )
+            record.field856.append(AlmaBibData856Field(
+                code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid,
+                code_3 = kdip.note)
+            )
         else:
             record.field856.append(AlmaBibData856Field(
                 code_u = 'http://pid.emory.edu/ark:/25593/%s/HT' % kdip.pid)

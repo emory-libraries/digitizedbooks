@@ -128,11 +128,6 @@ class TestMarcUpdate(TestCase):
             for tag856 in marc.field856:
                 field856s.append(tag856.serialize())
 
-            if index > 1:
-                self.assertEqual(len(marc.field856), 1)
-            else:
-                self.assertEqual(len(marc.field856), 2)
-
             self.assertIn(text_856, field856s)
 
             self.assertEqual(len(marc.field999), 0)
