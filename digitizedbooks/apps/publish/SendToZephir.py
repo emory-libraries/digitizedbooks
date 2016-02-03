@@ -56,7 +56,7 @@ def send_to_zephir(job):
 
     # FTP the file
     try:
-        upload_cmd = 'curl -k -u %s:%s -T %s --ftp-ssl-control --ftp-pasv %s/%s/' % (user, passw, zephir_file, host, ftp_dir)
+        upload_cmd = 'curl -k -u %s:%s -T %s --ssl-reqd --ftp-pasv %s/%s/' % (user, passw, zephir_file, host, ftp_dir)
         upload_to_z = subprocess.check_output(upload_cmd, shell=True)
     except:
         # Bail out if something goes wrong and return an error status.

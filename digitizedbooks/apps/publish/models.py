@@ -166,9 +166,13 @@ class Marc(MarcBase):
 
     fied_999 = StringField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
+    field_035 = NodeListField('marc:record/datafield[@tag="035"]', MarcDatafield)
+
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
-    oclc = NodeListField('marc:record/marc:datafield[@tag="035"]', MarcDatafield)
+    field_035 = NodeListField('marc:record/marc:datafield[@tag="035"]', MarcDatafield)
+
+    tag_035a = StringField('marc:record/marc:datafield[@tag="035"]/marc:subfield[@code="a"]')
 
     def note(self, barcode):
         """
@@ -185,6 +189,19 @@ class Marc(MarcBase):
         except Exception as e:
             note = ''
         return note
+
+class Marc035Field(XmlObject):
+    ROOT_NAME = 'datafield'
+    ind1 = StringField("@ind1")
+    ind2 = StringField("@ind2")
+    tag = StringField("@tag")
+    code_z = StringField('subfield[@code="z"]')
+
+    def __init__(self, *args, **kwargs):
+        super(Marc035Field, self).__init__(*args, **kwargs)
+        self.tag = '035'
+        self.ind1 = " "
+        self.ind2 = " "
 
 # Alma item record
 class AlmaBibItem(XmlObject):
@@ -477,10 +494,10 @@ class KDip(models.Model):
                     # Find the OCLC in the MARCXML
                     # First an empty list to put all the 035 tags in
                     oclc_tags = []
-                    for oclc_tag in bib_rec.oclc:
+                    for oclc_tag in bib_rec.field_035:
                         # Mainly doing it this way for readablity and/or because I don't know any better way to do this in eulxml
                         oclc_tags.append(oclc_tag.node.xpath('marc:subfield[@code="a"]', namespaces=Marc.ROOT_NAMESPACES)[0].text)
-                    # We want the first match
+                    # The oclc filed can have a few patterns. We want the first match
                     oclc = next(oclc_val for oclc_val in oclc_tags if "(OCoLC)" in oclc_val or "ocm" in oclc_val or "ocn" in oclc_val)
                     # Remove all non-numeric characters
                     oclc = re.sub("[^0-9]", "", oclc)
@@ -489,6 +506,8 @@ class KDip(models.Model):
                     # Set the note field to 'EnumCron not found' if the 999a filed
                     # is empty or missing.
                     note = bib_rec.note(k[:12]) or 'EnumCron not found'
+
+                    bib_rec = Utils.create_ht_marc(bib_rec)
 
                     defaults={
                        'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
