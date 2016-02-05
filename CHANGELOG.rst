@@ -1,5 +1,15 @@
+Release 1.4.1
+-------------
+Updates:
+* Changes the 035 filed in the MARC XML to be compatible with HathiTrust.
+* Updated the Zephir to comply with their new security.
+* Handels pure Alma records with no reference to Aleph.
+
+Bug fixes:
+* Now pulling MARC record from Alma for real.
+
 Release 1.4
-----------
+-----------
 Features:
 * As a user, when I open a Job, I'd like to see how many Kdips are in that job, so that I know when it's the right size to send to Hathi Trust
 * As a user I want the OCLC number recorded and displayed, so that I can tell which KDip volumes belong to the same work

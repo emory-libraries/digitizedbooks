@@ -99,7 +99,7 @@ def update_999a(path, kdip_id, enumcron):
 def remove_all_999_fields(record):
     """
     Method used by the check_ht manage command to remove all 999
-    fileds from the MARC XML before going to Aleph
+    fileds from the MARC XML before going to Alema
     """
     try:
         record.field999 = ''
@@ -121,10 +121,10 @@ def update_583(record):
 def load_bib_record(barcode):
     """
     Method to load MARC XML from Am
-    http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord?item_id=010002483050
+    http://discovere.emory.edu:8991/cgi-bin/get_alma_record?item_id=010002483050
     """
     get_bib_rec = requests.get( \
-        'http://chivs01aleph02.hosted.exlibrisgroup.com:8991/uhtbin/get_bibrecord', \
+        'http://discovere.emory.edu:8991/cgi-bin/get_alma_record?item_id=', \
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \
@@ -154,7 +154,35 @@ def load_alma_bib_record(kdip):
     bib_xml = bib.text.encode('utf-8').strip()
 
     return load_xmlobject_from_string(bib_xml, models.AlmaBibRecord)
-    
+
+def create_ht_marc(record):
+    '''
+    Remove this tag:
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="a">(Aleph)002240955EMU01</subfield>
+            </datafield>
+    And add this:
+        <datafield ind1=" " ind2=" " tag="035">
+            <subfield code="z">(GEU)Aleph002240955</subfield>
+        </datafield>
+    '''
+    try:
+        fields = record.field_035
+        aleph = next(field_val for field_val in fields if "(Aleph" in field_val.serialize())
+        fields.remove(aleph)
+
+        # Get the numeric part out to the Aleph field
+        field_text = aleph.node.xpath('marc:subfield[@code="a"]', namespaces=models.Marc.ROOT_NAMESPACES)[0].text
+        geu = '(GEU)Aleph%s' % field_text[7:16]
+
+        record.field_035.append(models.Marc035Field(code_z = geu))
+    except StopIteration:
+        # Pure Alma records will not have an reference to Aleph records, so we
+        # just move along.
+        pass
+
+    return record
+
 def create_yaml(kdip):
     """
     Method to create a YAML file with some basic default

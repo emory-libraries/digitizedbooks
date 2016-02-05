@@ -126,5 +126,6 @@ This command should run daily to check if all the KDips in a submitted job are l
   $ manage.py update_job_status
 
 
-Upgrade Notes
-=============
+Local Settings
+==============
+There a many special localsettings. See digizedbooks/localsettings.py.dst for notes.
