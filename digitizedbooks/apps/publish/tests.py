@@ -146,3 +146,8 @@ class TestMarcUpdate(TestCase):
             self.assertEqual(marc.field590, text590)
 
             self.assertEqual(marc.tag583a, 'digitized')
+
+class TestPureAlmaBibRecord(TestCase):
+    def test_pure_alma_record(self):
+        record = load_xmlobject_from_file('digitizedbooks/apps/publish/fixtures/pure-alma.xml', Marc)
+        self.assertTrue(Utils.create_ht_marc(record))

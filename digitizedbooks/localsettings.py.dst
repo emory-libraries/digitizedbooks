@@ -108,6 +108,12 @@ ZEPHIR_PW = ''
 ZEPHIR_UPLOAD_DIR = ''
 ZEPHIR_REPORT_DIR = ''
 
+# On our Redhat systems we have to use a non system cURL because Redhat likes
+# really old versions of software so we need a setting  for the path. Most
+# cases the system's cURL will be fine. You can find your path by running
+# `which curl` on the command line. Most likely it will be `/usr/bin/curl`
+CURL_PATH = '/usr/bin/curl'
+
 # Alma API
 ALMA_APIKEY = 'XXXXXXXXX'
 ALMA_API_ROOT = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/'

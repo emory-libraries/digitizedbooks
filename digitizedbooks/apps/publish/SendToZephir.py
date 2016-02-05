@@ -6,7 +6,7 @@ from django.conf import settings
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 
 def send_to_zephir(job):
-    kdip_dir = getattr(settings, 'KDIP_DIR', None)
+    kdip_dir = settings.KDIP_DIR
     kdips = models.KDip.objects.filter(job=job.id)
     # Tmp file for combined MARC XML. The eulxml output includes the namespace in the
     # <record>. We will be getting rid of that then deleting this file.
@@ -47,16 +47,17 @@ def send_to_zephir(job):
     # Delete tmp file
     os.remove(zephir_tmp_file)
 
-    send_from = getattr(settings, 'EMORY_CONTACT', None)
-    zephir_contact = getattr(settings, 'ZEPHIR_CONTACT', None)
-    host = getattr(settings, 'ZEPHIR_FTP_HOST', None)
-    user = getattr(settings, 'ZEPHIR_LOGIN', None)
-    passw = getattr(settings, 'ZEPHIR_PW', None)
-    ftp_dir = getattr(settings, 'ZEPHIR_UPLOAD_DIR', None)
+    send_from = settings.EMORY_CONTACT
+    zephir_contact = settings.ZEPHIR_CONTACT
+    host = settings.ZEPHIR_FTP_HOST
+    user = settings.ZEPHIR_LOGIN
+    passw = settings.ZEPHIR_PW
+    ftp_dir = settings.ZEPHIR_UPLOAD_DIR
+    curl_path = settings.CURL_PATH
 
     # FTP the file
     try:
-        upload_cmd = 'curl -k -u %s:%s -T %s --ssl-reqd --ftp-pasv %s/%s/' % (user, passw, zephir_file, host, ftp_dir)
+        upload_cmd = '%s -k -u %s:%s -T %s --ssl-reqd --ftp-pasv %s/%s/' % (curl_path, user, passw, zephir_file, host, ftp_dir)
         upload_to_z = subprocess.check_output(upload_cmd, shell=True)
     except:
         # Bail out if something goes wrong and return an error status.

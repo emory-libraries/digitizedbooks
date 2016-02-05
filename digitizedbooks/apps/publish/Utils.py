@@ -166,16 +166,20 @@ def create_ht_marc(record):
             <subfield code="z">(GEU)Aleph002240955</subfield>
         </datafield>
     '''
+    try:
+        fields = record.field_035
+        aleph = next(field_val for field_val in fields if "(Aleph" in field_val.serialize())
+        fields.remove(aleph)
 
-    fields = record.field_035
-    aleph = next(field_val for field_val in fields if "(Aleph" in field_val.serialize())
-    fields.remove(aleph)
+        # Get the numeric part out to the Aleph field
+        field_text = aleph.node.xpath('marc:subfield[@code="a"]', namespaces=models.Marc.ROOT_NAMESPACES)[0].text
+        geu = '(GEU)Aleph%s' % field_text[7:16]
 
-    # Get the numeric part out to the Aleph field
-    field_text = aleph.node.xpath('marc:subfield[@code="a"]', namespaces=models.Marc.ROOT_NAMESPACES)[0].text
-    geu = '(GEU)Aleph%s' % field_text[7:16]
-
-    record.field_035.append(models.Marc035Field(code_z = geu))
+        record.field_035.append(models.Marc035Field(code_z = geu))
+    except StopIteration:
+        # Pure Alma records will not have an reference to Aleph records, so we
+        # just move along.
+        pass
 
     return record
 

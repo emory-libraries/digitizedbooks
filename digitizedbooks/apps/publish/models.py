@@ -250,8 +250,10 @@ class Alto(XmlObject):
 # DB Models
 class KDip(models.Model):
     "Class to describe Kirtas output directories"
+    # 1.4.1 Changed the status "new" to read "Valid". "New" was a poor
+    # legacy decision.
     KDIP_STATUSES = (
-        ('new', 'New'),
+        ('new', 'Valid'),
         ('processed', 'Processed'),
         ('archived', 'Archived'),
         ('invalid', 'Invalid'),
