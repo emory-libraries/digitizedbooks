@@ -1,0 +1,109 @@
+<bib>
+<mms_id>9936521772002486</mms_id>
+<linked_record_id/>
+<title>
+Jacob Fugger-Babenhausen (1542-1598) Güterpolitik und Herrschaftspraxis /
+</title>
+<author>Egermann-Krebs, Diana.</author>
+<isbn>9783957860156 (hd.bd.) :</isbn>
+<network_numbers>
+<network_number>(GyWOH)har150170604</network_number>
+</network_numbers>
+<place_of_publication>Augsburg :</place_of_publication>
+<publisher_const>Wissner</publisher_const>
+<holdings link="https://api-na.hosted.exlibrisgroup.com/almaws/v1/bibs/9936521772002486/holdings"/>
+<created_by>Ex Libris</created_by>
+<created_date>2016-02-04Z</created_date>
+<last_modified_by>System</last_modified_by>
+<last_modified_date>2016-02-04Z</last_modified_date>
+<suppress_from_publishing>false</suppress_from_publishing>
+<originating_system>HARRASOWITZ</originating_system>
+<originating_system_id>har150170604</originating_system_id>
+<record>
+<leader>01084nam a22002775i 4500</leader>
+<controlfield tag="001">9936521772002486</controlfield>
+<controlfield tag="005">20160203062311.4</controlfield>
+<controlfield tag="008">160203s2015 gw a m 00 0 ger d</controlfield>
+<datafield ind1="7" ind2=" " tag="016">
+<subfield code="a">1068955864</subfield>
+<subfield code="2">GyFmDB</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="020">
+<subfield code="a">9783957860156 (hd.bd.) :</subfield>
+<subfield code="c">EUR34.80</subfield>
+</datafield>
+<datafield ind1="3" ind2=" " tag="024">
+<subfield code="a">9783957860156</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="035">
+<subfield code="a">(GyWOH)har150170604</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="040">
+<subfield code="a">GyWOH</subfield>
+<subfield code="b">eng</subfield>
+<subfield code="c">GyWOH</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="049">
+<subfield code="a">EMHU</subfield>
+</datafield>
+<datafield ind1=" " ind2="7" tag="072">
+<subfield code="a">H</subfield>
+<subfield code="2">lcco</subfield>
+</datafield>
+<datafield ind1="1" ind2=" " tag="100">
+<subfield code="a">Egermann-Krebs, Diana.</subfield>
+</datafield>
+<datafield ind1="1" ind2="0" tag="245">
+<subfield code="a">Jacob Fugger-Babenhausen (1542-1598)</subfield>
+<subfield code="b">Güterpolitik und Herrschaftspraxis /</subfield>
+<subfield code="c">Diana Egermann-Krebs.</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="260">
+<subfield code="a">Augsburg :</subfield>
+<subfield code="b">Wissner,</subfield>
+<subfield code="c">[2015].</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="300">
+<subfield code="a">xi, 515 pages :</subfield>
+<subfield code="b">illustrations ;</subfield>
+<subfield code="c">24 cm.</subfield>
+</datafield>
+<datafield ind1=" " ind2="0" tag="440">
+<subfield code="a">
+Veröffentlichungen der Schwäbischen Forschungsgemeinschaft.
+</subfield>
+<subfield code="n">Reihe 4,</subfield>
+<subfield code="p">Studien zur Fuggergeschichte ;</subfield>
+<subfield code="v">Band 43 (= Band 34)</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="502">
+<subfield code="a">Thesis (doctoral) - Universität, Augsburg, 2013.</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="504">
+<subfield code="a">Includes bibliographical references and index.</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="910">
+<subfield code="a">
+Harrassowitz bibliographic data with order information
+</subfield>
+<subfield code="b">0051013</subfield>
+<subfield code="d">EMO-OE</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="960">
+<subfield code="o">1</subfield>
+<subfield code="w">ger</subfield>
+<subfield code="x">gw</subfield>
+<subfield code="z">USD</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="980">
+<subfield code="a">20160203</subfield>
+<subfield code="b">38.39</subfield>
+<subfield code="f">har150170604</subfield>
+<subfield code="g">1</subfield>
+</datafield>
+<datafield ind1=" " ind2=" " tag="981">
+<subfield code="b">HIST-EUROPE-BOOKS</subfield>
+<subfield code="e">AS</subfield>
+</datafield>
+</record>
+</bib>

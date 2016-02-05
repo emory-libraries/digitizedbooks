@@ -64,32 +64,17 @@ XSLFO_TEMP_DIR = '/tmp/oe_cache/fop'
 # for Developers only: to use sessions in runserver, uncomment this line (override configuration in settings.py)
 #SESSION_COOKIE_SECURE = False
 
-# PID Manager credentials
-PIDMAN_HOST = '' # the web root where we'll ask for pids
-PIDMAN_USER = ''
-PIDMAN_PASSWORD = ''
-PIDMAN_DOMAIN = '' # the full url of the domain we'll create pids in
-PIDMAN_POLICY = ''
-
-KDIP_DIR = '/path/to/kdips'
-
-# Pattern in directory path that should be skipped
-SKIP_DIR = 'test'
-
 # django-auth-ldap settings
 import ldap
 from django_auth_ldap.config import LDAPSearch
 
 AUTH_LDAP_SERVER_URI = ''
-AUTH_LDAP_BIND_DN = ''           # DN of the  base LDAP user (e.g., 'uid=foo,ou=bar,o=emory.edu')
-AUTH_LDAP_BIND_PASSWORD = ''    # password for that user
-AUTH_LDAP_USER_SEARCH = LDAPSearch("")
-# If a cert file needs to be specified, or any other ldap options
-# from http://python-ldap.org/doc/html/ldap.html#options are needed,
-# add them here:
-# AUTH_LDAP_GLOBAL_OPTIONS = {
-#     ldap.OPT_X_TLS_CACERTFILE: '...',
-# }
+AUTH_LDAP_BIND_DN = ''
+AUTH_LDAP_BIND_PASSWORD = ''
+AUTH_LDAP_USER_SEARCH = LDAPSearch("***")
+AUTH_LDAP_GLOBAL_OPTIONS = {
+    ldap.OPT_X_TLS_CACERTFILE: '/path/to/cert',
+}
 
 AUTH_LDAP_USER_ATTR_MAP = {
     'first_name': 'givenName',
@@ -97,20 +82,53 @@ AUTH_LDAP_USER_ATTR_MAP = {
     'email': 'mail',
 }
 
+# At various points in the process email notifications are sent out.
+# Obviously for testing, you should make these your email and/or the
+# product owner's.
+
+# Where emails are sent when KDips are uploaded to Box.
 HATHITRUST_CONTACT = ''
+
+# Email address from which emails will be sent and the email address to which
+# Zephir is told to respond.
 EMORY_CONTACT = ''
+
+# Email adderss to notify Zephir that there is a new records have been uploaded.
 ZEPHIR_CONTACT = ''
 
 # Zephir FTP credentials
-ZEPHIR_FTP_HOST = ''
+ZEPHIR_FTP_HOST = 'ftp://ftps.cdlib.org'
 ZEPHIR_LOGIN = ''
 ZEPHIR_PW = ''
-ZEPHIR_UPLOAD_DIR = ''
-ZEPHIR_REPORT_DIR = ''
+# Zephir porvides a test directory.
+# In porduction use `submissions` and `runreports`.
+ZEPHIR_UPLOAD_DIR = 'testrecs'
+ZEPHIR_REPORT_DIR = 'testrecs'
 
-# Alma API
+# On our Redhat systems we have to use a non system cURL because Redhat likes
+# really old versions of software so we need a setting  for the path. Most
+# cases the system's cURL will be fine. You can find your path by running
+# `which curl` on the command line. Most likely it will be `/usr/bin/curl`
+CURL_PATH = '/usr/bin/curl'
+
+# Alma API key and the base url.
 ALMA_APIKEY = 'XXXXXXXXX'
 ALMA_API_ROOT = 'https://api-na.hosted.exlibrisgroup.com/almaws/v1/'
+
+# PID Manager credentials
+PIDMAN_HOST = '' # the web root where we'll ask for pids
+PIDMAN_USER = ''
+PIDMAN_PASSWORD = ''
+PIDMAN_DOMAIN = '' # the full url of the domain we'll create pids in
+PIDMAN_POLICY = ''
+
+# Top level directory where to find all the KDips.
+KDIP_DIR = '/path/to/kdips'
+
+# Pattern in directory path that should be skipped.
+# In production, we want to skip the test directory.
+# Path should be relative to `KDIP_DIR`
+SKIP_DIR = 'test'
 
 from celery import app
 app.conf.update(

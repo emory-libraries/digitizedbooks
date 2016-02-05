@@ -6,7 +6,7 @@ from eulxml.xmlmap import load_xmlobject_from_file
 from django.test import TestCase
 from digitizedbooks.apps.publish.management.commands import check_ht
 from digitizedbooks.apps.publish.models import Marc, KDip, Job, AlmaBibRecord
-
+from django.conf import settings
 import Utils
 
 class TestKDip(TestCase):
@@ -98,6 +98,13 @@ class TestKDip(TestCase):
         r = Utils.get_rights(1900, 'foo bar')
         self.assertEquals(r, '583X does not equal "public domain"')
 
+        # Make sure we removed the aleph reference
+        marc = '%s/10002333054/marc.xml' % (settings.KDIP_DIR)
+        with open(marc, 'r') as marc_rec:
+            data=marc_rec.read()
+            self.assertNotIn('(Aleph)', data)
+            self.assertIn('(GEU)Aleph', data)
+
 class TestMarcUpdate(TestCase):
 
     def test_check_ht(self):
@@ -139,3 +146,8 @@ class TestMarcUpdate(TestCase):
             self.assertEqual(marc.field590, text590)
 
             self.assertEqual(marc.tag583a, 'digitized')
+
+class TestPureAlmaBibRecord(TestCase):
+    def test_pure_alma_record(self):
+        record = load_xmlobject_from_file('digitizedbooks/apps/publish/fixtures/pure-alma.xml', Marc)
+        self.assertTrue(Utils.create_ht_marc(record))
