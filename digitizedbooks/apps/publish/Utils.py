@@ -118,11 +118,37 @@ def update_583(record):
         pass
     return record
 
-def load_bib_record(barcode):
+def get_oclc_fields(record):
+    """
+from digitizedbooks.apps.publish import Utils
+from digitizedbooks.apps.publish import models
+k = models.KDip.objects.get(kdip_id = '010000666241')
+record = Utils.load_bib_record(k)
+alma = Utils.load_alma_bib_record(k)
+"""
+    oclc_tags = []
+    for oclc_tag in record.field_035:
+        # The
+        try:
+            # Mainly doing it this way for readablity and/or because I don't know any better way to do this in eulxml
+            # And I don't want make this a Marc object for just this one field.
+            oclc_tags.append(oclc_tag.node.xpath('marc:subfield[@code="a"]', namespaces=models.Marc.ROOT_NAMESPACES)[0].text)
+        except IndexError:
+            oclc_tags.append(oclc_tag.serialize())
+
+    return oclc_tags
+
+def load_bib_record(kdip):
     """
     Method to load MARC XML from Am
     http://discovere.emory.edu:8991/cgi-bin/get_alma_record?item_id=010002483050
+    Method accepts a KDip object of a barcode as a string.
     """
+    if isinstance(kdip, basestring):
+        barcode = kdip
+    else:
+        barcode = kdip.kdip_id
+
     get_bib_rec = requests.get( \
         'http://discovere.emory.edu:8991/cgi-bin/get_alma_record?item_id=', \
         params={'item_id': barcode})
@@ -134,6 +160,9 @@ def load_alma_bib_record(kdip):
     """
     Bib record from Alma.
     """
+    if isinstance(kdip, basestring):
+        kdip = models.KDip.objects.get(kdip_id=kdip)
+
     item = requests.get('%sitems' % settings.ALMA_API_ROOT,
         params={
             'item_barcode': kdip.kdip_id,
@@ -155,7 +184,7 @@ def load_alma_bib_record(kdip):
 
     return load_xmlobject_from_string(bib_xml, models.AlmaBibRecord)
 
-def create_ht_marc(record):
+def transform_035(record):
     '''
     Remove this tag:
         <datafield ind1=" " ind2=" " tag="035">
@@ -175,13 +204,62 @@ def create_ht_marc(record):
         field_text = aleph.node.xpath('marc:subfield[@code="a"]', namespaces=models.Marc.ROOT_NAMESPACES)[0].text
         geu = '(GEU)Aleph%s' % field_text[7:16]
 
-        record.field_035.append(models.Marc035Field(code_z = geu))
+        datafields = record.datafields
+        insert_position = datafields.index(record.field_035[-1]) + 1
+        datafields.insert(insert_position, models.Marc035Field(code_z = geu))
+
     except StopIteration:
         # Pure Alma records will not have an reference to Aleph records, so we
         # just move along.
         pass
 
     return record
+
+def cleanup_035s(record):
+    """
+    If any 035 $a has a value following the string '(OCoLC)' that matches the
+    number in the 001 field, it is not an OCLC number at all (it is the ALMA
+    system number, and is a mistake made during ALMA migration).  If you find
+    a match, drop the field.
+    """
+    for field in record.field_035:
+        if record.alma_number in field.serialize():
+            record.field_035.remove(field)
+
+    # HT only wants one 035 with the OCoLC. So we just keep the first one.
+    oclc_prefixs = ["OCoLC", "ocm", "ocn"]
+    oclcs = []
+    for field in record.field_035:
+        if any(oclc_prefix in field.serialize() for oclc_prefix in oclc_prefixs):
+            oclcs.append(field)
+    for extra_oclc in oclcs[1:]:
+        record.field_035.remove(extra_oclc)
+
+    return record
+
+def remove_most_999_fields(record, barcode):
+    """
+    Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
+    """
+    for field_999 in record.tag_999:
+        if barcode not in field_999.serialize():
+            record.tag_999.remove(field_999)
+
+    return record
+
+def create_ht_marc(kdip):
+
+    if isinstance(kdip, basestring):
+        barcode = kdip
+    else:
+        barcode = kdip.kdip_id
+
+    record = load_bib_record(barcode)
+    cleanup_035s(record)
+    remove_most_999_fields(record, barcode)
+    transform_035(record)
+
+    return load_xmlobject_from_string(record.serialize(), models.Marc)
 
 def create_yaml(kdip):
     """

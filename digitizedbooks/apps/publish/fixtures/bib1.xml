@@ -4,6 +4,9 @@
     <controlfield tag="001">990031094930302486</controlfield>
     <controlfield tag="005">20160112000031.0</controlfield>
     <controlfield tag="008">721007s1899    tnucf    b    001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="035">
+        <subfield code="a">(OCoLC)990031094930302486</subfield>
+    </datafield>
     <datafield ind1=" " ind2=" " tag="010">
       <subfield code="a">72193749</subfield>
     </datafield>

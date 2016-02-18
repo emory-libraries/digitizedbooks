@@ -164,15 +164,15 @@ class Marc(MarcBase):
 
     tag_999 = NodeListField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
-    fied_999 = StringField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
-
-    field_035 = NodeListField('marc:record/datafield[@tag="035"]', MarcDatafield)
+    field_999 = StringField("marc:record/marc:datafield[@tag='999']", MarcDatafield)
 
     tag_999a = StringField('marc:record/marc:datafield[@tag="999"]/marc:subfield[@code="a"]')
 
     field_035 = NodeListField('marc:record/marc:datafield[@tag="035"]', MarcDatafield)
 
-    tag_035a = StringField('marc:record/marc:datafield[@tag="035"]/marc:subfield[@code="a"]')
+    tag_035a = NodeListField('marc:record/marc:datafield[@tag="035"]/marc:subfield[@code="a"]', MarcDatafield)
+
+    alma_number = StringField('marc:record/marc:controlfield[@tag="001"]/text()')
 
     def note(self, barcode):
         """
@@ -199,9 +199,9 @@ class Marc035Field(XmlObject):
 
     def __init__(self, *args, **kwargs):
         super(Marc035Field, self).__init__(*args, **kwargs)
-        self.tag = '035'
         self.ind1 = " "
         self.ind2 = " "
+        self.tag = '035'
 
 # Alma item record
 class AlmaBibItem(XmlObject):
@@ -239,6 +239,8 @@ class AlmaBibRecord(XmlObject):
     field590 = StringField('record/datafield[@tag="590"][@ind1=" "][@ind2=" "]/subfield[@code="a"]/text()')
     field999 = NodeListField("record/datafield[@tag='999']", AlmaField)
     tag583a = StringField('record/datafield[@tag="583"][@ind1="1"]/subfield[@code="a"]/text()')
+    field_035 = NodeListField('record/datafield[@tag="035"]', AlmaField)
+    alma_number = StringField('record/controlfield[@tag="001"]/text()')
 
 class Alto(XmlObject):
     '''
@@ -329,7 +331,7 @@ class KDip(models.Model):
         # Check the dates to see if the volume is in copyright.
         try:
             # Load the MARC XML
-            bib_rec = Utils.load_bib_record(self.barcode)
+            bib_rec = Utils.load_bib_record(self)
 
             # Check if there is a subfied 5 in the 583 tag
             if not bib_rec.tag_583_5:
@@ -482,34 +484,30 @@ class KDip(models.Model):
 
             # create the KDIP is it does not exits
             for k in kdip_list:
-
                 try:
                     # lookkup bib record for note field
-                    bib_rec = Utils.load_bib_record(k[:12])
-                    # Remove extra 999 fileds. We only want the one where the 'i' code matches the barcode.
-                    for field_999 in bib_rec.tag_999:
-                        i999 = field_999.node.xpath('marc:subfield[@code="i"]', \
-                            namespaces=Marc.ROOT_NAMESPACES)[0].text
-                        if i999 != k[:12]:
-                            bib_rec.tag_999.remove(field_999)
-
+                    bib_rec = Utils.create_ht_marc(k[:12])
                     # Find the OCLC in the MARCXML
                     # First an empty list to put all the 035 tags in
                     oclc_tags = []
-                    for oclc_tag in bib_rec.field_035:
-                        # Mainly doing it this way for readablity and/or because I don't know any better way to do this in eulxml
-                        oclc_tags.append(oclc_tag.node.xpath('marc:subfield[@code="a"]', namespaces=Marc.ROOT_NAMESPACES)[0].text)
+                    for oclc_tag in bib_rec.tag_035a:
+                        oclc_search = re.search('<.*>(.*?)</.*>', oclc_tag.serialize())
+                        # Make a readable list of 035$a tags
+                        oclc_tags.append(oclc_search.group(1))
                     # The oclc filed can have a few patterns. We want the first match
-                    oclc = next(oclc_val for oclc_val in oclc_tags if "(OCoLC)" in oclc_val or "ocm" in oclc_val or "ocn" in oclc_val)
+                    oclc = next(oclc_val for oclc_val in oclc_tags \
+                        if "(OCoLC)" in oclc_val \
+                        or "ocm" in oclc_val \
+                        or "ocn" in oclc_val \
+                        and bib_rec.alma_number not in oclc_val)
                     # Remove all non-numeric characters
                     oclc = re.sub("[^0-9]", "", oclc)
-
 
                     # Set the note field to 'EnumCron not found' if the 999a filed
                     # is empty or missing.
                     note = bib_rec.note(k[:12]) or 'EnumCron not found'
 
-                    bib_rec = Utils.create_ht_marc(bib_rec)
+                    # bib_rec = Utils.create_ht_marc(bib_rec)
 
                     defaults={
                        'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
@@ -620,7 +618,7 @@ class Job(models.Model):
             for kdip in kdips:
                 uploaded_files.append(kdip.id)
 
-            # Semd volumes to the upload task.
+            # Send volumes to the upload task.
             self.status = 'uploading'
             # Add the celery task.
             from tasks import upload_for_ht
