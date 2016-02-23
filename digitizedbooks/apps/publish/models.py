@@ -522,7 +522,7 @@ class KDip(models.Model):
 
                         # Write the marc.xml to disk.
                         with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
-                            marcxml.write(bib_rec.serialize(pretty=True))
+                            marcxml.write(re.sub('\<datafield\/\>\\n', '', bib_rec.serialize(pretty=True)))
 
                         if kwargs.get('kdip_enumcron'):
                             kdip.note = kwargs.get('kdip_enumcron')
