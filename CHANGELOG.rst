@@ -1,3 +1,8 @@
+Release 1.4.2
+-------------
+Fix to make Alma MARC records comply with HathiTrust.
+* As a user, I want the marcxml record submitted to HathiTrust to contain only one 035$a field containing a valid OCLC number, so that the record will validate when uploaded to Zephir
+
 Release 1.4.1
 -------------
 Updates:
