@@ -259,7 +259,15 @@ def create_ht_marc(kdip):
     remove_most_999_fields(record, barcode)
     transform_035(record)
 
-    return load_xmlobject_from_string(record.serialize(), models.Marc)
+    marc_file = '%s/%s/marc.xml' % (settings.KDIP_DIR, barcode)
+
+    # Write the marc.xml to disk.
+    with open(marc_file, 'w') as marcxml:
+        # When we insert the 035 field in position an empaty datafield is instered
+        # at the bottom, so we get rid of that.
+        marcxml.write(re.sub('\<datafield\/\>\\n', '', record.serialize(pretty=True)))
+
+    return load_xmlobject_from_file(marc_file, models.Marc)
 
 def create_yaml(kdip):
     """

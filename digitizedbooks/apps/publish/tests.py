@@ -155,7 +155,7 @@ class TestPureAlmaBibRecord(TestCase):
 
 class TestHTMarc(TestCase):
     def test_ht_marc(self):
-        rec = Utils.create_ht_marc('010000154039')
+        rec = Utils.create_ht_marc('010000666241')
 
         # Only one field for the oclc
         self.assertEqual(len(re.findall('OCoLC|ocm|ocn', rec.serialize())), 1)
@@ -163,10 +163,10 @@ class TestHTMarc(TestCase):
         # Only one 999 field for HT
         self.assertEqual(len(rec.tag_999), 1)
         # And that one need the barcode in code i
-        self.assertTrue('<subfield code="i">010000154039</subfield>' in rec.tag_999[0].serialize())
+        self.assertTrue('<subfield code="i">010000666241</subfield>' in rec.tag_999[0].serialize())
 
         # Need to change Aleph reference from `(Aleph)..` to `(GEU)Aleph...`
         self.assertEqual(len(re.findall('\(Aleph', rec.serialize())), 0)
         # and make sure we did add the new one correctly, this is also check to
         # see if we put it in the right spot
-        self.assertTrue('(GEU)Aleph000969547' in rec.field_035[-1].serialize())
+        self.assertTrue('(GEU)Aleph000116142' in rec.field_035[-1].serialize())
