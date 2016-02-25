@@ -1,6 +1,6 @@
 Release 1.4.3
 -------------
-Moved the writing MARC record to disk into the function that prepares the MARC so it will be regenerated when a KDip is reporcessed.
+Moved the writing MARC record to disk into the function that prepares the MARC so it will be regenerated when a KDip is reprocessed.
 
 Release 1.4.2
 -------------
