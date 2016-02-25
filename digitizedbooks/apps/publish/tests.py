@@ -7,6 +7,7 @@ from django.test import TestCase
 from digitizedbooks.apps.publish.management.commands import check_ht
 from digitizedbooks.apps.publish.models import Marc, KDip, Job, AlmaBibRecord
 from django.conf import settings
+import re
 import Utils
 
 class TestKDip(TestCase):
@@ -150,4 +151,22 @@ class TestMarcUpdate(TestCase):
 class TestPureAlmaBibRecord(TestCase):
     def test_pure_alma_record(self):
         record = load_xmlobject_from_file('digitizedbooks/apps/publish/fixtures/pure-alma.xml', Marc)
-        self.assertTrue(Utils.create_ht_marc(record))
+        self.assertTrue(Utils.transform_035(record))
+
+class TestHTMarc(TestCase):
+    def test_ht_marc(self):
+        rec = Utils.create_ht_marc('010000154039')
+
+        # Only one field for the oclc
+        self.assertEqual(len(re.findall('OCoLC|ocm|ocn', rec.serialize())), 1)
+
+        # Only one 999 field for HT
+        self.assertEqual(len(rec.tag_999), 1)
+        # And that one need the barcode in code i
+        self.assertTrue('<subfield code="i">010000154039</subfield>' in rec.tag_999[0].serialize())
+
+        # Need to change Aleph reference from `(Aleph)..` to `(GEU)Aleph...`
+        self.assertEqual(len(re.findall('\(Aleph', rec.serialize())), 0)
+        # and make sure we did add the new one correctly, this is also check to
+        # see if we put it in the right spot
+        self.assertTrue('(GEU)Aleph000969547' in rec.field_035[-1].serialize())
