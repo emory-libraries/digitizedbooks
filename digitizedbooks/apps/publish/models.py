@@ -522,6 +522,8 @@ class KDip(models.Model):
 
                         # Write the marc.xml to disk.
                         with open('%s/%s/marc.xml' % (kdip_list[k], kdip.kdip_id), 'w') as marcxml:
+                            # When we insert the 035 field in position an empaty datafield is instered
+                            # at the bottom, so we get rid of that.
                             marcxml.write(re.sub('\<datafield\/\>\\n', '', bib_rec.serialize(pretty=True)))
 
                         if kwargs.get('kdip_enumcron'):
