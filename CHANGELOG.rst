@@ -1,3 +1,7 @@
+Release 1.4.3
+-------------
+Moved the writing MARC record to disk into the function that prepares the MARC so it will be regenerated when a KDip is reprocessed.
+
 Release 1.4.2
 -------------
 Fix to make Alma MARC records comply with HathiTrust.
@@ -8,7 +12,7 @@ Release 1.4.1
 Updates:
 * Changes the 035 filed in the MARC XML to be compatible with HathiTrust.
 * Updated the Zephir to comply with their new security.
-* Handels pure Alma records with no reference to Aleph.
+* Handles pure Alma records with no reference to Aleph.
 
 Bug fixes:
 * Now pulling MARC record from Alma for real.
