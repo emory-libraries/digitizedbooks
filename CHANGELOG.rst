@@ -1,3 +1,7 @@
+Release 1.4.4
+-------------
+* Updated the Zephir donwload to comply with their new security. Release 1.4.1 only updated it for upload.
+
 Release 1.4.3
 -------------
 Moved the writing MARC record to disk into the function that prepares the MARC so it will be regenerated when a KDip is reprocessed.
