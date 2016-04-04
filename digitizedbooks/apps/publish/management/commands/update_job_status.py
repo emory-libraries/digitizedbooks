@@ -20,7 +20,7 @@ class Command(NoArgsCommand):
         for z_job in pending_zephir_jobs:
             try:
                 report = '/tmp/%s.txt' % z_job.name
-                download_cmd = 'curl -k --ftp-ssl-control --ftp-pasv -u %s:%s %s/%s/%s.txt --out %s.txt' % (user, passw, host, ftp_dir, z_job.name, report)
+                download_cmd = 'curl --ftp-ssl-reqd --ftp-pasv -u %s:%s %s/%s/%s.txt --out %s.txt' % (user, passw, host, ftp_dir, z_job.name, report)
                 download_to_z = subprocess.check_output(download_cmd, shell=True)
                 if '0 items skipped/error' in open(report).read():
                     z_job.status = 'ready for hathi'
