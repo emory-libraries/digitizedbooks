@@ -1,6 +1,11 @@
+Release 1.4.5
+-------------
+* Added better error handling for uploads to Box.
+* Added setting for `EMORY_MANAGERS` so multiple emory people can receive email notifications.
+
 Release 1.4.4
 -------------
-* Updated the Zephir donwload to comply with their new security. Release 1.4.1 only updated it for upload.
+* Updated the Zephir download to comply with their new security. Release 1.4.1 only updated it for upload.
 
 Release 1.4.3
 -------------

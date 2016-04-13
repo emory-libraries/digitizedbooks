@@ -261,7 +261,9 @@ class KDip(models.Model):
         ('invalid', 'Invalid'),
         ('do not process', 'Do Not Process'),
         ('alma_fail', 'Alma Update Failed'),
-        ('reprocess', 'Reprocess')
+        ('reprocess', 'Reprocess'),
+        ('upload_fail', 'Upload Failed'),
+        ('uploaded', 'Uploaded')
     )
 
     kdip_id = models.CharField(max_length=100, unique=True)
@@ -314,6 +316,30 @@ class KDip(models.Model):
         else:
             return None
 
+    @property
+    def process_dir(self):
+        return '%s/HT/%s' % (settings.KDIP_DIR, self.kdip_id)
+
+    @property
+    def meta_yml(self):
+        return '%s/%s/meta.yml' % (self.path, self.kdip_id)
+
+    @property
+    def marc_xml(self):
+        return '%s/%s/marc.xml' % (self.path, self.kdip_id)
+
+    @property
+    def mets_xml(self):
+        return '%s/%s/METS/%s.mets.xml' % (self.path, self.kdip_id, self.kdip_id)
+
+    @property
+    def mets_dir(self):
+        return "%s/%s/METS/" % (self.path, self.kdip_id)
+
+    @property
+    def tif_dir(self):
+        return "%s/%s/TIFF/" % (self.path, self.kdip_id)
+
     #@classmethod
     def validate(self):
         '''
@@ -362,24 +388,17 @@ class KDip(models.Model):
             error = ValidationError(kdip=self, error=reason, error_type="Inadequate Rights")
             error.save()
 
-        # all paths are relitive to METS dir
-        mets_dir = "%s/%s/METS/" % (self.path, self.kdip_id)
-
-        mets_file = "%s%s.mets.xml" % (mets_dir, self.kdip_id)
-
-        tif_dir = "%s/%s/TIFF/" % (self.path, self.kdip_id)
-
         # Mets file exists
-        logger.info('Cheking for Mets File.')
-        if not os.path.exists(mets_file):
-            reason = "Error: %s does not exist" % mets_file
+        logger.info('Checking for Mets File.')
+        if not os.path.exists(self.mets_xml):
+            reason = "Error: %s does not exist" % self.mets_xml
             logger.error(reason)
             error = ValidationError(kdip=self, error=reason, error_type="Missing Mets")
             error.save()
 
         try:
             logger.info('Loading Mets file into eulxml.')
-            mets = load_xmlobject_from_file(mets_file, Mets)
+            mets = load_xmlobject_from_file(self.mets_xml, Mets)
 
         except:
             reason = 'Error \'%s\' while loading Mets' % (sys.exc_info()[0])
@@ -389,7 +408,7 @@ class KDip(models.Model):
         try:
             #mets file validates against schema
             if mets.is_valid() is not True:
-                reason = "Error: %s is not valid" % mets_file
+                reason = "Error: %s is not valid" % self.mets_xml
                 logger.error(reason)
                 error = ValidationError(kdip=self, error=reason, error_type="Invalid Mets")
                 error.save()
@@ -399,7 +418,7 @@ class KDip(models.Model):
 
         logger.info('Gathering tiffs.')
 
-        tiffs = glob.glob('%s/*.tif' % tif_dir)
+        tiffs = glob.glob('%s/*.tif' % self.tif_dir)
 
         logger.info('Checking tiffs.')
         for tiff in tiffs:
@@ -412,7 +431,7 @@ class KDip(models.Model):
 
             # Olny get the Tiffs.
             if '.tif' in file_ref.href.lower():
-                file_path = "%s%s" % (mets_dir, file_ref.href)
+                file_path = "%s%s" % (self.mets_dir, file_ref.href)
 
                 if not os.path.exists(file_path):
                     reason = "Error: %s does not exist" % file_path
@@ -543,11 +562,6 @@ class KDip(models.Model):
                     logger.error("Error creating KDip %s : %s" % (k, sys.exc_info()[0]))
 
             bad_kdip_list = '\n'.join(map(str, bad_kdips))
-            contact = getattr(settings, 'EMORY_CONTACT', None)
-            # send_mail('Invalid KDips', 'The following KDips were loaded but are invalid:\n\n%s' % bad_kdip_list, contact, [contact], fail_silently=False)
-
-
-
 
     def __unicode__(self):
         return self.kdip_id
@@ -586,6 +600,7 @@ class Job(models.Model):
         ('ready for hathi', 'Ready for Hathi'),
         ('uploading', 'Uploading to HathiTrust'),
         ('failed', 'Upload Failed'),
+        ('reupload', 'Reupload'),
         ('being processed', 'Being Processed'),
         ('processed', 'Processed'),
         ('processed by ht', 'Processed by HT')
@@ -599,6 +614,22 @@ class Job(models.Model):
     def volume_count(self):
         return self.kdip_set.all().count()
 
+    @property
+    def upload_attempts(self):
+        return self._upload_attempts
+
+    @property
+    def uploaded(self):
+        uploaded_count = self.kdip_set.filter(status='uploaded') \
+            .count()
+        return '%s/%s' % (uploaded_count, self.volume_count)
+
+    _upload_attempts = 0
+
+    @upload_attempts.setter
+    def upload_attempts(self, value):
+        self._upload_attempts = value
+
     def __unicode__(self):
         return self.name
 
@@ -608,23 +639,19 @@ class Job(models.Model):
 
     def save(self, *args, **kwargs):
 
-        if self.status == 'ready for hathi':
-            uploaded_files = []
-            kdips = KDip.objects.filter(job=self.id)
-
-            for kdip in kdips:
-                uploaded_files.append(kdip.id)
-
+        if self.status == 'ready for hathi' or self.status == 'reupload':
             # Send volumes to the upload task.
             self.status = 'uploading'
             # Add the celery task.
+            # At this point the work is passed off to celery and executes
+            # `tasks.py`
             from tasks import upload_for_ht
-            upload_for_ht.delay(uploaded_files, self.id)
+            upload_for_ht.delay(self)
 
-        elif self.status == 'ready for zephir':
-            zephir_status = send_to_zephir(self)
-            # Set status
-            self.status = zephir_status
+        # elif self.status == 'ready for zephir':
+        #     zephir_status = send_to_zephir(self)
+        #     # Set status
+        #     self.status = zephir_status
 
         super(Job, self).save(*args, **kwargs)
 
