@@ -599,8 +599,8 @@ class Job(models.Model):
         ('zephir error', 'Zephir Error'),
         ('ready for hathi', 'Ready for Hathi'),
         ('uploading', 'Uploading to HathiTrust'),
+        ('retry', 'Retry Upload'),
         ('failed', 'Upload Failed'),
-        ('reupload', 'Reupload'),
         ('being processed', 'Being Processed'),
         ('processed', 'Processed'),
         ('processed by ht', 'Processed by HT')
@@ -639,7 +639,7 @@ class Job(models.Model):
 
     def save(self, *args, **kwargs):
 
-        if self.status == 'ready for hathi' or self.status == 'reupload':
+        if (self.status == 'ready for hathi') or (self.status == 'retry'):
             # Send volumes to the upload task.
             self.status = 'uploading'
             # Add the celery task.

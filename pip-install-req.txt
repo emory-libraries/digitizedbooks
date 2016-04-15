@@ -16,3 +16,4 @@ django-admin-bootstrapped
 django-celery
 django-kombu
 celery
+pyopenssl==0.12.0
