@@ -17,6 +17,7 @@
 from django.contrib import admin
 from digitizedbooks.apps.publish.models import  Job, KDip, ValidationError
 from django.contrib.sites.models import Site
+from django import forms
 
 def remove_from_job(modeladmin, request, queryset):
     queryset.update(job=None)
@@ -32,6 +33,12 @@ class ValidationErrorInline(admin.TabularInline):
     def has_delete_permission(self, request, obj=None):
         return False
 
+class JobAdminForm(forms.ModelForm):
+    def clean(self):
+        if self.cleaned_data['status'] == 'ready for zephir':
+            statuses = self.instance.kdip_set.values_list('status', flat=True)
+            if not all(status == 'new' for status in statuses):
+                raise forms.ValidationError("All KDips must be valid before submitting to Zephir.")
 
 class KDipAdmin(admin.ModelAdmin):
     list_display = ['kdip_id', 'status', 'note', 'oclc', 'errors', 'accepted_by_ia', 'accepted_by_ht', 'al_ht', 'job',]
@@ -58,10 +65,11 @@ class KDipInline(admin.TabularInline):
 
 
 class JobAdmin(admin.ModelAdmin):
+    form = JobAdminForm
     inlines = [KDipInline]
-    list_display = ['name', 'status', 'volume_count']
+    list_display = ['name', 'status', 'volume_count', 'uploaded']
     list_link = ['name']
-    readonly_fields = ['volume_count']
+    readonly_fields = ['volume_count', 'uploaded']
 
 
 admin.site.register(KDip, KDipAdmin)

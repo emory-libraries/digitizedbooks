@@ -297,7 +297,7 @@ def create_yaml(kdip):
     yaml_data = {}
     yaml_data['capture_agent'] = capture_agent
     yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-    yaml_data['scanning_order'] = 'left-to-right!!!!'
+    yaml_data['scanning_order'] = 'left-to-right'
     yaml_data['reading_order'] = 'left-to-right'
     yaml_data['capture_date']= dt.isoformat('T')
     with open('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id), 'a') as outfile:

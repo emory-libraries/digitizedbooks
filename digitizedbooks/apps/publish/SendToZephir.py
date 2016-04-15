@@ -5,6 +5,22 @@ from django.core.mail import send_mail
 from django.conf import settings
 from eulxml.xmlmap import load_xmlobject_from_string, load_xmlobject_from_file
 
+def upload_file(zephir_file):
+    host = settings.ZEPHIR_FTP_HOST
+    user = settings.ZEPHIR_LOGIN
+    passw = settings.ZEPHIR_PW
+    ftp_dir = settings.ZEPHIR_UPLOAD_DIR
+    curl_path = settings.CURL_PATH
+
+    # FTP the file
+    try:
+        upload_cmd = '%s -k -u %s:%s -T %s --ssl-reqd --ftp-pasv %s/%s/' % (curl_path, user, passw, zephir_file, host, ftp_dir)
+        upload_to_z = subprocess.check_output(upload_cmd, shell=True)
+        return True
+    except:
+        # Bail out if something goes wrong and return an error status.
+        return False
+
 def send_to_zephir(job):
     kdip_dir = settings.KDIP_DIR
     kdips = models.KDip.objects.filter(job=job.id)
@@ -47,28 +63,22 @@ def send_to_zephir(job):
     # Delete tmp file
     os.remove(zephir_tmp_file)
 
-    send_from = settings.EMORY_CONTACT
-    zephir_contact = settings.ZEPHIR_CONTACT
-    host = settings.ZEPHIR_FTP_HOST
-    user = settings.ZEPHIR_LOGIN
-    passw = settings.ZEPHIR_PW
-    ftp_dir = settings.ZEPHIR_UPLOAD_DIR
-    curl_path = settings.CURL_PATH
+    upload = upload_file(zephir_file)
 
-    # FTP the file
-    try:
-        upload_cmd = '%s -k -u %s:%s -T %s --ssl-reqd --ftp-pasv %s/%s/' % (curl_path, user, passw, zephir_file, host, ftp_dir)
-        upload_to_z = subprocess.check_output(upload_cmd, shell=True)
-    except:
-        # Bail out if something goes wrong and return an error status.
+    if upload:
+        send_from = settings.EMORY_CONTACT
+        zephir_contact = settings.ZEPHIR_CONTACT
+
+        # Create the body of the email
+        body = 'file name=%s.xml\n' % job.name
+        body += 'file size=%s\n' % os.path.getsize(zephir_file)
+        body += 'record count=%s\n' % job.volume_count
+        body += 'notification email=%s' % send_from
+
+        # Send email to Zephir. Zephir contact is defined in the loacal settings.
+        send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
+
+        return 'waiting on zephir'
+
+    else:
         return 'zephir upload error'
-    # Create the body of the email
-    body = 'file name=%s.xml\n' % job.name
-    body += 'file size=%s\n' % os.path.getsize(zephir_file)
-    body += 'record count=%s\n' % job.volume_count
-    body += 'notification email=%s' % send_from
-
-    # Send email to Zephir. Zephir contact is defined in the loacal settings.
-    send_mail('File sent to Zephir', body, send_from, [zephir_contact], fail_silently=False)
-
-    return 'waiting on zephir'

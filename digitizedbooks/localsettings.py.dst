@@ -87,7 +87,7 @@ AUTH_LDAP_USER_ATTR_MAP = {
 # product owner's.
 
 # Where emails are sent when KDips are uploaded to Box.
-HATHITRUST_CONTACT = ''
+HATHITRUST_CONTACTS = []
 
 # Email address from which emails will be sent and the email address to which
 # Zephir is told to respond.

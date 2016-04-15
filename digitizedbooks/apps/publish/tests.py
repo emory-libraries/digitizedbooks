@@ -1,14 +1,16 @@
-import os
 from unittest import skip
 
 from eulxml.xmlmap import load_xmlobject_from_file
 
 from django.test import TestCase
 from digitizedbooks.apps.publish.management.commands import check_ht
+from django.core import management
 from digitizedbooks.apps.publish.models import Marc, KDip, Job, AlmaBibRecord
 from django.conf import settings
 import re
 import Utils
+import SendToZephir
+from os import system
 
 class TestKDip(TestCase):
 
@@ -170,3 +172,15 @@ class TestHTMarc(TestCase):
         # and make sure we did add the new one correctly, this is also check to
         # see if we put it in the right spot
         self.assertTrue('(GEU)Aleph000116142' in rec.field_035[-1].serialize())
+
+class TestZephir(TestCase):
+    def test_zephir_upload(self):
+        self.assertTrue(SendToZephir.upload_file('digitizedbooks/apps/publish/fixtures/pure-alma.xml'))
+        # Clean up the file we just uploadedhost = settings.ZEPHIR_FTP_HOST
+        host = settings.ZEPHIR_FTP_HOST
+        user = settings.ZEPHIR_LOGIN
+        passw = settings.ZEPHIR_PW
+        curl_path = settings.CURL_PATH
+        delete_cmd = "%s --ssl-reqd --ftp-pasv -u %s:%s %s -Q 'DELE testrecs/pure-alma.xml'" % (curl_path, user, passw, host)
+        system(delete_cmd)
+        # curl --ftp-ssl-reqd --ftp-pasv -u ht-emory:ht-emory:W2012-emory.v1 ftp://ftps.cdlib.org -Q 'DELE testrecs/pure-alma.xml' -v
