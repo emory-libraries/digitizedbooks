@@ -648,11 +648,11 @@ class Job(models.Model):
             from tasks import upload_for_ht
             upload_for_ht.delay(self)
 
-        # elif self.status == 'ready for zephir':
-        #     zephir_status = send_to_zephir(self)
-        #     # Set status
-        #     self.status = zephir_status
-
+        elif self.status == 'ready for zephir':
+            zephir_status = send_to_zephir(self)
+            # Set status
+            self.status = zephir_status
+            
         super(Job, self).save(*args, **kwargs)
 
 class ValidationError(models.Model):

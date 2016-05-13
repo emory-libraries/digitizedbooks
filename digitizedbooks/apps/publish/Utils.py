@@ -276,6 +276,7 @@ def create_yaml(kdip):
     """
 
     try:
+        #TODO have this use the `kdip.meta_yml` a
         remove('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id))
     except OSError:
         pass
@@ -294,11 +295,12 @@ def create_yaml(kdip):
     else:
         dt = ''
 
-    yaml_data = {}
-    yaml_data['capture_agent'] = capture_agent
-    yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
-    yaml_data['scanning_order'] = 'left-to-right'
-    yaml_data['reading_order'] = 'left-to-right'
-    yaml_data['capture_date']= dt.isoformat('T')
-    with open('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id), 'a') as outfile:
-        outfile.write(yaml.dump(yaml_data, default_flow_style=False))
+        yaml_data = {}
+        yaml_data['capture_agent'] = capture_agent
+        yaml_data['scanner_user'] = 'Emory University: LITS Digitization Services'
+        yaml_data['scanning_order'] = 'left-to-right'
+        yaml_data['reading_order'] = 'left-to-right'
+        yaml_data['capture_date']= dt.isoformat('T')
+        # TODO make this use `kdip.meta_yml` class atribute.
+        with open('%s/%s/meta.yml' % (kdip.path, kdip.kdip_id), 'a') as outfile:
+            yaml.dump(yaml_data, outfile, default_flow_style=False)

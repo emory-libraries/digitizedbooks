@@ -227,7 +227,7 @@ def upload_for_ht(job, count=1):
                         logger.error('Checksum check failes for %s.' %
                                      kdip.process_dir)
 
-            zipf = zipfile.ZipFile('{}.zip'.format(kdip.process_dir), 'w', allowZip64=True)
+            zipf = zipfile.ZipFile('{}.zip'.format(kdip.process_dir), 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
             os.chdir(kdip.process_dir)
             zipdir('.', zipf)
             zipf.close()
