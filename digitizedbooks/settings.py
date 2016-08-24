@@ -55,7 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'digitizedbooks.apps.publish',
     'djcelery',
-    'django_auth_ldap',
+    'shibboleth',
     'kombu.transport.django'
 )
 
@@ -64,6 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -138,9 +139,18 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 #     del sys
 
 AUTHENTICATION_BACKENDS = (
-    'django_auth_ldap.backend.LDAPBackend',
+    'shibboleth.backends.ShibbolethRemoteUserBackend',
     'django.contrib.auth.backends.ModelBackend',
 )
+
+SHIBBOLETH_ATTRIBUTE_MAP = {
+    "shib-user": (True, "username"),
+    "shib-given-name": (True, "first_name"),
+    "shib-sn": (True, "last_name"),
+    "shib-mail": (False, "email"),
+}
+
+LOGIN_URL = 'https://login.emory.edu/'
 
 BROKER_URL = 'django://'
 

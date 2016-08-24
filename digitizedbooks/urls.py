@@ -21,3 +21,7 @@ urlpatterns = [
 	url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+urlpatterns += [
+    url(r'^shib/', include('shibboleth.urls', namespace='shibboleth')),
+]
