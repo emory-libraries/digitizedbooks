@@ -56,7 +56,9 @@ INSTALLED_APPS = (
     'digitizedbooks.apps.publish',
     'djcelery',
     'shibboleth',
-    'kombu.transport.django'
+    'kombu.transport.django',
+    'django_extensions',
+    'debug_toolbar'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -65,10 +67,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
 )
 
 ROOT_URLCONF = 'digitizedbooks.urls'
@@ -129,25 +131,15 @@ STATIC_URL = '/static/'
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-# try:
-#     from localsettings import *
-# except ImportError:
-#     import sys
-#     print >>sys.stderr, '''Settings not defined. Please configure a version
-#         of localsettings.py for this site. See localsettings.py.dist for
-#         setup details.'''
-#     del sys
-
 AUTHENTICATION_BACKENDS = (
     'shibboleth.backends.ShibbolethRemoteUserBackend',
-    'django.contrib.auth.backends.ModelBackend',
 )
 
 SHIBBOLETH_ATTRIBUTE_MAP = {
-    "shib-user": (True, "username"),
-    "shib-given-name": (True, "first_name"),
-    "shib-sn": (True, "last_name"),
-    "shib-mail": (False, "email"),
+    "uid": (True, "username"),
+    "givenName": (True, "first_name"),
+    "sn": (True, "last_name"),
+    "mail": (False, "email"),
 }
 
 LOGIN_URL = 'https://login.emory.edu/'
