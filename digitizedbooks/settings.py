@@ -56,9 +56,7 @@ INSTALLED_APPS = (
     'digitizedbooks.apps.publish',
     'djcelery',
     'shibboleth',
-    'kombu.transport.django',
-    'django_extensions',
-    'debug_toolbar'
+    'kombu.transport.django'
 )
 
 MIDDLEWARE_CLASSES = (
