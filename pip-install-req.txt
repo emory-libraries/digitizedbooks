@@ -17,4 +17,4 @@ django-celery
 django-kombu
 celery
 pyopenssl==0.12.0
-git+https://github.com/Brown-University-Library/django-shibboleth-remoteuser.git
+git+https://github.com/Brown-University-Library/django-shibboleth-remoteuser.git@v0.7
