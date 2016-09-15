@@ -16,12 +16,13 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic.base import RedirectView
+from django.conf import settings
+from digitizedbooks.publish import views
 
 urlpatterns = [
-	url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
-    url(r'^admin/', include(admin.site.urls)),
-]
-
-urlpatterns += [
+    url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
+    url(r'login/$', views.login, name='login'),
+    url(r'logout/$', views.logout, name='logout'),
+    url(r'^admin/', include(admin.site.urls))
     url(r'^shib/', include('shibboleth.urls', namespace='shibboleth')),
 ]
