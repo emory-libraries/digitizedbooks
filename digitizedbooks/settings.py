@@ -140,7 +140,8 @@ SHIBBOLETH_ATTRIBUTE_MAP = {
     "mail": (False, "email"),
 }
 
-LOGIN_URL = 'https://login.emory.edu/'
+LOGIN_URL = 'https://testdigitizedbooks.library.emory.edu/Shibboleth.sso/Login/'
+SHIBBOLETH_LOGOUT_URL = 'https://login.emory.edu/idp/profile/Logout%s'
 
 BROKER_URL = 'django://'
 

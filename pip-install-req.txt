@@ -1,4 +1,4 @@
-Django==1.8
+Django==1.9
 django_auth_ldap
 mysql-python
 eulxml==0.20.3
