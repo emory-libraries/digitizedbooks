@@ -17,11 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic.base import RedirectView
 from django.conf import settings
-from digitizedbooks.apps.publish.views import Login
+from digitizedbooks.apps.publish.views import Forbidden
 
 urlpatterns = [
     url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
-    url(r'login/$', Login.as_view(), name='login'),
-    url(r'^shib/', include('shibboleth.urls', namespace='shibboleth'))
+    url(r'admin/login/$', Forbidden.as_view(), name='forbidden'),
+    url(r'^admin/logout/$', RedirectView.as_view(url='https://login.emory.edu/idp/profile/Logout'), name='logout'),
     url(r'^admin/', include(admin.site.urls)),
 ]

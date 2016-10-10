@@ -64,8 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-     'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
+    'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -140,7 +139,9 @@ SHIBBOLETH_ATTRIBUTE_MAP = {
     "mail": (False, "email"),
 }
 
+SHIBLOGIN_URL = 'Shibboleth.sso/Login/Shibboleth.sso/Login'
 LOGIN_URL = 'https://testdigitizedbooks.library.emory.edu/Shibboleth.sso/Login/'
+BROKER_URL = 'django://'
 SHIBBOLETH_LOGOUT_URL = 'https://login.emory.edu/idp/profile/Logout%s'
 
 BROKER_URL = 'django://'
