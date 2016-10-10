@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic.base import RedirectView
+from django.conf import settings
+from digitizedbooks.apps.publish.views import Forbidden
 
 urlpatterns = [
-	url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
+    url(r'^$', RedirectView.as_view(url='admin/', permanent=True), name='admin'),
+    url(r'admin/login/$', Forbidden.as_view(), name='forbidden'),
+    url(r'^admin/logout/$', RedirectView.as_view(url='https://login.emory.edu/idp/profile/Logout'), name='logout'),
     url(r'^admin/', include(admin.site.urls)),
 ]

@@ -14,7 +14,7 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 from __future__ import absolute_import
-__version_info__ = (1, 4, 6, 'prod')
+__version_info__ = (1, 4, 7, 'prod')
 
 # Dot-connect all but the last. Last is dash-connected if not None.
 __version__ = '.'.join([str(i) for i in __version_info__[:-1]])

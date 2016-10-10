@@ -1,4 +1,9 @@
+Release 1.4.7
+-------------
+* Changed authentication to Shibboleth.
+
 Release 1.4.6
+-------------
 * Now the zip actually gets compressed.
 * When generating the yaml file, we now stream the content to the file instead or writing to the file. This seems to have fixed the `!!!!` showing up at the end of the file.
 
