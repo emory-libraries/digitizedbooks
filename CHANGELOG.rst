@@ -1,3 +1,7 @@
+Release 1.4.7
+-------------
+* Changed authentication to Shibboleth.
+
 Release 1.4.6
 -------------
 * Now the zip actually gets compressed.
