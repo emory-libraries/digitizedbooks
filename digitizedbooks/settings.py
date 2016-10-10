@@ -55,7 +55,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'digitizedbooks.apps.publish',
     'djcelery',
-    'django_auth_ldap',
+    'shibboleth',
     'kombu.transport.django'
 )
 
@@ -64,7 +64,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'shibboleth.middleware.ShibbolethRemoteUserMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -128,19 +128,21 @@ STATIC_URL = '/static/'
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-# try:
-#     from localsettings import *
-# except ImportError:
-#     import sys
-#     print >>sys.stderr, '''Settings not defined. Please configure a version
-#         of localsettings.py for this site. See localsettings.py.dist for
-#         setup details.'''
-#     del sys
-
 AUTHENTICATION_BACKENDS = (
-    'django_auth_ldap.backend.LDAPBackend',
-    'django.contrib.auth.backends.ModelBackend',
+    'shibboleth.backends.ShibbolethRemoteUserBackend',
 )
+
+SHIBBOLETH_ATTRIBUTE_MAP = {
+    "uid": (True, "username"),
+    "givenName": (True, "first_name"),
+    "sn": (True, "last_name"),
+    "mail": (False, "email"),
+}
+
+SHIBLOGIN_URL = 'Shibboleth.sso/Login/Shibboleth.sso/Login'
+LOGIN_URL = 'https://testdigitizedbooks.library.emory.edu/Shibboleth.sso/Login/'
+BROKER_URL = 'django://'
+SHIBBOLETH_LOGOUT_URL = 'https://login.emory.edu/idp/profile/Logout%s'
 
 BROKER_URL = 'django://'
 
