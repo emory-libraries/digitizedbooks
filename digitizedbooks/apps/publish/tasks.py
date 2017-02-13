@@ -1,10 +1,10 @@
 from __future__ import absolute_import
 
 # Django stuff
-from digitizedbooks.celery import app
+#from digitizedbooks.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
-from digitizedbooks.apps.publish.models import Job, KDip, BoxToken
+import digitizedbooks.apps.publish.models
 # PIDMAN stuff
 from pidservices.clients import parse_ark
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
@@ -18,13 +18,14 @@ import zipfile
 import logging
 import traceback
 import requests
+import gc
 # A few specifics
 from hashlib import md5, sha1
 from box import refresh_v2_token, BoxClient, ItemAlreadyExists
 from time import sleep, strftime, gmtime
 # Exceptions
 from OpenSSL.SSL import SysCallError
-
+from django_rq import job
 # TODO maybe the HathiTrust package should be made into a class.
 
 def kdip_fail(job, kdip, error):
@@ -57,19 +58,22 @@ def parse_response(job, kdip, response, sha1):
         kdip_fail(job, kdip, reason)
 
 def upload_file(job, kdip):
+    '''
+    Method to package and upload KDip to Box.com
+    '''
     # TODO maybe use the refreshbox manage command. We would need to store
     # access_token in the db.
 
+    # Make sure we have a valid token for Box.com
     response = None
     try:
-        token = BoxToken.objects.get(id=1)
-        # TODO put this back the way it was
+        token = models.BoxToken.objects.get(id=1)
         refresh = token.refresh_token
         response = refresh_v2_token(token.client_id, token.client_secret, refresh)
         token.refresh_token = response['refresh_token']
         token.save()
     except Exception as e:
-        reason = 'box upload failed at due to token line 74, ' + str(response)
+        reason = 'box upload failed at due to token: ' + str(response)
         kdip_fail(job, kdip, reason)
 
     box_folder = settings.BOXFOLDER
@@ -78,6 +82,7 @@ def upload_file(job, kdip):
     htpackage_path = kdip.process_dir + '.zip'
     zipsize = os.path.getsize(htpackage_path)
 
+    # The Box API provides a way to check if we can upload a file before trying.
     check = requests.options('https://api.box.com/2.0/files/content', headers=box_client.credentials.headers, data='{"name": "%s", "parent": {"id": "%s"}, "size": "%s"}' % (htpackage, box_folder, zipsize))
     if (check.status_code != 200) and (check.status_code != 409):
         reason = "Preflight check failed for {} due to: {}".format(kdip.kdip_id, check.reason)
@@ -94,6 +99,8 @@ def upload_file(job, kdip):
     upload_response = None
     reupload = None
     try:
+        # Collect the garbage. This is really just here because we get `MemoryError`s from time to time.
+        gc.collect()
         # Upload file to Box
         upload_response = box_client.upload_file(htpackage, local_file, parent={'id': box_folder})
         # Send to function that does more checking and updatas object's status
@@ -150,7 +157,7 @@ def checksumverify(checksum, process_dir, file):
             return False
 
 
-@app.task
+@job
 def upload_for_ht(job, count=1):
     """
     Task to upload files to Box in the backgroud.
@@ -158,7 +165,8 @@ def upload_for_ht(job, count=1):
     logger = logging.getLogger(__name__)
     kdip_dir = settings.KDIP_DIR
 
-    for kdip in KDip.objects.filter(job__id=job.id).exclude(status='uploaded').exclude(status='upload_fail'):
+    for kdip in models.KDip.objects.filter(job__id=job.id).exclude(status='uploaded').exclude(status='upload_fail'):
+        # Only create a PID if it doesn't already have one
         if job.upload_attempts == 0:
             if not kdip.pid:
                 try:
@@ -191,6 +199,9 @@ def upload_for_ht(job, count=1):
             if not os.path.exists(kdip.process_dir):
                 os.makedirs(kdip.process_dir)
 
+            # Gather everything and write the file's checksum to a file via the
+            # `checksum` method. The copy the file to the temp directory.
+            # HT does not want sub directories in the package.
             tiffs = glob.glob('{}/{}/TIFF/*.tif'.format(kdip.path, kdip.kdip_id))
             for tiff in tiffs:
                 checksumfile(tiff, kdip.process_dir)
@@ -218,6 +229,9 @@ def upload_for_ht(job, count=1):
             shutil.copy(kdip.marc_xml, kdip.process_dir)
             shutil.copy(kdip.mets_xml, kdip.process_dir)
 
+            # After copying all the files to the tmp directory. We verify that
+            # the checksum matches the one we made before the move. This is done
+            # using the `verify()` method.
             with open('{}/checksum.md5'.format(kdip.process_dir)) as f:
                 content = f.readlines()
                 for line in content:
@@ -227,6 +241,7 @@ def upload_for_ht(job, count=1):
                         logger.error('Checksum check failes for %s.' %
                                      kdip.process_dir)
 
+            # Make the zip files
             zipf = zipfile.ZipFile('{}.zip'.format(kdip.process_dir), 'w', zipfile.ZIP_DEFLATED, allowZip64=True)
             os.chdir(kdip.process_dir)
             zipdir('.', zipf)
@@ -301,6 +316,6 @@ def upload_for_ht(job, count=1):
         logger.info(kdip_list)
         send_to = settings.HATHITRUST_CONTACTS + settings.EMORY_MANAGERS
         send_from = settings.EMORY_CONTACT
-        # TODO ENABLE THIS: send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n{}'.format(kdip_list), send_from, send_to, fail_silently=False)
+        send_mail('New Volumes from Emory have been uploaded', 'The following volumes have been uploaded and are ready:\n\n{}'.format(kdip_list), send_from, send_to, fail_silently=False)
     else:
         return upload_for_ht(job, count - 1)

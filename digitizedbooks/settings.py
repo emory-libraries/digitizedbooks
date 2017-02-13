@@ -54,9 +54,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'digitizedbooks.apps.publish',
-    'djcelery',
     'shibboleth',
-    'kombu.transport.django'
+    'django_rq'
 )
 
 MIDDLEWARE_CLASSES = (

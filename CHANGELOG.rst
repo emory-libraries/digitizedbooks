@@ -1,3 +1,10 @@
+Release 1.4.8
+-------------
+* Switched from Celery to Redis and RQ.
+* Bug fix to reset KDip status before trying upload to box.
+* Fixed bug where meta.yaml files were not being generated.
+* Added more documentation.
+
 Release 1.4.7
 -------------
 * Changed authentication to Shibboleth.

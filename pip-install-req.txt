@@ -7,14 +7,12 @@ python-dateutil
 python-magic
 pyasn1
 boto
-requests
 pillow==2.9.0
 pyyaml
 box.py
 git+https://github.com/emory-libraries/pidman-client.git@release-1.2.0
 django-admin-bootstrapped
-django-celery
-django-kombu
-celery
+requests==2.10
 pyopenssl==0.12.0
 git+https://github.com/Brown-University-Library/django-shibboleth-remoteuser.git@v0.7
+django_rq

@@ -39,9 +39,9 @@ import logging
 import yaml
 import glob
 from ftplib import FTP_TLS
-import celery
-
-#from digitizedbooks.publish.tasks import upload_for_ht
+#import celery
+import django_rq
+from digitizedbooks.apps.publish.tasks import upload_for_ht
 import subprocess
 
 logger = logging.getLogger(__name__)
@@ -527,8 +527,6 @@ class KDip(models.Model):
                     # is empty or missing.
                     note = bib_rec.note(k[:12]) or 'EnumCron not found'
 
-                    # bib_rec = Utils.create_ht_marc(bib_rec)
-
                     defaults={
                        'create_date': datetime.fromtimestamp(os.path.getctime('%s/%s' % (kdip_list[k], k))),
                         'note': note,
@@ -640,19 +638,25 @@ class Job(models.Model):
     def save(self, *args, **kwargs):
 
         if (self.status == 'ready for hathi') or (self.status == 'retry'):
+            if self.status == 'retry':
+                # Reset the status on the failed KDips so they will be retried.
+                for k in self.kdip_set.all():
+                    if k.status == 'upload_fail':
+                        k.status = 'new'
+                        k.save()
             # Send volumes to the upload task.
             self.status = 'uploading'
             # Add the celery task.
-            # At this point the work is passed off to celery and executes
+            # At this point the work is passed off to rq and executes
             # `tasks.py`
-            from tasks import upload_for_ht
-            upload_for_ht.delay(self)
+            queue = django_rq.get_queue()
+            queue.enqueue(upload_for_ht, self)
 
         elif self.status == 'ready for zephir':
             zephir_status = send_to_zephir(self)
             # Set status
             self.status = zephir_status
-            
+
         super(Job, self).save(*args, **kwargs)
 
 class ValidationError(models.Model):
