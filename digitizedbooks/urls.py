@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'admin/login/$', Forbidden.as_view(), name='forbidden'),
     url(r'^admin/logout/$', RedirectView.as_view(url='https://login.emory.edu/idp/profile/Logout'), name='logout'),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^django-rq/', include('django_rq.urls'))
 ]
