@@ -80,6 +80,13 @@ tables and initial data using::
   $ python manage.py syncdb
   $ python manage.py migrate
 
+Running Tests
+~~~~~~~~~~~~~
+Download this set of test KDips to the project's root directory.
+https://emory.box.com/s/q4086fm3gfrufv7ggqd90xj0fkolglou
+
+Make sure its path is ``kdips``.
+
 PID Manager
 ^^^^^^^^^^^
 Make sure the user for PIDMAN has the following rights:
@@ -87,6 +94,11 @@ Make sure the user for PIDMAN has the following rights:
 * Can add target
 * Can change pid
 * Can change target
+
+Background Jobs
+~~~~~~~~~~~~~~~
+
+``digitizedbooks/apps/publish/tasks.py`` uploads the packages to Box.com. It is started when a job is has a status of ``ready for hathi``.
 
 Cron jobs
 ~~~~~~~~~
