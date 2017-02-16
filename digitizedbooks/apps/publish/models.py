@@ -41,7 +41,6 @@ import glob
 from ftplib import FTP_TLS
 #import celery
 import django_rq
-from digitizedbooks.apps.publish.tasks import upload_for_ht
 import subprocess
 
 logger = logging.getLogger(__name__)
@@ -650,7 +649,7 @@ class Job(models.Model):
             # At this point the work is passed off to rq and executes
             # `tasks.py`
             from tasks import upload_for_ht
-            queue = django_rq.get_queue()
+            queue = django_rq.get_queue('high')
             queue.enqueue(upload_for_ht, self)
 
         elif self.status == 'ready for zephir':
@@ -669,3 +668,4 @@ class BoxToken(models.Model):
     refresh_token = models.CharField(max_length=200, blank=True)
     client_id = models.CharField(max_length=200, blank=True)
     client_secret = models.CharField(max_length=200, blank=True)
+(env) [digitizedbooks@wlibqas002 digitizedbooks]$
