@@ -1,3 +1,7 @@
+Release 1.4.9
+-------------
+* Fixed bad import
+
 Release 1.4.8
 -------------
 * Switched from Celery to Redis and RQ.
