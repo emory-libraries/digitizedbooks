@@ -4,7 +4,7 @@ from __future__ import absolute_import
 #from digitizedbooks.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
-import digitizedbooks.apps.publish.models
+import digitizedbooks.apps.publish.models as models
 # PIDMAN stuff
 from pidservices.clients import parse_ark
 from pidservices.djangowrapper.shortcuts import DjangoPidmanRestClient
@@ -157,7 +157,7 @@ def checksumverify(checksum, process_dir, file):
             return False
 
 
-@job
+@job('high')
 def upload_for_ht(job, count=1):
     """
     Task to upload files to Box in the backgroud.

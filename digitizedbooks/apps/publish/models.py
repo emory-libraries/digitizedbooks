@@ -649,6 +649,7 @@ class Job(models.Model):
             # Add the celery task.
             # At this point the work is passed off to rq and executes
             # `tasks.py`
+            from tasks import upload_for_ht
             queue = django_rq.get_queue()
             queue.enqueue(upload_for_ht, self)
 
