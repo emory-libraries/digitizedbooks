@@ -1,3 +1,13 @@
+'''
+Task to create the zip package for HT, upload it to Box and let HT know it is there.
+The package contains
+* All the tiff files
+* All the OCR text and xml files
+* METS
+* MARC
+* Yaml file with metadata
+* Text file listing all the checksums of all the files
+'''
 from __future__ import absolute_import
 
 # Django stuff
@@ -17,7 +27,7 @@ import glob
 import zipfile
 import logging
 import traceback
-import requests
+from requests import ConnectionError
 import gc
 # A few specifics
 from hashlib import md5, sha1
@@ -26,6 +36,8 @@ from time import sleep, strftime, gmtime
 # Exceptions
 from OpenSSL.SSL import SysCallError
 from django_rq import job
+from boxsdk import OAuth2, Client
+import boxsdk.exception as BoxException
 # TODO maybe the HathiTrust package should be made into a class.
 
 def kdip_fail(job, kdip, error):
@@ -33,20 +45,47 @@ def kdip_fail(job, kdip, error):
     now = strftime("%m-%d-%Y %H:%M", gmtime())
     kdip.status = 'upload_fail'
     # Only update the notes when if fails for the last time.
-    if (job.upload_attempts == 5) or ('ConnectinError' not in str(error)):
+    if (job.upload_attempts == 5) or ('ConnectionError' not in str(error)):
         kdip.notes = kdip.notes + '\n' if len(kdip.notes) > 0 else ''
         kdip.notes = kdip.notes + ' ' + now + ' ' + str(error)
     kdip.save()
 
+def refresh_client(job, kdip):
+    # TODO maybe use the refreshbox manage command. We would need to store
+    # access_token in the db.
+
+    # Make sure we have a valid token for Box.com
+    token = models.BoxToken.objects.get(id=1)
+    response = None
+    try:
+        # TODO Use the boxsdk for this
+        response = refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
+        token.refresh_token = response['refresh_token']
+        token.save()
+        oauth = OAuth2(
+          client_id=token.client_id,
+          client_secret=token.client_secret,
+          access_token=response['access_token'],
+          refresh_token=token.refresh_token
+        )
+        return Client(oauth)
+    except Exception as e:
+        reason = 'box upload failed at due to token: ' + str(response)
+        kdip_fail(job, kdip, reason)
+
 
 def parse_response(job, kdip, response, sha1):
     try:
-        if sha1 == response['file_version']['sha1']:
+        # FIXME When a new version of file is uploaded, the boxsdk File object
+        # returned does not have a attribute for `sha1`. There should be a way
+        # to get one. For now, we're just going to skip it. HT will complaine if
+        # something went wrong.
+        if hasattr(response, 'sha1') == False or sha1 == response.sha1:
             kdip.status = 'uploaded'
             kdip.save()
         else:
             reason = 'Upload to Box failed:\nChecksum mismatch\nExpected {}\nGot {}\n\n{}'.format(
-                sha1, response['file_version']['sha1'], response)
+                sha1, response.sha1, response)
             kdip.save()
             print ' ERROR: {}'.format(reason)
             kdip_fail(job, kdip, reason)
@@ -61,33 +100,11 @@ def upload_file(job, kdip):
     '''
     Method to package and upload KDip to Box.com
     '''
-    # TODO maybe use the refreshbox manage command. We would need to store
-    # access_token in the db.
-
-    # Make sure we have a valid token for Box.com
-    response = None
-    try:
-        token = models.BoxToken.objects.get(id=1)
-        refresh = token.refresh_token
-        response = refresh_v2_token(token.client_id, token.client_secret, refresh)
-        token.refresh_token = response['refresh_token']
-        token.save()
-    except Exception as e:
-        reason = 'box upload failed at due to token: ' + str(response)
-        kdip_fail(job, kdip, reason)
-
-    box_folder = settings.BOXFOLDER
-    box_client = BoxClient(response['access_token'])
+    box_client = refresh_client(job, kdip)
+    box_folder = box_client.folder(folder_id=settings.BOXFOLDER)
     htpackage = kdip.kdip_id + '.zip'
     htpackage_path = kdip.process_dir + '.zip'
     zipsize = os.path.getsize(htpackage_path)
-
-    # The Box API provides a way to check if we can upload a file before trying.
-    check = requests.options('https://api.box.com/2.0/files/content', headers=box_client.credentials.headers, data='{"name": "%s", "parent": {"id": "%s"}, "size": "%s"}' % (htpackage, box_folder, zipsize))
-    if (check.status_code != 200) and (check.status_code != 409):
-        reason = "Preflight check failed for {} due to: {}".format(kdip.kdip_id, check.reason)
-        kdip_fail(job, kdip, reason)
-        return True
 
     zip_sha1 = sha1()
     local_file = open(htpackage_path, 'rb')
@@ -95,6 +112,7 @@ def upload_file(job, kdip):
     zip_sha1.update(local_file.read())
     # Move the file back to the begining.
     local_file.seek(0)
+    local_file.close()
 
     upload_response = None
     reupload = None
@@ -102,31 +120,37 @@ def upload_file(job, kdip):
         # Collect the garbage. This is really just here because we get `MemoryError`s from time to time.
         gc.collect()
         # Upload file to Box
-        upload_response = box_client.upload_file(htpackage, local_file, parent={'id': box_folder})
+        upload_response = box_folder.upload(
+            htpackage_path,
+            preflight_check=True,
+            preflight_expected_size=zipsize,
+            upload_using_accelerator=True
+        )
         # Send to function that does more checking and updatas object's status
         parse_response(job, kdip, upload_response, zip_sha1.hexdigest())
 
-    except ItemAlreadyExists:
-        # This happens if the file already exists in Box
+    except BoxException.BoxAPIException as e:
+        # The API throws and exception with a status of 409 if
+        # the file has already been uploaded.
         # Updateing the file is a different API call
-
-        # Get the response from the first try
-        error_response = json.loads(str(sys.exc_info()[1]))
-
-        # Reopen local file
-        with open('{}.zip'.format(kdip.process_dir), 'rb') as updated_file:
-            # Get the `file_id` from the response
-            file_id = error_response['context_info']['conflicts']['id']
-            # Overwrite the file in Box
-            reupload = box_client.overwrite_file(file_id, updated_file)
-            # And send to the function that deals with what we got
+        if hasattr(e, 'status') and e.status == 409:
+            existing = refresh_client(job, kdip).file(file_id=e.context_info['conflicts']['id'])
+            reupload = existing.update_contents(
+                htpackage_path,
+                preflight_check=True,
+                preflight_expected_size=zipsize,
+                upload_using_accelerator=True
+            )
             parse_response(job, kdip, reupload, zip_sha1.hexdigest())
+
+    except ConnectionError:
+        sleep(30)
+        upload_file(job, kdip)
+
     except Exception as e:
         trace = traceback.format_exc()
-        reason = 'box upload failed at line 108: ' + trace
+        reason = 'box upload failed: ' + trace
         kdip_fail(job, kdip, reason)
-
-    local_file.close()
 
 def zipdir(path, zip):
     """
@@ -259,7 +283,7 @@ def upload_for_ht(job, count=1):
                 # Don't upload if no pid
                 upload_file(job, kdip) if kdip.pid else kdip_fail(job, kdip, '{} has no pid.'.format(kdip.kdip_id))
                 break
-            except requests.ConnectionError:
+            except ConnectionError:
                 trace = traceback.format_exc()
                 attempts += 1
                 sleep(5)
