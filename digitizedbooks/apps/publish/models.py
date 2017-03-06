@@ -668,4 +668,3 @@ class BoxToken(models.Model):
     refresh_token = models.CharField(max_length=200, blank=True)
     client_id = models.CharField(max_length=200, blank=True)
     client_secret = models.CharField(max_length=200, blank=True)
-(env) [digitizedbooks@wlibqas002 digitizedbooks]$
