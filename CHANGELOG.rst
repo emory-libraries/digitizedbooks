@@ -1,4 +1,4 @@
-Release 1.5.10
+Release 1.4.10
 --------------
 * Now using the official Python SDK from Box for uploads.
 * Added setting to show RQ link on Admin home page.
