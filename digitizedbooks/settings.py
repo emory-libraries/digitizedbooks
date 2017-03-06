@@ -15,6 +15,8 @@ import os
 os.environ['HTTP_PROXY'] = 'http://skoda.library.emory.edu:3128/'
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Shows link to RQ queues.
+RQ_SHOW_ADMIN_LINK = True
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -23,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '$xa!_rvu_d$et^ierd^=)9$hmvv1&$vu+i+9#o-x%)p(b@&1bb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
