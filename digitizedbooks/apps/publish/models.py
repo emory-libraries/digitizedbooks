@@ -666,5 +666,6 @@ class ValidationError(models.Model):
 
 class BoxToken(models.Model):
     refresh_token = models.CharField(max_length=200, blank=True)
+    access_token = models.CharField(max_length=200, blank=True)
     client_id = models.CharField(max_length=200, blank=True)
     client_secret = models.CharField(max_length=200, blank=True)
