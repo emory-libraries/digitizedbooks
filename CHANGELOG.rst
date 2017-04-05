@@ -1,3 +1,7 @@
+Release 1.4.11
+--------------
+* Switching from Oauth2 to JWT.
+
 Release 1.4.10
 --------------
 * Now using the official Python SDK from Box for uploads.
