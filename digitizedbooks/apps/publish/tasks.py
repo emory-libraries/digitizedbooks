@@ -11,7 +11,6 @@ The package contains
 from __future__ import absolute_import
 
 # Django stuff
-#from digitizedbooks.celery import app
 from django.conf import settings
 from django.core.mail import send_mail
 import digitizedbooks.apps.publish.models as models
@@ -36,7 +35,7 @@ from time import sleep, strftime, gmtime
 # Exceptions
 from OpenSSL.SSL import SysCallError
 from django_rq import job
-from boxsdk import OAuth2, Client
+from boxsdk import OAuth2, Client, JWTAuth
 import boxsdk.exception as BoxException
 # TODO maybe the HathiTrust package should be made into a class.
 
@@ -58,16 +57,14 @@ def refresh_client(job, kdip):
     token = models.BoxToken.objects.get(id=1)
     response = None
     try:
-        # TODO Use the boxsdk for this
-        response = refresh_v2_token(token.client_id, token.client_secret, token.refresh_token)
-        token.refresh_token = response['refresh_token']
-        token.save()
-        oauth = OAuth2(
-          client_id=token.client_id,
-          client_secret=token.client_secret,
-          access_token=response['access_token'],
-          refresh_token=token.refresh_token
-        )
+        auth = JWTAuth(
+            client_id=token.client_id,
+            client_secret=token.client_secret,
+            enterprise_id='None',
+            user=settings.BOXUSER,
+            jwt_key_id=settings.JWTID,
+            rsa_private_key_file_sys_path=settings.JWTPATH)
+
         return Client(oauth)
     except Exception as e:
         reason = 'box upload failed at due to token: ' + str(response)
