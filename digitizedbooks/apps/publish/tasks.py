@@ -57,7 +57,7 @@ def refresh_client(job, kdip):
     token = models.BoxToken.objects.get(id=1)
     response = None
     try:
-        auth = JWTAuth(
+        oauth = JWTAuth(
             client_id=token.client_id,
             client_secret=token.client_secret,
             enterprise_id='None',
