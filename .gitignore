@@ -10,3 +10,5 @@ test-results
 digitizedbooks/digbooks.log
 kdips
 nohup.out
+CERT.PEM
+digitizedbooks/keys.py
