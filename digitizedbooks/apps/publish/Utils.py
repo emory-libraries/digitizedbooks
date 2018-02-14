@@ -150,7 +150,7 @@ def load_bib_record(kdip):
         barcode = kdip.kdip_id
 
     get_bib_rec = requests.get( \
-        'http://discovere.emory.edu:8991/cgi-bin/get_alma_record?item_id=', \
+        'https://kleene.library.emory.edu/cgi-bin/get_alma_record?item_id=', \
         params={'item_id': barcode})
 
     return load_xmlobject_from_string( \
