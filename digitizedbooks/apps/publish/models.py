@@ -635,6 +635,8 @@ class Job(models.Model):
         ordering = ['-pk']
 
     def save(self, *args, **kwargs):
+        if self.name:
+            self.name = self.name.strip()
 
         if (self.status == 'ready for hathi') or (self.status == 'retry'):
             if self.status == 'retry':
