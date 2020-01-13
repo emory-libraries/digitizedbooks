@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>CHANGE LOG &#8212; Digitized Books 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="DEPLOY NOTES" href="deploynotes.html" />
+    <link rel="prev" title="README" href="readme.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="deploynotes.html" title="DEPLOY NOTES"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="README"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="change-log">
+<h1>CHANGE LOG<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="release-1-4-12">
+<h2>Release 1.4.12<a class="headerlink" href="#release-1-4-12" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Switching from discovere to kleene host.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-11">
+<h2>Release 1.4.11<a class="headerlink" href="#release-1-4-11" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Switching from Oauth2 to JWT.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-10">
+<h2>Release 1.4.10<a class="headerlink" href="#release-1-4-10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Now using the official Python SDK from Box for uploads.</li>
+<li>Added setting to show RQ link on Admin home page.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-9">
+<h2>Release 1.4.9<a class="headerlink" href="#release-1-4-9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Fixed bad import</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-8">
+<h2>Release 1.4.8<a class="headerlink" href="#release-1-4-8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Switched from Celery to Redis and RQ.</li>
+<li>Bug fix to reset KDip status before trying upload to box.</li>
+<li>Fixed bug where meta.yaml files were not being generated.</li>
+<li>Added more documentation.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-7">
+<h2>Release 1.4.7<a class="headerlink" href="#release-1-4-7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Changed authentication to Shibboleth.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-6">
+<h2>Release 1.4.6<a class="headerlink" href="#release-1-4-6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Now the zip actually gets compressed.</li>
+<li>When generating the yaml file, we now stream the content to the file instead or writing to the file. This seems to have fixed the <cite>!!!!</cite> showing up at the end of the file.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-5">
+<h2>Release 1.4.5<a class="headerlink" href="#release-1-4-5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Added better error handling for uploads to Box.</li>
+<li>Added setting for <cite>EMORY_MANAGERS</cite> so multiple emory people can receive email notifications.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-4">
+<h2>Release 1.4.4<a class="headerlink" href="#release-1-4-4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Updated the Zephir download to comply with their new security. Release 1.4.1 only updated it for upload.</li>
+</ul>
+</div>
+<div class="section" id="release-1-4-3">
+<h2>Release 1.4.3<a class="headerlink" href="#release-1-4-3" title="Permalink to this headline">¶</a></h2>
+<p>Moved the writing MARC record to disk into the function that prepares the MARC so it will be regenerated when a KDip is reprocessed.</p>
+</div>
+<div class="section" id="release-1-4-2">
+<h2>Release 1.4.2<a class="headerlink" href="#release-1-4-2" title="Permalink to this headline">¶</a></h2>
+<p>Fix to make Alma MARC records comply with HathiTrust.
+* As a user, I want the marcxml record submitted to HathiTrust to contain only one 035$a field containing a valid OCLC number, so that the record will validate when uploaded to Zephir</p>
+</div>
+<div class="section" id="release-1-4-1">
+<h2>Release 1.4.1<a class="headerlink" href="#release-1-4-1" title="Permalink to this headline">¶</a></h2>
+<p>Updates:
+* Changes the 035 filed in the MARC XML to be compatible with HathiTrust.
+* Updated the Zephir to comply with their new security.
+* Handles pure Alma records with no reference to Aleph.</p>
+<p>Bug fixes:
+* Now pulling MARC record from Alma for real.</p>
+</div>
+<div class="section" id="release-1-4">
+<h2>Release 1.4<a class="headerlink" href="#release-1-4" title="Permalink to this headline">¶</a></h2>
+<p>Features:
+* As a user, when I open a Job, I&#8217;d like to see how many Kdips are in that job, so that I know when it&#8217;s the right size to send to Hathi Trust
+* As a user I want the OCLC number recorded and displayed, so that I can tell which KDip volumes belong to the same work
+* As a user, I want to be able to see Jobs and Kdips (by default) sorted with the most recent record at the top of the screen, so that I don&#8217;t have to constantly scroll down
+* As a user I want all relevant 856 fields to be added to the MARC record once a KDip has been published to HathiTrust
+* As a library patron searching in EUCLID or DiscoverE, when i find a digitized volume  that has been published to HathiTrust, I want to see a clickable link in so I can view the item in HathiTrust.</p>
+<p>Bug fixes:
+* The meta.yml file should only list one &#8220;capture-date&#8221;</p>
+<p>Other:
+* Switched from Aleph to Alma.</p>
+</div>
+<div class="section" id="release-1-3">
+<h2>Release 1.3<a class="headerlink" href="#release-1-3" title="Permalink to this headline">¶</a></h2>
+<p>Features:
+* As a user, once Zephir produces a report that the marc records for a Job have been processed, I want the application to automatically set the Job to &#8220;Ready for Hathi&#8221;, so that I don&#8217;t have to do it manually.
+* As a user I want any and all staged digitized volumes to have a corresponding KDip record associated with it, so that no staged volumes end up getting &#8220;lost&#8221;.
+* As a user, once all the kdips in a job have been uploaded to MBox, I want an email automatically sent to Hathi Trust staff, so that the uploaded kdips will be processed into HT.</p>
+<p>Bug fixes:
+* Finally got the reprocessing of an individual KDip wroking reliably.
+* Box.com changed the JSON response and the code was not able to find the checksum of the uploaded file and makring the job as <cite>Failed to Upload</cite>. The checksum had been called <cite>zip_sha1</cite> in the JSON but is now just <cite>sha1</cite>.</p>
+<p>Improvements:
+* The name of a directory to skip, eg <cite>test</cite> is now configurable instead of hardcoded.
+* More tests.</p>
+</div>
+<div class="section" id="release-1-2-2">
+<h2>Release 1.2.2<a class="headerlink" href="#release-1-2-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Started getting an error for <cite>datetime.strptime</cite> that it was getting a tuple and not a string from the <cite>DateTime</cite> tiff tag. This release fixes that by converting the found DateTime to a string.</li>
+</ul>
+</div>
+<div class="section" id="release-1-2-1">
+<h2>Release 1.2.1<a class="headerlink" href="#release-1-2-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Upgrading from LIMB 2.x to 3.3 has broke the METS validation routine. The xpath for <cite>techmd</cite> was adjusted.</li>
+<li>Automated email to notify HT of new deposits was re-enabled.</li>
+</ul>
+</div>
+<div class="section" id="release-1-2">
+<h2>Release 1.2<a class="headerlink" href="#release-1-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Upgrade to Django 1.8</li>
+<li>As a DigitizedBooks user, I want to know that a volume has successfully been published at HathiTrust, and to free up disk space in the staging area, so that the PID Manager is updated with valid target URLs, and so that we free up expensive disk space.</li>
+<li>As a DigitizedBooks user, I want to be able to flag a Digitized Books record to show that it has been uploaded to the Internet Archive, and to note the IA record ID, so that I may perform such submissions &#8220;out of band&#8221; of the scope of the current DigitizedBooks release, keeping track of them now in case we advance to the 2.0 release.</li>
+<li>An application&#8217;s copyright validation is able to handle &#8220;uncertain&#8221; dates in different date types or more accurate validation.</li>
+<li>As a library patron searching in EUCLID or DiscoverE, when i find a digitized volume  that has been published to HathiTrust, I want to see a clickable link in so I can view the item in HathiTrust.</li>
+<li>As a user I want to be able to verify a KDip&#8217;s MARC record as been updated with the HathiTrust version so I don&#8217;t have to check manually.</li>
+</ul>
+</div>
+<div class="section" id="release-1-0-5">
+<h2>Release 1.0.5<a class="headerlink" href="#release-1-0-5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>An application&#8217;s copyright validation is able to handle &#8220;uncertain&#8221; dates and continuing resources</li>
+<li>An application&#8217;s copyright validation is able to handle &#8220;uncertain&#8221; dates in different date types or more accurate validation.</li>
+<li>An application&#8217;s copyright validation is able to handle &#8220;uncertain&#8221; dates found in enumcron for more accurate validation.</li>
+<li>As a DigitizedBooks user, I want to be able to write miscellaneous notes about a KDip, so that I can keep track of clean up tasks that I need to perform.</li>
+</ul>
+</div>
+<div class="section" id="release-1-0-4">
+<h2>Release 1.0.4<a class="headerlink" href="#release-1-0-4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>As an admin I want to want to receive an error report via email of validation failures so they can be fixed in a timely manner.</li>
+<li>When an admin process a job for Zephir, an email is sent to Zephir with information about the bundled marcxml file to meet Zephir&#8217;s submission requirements.</li>
+<li>When an admin process a job for Zephir, all the marcxml records and bundled into one file to meet Zephir&#8217;s submission requirements.</li>
+<li>When an admin processes a job for Zephir, bundled marcxml file will be ftp&#8217;d to Zephir so they can process it.</li>
+</ul>
+</div>
+<div class="section" id="release-1-0-3">
+<h2>Release 1.0.3<a class="headerlink" href="#release-1-0-3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>As an user, I want a Job that is set to &#8220;Ready to Process&#8221; to continue processing in the background when I close the web browser, so that I have more freedom to do other things with my computer (such as close my laptop and take it home).</li>
+</ul>
+</div>
+<div class="section" id="release-1-0-2">
+<h2>Release 1.0.2<a class="headerlink" href="#release-1-0-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>As an admin I want to see the number of volumes in a job so I can have an idea of how big it is.</li>
+<li>When an application finds that a KDip is invalid, it records all the reasons for failure, not just the first one encountered.</li>
+</ul>
+</div>
+<div class="section" id="release-1-0-1-hathi-trust-basic-ingest-tweaked">
+<h2>Release 1.0.1 - Hathi Trust Basic Ingest (Tweaked)<a class="headerlink" href="#release-1-0-1-hathi-trust-basic-ingest-tweaked" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>As a user I want to filter KDIPs in the admin interface by status and job so I can find them more easlily.</li>
+<li>An application, in its KDip brief results display, shows the columns &#8220;KDip id&#8221;, &#8220;Status&#8221;, &#8220;Reason&#8221;, &#8220;EnumCron&#8221;, &#8220;Job&#8221;.</li>
+<li>An application, when retrieving MARCXML for a digitized volume, keeps only one 999 field (the one containing the matching barcode).</li>
+<li>An application is able to handle volumes whose directory names are &#8216;barcode-whatever&#8217; (32 char max).</li>
+<li>A user is able to add/edit enumeration/chronology information for a digitized volume, and have that information saved to the MARCXML 999|a.</li>
+<li>After creating an ARK for a digitized volume, an application stores the value of the PID in its database.</li>
+<li>An application uses &#8216;barcode-whatever&#8217; as the SIP identifier.</li>
+<li>An application checks to see if a volume&#8217;s path has changed and updates if it has so database can stay in sync with the file system.</li>
+<li>When an admin processes a job for HT injestion the SIP is crated in a &#8220;HT&#8221; directory so they can be more easily managed and cleaned up.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="relase-1-0-0-hathi-trust-basic-ingest">
+<h2>Relase 1.0.0 - Hathi Trust Basic Ingest<a class="headerlink" href="#relase-1-0-0-hathi-trust-basic-ingest" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>All the basic validation and packaging steps for Hathi Trust ingest.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="release-0-1-0-initial-prototype">
+<h2>Release 0.1.0 - Initial Prototype<a class="headerlink" href="#release-0-1-0-initial-prototype" title="Permalink to this headline">¶</a></h2>
+<p>First working prototype.</p>
+<p><strong>Internal prototype: Not for production release</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>An application administrator can run a script that uploads a file to Internet Archive.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CHANGE LOG</a><ul>
+<li><a class="reference internal" href="#release-1-4-12">Release 1.4.12</a></li>
+<li><a class="reference internal" href="#release-1-4-11">Release 1.4.11</a></li>
+<li><a class="reference internal" href="#release-1-4-10">Release 1.4.10</a></li>
+<li><a class="reference internal" href="#release-1-4-9">Release 1.4.9</a></li>
+<li><a class="reference internal" href="#release-1-4-8">Release 1.4.8</a></li>
+<li><a class="reference internal" href="#release-1-4-7">Release 1.4.7</a></li>
+<li><a class="reference internal" href="#release-1-4-6">Release 1.4.6</a></li>
+<li><a class="reference internal" href="#release-1-4-5">Release 1.4.5</a></li>
+<li><a class="reference internal" href="#release-1-4-4">Release 1.4.4</a></li>
+<li><a class="reference internal" href="#release-1-4-3">Release 1.4.3</a></li>
+<li><a class="reference internal" href="#release-1-4-2">Release 1.4.2</a></li>
+<li><a class="reference internal" href="#release-1-4-1">Release 1.4.1</a></li>
+<li><a class="reference internal" href="#release-1-4">Release 1.4</a></li>
+<li><a class="reference internal" href="#release-1-3">Release 1.3</a></li>
+<li><a class="reference internal" href="#release-1-2-2">Release 1.2.2</a></li>
+<li><a class="reference internal" href="#release-1-2-1">Release 1.2.1</a></li>
+<li><a class="reference internal" href="#release-1-2">Release 1.2</a></li>
+<li><a class="reference internal" href="#release-1-0-5">Release 1.0.5</a></li>
+<li><a class="reference internal" href="#release-1-0-4">Release 1.0.4</a></li>
+<li><a class="reference internal" href="#release-1-0-3">Release 1.0.3</a></li>
+<li><a class="reference internal" href="#release-1-0-2">Release 1.0.2</a></li>
+<li><a class="reference internal" href="#release-1-0-1-hathi-trust-basic-ingest-tweaked">Release 1.0.1 - Hathi Trust Basic Ingest (Tweaked)</a></li>
+<li><a class="reference internal" href="#relase-1-0-0-hathi-trust-basic-ingest">Relase 1.0.0 - Hathi Trust Basic Ingest</a></li>
+<li><a class="reference internal" href="#release-0-1-0-initial-prototype">Release 0.1.0 - Initial Prototype</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="readme.html"
+                        title="previous chapter">README</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="deploynotes.html"
+                        title="next chapter">DEPLOY NOTES</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/changelog.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="deploynotes.html" title="DEPLOY NOTES"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="README"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, EUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+    </div>
+  </body>
+</html>

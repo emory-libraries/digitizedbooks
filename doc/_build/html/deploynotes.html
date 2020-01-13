@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DEPLOY NOTES &#8212; Digitized Books 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="digitizedbooks Code Documentation" href="apidocs.html" />
+    <link rel="prev" title="CHANGE LOG" href="changelog.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="apidocs.html" title="digitizedbooks Code Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="CHANGE LOG"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="deploy-notes">
+<h1>DEPLOY NOTES<a class="headerlink" href="#deploy-notes" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="installation">
+<span id="deploynotes"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="software-dependencies">
+<h3>Software dependencies<a class="headerlink" href="#software-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>We recommend the use of <a class="reference external" href="http://pip.openplans.org/">pip</a> and <a class="reference external" href="http://virtualenv.openplans.org/">virtualenv</a> for environment and dependency management
+in this and other Python projects. If you don&#8217;t have them installed we
+recommend <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">easy_install</span> <span class="pre">pip</span></code> and then <code class="docutils literal"><span class="pre">sudo</span> <span class="pre">pip</span> <span class="pre">install</span> <span class="pre">virtualenv</span></code>.</p>
+<div class="section" id="configure-the-environment">
+<h4>Configure the environment<a class="headerlink" href="#configure-the-environment" title="Permalink to this headline">¶</a></h4>
+<p>When first installing this project, you&#8217;ll need to create a virtual environment
+for it. The environment is just a directory. You can store it anywhere you
+like; in this documentation it&#8217;ll live right next to the source. For instance,
+if the source is in <code class="docutils literal"><span class="pre">/home/httpd/digitizedbooks/src</span></code>, consider creating an
+environment in <code class="docutils literal"><span class="pre">/home/httpd/digitizedbooks/env</span></code>. To create such an environment, su
+into apache&#8217;s user and:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ virtualenv --no-site-packages /home/httpd/digitizedbooks/env
+</pre></div>
+</div>
+<p>This creates a new virtual environment in that directory. Source the activation
+file to invoke the virtual environment (requires that you use the bash shell):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ . /home/httpd/digitizedbooks/env/bin/activate
+</pre></div>
+</div>
+<p>Once the environment has been activated inside a shell, Python programs
+spawned from that shell will read their environment only from this
+directory, not from the system-wide site packages. Installations will
+correspondingly be installed into this environment.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Installation instructions and upgrade notes below assume that
+you are already in an activated shell.</p>
+</div>
+</div>
+<div class="section" id="install-python-dependencies">
+<h4>Install python dependencies<a class="headerlink" href="#install-python-dependencies" title="Permalink to this headline">¶</a></h4>
+<p>DigitizedBooks depends on several python libraries. The installation is mostly
+automated, and will print status messages as packages are installed. If there
+are any errors, pip should announce them very loudly.</p>
+<p>To install python dependencies, cd into the repository checkout and:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install -r pip-install-req.txt
+</pre></div>
+</div>
+<p>If you are a developer or are installing to a continuous integration server
+where you plan to run unit tests, code coverage reports, or build sphinx
+documentation, you probably will also want to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ pip install -r pip-dev-req.txt
+</pre></div>
+</div>
+<p>After this step, your virtual environment should contain all of the
+needed dependencies.</p>
+</div>
+</div>
+<div class="section" id="install-the-application">
+<h3>Install the application<a class="headerlink" href="#install-the-application" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="apache">
+<h4>Apache<a class="headerlink" href="#apache" title="Permalink to this headline">¶</a></h4>
+<p>After installing dependencies, copy and edit the wsgi and apache
+configuration files in src/apache inside the source code checkout. Both may
+require some tweaking for paths and other system details.</p>
+</div>
+<div class="section" id="configuration">
+<h4>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h4>
+<p>Configure application settings by copying <code class="docutils literal"><span class="pre">localsettings.py.dist</span></code> to
+<code class="docutils literal"><span class="pre">localsettings.py</span></code> and editing for local settings.</p>
+<p>After configuring all settings, initialize the db with all needed
+tables and initial data using:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ python manage.py syncdb
+$ python manage.py migrate
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-tests">
+<h4>Running Tests<a class="headerlink" href="#running-tests" title="Permalink to this headline">¶</a></h4>
+<p>Download this set of test KDips to the project&#8217;s root directory.
+<a class="reference external" href="https://emory.box.com/s/q4086fm3gfrufv7ggqd90xj0fkolglou">https://emory.box.com/s/q4086fm3gfrufv7ggqd90xj0fkolglou</a></p>
+<p>Make sure its path is <code class="docutils literal"><span class="pre">kdips</span></code>.</p>
+<div class="section" id="pid-manager">
+<h5>PID Manager<a class="headerlink" href="#pid-manager" title="Permalink to this headline">¶</a></h5>
+<p>Make sure the user for PIDMAN has the following rights:
+* Can add pid
+* Can add target
+* Can change pid
+* Can change target</p>
+</div>
+</div>
+<div class="section" id="background-jobs">
+<h4>Background Jobs<a class="headerlink" href="#background-jobs" title="Permalink to this headline">¶</a></h4>
+<p><code class="docutils literal"><span class="pre">digitizedbooks/apps/publish/tasks.py</span></code> uploads the packages to Box.com. It is started when a job is has a status of <code class="docutils literal"><span class="pre">ready</span> <span class="pre">for</span> <span class="pre">hathi</span></code>.</p>
+</div>
+<div class="section" id="cron-jobs">
+<h4>Cron jobs<a class="headerlink" href="#cron-jobs" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="session-cleanup">
+<h5>Session cleanup<a class="headerlink" href="#session-cleanup" title="Permalink to this headline">¶</a></h5>
+<p>The application uses database-backed sessions. Django recommends
+periodically <a class="reference external" href="https://docs.djangoproject.com/en/1.3/topics/http/sessions/#clearing-the-session-table">clearing the session table</a>
+in this configuration. To do this, set up a cron job to run the following
+command periodically from within the application&#8217;s virtual environment:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ manage.py cleanup
+</pre></div>
+</div>
+<p>This script removes any expired sessions from the database. We recommend
+doing this about every week, though exact timing depends on usage patterns
+and administrative discretion.</p>
+<p>This command should be ran once a week to renew the Box API key so it does not expire.</p>
+<blockquote>
+<div>$ manage.py boxrefresh</div></blockquote>
+<p>This command should be ran nightly (or very early in the morning) to load any new KDips.</p>
+<blockquote>
+<div>$ manage.py loadKDips</div></blockquote>
+<p>This command should run daily to check if submitted KDips have been made live on HathiTrust</p>
+<blockquote>
+<div>$ manage.py check_ht</div></blockquote>
+<p>This command should run daily to check if submitted KDips that are live on HathiTrust have udated MARC records.</p>
+<blockquote>
+<div>$ manage.py check_al</div></blockquote>
+<p>This command should run daily to check if all the KDips in a submitted job are live on HathiTrust.</p>
+<blockquote>
+<div>$ manage.py update_job_status</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="local-settings">
+<h2>Local Settings<a class="headerlink" href="#local-settings" title="Permalink to this headline">¶</a></h2>
+<p>There a many special localsettings. See digizedbooks/localsettings.py.dst for notes.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">DEPLOY NOTES</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a><ul>
+<li><a class="reference internal" href="#software-dependencies">Software dependencies</a><ul>
+<li><a class="reference internal" href="#configure-the-environment">Configure the environment</a></li>
+<li><a class="reference internal" href="#install-python-dependencies">Install python dependencies</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#install-the-application">Install the application</a><ul>
+<li><a class="reference internal" href="#apache">Apache</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#running-tests">Running Tests</a><ul>
+<li><a class="reference internal" href="#pid-manager">PID Manager</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#background-jobs">Background Jobs</a></li>
+<li><a class="reference internal" href="#cron-jobs">Cron jobs</a><ul>
+<li><a class="reference internal" href="#session-cleanup">Session cleanup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#local-settings">Local Settings</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="changelog.html"
+                        title="previous chapter">CHANGE LOG</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="apidocs.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">digitizedbooks</span></code> Code Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/deploynotes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="apidocs.html" title="digitizedbooks Code Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="changelog.html" title="CHANGE LOG"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, EUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+    </div>
+  </body>
+</html>

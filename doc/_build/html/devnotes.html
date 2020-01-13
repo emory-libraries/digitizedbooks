@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Notes For Developers &#8212; Digitized Books 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="digitizedbooks Code Documentation" href="apidocs.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="apidocs.html" title="digitizedbooks Code Documentation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="notes-for-developers">
+<h1>Notes For Developers<a class="headerlink" href="#notes-for-developers" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-things-that-come-up">
+<h2>General things that come up<a class="headerlink" href="#general-things-that-come-up" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="a-request-is-made-to-run-the-load-command">
+<h3>A request is made to run the load command<a class="headerlink" href="#a-request-is-made-to-run-the-load-command" title="Permalink to this headline">¶</a></h3>
+<p>As the digitizedbooks user and in the virtrualenv run the <cite>loadKDips</cite> manage command. You will likely want to run it in a screen session or nohup:</p>
+<p><code class="docutils literal"><span class="pre">`python</span> <span class="pre">manage.py</span> <span class="pre">loadKDips`</span></code></p>
+</div>
+<div class="section" id="upload-stuck">
+<h3>Upload Stuck<a class="headerlink" href="#upload-stuck" title="Permalink to this headline">¶</a></h3>
+<p>Hopefully there will be something the log <cite>/mnt/lsdi2/ftp/digitizedbooks.log</cite> or the <cite>nohup.out</cite>. The upload is handled in a celery task. The workers were stated with nohup (I know I should probably daemonize it). Restarting the workers might help.</p>
+</div>
+<div class="section" id="box-token">
+<h3>Box Token<a class="headerlink" href="#box-token" title="Permalink to this headline">¶</a></h3>
+<p>If there is any mention about the refresh token being expired…that’s too bad. The API keys for Box are tied to my account. The token should be refreshed every night by the <cite>boxrefresh</cite> manage command.</p>
+<p>The following instructions can be ignored when deploying to a staging
+or production environment, but may be helpful to a developer working
+on the project or running automated tests.</p>
+</div>
+<div class="section" id="session-configuration">
+<h3>Session configuration<a class="headerlink" href="#session-configuration" title="Permalink to this headline">¶</a></h3>
+<p>By default, this project is configured to mark session cookies as secure. To
+enable login over HTTP (e.g., when developing with Django&#8217;s runserver), you
+will need to override this in your <code class="docutils literal"><span class="pre">localsettings.py</span></code>.  See the example
+and comments in <code class="docutils literal"><span class="pre">localsettings.py.dist</span></code>.</p>
+</div>
+<div class="section" id="test-setup">
+<h3>Test setup<a class="headerlink" href="#test-setup" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="database-support">
+<h3>Database support<a class="headerlink" href="#database-support" title="Permalink to this headline">¶</a></h3>
+<p>See DEPLOYNOTES for first time install</p>
+</div>
+<div class="section" id="sending-email">
+<h3>Sending Email<a class="headerlink" href="#sending-email" title="Permalink to this headline">¶</a></h3>
+<p>Django email configurations should not be needed in staging or production,
+but to test sending emails on a development machine, you may need to add
+settings for <strong>EMAIL_HOST</strong> and <strong>SERVER_EMAIL</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As of 05/16/2013 due to a change on the SMTP server,
+it may not longer be possible to send emails from developer machines.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="notes-on-included-items">
+<h4>Notes on included items<a class="headerlink" href="#notes-on-included-items" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Notes For Developers</a><ul>
+<li><a class="reference internal" href="#general-things-that-come-up">General things that come up</a><ul>
+<li><a class="reference internal" href="#a-request-is-made-to-run-the-load-command">A request is made to run the load command</a></li>
+<li><a class="reference internal" href="#upload-stuck">Upload Stuck</a></li>
+<li><a class="reference internal" href="#box-token">Box Token</a></li>
+<li><a class="reference internal" href="#session-configuration">Session configuration</a></li>
+<li><a class="reference internal" href="#test-setup">Test setup</a></li>
+<li><a class="reference internal" href="#database-support">Database support</a></li>
+<li><a class="reference internal" href="#sending-email">Sending Email</a><ul>
+<li><a class="reference internal" href="#notes-on-included-items">Notes on included items</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="apidocs.html"
+                        title="previous chapter"><code class="docutils literal"><span class="pre">digitizedbooks</span></code> Code Documentation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/devnotes.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="apidocs.html" title="digitizedbooks Code Documentation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Digitized Books 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2013, EUL.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.5.
+    </div>
+  </body>
+</html>
